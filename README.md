@@ -1,4 +1,4 @@
-# A Clone Dataset with Matched and Non-Matched Changes
+# A Code Clone Dataset with Matched and Non-Matched Changes
 
 Note: Users are suggested to refer to the research paper to appear in ICPC 2022 by Bin Hu, Yijian Wu, Xin Peng, et al. Predicting Change Propagation between Code Clone Instances by Graph-based Deep Learning. Pre-assigned DOI: https://doi.org/10.1145/3524610.3527766
 
