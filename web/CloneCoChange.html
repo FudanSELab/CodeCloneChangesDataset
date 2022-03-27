@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>CloneCoChange</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="js/d3.v3.js" type="text/javascript"></script>
+    <!-- Requires CodeMirror -->
+    <script type="text/javascript" src="diffWeb/lib/codemirror.js"></script>
+    <link type="text/css" rel="stylesheet" href="diffWeb/lib/codemirror.css" />
+    <!-- Requires Mergely -->
+    <script type="text/javascript" src="diffWeb/lib/mergely.js"></script>
+    <link type="text/css" rel="stylesheet" href="diffWeb/lib/mergely.css"/>
+    <script src="js/main.js" type="text/javascript"></script>
+</head>
+<body>
+        <div class="inputs">
+                <div class="inputDiv" id="proPathDiv">
+                    <select id="proPath" onchange="onSelect()" style="height: 35px;">
+                    </select>
+                </div>
+                <div class="inputDiv" id="projectNameDiv">
+                    <input placeholder="input groupId" id="projectName" style="height: 35px;">
+                </div>
+                <div class="searchBtn">
+                    <button class="search" onclick="onSearchClick(this)">Load</button>
+                </div>
+        </div>
+    <div class = "diffContainer">
+
+    </div>
+</body>
+</html>
