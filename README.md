@@ -33,7 +33,7 @@ The dataset is evolving! Please direct your comments and suggestions to Yijian (
 
 ​		`json` folder contains the resource files of each project.
 
-​		`web` folder contains a web project which can be used to show the genealogy of a clone pair.
+​		`web` folder contains a web-based tool which can be used to show the source code changes in a clone pair genealogy.
 
 ### 2.1 Matched and non-matched changes
 ​		File ```consistent.csv```(or ```inconsistent.csv```) contains all the matched(or non-matched) changes. The meaning of the headers lists as below:
