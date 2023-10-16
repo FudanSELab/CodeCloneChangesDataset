@@ -77,6 +77,7 @@ pip install -r requirements.txt
 ### 3.2 Train
 
 ```sh
+mkdir ../saveModels
 sh run.sh
 ```
 
