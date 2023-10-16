@@ -1,0 +1,36 @@
+digraph {
+7 [style = filled, label = "!(view instanceof DirectlyModifiableView)@@@4@@@['0', '1', '0']", fillcolor = red, shape = diamond image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "return 0@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "!(view instanceof DirectlyModifiableView)@@@4@@@['1', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "throw new CmdLineException(null,\"'\" + view.getDisplayName() + \"' view can not be modified directly\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "run['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "((DirectlyModifiableView)view).remove(job)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "((DirectlyModifiableView)view).add(job)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "throw new IllegalStateException(\"'\" + view.getDisplayName() + \"' view can not be modified directly\")@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "run['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "view.checkPermission(View.CONFIGURE)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "!(view instanceof DirectlyModifiableView)@@@4@@@['1', '0', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "run['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->10 [style = bold, label=""];
+7->6 [style = dotted, label="true"];
+5->9 [style = bold, label=""];
+1->3 [style = bold, label=""];
+9->10 [style = bold, label=""];
+7->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->7 [style = bold, label=""];
+8->0 [style = bold, label=""];
+11->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+7->6 [style = bold, label=""];
+5->9 [style = dotted, label="true"];
+10->2 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+5->7 [style = dashed, label="0"];
+1->5 [style = dotted, label="true"];
+0->5 [style = bold, label=""];
+}

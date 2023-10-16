@@ -1,0 +1,33 @@
+digraph {
+8 [style = filled, label = "selector = FieldMutatingUpdateProcessor.wrap(selector,FieldMutatingUpdateProcessor.createFieldNameSelector(core.getResourceLoader(),core.getSchema(),exc.fieldName,exc.typeName,exc.typeClass,exc.fieldRegex,FieldMutatingUpdateProcessor.SELECT_NO_FIELDS))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final SolrCore core@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "srcSelector = FieldMutatingUpdateProcessor.createFieldNameSelector(core.getResourceLoader(),core,srcInclusions.fieldName,srcInclusions.typeName,srcInclusions.typeClass,srcInclusions.fieldRegex,FieldMutatingUpdateProcessor.SELECT_NO_FIELDS)@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "srcSelector = FieldMutatingUpdateProcessor.createFieldNameSelector(core.getResourceLoader(),core.getSchema(),srcInclusions.fieldName,srcInclusions.typeName,srcInclusions.typeClass,srcInclusions.fieldRegex,FieldMutatingUpdateProcessor.SELECT_NO_FIELDS)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "srcSelector = FieldMutatingUpdateProcessor.wrap(srcSelector,FieldMutatingUpdateProcessor.createFieldNameSelector(core.getResourceLoader(),core.getSchema(),exc.fieldName,exc.typeName,exc.typeClass,exc.fieldRegex,FieldMutatingUpdateProcessor.SELECT_NO_FIELDS))@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "inform['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "srcSelector = FieldMutatingUpdateProcessor.wrap(srcSelector,FieldMutatingUpdateProcessor.createFieldNameSelector(core.getResourceLoader(),core,exc.fieldName,exc.typeName,exc.typeClass,exc.fieldRegex,FieldMutatingUpdateProcessor.SELECT_NO_FIELDS))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "final IndexSchema schema = core.getSchema()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "selector = FieldMutatingUpdateProcessor.createFieldNameSelector(core.getResourceLoader(),core.getSchema(),inclusions.fieldName,inclusions.typeName,inclusions.typeClass,inclusions.fieldRegex,getDefaultSelector(core))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "inform['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "inform['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4->9 [style = solid, label="core"];
+6->5 [style = solid, label="srcSelector"];
+3->4 [style = dotted, label="true"];
+1->8 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+10->2 [style = bold, label=""];
+0->1 [style = solid, label="srcSelector"];
+2->0 [style = bold, label=""];
+4->5 [style = solid, label="core"];
+1->5 [style = dashed, label="0"];
+2->9 [style = bold, label=""];
+10->4 [style = dotted, label="true"];
+3->2 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+9->8 [style = solid, label="selector"];
+9->8 [style = bold, label=""];
+7->4 [style = dotted, label="true"];
+0->1 [style = bold, label=""];
+4->6 [style = solid, label="core"];
+7->6 [style = bold, label=""];
+}

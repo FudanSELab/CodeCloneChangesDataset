@@ -1,0 +1,32 @@
+digraph {
+9 [style = filled, label = "Optional<BibEntry> entryFromBibFile = parser.parseSingleEntry(bibString)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testReadArticleDublinCoreReadXmp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "BibEntry entry = entries.get(0)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testReadPDMetadata['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Assert.assertEquals(entryFromBibFile.get(),entry)@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "List<BibEntry> entries = XmpUtilReader.readXmp(Paths.get(.getResource(\"PD_metadata.pdf\").toURI()),xmpPreferences)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Assert.assertEquals(entryFromBibFile.get(),entries.get(0))@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "List<BibEntry> entries = XmpUtilReader.readXmp(Paths.get(.getResource(\"article_dublinCore.pdf\").toURI()),xmpPreferences)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "String bibString = Resources.toString(.getResource(\"article_dublinCore.bib\"),StandardCharsets.UTF_8)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testReadArticleDublinCoreReadXmp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "assertEquals(entryFromBibFile.get(),entry)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "String bibString = Resources.toString(.getResource(\"PD_metadata.bib\"),StandardCharsets.UTF_8)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+2->6 [style = solid, label="entry"];
+3->6 [style = bold, label=""];
+5->2 [style = bold, label=""];
+7->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+10->8 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+8->9 [style = solid, label="bibString"];
+4->6 [style = dashed, label="0"];
+11->10 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->3 [style = solid, label="bibString"];
+2->4 [style = solid, label="entry"];
+8->9 [style = bold, label=""];
+4->3 [style = dashed, label="0"];
+}

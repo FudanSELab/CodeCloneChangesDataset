@@ -1,0 +1,27 @@
+digraph {
+10 [style = filled, label = "Message abstractMessage = new AbstractMessageWrapper(TestUtil.getPackedSet())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testSerialization['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "TestUtil.assertAllFieldsSet(TestAllTypes.parseFrom(abstractMessage.toByteString()))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "testPackedSerialization['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "TestUtil.assertPackedFieldsSet(TestPackedTypes.parseFrom(abstractMessage.toByteString()))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(TestUtil.getAllSet().toByteString()).isEqualTo(abstractMessage.toByteString())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "TestUtil.assertAllFieldsSet(TestAllTypes.parseFrom(abstractMessage.toByteString(),ExtensionRegistryLite.getEmptyRegistry()))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testSerialization['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertEquals(TestUtil.getAllSet().toByteString(),abstractMessage.toByteString())@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "Message abstractMessage = new AbstractMessageWrapper(TestUtil.getAllSet())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertEquals(TestUtil.getPackedSet().toByteString(),abstractMessage.toByteString())@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7->9 [style = bold, label=""];
+8->10 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+3->6 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+5->0 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+3->9 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+4->6 [style = bold, label=""];
+10->7 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

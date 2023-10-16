@@ -1,0 +1,32 @@
+digraph {
+13 [style = filled, label = "shouldFetchExactKeys['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "assertThat(valuesToSet(iterator),equalTo(new HashSet<>(asList(2L,4L))))@@@14@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "sessionStore.close()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "sessionStore.init((StateStoreContext)context,sessionStore)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "sessionStore.put(new Windowed<>(\"a\",new SessionWindow(0x7a00000000000000L - 2,0x7a00000000000000L - 1)),5L)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "shouldFetchExactKeys['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(valuesToSet(iterator),equalTo(new HashSet<>(Collections.singletonList(2L))))@@@20@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(valuesToSet(iterator),equalTo(new HashSet<>(asList(1L,2L,3L,4L,5L))))@@@17@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "sessionStore.put(new Windowed<>(\"a\",new SessionWindow(10,20)),3L)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(valuesToSet(iterator),equalTo(new HashSet<>(asList(1L,3L,5L))))@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "sessionStore = buildSessionStore(0x7a00000000000000L,Serdes.String(),Serdes.Long())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "sessionStore.put(new Windowed<>(\"aa\",new SessionWindow(10,20)),4L)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "sessionStore.put(new Windowed<>(\"aa\",new SessionWindow(0,10)),2L)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "sessionStore.put(new Windowed<>(\"a\",new SessionWindow(0,0)),1L)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "shouldBackwardFetchExactKeys['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3->9 [style = bold, label=""];
+8->1 [style = bold, label=""];
+6->3 [style = bold, label=""];
+11->0 [style = bold, label=""];
+13->12 [style = bold, label=""];
+4->11 [style = bold, label=""];
+1->7 [style = solid, label="sessionStore"];
+2->10 [style = bold, label=""];
+12->1 [style = bold, label=""];
+9->2 [style = bold, label=""];
+1->7 [style = bold, label=""];
+14->1 [style = bold, label=""];
+7->6 [style = bold, label=""];
+0->5 [style = bold, label=""];
+10->4 [style = bold, label=""];
+}

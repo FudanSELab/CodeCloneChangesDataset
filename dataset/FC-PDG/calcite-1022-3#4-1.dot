@@ -1,0 +1,13 @@
+digraph {
+0 [style = filled, label = "main['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "String(( args@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "main['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "testGroupBy['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "String s = Linq4j.asEnumerable(emps).groupBy(EMP_DEPTNO_SELECTOR,new Function0<String>(){public String apply(){return null}},new Function2<String,Employee,String>(){public String apply(String v1,Employee e0){return v1 == null? e0.name: (v1 + \"+\" + e0.name)}},new Function2<Integer,String,String>(){public String apply(Integer v1,String v2){return v1 + \": \" + v2}}).orderBy(Functions.identitySelector()).toList().toString()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertEquals(\"(10: Fred+Eric+Janet, 30: Bill(\",s)@@@19@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->3 [style = bold, label=""];
+4->3 [style = solid, label="s"];
+2->1 [style = dotted, label="true"];
+5->4 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+}

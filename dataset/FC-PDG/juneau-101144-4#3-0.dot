@@ -1,0 +1,24 @@
+digraph {
+8 [style = filled, label = "assertObject(x2).isString(\"(Foo: 1, Foo: 2, Foo: 3, Bar: b1, Bar: b2, Foo: 4(\")@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "PartList x2 = PartList.create().prepend().prepend((PartList)null).prepend((Part)null).prepend((Part(()null).prepend(x1).prepend(FOO_2,FOO_3).prepend(\"Bar\",\"b1\").prepend(\"Bar\",null).prepend((List<Part>)null).prepend(AList.of(FOO_4)).build()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "b02_builder_append['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertObject(x2).isString(\"Foo=4&Bar=b2&Bar=b1&Foo=2&Foo=3&Foo=1\")@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "PartList x2 = PartList.create().prepend().prepend((PartList)null).prepend((NameValuePair)null).prepend((NameValuePair(()null).prepend(x1).prepend(FOO_2,FOO_3).prepend(\"Bar\",\"b1\").prepend(\"Bar\",null).prepend((List<NameValuePair>)null).prepend(AList.of(FOO_4)).build()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "b03_builder_prepend['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "HeaderList x2 = HeaderList.create().append().append((HeaderList)null).append((Header)null).append((Header(()null).append(x1).append(FOO_2,FOO_3).append(\"Bar\",\"b1\").append(\"Bar\",null).append((List<Header>)null).append(AList.of(FOO_4)).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "HeaderList x1 = HeaderList.create().append(FOO_1).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "b03_builder_prepend['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "PartList x1 = PartList.create().append(FOO_1).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+3->6 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+9->6 [style = bold, label=""];
+}

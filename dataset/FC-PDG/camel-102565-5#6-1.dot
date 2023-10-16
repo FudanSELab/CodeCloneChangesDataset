@@ -1,0 +1,34 @@
+digraph {
+3 [style = filled, label = "doSetProperty(\"configuration\",configuration)@@@26@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "configuration['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "configuration['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "org.apache.camel.component.aws2.msk.MSK2Configuration configuration@@@45@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "configuration['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "return this@@@27@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "org.apache.camel.component.aws2.kms.KMS2Configuration configuration@@@25@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->3 [style = solid, label="region"];
+1->5 [style = dashed, label="0"];
+5->3 [style = solid, label="region"];
+4->1 [style = dotted, label="true"];
+1->3 [style = solid, label="proxyProtocol"];
+1->3 [style = solid, label="basicPropertyBinding"];
+5->3 [style = solid, label="basicPropertyBinding"];
+1->3 [style = solid, label="proxyPort"];
+5->3 [style = solid, label="secretKey"];
+1->3 [style = solid, label="proxyHost"];
+5->3 [style = solid, label="configuration"];
+1->3 [style = solid, label="configuration"];
+1->3 [style = solid, label="mskClient"];
+5->3 [style = solid, label="accessKey"];
+3->2 [style = bold, label=""];
+1->3 [style = solid, label="lazyStartProducer"];
+1->3 [style = solid, label="accessKey"];
+1->3 [style = solid, label="operation"];
+5->3 [style = solid, label="lazyStartProducer"];
+1->3 [style = solid, label="secretKey"];
+6->5 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+}

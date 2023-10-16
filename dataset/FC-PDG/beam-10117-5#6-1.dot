@@ -1,0 +1,38 @@
+digraph {
+4 [style = filled, label = "Duration allowedLateness = Duration.millis(5000L)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "IntervalWindow window = windowFn.assignWindow(new Instant(100))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "PCollection<String> values = p.apply(stream).apply(Window.into(windowFn).triggering(AfterWatermark.pastEndOfWindow().withEarlyFirings(AfterPane.elementCountAtLeast(2)).withLateFirings(Never.ever())).discardingFiredPanes().withAllowedLateness(allowedLateness)).apply(WithKeys.of(1)).apply(GroupByKey.create()).apply(Values.create()).apply(Flatten.iterables())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "CreateStream<String> source = CreateStream.of(StringUtf8Coder.of(),batchDuration()).nextBatch(TimestampedValue.of(\"firstPane\",new Instant(100)),TimestampedValue.of(\"alsoFirstPane\",new Instant(200))).advanceWatermarkForNextBatch(new Instant(1001L)).nextBatch(TimestampedValue.of(\"onTimePane\",new Instant(500))).advanceNextBatchWatermarkToInfinity().nextBatch(TimestampedValue.of(\"finalLatePane\",new Instant(750)),TimestampedValue.of(\"alsoFinalLatePane\",new Instant(250)))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "PCollection<String> values = p.apply(source).apply(Window.into(windowFn).triggering(AfterWatermark.pastEndOfWindow().withEarlyFirings(AfterPane.elementCountAtLeast(2)).withLateFirings(Never.ever())).discardingFiredPanes().withAllowedLateness(allowedLateness)).apply(WithKeys.of(1)).apply(GroupByKey.create()).apply(Values.create()).apply(Flatten.iterables())@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "PCollection<String> values = p.apply(source).apply(Window.into(windowFn).triggering(AfterWatermark.pastEndOfWindow().withEarlyFirings(AfterPane.elementCountAtLeast(2)).withLateFirings(Never.ever())).discardingFiredPanes().withAllowedLateness(allowedLateness)).apply(WithKeys.of(1)).apply(GroupByKey.create()).apply(Values.create()).apply(Flatten.iterables())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "testDiscardingMode['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "testDiscardingMode['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "PAssert.that(values).inOnTimePane(window).containsInAnyOrder(\"onTimePane\")@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "PAssert.that(values).inWindow(window).containsInAnyOrder(\"firstPane\",\"alsoFirstPane\",\"onTimePane\",\"finalLatePane\",\"alsoFinalLatePane\")@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testDiscardingMode['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "TestStream<String> stream = TestStream.create(StringUtf8Coder.of()).advanceWatermarkTo(new Instant(0)).addElements(TimestampedValue.of(\"firstPane\",new Instant(100)),TimestampedValue.of(\"alsoFirstPane\",new Instant(200))).addElements(TimestampedValue.of(\"onTimePane\",new Instant(500))).advanceWatermarkTo(new Instant(1001L)).addElements(TimestampedValue.of(\"finalLatePane\",new Instant(750)),TimestampedValue.of(\"alsoFinalLatePane\",new Instant(250))).advanceWatermarkToInfinity()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "FixedWindows windowFn = FixedWindows.of(Duration.millis(1000L))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "PAssert.that(values).inFinalPane(window).containsInAnyOrder(\"finalLatePane\",\"alsoFinalLatePane\")@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "PAssert.that(values).inCombinedNonLatePanes(window).containsInAnyOrder(\"firstPane\",\"alsoFirstPane\",\"onTimePane\")@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "p.run()@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10->15 [style = dashed, label="0"];
+4->10 [style = bold, label=""];
+6->1 [style = bold, label=""];
+11->8 [style = bold, label=""];
+3->5 [style = bold, label=""];
+7->0 [style = bold, label=""];
+14->13 [style = bold, label=""];
+5->6 [style = bold, label=""];
+10->8 [style = bold, label=""];
+4->11 [style = bold, label=""];
+13->2 [style = bold, label=""];
+4->15 [style = bold, label=""];
+2->4 [style = bold, label=""];
+12->0 [style = bold, label=""];
+15->8 [style = bold, label=""];
+0->13 [style = dashed, label="0"];
+1->9 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->3 [style = bold, label=""];
+10->11 [style = dashed, label="0"];
+}

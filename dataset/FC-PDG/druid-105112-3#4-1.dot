@@ -1,0 +1,33 @@
+digraph {
+5 [style = filled, label = "return emitter@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "manualFlushEmitterWithBasicAuthenticationAndNewlineSeparating['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "manualFlushEmitterWithBasicAuthenticationAndNewlineSeparating['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "int batchSize@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "emitter.start()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "HttpPostEmitter emitter = new HttpPostEmitter(config,httpClient,JSON_MAPPER)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "HttpPostEmitter emitter = new HttpPostEmitter(config,httpClient,jsonMapper)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "manualFlushEmitterWithBatchSize['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String authentication@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "HttpEmitterConfig config = new HttpEmitterConfig.Builder(TARGET_URL).setFlushMillis(Long.MAX_VALUE).setFlushCount(Integer.MAX_VALUE).setMaxBatchSize(batchSize).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "HttpEmitterConfig config = new HttpEmitterConfig.Builder(TARGET_URL).setFlushMillis(Long.MAX_VALUE).setFlushCount(Integer.MAX_VALUE).setBasicAuthentication(authentication).setBatchingStrategy(BatchingStrategy.NEWLINES).setMaxBatchSize(1024 * 1024).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+6->1 [style = bold, label=""];
+4->2 [style = solid, label="config"];
+4->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+8->2 [style = bold, label=""];
+7->0 [style = dotted, label="true"];
+9->8 [style = bold, label=""];
+9->10 [style = dotted, label="true"];
+4->6 [style = solid, label="config"];
+8->2 [style = solid, label="config"];
+3->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+4->6 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+4->8 [style = dashed, label="0"];
+2->5 [style = solid, label="emitter"];
+6->5 [style = solid, label="emitter"];
+2->6 [style = dashed, label="0"];
+}

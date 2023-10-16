@@ -1,0 +1,36 @@
+digraph {
+3 [style = filled, label = "assertThat(requestAttributes.get(RequestDispatcher.ERROR_EXCEPTION_TYPE)).isEqualTo()@@@14@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(this.request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE)).isEqualTo(500)@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Map<String,Object> requestAttributes = getAttributesForDispatch(\"/500\")@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(this.response.getForwardedUrl()).isEqualTo(\"/500\")@@@20@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThat(this.response.isCommitted()).isTrue()@@@19@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "assertThat(this.request.getAttribute(RequestDispatcher.ERROR_EXCEPTION)).isNull()@@@17@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "assertThat(this.request.getAttribute(RequestDispatcher.ERROR_REQUEST_URI)).isEqualTo(\"/test/path\")@@@18@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(this.request.getAttribute(RequestDispatcher.ERROR_EXCEPTION_TYPE)).isNull()@@@16@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "exceptionError['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(this.request.getAttribute(RequestDispatcher.ERROR_MESSAGE)).isEqualTo(\"BAD\")@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(((HttpServletResponseWrapper)this.chain.getResponse()).getStatus()).isEqualTo(500)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "this.chain = new TestFilterChain(null)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "this.filter.addErrorPages(new ErrorPage(,\"/500\"))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "this.filter.doFilter(this.request,this.response,this.chain)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(requestAttributes.get(RequestDispatcher.ERROR_EXCEPTION)).isInstanceOf()@@@15@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "exceptionError['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+16 [style = filled, label = "nestedServletExceptionIsUnwrapped['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3->11 [style = bold, label=""];
+5->7 [style = bold, label=""];
+14->10 [style = bold, label=""];
+12->0 [style = solid, label="chain"];
+1->8 [style = bold, label=""];
+16->8 [style = bold, label=""];
+11->9 [style = bold, label=""];
+0->4 [style = bold, label=""];
+12->0 [style = bold, label=""];
+4->5 [style = bold, label=""];
+7->2 [style = bold, label=""];
+13->14 [style = bold, label=""];
+8->12 [style = bold, label=""];
+10->6 [style = bold, label=""];
+15->8 [style = bold, label=""];
+2->3 [style = bold, label=""];
+9->13 [style = bold, label=""];
+}

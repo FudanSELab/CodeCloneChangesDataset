@@ -1,0 +1,19 @@
+digraph {
+5 [style = filled, label = "decompressed['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "storingStatIn['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "storingStatIn['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "decompress = true@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "this.stat = stat@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Stat stat@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "return new WatchBackgroundEnsembleable<byte((>(){@Override public ErrorListenerEnsembleable<byte((> inBackground(){return this.inBackground()}@Override public ErrorListenerEnsembleable<byte((> inBackground(Object context){return this.inBackground(context)}@Override public ErrorListenerEnsembleable<byte((> inBackground(BackgroundCallback callback){return this.inBackground(callback)}@Override public ErrorListenerEnsembleable<byte((> inBackground(BackgroundCallback callback,Object context){return this.inBackground(callback,context)}@Override public ErrorListenerEnsembleable<byte((> inBackground(BackgroundCallback callback,Executor executor){return this.inBackground(callback,executor)}@Override public ErrorListenerEnsembleable<byte((> inBackground(BackgroundCallback callback,Object context,Executor executor){return this.inBackground(callback,context,executor)}@Override public byte(( forEnsemble(){return this.forEnsemble()}@Override public BackgroundEnsembleable<byte((> watched(){return this.watched()}@Override public BackgroundEnsembleable<byte((> usingWatcher(Watcher watcher){return this.usingWatcher(watcher)}@Override public BackgroundEnsembleable<byte((> usingWatcher(CuratorWatcher watcher){return this.usingWatcher(watcher)}}@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return new GetDataWatchBackgroundStatable(){@Override public Pathable<byte((> inBackground(){return this.inBackground()}@Override public Pathable<byte((> inBackground(BackgroundCallback callback,Object context){return this.inBackground(callback,context)}@Override public Pathable<byte((> inBackground(BackgroundCallback callback,Object context,Executor executor){return this.inBackground(callback,context,executor)}@Override public Pathable<byte((> inBackground(Object context){return this.inBackground(context)}@Override public Pathable<byte((> inBackground(BackgroundCallback callback){return this.inBackground(callback)}@Override public Pathable<byte((> inBackground(BackgroundCallback callback,Executor executor){return this.inBackground(callback,executor)}@Override public byte(( forPath(String path){return this.forPath(path)}@Override public WatchPathable<byte((> storingStatIn(Stat stat){return this.storingStatIn(stat)}@Override public BackgroundPathable<byte((> watched(){return this.watched()}@Override public BackgroundPathable<byte((> usingWatcher(Watcher watcher){return this.usingWatcher(watcher)}@Override public BackgroundPathable<byte((> usingWatcher(CuratorWatcher watcher){return this.usingWatcher(watcher)}}@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->7 [style = bold, label=""];
+4->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->1 [style = solid, label="stat"];
+7->6 [style = bold, label=""];
+4->0 [style = dotted, label="true"];
+3->0 [style = dotted, label="true"];
+2->6 [style = dashed, label="0"];
+}

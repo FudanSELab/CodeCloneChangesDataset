@@ -1,0 +1,30 @@
+digraph {
+9 [style = filled, label = "testSerdeWithSegments['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertEquals(task,fromJson)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final Builder builder = new Builder(DATA_SOURCE,OBJECT_MAPPER,AuthTestUtils.TEST_AUTHORIZER_MAPPER,null,ROW_INGESTION_METERS_FACTORY,INDEXING_SERVICE_CLIENT,COORDINATOR_CLIENT,segmentLoaderFactory,RETRY_POLICY_FACTORY,APPENDERATORS_MANAGER)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "final CompactionTask task = builder.inputSpec(new CompactionIntervalSpec(COMPACTION_INTERVAL,SegmentUtils.hashIds(SEGMENTS))).tuningConfig(createTuningConfig()).context(ImmutableMap.of(\"testKey\",\"testContext\")).build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testSerdeWithInterval['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final byte(( bytes = OBJECT_MAPPER.writeValueAsBytes(task)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testSerdeWithInterval['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "final CompactionTask task = builder.segments(SEGMENTS).tuningConfig(createTuningConfig()).context(ImmutableMap.of(\"testKey\",\"testContext\")).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final CompactionTask fromJson = OBJECT_MAPPER.readValue(bytes,)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final Builder builder = new Builder(DATA_SOURCE,OBJECT_MAPPER,AuthTestUtils.TEST_AUTHORIZER_MAPPER,null,ROW_INGESTION_METERS_FACTORY,COORDINATOR_CLIENT,segmentLoaderFactory,RETRY_POLICY_FACTORY,APPENDERATORS_MANAGER)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+4->8 [style = bold, label=""];
+3->5 [style = bold, label=""];
+1->3 [style = solid, label="bytes"];
+4->2 [style = bold, label=""];
+9->4 [style = bold, label=""];
+8->5 [style = solid, label="task"];
+4->6 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+2->1 [style = solid, label="task"];
+8->1 [style = solid, label="task"];
+7->6 [style = bold, label=""];
+2->5 [style = solid, label="task"];
+3->5 [style = solid, label="fromJson"];
+6->2 [style = bold, label=""];
+}

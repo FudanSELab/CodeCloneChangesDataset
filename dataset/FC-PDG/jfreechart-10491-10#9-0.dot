@@ -1,0 +1,35 @@
+digraph {
+7 [style = filled, label = "testSerialization2['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "testSerialization['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "BlockBorder b2 = (BlockBorder)TestUtils.serialised(b1)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "AttributedString as = new AttributedString(\"Test String\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "BlockBorder b1 = new BlockBorder(new RectangleInsets(1.0,2.0,3.0,4.0),new GradientPaint(1.0f,2.0f,Color.RED,3.0f,4.0f,Color.YELLOW))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertEquals(item1,item2)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "LegendItem item2 = (LegendItem)TestUtils.serialised(item1)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "testSerialization2['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertEquals(b1,b2)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "LegendItem item2 = TestUtils.serialised(item1)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "as.addAttribute(TextAttribute.FONT,new Font(\"Dialog\",Font.PLAIN,12))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "LegendItem item1 = new LegendItem(as,\"Description\",\"ToolTip\",\"URL\",new Rectangle2D.Double(1.0,2.0,3.0,4.0),Color.RED)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+1->6 [style = solid, label="item1"];
+6->3 [style = solid, label="item2"];
+9->10 [style = bold, label=""];
+9->10 [style = solid, label="b2"];
+4->6 [style = dashed, label="0"];
+11->9 [style = bold, label=""];
+1->4 [style = solid, label="item1"];
+5->1 [style = bold, label=""];
+2->1 [style = solid, label="as"];
+1->6 [style = bold, label=""];
+11->10 [style = solid, label="b1"];
+7->2 [style = bold, label=""];
+1->3 [style = solid, label="item1"];
+11->9 [style = solid, label="b1"];
+8->11 [style = bold, label=""];
+4->3 [style = solid, label="item2"];
+2->5 [style = bold, label=""];
+}

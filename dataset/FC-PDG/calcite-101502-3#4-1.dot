@@ -1,0 +1,26 @@
+digraph {
+6 [style = filled, label = "checkDateRange(f,f.and(f.eq(f.exYearTs,f.literal(2010)),f.eq(f.exMonthTs,f.literal(10)),f.eq(f.exYearD,f.literal(2011)),f.eq(f.exMonthD,f.literal(5))),is(\"AND(AND(>=($9, 2010-01-01 00:00:00), <($9, 2011-01-01 00:00:00)),\" + \" AND(>=($9, 2010-10-01 00:00:00), <($9, 2010-11-01 00:00:00)),\" + \" AND(>=($8, 2011-01-01), <($8, 2012-01-01)), AND(>=($8, 2011-05-01),\" + \" <($8, 2011-06-01)))\"))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "checkDateRange(f,f.and(f.eq(f.exYearTs,f.literal(2010)),f.eq(f.exMonthTs,f.literal(10)),f.eq(f.exMonthD,f.literal(5))),is(\"AND(AND(>=($9, 2010-01-01 00:00:00), <($9, 2011-01-01 00:00:00)),\" + \" AND(>=($9, 2010-10-01 00:00:00), <($9, 2010-11-01 00:00:00)),\" + \" =(EXTRACT(FLAG(MONTH), $8), 5))\"))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "checkDateRange(f,f.and(f.ge(f.exYearTs,f.literal(2010)),f.eq(f.exMonthTs,f.literal(11)),f.eq(f.exDayTs,f.literal(2))),is(\"AND(>=($9, 2010-01-01 00:00:00), =(EXTRACT(FLAG(MONTH), $9), 11),\" + \" =(EXTRACT(FLAG(DAY), $9), 2))\"))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testExtractRewriteMultipleOperands['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testUnboundYearExtractRewrite['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "final Fixture2 f = new Fixture2()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testUnboundYearExtractRewrite['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "checkDateRange(f,f.and(f.le(f.exYearTs,f.literal(2010)),f.ge(f.exYearTs,f.literal(2010)),f.eq(f.exMonthTs,f.literal(5))),is(\"AND(<($9, 2011-01-01 00:00:00), AND(>=($9, 2010-01-01 00:00:00),\" + \" <($9, 2011-01-01 00:00:00)), AND(>=($9, 2010-05-01 00:00:00),\" + \" <($9, 2010-06-01 00:00:00)))\"))@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "checkDateRange(f,f.and(f.le(f.exYearTs,f.literal(2010)),f.eq(f.exMonthTs,f.literal(11)),f.eq(f.exDayTs,f.literal(2))),is(\"AND(<($9, 2011-01-01 00:00:00), =(EXTRACT(FLAG(MONTH), $9), 11),\" + \" =(EXTRACT(FLAG(DAY), $9), 2))\"))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->8 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+4->3 [style = solid, label="f"];
+4->8 [style = solid, label="f"];
+1->2 [style = bold, label=""];
+4->6 [style = solid, label="f"];
+4->1 [style = solid, label="f"];
+8->6 [style = bold, label=""];
+7->4 [style = bold, label=""];
+0->4 [style = bold, label=""];
+4->2 [style = solid, label="f"];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

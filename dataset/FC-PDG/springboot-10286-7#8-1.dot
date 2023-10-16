@@ -1,0 +1,14 @@
+digraph {
+1 [style = filled, label = "ApplicationContextRunner contextRunner = new ApplicationContextRunner().withUserConfiguration()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testEmptyMapIsNotAdded['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "testEmptyMapIsNotAdded['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "ApplicationContextRunner contextRunner = new ApplicationContextRunner().withUserConfiguration().withPropertyValues(\"foo.address:192.168.1.10\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "contextRunner.run(null)@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testInetAddress['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->0 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->1 [style = bold, label=""];
+}

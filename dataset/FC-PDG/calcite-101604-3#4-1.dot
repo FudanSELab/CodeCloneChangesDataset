@@ -1,0 +1,22 @@
+digraph {
+2 [style = filled, label = "RelDataType structWithTwoFields = TYPE_FACTORY.createStructType(ImmutableList.of(TYPE_FACTORY.createSqlType(SqlTypeName.INTEGER),TYPE_FACTORY.createSqlType(SqlTypeName.VARCHAR)),ImmutableList.of(\"intField\",\"strField\"))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testGetJavaClassWithTwoFieldsStructDataTypeV2['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "PhysType rowPhysType = PhysTypeImpl.of(TYPE_FACTORY,rowType,JavaRowFormat.ARRAY)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testGetJavaClassWithTwoFieldsStructDataTypeV2['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "RelDataType rowType = TYPE_FACTORY.createStructType(ImmutableList.of(columnType),ImmutableList.of(\"structField\"))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "RelDataType columnType = TYPE_FACTORY.createStructType(ImmutableList.of(TYPE_FACTORY.createSqlType(SqlTypeName.INTEGER),TYPE_FACTORY.createSqlType(SqlTypeName.VARCHAR)),ImmutableList.of(\"intField\",\"strField\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertRecordType(TYPE_FACTORY.getJavaClass(structWithTwoFields))@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testFieldClassOnColumnOfTwoFieldStructType['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertEquals(,rowPhysType.fieldClass(0))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2->4 [style = dashed, label="0"];
+6->7 [style = solid, label="rowType"];
+2->1 [style = solid, label="structWithTwoFields"];
+4->6 [style = solid, label="columnType"];
+3->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+4->6 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

@@ -1,0 +1,16 @@
+digraph {
+1 [style = filled, label = "assertEquals(\"OK\",r)@@@34@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "b02_primitiveCollectionQueries['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "String r = proxy.primitiveCollectionQueries(new int((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1595aa6,new Integer((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1595aaf,new String((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1595ab8,AList.of(1,null),AList.of(AList.of(AList.of(1,null),null),null),AList.of(new Integer((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1595ad6,null),AList.of(new int((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1595ae3,null),Arrays.asList(\"foo\",\"bar\",null))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "c02_primitiveCollectionFormData['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "String r = proxy.primitiveCollectionFormData(new int((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1595b03,new Integer((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1595b0c,new String((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1595b15,new AList<Integer>().append(1).append(null),new AList<List<List<Integer>>>().append(new AList<List<Integer>>().append(new AList<Integer>().append(1).append(null)).append(null)).append(null),new AList<Integer((((((>().append(new Integer((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1595b41).append(null),new AList<int((((((>().append(new int((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1595b51).append(null),Arrays.asList(\"foo\",\"bar\",null))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "b02_primitiveCollectionQueries['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3->0 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+5->4 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+4->1 [style = solid, label="r"];
+0->1 [style = solid, label="r"];
+}

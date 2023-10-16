@@ -1,0 +1,29 @@
+digraph {
+0 [style = filled, label = "wholeExpr(\"trim(123 FROM 'beard')\").withTypeCoercion(false).fails(\"(?s).*Cannot apply 'TRIM' to arguments of type.*\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "wholeExpr(\"substring(_UTF16'10' FROM '0' FOR '\')\").fails(\"(?s).* not comparable to each other.*\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "wholeExpr(\"substring('a' from 1 for 'b')\").withTypeCoercion(false).fails(\"(?s).*Cannot apply 'SUBSTRING' to arguments of type.*\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testSubstringFails['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "wholeExpr(\"substring('10' FROM '0' FOR _UTF16'\')\").fails(\"(?s).* not comparable to each other.*\")@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "expr(\"substring('a' from 1 for 'b')\").columnType(\"VARCHAR(1) NOT NULL\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "expr(\"trim(123 FROM 'beard')\").columnType(\"VARCHAR(5) NOT NULL\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "wholeExpr(\"trim('a' FROM 123)\").withTypeCoercion(false).fails(\"(?s).*Cannot apply 'TRIM' to arguments of type.*\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "wholeExpr(\"substring('10' FROM _UTF16'0' FOR '\')\").fails(\"(?s).* not comparable to each other.*\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "expr(\"trim('a' FROM 123)\").columnType(\"VARCHAR NOT NULL\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "wholeExpr(\"trim('a' FROM _UTF16'b')\").fails(\"(?s).*not comparable to each other.*\")@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testTrimFails['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "testTrimFails['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+11->8 [style = bold, label=""];
+12->7 [style = bold, label=""];
+1->2 [style = bold, label=""];
+6->0 [style = bold, label=""];
+9->10 [style = bold, label=""];
+3->1 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+2->7 [style = dashed, label="0"];
+8->12 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

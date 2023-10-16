@@ -1,0 +1,30 @@
+digraph {
+4 [style = filled, label = "LOG.info(\"Finished perJobYarnCluster()\")@@@14@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "perJobYarnCluster['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "perJobYarnCluster['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "LOG.info(\"Starting perJobYarnCluster()\")@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final long taskManagerMemoryMB = 1024@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "File exampleJarLocation = getTestJarPath(\"BatchWordCount.jar\")@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "perJobYarnClusterOffHeap['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "runTest(null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "runWithArgs(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1af9e0d,\"Program execution finished\",new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1af9e38,RunTypes.CLI_FRONTEND,0,true)@@@9@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "addTestAppender(,Level.INFO)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final long offHeapMemory = taskManagerMemoryMB - ResourceManagerOptions.CONTAINERIZED_HEAP_CUTOFF_MIN.defaultValue() - networkBuffersMB - 100@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "final long networkBuffersMB = NetworkEnvironmentConfiguration.calculateNetworkBufferMemory((taskManagerMemoryMB - ResourceManagerOptions.CONTAINERIZED_HEAP_CUTOFF_MIN.defaultValue()) << 20,new Configuration()) >> 20@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+3->10 [style = bold, label=""];
+11->8 [style = bold, label=""];
+8->1 [style = solid, label="offHeapMemory"];
+5->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+2->0 [style = bold, label=""];
+6->7 [style = bold, label=""];
+3->1 [style = bold, label=""];
+10->1 [style = solid, label="taskManagerMemoryMB"];
+9->2 [style = bold, label=""];
+10->11 [style = solid, label="taskManagerMemoryMB"];
+10->8 [style = solid, label="taskManagerMemoryMB"];
+11->8 [style = solid, label="networkBuffersMB"];
+10->11 [style = bold, label=""];
+}

@@ -1,0 +1,35 @@
+digraph {
+3 [style = filled, label = "ApplicationDispatcherBootstrap bootstrap = createApplicationDispatcherBootstrap(3)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "shutdownFuture.get(TIMEOUT_SECONDS,TimeUnit.SECONDS)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final CompletableFuture<Acknowledge> shutdownFuture = bootstrap.runApplicationAndShutdownClusterAsync(dispatcherBuilder.build(),scheduledExecutor)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "runApplication['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testApplicationTaskFinishesWhenApplicationFinishes['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "return runApplication(dispatcherBuilder,configuration,noOfJobs)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testApplicationTaskFinishesWhenApplicationFinishes['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final CompletableFuture<Acknowledge> shutdownFuture = bootstrap.getClusterShutdownFuture()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "final int noOfJobs@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ScheduledFuture<?> applicationExecutionFuture = bootstrap.getApplicationExecutionFuture()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final TestingDispatcherGateway.Builder dispatcherBuilder = new TestingDispatcherGateway.Builder().setSubmitFunction(null).setRequestJobStatusFunction(null).setRequestJobResultFunction(null)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "final Configuration configuration@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "applicationExecutionFuture.get(TIMEOUT_SECONDS,TimeUnit.SECONDS)@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "ApplicationDispatcherBootstrap bootstrap = createApplicationDispatcherBootstrap(3,dispatcherBuilder.build(),scheduledExecutor)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5->3 [style = bold, label=""];
+11->12 [style = solid, label="noOfJobs"];
+6->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+10->5 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+8->5 [style = bold, label=""];
+5->9 [style = bold, label=""];
+9->7 [style = bold, label=""];
+5->12 [style = bold, label=""];
+5->12 [style = solid, label="dispatcherBuilder"];
+2->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+10->13 [style = dotted, label="true"];
+10->11 [style = dotted, label="true"];
+3->9 [style = dashed, label="0"];
+13->12 [style = solid, label="configuration"];
+3->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

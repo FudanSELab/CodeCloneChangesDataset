@@ -1,0 +1,13 @@
+digraph {
+1 [style = filled, label = "COUNT['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testReader2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "DISTINCT $1@@@17@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "String s = Frameworks.withPlanner(null)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "COUNT['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertThat(s,isLinux(\"LogicalProject(field0=($0(,\" + \" field1=(COUNT($0) OVER (PARTITION BY $2 ORDER BY $1 NULLS LAST ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)(,\" + \" field2=(SUM($0) OVER (PARTITION BY $2 ORDER BY $1 NULLS LAST RANGE BETWEEN CURRENT ROW AND 1 FOLLOWING)()\" + \" LogicalTableScan(table=((hr, emps(()\"))@@@16@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+1->0 [style = dotted, label="true"];
+2->0 [style = dotted, label="true"];
+4->5 [style = bold, label=""];
+5->3 [style = solid, label="s"];
+}

@@ -1,0 +1,18 @@
+digraph {
+3 [style = filled, label = "conn = session.getConnection()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "session = factory.openSession()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "setUpBeforeClass['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "setUpBeforeClass['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "BaseDataTest.runScript(factory.getConfiguration().getEnvironment().getDataSource(),\"org/apache/ibatis/submitted/overwritingproperties/create-schema-mysql.sql\")@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(Resources.getResourceAsReader(SQL_MAP_CONFIG))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "setUpBeforeClass['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "BaseDataTest.runScript(factory.getConfiguration().getEnvironment().getDataSource(),\"org/apache/ibatis/submitted/null_associations/create-schema-mysql.sql\")@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+5->2 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

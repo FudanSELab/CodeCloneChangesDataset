@@ -1,0 +1,37 @@
+digraph {
+8 [style = filled, label = "assertNull(m.get(\"subject\"))@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "shouldSelect2DiscriminatedPosts['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertEquals(2,products.size())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "List<Map<String,String>> products = executor.query(selectStatement,null,RowBounds.DEFAULT,Executor.NO_RESULT_HANDLER)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "{executor.rollback(true)executor.close(false)}@@@17@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "MappedStatement selectStatement = ExecutorTestHelper.prepareSelectDiscriminatedPost(config)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Executor executor = createExecutor(new JdbcTransaction(ds,null,false))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertNotNull(m.get(\"subject\"))@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "\"IMAGES\".equals(m.get(\"SECTION\"))@@@9@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "List<Map<String,String>> products = executor.query(selectStatement,null,new RowBounds(2,2),Executor.NO_RESULT_HANDLER)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "shouldSelectDiscriminatedPost['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertEquals(5,products.size())@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "shouldSelectDiscriminatedPost['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->3 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->6 [style = bold, label=""];
+11->6 [style = bold, label=""];
+12->11 [style = bold, label=""];
+8->6 [style = bold, label=""];
+6->7 [style = dotted, label="false"];
+7->4 [style = bold, label=""];
+3->12 [style = bold, label=""];
+1->12 [style = dashed, label="0"];
+10->5 [style = bold, label=""];
+3->1 [style = solid, label="selectStatement"];
+6->8 [style = dotted, label="true"];
+7->6 [style = bold, label=""];
+6->8 [style = bold, label=""];
+9->5 [style = bold, label=""];
+2->11 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+3->12 [style = solid, label="selectStatement"];
+8->4 [style = bold, label=""];
+6->7 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

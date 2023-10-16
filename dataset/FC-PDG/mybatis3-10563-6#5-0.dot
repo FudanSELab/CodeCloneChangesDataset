@@ -1,0 +1,38 @@
+digraph {
+11 [style = filled, label = "Assertions.assertEquals(expectedAncestor,person.getAncestor(),\"Ancestor must be John Smith sr.\")@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "Assert.assertEquals(\"Ancestor must be John Smith sr.\",expectedAncestor,person.getAncestor())@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "Assertions.assertNotNull(person.getParent().getParent(),\"Grandparent must not be null\")@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "Person expectedAncestor = personMapper.selectById(1)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Assert.assertNotNull(\"Grandparent must not be null\",person.getParent().getParent())@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "Assertions.assertNotNull(person,\"Persons must not be null\")@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "Person person = personMapper.selectById(3)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Assert.assertNotNull(\"Parent must not be null\",person.getParent())@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "Assertions.assertNotNull(person.getParent(),\"Parent must not be null\")@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "testAncestor['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "PersonMapper personMapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Assert.assertNotNull(\"Persons must not be null\",person)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testAncestorAfterQueryingParents['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "testAncestorAfterQueryingParents['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6->3 [style = bold, label=""];
+6->8 [style = dashed, label="0"];
+1->8 [style = bold, label=""];
+1->6 [style = solid, label="person"];
+12->11 [style = bold, label=""];
+7->11 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+1->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+8->9 [style = bold, label=""];
+10->4 [style = bold, label=""];
+1->8 [style = solid, label="person"];
+5->7 [style = solid, label="expectedAncestor"];
+9->12 [style = bold, label=""];
+2->7 [style = bold, label=""];
+6->7 [style = bold, label=""];
+4->5 [style = bold, label=""];
+5->11 [style = solid, label="expectedAncestor"];
+13->4 [style = bold, label=""];
+}

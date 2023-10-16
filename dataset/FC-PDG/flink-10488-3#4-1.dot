@@ -1,0 +1,18 @@
+digraph {
+3 [style = filled, label = "testArrayTypes['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "testSerialTypes['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testArrayTypes['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertEquals(\"(\" + \"32767,\" + \"2147483647,\" + \"32767,\" + \"2147483647,\" + \"9223372036854775807,\" + \"9223372036854775807(\",results.toString())@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(\"(\" + \"(1, 2, 3(,\" + \"((92, 120, 51, 50(, (92, 120, 51, 51(, (92, 120, 51, 52((,\" + \"(3, 4, 5(,\" + \"(4, 5, 6(,\" + \"(5.5, 6.6, 7.7(,\" + \"(6.6, 7.7, 8.8(,\" + \"(7.70000, 8.80000, 9.90000(,\" + \"(8.800000000000000000, 9.900000000000000000, 10.100000000000000000(,\" + \"(9.90, 10.10, 11.11(,\" + \"(true, false, true(,\" + \"(a, b, c(,\" + \"(b, c, d(,\" + \"(b , c , d (,\" + \"(b, c, d(,\" + \"(2016-06-22T19:10:25, 2019-06-22T19:10:25(,\" + \"(2015-01-01, 2020-01-01(,\" + \"(00:51:03, 00:59:03((\",results.toString())@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "List<Row> results = Lists.newArrayList(tEnv.sqlQuery(String.format(\"select * from %s\",TABLE_ARRAY_TYPE)).execute().collect())@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "List<Row> results = Lists.newArrayList(tEnv.sqlQuery(String.format(\"select * from %s\",TABLE_SERIAL_TYPE)).execute().collect())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "List<Row> results = CollectionUtil.iteratorToList(tEnv.sqlQuery(String.format(\"select * from %s\",TABLE_ARRAY_TYPE)).execute().collect())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5->7 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

@@ -1,0 +1,32 @@
+digraph {
+2 [style = filled, label = "List<SQLServerTableColumn> columns = new ArrayList<>(childColumns)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "return Collections.emptyList()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "@NotNull DBRProgressMonitor monitor@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "getAttributes['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "childColumns == null@@@4@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "getAttributes['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "return columns@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "getAttributes['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "columns.sort(DBUtils.orderComparator())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "@NotNull DBRProgressMonitor monitor@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "List<SQLServerTableColumn> childColumns = getContainer().getTableCache().getChildren(monitor,getContainer(),this)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->8 [style = dashed, label="0"];
+10->3 [style = dotted, label="true"];
+5->1 [style = bold, label=""];
+1->4 [style = bold, label=""];
+1->2 [style = solid, label="childColumns"];
+4->0 [style = dotted, label="true"];
+4->2 [style = bold, label=""];
+2->6 [style = solid, label="columns"];
+2->7 [style = bold, label=""];
+9->1 [style = bold, label=""];
+3->1 [style = solid, label="monitor"];
+10->1 [style = bold, label=""];
+5->3 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+1->4 [style = solid, label="childColumns"];
+7->6 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->1 [style = solid, label="monitor"];
+}

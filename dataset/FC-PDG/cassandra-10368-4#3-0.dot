@@ -1,0 +1,34 @@
+digraph {
+7 [style = filled, label = "diff30['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "List<String> excludeAttributes = Arrays.asList(\"RPCServerRunning\",\"MaxNativeProtocolVersion\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "diff311['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "List<String> excludeObjects = Arrays.asList(\"org.apache.cassandra.metrics:type=ThreadPools.*\",\"org.apache.cassandra.internal:.*\",\"org.apache.cassandra.metrics:type=DroppedMessage,scope=PAGED_RANGE.*\",\"org.apache.cassandra.metrics:type=Client,name=connectedThriftClients\",\"org.apache.cassandra.request:type=ReadRepairStage\",\"org.apache.cassandra.db:type=HintedHandoffManager\",\"org.apache.cassandra.metrics:type=Table,keyspace=system,scope=(schema_aggregates|schema_columnfamilies|schema_columns|schema_functions|schema_keyspaces|schema_triggers|schema_usertypes),name=.*\",\".*keyspace=system,(scope|table|columnfamily)=views_builds_in_progress.*\",\".*keyspace=system,(scope|table|columnfamily)=range_xfers.*\",\".*keyspace=system,(scope|table|columnfamily)=hints.*\",\".*keyspace=system,(scope|table|columnfamily)=batchlog.*\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "List<String> excludeAttributes = Arrays.asList(\"RPCServerRunning\",\"MaxNativeProtocolVersion\",\"StreamingSocketTimeout\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "diff(excludeObjects,excludeAttributes,excludeOperations,\"test/data/jmxdump/cassandra-3.0-jmx.yaml\")@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "List<String> excludeOperations = Arrays.asList(\"startRPCServer\",\"stopRPCServer\",\"decommission\",\"forceRepairAsync\",\"forceRepairRangeAsync\",\"beginLocalSampling\",\"finishLocalSampling\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "List<String> excludeObjects = Arrays.asList(\"org.apache.cassandra.metrics:type=ThreadPools.*\",\"org.apache.cassandra.internal:.*\",\"org.apache.cassandra.metrics:type=DroppedMessage.*\",\"org.apache.cassandra.metrics:type=ClientRequest,scope=CASRead,name=ConditionNotMet\",\"org.apache.cassandra.metrics:type=Client,name=connectedThriftClients\",\"org.apache.cassandra.request:type=ReadRepairStage\",\"org.apache.cassandra.db:type=HintedHandoffManager\",\"org.apache.cassandra.metrics:type=Table,keyspace=system,scope=(schema_aggregates|schema_columnfamilies|schema_columns|schema_functions|schema_keyspaces|schema_triggers|schema_usertypes),name=.*\",\".*keyspace=system,(scope|table|columnfamily)=views_builds_in_progress.*\",\".*keyspace=system,(scope|table|columnfamily)=range_xfers.*\",\".*keyspace=system,(scope|table|columnfamily)=hints.*\",\".*keyspace=system,(scope|table|columnfamily)=batchlog.*\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "diff(excludeObjects,excludeAttributes,excludeOperations,\"test/data/jmxdump/cassandra-3.11-jmx.yaml\")@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "List<String> excludeObjects = Arrays.asList(\"org.apache.cassandra.metrics:type=ThreadPools.*\",\"org.apache.cassandra.internal:.*\",\"org.apache.cassandra.metrics:type=DroppedMessage.*\",\"org.apache.cassandra.metrics:type=ClientRequest,scope=CASRead,name=ConditionNotMet\",\"org.apache.cassandra.metrics:type=Client,name=connectedThriftClients\",\"org.apache.cassandra.request:type=ReadRepairStage\",\"org.apache.cassandra.db:type=HintedHandoffManager\",\"org.apache.cassandra.metrics:type=Table,keyspace=system,scope=(schema_aggregates|schema_columnfamilies|schema_columns|schema_functions|schema_keyspaces|schema_triggers|schema_usertypes),name=.*\",\".*keyspace=system,(scope|table|columnfamily)=views_builds_in_progress.*\",\".*keyspace=system,(scope|table|columnfamily)=range_xfers.*\",\".*keyspace=system,(scope|table|columnfamily)=hints.*\",\".*keyspace=system,(scope|table|columnfamily)=batchlog.*\")@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "diff311['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6->4 [style = solid, label="excludeObjects"];
+0->3 [style = bold, label=""];
+7->10 [style = bold, label=""];
+9->8 [style = solid, label="excludeAttributes"];
+6->0 [style = bold, label=""];
+2->4 [style = solid, label="excludeObjects"];
+3->4 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+3->4 [style = solid, label="excludeOperations"];
+0->4 [style = solid, label="excludeAttributes"];
+2->0 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->8 [style = bold, label=""];
+10->8 [style = solid, label="excludeObjects"];
+4->8 [style = dashed, label="0"];
+3->8 [style = solid, label="excludeOperations"];
+2->6 [style = dashed, label="0"];
+9->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+10->9 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+}

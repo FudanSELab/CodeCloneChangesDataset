@@ -1,0 +1,36 @@
+digraph {
+7 [style = filled, label = "Policy oldPolicy = Policy.getPolicy()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testUnloadableInStaticFieldIfClosed['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "return@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "System.setSecurityManager(new SecurityManager())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "{System.setSecurityManager(oldSecurityManager)Policy.setPolicy(oldPolicy)}@@@14@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "isJdk9()@@@3@@@['0', '1', '0']", fillcolor = red, shape = diamond image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "testUnloadableInStaticFieldIfClosed['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "doTestUnloadable()@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "testUnloadableWithSecurityManager['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "{System.setSecurityManager(oldSecurityManager)Policy.setPolicy(oldPolicy)}@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Policy.setPolicy(new PermissivePolicy())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "GcFinalization.awaitClear(loaderRef)@@@12@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "SecurityManager oldSecurityManager = System.getSecurityManager()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "WeakReference<ClassLoader> loaderRef = doTestUnloadableInStaticFieldIfClosed()@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->11 [style = bold, label=""];
+5->3 [style = bold, label=""];
+6->0 [style = solid, label="loaderRef"];
+3->6 [style = bold, label=""];
+7->1 [style = solid, label="oldPolicy"];
+11->12 [style = bold, label=""];
+6->0 [style = bold, label=""];
+7->12 [style = solid, label="oldPolicy"];
+2->7 [style = bold, label=""];
+7->4 [style = bold, label=""];
+9->10 [style = bold, label=""];
+4->12 [style = solid, label="oldSecurityManager"];
+9->7 [style = bold, label=""];
+4->1 [style = solid, label="oldSecurityManager"];
+9->10 [style = dotted, label="true"];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+10->7 [style = bold, label=""];
+13->7 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

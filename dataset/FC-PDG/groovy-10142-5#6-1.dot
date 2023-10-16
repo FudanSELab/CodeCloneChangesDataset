@@ -1,0 +1,22 @@
+digraph {
+0 [style = filled, label = "Queryable<? extends U> queryable@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "crossJoin['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "BiPredicate<? super T,? super U> joiner@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "innerJoin['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Queryable<? extends U> queryable@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Queryable<? extends U> queryable@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "return from(stream)@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "innerJoin['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Stream<Tuple2<T,U>> stream = this.stream().flatMap(null)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->1 [style = bold, label=""];
+6->1 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+6->3 [style = dotted, label="true"];
+3->7 [style = dashed, label="0"];
+1->2 [style = solid, label="stream"];
+4->0 [style = dotted, label="true"];
+}

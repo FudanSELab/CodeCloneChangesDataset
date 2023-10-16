@@ -1,0 +1,26 @@
+digraph {
+2 [style = filled, label = "startEmptyFlowables['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "o.subscribe(new Consumer<String>(){@Override public void accept(String s){System.out.println(s)list.add(s)}})@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "startEmptyFlowables['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "Observable<String> o = Observable.zip(Observable.empty(),Observable.empty(),new BiFunction<Integer,String,String>(){@Override public String apply(Integer t1,String t2){return t1 + \"-\" + t2}})@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "f.subscribe(new Consumer<String>(){@Override public void accept(String s){System.out.println(s)list.add(s)}})@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Flowable<String> f = Flowable.zip(Flowable.empty(),Flowable.empty(),new BiFunction<Integer,String,String>(){@Override public String apply(Integer t1,String t2){return t1 + \"-\" + t2}})@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(0,list.size())@@@17@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "startEmptyObservables['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final ArrayList<String> list = new ArrayList<String>()@@@9@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final ArrayList<String> list = new ArrayList<>()@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8->0 [style = bold, label=""];
+7->9 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+6->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+1->4 [style = bold, label=""];
+4->8 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+1->6 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+9->4 [style = bold, label=""];
+}

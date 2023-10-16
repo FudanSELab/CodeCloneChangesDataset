@@ -1,0 +1,25 @@
+digraph {
+2 [style = filled, label = "CategoryDataset dataset = DatasetUtils.createCategoryDataset(\"S\",\"C\",data)@@@12@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return ChartFactory.createBarChart(\"Bar Chart\",\"Domain\",\"Range\",dataset,PlotOrientation.HORIZONTAL,true,true,true)@@@13@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Number(((( data = new Integer((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1b7171@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "createBarChart['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "return ChartFactory.createStackedAreaChart(\"Stacked Area Chart\",\"Domain\",\"Range\",dataset,PlotOrientation.HORIZONTAL,true,true,true)@@@13@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "CategoryDataset<String,String> dataset = DatasetUtils.createCategoryDataset(\"S\",\"C\",data)@@@12@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "createChart['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "createBarChart['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3->0 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+7->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+2->6 [style = solid, label="dataset"];
+0->4 [style = solid, label="data"];
+5->0 [style = bold, label=""];
+0->4 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+2->6 [style = bold, label=""];
+4->1 [style = solid, label="dataset"];
+2->1 [style = bold, label=""];
+2->1 [style = solid, label="dataset"];
+0->2 [style = solid, label="data"];
+}

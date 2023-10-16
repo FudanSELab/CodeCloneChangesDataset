@@ -1,0 +1,17 @@
+digraph {
+6 [style = filled, label = "this.mockMvc.perform(get(\"/actuator/caches\")).andExpect(status().isOk()).andDo(MockMvcRestDocumentation.document(\"caches/all\",responseFields(fieldWithPath(\"cacheManagers\").description(\"Cache managers keyed by id.\"),fieldWithPath(\"cacheManagers.*.caches\").description(\"Caches in the application context keyed by name.\")).andWithPrefix(\"cacheManagers.*.caches.*.\",fieldWithPath(\"target\").description(\"Fully qualified name of the native cache.\"))))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "allLoggers['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "given(this.loggingSystem.getSupportedLogLevels()).willReturn(EnumSet.allOf())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "given(this.loggingSystem.getLoggerConfigurations()).willReturn(Arrays.asList(new LoggerConfiguration(\"ROOT\",LogLevel.INFO,LogLevel.INFO),new LoggerConfiguration(\"com.example\",LogLevel.DEBUG,LogLevel.DEBUG)))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "allCaches['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "this.mockMvc.perform(get(\"/actuator/loggers\")).andExpect(status().isOk()).andDo(MockMvcRestDocumentation.document(\"loggers/all\",responseFields(fieldWithPath(\"levels\").description(\"Levels support by the logging system.\"),fieldWithPath(\"loggers\").description(\"Loggers keyed by name.\")).andWithPrefix(\"loggers.*.\",levelFields)))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "allLoggers['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "this.mockMvc.perform(get(\"/actuator/loggers\")).andExpect(status().isOk()).andDo(MockMvcRestDocumentation.document(\"loggers/all\",responseFields(fieldWithPath(\"levels\").description(\"Levels support by the logging system.\"),fieldWithPath(\"loggers\").description(\"Loggers keyed by name.\"),fieldWithPath(\"groups\").description(\"Logger groups keyed by name\")).andWithPrefix(\"loggers.*.\",levelFields).andWithPrefix(\"groups.*.\",groupLevelFields)))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+7->6 [style = bold, label=""];
+3->4 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

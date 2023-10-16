@@ -1,0 +1,27 @@
+digraph {
+7 [style = filled, label = "String q = \"select *\" + \"from (select * from \"emps\" where \"empid\" < 300)\" + \"join (select * from \"emps\" where \"empid\" < 200) using (\"empid\")\"@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final List<List<List<String>>> substitutedNames = new ArrayList<>()@@@99@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testMaterializationSubstitution2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testMaterializationSubstitution['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "substitutedNames.sort(CASE_INSENSITIVE_LIST_LIST_COMPARATOR)@@@101@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "CalciteAssert.that().withMaterializations(HR_FKUK_MODEL,\"m0\",\"select * from \"emps\" where \"empid\" < 300\",\"m1\",\"select * from \"emps\" where \"empid\" < 600\").query(q).withHook(Hook.SUB,(Consumer<RelNode>)null).enableMaterializations(true).sameResultWithMaterializationsDisabled()@@@58@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "CalciteAssert.that().withMaterializations(HR_FKUK_MODEL,\"m0\",\"select * from \"emps\" where \"empid\" < 300\",\"m1\",\"select * from \"emps\" where \"empid\" < 600\",\"m2\",\"select * from \"m1\"\").query(q).withHook(Hook.SUB,(Consumer<RelNode>)null).enableMaterializations(true).sameResultWithMaterializationsDisabled()@@@100@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final String(((((( expectedNames = {{{\"hr\",\"emps\"},{\"hr\",\"m0\"}},{{\"hr\",\"emps\"},{\"hr\",\"m1\"}},{{\"hr\",\"emps\"},{\"hr\",\"m2\"}},{{\"hr\",\"m0\"},{\"hr\",\"emps\"}},{{\"hr\",\"m0\"},{\"hr\",\"m0\"}},{{\"hr\",\"m0\"},{\"hr\",\"m1\"}},{{\"hr\",\"m0\"},{\"hr\",\"m2\"}},{{\"hr\",\"m1\"},{\"hr\",\"emps\"}},{{\"hr\",\"m1\"},{\"hr\",\"m0\"}},{{\"hr\",\"m1\"},{\"hr\",\"m1\"}},{{\"hr\",\"m1\"},{\"hr\",\"m2\"}},{{\"hr\",\"m2\"},{\"hr\",\"emps\"}},{{\"hr\",\"m2\"},{\"hr\",\"m0\"}},{{\"hr\",\"m2\"},{\"hr\",\"m1\"}},{{\"hr\",\"m2\"},{\"hr\",\"m2\"}}}@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "MaterializationService.setThreadLocal()@@@98@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testMaterializationSubstitution['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(substitutedNames,is(list3(expectedNames)))@@@102@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+3->10 [style = bold, label=""];
+3->6 [style = solid, label="substitutedNames"];
+4->1 [style = bold, label=""];
+1->6 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+10->1 [style = bold, label=""];
+9->7 [style = bold, label=""];
+7->2 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->6 [style = solid, label="expectedNames"];
+8->7 [style = bold, label=""];
+2->5 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

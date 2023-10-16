@@ -1,0 +1,36 @@
+digraph {
+3 [style = filled, label = "BibEntry localEntry = new BibEntry(BibtexEntryTypes.ARTICLE.getName())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Assert.assertTrue(result.isEmpty())@@@10@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "List<Path> result = fileFinder.findAssociatedFiles(localEntry,dirs,extensions)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertTrue(result.isEmpty())@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "RegExpBasedFileFinder fileFinder = new RegExpBasedFileFinder(\"**/(bibtexkey(.*\\.(extension(\",',')@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testFindFileNonRecursive['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "List<Path> dirs = Collections.singletonList(Paths.get(filesDirectory))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "localEntry.setField(\"year\",\"2017\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testFindFileNonRecursive['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "List<String> extensions = Collections.singletonList(\"pdf\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "localEntry.setCiteKey(\"pdfInSubdirectory\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testFindFileInSubdirectory['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "RegExpBasedFileFinder fileFinder = new RegExpBasedFileFinder(\"*/(bibtexkey(.*\\.(extension(\",',')@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertEquals(Collections.singletonList(Paths.get(\"src/test/resources/org/jabref/logic/importer/unlinkedFilesTestFolder/directory/subdirectory/pdfInSubdirectory.pdf\")),result)@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+0->11 [style = solid, label="result"];
+9->3 [style = bold, label=""];
+13->0 [style = bold, label=""];
+0->11 [style = bold, label=""];
+5->0 [style = solid, label="extensions"];
+4->1 [style = bold, label=""];
+7->0 [style = bold, label=""];
+0->10 [style = bold, label=""];
+12->3 [style = bold, label=""];
+3->0 [style = solid, label="localEntry"];
+6->0 [style = solid, label="dirs"];
+5->6 [style = bold, label=""];
+6->7 [style = bold, label=""];
+7->13 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+6->13 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

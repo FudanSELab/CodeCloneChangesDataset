@@ -1,0 +1,32 @@
+digraph {
+1 [style = filled, label = "Assert.assertEquals(1L,values.get(\"cnt_read_final_proc_time_ms\"))@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "checkTimeMetric((long)values.get(\"max_read_final_proc_time_ms\"),1000L,2000L)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "setupProcessors(0,1000)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "processRequestWithWait(createReadRequest(1L,1))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "setupProcessors(0,0)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testCommitProcessTime['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "checkTimeMetric((long)values.get(\"max_commit_process_time\"),0L,1000L)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "Assert.assertEquals(1L,values.get(\"cnt_commit_process_time\"))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testReadFinalProcTime['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "checkTimeMetric((long)values.get(\"max_read_final_proc_time_ms\"),1000L,2000L)@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "assertEquals(1L,values.get(\"cnt_read_final_proc_time_ms\"))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "Map<String,Object> values = MetricsUtils.currentServerMetrics()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testReadFinalProcTime['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+4->9 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+9->12 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+0->12 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+11->2 [style = bold, label=""];
+4->7 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+7->6 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+8->3 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

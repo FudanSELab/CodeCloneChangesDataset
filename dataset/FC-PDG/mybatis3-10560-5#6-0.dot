@@ -1,0 +1,36 @@
+digraph {
+6 [style = filled, label = "Assertions.assertEquals(person,ancestor,\"Ancestor must be John Smith sr.\")@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "Person parent = person.getParent()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Person person = personMapper.selectById(1)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Person ancestor = person.getAncestor()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Assert.assertNotNull(\"Persons must not be null\",person)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Assert.assertNull(\"Parent must be null\",parent)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testAncestorSelf['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Assert.assertEquals(\"Ancestor must be John Smith sr.\",person,ancestor)@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "PersonMapper personMapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assertions.assertNotNull(person,\"Persons must not be null\")@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "testNoParent['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testAncestorSelf['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->6 [style = solid, label="ancestor"];
+9->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+10->11 [style = solid, label="parent"];
+2->1 [style = solid, label="person"];
+3->10 [style = bold, label=""];
+5->1 [style = bold, label=""];
+3->5 [style = bold, label=""];
+5->6 [style = bold, label=""];
+8->5 [style = bold, label=""];
+2->3 [style = solid, label="person"];
+5->10 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+2->6 [style = solid, label="person"];
+2->8 [style = solid, label="person"];
+3->8 [style = dashed, label="0"];
+5->1 [style = solid, label="ancestor"];
+2->8 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

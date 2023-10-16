@@ -1,0 +1,13 @@
+digraph {
+1 [style = filled, label = "tester(false,new JdbcTest.HrSchemaBig()).query(sql).withHook(Hook.PLANNER,(Consumer<RelOptPlanner>)null).returnsUnordered(\"\")@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String sql = \"SELECT d.name, e.salary FROM depts d join emps e on d.name = e.name\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testJoinSubQuery['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "testInnerJoinOnString['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String sql = \"SELECT count(name) FROM emps e WHERE e.deptno NOT IN \" + \"(SELECT d.deptno FROM depts d WHERE d.name = 'Sales')\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testJoinSubQuery['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+5->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+}

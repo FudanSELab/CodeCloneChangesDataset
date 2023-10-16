@@ -1,0 +1,26 @@
+digraph {
+8 [style = filled, label = "expectedException.expectMessage(\"dataSource cannot be null or empty. Please provide a dataSource.\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testEmptyDatasource['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "DataSchema schema = new DataSchema(IdUtilsTest.VALID_ID_CHARS,parser,new AggregatorFactory((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a14ff5,new ArbitraryGranularitySpec(Granularities.DAY,ImmutableList.of(Intervals.of(\"2014/2015\"))),null,jsonMapper)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "DataSchema schema = new DataSchema(TaskIdUtilsTest.VALID_ID_CHARS,parser,new AggregatorFactory((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a14f92,new ArbitraryGranularitySpec(Granularities.DAY,ImmutableList.of(Intervals.of(\"2014/2015\"))),null,jsonMapper)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "Assert.assertEquals(ImmutableSet.of(\"dimC\",\"col1\",\"metric1\",\"metric2\"),schema.getParser().getParseSpec().getDimensionsSpec().getDimensionExclusions())@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testExplicitInclude['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "DataSchema schema = new DataSchema(\"\",parser,new AggregatorFactory((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a15063,new ArbitraryGranularitySpec(Granularities.DAY,ImmutableList.of(Intervals.of(\"2014/2015\"))),null,jsonMapper)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Map<String,Object> parser = jsonMapper.convertValue(new StringInputRowParser(new JSONParseSpec(new TimestampSpec(\"time\",\"auto\",null),new DimensionsSpec(DimensionsSpec.getDefaultSchemas(ImmutableList.of(\"time\",\"dimA\",\"dimB\",\"col2\")),ImmutableList.of(\"dimC\"),null),null,null,null),null),JacksonUtils.TYPE_REFERENCE_MAP_STRING_OBJECT)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "expectedException.expect(CoreMatchers.instanceOf())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testExplicitInclude['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->5 [style = bold, label=""];
+8->6 [style = bold, label=""];
+3->1 [style = solid, label="parser"];
+1->0 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+5->0 [style = bold, label=""];
+3->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+3->5 [style = solid, label="parser"];
+2->3 [style = bold, label=""];
+3->6 [style = solid, label="parser"];
+}

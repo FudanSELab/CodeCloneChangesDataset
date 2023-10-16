@@ -1,0 +1,33 @@
+digraph {
+8 [style = filled, label = "cloudFoundryPlatformActiveSetsCloudControllerUrl['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertThat(cloudControllerUrl).isEqualTo(\"http://my-cloud-controller.com\")@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "this.context.refresh()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "cloudFoundryPlatformActiveSetsCloudControllerUrl['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "setupContextWithCloudEnabled()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(cloudControllerUrl).isEqualTo(\"http://my-cloud-controller.com\")@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "Object interceptor = ReflectionTestUtils.getField(handlerMapping,\"securityInterceptor\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "CloudFoundryWebEndpointServletHandlerMapping handlerMapping = getHandlerMapping()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "String cloudControllerUrl = (String)ReflectionTestUtils.getField(interceptorSecurityService,\"cloudControllerUrl\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "cloudFoundryPlatformActiveSetsCloudControllerUrl['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "CloudFoundryWebFluxEndpointHandlerMapping handlerMapping = getHandlerMapping()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Object interceptorSecurityService = ReflectionTestUtils.getField(interceptor,\"cloudFoundrySecurityService\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "String cloudControllerUrl = (String)ReflectionTestUtils.getField(interceptorSecurityService,\"cloudControllerUrl\")@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11->2 [style = solid, label="interceptorSecurityService"];
+8->1 [style = bold, label=""];
+5->7 [style = bold, label=""];
+6->4 [style = bold, label=""];
+4->2 [style = solid, label="handlerMapping"];
+12->11 [style = solid, label="interceptor"];
+1->6 [style = bold, label=""];
+4->2 [style = bold, label=""];
+9->10 [style = bold, label=""];
+5->7 [style = solid, label="interceptorSecurityService"];
+10->12 [style = bold, label=""];
+0->1 [style = bold, label=""];
+11->2 [style = bold, label=""];
+7->3 [style = bold, label=""];
+2->5 [style = bold, label=""];
+2->5 [style = solid, label="interceptor"];
+12->11 [style = bold, label=""];
+10->12 [style = solid, label="handlerMapping"];
+}

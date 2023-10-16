@@ -1,0 +1,30 @@
+digraph {
+9 [style = filled, label = "return new TransactionDeleteBuilder(){@Override public CuratorTransactionBridge forPath(String path){String fixedPath = client.fixForNamespace(path)transaction.add(Op.delete(fixedPath,version),OperationType.DELETE,path)return curatorTransaction}@Override public Pathable<CuratorTransactionBridge> withVersion(int version){this.withVersion(version)return this}}@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final CuratorMultiTransactionRecord transaction@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final T context@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "final CuratorTransactionImpl curatorTransaction@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "final CuratorMultiTransactionRecord transaction@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "final CuratorTransactionImpl curatorTransaction@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final CuratorMultiTransactionRecord transaction@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "asTransactionSetDataBuilder['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "return new TransactionSetDataBuilder(){@Override public CuratorTransactionBridge forPath(String path,byte(( data){if (compress) {data = client.getCompressionProvider().compress(path,data)}String fixedPath = client.fixForNamespace(path)transaction.add(Op.setData(fixedPath,data,version),OperationType.SET_DATA,path)return curatorTransaction}@Override public CuratorTransactionBridge forPath(String path){return forPath(path,client.getDefaultData())}@Override public PathAndBytesable<CuratorTransactionBridge> withVersion(int version){this.withVersion(version)return this}@Override public PathAndBytesable<CuratorTransactionBridge> compressed(){compress = truereturn this}}@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "return new TransactionSetDataBuilder<T>(){@Override public T forPath(String path,byte(( data){if (compress) {data = client.getCompressionProvider().compress(path,data)}String fixedPath = client.fixForNamespace(path)transaction.add(Op.setData(fixedPath,data,version),OperationType.SET_DATA,path)return context}@Override public T forPath(String path){return forPath(path,client.getDefaultData())}@Override public PathAndBytesable<T> withVersion(int version){this.withVersion(version)return this}@Override public PathAndBytesable<T> compressed(){compress = truereturn this}}@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "asTransactionSetDataBuilder['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "asTransactionDeleteBuilder['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4->6 [style = dotted, label="true"];
+3->0 [style = solid, label="curatorTransaction"];
+8->11 [style = dotted, label="true"];
+4->7 [style = dotted, label="true"];
+1->0 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+1->2 [style = dotted, label="true"];
+8->10 [style = dotted, label="true"];
+0->5 [style = dashed, label="0"];
+10->9 [style = solid, label="curatorTransaction"];
+3->7 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+7->5 [style = solid, label="context"];
+3->11 [style = dashed, label="0"];
+8->9 [style = bold, label=""];
+1->3 [style = dotted, label="true"];
+}

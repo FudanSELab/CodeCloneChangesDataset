@@ -1,0 +1,22 @@
+digraph {
+8 [style = filled, label = "setParameterWithNonNullParameterThrowsException['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "TYPE_HANDLER.setParameter(ps,1,null,JdbcType.INTEGER)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "TYPE_HANDLER.setParameter(ps,1,99,JdbcType.INTEGER)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Assertions.fail(\"Should have thrown a TypeException\")@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "doThrow(new SQLException(\"invalid column\")).when(ps).setNull(1,JdbcType.INTEGER.TYPE_CODE)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Assert.fail(\"Should have thrown a TypeException\")@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "setParameterWithNullParameterThrowsException['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "doThrow(new SQLException(\"invalid column\")).when((UnknownTypeHandler)TYPE_HANDLER).setNonNullParameter(ps,1,99,JdbcType.INTEGER)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "setParameterWithNullParameterThrowsException['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->2 [style = bold, label=""];
+7->0 [style = bold, label=""];
+8->6 [style = bold, label=""];
+6->7 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+2->7 [style = dashed, label="0"];
+1->6 [style = dashed, label="0"];
+2->5 [style = bold, label=""];
+}

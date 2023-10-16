@@ -1,0 +1,35 @@
+digraph {
+9 [style = filled, label = "checkToBeAlteredKeyGenerators['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "Collection<String> notExistedKeyGenerators = getToBeAlteredKeyGenerators(sqlStatement).stream().distinct().filter(null).collect(Collectors.toList())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final CreateEncryptRuleStatement sqlStatement@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "checkToBeCreatedEncryptors['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "final AlterShardingTableRuleStatement sqlStatement@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "throw new InvalidKeyGeneratorsException(notExistedKeyGenerators)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "sqlStatement.getRules().forEach(null)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "throw new InvalidEncryptorsException(notExistedEncryptors)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "!notExistedEncryptors.isEmpty()@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final CreateEncryptRuleStatement sqlStatement@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "checkToBeCreatedEncryptors['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "!notExistedKeyGenerators.isEmpty()@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Collection<String> notExistedEncryptors = encryptors.stream().filter(null).collect(Collectors.toList())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Collection<String> encryptors = new LinkedHashSet<>()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+6->1 [style = bold, label=""];
+12->13 [style = bold, label=""];
+3->2 [style = solid, label="notExistedEncryptors"];
+5->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+9->12 [style = bold, label=""];
+13->11 [style = dotted, label="true"];
+1->0 [style = bold, label=""];
+1->12 [style = dashed, label="0"];
+6->4 [style = dotted, label="true"];
+4->10 [style = dashed, label="0"];
+9->10 [style = dotted, label="true"];
+4->7 [style = dashed, label="0"];
+13->11 [style = bold, label=""];
+12->11 [style = solid, label="notExistedKeyGenerators"];
+5->2 [style = dotted, label="true"];
+}

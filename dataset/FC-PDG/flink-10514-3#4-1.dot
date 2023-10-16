@@ -1,0 +1,21 @@
+digraph {
+8 [style = filled, label = "open['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "establishConnectionAndStatement()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "FunctionContext context@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "this.cache = cacheMaxSize == -1 || cacheExpireMs == -1? null: CacheBuilder.newBuilder().expireAfterWrite(cacheExpireMs,TimeUnit.MILLISECONDS).maximumSize(cacheMaxSize).build()@@@5@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "open['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "statement = dbConn.prepareStatement(query)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "this.cache = cacheMaxSize == -1 || cacheExpireMs == -1? null: CacheBuilder.newBuilder().expireAfterWrite(cacheExpireMs,TimeUnit.MILLISECONDS).maximumSize(cacheMaxSize).build()@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "open['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "establishConnection()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+5->7 [style = bold, label=""];
+6->5 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+6->4 [style = dotted, label="true"];
+2->1 [style = bold, label=""];
+8->4 [style = dotted, label="true"];
+2->4 [style = dotted, label="true"];
+}

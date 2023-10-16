@@ -1,0 +1,31 @@
+digraph {
+10 [style = filled, label = "addObjectRenameActions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "List<DBEPersistAction> actions@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ObjectRenameCommand command@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final DB2TableColumn column = command.getObject()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "addObjectRenameActions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "List<DBEPersistAction> actions@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "List<DBEPersistAction> actions@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "actions.add(new SQLDatabasePersistAction(\"Rename column\",\"ALTER TABLE \" + column.getTable().getFullyQualifiedName(DBPEvaluationContext.DDL) + \" CHANGE \" + DBUtils.getQuotedIdentifier(column.getDataSource(),command.getOldName()) + \" \" + getNestedDeclaration(column.getTable(),command)))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "actions.add(new SQLDatabasePersistAction(\"Rename column\",\"ALTER TABLE \" + column.getTable().getFullQualifiedName() + \" RENAME COLUMN \" + DBUtils.getQuotedIdentifier(column.getDataSource(),command.getOldName()) + \" TO \" + command.getNewName()))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "addObjectRenameActions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "final MySQLTableColumn column = command.getObject()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "actions.add(new SQLDatabasePersistAction(\"Rename column\",\"ALTER TABLE \" + column.getTable().getFullQualifiedName() + \" CHANGE \" + DBUtils.getQuotedIdentifier(column.getDataSource(),command.getOldName()) + \" \" + getNestedDeclaration(column.getTable(),command)))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11->8 [style = bold, label=""];
+6->4 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+10->1 [style = dotted, label="true"];
+4->2 [style = bold, label=""];
+6->1 [style = dotted, label="true"];
+1->2 [style = solid, label="command"];
+4->11 [style = dashed, label="0"];
+10->9 [style = dotted, label="true"];
+2->8 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+3->4 [style = bold, label=""];
+3->1 [style = dotted, label="true"];
+1->5 [style = solid, label="command"];
+3->0 [style = dotted, label="true"];
+10->11 [style = bold, label=""];
+6->7 [style = dotted, label="true"];
+}

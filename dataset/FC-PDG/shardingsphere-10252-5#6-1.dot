@@ -1,0 +1,35 @@
+digraph {
+12 [style = filled, label = "assertThat(builder.build(new ShardingSphereRulesBuilderMaterials(\"test_schema\",Collections.emptyList(),mock(),Collections.singletonMap(\"name\",mock(,RETURNS_DEEP_STUBS)),new ConfigurationProperties(new Properties())),ruleConfig,Collections.emptyList()),instanceOf())@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertBuild['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertBuild['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(builder.build(new ShardingSphereRulesBuilderMaterials(\"test_schema\",Collections.emptyList(),mock(),dataSourceMap,new ConfigurationProperties(new Properties())),config,Collections.emptyList()),instanceOf())@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "assertThat(builder.build(new SchemaRulesBuilderMaterials(\"test_schema\",Collections.emptyList(),mock(),dataSourceMap,new ConfigurationProperties(new Properties())),config,Collections.emptyList()),instanceOf())@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "assertBuild['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "ShardingRuleConfiguration ruleConfig = mock()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Map<String,DataSource> dataSourceMap = new HashMap<>(1,1)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "SchemaRuleBuilder builder = OrderedSPIRegistry.getRegisteredServices(,Collections.singletonList(config)).get(config)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "DatabaseDiscoveryRuleConfiguration config = new DatabaseDiscoveryRuleConfiguration(Collections.singleton(dataSourceConfig),Collections.singletonMap(\"TEST\",new ShardingSphereAlgorithmConfiguration(\"TEST\",new Properties())))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "SchemaRuleBuilder builder = OrderedSPIRegistry.getRegisteredServices(,Collections.singletonList(ruleConfig)).get(ruleConfig)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "dataSourceMap.put(\"primaryDataSourceName\",mock())@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "DatabaseDiscoveryDataSourceRuleConfiguration dataSourceConfig = new DatabaseDiscoveryDataSourceRuleConfiguration(\"name\",Collections.singletonList(\"name\"),\"TEST\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11->9 [style = solid, label="ruleConfig"];
+1->3 [style = bold, label=""];
+6->4 [style = bold, label=""];
+3->6 [style = bold, label=""];
+6->4 [style = solid, label="config"];
+3->6 [style = solid, label="dataSourceConfig"];
+2->5 [style = bold, label=""];
+9->12 [style = bold, label=""];
+0->5 [style = solid, label="dataSourceMap"];
+6->7 [style = solid, label="config"];
+2->7 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+0->7 [style = solid, label="dataSourceMap"];
+6->5 [style = solid, label="config"];
+11->9 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->3 [style = bold, label=""];
+10->11 [style = bold, label=""];
+11->12 [style = solid, label="ruleConfig"];
+}

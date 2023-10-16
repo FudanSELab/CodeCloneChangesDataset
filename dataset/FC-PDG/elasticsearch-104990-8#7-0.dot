@@ -1,0 +1,36 @@
+digraph {
+1 [style = filled, label = "testSearchCase(DEFAULT_QUERY,datesForDayInterval,null,null)@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "expectedDocCount.put(datesForDayInterval.get(0),1)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testSearchAndReduceCase(DEFAULT_QUERY,datesForDayInterval,null,null)@@@15@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final Map<ZonedDateTime,Integer> expectedDocCount = new HashMap<>()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "expectedDocCount.put(datesForDayInterval.get(1),2)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final Map<DateTime,Integer> expectedDocCount = new HashMap<>()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "testIntervalDay['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "testSearchCase(DEFAULT_QUERY,DATES_WITH_TIME,null,null)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "expectedDocCount.put(datesForDayInterval.get(6),1)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final List<DateTime> datesForDayInterval = Arrays.asList(new DateTime(2017,2,1,0,0,0,DateTimeZone.UTC),new DateTime(2017,2,2,0,0,0,DateTimeZone.UTC),new DateTime(2017,2,2,0,0,0,DateTimeZone.UTC),new DateTime(2017,2,3,0,0,0,DateTimeZone.UTC),new DateTime(2017,2,3,0,0,0,DateTimeZone.UTC),new DateTime(2017,2,3,0,0,0,DateTimeZone.UTC),new DateTime(2017,2,5,0,0,0,DateTimeZone.UTC))@@@3@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "testMatchAllDocs['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "testSearchAndReduceCase(DEFAULT_QUERY,DATES_WITH_TIME,null,null)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testIntervalDay['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final List<ZonedDateTime> datesForDayInterval = Arrays.asList(ZonedDateTime.of(2017,2,1,0,0,0,0,ZoneOffset.UTC),ZonedDateTime.of(2017,2,2,0,0,0,0,ZoneOffset.UTC),ZonedDateTime.of(2017,2,2,0,0,0,0,ZoneOffset.UTC),ZonedDateTime.of(2017,2,3,0,0,0,0,ZoneOffset.UTC),ZonedDateTime.of(2017,2,3,0,0,0,0,ZoneOffset.UTC),ZonedDateTime.of(2017,2,3,0,0,0,0,ZoneOffset.UTC),ZonedDateTime.of(2017,2,5,0,0,0,0,ZoneOffset.UTC))@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "expectedDocCount.put(datesForDayInterval.get(3),3)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+12->13 [style = bold, label=""];
+6->1 [style = solid, label="datesForDayInterval"];
+5->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+10->9 [style = bold, label=""];
+6->0 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+8->5 [style = bold, label=""];
+4->13 [style = dashed, label="0"];
+6->4 [style = solid, label="datesForDayInterval"];
+11->10 [style = bold, label=""];
+10->1 [style = solid, label="datesForDayInterval"];
+3->8 [style = bold, label=""];
+2->1 [style = bold, label=""];
+14->12 [style = bold, label=""];
+7->6 [style = bold, label=""];
+10->4 [style = solid, label="datesForDayInterval"];
+}

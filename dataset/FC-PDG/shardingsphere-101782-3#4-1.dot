@@ -1,0 +1,36 @@
+digraph {
+12 [style = filled, label = "assertNull(actual.getOnDuplicateKeyUpdateValueContext())@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "InsertStatementContext actual = new InsertStatementContext(schemaMetaData,Arrays.asList(1,\"Tom\",2,\"Jerry\"),insertStatement)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "setUpInsertValues(insertStatement)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "InsertStatement insertStatement = new MySQLInsertStatement()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertInsertStatementContextWithoutColumnNames['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "assertThat(actual.getGroupedParameters().size(),is(2))@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "assertGetGroupedParametersWithoutOnDuplicateParameter['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "SchemaMetaData schemaMetaData = mock()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThat(actual.getOnDuplicateKeyUpdateParameters().size(),is(0))@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "when(schemaMetaData.getAllColumnNames(\"tbl\")).thenReturn(Arrays.asList(\"id\",\"name\",\"status\"))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "PhysicalSchemaMetaData schemaMetaData = mock()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "assertInsertStatementContextWithoutColumnNames['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "insertStatement.setTable(new SimpleTableSegment(0,0,new IdentifierValue(\"tbl\")))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertInsertStatementContext(actual)@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->6 [style = solid, label="actual"];
+0->8 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+5->7 [style = solid, label="insertStatement"];
+1->2 [style = bold, label=""];
+11->12 [style = bold, label=""];
+7->11 [style = bold, label=""];
+12->10 [style = bold, label=""];
+2->7 [style = bold, label=""];
+8->4 [style = bold, label=""];
+0->7 [style = solid, label="schemaMetaData"];
+9->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+5->2 [style = solid, label="insertStatement"];
+4->5 [style = bold, label=""];
+8->7 [style = solid, label="schemaMetaData"];
+3->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+13->0 [style = bold, label=""];
+6->11 [style = dashed, label="0"];
+}

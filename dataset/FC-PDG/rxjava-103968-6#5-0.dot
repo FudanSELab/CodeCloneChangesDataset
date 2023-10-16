@@ -1,0 +1,26 @@
+digraph {
+9 [style = filled, label = "@NonNull Consumer<? super Subscription> onSubscribe@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "doOnSubscribe['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "@NonNull Action onComplete@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "doOnComplete['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return RxJavaPlugins.onAssembly(new MaybePeek<>(this,Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.emptyConsumer(),Objects.requireNonNull(onComplete,\"onComplete is null\"),Functions.EMPTY_ACTION,Functions.EMPTY_ACTION))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "doOnComplete['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "Objects.requireNonNull(onSubscribe,\"onSubscribe is null\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Action onComplete@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "return RxJavaPlugins.onAssembly(new MaybePeek<T>(this,Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.emptyConsumer(),Objects.requireNonNull(onComplete,\"onComplete is null\"),Functions.EMPTY_ACTION,Functions.EMPTY_ACTION))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "return RxJavaPlugins.onAssembly(new ParallelPeek<T>(this,Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.EMPTY_ACTION,Functions.EMPTY_ACTION,onSubscribe,Functions.EMPTY_LONG_CONSUMER,Functions.EMPTY_ACTION))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->7 [style = bold, label=""];
+4->5 [style = dotted, label="true"];
+4->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+1->0 [style = dotted, label="true"];
+8->9 [style = dotted, label="true"];
+5->3 [style = solid, label="onComplete"];
+7->6 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+0->5 [style = dashed, label="0"];
+2->3 [style = dashed, label="0"];
+9->6 [style = solid, label="onSubscribe"];
+9->7 [style = solid, label="onSubscribe"];
+0->2 [style = solid, label="onComplete"];
+}

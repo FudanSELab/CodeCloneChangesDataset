@@ -1,0 +1,17 @@
+digraph {
+1 [style = filled, label = "Assume.assumeFalse(\"Skip: the 'du' table does not work on Windows\",isWindows())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "sql(\"select * from du\").returns(new Function<ResultSet,Void>(){public Void apply(ResultSet r){try {assertThat(r.next(),is(true))assertThat(r.getInt(1),notNullValue())assertThat(r.getString(2),CoreMatchers.startsWith(\"./\"))assertThat(r.wasNull(),is(false))return null}catch (SQLException e) }})@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "sql(\"select * from du where path like '%/src/test/java/%'\" + \"order by 1 limit 2\").returns(new Function<ResultSet,Void>(){public Void apply(ResultSet r){try {assertThat(r.next(),is(true))assertThat(r.getInt(1),notNullValue())assertThat(r.getString(2),CoreMatchers.startsWith(\"./\"))assertThat(r.wasNull(),is(false))assertThat(r.next(),is(true))assertThat(r.next(),is(false))return null}catch (SQLException e) }})@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "sql(\"select * from du\").returns(null)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "testDu['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testDu['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "testDuFilterSortLimit['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+4->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+1->6 [style = bold, label=""];
+2->3 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

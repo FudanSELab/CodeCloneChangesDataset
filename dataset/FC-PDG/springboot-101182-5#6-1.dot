@@ -1,0 +1,19 @@
+digraph {
+5 [style = filled, label = "this.context = application.run()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(this.context.getEnvironment().getProperty(\"bar\")).isEqualTo(\"foo\")@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThat(this.context.getEnvironment().getProperty(\"bar\")).isEqualTo(\"foo\")@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "SpringApplicationBuilder application = new SpringApplicationBuilder().sources().contextClass().properties(Collections.singletonMap(\"bar\",\"foo\"))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "SpringApplicationBuilder application = new SpringApplicationBuilder().sources().contextClass().properties(StringUtils.splitArrayElementsIntoProperties(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1c9ee28,\"=\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "this.context = application.run()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "propertiesAsMap['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "propertiesAsProperties['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "propertiesAsMap['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->8 [style = bold, label=""];
+4->1 [style = bold, label=""];
+7->5 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

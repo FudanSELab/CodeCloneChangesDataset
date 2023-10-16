@@ -1,0 +1,25 @@
+digraph {
+0 [style = filled, label = "doAfterTerminate['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return RxJavaPlugins.onAssembly(new MaybePeek<>(this,Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.EMPTY_ACTION,Objects.requireNonNull(onAfterTerminate,\"onAfterTerminate is null\"),Functions.EMPTY_ACTION))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "Objects.requireNonNull(onSubscribe,\"onSubscribe is null\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "@NonNull Consumer<? super Subscription> onSubscribe@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "return RxJavaPlugins.onAssembly(new MaybePeek<T>(this,Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.EMPTY_ACTION,Objects.requireNonNull(onAfterTerminate,\"onAfterTerminate is null\"),Functions.EMPTY_ACTION))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "return RxJavaPlugins.onAssembly(new ParallelPeek<T>(this,Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.EMPTY_ACTION,Functions.EMPTY_ACTION,onSubscribe,Functions.EMPTY_LONG_CONSUMER,Functions.EMPTY_ACTION))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "doOnSubscribe['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "doAfterTerminate['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "@NonNull Action onAfterTerminate@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "Action onAfterTerminate@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+6->8 [style = bold, label=""];
+1->2 [style = solid, label="onAfterTerminate"];
+2->5 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+3->5 [style = solid, label="onAfterTerminate"];
+4->3 [style = dotted, label="true"];
+7->6 [style = bold, label=""];
+7->9 [style = dotted, label="true"];
+1->3 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+9->8 [style = solid, label="onSubscribe"];
+9->6 [style = solid, label="onSubscribe"];
+0->1 [style = dotted, label="true"];
+}

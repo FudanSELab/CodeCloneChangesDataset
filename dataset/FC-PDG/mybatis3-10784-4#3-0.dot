@@ -1,0 +1,38 @@
+digraph {
+2 [style = filled, label = "Assert.assertTrue(blog.getClass().getName().contains(\"CGLIB\"))@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "shouldSelectBlogWithPostsAndAuthorUsingSubSelectsLazily['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "SqlSession session = sqlMapper.openSession()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "assertEquals(\"Jim Business\",blog.getTitle())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "{session.close()}@@@13@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertEquals(2,blog.getPosts().size())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertEquals(\"jim\",blog.getAuthor().getUsername())@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Assert.assertTrue(blog instanceof Factory)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "shouldSelectBlogWithPostsAndAuthorUsingSubSelectsLazily['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(\"jim\",blog.getAuthor().getUsername())@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "Blog blog = session.selectOne(\"domain.blog.mappers.BlogMapper.selectBlogWithPostsUsingSubSelect\",1)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "shouldSelectBlogWithPostsAndAuthorUsingSubSelects['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertEquals(\"Corn nuts\",blog.getPosts().get(0).getSubject())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "{session.close()}@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Blog blog = session.selectOne(\"domain.blog.mappers.BlogMapper.selectBlogWithPostsUsingSubSelectLazily\",1)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(101,blog.getAuthor().getId())@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+0->3 [style = bold, label=""];
+3->9 [style = bold, label=""];
+12->14 [style = bold, label=""];
+5->8 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+1->12 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+3->15 [style = bold, label=""];
+7->1 [style = bold, label=""];
+10->5 [style = bold, label=""];
+6->7 [style = bold, label=""];
+1->10 [style = bold, label=""];
+1->10 [style = solid, label="blog"];
+7->12 [style = bold, label=""];
+13->7 [style = bold, label=""];
+11->7 [style = bold, label=""];
+9->4 [style = bold, label=""];
+2->5 [style = bold, label=""];
+14->5 [style = bold, label=""];
+}

@@ -1,0 +1,36 @@
+digraph {
+0 [style = filled, label = "{RxJavaPlugins.reset()}@@@22@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "mainAndBoundaryBothError['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "final AtomicReference<Subscriber<? super Object>> ref = new AtomicReference<>()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "mainAndBoundaryBothError['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "to.assertValueCount(1).assertError().assertErrorMessage(\"main\").assertNotComplete()@@@18@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "TestObserverEx<Observable<Object>> to = Observable.error(new TestException(\"main\")).window(new Observable<Object>(){@Override protected void subscribeActual(Observer<? super Object> observer){observer.onSubscribe(Disposable.empty())ref.set(observer)}}).doOnNext(new Consumer<Observable<Object>>(){@Override public void accept(Observable<Object> w){w.subscribe(Functions.emptyConsumer(),Functions.emptyConsumer())}}).to(TestHelper.testConsumer())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final AtomicReference<Subscriber<? super Object>> ref = new AtomicReference<Subscriber<? super Object>>()@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "List<Throwable> errors = TestHelper.trackPluginErrors()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final AtomicReference<Observer<? super Object>> ref = new AtomicReference<Observer<? super Object>>()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "ts.assertValueCount(1).assertError().assertErrorMessage(\"main\").assertNotComplete()@@@18@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "TestHelper.assertUndeliverable(errors,0,,\"inner\")@@@20@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "mainAndBoundaryBothError['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "ref.get().onError(new TestException(\"inner\"))@@@19@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "TestSubscriberEx<Flowable<Object>> ts = Flowable.error(new TestException(\"main\")).window(new Flowable<Object>(){@Override protected void subscribeActual(Subscriber<? super Object> subscriber){subscriber.onSubscribe(new BooleanSubscription())ref.set(subscriber)}}).doOnNext(new Consumer<Flowable<Object>>(){@Override public void accept(Flowable<Object> w){w.subscribe(Functions.emptyConsumer(),Functions.emptyConsumer())}}).to(TestHelper.testConsumer())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+3->9 [style = bold, label=""];
+3->11 [style = bold, label=""];
+6->1 [style = bold, label=""];
+12->13 [style = bold, label=""];
+3->6 [style = bold, label=""];
+10->3 [style = bold, label=""];
+3->2 [style = solid, label="errors"];
+2->0 [style = bold, label=""];
+11->12 [style = bold, label=""];
+6->11 [style = dashed, label="0"];
+4->2 [style = bold, label=""];
+1->12 [style = dashed, label="0"];
+9->1 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+5->13 [style = dashed, label="0"];
+7->3 [style = bold, label=""];
+5->4 [style = bold, label=""];
+8->3 [style = bold, label=""];
+13->4 [style = bold, label=""];
+}

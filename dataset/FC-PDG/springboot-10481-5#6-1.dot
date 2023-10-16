@@ -1,0 +1,38 @@
+digraph {
+11 [style = filled, label = "assertThat(events.get(1).getType()).isEqualTo(\"c\")@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "repository.add(new AuditEvent(\"phil\",\"d\"))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(events.size()).isEqualTo(2)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "List<AuditEvent> events = repository.find(\"dave\",null)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "List<AuditEvent> events = repository.find(\"dave\",null)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "lessThanCapacity['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(events.size()).isEqualTo(2)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "repository.add(new AuditEvent(\"dave\",\"b\"))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "repository.add(new AuditEvent(\"phil\",\"b\"))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "InMemoryAuditEventRepository repository = new InMemoryAuditEventRepository()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "lessThanCapacity['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "List<AuditEvent> events = repository.find(\"dave\",null,null)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "assertThat(events.get(0).getType()).isEqualTo(\"a\")@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "findByPrincipal['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "repository.add(new AuditEvent(\"dave\",\"c\"))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "repository.add(new AuditEvent(\"dave\",\"a\"))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->8 [style = bold, label=""];
+8->1 [style = bold, label=""];
+3->10 [style = bold, label=""];
+15->13 [style = bold, label=""];
+10->11 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+9->4 [style = bold, label=""];
+7->12 [style = bold, label=""];
+12->15 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+6->12 [style = dashed, label="0"];
+4->7 [style = bold, label=""];
+5->4 [style = bold, label=""];
+7->6 [style = bold, label=""];
+13->0 [style = bold, label=""];
+14->4 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

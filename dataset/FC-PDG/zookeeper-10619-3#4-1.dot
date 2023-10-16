@@ -1,0 +1,20 @@
+digraph {
+6 [style = filled, label = "testInvalidVersion['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.delete(\"/multi\",0)))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "Assert.assertNull(zk.exists(\"/multi\",null))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.delete(\"/multi\",1)))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Assert.fail(\"delete /multi should have failed\")@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testCreateDelete['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testCreateDelete['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.delete(\"/multi\",0)))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "assertNull(zk.exists(\"/multi\",null))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5->3 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->3 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

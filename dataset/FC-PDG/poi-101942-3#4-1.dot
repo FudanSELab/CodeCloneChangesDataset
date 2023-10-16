@@ -1,0 +1,31 @@
+digraph {
+7 [style = filled, label = "UnsynchronizedByteArrayOutputStream bos = new UnsynchronizedByteArrayOutputStream()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testSkipFullyByteArray['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "long skipped = IOUtils.skipFully(new ByteArrayInputStream(bos.toByteArray()),Integer.MAX_VALUE + 20000L)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(LENGTH,skipped)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "long skipped = IOUtils.skipFully(new ByteArrayInputStream(bos.toByteArray()),20000L)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "testSkipFullyByteArrayGtIntMax['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "ByteArrayOutputStream bos = new ByteArrayOutputStream()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testSkipFullyByteArray['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "long skipped = IOUtils.skipFully(bos.toInputStream(),20000L)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "assertEquals(LENGTH,IOUtils.copy(is,bos))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->1 [style = bold, label=""];
+5->7 [style = bold, label=""];
+0->9 [style = bold, label=""];
+7->0 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+8->4 [style = bold, label=""];
+3->1 [style = solid, label="skipped"];
+9->1 [style = solid, label="skipped"];
+3->1 [style = bold, label=""];
+9->1 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+4->0 [style = solid, label="bos"];
+2->4 [style = bold, label=""];
+0->6 [style = bold, label=""];
+7->0 [style = solid, label="bos"];
+6->1 [style = solid, label="skipped"];
+4->7 [style = dashed, label="0"];
+4->0 [style = bold, label=""];
+}

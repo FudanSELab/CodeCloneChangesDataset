@@ -1,0 +1,36 @@
+digraph {
+8 [style = filled, label = "testEnableStore['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "ParsedDocument doc = mapper.parse(new SourceToParse(\"test\",\"1\",BytesReference.bytes(XContentFactory.jsonBuilder().startObject().field(\"field\",\"1234\").endObject()),XContentType.JSON))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "String mapping = Strings.toString(XContentFactory.jsonBuilder().startObject().startObject(\"type\").startObject(\"properties\").startObject(\"field\").field(\"type\",FIELD_TYPE).field(\"store\",true).endObject().endObject().endObject().endObject())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "ParsedDocument doc = mapper.parse(new SourceToParse(\"test\",\"type\",\"1\",BytesReference.bytes(XContentFactory.jsonBuilder().startObject().field(\"field\",\"1234\").endObject()),XContentType.JSON))@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertEquals(2,fields.length)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testEnableStore['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "DocumentMapper mapper = parser.parse(\"type\",new CompressedXContent(mapping))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "IndexableField(( fields = doc.rootDoc().getFields(\"field\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertEquals(1,fields.length)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertTrue(fields(0(.fieldType().stored())@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "String mapping = Strings.toString(XContentFactory.jsonBuilder().startObject().startObject(\"type\").startObject(\"properties\").startObject(\"field\").field(\"type\",\"text\").field(\"store\",true).endObject().endObject().endObject().endObject())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testEnableStore['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertEquals(mapping,mapper.mappingSource().toString())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->3 [style = bold, label=""];
+0->9 [style = bold, label=""];
+7->1 [style = bold, label=""];
+11->1 [style = bold, label=""];
+10->0 [style = solid, label="mapping"];
+8->3 [style = bold, label=""];
+7->11 [style = dashed, label="0"];
+5->9 [style = dashed, label="0"];
+9->6 [style = bold, label=""];
+3->2 [style = solid, label="mapping"];
+2->0 [style = bold, label=""];
+12->10 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+6->11 [style = bold, label=""];
+10->2 [style = solid, label="mapping"];
+3->0 [style = solid, label="mapping"];
+10->2 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

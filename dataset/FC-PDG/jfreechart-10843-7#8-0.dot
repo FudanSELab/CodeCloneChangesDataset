@@ -1,0 +1,38 @@
+digraph {
+3 [style = filled, label = "testSerialization['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testCloning['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "CategoryMarker m2 = (CategoryMarker)TestUtils.serialised(m1)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "CategoryMarker m2 = TestUtils.serialised(m1)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testSerialization['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "MatrixSeries m2 = (MatrixSeries)m1.clone()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertTrue(m1 != m2)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertTrue(m1.equals(m2))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "MatrixSeries m1 = new MatrixSeries(\"Test\",8,3)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "CategoryMarker m1 = new CategoryMarker(\"A\",new GradientPaint(1.0f,2.0f,Color.WHITE,3.0f,4.0f,Color.YELLOW),new BasicStroke(1.1f))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "m1.update(0,0,11.0)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertTrue(m1.getClass() == m2.getClass())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "m1.update(7,2,22.0)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertEquals(m1,m2)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->9 [style = solid, label="m2"];
+1->4 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->2 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+7->6 [style = solid, label="m2"];
+1->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+4->2 [style = solid, label="m2"];
+1->2 [style = solid, label="m1"];
+5->1 [style = bold, label=""];
+12->10 [style = bold, label=""];
+0->2 [style = solid, label="m2"];
+13->7 [style = bold, label=""];
+11->13 [style = bold, label=""];
+6->8 [style = bold, label=""];
+7->6 [style = bold, label=""];
+8->9 [style = bold, label=""];
+1->4 [style = solid, label="m1"];
+10->6 [style = solid, label="m1"];
+1->0 [style = solid, label="m1"];
+10->11 [style = bold, label=""];
+}

@@ -1,0 +1,37 @@
+digraph {
+7 [style = filled, label = "Map<String,Object> parms = new HashMap<String,Object>()@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testGetNamesWithArray['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testGetNamesWithArray['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "testGetNamesWithArray_a2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertEquals(2,names.size())@@@14@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Map<String,Object> parms = new HashMap<>()@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "Array array = sqlSession.getConnection().createArrayOf(\"int\",new Integer((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@19838e1)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Object(( returnedIds = (Object(()parms.get(\"returnedIds\")@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(3,parms.get(\"requestedRows\"))@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "List<Name> names = spMapper.getNamesWithArray(parms)@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "List<Name> names = spMapper.getNamesWithArrayAnnotatedWithXMLResultMap(parms)@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "SPMapper spMapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertEquals(4,returnedIds.length)@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "parms.put(\"ids\",array)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+4->3 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+7->1 [style = bold, label=""];
+11->1 [style = bold, label=""];
+3->11 [style = bold, label=""];
+7->11 [style = dashed, label="0"];
+6->0 [style = bold, label=""];
+2->9 [style = bold, label=""];
+9->6 [style = bold, label=""];
+5->2 [style = bold, label=""];
+12->2 [style = bold, label=""];
+3->7 [style = bold, label=""];
+11->5 [style = solid, label="parms"];
+1->12 [style = bold, label=""];
+3->1 [style = solid, label="array"];
+10->4 [style = bold, label=""];
+7->5 [style = solid, label="parms"];
+7->12 [style = solid, label="parms"];
+8->4 [style = bold, label=""];
+13->4 [style = bold, label=""];
+}

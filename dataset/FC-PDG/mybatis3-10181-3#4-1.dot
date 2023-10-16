@@ -1,0 +1,24 @@
+digraph {
+9 [style = filled, label = "BaseDataTest.runScript(runner,\"org/apache/ibatis/submitted/sptests/CreateDB.sql\")@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "runner.setErrorLogWriter(null)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "initDatabase['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "setUp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "runner.setLogWriter(null)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "runner.setDelimiter(\"go\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "setUp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "BaseDataTest.runScript(runner,\"org/apache/ibatis/submitted/result_set_type/CreateDB.sql\")@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ScriptRunner runner = new ScriptRunner(sqlSessionFactory.getConfiguration().getEnvironment().getDataSource().getConnection())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+3->9 [style = solid, label="runner"];
+8->4 [style = bold, label=""];
+7->4 [style = bold, label=""];
+6->9 [style = bold, label=""];
+3->1 [style = solid, label="runner"];
+5->0 [style = bold, label=""];
+0->6 [style = bold, label=""];
+2->4 [style = bold, label=""];
+}

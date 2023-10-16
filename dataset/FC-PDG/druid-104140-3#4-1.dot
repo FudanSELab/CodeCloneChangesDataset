@@ -1,0 +1,35 @@
+digraph {
+11 [style = filled, label = "Mockito.verifyNoInteractions(mockRowIngestionMeters)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final StreamChunkParser<ByteEntity> chunkParser = new StreamChunkParser<>(null,inputFormat,new InputRowSchema(TIMESTAMP_SPEC,DimensionsSpec.EMPTY,Collections.emptyList()),TransformSpec.NONE,temporaryFolder.newFolder(),null,mockRowIngestionMeters,parseExceptionHandler)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "parseEmptyEndOfShard['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "List<InputRow> parsedRows = chunkParser.parse(ImmutableList.of(),true)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Assert.assertEquals(0,parsedRows.size())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final TrackingJsonInputFormat inputFormat = new TrackingJsonInputFormat(JSONPathSpec.DEFAULT,Collections.emptyMap())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "parseEmptyNotEndOfShard['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "parseEmptyNotEndOfShard['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "RowIngestionMeters mockRowIngestionMeters = Mockito.mock()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "List<InputRow> parsedRows = chunkParser.parse(ImmutableList.of(),false)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final StreamChunkParser<ByteEntity> chunkParser = new StreamChunkParser<>(null,inputFormat,new InputRowSchema(TIMESTAMP_SPEC,DimensionsSpec.EMPTY,ColumnsFilter.all()),TransformSpec.NONE,temporaryFolder.newFolder(),null,mockRowIngestionMeters,parseExceptionHandler)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "Mockito.verify(mockRowIngestionMeters).incrementThrownAway()@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->9 [style = bold, label=""];
+1->4 [style = bold, label=""];
+1->8 [style = bold, label=""];
+3->1 [style = bold, label=""];
+1->4 [style = solid, label="mockRowIngestionMeters"];
+3->8 [style = solid, label="inputFormat"];
+2->3 [style = bold, label=""];
+10->3 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+0->11 [style = dashed, label="0"];
+6->0 [style = bold, label=""];
+7->3 [style = bold, label=""];
+9->6 [style = bold, label=""];
+3->4 [style = solid, label="inputFormat"];
+5->6 [style = bold, label=""];
+8->5 [style = bold, label=""];
+6->11 [style = bold, label=""];
+1->11 [style = solid, label="mockRowIngestionMeters"];
+4->8 [style = dashed, label="0"];
+1->8 [style = solid, label="mockRowIngestionMeters"];
+4->5 [style = bold, label=""];
+}

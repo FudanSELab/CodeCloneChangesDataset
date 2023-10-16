@@ -1,0 +1,32 @@
+digraph {
+13 [style = filled, label = "tester.setFor(SqlStdOperatorTable.LOG10)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "tester.checkScalarApprox(\"log10(cast(10e8 as double))\",\"DOUBLE NOT NULL\",9.0,0.000001)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testLnFunc['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "tester.checkScalarApprox(\"log10(cast(10e2 as float))\",\"DOUBLE NOT NULL\",3.0,0.000001)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "tester.setFor(SqlStdOperatorTable.LN)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "tester.checkScalarApprox(\"log10(10)\",\"DOUBLE NOT NULL\",1.0,0.000001)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "tester.checkNull(\"ln(cast(null as tinyint))\")@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "tester.checkScalarApprox(\"log10(100.0)\",\"DOUBLE NOT NULL\",2.0,0.000001)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "testLogFunc['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "tester.checkNull(\"log10(cast(null as real))\")@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "tester.checkScalarApprox(\"ln(2.71828)\",\"DOUBLE NOT NULL\",1.0,0.000001)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testLnFunc['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "tester.checkScalarApprox(\"log10(cast(10e-3 as real))\",\"DOUBLE NOT NULL\",-2.0,0.000001)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "tester.checkScalarApprox(\"ln(2.71828)\",\"DOUBLE NOT NULL\",0.999999327,0.0000001)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13->10 [style = bold, label=""];
+4->3 [style = bold, label=""];
+10->9 [style = bold, label=""];
+2->0 [style = bold, label=""];
+8->6 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+4->10 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+9->7 [style = bold, label=""];
+0->4 [style = bold, label=""];
+7->8 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+0->13 [style = dashed, label="0"];
+11->13 [style = bold, label=""];
+6->12 [style = bold, label=""];
+}

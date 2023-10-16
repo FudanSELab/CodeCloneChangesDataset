@@ -1,0 +1,32 @@
+digraph {
+3 [style = filled, label = "throwSuppressed(\"Caught an exception while closing caching window store for store \" + name(),suppressed)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "close['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "close['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final LinkedList<RuntimeException> suppressed = executeAll(null,null,null)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "!suppressed.isEmpty()@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "lock.writeLock().lock()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "{lock.writeLock().unlock()}@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "close['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "throwSuppressed(\"Caught an exception while closing caching key value store for store \" + name(),suppressed)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final LinkedList<RuntimeException> suppressed = executeAll(null,null,null)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "!suppressed.isEmpty()@@@6@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final LinkedList<RuntimeException> suppressed = executeAll(null,null,null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0->3 [style = bold, label=""];
+8->11 [style = dotted, label="true"];
+1->4 [style = dashed, label="0"];
+0->3 [style = dotted, label="true"];
+1->0 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+8->11 [style = bold, label=""];
+11->9 [style = bold, label=""];
+10->7 [style = bold, label=""];
+7->11 [style = solid, label="suppressed"];
+2->1 [style = bold, label=""];
+6->10 [style = bold, label=""];
+4->3 [style = solid, label="suppressed"];
+5->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+1->3 [style = solid, label="suppressed"];
+8->9 [style = bold, label=""];
+}

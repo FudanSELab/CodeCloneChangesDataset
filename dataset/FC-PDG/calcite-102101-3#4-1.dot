@@ -1,0 +1,38 @@
+digraph {
+9 [style = filled, label = "throw new IllegalArgumentException(\"Cannot compute compatible row type \" + \"for arguments to set op: \" + Util.sepList(inputRowTypes,\", \"))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "throw new IllegalArgumentException(\"Cannot compute compatible row type \" + \"for arguments: \" + Util.sepList(inputRowTypes,\", \"))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "deriveRowType['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "deriveRowType['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "deriveRowType['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return rowType@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final List<RelDataType> inputRowTypes = Lists.transform(inputs,null)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final RelDataType rowType = getCluster().getTypeFactory().leastRestrictive(inputRowTypes)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "rowType == null@@@5@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final List<RelDataType> inputRowTypes = Lists.transform(getInputs(),null)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "final List<RelDataType> inputRowTypes = Util.transform(getInputs(),null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5->9 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->0 [style = bold, label=""];
+0->5 [style = solid, label="rowType"];
+6->2 [style = solid, label="inputRowTypes"];
+4->6 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+8->0 [style = bold, label=""];
+5->1 [style = bold, label=""];
+8->9 [style = solid, label="inputRowTypes"];
+5->2 [style = bold, label=""];
+6->0 [style = solid, label="inputRowTypes"];
+0->1 [style = solid, label="rowType"];
+8->0 [style = solid, label="inputRowTypes"];
+10->8 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+4->2 [style = solid, label="inputRowTypes"];
+7->6 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+5->9 [style = dotted, label="true"];
+4->0 [style = solid, label="inputRowTypes"];
+9->1 [style = bold, label=""];
+0->5 [style = bold, label=""];
+5->2 [style = dotted, label="true"];
+}

@@ -1,0 +1,21 @@
+digraph {
+4 [style = filled, label = "setupCluster['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "CollectionAdminRequest.createCollection(COLLECTION,\"conf\",2,1).process(cluster.getSolrClient())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "CollectionAdminRequest.createCollection(COLLECTION,\"conf\",3,1).process(cluster.getSolrClient())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "mBeanServer = ManagementFactory.getPlatformMBeanServer()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "CollectionAdminRequest.createCollection(COLLECTION,\"conf\",2,1).setMaxShardsPerNode(2).process(cluster.getSolrClient())@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "configureCluster(3).addConfig(\"conf\",configset(\"cloud-minimal\")).configure()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "setupCluster['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "cluster.waitForActiveCollection(COLLECTION,3,3)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "configureCluster(1).addConfig(\"conf\",configset(\"cloud-minimal\")).configure()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "setupCluster['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3->5 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+8->6 [style = bold, label=""];
+6->9 [style = bold, label=""];
+7->8 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

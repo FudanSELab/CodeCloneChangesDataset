@@ -1,0 +1,16 @@
+digraph {
+4 [style = filled, label = "c04_typedBeanFormData['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertEquals(\"OK\",r)@@@22@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "b04_typedBeanQueries['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "b04_typedBeanQueries['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "String r = proxy.typedBeanFormData(new TypedBeanImpl().init(),null,new TypedBean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@159537a,new AList<TypedBean>().append(new TypedBeanImpl().init()).append(null),new AList<TypedBean((((((>().append(new TypedBean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1595396).append(null),new AMap<String,TypedBean>().append(\"foo\",new TypedBeanImpl().init()),new AMap<String,List<TypedBean>>().append(\"foo\",Arrays.asList((TypedBean)new TypedBeanImpl().init())),new AMap<String,List<TypedBean((((((>>().append(\"foo\",new AList<TypedBean((((((>().append(new TypedBean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15953c5).append(null)),new AMap<Integer,List<TypedBean>>().append(1,Arrays.asList((TypedBean)new TypedBeanImpl().init())))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String r = proxy.typedBeanQueries(new TypedBeanImpl().init(),null,new TypedBean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1595307,AList.of(new TypedBeanImpl().init(),null),AList.of(new TypedBean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@159531e,null),new AMap<String,TypedBean>().append(\"foo\",new TypedBeanImpl().init()),new AMap<String,List<TypedBean>>().append(\"foo\",Arrays.asList((TypedBean)new TypedBeanImpl().init())),new AMap<String,List<TypedBean((((((>>().append(\"foo\",AList.of(new TypedBean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@159534a,null)),new AMap<Integer,List<TypedBean>>().append(1,Arrays.asList((TypedBean)new TypedBeanImpl().init())))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->2 [style = solid, label="r"];
+5->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+0->2 [style = solid, label="r"];
+}

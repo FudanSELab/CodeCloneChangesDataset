@@ -1,0 +1,25 @@
+digraph {
+8 [style = filled, label = "assertEquals(Arrays.asList(\"onError\",\"finally\"),list)@@@30@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "eventOrdering2['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Flowable.just(1).doOnCancel(new Action(){@Override public void run(){list.add(\"cancel\")}}).doFinally(new Action(){@Override public void run(){list.add(\"finally\")}}).subscribe(new Consumer<Object>(){@Override public void accept(Object v){list.add(\"onNext\")}},new Consumer<Throwable>(){@Override public void accept(Throwable e){list.add(\"onError\")}},new Action(){@Override public void run(){list.add(\"onComplete\")}})@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(Arrays.asList(\"onNext\",\"onComplete\",\"finally\"),list)@@@30@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "eventOrdering['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final List<String> list = new ArrayList<String>()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "eventOrdering2['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "final List<String> list = new ArrayList<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "Observable.error(new TestException()).doOnDispose(new Action(){@Override public void run(){list.add(\"dispose\")}}).doFinally(new Action(){@Override public void run(){list.add(\"finally\")}}).subscribe(new Consumer<Object>(){@Override public void accept(Object v){list.add(\"onNext\")}},new Consumer<Throwable>(){@Override public void accept(Throwable e){list.add(\"onError\")}},new Action(){@Override public void run(){list.add(\"onComplete\")}})@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3->0 [style = solid, label="list"];
+3->5 [style = dashed, label="0"];
+6->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+5->0 [style = solid, label="list"];
+1->0 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+3->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+3->8 [style = solid, label="list"];
+4->5 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

@@ -1,0 +1,32 @@
+digraph {
+3 [style = filled, label = "final ExasolTableForeignKey key = command.getObject()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Map<String,Object> options@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "actions.add(new SQLDatabasePersistAction(\"Rename FK\",\"ALTER TABLE \" + DBUtils.getObjectFullName(key.getTable(),DBPEvaluationContext.DDL) + \" RENAME CONSTRAINT \" + DBUtils.getQuotedIdentifier(key.getDataSource(),command.getOldName()) + \" to \" + DBUtils.getQuotedIdentifier(key.getDataSource(),command.getNewName())))@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "SQLObjectEditor<ExasolTableForeignKey,ExasolTable>.ObjectRenameCommand command@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "final ExasolTableUniqueKey key = command.getObject()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "ObjectRenameCommand command@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "List<DBEPersistAction> actions@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "actions.add(new SQLDatabasePersistAction(\"Rename PK\",\"ALTER TABLE \" + DBUtils.getObjectFullName(key.getTable(),DBPEvaluationContext.DDL) + \" RENAME CONSTRAINT \" + DBUtils.getQuotedIdentifier(key.getDataSource(),command.getOldName()) + \" to \" + DBUtils.getQuotedIdentifier(key.getDataSource(),command.getNewName())))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "addObjectRenameActions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "addObjectRenameActions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "List<DBEPersistAction> actions@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "SQLObjectEditor<ExasolTableUniqueKey,ExasolTable>.ObjectRenameCommand command@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "addObjectRenameActions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "List<DBEPersistAction> actions@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6->3 [style = bold, label=""];
+11->12 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+4->10 [style = dashed, label="0"];
+13->9 [style = dotted, label="true"];
+0->12 [style = dashed, label="0"];
+13->10 [style = dotted, label="true"];
+2->1 [style = dotted, label="true"];
+13->11 [style = bold, label=""];
+6->8 [style = dotted, label="true"];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+4->8 [style = dashed, label="0"];
+2->4 [style = dotted, label="true"];
+6->7 [style = dotted, label="true"];
+}

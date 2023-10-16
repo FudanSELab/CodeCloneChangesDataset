@@ -1,0 +1,16 @@
+digraph {
+0 [style = filled, label = "MaterializedViewSupervisorSpec materializedViewSupervisorSpec = new MaterializedViewSupervisorSpec(\"\",new DimensionsSpec(Lists.newArrayList(new StringDimensionSchema(\"isUnpatrolled\"),new StringDimensionSchema(\"metroCode\"),new StringDimensionSchema(\"namespace\"),new StringDimensionSchema(\"page\"),new StringDimensionSchema(\"regionIsoCode\"),new StringDimensionSchema(\"regionName\"),new StringDimensionSchema(\"user\")),null,null),new AggregatorFactory((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@933379,HadoopTuningConfig.makeDefaultTuningConfig(),null,null,null,null,null,false,objectMapper,null,null,null,null,null,new MaterializedViewTaskConfig(),createMock(),new NoopChatHandlerProvider())@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testEmptyBaseDataSource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "expectedException.expectMessage(\"baseDataSource cannot be null or empty. Please provide a baseDataSource.\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "MaterializedViewSupervisorSpec materializedViewSupervisorSpec = new MaterializedViewSupervisorSpec(null,new DimensionsSpec(Lists.newArrayList(new StringDimensionSchema(\"isUnpatrolled\"),new StringDimensionSchema(\"metroCode\"),new StringDimensionSchema(\"namespace\"),new StringDimensionSchema(\"page\"),new StringDimensionSchema(\"regionIsoCode\"),new StringDimensionSchema(\"regionName\"),new StringDimensionSchema(\"user\")),null,null),new AggregatorFactory((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9333cd,HadoopTuningConfig.makeDefaultTuningConfig(),null,null,null,null,null,objectMapper,null,null,null,null,null,new MaterializedViewTaskConfig(),createMock(),new NoopChatHandlerProvider())@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testEmptyBaseDataSource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "testNullBaseDataSource['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "expectedException.expect(CoreMatchers.instanceOf())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->6 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

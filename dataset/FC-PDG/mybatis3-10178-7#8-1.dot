@@ -1,0 +1,29 @@
+digraph {
+7 [style = filled, label = "getSqlSessionFactoryXmlConfig['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "Reader configReader = Resources.getResourceAsReader(resource)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "String resource@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "BaseDataTest.runScript(sqlSessionFactory.getConfiguration().getEnvironment().getDataSource(),\"org/apache/ibatis/submitted/serializecircular/CreateDB.sql\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "getSqlSessionFactoryXmlConfig['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "configReader.close()@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "return sqlSessionFactory@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "getSqlSessionFactoryXmlConfig['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(configReader)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "BaseDataTest.runScript(sqlSessionFactory.getConfiguration().getEnvironment().getDataSource(),\"org/apache/ibatis/submitted/result_handler_type/CreateDB.sql\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+0->3 [style = bold, label=""];
+4->5 [style = dotted, label="true"];
+7->0 [style = bold, label=""];
+6->0 [style = bold, label=""];
+8->6 [style = bold, label=""];
+6->0 [style = solid, label="configReader"];
+5->6 [style = solid, label="resource"];
+3->2 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+8->5 [style = dotted, label="true"];
+4->6 [style = bold, label=""];
+9->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+1->9 [style = bold, label=""];
+0->2 [style = solid, label="sqlSessionFactory"];
+7->5 [style = dotted, label="true"];
+}

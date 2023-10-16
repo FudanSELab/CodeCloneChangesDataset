@@ -1,0 +1,36 @@
+digraph {
+9 [style = filled, label = "assertEquals(reachableHosts,multipleAddresses.getAllReachableAddresses())@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "InetSocketAddress unreachableHost1 = new InetSocketAddress(\"unreachable1.address.zookeeper.apache.com\",1234)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Set<InetSocketAddress> reachableHosts = new HashSet<>(Arrays.asList(reachableHost1,reachableHost2))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "MultipleAddresses multipleAddresses = new MultipleAddresses(Arrays.asList(unreachableHost1,unreachableHost2,reachableHost1,reachableHost2))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Assert.assertEquals(reachableHosts,multipleAddresses.getAllReachableAddresses())@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "InetSocketAddress unreachableHost2 = new InetSocketAddress(\"unreachable2.address.zookeeper.apache.com\",1234)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Assert.assertEquals(reachableHosts,multipleAddresses.getAllReachableAddressesOrAll())@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "testGetAllReachableAddressesOrAllWhenSomeReachable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testGetAllReachableAddresses['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "InetSocketAddress reachableHost2 = new InetSocketAddress(\"127.0.0.1\",2345)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "InetSocketAddress reachableHost1 = new InetSocketAddress(\"127.0.0.1\",1234)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testGetAllReachableAddresses['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+4->9 [style = bold, label=""];
+4->10 [style = bold, label=""];
+3->1 [style = bold, label=""];
+3->4 [style = solid, label="reachableHost2"];
+6->0 [style = solid, label="unreachableHost2"];
+5->4 [style = solid, label="reachableHost1"];
+6->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+3->0 [style = solid, label="reachableHost2"];
+1->0 [style = solid, label="unreachableHost1"];
+4->9 [style = solid, label="reachableHosts"];
+2->10 [style = dashed, label="0"];
+11->5 [style = bold, label=""];
+7->5 [style = bold, label=""];
+1->6 [style = bold, label=""];
+8->5 [style = bold, label=""];
+0->4 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+5->0 [style = solid, label="reachableHost1"];
+4->2 [style = solid, label="reachableHosts"];
+4->10 [style = solid, label="reachableHosts"];
+}

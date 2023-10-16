@@ -1,0 +1,38 @@
+digraph {
+7 [style = filled, label = "assignableNode.assignNewBatch(assignmentSet)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testAssignDuplicateReplica['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assignableNode.assign(duplicateReplica)@@@8@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "testAssignDuplicateReplica['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "ResourceControllerDataProvider testCache = setupClusterDataCache()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "AssignableReplica duplicateReplica = new AssignableReplica(testCache.getClusterConfig(),testCache.getResourceConfig(_resourceNames.get(0)),_partitionNames.get(0),\"SLAVE\",2)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "AssignableNode assignableNode = new AssignableNode(testCache.getClusterConfig(),testCache.getInstanceConfigMap().get(_testInstanceId),_testInstanceId,assignmentSet)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "AssignableReplica removingReplica = new AssignableReplica(testCache.getClusterConfig(),testCache.getResourceConfig(_resourceNames.get(1)),_partitionNames.get(2) + \"non-exist\",\"MASTER\",1)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "AssignableReplica duplicateReplica = new AssignableReplica(testCache.getClusterConfig(),testCache.getResourceConfig(_resourceNames.get(0)),_partitionNames.get(0),\"SLAVE\",2)@@@6@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testReleaseNoPartition['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assignableNode.release(removingReplica)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "AssignableNode assignableNode = new AssignableNode(testCache.getClusterConfig(),testCache.getInstanceConfigMap().get(_testInstanceId),_testInstanceId)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "Set<AssignableReplica> assignmentSet = generateReplicas(testCache)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "AssignableNode assignableNode = new AssignableNode(testCache.getClusterConfig(),testCache.getInstanceConfigMap().get(_testInstanceId),_testInstanceId,Collections.emptyList())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+7->1 [style = bold, label=""];
+2->5 [style = solid, label="testCache"];
+11->12 [style = solid, label="removingReplica"];
+11->12 [style = bold, label=""];
+4->2 [style = bold, label=""];
+13->11 [style = bold, label=""];
+1->9 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->13 [style = bold, label=""];
+5->6 [style = bold, label=""];
+5->3 [style = solid, label="assignmentSet"];
+8->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+5->7 [style = solid, label="assignmentSet"];
+10->2 [style = bold, label=""];
+1->9 [style = solid, label="duplicateReplica"];
+6->7 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+2->5 [style = bold, label=""];
+0->1 [style = solid, label="duplicateReplica"];
+}

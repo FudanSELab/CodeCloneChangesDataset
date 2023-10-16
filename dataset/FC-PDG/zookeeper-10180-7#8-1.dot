@@ -1,0 +1,36 @@
+digraph {
+6 [style = filled, label = "long sessionId@@@85@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "boa.writeRecord(cst,null)@@@93@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "qp.setType(Leader.PROPOSAL)@@@86@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testNormalFollowerRun['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "CreateSessionTxn cst = new CreateSessionTxn(30000)@@@89@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "TxnHeader hdr = new TxnHeader(4,1414,qp.getZxid(),55,ZooDefs.OpCode.createSession)@@@88@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "qp.setZxid(zxid)@@@87@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "boa.writeRecord(hdr,null)@@@92@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "ByteArrayOutputStream baos = new ByteArrayOutputStream()@@@90@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "OutputArchive boa = BinaryOutputArchive.getArchive(baos)@@@91@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "QuorumPacket qp@@@85@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "long zxid@@@85@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testFollowerConversation(new FollowerConversation(){@Override public void converseWithFollower(InputArchive ia,OutputArchive oa,Follower f){File tmpDir = File.createTempFile(\"test\",\"dir\",testData)tmpDir.delete()tmpDir.mkdir()File logDir = f.fzk.getTxnLogFactory().getDataDir().getParentFile()File snapDir = f.fzk.getTxnLogFactory().getSnapDir().getParentFile()f.zk = spy(f.zk)try {assertEquals(0,f.self.getAcceptedEpoch())assertEquals(0,f.self.getCurrentEpoch())ZKDatabase zkDb = new ZKDatabase(new FileTxnSnapLog(tmpDir,tmpDir))final long firstZxid = ZxidUtils.makeZxid(1,1)zkDb.processTxn(new TxnHeader(13,1313,firstZxid,33,ZooDefs.OpCode.create),new CreateTxn(\"/foo\",\"data1\".getBytes(),ZooDefs.Ids.OPEN_ACL_UNSAFE,false,1),null)Stat stat = new Stat()assertEquals(\"data1\",new String(zkDb.getData(\"/foo\",stat,null)))QuorumPacket qp = new QuorumPacket()readPacketSkippingPing(ia,qp)assertEquals(Leader.FOLLOWERINFO,qp.getType())assertEquals(qp.getZxid(),0)LearnerInfo learnInfo = new LearnerInfo()ByteBufferInputStream.byteBuffer2Record(ByteBuffer.wrap(qp.getData()),learnInfo)assertEquals(learnInfo.getProtocolVersion(),0x10000)assertEquals(learnInfo.getServerid(),0)qp.setType(Leader.LEADERINFO)qp.setZxid(ZxidUtils.makeZxid(1,0))byte(( protoBytes = new byte((((ByteBuffer.wrap(protoBytes).putInt(0x10000)qp.setData(protoBytes)oa.writeRecord(qp,null)readPacketSkippingPing(ia,qp)assertEquals(Leader.ACKEPOCH,qp.getType())assertEquals(0,qp.getZxid())assertEquals(ZxidUtils.makeZxid(0,0),ByteBuffer.wrap(qp.getData()).getInt())assertEquals(1,f.self.getAcceptedEpoch())assertEquals(0,f.self.getCurrentEpoch())qp.setType(Leader.SNAP)qp.setData(new byte(((()qp.setZxid(zkDb.getDataTreeLastProcessedZxid())oa.writeRecord(qp,null)zkDb.serializeSnapshot(oa)oa.writeString(\"BenWasHere\",null)Thread.sleep(10)verify(f.zk,never()).takeSnapshot()qp.setType(Leader.NEWLEADER)qp.setZxid(ZxidUtils.makeZxid(1,0))oa.writeRecord(qp,null)readPacketSkippingPing(ia,qp)assertEquals(Leader.ACK,qp.getType())assertEquals(ZxidUtils.makeZxid(1,0),qp.getZxid())assertEquals(1,f.self.getAcceptedEpoch())assertEquals(1,f.self.getCurrentEpoch())verify(f.zk).takeSnapshot(true)assertEquals(firstZxid,f.fzk.getLastProcessedZxid())ZKDatabase zkDb2 = new ZKDatabase(new FileTxnSnapLog(logDir,snapDir))long lastZxid = zkDb2.loadDataBase()assertEquals(\"data1\",new String(zkDb2.getData(\"/foo\",stat,null)))assertEquals(firstZxid,lastZxid)long proposalZxid = ZxidUtils.makeZxid(1,1000)proposeSetData(qp,proposalZxid,\"data2\",2)oa.writeRecord(qp,null)TrackerWatcher watcher = new TrackerWatcher()assertEquals(\"data1\",new String(f.fzk.getZKDatabase().getData(\"/foo\",stat,watcher)))qp.setType(Leader.COMMIT)qp.setZxid(proposalZxid)oa.writeRecord(qp,null)qp.setType(Leader.UPTODATE)qp.setZxid(0)oa.writeRecord(qp,null)readPacketSkippingPing(ia,qp)assertEquals(Leader.ACK,qp.getType())assertEquals(ZxidUtils.makeZxid(1,0),qp.getZxid())readPacketSkippingPing(ia,qp)assertEquals(Leader.ACK,qp.getType())assertEquals(proposalZxid,qp.getZxid())watcher.waitForChange()assertEquals(\"data2\",new String(f.fzk.getZKDatabase().getData(\"/foo\",stat,null)))zkDb2 = new ZKDatabase(new FileTxnSnapLog(logDir,snapDir))lastZxid = zkDb2.loadDataBase()assertEquals(\"data2\",new String(zkDb2.getData(\"/foo\",stat,null)))assertEquals(proposalZxid,lastZxid)}{TestUtils.deleteFileRecursively(tmpDir)}}private void proposeSetData(QuorumPacket qp,long zxid,String data,int version){qp.setType(Leader.PROPOSAL)qp.setZxid(zxid)TxnHeader hdr = new TxnHeader(4,1414,qp.getZxid(),55,ZooDefs.OpCode.setData)SetDataTxn sdt = new SetDataTxn(\"/foo\",data.getBytes(),version)ByteArrayOutputStream baos = new ByteArrayOutputStream()OutputArchive boa = BinaryOutputArchive.getArchive(baos)boa.writeRecord(hdr,null)boa.writeRecord(sdt,null)qp.setData(baos.toByteArray())}})@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "proposeNewSession['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testNormalFollowerRun['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "qp.setData(baos.toByteArray())@@@94@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->7 [style = bold, label=""];
+8->4 [style = solid, label="cst"];
+10->3 [style = dotted, label="true"];
+10->6 [style = dotted, label="true"];
+8->15 [style = bold, label=""];
+11->12 [style = solid, label="zxid"];
+9->13 [style = solid, label="hdr"];
+12->9 [style = bold, label=""];
+9->8 [style = bold, label=""];
+10->14 [style = bold, label=""];
+10->11 [style = dotted, label="true"];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->13 [style = bold, label=""];
+14->12 [style = bold, label=""];
+15->5 [style = bold, label=""];
+13->4 [style = bold, label=""];
+15->5 [style = solid, label="baos"];
+}

@@ -1,0 +1,26 @@
+digraph {
+7 [style = filled, label = "return delegate@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "null == allocationObserver@@@4@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "resourceProvider['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "return new ClientResourceLimits.ResourceProvider(){public ResourceLimits.Limit globalLimit(){return allocationObserver.global(delegate.globalLimit())}public AbstractMessageHandler.WaitQueue globalWaitQueue(){return delegate.globalWaitQueue()}public ResourceLimits.Limit endpointLimit(){return allocationObserver.endpoint(delegate.endpointLimit())}public AbstractMessageHandler.WaitQueue endpointWaitQueue(){return delegate.endpointWaitQueue()}public void release(){delegate.release()}}@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return null@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final CQLConnectionTest.AllocationObserver observer@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "ClientResourceLimits.Allocator limits@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "observableResourceProvider['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final ClientResourceLimits.ResourceProvider.Default delegate = new ClientResourceLimits.ResourceProvider.Default(limits)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "observableResourceProvider['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4->7 [style = dotted, label="true"];
+4->8 [style = bold, label=""];
+6->5 [style = bold, label=""];
+9->5 [style = solid, label="limits"];
+2->0 [style = dotted, label="true"];
+0->9 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+6->9 [style = dotted, label="true"];
+7->8 [style = bold, label=""];
+5->7 [style = solid, label="delegate"];
+2->1 [style = bold, label=""];
+4->7 [style = bold, label=""];
+5->4 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+}

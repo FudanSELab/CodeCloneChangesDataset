@@ -1,0 +1,11 @@
+digraph {
+4 [style = filled, label = "Observable.never().buffer(1,TimeUnit.MILLISECONDS,Schedulers.single(),10,new Supplier<Collection<Integer>>(){@Override public Collection<Integer> get(){if (count++ == 1) {throw new TestException()}{return new ArrayList<Integer>()}}},false).test().awaitDone(5,TimeUnit.SECONDS).assertFailure()@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "supplierReturnsNull['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "supplierReturnsNull['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "supplierThrows5['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Flowable.never().buffer(1,TimeUnit.MILLISECONDS,Schedulers.single(),Integer.MAX_VALUE,new Supplier<Collection<Integer>>(){@Override public Collection<Integer> get(){if (count++ == 1) {return null}{return new ArrayList<>()}}},false).test().awaitDone(5,TimeUnit.SECONDS).assertFailure()@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->4 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+}

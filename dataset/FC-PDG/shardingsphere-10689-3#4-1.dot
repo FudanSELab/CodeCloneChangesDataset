@@ -1,0 +1,29 @@
+digraph {
+3 [style = filled, label = "ColumnMetaData columnMetaData3 = new ColumnMetaData(\"col3\",0,false,false,false)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return new ShardingSphereSchema(ImmutableMap.of(\"tbl\",tableMetaData))@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "TableMetaData tableMetaData = new TableMetaData(Arrays.asList(columnMetaData1,columnMetaData2,columnMetaData3),Collections.emptyList())@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "TableMetaData tableMetaData = new TableMetaData(\"tbl\",Arrays.asList(columnMetaData1,columnMetaData2,columnMetaData3),Collections.emptyList())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "buildSchema['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ColumnMetaData columnMetaData1 = new ColumnMetaData(\"col1\",0,false,false,false)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "buildSchema['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "buildSchema['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "ColumnMetaData columnMetaData2 = new ColumnMetaData(\"col2\",0,false,false,false)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->4 [style = solid, label="columnMetaData2"];
+0->3 [style = bold, label=""];
+3->4 [style = solid, label="columnMetaData3"];
+6->1 [style = bold, label=""];
+3->6 [style = bold, label=""];
+5->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+2->6 [style = solid, label="columnMetaData1"];
+6->1 [style = solid, label="tableMetaData"];
+8->2 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+4->1 [style = solid, label="tableMetaData"];
+2->4 [style = solid, label="columnMetaData1"];
+3->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+0->6 [style = solid, label="columnMetaData2"];
+3->6 [style = solid, label="columnMetaData3"];
+}

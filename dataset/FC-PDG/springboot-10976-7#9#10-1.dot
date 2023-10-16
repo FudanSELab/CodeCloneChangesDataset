@@ -1,0 +1,15 @@
+digraph {
+1 [style = filled, label = "{Metrics.removeRegistry(this.mockRegistry)}@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "configurer.configure(this.mockRegistry)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(Metrics.globalRegistry.getRegistries()).contains(this.mockRegistry)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "configureWhenAddToGlobalRegistryShouldAddToGlobalRegistry['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "MeterRegistryConfigurer configurer = new MeterRegistryConfigurer(createObjectProvider(this.customizers),createObjectProvider(this.filters),createObjectProvider(this.binders),true,false)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "configureWhenAddToGlobalRegistryShouldAddToGlobalRegistry['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "configureWhenAddToGlobalRegistryShouldAddToGlobalRegistry['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+0->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+4->2 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+}

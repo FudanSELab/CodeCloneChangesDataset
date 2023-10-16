@@ -1,0 +1,32 @@
+digraph {
+2 [style = filled, label = "exampleThesisIndex['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "BibEntry entry = new BibEntry(StandardEntryType.PhdThesis)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "entry.setFiles(Collections.singletonList(new LinkedFile(\"Example Thesis\",\"metaData.pdf\",StandardFileType.PDF.getName())))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "metaDataIndex['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "entry.setFiles(Collections.singletonList(new LinkedFile(\"Example Thesis\",\"thesis-example.pdf\",StandardFileType.PDF.getName())))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "exampleThesisIndex['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "assertEquals(1,reader.numDocs())@@@9@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "indexer.createIndex(database,context)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "BibEntry entry = new BibEntry(StandardEntryType.Article)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "indexer.createIndex()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "assertEquals(1,reader.numDocs())@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "indexer.addToIndex(context)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "database.insertEntry(entry)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+6->8 [style = bold, label=""];
+10->3 [style = bold, label=""];
+1->3 [style = solid, label="entry"];
+9->1 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+3->7 [style = bold, label=""];
+11->10 [style = bold, label=""];
+3->4 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+11->3 [style = solid, label="entry"];
+1->11 [style = dashed, label="0"];
+7->6 [style = bold, label=""];
+4->0 [style = bold, label=""];
+12->11 [style = bold, label=""];
+}

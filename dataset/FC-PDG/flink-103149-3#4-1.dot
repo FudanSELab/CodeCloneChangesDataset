@@ -1,0 +1,23 @@
+digraph {
+5 [style = filled, label = "final WatermarkStrategy<Integer> watermarkStrategy = WatermarkStrategy.forGenerator(null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testMainOutputPeriodicWatermarks['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "testMainOutputEventWatermarks['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testMainOutputPeriodicWatermarks['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(result,contains(new Watermark(100L),new Watermark(120L)))@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final List<Watermark> result = testSequenceOfWatermarks(watermarkStrategy,null,null,null)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final WatermarkStrategy<Integer> watermarkStrategy = WatermarkStrategies.forGenerator(null).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "final WatermarkStrategy<Integer> watermarkStrategy = WatermarkStrategies.forGenerator(null).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3->2 [style = solid, label="watermarkStrategy"];
+0->3 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+2->1 [style = solid, label="result"];
+3->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+7->2 [style = solid, label="watermarkStrategy"];
+4->5 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->2 [style = solid, label="watermarkStrategy"];
+3->7 [style = dashed, label="0"];
+}

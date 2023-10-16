@@ -1,0 +1,34 @@
+digraph {
+11 [style = filled, label = "subscriber.onSubscribe(new BooleanSubscription())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "subscribe['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final NullPointerException npe = new NullPointerException()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "observer.onSubscribe(Disposables.empty())@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "subscribe['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "subscribe['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "t = new Thread(new Runnable(){@Override public void run(){try {System.out.println(\"running TestMultiThreadedObservable thread\")for (final String s : values){threadPool.execute(new Runnable(){@Override public void run(){threadsRunning.incrementAndGet()try {if (s == null) {System.out.println(\"TestMultiThreadedObservable onNext: null\")throw npe}{try {Thread.sleep(10)}catch (InterruptedException ex) System.out.println(\"TestMultiThreadedObservable onNext: \" + s)}subscriber.onNext(s)int concurrentThreads = threadsRunning.get()int maxThreads = maxConcurrentThreads.get()if (concurrentThreads > maxThreads) {maxConcurrentThreads.compareAndSet(maxThreads,concurrentThreads)}}catch (Throwable e) {threadsRunning.decrementAndGet()}}})}threadPool.shutdown()}catch (Throwable e) try {threadPool.awaitTermination(2,TimeUnit.SECONDS)}catch (InterruptedException e) subscriber.onComplete()}})@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "System.out.println(\"done starting TestMultiThreadedObservable thread\")@@@61@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "System.out.println(\"TestMultiThreadedObservable subscribed to ...\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "observer.onSubscribe(Disposable.empty())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "final Observer<? super String> observer@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "t.start()@@@60@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "System.out.println(\"starting TestMultiThreadedObservable thread\")@@@59@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "final Subscriber<? super String> subscriber@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6->11 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+3->6 [style = bold, label=""];
+11->5 [style = bold, label=""];
+12->13 [style = dotted, label="true"];
+6->10 [style = dashed, label="0"];
+10->5 [style = bold, label=""];
+9->10 [style = bold, label=""];
+5->0 [style = bold, label=""];
+7->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+3->1 [style = dotted, label="true"];
+0->2 [style = solid, label="npe"];
+4->7 [style = bold, label=""];
+0->2 [style = bold, label=""];
+9->1 [style = dotted, label="true"];
+12->11 [style = bold, label=""];
+1->13 [style = dashed, label="0"];
+}

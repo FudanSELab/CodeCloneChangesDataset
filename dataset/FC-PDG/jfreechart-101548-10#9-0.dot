@@ -1,0 +1,38 @@
+digraph {
+7 [style = filled, label = "clone['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "result.subplots = CloneUtils.cloneList(this.subplots)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "rangeAxis != null@@@9@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "clone['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "return result@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "rangeAxis.configure()@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "result.subplots = (List)ObjectUtils.deepClone(this.subplots)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "child.setParent(result)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ValueAxis rangeAxis = result.getRangeAxis()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "result.subplots = (List)CloneUtils.cloneList(this.subplots)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "CombinedRangeCategoryPlot result = (CombinedRangeCategoryPlot)super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@209ce9@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "CombinedRangeXYPlot result = (CombinedRangeXYPlot)super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@209cae@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "clone['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->3 [style = bold, label=""];
+10->6 [style = solid, label="result"];
+3->1 [style = bold, label=""];
+0->6 [style = bold, label=""];
+2->6 [style = bold, label=""];
+9->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->3 [style = bold, label=""];
+1->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+12->10 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+11->3 [style = bold, label=""];
+4->3 [style = solid, label="result"];
+1->0 [style = solid, label="rangeAxis"];
+5->8 [style = dashed, label="0"];
+4->8 [style = bold, label=""];
+4->6 [style = solid, label="result"];
+0->2 [style = dotted, label="true"];
+10->3 [style = solid, label="result"];
+4->10 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

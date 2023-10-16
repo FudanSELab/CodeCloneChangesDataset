@@ -1,0 +1,27 @@
+digraph {
+7 [style = filled, label = "configuration.setResolveDependencies(true)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "getProjectWithDependencies['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "configuration.setProcessPlugins(false)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "File pom@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "initRepoSession(configuration)@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "getProjectWithDependencies['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "configuration.setLocalRepository(getLocalRepository())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "getProjectWithDependencies['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "ProjectBuildingRequest configuration = new DefaultProjectBuildingRequest()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "configuration.setRemoteRepositories(Arrays.asList(new ArtifactRepository((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1928573))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return projectBuilder.build(pom,configuration).getProject()@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->7 [style = bold, label=""];
+10->0 [style = dotted, label="true"];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+8->6 [style = bold, label=""];
+9->0 [style = dotted, label="true"];
+9->4 [style = bold, label=""];
+7->8 [style = bold, label=""];
+3->4 [style = bold, label=""];
+4->8 [style = solid, label="configuration"];
+7->6 [style = bold, label=""];
+2->5 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+10->4 [style = bold, label=""];
+}

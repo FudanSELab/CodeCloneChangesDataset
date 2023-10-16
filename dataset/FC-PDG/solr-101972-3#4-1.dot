@@ -1,0 +1,21 @@
+digraph {
+9 [style = filled, label = "Map<String,Collection<String>> copyFieldNames@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "addDynamicFields['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Collection<SchemaField> newFields@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "Map<String,Collection<String>> copyFieldNames@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "boolean persist@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "addFields['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "Map<String,Collection<String>> copyFieldNames@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "addFields['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Collection<SchemaField> newDynamicFields@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Collection<SchemaField> newFields@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5->6 [style = dotted, label="true"];
+0->2 [style = dotted, label="true"];
+7->9 [style = dotted, label="true"];
+5->3 [style = dotted, label="true"];
+7->8 [style = dotted, label="true"];
+2->9 [style = dashed, label="0"];
+5->4 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+2->6 [style = dashed, label="0"];
+}

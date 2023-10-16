@@ -1,0 +1,25 @@
+digraph {
+10 [style = filled, label = "assertEquals(POJO_ID,pojo.getImmutableId())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertNotEquals(0,pojo.getDescription().length(),\"Description should not be empty.\")@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "assertFalse(pojo.getDescription().length() == 0,\"Description should not be empty.\")@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "final ImmutablePOJO pojo = mapper.getImmutablePOJO(POJO_ID)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertEquals(POJO_ID,pojo.getId())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertNotNull(pojo.getDescription(),\"Description should not be null.\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testLoadLazyImmutablePOJO['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertEquals(POJO_DESCRIPTION,pojo.getImmutableDescription())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final ImmutablePOJOMapper mapper = session.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testLoadLazyImmutablePOJO['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "shouldLoadImmutablePOJOBySignature['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8->0 [style = bold, label=""];
+1->2 [style = bold, label=""];
+10->9 [style = bold, label=""];
+6->0 [style = bold, label=""];
+5->0 [style = bold, label=""];
+3->7 [style = bold, label=""];
+1->10 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+}

@@ -1,0 +1,28 @@
+digraph {
+8 [style = filled, label = "String name = tokenName@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "return NULL@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "return AttributesUtilities.createImmutable(colorings.toArray(new AttributeSet(((())@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "String tokenName@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String highlightName@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "getFontColors['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "name = processLayer(fcsi,name,colorings)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "ArrayList<AttributeSet> colorings = new ArrayList<AttributeSet>()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "colorings.size() > 0@@@8@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "findColoringForToken['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "getFontColors['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7->10 [style = dotted, label="false"];
+8->4 [style = solid, label="name"];
+5->4 [style = solid, label="colorings"];
+5->8 [style = bold, label=""];
+7->3 [style = bold, label=""];
+6->5 [style = bold, label=""];
+1->0 [style = dotted, label="true"];
+2->0 [style = dotted, label="true"];
+8->4 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+6->9 [style = dotted, label="true"];
+7->3 [style = dotted, label="true"];
+7->10 [style = bold, label=""];
+9->8 [style = solid, label="tokenName"];
+4->7 [style = bold, label=""];
+}

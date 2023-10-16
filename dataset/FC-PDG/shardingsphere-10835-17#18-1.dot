@@ -1,0 +1,26 @@
+digraph {
+7 [style = filled, label = "setBackendHandlerFactory(unicastDatabaseBackendHandler)@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "metaDataContexts.setAccessible(true)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "setUp['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "setUp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "Field metaDataContexts = ProxyContext.getInstance().getClass().getDeclaredField(\"metaDataContexts\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "mockDatabaseCommunicationEngine(new UpdateResponseHeader(mock()))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "metaDataContexts.set(ProxyContext.getInstance(),new StandardMetaDataContexts(mock(),getMetaDataMap(),mock(),mock(),new ConfigurationProperties(new Properties()),mock()))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "when(backendConnection.getSchemaName()).thenReturn(String.format(SCHEMA_PATTERN,0))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "setUp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "unicastDatabaseBackendHandler = new UnicastDatabaseBackendHandler(mock(),EXECUTE_SQL,backendConnection)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "metaDataContexts.set(ProxyContext.getInstance(),new StandardMetaDataContexts(getMetaDataMap(),mock(),mock(),new ConfigurationProperties(new Properties()),mock()))@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+4->9 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+9->10 [style = bold, label=""];
+8->2 [style = bold, label=""];
+3->4 [style = bold, label=""];
+10->7 [style = bold, label=""];
+10->7 [style = solid, label="unicastDatabaseBackendHandler"];
+5->4 [style = bold, label=""];
+0->5 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

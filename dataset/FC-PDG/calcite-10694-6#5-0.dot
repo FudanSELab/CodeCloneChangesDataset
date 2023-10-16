@@ -1,0 +1,27 @@
+digraph {
+5 [style = filled, label = "testSimplifyOrNot['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "testSimplifyOrNot['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "checkSimplify(or(gt(vInt(1),literal(1)),not(gt(vInt(2),literal(2)))),\"OR(>(?0.int1, 1), <=(?0.int2, 2))\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "checkSimplify3(not(or(eq(vInt(1),vInt(1)),not(ge(vInt(2),vInt(2))))),\"AND(null, SEARCH(?0.int1, Sarg(NULL(),\" + \" OR(null, IS NOT NULL(?0.int2)))\",\"false\",\"SEARCH(?0.int1, Sarg(NULL()\")@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "checkSimplify3(not(and(eq(vInt(1),vInt(1)),not(ge(vInt(2),vInt(2))))),\"OR(AND(null, IS NULL(?0.int1)), null, IS NOT NULL(?0.int2))\",\"IS NOT NULL(?0.int2)\",\"true\")@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testSimplifyAndNot['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "checkSimplify3(or(eq(vInt(1),vInt(1)),not(ge(vInt(2),vInt(2)))),\"OR(null, IS NOT NULL(?0.int1),\" + \" AND(null, SEARCH(?0.int2, Sarg(NULL()))\",\"IS NOT NULL(?0.int1)\",\"true\")@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "checkSimplify3(not(or(eq(vInt(1),vInt(1)),not(ge(vInt(2),vInt(2))))),\"AND(null, IS NULL(?0.int1), OR(null, IS NOT NULL(?0.int2)))\",\"false\",\"IS NULL(?0.int1)\")@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "checkSimplify(and(gt(vInt(1),literal(1)),not(gt(vInt(2),literal(2)))),\"AND(>(?0.int1, 1), <=(?0.int2, 2))\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "checkSimplify3(and(eq(vInt(1),vInt(1)),not(ge(vInt(2),vInt(2)))),\"AND(OR(null, IS NOT NULL(?0.int1)), null, IS NULL(?0.int2))\",\"false\",\"IS NULL(?0.int2)\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "checkSimplify3(or(eq(vInt(1),vInt(1)),not(ge(vInt(2),vInt(2)))),\"OR(null, IS NOT NULL(?0.int1), AND(null, IS NULL(?0.int2)))\",\"IS NOT NULL(?0.int1)\",\"true\")@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+8->10 [style = bold, label=""];
+1->4 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+0->4 [style = dashed, label="0"];
+3->6 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+9->8 [style = bold, label=""];
+4->6 [style = bold, label=""];
+10->7 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+}

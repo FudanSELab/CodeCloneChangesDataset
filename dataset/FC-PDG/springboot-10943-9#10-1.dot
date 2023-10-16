@@ -1,0 +1,12 @@
+digraph {
+2 [style = filled, label = "CapturedOutput capturedOutput@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "this.contextRunner.withConfiguration(AutoConfigurations.of()).withUserConfiguration().withPropertyValues(\"management.metrics.web.server.max-uri-tags=2\").run(null)@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "this.contextRunner.withPropertyValues(\"management.metrics.web.client.max-uri-tags=2\").run(null)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "afterMaxUrisReachedFurtherUrisAreDenied['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "afterMaxUrisReachedFurtherUrisAreDenied['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "afterMaxUrisReachedFurtherUrisAreDenied['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->2 [style = dotted, label="true"];
+}

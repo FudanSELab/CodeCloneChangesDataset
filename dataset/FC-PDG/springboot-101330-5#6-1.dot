@@ -1,0 +1,36 @@
+digraph {
+11 [style = filled, label = "assertThat(name.getElement(1,Form.UNIFORM)).isEqualTo(\"bar\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertThat(name.getElement(1,Form.ORIGINAL)).isEqualTo(\"bAr\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "assertThat(name.getElement(0,Form.UNIFORM)).isEqualTo(\"foo\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "adaptShouldSupportUnderscore['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "ConfigurationPropertyName name = ConfigurationPropertyName.adapt(\"fOo.bAr\",'.')@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertThat(name.getElement(0,Form.UNIFORM)).isEqualTo(\"fo\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ConfigurationPropertyName name = ConfigurationPropertyName.adapt(\"f-_o.b_r\",'.')@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "adaptShouldSupportUnderscore['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(name.getElement(1,Form.ORIGINAL)).isEqualTo(\"b_r\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(name.getElement(0,Form.ORIGINAL)).isEqualTo(\"f-_o\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(name.toString()).isEqualTo(\"f-o.br\")@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(name.getElement(1,Form.UNIFORM)).isEqualTo(\"br\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(name.toString()).isEqualTo(\"foo.bar\")@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "adaptShouldSupportMixedCase['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertThat(name.getElement(0,Form.ORIGINAL)).isEqualTo(\"fOo\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->8 [style = dashed, label="0"];
+6->3 [style = bold, label=""];
+14->10 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+1->12 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+3->5 [style = bold, label=""];
+9->12 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+13->8 [style = bold, label=""];
+5->0 [style = bold, label=""];
+10->13 [style = bold, label=""];
+11->9 [style = bold, label=""];
+0->4 [style = bold, label=""];
+8->11 [style = bold, label=""];
+3->13 [style = dashed, label="0"];
+2->6 [style = bold, label=""];
+7->6 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+}

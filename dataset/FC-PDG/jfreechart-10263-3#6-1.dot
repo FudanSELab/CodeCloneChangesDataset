@@ -1,0 +1,34 @@
+digraph {
+2 [style = filled, label = "createChart['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return ChartFactory.createXYStepChart(\"Step Chart\",\"Domain\",\"Range\",dataset,PlotOrientation.VERTICAL,true,true,true)@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "XYSeries series1 = new XYSeries(\"Series 1\")@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "XYSeries<String> series1 = new XYSeries<>(\"Series 1\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "series1.add(2.0,2.0)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "return ChartFactory.createScatterPlot(\"Scatter Plot\",\"Domain\",\"Range\",dataset)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "createChart['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "series1.add(1.0,1.0)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "series1.add(3.0,3.0)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "XYDataset dataset = new XYSeriesCollection(series1)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "XYDataset dataset = new XYSeriesCollection<>(series1)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "createChart['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+9->7 [style = solid, label="series1"];
+5->7 [style = bold, label=""];
+4->1 [style = bold, label=""];
+0->10 [style = bold, label=""];
+7->6 [style = bold, label=""];
+0->10 [style = solid, label="dataset"];
+0->6 [style = solid, label="dataset"];
+5->0 [style = bold, label=""];
+9->4 [style = bold, label=""];
+11->3 [style = bold, label=""];
+3->0 [style = solid, label="series1"];
+0->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+7->6 [style = solid, label="dataset"];
+3->9 [style = dashed, label="0"];
+0->7 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+8->9 [style = bold, label=""];
+}

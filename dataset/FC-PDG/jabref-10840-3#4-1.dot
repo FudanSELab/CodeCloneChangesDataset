@@ -1,0 +1,33 @@
+digraph {
+5 [style = filled, label = "TexGroup group = new TexGroup(\"paper\",GroupHierarchyType.INDEPENDENT,auxFile,new DefaultAuxParser(new BibDatabase()),new DummyFileUpdateMonitor())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "containsReturnsTrueForEntryInAux['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "BibEntry notInAux = new BibEntry()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "inAux.setCiteKey(\"Darwin1888\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "BibEntry inAux = new BibEntry()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "containsReturnsTrueForEntryNotInAux['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertFalse(group.contains(notInAux))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Path auxFile = Paths.get(.getResource(\"paper.aux\").toURI())@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Path auxFile = Paths.get(.getResource(\"paper.aux\").toURI())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "notInAux.setCiteKey(\"NotInAux2017\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertTrue(group.contains(inAux))@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "containsReturnsTrueForEntryInAux['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+8->10 [style = solid, label="notInAux"];
+5->8 [style = bold, label=""];
+6->5 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+1->5 [style = solid, label="auxFile"];
+3->4 [style = solid, label="inAux"];
+9->1 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+8->11 [style = bold, label=""];
+6->5 [style = solid, label="auxFile"];
+11->10 [style = bold, label=""];
+2->1 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+}

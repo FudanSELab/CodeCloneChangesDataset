@@ -1,0 +1,33 @@
+digraph {
+4 [style = filled, label = "Collection<ExposableWebEndpoint> endpoints = this.context.getBean(\"cloudFoundryWebEndpointServletHandlerMapping\",).getEndpoints()@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "assertThat(ReflectionTestUtils.getField(invoker,\"target\")).isInstanceOf()@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "healthEndpointInvokerShouldBeCloudFoundryWebExtension['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "this.contextRunner.withPropertyValues(\"VCAP_APPLICATION:---\",\"vcap.application.application_id:my-app-id\",\"vcap.application.cf_api:http://my-cloud-controller.com\").withConfiguration(AutoConfigurations.of()).run(null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "Object invoker = ReflectionTestUtils.getField(webOperation,\"invoker\")@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "TestPropertyValues.of(\"VCAP_APPLICATION:---\",\"vcap.application.application_id:my-app-id\",\"vcap.application.cf_api:http://my-cloud-controller.com\").applyTo(this.context)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+13 [style = filled, label = "Collection<ExposableWebEndpoint> endpoints = getHandlerMapping().getEndpoints()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "this.context.refresh()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "WebOperation webOperation = endpoint.getOperations().iterator().next()@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "setupContextWithCloudEnabled()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "ExposableWebEndpoint endpoint = endpoints.iterator().next()@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(ReflectionTestUtils.getField(invoker,\"target\")).isInstanceOf()@@@9@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "healthEndpointInvokerShouldBeCloudFoundryWebExtension['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "healthEndpointInvokerShouldBeCloudFoundryWebExtension['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6->1 [style = bold, label=""];
+13->0 [style = bold, label=""];
+3->10 [style = bold, label=""];
+1->4 [style = bold, label=""];
+3->5 [style = bold, label=""];
+11->12 [style = bold, label=""];
+7->6 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+4->13 [style = dashed, label="0"];
+5->10 [style = dashed, label="0"];
+12->1 [style = bold, label=""];
+1->13 [style = bold, label=""];
+2->3 [style = solid, label="webOperation"];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

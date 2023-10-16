@@ -1,0 +1,37 @@
+digraph {
+1 [style = filled, label = "factory.setPort(specificPort)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "specificPort['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "assertThat(this.webServer.getPort()).isEqualTo(specificPort)@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "this.webServer = factory.getWebServer(exampleServletRegistration())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "AbstractReactiveWebServerFactory factory = getFactory()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(result.block(Duration.ofSeconds(30))).isEqualTo(\"Hello World\")@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "int specificPort = SocketUtils.findAvailableTcpPort(41000)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "AbstractServletWebServerFactory factory = getFactory()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertThat(this.webServer.getPort()).isEqualTo(specificPort)@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "specificPort['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "this.webServer.start()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "specificPort['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "Mono<String> result = getWebClient().build().post().uri(\"/test\").contentType(MediaType.TEXT_PLAIN).body(BodyInserters.fromObject(\"Hello World\")).exchange().flatMap(null)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "this.webServer = factory.getWebServer(new EchoHandler())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThat(getResponse(\"http://localhost:\" + specificPort + \"/hello\")).isEqualTo(\"Hello World\")@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->10 [style = bold, label=""];
+5->8 [style = bold, label=""];
+11->5 [style = bold, label=""];
+12->14 [style = bold, label=""];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+14->4 [style = bold, label=""];
+2->11 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+4->0 [style = solid, label="specificPort"];
+6->7 [style = bold, label=""];
+10->13 [style = bold, label=""];
+9->7 [style = bold, label=""];
+4->1 [style = solid, label="specificPort"];
+7->14 [style = dashed, label="0"];
+4->13 [style = solid, label="specificPort"];
+3->0 [style = bold, label=""];
+1->11 [style = bold, label=""];
+2->5 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

@@ -1,0 +1,34 @@
+digraph {
+1 [style = filled, label = "DefaultCategoryDataset dataset = new DefaultCategoryDataset()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "testSerialization3['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "JFreeChart chart2 = (JFreeChart)TestUtils.serialised(chart)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "DefaultCategoryDataset<String,String> dataset = new DefaultCategoryDataset<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "testSerialization3['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(chart,chart2)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "XYSeriesCollection dataset = new XYSeriesCollection()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "JFreeChart chart = ChartFactory.createBarChart(\"Test Chart\",\"Category Axis\",\"Value Axis\",dataset,PlotOrientation.VERTICAL,true,true,false)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "chart2.createBufferedImage(300,200)@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "JFreeChart chart = ChartFactory.createXYLineChart(\"Test Chart\",\"Domain Axis\",\"Range Axis\",dataset)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testSerialization3['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0->4 [style = solid, label="chart"];
+4->3 [style = bold, label=""];
+7->10 [style = solid, label="dataset"];
+5->0 [style = solid, label="dataset"];
+1->5 [style = dashed, label="0"];
+7->10 [style = bold, label=""];
+2->1 [style = bold, label=""];
+8->3 [style = bold, label=""];
+1->0 [style = bold, label=""];
+9->7 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+10->8 [style = solid, label="chart"];
+6->5 [style = bold, label=""];
+10->4 [style = solid, label="chart"];
+5->0 [style = bold, label=""];
+0->4 [style = bold, label=""];
+10->4 [style = bold, label=""];
+4->8 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+1->0 [style = solid, label="dataset"];
+4->8 [style = solid, label="chart2"];
+}

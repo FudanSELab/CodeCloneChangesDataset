@@ -1,0 +1,35 @@
+digraph {
+0 [style = filled, label = "HttpPostEmitter emitter = new HttpPostEmitter(config,httpClient,JSON_MAPPER)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "HttpEmitterConfig config = new HttpEmitterConfig.Builder(TARGET_URL).setFlushMillis(Long.MAX_VALUE).setFlushCount(size).setContentEncoding(encoding).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "sizeBasedEmitterWithContentEncoding['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "HttpEmitterConfig config = new HttpEmitterConfig.Builder(TARGET_URL).setFlushMillis(Long.MAX_VALUE).setFlushCount(Integer.MAX_VALUE).setMaxBatchSize(batchSize).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "return emitter@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "int batchSize@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "emitter.start()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ContentEncoding encoding@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "sizeBasedEmitterWithContentEncoding['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "ContentEncoding encoding@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "manualFlushEmitterWithBatchSize['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "HttpEmitterConfig config = new HttpEmitterConfig.Builder(TARGET_URL).setFlushMillis(Long.MAX_VALUE).setFlushCount(size).setContentEncoding(encoding).setFlushTimeout(BaseHttpEmittingConfig.TEST_FLUSH_TIMEOUT_MILLIS).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "int size@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0->6 [style = solid, label="emitter"];
+8->0 [style = bold, label=""];
+9->4 [style = dotted, label="true"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->4 [style = dotted, label="true"];
+2->0 [style = solid, label="config"];
+8->0 [style = solid, label="config"];
+5->6 [style = bold, label=""];
+9->7 [style = dotted, label="true"];
+10->0 [style = solid, label="config"];
+9->8 [style = bold, label=""];
+11->10 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+10->0 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+4->12 [style = dashed, label="0"];
+0->5 [style = bold, label=""];
+11->12 [style = dotted, label="true"];
+1->3 [style = dotted, label="true"];
+}

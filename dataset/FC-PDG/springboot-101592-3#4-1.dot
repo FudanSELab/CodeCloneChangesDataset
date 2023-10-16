@@ -1,0 +1,24 @@
+digraph {
+6 [style = filled, label = "assertThat(this.environment.getProperty(\"value\")).isNull()@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertThat(this.environment.getProperty(\"foo\")).isEqualTo(\"bar\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(this.environment.getProperty(\"value\")).isEqualTo(\"1234\")@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "TestPropertySourceUtils.addInlinedPropertiesToEnvironment(this.environment,\"spring.config.additional-location=classpath:override.properties,\" + \"classpath:some.properties\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "lastAdditionalLocationWins['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "TestPropertySourceUtils.addInlinedPropertiesToEnvironment(this.environment,\"spring.config.location=classpath:override.properties\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "locationReplaceDefaultLocation['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "lastAdditionalLocationWins['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "assertThat(this.environment.getProperty(\"foo\")).isEqualTo(\"spam\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "this.initializer.postProcessEnvironment(this.environment,this.application)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->9 [style = bold, label=""];
+9->3 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+8->6 [style = bold, label=""];
+3->1 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+2->9 [style = dashed, label="0"];
+3->8 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

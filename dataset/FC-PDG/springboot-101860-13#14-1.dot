@@ -1,0 +1,30 @@
+digraph {
+4 [style = filled, label = "assertThat(events).hasAtLeastOneElementOfType()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "application.setApplicationContextFactory(ApplicationContextFactory.ofContextClass())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "application.addListeners((ApplicationListener<ApplicationEvent>)null)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "application.setApplicationContextFactory(ApplicationContextFactory.forContextClass())@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "verifyRegisteredListenerSuccessEvents()@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "registerListener['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Set<ApplicationEvent> events = new LinkedHashSet<>()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(events).hasAtLeastOneElementOfType()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "this.context = application.run()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "registerListenerWithCustomMulticaster['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "SpringApplication application = new SpringApplication(,,)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "registerListener['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "SpringApplication application = new SpringApplication(,)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->1 [style = bold, label=""];
+11->12 [style = bold, label=""];
+6->0 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+6->9 [style = bold, label=""];
+8->2 [style = bold, label=""];
+9->7 [style = bold, label=""];
+2->4 [style = bold, label=""];
+12->0 [style = bold, label=""];
+10->6 [style = bold, label=""];
+3->8 [style = bold, label=""];
+7->3 [style = bold, label=""];
+0->7 [style = bold, label=""];
+6->12 [style = dashed, label="0"];
+}

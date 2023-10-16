@@ -1,0 +1,32 @@
+digraph {
+0 [style = filled, label = "return new BooleanChecker(){@Override public boolean test(Object left,Object right){return (boolean)left || (boolean)right}}@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Object fromValue@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "constructChecker['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "null == fromValue@@@3@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Object fromValue@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "constructChecker['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "constructChecker['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "throw new IOException(String.format(Locale.ROOT,\"Unable to check %s(...) for values of type '%s'\",constructingFactory.getFunctionName(getClass()),fromValue.getClass().getSimpleName()))@@@14@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "fromValue instanceof Boolean@@@6@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "throw new IOException(String.format(Locale.ROOT,\"Unable to check %s(...) because a null value was found\",constructingFactory.getFunctionName(getClass())))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->3 [style = dotted, label="true"];
+8->2 [style = solid, label="fromValue"];
+1->8 [style = dashed, label="0"];
+3->6 [style = bold, label=""];
+8->4 [style = solid, label="fromValue"];
+5->2 [style = bold, label=""];
+2->4 [style = dotted, label="false"];
+4->0 [style = bold, label=""];
+7->8 [style = dotted, label="true"];
+1->4 [style = solid, label="fromValue"];
+1->2 [style = solid, label="fromValue"];
+2->4 [style = bold, label=""];
+4->6 [style = bold, label=""];
+0->6 [style = bold, label=""];
+7->2 [style = bold, label=""];
+5->1 [style = dotted, label="true"];
+9->2 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->0 [style = dotted, label="true"];
+9->1 [style = dotted, label="true"];
+}

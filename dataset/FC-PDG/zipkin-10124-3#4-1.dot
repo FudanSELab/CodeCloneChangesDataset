@@ -1,0 +1,19 @@
+digraph {
+2 [style = filled, label = "messagingWithBroker_both_sides_same['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(new DependencyLinker().putTrace(trace).link()).containsOnly(DependencyLink.newBuilder().parent(\"producer\").child(\"kafka1\").callCount(1L).build(),DependencyLink.newBuilder().parent(\"kafka2\").child(\"consumer\").callCount(1L).build())@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "List<Span> trace = asList(span(\"a\",null,\"a\",Kind.PRODUCER,\"producer\",\"kafka\",false),span(\"a\",\"a\",\"b\",Kind.CONSUMER,\"consumer\",\"kafka\",false))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "assertThat(new DependencyLinker().putTrace(trace).link()).containsOnly(DependencyLink.newBuilder().parent(\"producer\").child(\"kafka\").callCount(1L).build(),DependencyLink.newBuilder().parent(\"kafka\").child(\"consumer\").callCount(1L).build())@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "messagingWithBroker_both_sides_same['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "List<Span> trace = asList(span2(\"a\",null,\"a\",Kind.PRODUCER,\"producer\",\"kafka\",false),span2(\"a\",\"a\",\"b\",Kind.CONSUMER,\"consumer\",\"kafka\",false))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "messagingWithBroker_different['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "List<Span> trace = asList(span2(\"a\",null,\"a\",Kind.PRODUCER,\"producer\",\"kafka1\",false),span2(\"a\",\"a\",\"b\",Kind.CONSUMER,\"consumer\",\"kafka2\",false))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->5 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+}

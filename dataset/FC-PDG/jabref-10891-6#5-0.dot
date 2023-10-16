@@ -1,0 +1,35 @@
+digraph {
+12 [style = filled, label = "OOBibBase ooBase@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "LibraryPropertiesDialogView['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "ViewLoader.view(this).load().setAsDialogPane(this)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "setTitle(Localization.lang(\"Manage citations\"))@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "this.ooBase = ooBase@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "BasePanel panel@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "LibraryPropertiesDialogView['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "setTitle(Localization.lang(\"Library properties\"))@@@12@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "ManageCitationsDialogView['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "setResultConverter(null)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "this.panel = panel@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "this.libraryTab = libraryTab@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "LibraryTab libraryTab@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+8->0 [style = bold, label=""];
+2->11 [style = dashed, label="0"];
+4->9 [style = dashed, label="0"];
+7->6 [style = dotted, label="true"];
+1->4 [style = bold, label=""];
+5->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+11->0 [style = bold, label=""];
+10->12 [style = dotted, label="true"];
+3->6 [style = dashed, label="0"];
+3->12 [style = dashed, label="0"];
+5->3 [style = dotted, label="true"];
+12->11 [style = solid, label="ooBase"];
+7->8 [style = bold, label=""];
+6->8 [style = solid, label="libraryTab"];
+2->8 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+1->9 [style = bold, label=""];
+3->2 [style = solid, label="panel"];
+10->11 [style = bold, label=""];
+}

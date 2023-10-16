@@ -1,0 +1,25 @@
+digraph {
+6 [style = filled, label = "shouldBeFlaggedAsTransactionalWhenTransactionalRecords['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "shouldBeFlaggedAsIdempotentWhenIdempotentRecords['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final MemoryRecords memoryRecords = MemoryRecords.withTransactionalRecords(0,CompressionType.NONE,1L,(short)1,1,1,simpleRecord)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "shouldBeFlaggedAsIdempotentWhenIdempotentRecords['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "final MemoryRecords memoryRecords = MemoryRecords.withIdempotentRecords(1,CompressionType.NONE,1L,(short)1,1,1,simpleRecord)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final ProduceRequest request = ProduceRequest.forCurrentMagic(new ProduceRequestData().setTopicData(new ProduceRequestData.TopicProduceDataCollection(Collections.singletonList(new ProduceRequestData.TopicProduceData().setName(\"topic\").setPartitionData(Collections.singletonList(new ProduceRequestData.PartitionProduceData().setIndex(1).setRecords(memoryRecords)))).iterator())).setAcks((short)-1).setTimeoutMs(10)).build()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertTrue(RequestUtils.hasIdempotentRecords(request))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "assertTrue(RequestUtils.hasTransactionalRecords(request))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertTrue(RequestTestUtils.hasIdempotentRecords(request))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2->3 [style = solid, label="request"];
+3->5 [style = dashed, label="0"];
+3->8 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+2->8 [style = solid, label="request"];
+7->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->8 [style = bold, label=""];
+2->5 [style = bold, label=""];
+2->5 [style = solid, label="request"];
+}

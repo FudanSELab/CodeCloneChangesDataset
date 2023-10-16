@@ -1,0 +1,11 @@
+digraph {
+4 [style = filled, label = "Observable.range(1,2).buffer(2,1,new Supplier<List<Integer>>(){@Override public List<Integer> get(){if (++calls == 2) {throw new TestException()}return new ArrayList<Integer>()}}).test().assertFailure()@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "bufferSkipSupplierCrash2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Flowable.range(1,2).buffer(1,new Supplier<List<Integer>>(){@Override public List<Integer> get(){if (++calls == 2) {throw new TestException()}return new ArrayList<>()}}).test().assertFailure(,Arrays.asList(1))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "bufferSupplierCrash2['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "bufferSupplierCrash2['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->4 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+}

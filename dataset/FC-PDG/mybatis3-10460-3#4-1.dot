@@ -1,0 +1,15 @@
+digraph {
+0 [style = filled, label = "testForResult['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "{Person person = personMapper.findOneUsingTypeDiscriminator(1)assertTrue(person.getClass() == )assertThat(person.getId(),is(1))assertThat(person.getFirstName(),is(\"John\"))assertThat(person.getLastName(),is(\"Smith\"))assertThat(person.getPersonType(),is(Person.PersonType.PERSON))}@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testForResult['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "{Person employee = personMapper.findOneUsingSetter(2)assertThat(employee.getId()).isEqualTo(2)assertThat(employee.getFirstName()).isEqualTo(\"Mike\")assertThat(employee.getLastName()).isEqualTo(\"Jordan\")assertThat(employee.getPersonType()).isEqualTo(Person.PersonType.EMPLOYEE)}@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "PersonMapper personMapper = sqlSession.getMapper()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "{Person employee = personMapper.findOneUsingTypeDiscriminator(2)assertTrue(employee.getClass() == )assertThat(employee.getId(),is(2))assertThat(employee.getFirstName(),is(\"Mike\"))assertThat(employee.getLastName(),is(\"Jordan\"))assertThat(employee.getPersonType(),is(Person.PersonType.EMPLOYEE))}@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testForTypeDiscriminator['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+5->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->2 [style = bold, label=""];
+2->6 [style = bold, label=""];
+2->1 [style = bold, label=""];
+}

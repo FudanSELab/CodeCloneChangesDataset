@@ -1,0 +1,23 @@
+digraph {
+7 [style = filled, label = "actionPrompt['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "@PathParam(\"instanceId\") final String instanceId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "accessCollection['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "@PathParam(\"collectionId\") final String collectionId@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "accessCollection['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "@PathParam(\"instanceId\") final String instanceId@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "@PathParam(\"actionId\") final String actionId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "@PathParam(\"domainType\") final String domainType@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "@PathParam(\"domainType\") final String domainType@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "@PathParam(\"instanceId\") final String instanceId@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "@PathParam(\"domainType\") final String domainType@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5->6 [style = dotted, label="true"];
+3->10 [style = dashed, label="0"];
+0->3 [style = dotted, label="true"];
+0->2 [style = dotted, label="true"];
+7->10 [style = dotted, label="true"];
+7->9 [style = dotted, label="true"];
+5->3 [style = dotted, label="true"];
+7->8 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+}

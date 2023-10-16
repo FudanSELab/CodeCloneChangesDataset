@@ -1,0 +1,38 @@
+digraph {
+1 [style = filled, label = "verifyEquality(JoinWindows.of(ofMillis(3)).grace(ofMillis(2)),JoinWindows.of(ofMillis(3)).grace(ofMillis(2)))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "verifyEquality(SessionWindows.with(ofMillis(1)).grace(ofMillis(6)),SessionWindows.with(ofMillis(1)).grace(ofMillis(6)))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "verifyEquality(JoinWindows.of(ofMillis(3)).before(ofMillis(1)).after(ofMillis(2)).grace(ofMillis(3)).grace(ofMillis(60)),JoinWindows.of(ofMillis(3)).before(ofMillis(1)).after(ofMillis(2)).grace(ofMillis(3)).grace(ofMillis(60)))@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "verifyEquality(JoinWindows.of(ofMillis(3)).after(ofMillis(2)),JoinWindows.of(ofMillis(3)).after(ofMillis(2)))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "equalsAndHashcodeShouldBeValidForPositiveCases['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "verifyEquality(JoinWindows.of(ofMillis(3)),JoinWindows.of(ofMillis(3)))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "verifyEquality(JoinWindows.of(ofMillis(3)).grace(ofMillis(60)),JoinWindows.of(ofMillis(3)).grace(ofMillis(60)))@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+14 [style = filled, label = "verifyEquality(SessionWindows.with(ofMillis(1)).until(7),SessionWindows.with(ofMillis(1)).until(7))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "verifyEquality(JoinWindows.of(ofMillis(3)).before(ofMillis(1)).after(ofMillis(2)).grace(ofMillis(3)).until(60),JoinWindows.of(ofMillis(3)).before(ofMillis(1)).after(ofMillis(2)).grace(ofMillis(3)).until(60))@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "verifyEquality(JoinWindows.of(ofMillis(9)).before(ofMillis(1)).after(ofMillis(2)).grace(ofMillis(3)).until(60),JoinWindows.of(ofMillis(3)).before(ofMillis(1)).after(ofMillis(2)).grace(ofMillis(3)).until(60))@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "verifyEquality(JoinWindows.of(ofMillis(9)).before(ofMillis(1)).after(ofMillis(2)).grace(ofMillis(3)).grace(ofMillis(60)),JoinWindows.of(ofMillis(3)).before(ofMillis(1)).after(ofMillis(2)).grace(ofMillis(3)).grace(ofMillis(60)))@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+16 [style = filled, label = "verifyEquality(SessionWindows.with(ofMillis(1)).grace(ofMillis(6)).until(7),SessionWindows.with(ofMillis(1)).grace(ofMillis(6)).until(7))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "equalsAndHashcodeShouldBeValidForPositiveCases['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "verifyEquality(JoinWindows.of(ofMillis(3)).until(60),JoinWindows.of(ofMillis(3)).until(60))@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "verifyEquality(JoinWindows.of(ofMillis(3)).before(ofMillis(2)),JoinWindows.of(ofMillis(3)).before(ofMillis(2)))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "verifyEquality(SessionWindows.with(ofMillis(1)),SessionWindows.with(ofMillis(1)))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "equalsAndHashcodeShouldBeValidForPositiveCases['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+11->8 [style = bold, label=""];
+8->10 [style = bold, label=""];
+12->13 [style = bold, label=""];
+14->16 [style = bold, label=""];
+15->12 [style = bold, label=""];
+1->6 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+1->11 [style = bold, label=""];
+6->7 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+7->2 [style = bold, label=""];
+13->14 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+4->0 [style = bold, label=""];
+6->11 [style = dashed, label="0"];
+7->8 [style = dashed, label="0"];
+}

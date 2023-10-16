@@ -1,0 +1,29 @@
+digraph {
+3 [style = filled, label = "assertEquals(1,rows)@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "name.setFirstName(\"Fred\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testInsertAnnotated['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "int rows = mapper.insertNameMapped(name)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "name.setLastName(\"Flintstone\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testInsertMapped['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testInsertAnnotated['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "Name name = new Name()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertNotNull(name.getId())@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "InsertMapper mapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "int rows = mapper.insertNameAnnotated(name)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+5->3 [style = bold, label=""];
+9->5 [style = bold, label=""];
+2->4 [style = solid, label="name"];
+10->0 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+6->0 [style = bold, label=""];
+7->1 [style = bold, label=""];
+2->7 [style = bold, label=""];
+2->9 [style = solid, label="name"];
+4->5 [style = bold, label=""];
+9->3 [style = solid, label="rows"];
+1->9 [style = bold, label=""];
+4->3 [style = solid, label="rows"];
+0->2 [style = bold, label=""];
+}

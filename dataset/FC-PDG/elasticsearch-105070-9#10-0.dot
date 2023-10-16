@@ -1,0 +1,27 @@
+digraph {
+8 [style = filled, label = "Query query = LongPoint.newRangeQuery(SEARCHABLE_DATE,asLong(\"2017-02-01T00:00:00.000Z\"),asLong(\"2017-02-01T00:00:30.000Z\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testSearchAndReduceCase(query,timestamps,null,null,false)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "List<String> timestamps = Arrays.asList(\"2017-02-01T00:00:05.015Z\",\"2017-02-01T00:00:11.299Z\",\"2017-02-01T00:00:11.074Z\",\"2017-02-01T00:00:13.688Z\",\"2017-02-01T00:00:21.380Z\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testBothCases(new MatchAllDocsQuery(),Arrays.asList(\"2017-02-01\",\"2017-02-02\",\"2017-02-02\",\"2017-02-03\",\"2017-02-03\",\"2017-02-03\",\"2017-02-05\"),null,null,false)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "testIntervalDay['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "testSearchCase(new MatchAllDocsQuery(),Arrays.asList(\"2017-02-01\",\"2017-02-02\",\"2017-02-02\",\"2017-02-03\",\"2017-02-03\",\"2017-02-03\",\"2017-02-05\"),null,null,false)@@@20@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "testIntervalDay['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testBothCases(new MatchAllDocsQuery(),Arrays.asList(\"2017-02-01\",\"2017-02-02\",\"2017-02-02\",\"2017-02-03\",\"2017-02-03\",\"2017-02-03\",\"2017-02-05\"),null,null,false)@@@20@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "testMinDocCount['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testSearchAndReduceCase(query,timestamps,null,null,false)@@@22@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testSearchCase(new MatchAllDocsQuery(),Arrays.asList(\"2017-02-01\",\"2017-02-02\",\"2017-02-02\",\"2017-02-03\",\"2017-02-03\",\"2017-02-03\",\"2017-02-05\"),null,null,false)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8->9 [style = solid, label="query"];
+1->4 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+8->10 [style = bold, label=""];
+1->2 [style = bold, label=""];
+8->6 [style = solid, label="query"];
+10->6 [style = solid, label="timestamps"];
+10->9 [style = solid, label="timestamps"];
+6->9 [style = bold, label=""];
+2->3 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+0->1 [style = bold, label=""];
+10->6 [style = bold, label=""];
+5->4 [style = bold, label=""];
+}

@@ -1,0 +1,32 @@
+digraph {
+4 [style = filled, label = "assertEquals(\"Cannot search on field (field( since it is not indexed.\",e.getMessage())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ElasticsearchException ee = expectThrows(,null)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "MappedFieldType unsearchable = new TextFieldType(\"field\",false,false,Collections.emptyMap())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "MappedFieldType ft = createFieldType()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "MappedFieldType unsearchable = new TextFieldType(\"field\",false,Collections.emptyMap())@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "testRegexpQuery['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "IllegalArgumentException e = expectThrows(,null)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testRegexpQuery['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(\"(regexp( queries cannot be executed when 'search.allow_expensive_queries' is set to false.\",ee.getMessage())@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "MappedFieldType ft = new KeywordFieldType(\"field\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testRegexpQuery['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertEquals(new RegexpQuery(new Term(\"field\",\"foo.*\")),ft.regexpQuery(\"foo.*\",0,0,10,null,MOCK_QSC))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "MappedFieldType unsearchable = new KeywordFieldType(\"field\",false,true,Collections.emptyMap())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->0 [style = bold, label=""];
+0->3 [style = bold, label=""];
+3->9 [style = bold, label=""];
+3->11 [style = bold, label=""];
+5->1 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+3->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+12->3 [style = bold, label=""];
+0->12 [style = dashed, label="0"];
+9->1 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+11->1 [style = bold, label=""];
+10->12 [style = bold, label=""];
+4->7 [style = bold, label=""];
+7->6 [style = bold, label=""];
+}

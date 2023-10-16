@@ -1,0 +1,31 @@
+digraph {
+0 [style = filled, label = "Set<ConfigOption<?>> options = new HashSet<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "optionalOptions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "options.add(ALLOW_COMMENTS)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "options.add(IGNORE_PARSE_ERRORS)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "options.add(LINE_DELIMITER)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return options@@@13@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "options.add(ARRAY_ELEMENT_DELIMITER)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "options.add(FIELD_DELIMITER)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "options.add(QUOTE_CHARACTER)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "options.add(DISABLE_QUOTE_CHARACTER)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "options.add(NULL_LITERAL)@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "options.add(ESCAPE_CHARACTER)@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "optionalOptions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "optionalOptions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6->8 [style = bold, label=""];
+3->10 [style = bold, label=""];
+5->2 [style = bold, label=""];
+10->9 [style = bold, label=""];
+11->0 [style = bold, label=""];
+0->1 [style = solid, label="options"];
+2->7 [style = bold, label=""];
+4->2 [style = bold, label=""];
+9->1 [style = bold, label=""];
+0->4 [style = bold, label=""];
+12->0 [style = bold, label=""];
+4->5 [style = bold, label=""];
+7->6 [style = bold, label=""];
+13->0 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

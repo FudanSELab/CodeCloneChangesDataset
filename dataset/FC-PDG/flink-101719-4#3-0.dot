@@ -1,0 +1,38 @@
+digraph {
+4 [style = filled, label = "final TestingDispatcherGateway.Builder dispatcherBuilder = new TestingDispatcherGateway.Builder().setSubmitFunction(null).setRequestJobStatusFunction(null).setRequestJobResultFunction(null)@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "applicationFuture.get(TIMEOUT_SECONDS,TimeUnit.SECONDS)@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "configurationUnderTest.set(HighAvailabilityOptions.HA_MODE,HighAvailabilityMode.ZOOKEEPER.name())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final TestingDispatcherGateway.Builder dispatcherBuilder = new TestingDispatcherGateway.Builder().setSubmitFunction(null).setRequestJobStatusFunction(null).setRequestJobResultFunction(null)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "testOnlyOneJobAllowedWithStaticJobId['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testDuplicateJobSubmissionWithTerminatedJobIdWithUnknownResultAttached['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "configurationUnderTest.set(PipelineOptionsInternal.PIPELINE_FIXED_JOB_ID,testJobID.toHexString())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "configurationUnderTest.set(PipelineOptionsInternal.PIPELINE_FIXED_JOB_ID,testJobID.toHexString())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testDuplicateJobSubmissionWithTerminatedJobIdWithUnknownResultAttached['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final JobID testJobID = new JobID(0,2)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertException(applicationFuture,)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "final CompletableFuture<Void> applicationFuture = runApplication(configurationUnderTest,2)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final CompletableFuture<Void> applicationFuture = runApplication(dispatcherBuilder,configurationUnderTest,1)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final Configuration configurationUnderTest = getConfiguration()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->3 [style = bold, label=""];
+3->5 [style = solid, label="configurationUnderTest"];
+3->1 [style = bold, label=""];
+0->6 [style = bold, label=""];
+4->5 [style = solid, label="dispatcherBuilder"];
+9->5 [style = solid, label="dispatcherBuilder"];
+12->11 [style = bold, label=""];
+8->6 [style = bold, label=""];
+2->9 [style = bold, label=""];
+2->4 [style = bold, label=""];
+10->6 [style = bold, label=""];
+1->13 [style = dashed, label="0"];
+4->9 [style = dashed, label="0"];
+2->12 [style = dashed, label="0"];
+13->12 [style = bold, label=""];
+12->11 [style = solid, label="applicationFuture"];
+9->5 [style = bold, label=""];
+3->13 [style = bold, label=""];
+5->7 [style = bold, label=""];
+1->2 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->12 [style = solid, label="configurationUnderTest"];
+}

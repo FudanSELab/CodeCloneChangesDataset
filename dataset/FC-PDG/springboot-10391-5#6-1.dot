@@ -1,0 +1,19 @@
+digraph {
+7 [style = filled, label = "invokeShouldResolveParameters['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "invokeShouldInvokeMethod['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "invokeShouldInvokeMethod['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "ReflectiveOperationInvoker invoker = new ReflectiveOperationInvoker(this.target,this.operationMethod,this.parameterValueMapper)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(result).isEqualTo(\"toob\")@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Object result = invoker.invoke(new InvocationContext(mock(),Collections.singletonMap(\"name\",\"boot\")))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(result).isEqualTo(\"4321\")@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Object result = invoker.invoke(new InvocationContext(mock(),Collections.singletonMap(\"name\",1234)))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+7->0 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->1 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

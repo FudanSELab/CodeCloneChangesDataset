@@ -1,0 +1,25 @@
+digraph {
+7 [style = filled, label = "assertNull(zk.exists(\"/multi/a/1\",null))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.delete(\"/multi\",0)),useAsync)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.create(\"/multi/a\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.create(\"/multi/a/1\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.delete(\"/multi/a/1\",0),Op.delete(\"/multi/a\",0),Op.delete(\"/multi\",0)))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testNestedCreate['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.delete(\"/multi\",0)))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "assertNull(zk.exists(\"/multi/a\",null))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertNull(zk.exists(\"/multi\",null))@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testCreateDelete['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "testCreateDelete['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "boolean useAsync@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "assertNull(zk.exists(\"/multi\",null))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+6->8 [style = bold, label=""];
+4->3 [style = solid, label="useAsync"];
+0->8 [style = dashed, label="0"];
+10->9 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+7->10 [style = bold, label=""];
+5->4 [style = dotted, label="true"];
+8->7 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

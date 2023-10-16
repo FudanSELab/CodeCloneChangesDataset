@@ -1,0 +1,18 @@
+digraph {
+2 [style = filled, label = "assertExecuteQueryForStatementWithResultSetTypeAndResultSetConcurrency['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertExecuteForStatementWithResultSetTypeAndResultSetConcurrency['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertTrue(\"Not a query statement.\",statement.execute(String.format(getStatement(),getAssertion().getSQLValues().toArray())))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertResultSet(resultSet)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final Connection connection@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final Connection connection@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertExecuteQueryForStatementWithResultSetTypeAndResultSetConcurrency['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "assertResultSet(resultSet)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->4 [style = dashed, label="0"];
+7->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+5->6 [style = bold, label=""];
+2->1 [style = dotted, label="true"];
+3->1 [style = dotted, label="true"];
+3->0 [style = bold, label=""];
+7->4 [style = dotted, label="true"];
+}

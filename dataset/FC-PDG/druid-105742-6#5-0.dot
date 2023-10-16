@@ -1,0 +1,32 @@
+digraph {
+0 [style = filled, label = "List<Result<TimeseriesResultValue>> expectedResults = Collections.singletonList(new Result<TimeseriesResultValue>(DateTimes.of(\"2011-01-12T00:00:00.000Z\"),new TimeseriesResultValue(ImmutableMap.builder().put(\"rows\",5L).put(\"index\",500.0D).put(\"addRowsIndexConstant\",506.0D).put(\"uniques\",0.0D).put(\"maxIndex\",100.0D).put(\"minIndex\",100.0D).build())))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "TestHelper.assertExpectedResults(expectedResults,runner.run(QueryPlus.wrap(query)))@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testRowFiltering['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "testRowFiltering['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testFilteredTimeSeries['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "List<Result<TimeseriesResultValue>> expectedResults = Collections.singletonList(new Result<TimeseriesResultValue>(DateTimes.of(\"2011-01-12T00:00:00.000Z\"),new TimeseriesResultValue(ImmutableMap.builder().put(\"rows\",5L).put(\"index\",500.0D).put(\"addRowsIndexConstant\",506.0D).put(\"uniques\",1.0002442201269182D).put(\"maxIndex\",100.0D).put(\"minIndex\",100.0D).build())))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "QueryRunner runner = TestQueryRunners.makeTimeSeriesQueryRunner(segment)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "QueryRunner runner = TestQueryRunners.makeTimeSeriesQueryRunner(segment3)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "TimeseriesQuery query = Druids.newTimeseriesQueryBuilder().dataSource(dataSource).granularity(allGran).intervals(fullOnInterval).filters(marketDimension,\"breakstuff\").aggregators(Lists.newArrayList(Iterables.concat(commonAggregators,Lists.newArrayList(new DoubleMaxAggregatorFactory(\"maxIndex\",\"index\"),new DoubleMinAggregatorFactory(\"minIndex\",\"index\"))))).postAggregators(addRowsIndexConstant).build()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "TimeseriesQuery query = Druids.newTimeseriesQueryBuilder().dataSource(dataSource).granularity(ALL_GRAN).intervals(fullOnInterval).filters(marketDimension,\"breakstuff\").aggregators(Lists.newArrayList(Iterables.concat(commonAggregators,Lists.newArrayList(new DoubleMaxAggregatorFactory(\"maxIndex\",\"index\"),new DoubleMinAggregatorFactory(\"minIndex\",\"index\"))))).postAggregators(addRowsIndexConstant).build()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "TimeseriesQuery query = makeFilteredTimeseriesQuery()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = solid, label="query"];
+10->3 [style = solid, label="expectedResults"];
+4->3 [style = bold, label=""];
+8->10 [style = bold, label=""];
+1->4 [style = bold, label=""];
+10->9 [style = bold, label=""];
+2->0 [style = bold, label=""];
+6->0 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+0->10 [style = dashed, label="0"];
+9->7 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+0->3 [style = solid, label="expectedResults"];
+0->1 [style = bold, label=""];
+1->3 [style = solid, label="query"];
+7->3 [style = bold, label=""];
+5->4 [style = bold, label=""];
+0->5 [style = bold, label=""];
+9->3 [style = solid, label="query"];
+}

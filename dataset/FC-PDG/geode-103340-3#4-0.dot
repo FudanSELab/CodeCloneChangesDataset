@@ -1,0 +1,29 @@
+digraph {
+10 [style = filled, label = "gfsh.executeAndAssertThat(\"query --query='\" + SELECT_FIELDS + \"'\").statusIsSuccess().hasTableSection().hasColumns().asList().containsExactlyInAnyOrder(\"id\",\"title\")@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "tabularAssert.hasColumn(\"endDate\").containsExactly(sqlDate.getTime() + \"\")@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "TabularResultModelAssert tabularAssert = gfsh.executeAndAssertThat(\"query --query='\" + SELECT_ALL + \"'\").statusIsSuccess().hasTableSection()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "tabularAssert.hasColumns().asList().containsExactlyInAnyOrder(\"name\",\"address\",\"startDate\",\"endDate\",\"birthday\",\"Job Title\")@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "gfsh.connectAndVerify(server.getJmxPort(),GfshCommandRule.PortType.jmxManager)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "tabularAssert.hasColumn(\"birthday\").asList().asString().contains(\"\"year\":2020,\"month\":\"JANUARY\"\")@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "tabularAssert.hasColumns().asList().containsExactlyInAnyOrder(\"name\",\"address\",\"startDate\",\"endDate\",\"title\")@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "TabularResultModelAssert tabularAssert = gfsh.executeAndAssertThat(\"query --query='\" + SELECT_ALL_BUT_LOCAL_DATE + \"'\").statusIsSuccess().hasTableSection()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "queryFieldsUsingGfshDoesNotHonorAnnotations['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "tabularAssert.hasColumn(\"startDate\").containsExactly(date.getTime() + \"\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "queryAllUsingGfshDoesNotFormatDate['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "queryAllUsingGfshDoesNotFormatDate['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8->1 [style = bold, label=""];
+6->3 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+1->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+9->7 [style = bold, label=""];
+1->10 [style = bold, label=""];
+11->1 [style = bold, label=""];
+7->2 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+1->9 [style = bold, label=""];
+2->5 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+}

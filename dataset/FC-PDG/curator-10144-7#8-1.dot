@@ -1,0 +1,30 @@
+digraph {
+7 [style = filled, label = "return new JoinStatConfigEnsembleable(){@Override public byte(( forEnsemble(){return this.forEnsemble()}@Override public ConfigureEnsembleable storingStatIn(Stat stat){responseStat = statreturn this}@Override public Ensembleable<byte((> fromConfig(long config){fromConfig = configreturn this}@Override public LeaveStatConfigEnsembleable joining(String server){return joining((server != null)? Arrays.asList(server): null)}@Override public LeaveStatConfigEnsembleable joining(List<String> servers){return this.joining(servers)}}@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "List<String> servers@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "joining = (servers != null && !servers.isEmpty())? ImmutableList.copyOf(servers): null@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "joining = (servers != null)? ImmutableList.copyOf(servers): ImmutableList.of()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "leaving = (servers != null)? ImmutableList.copyOf(servers): ImmutableList.of()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "leaving['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "joining['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "List<String> servers@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "joining['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return new LeaveStatConfigEnsembleable(){@Override public byte(( forEnsemble(){return this.forEnsemble()}@Override public ConfigureEnsembleable storingStatIn(Stat stat){responseStat = statreturn this}@Override public Ensembleable<byte((> fromConfig(long config){fromConfig = configreturn this}@Override public JoinStatConfigEnsembleable leaving(String server){return this.leaving(server)}@Override public JoinStatConfigEnsembleable leaving(List<String> servers){return this.leaving(servers)}}@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+8->7 [style = solid, label="servers"];
+4->1 [style = bold, label=""];
+0->2 [style = dotted, label="true"];
+8->9 [style = solid, label="servers"];
+6->9 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->3 [style = solid, label="servers"];
+9->7 [style = bold, label=""];
+2->4 [style = solid, label="servers"];
+6->8 [style = dotted, label="true"];
+3->4 [style = dashed, label="0"];
+2->8 [style = dashed, label="0"];
+3->9 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+2->1 [style = solid, label="servers"];
+5->4 [style = bold, label=""];
+5->2 [style = dotted, label="true"];
+}

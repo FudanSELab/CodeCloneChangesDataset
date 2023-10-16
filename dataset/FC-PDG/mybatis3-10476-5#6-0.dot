@@ -1,0 +1,28 @@
+digraph {
+7 [style = filled, label = "testSeleckKeyReturnsNoData['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertNull(parms.get(\"id\"))@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "sqlSession.insert(\"org.apache.ibatis.submitted.selectkey.Table2.insertTooManyValuesInSelectKey\",parms)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testSeleckKeyReturnsTooManyData['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testSeleckKeyReturnsNoData['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Assertions.assertThrows(,null)@@@6@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "sqlSession.insert(\"org.apache.ibatis.submitted.selectkey.Table2.insertTooManyValuesInSelectKey\",parms)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertEquals(1,rows)@@@7@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Map<String,String> parms = new HashMap<String,String>()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "parms.put(\"name\",\"Fred\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "int rows = sqlSession.insert(\"org.apache.ibatis.submitted.selectkey.Table2.insertNoValuesInSelectKey\",parms)@@@6@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+3->10 [style = bold, label=""];
+5->8 [style = solid, label="parms"];
+3->6 [style = bold, label=""];
+5->10 [style = solid, label="parms"];
+7->5 [style = bold, label=""];
+5->1 [style = solid, label="parms"];
+1->0 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+1->0 [style = solid, label="rows"];
+10->8 [style = bold, label=""];
+3->1 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

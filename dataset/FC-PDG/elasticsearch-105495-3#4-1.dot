@@ -1,0 +1,20 @@
+digraph {
+0 [style = filled, label = "testUnmappedMissingGeoPoint['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "CardinalityAggregationBuilder aggregationBuilder = new CardinalityAggregationBuilder(\"name\").field(\"number\").missing(new GeoPoint(42.39561,-71.13051))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "ValueCountAggregationBuilder aggregationBuilder = new ValueCountAggregationBuilder(\"name\",null).field(\"number\").missing(1234)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testUnmappedMissingGeoPoint['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "testUnmappedMissingNumber['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testCase(aggregationBuilder,new MatchAllDocsQuery(),null,null,null)@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "CardinalityAggregationBuilder aggregationBuilder = new CardinalityAggregationBuilder(\"name\",null).field(\"number\").missing(new GeoPoint(42.39561,-71.13051))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1->2 [style = solid, label="aggregationBuilder"];
+4->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->2 [style = solid, label="aggregationBuilder"];
+1->3 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+6->2 [style = solid, label="aggregationBuilder"];
+6->2 [style = bold, label=""];
+}

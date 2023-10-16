@@ -1,0 +1,26 @@
+digraph {
+1 [style = filled, label = "Father test = fatherMapper.selectByIdNoFid(1)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testNotNullColumnWithChildrenNoFid['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testNotNullColumnWithoutChildrenNoFid['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testNotNullColumnWithChildrenNoFid['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "Father test = fatherMapper.selectByIdNoFid(2)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertTrue(test.getChildren().isEmpty())@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertNotNull(test.getChildren())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "FatherMapper fatherMapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertNotNull(test)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(2,test.getChildren().size())@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+7->2 [style = solid, label="test"];
+1->2 [style = bold, label=""];
+1->2 [style = solid, label="test"];
+1->7 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+3->7 [style = bold, label=""];
+5->9 [style = bold, label=""];
+7->2 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->5 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

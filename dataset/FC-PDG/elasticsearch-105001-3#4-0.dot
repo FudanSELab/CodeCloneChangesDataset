@@ -1,0 +1,24 @@
+digraph {
+6 [style = filled, label = "final List<DateTime> datesForMonthInterval = Arrays.asList(new DateTime(2017,1,1,0,0,0,DateTimeZone.UTC),new DateTime(2017,2,2,0,0,0,DateTimeZone.UTC),new DateTime(2017,2,3,0,0,0,DateTimeZone.UTC),new DateTime(2017,3,4,0,0,0,DateTimeZone.UTC),new DateTime(2017,3,5,0,0,0,DateTimeZone.UTC),new DateTime(2017,3,6,0,0,0,DateTimeZone.UTC))@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "testSearchAndReduceCase(DEFAULT_QUERY,datesForMonthInterval,null,null)@@@16@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "testSearchAndReduceCase(new MatchAllDocsQuery(),Arrays.asList(\"2017-01-01\",\"2017-02-02\",\"2017-02-03\",\"2017-03-04\",\"2017-03-05\",\"2017-03-06\"),null,null)@@@26@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "testIntervalMonth['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "testSearchAndReduceCase(new MatchAllDocsQuery(),Arrays.asList(\"2017-02-01T00:00:05.015Z\",\"2017-02-01T00:00:07.299Z\",\"2017-02-01T00:00:07.074Z\",\"2017-02-01T00:00:11.688Z\",\"2017-02-01T00:00:11.210Z\",\"2017-02-01T00:00:11.380Z\"),null,null)@@@17@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testIntervalMonth['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testSearchCase(new MatchAllDocsQuery(),Arrays.asList(\"2017-01-01\",\"2017-02-02\",\"2017-02-03\",\"2017-03-04\",\"2017-03-05\",\"2017-03-06\"),null,null)@@@3@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testSearchCase(DEFAULT_QUERY,datesForMonthInterval,null,null)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "testIntervalSecond['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testSearchCase(new MatchAllDocsQuery(),Arrays.asList(\"2017-02-01T00:00:05.015Z\",\"2017-02-01T00:00:07.299Z\",\"2017-02-01T00:00:07.074Z\",\"2017-02-01T00:00:11.688Z\",\"2017-02-01T00:00:11.210Z\",\"2017-02-01T00:00:11.380Z\"),null,null)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+6->5 [style = solid, label="datesForMonthInterval"];
+1->8 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->3 [style = dashed, label="0"];
+0->9 [style = dashed, label="0"];
+9->8 [style = bold, label=""];
+4->6 [style = bold, label=""];
+0->1 [style = bold, label=""];
+6->3 [style = solid, label="datesForMonthInterval"];
+}

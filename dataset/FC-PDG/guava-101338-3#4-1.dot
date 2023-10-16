@@ -1,0 +1,20 @@
+digraph {
+3 [style = filled, label = "fail(\"Should have throw IAE\")@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testGetCasualChainLoop['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "Throwables.getCausalChain(cause)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Exception cause = new Exception()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "cause.initCause(exception)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testGetCasualChainLoop['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Exception exception = new Exception(cause)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testGetCasualChainLoop['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+6->4 [style = bold, label=""];
+4->1 [style = solid, label="cause"];
+4->1 [style = bold, label=""];
+5->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+0->4 [style = bold, label=""];
+4->2 [style = solid, label="cause"];
+1->5 [style = solid, label="exception"];
+2->3 [style = bold, label=""];
+}

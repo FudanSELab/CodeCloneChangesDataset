@@ -1,0 +1,21 @@
+digraph {
+3 [style = filled, label = "skipField['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final MessageReflection.MergeTarget target@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Tokenizer tokenizer@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "skipField['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final ExtensionRegistry extensionRegistry@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "List<UnknownField> unknownFields@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "mergeField['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final Tokenizer tokenizer@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Tokenizer tokenizer@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "TextFormatParseInfoTree.Builder parseTreeBuilder@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4->6 [style = dotted, label="true"];
+4->8 [style = dotted, label="true"];
+4->5 [style = dotted, label="true"];
+4->7 [style = dotted, label="true"];
+0->2 [style = dashed, label="0"];
+1->0 [style = dotted, label="true"];
+0->9 [style = dashed, label="0"];
+4->9 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+}

@@ -1,0 +1,19 @@
+digraph {
+2 [style = filled, label = "defaultTableOptions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return new TableOptionsBuilder(connector,format).withTableOption(KinesisConnectorOptions.STREAM,TABLE_NAME).withTableOption(\"properties.aws.region\",\"us-west-2\").withFormatOption(TestFormatFactory.DELIMITER,\",\")@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "String connector = KinesisDynamicTableFactory.IDENTIFIER@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "defaultTableOptions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "String format = TestFormatFactory.IDENTIFIER@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "return new TableOptionsBuilder(connector,format).withTableOption(KinesisOptions.STREAM,TABLE_NAME).withTableOption(\"properties.aws.region\",\"us-west-2\").withFormatOption(TestFormatFactory.DELIMITER,\",\")@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "return new TableOptionsBuilder(connector,format).withTableOption(KinesisOptions.STREAM,STREAM_NAME).withTableOption(\"aws.region\",\"us-west-2\").withTableOption(\"aws.credentials.provider\",\"BASIC\").withTableOption(\"aws.credentials.basic.accesskeyid\",\"ververicka\").withTableOption(\"aws.credentials.basic.secretkey\",\"SuperSecretSecretSquirrel\").withTableOption(\"scan.stream.initpos\",\"AT_TIMESTAMP\").withTableOption(\"scan.stream.initpos-timestamp-format\",\"yyyy-MM-dd'T'HH:mm:ss\").withTableOption(\"scan.stream.initpos-timestamp\",\"2014-10-22T12:00:00\").withTableOption(\"sink.producer.collection-max-count\",\"100\").withFormatOption(TestFormatFactory.DELIMITER,\",\").withFormatOption(TestFormatFactory.FAIL_ON_MISSING,\"true\")@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "defaultTableOptions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+3->6 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+7->1 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

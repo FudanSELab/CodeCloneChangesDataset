@@ -1,0 +1,11 @@
+digraph {
+2 [style = filled, label = "testDeterministic1['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "testDeterministic1['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "check(new Action(){public void check(RexBuilder rexBuilder,RexExecutorImpl executor){final RexNode plus = rexBuilder.makeCall(SqlStdOperatorTable.PLUS,rexBuilder.makeCall(PLUS_RANDOM,rexBuilder.makeExactLiteral(BigDecimal.ONE),rexBuilder.makeExactLiteral(BigDecimal.ONE)),rexBuilder.makeExactLiteral(BigDecimal.ONE))assertThat(RexUtil.isDeterministic(plus),equalTo(false))}})@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "check(null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testDeterministic3['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2->3 [style = bold, label=""];
+1->0 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+}

@@ -1,0 +1,15 @@
+digraph {
+3 [style = filled, label = "actuatorEndpointsWhenSecurityAvailable['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "getContextRunner(userConfigurations).run(null)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testJerseyEndpoints['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "actuatorEndpointsWhenSecurityAvailable['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Class<?>(( userConfigurations@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "contextRunner.run(null)@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "WebApplicationContextRunner contextRunner = getContextRunner(new Class<?>((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1cb685d,getAutoconfigurations(,))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->6 [style = dotted, label="true"];
+2->0 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+}

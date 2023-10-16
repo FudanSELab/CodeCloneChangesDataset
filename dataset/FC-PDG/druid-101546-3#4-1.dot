@@ -1,0 +1,22 @@
+digraph {
+3 [style = filled, label = "testFieldAliasingSelect['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "testFieldAliasingGroupBy['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Assert.assertEquals(NullHandling.replaceWithDefault()? ImmutableList.of(ImmutableMap.of(\"x\",\"\",\"y\",\"\"),ImmutableMap.of(\"x\",\"a\",\"y\",\"a\"),ImmutableMap.of(\"x\",\"abc\",\"y\",\"abc\")): ImmutableList.of(Maps.transformValues(ImmutableMap.of(\"x\",\"\",\"y\",\"\"),null),ImmutableMap.of(\"x\",\"\",\"y\",\"\"),ImmutableMap.of(\"x\",\"a\",\"y\",\"a\"),ImmutableMap.of(\"x\",\"abc\",\"y\",\"abc\")),rows)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final List<Map<String,Object>> rows = doPost(new SqlQuery(\"SELECT dim2 \"x\", dim2 \"y\" FROM druid.foo LIMIT 1\",ResultFormat.OBJECT,false,null,null)).rhs@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "testFieldAliasingSelect['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final List<Map<String,Object>> rows = doPost(new SqlQuery(\"SELECT dim2 \"x\", dim2 \"y\" FROM druid.foo LIMIT 1\",ResultFormat.OBJECT,false,null)).rhs@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "Assert.assertEquals(ImmutableList.of(ImmutableMap.of(\"x\",\"a\",\"y\",\"a\")),rows)@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final List<Map<String,Object>> rows = doPost(new SqlQuery(\"SELECT dim2 \"x\", dim2 \"y\" FROM druid.foo GROUP BY dim2\",ResultFormat.OBJECT,false,null)).rhs@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->0 [style = solid, label="rows"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+2->0 [style = solid, label="rows"];
+7->5 [style = bold, label=""];
+7->5 [style = solid, label="rows"];
+6->7 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+2->7 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+}

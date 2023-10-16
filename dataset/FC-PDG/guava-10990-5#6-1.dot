@@ -1,0 +1,37 @@
+digraph {
+4 [style = filled, label = "addEdges(graph)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(graph.nodeOrder()).isEqualTo(ElementOrder.insertion())@@@7@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "addEdges(network)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "MutableNetwork<Integer,String> graph = NetworkBuilder.directed().build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "MutableNetwork<Integer,String> network = NetworkBuilder.directed().edgeOrder(insertion()).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "edgeOrder_insertion['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "assertThat(graph.edges()).containsExactly(\"i\",\"e\",\"p\").inOrder()@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(graph.edgeOrder()).isEqualTo(ElementOrder.insertion())@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "MutableNetwork<Integer,String> graph = NetworkBuilder.directed().edgeOrder(insertion()).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "assertThat(network.edgeOrder()).isEqualTo(ElementOrder.insertion())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "assertThat(network.edges()).containsExactly(\"i\",\"e\",\"p\").inOrder()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "edgeOrder_insertion['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "edgeOrder_default['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertThat(network.nodeOrder()).isEqualTo(ElementOrder.insertion())@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1->4 [style = bold, label=""];
+7->10 [style = solid, label="network"];
+3->1 [style = bold, label=""];
+7->10 [style = bold, label=""];
+1->4 [style = solid, label="graph"];
+0->2 [style = bold, label=""];
+12->4 [style = solid, label="graph"];
+1->12 [style = dashed, label="0"];
+13->12 [style = bold, label=""];
+5->0 [style = bold, label=""];
+12->4 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+2->9 [style = dashed, label="0"];
+8->9 [style = bold, label=""];
+11->8 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

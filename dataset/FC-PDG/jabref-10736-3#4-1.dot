@@ -1,0 +1,23 @@
+digraph {
+3 [style = filled, label = "popupNoteMinimal['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "squigglyWithNoteMinimal['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertEquals(Collections.singletonList(expected),importer.importAnnotations(Path.of(\"src/test/resources/pdfs/minimal-popup.pdf\")))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "popupNoteMinimal['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final FileAnnotation expected = new FileAnnotation(\"Linus Dietz\",LocalDateTime.of(2017,3,12,20,17,24),1,\"A simple pop-up note\",FileAnnotationType.TEXT,Optional.empty())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertEquals(Collections.singletonList(expected),importer.importAnnotations(Paths.get(\"src/test/resources/pdfs/minimal-squiggly.pdf\")))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final FileAnnotation expected = new FileAnnotation(\"lynyus\",LocalDateTime.of(2017,6,1,2,40,25),1,\"ello\",FileAnnotationType.SQUIGGLY,Optional.of(expectedLinkedAnnotation))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final FileAnnotation expectedLinkedAnnotation = new FileAnnotation(\"lynyus\",LocalDateTime.of(2017,6,1,2,40,25),1,\"Squiggly note\",FileAnnotationType.SQUIGGLY,Optional.empty())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertEquals(Collections.singletonList(expected),importer.importAnnotations(Paths.get(\"src/test/resources/pdfs/minimal-popup.pdf\")))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8->5 [style = solid, label="expected"];
+1->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+7->6 [style = bold, label=""];
+8->5 [style = bold, label=""];
+3->1 [style = bold, label=""];
+1->2 [style = solid, label="expected"];
+0->1 [style = bold, label=""];
+1->4 [style = solid, label="expected"];
+6->8 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+6->8 [style = solid, label="expectedLinkedAnnotation"];
+}

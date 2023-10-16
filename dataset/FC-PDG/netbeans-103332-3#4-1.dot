@@ -1,0 +1,38 @@
+digraph {
+9 [style = filled, label = "int action@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "java.lang.reflect.Method method = delegate.getClass().getDeclaredMethod(\"exportDone\",new Class((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1d32137)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "method.invoke(delegate,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1d32147)@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "JComponent source@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "method.setAccessible(true)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "int action@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "int action@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "exportDone['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "exportDone['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Transferable data@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "Transferable data@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "JComponent source@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "exportDone['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11->5 [style = solid, label="source"];
+7->2 [style = dotted, label="true"];
+4->3 [style = bold, label=""];
+8->5 [style = solid, label="data"];
+2->5 [style = solid, label="source"];
+12->2 [style = dotted, label="true"];
+6->1 [style = dotted, label="true"];
+9->5 [style = solid, label="action"];
+2->5 [style = solid, label="data"];
+7->4 [style = bold, label=""];
+7->9 [style = dotted, label="true"];
+2->5 [style = solid, label="action"];
+12->11 [style = dotted, label="true"];
+10->5 [style = solid, label="data"];
+6->4 [style = bold, label=""];
+1->5 [style = solid, label="action"];
+3->5 [style = bold, label=""];
+6->2 [style = dotted, label="true"];
+12->10 [style = dotted, label="true"];
+12->4 [style = bold, label=""];
+0->5 [style = solid, label="source"];
+6->0 [style = dotted, label="true"];
+7->8 [style = dotted, label="true"];
+}

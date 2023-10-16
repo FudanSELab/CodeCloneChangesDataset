@@ -1,0 +1,33 @@
+digraph {
+5 [style = filled, label = "assertThat(allocation.routingNodes().unassigned().ignored().size(),equalTo(1))@@@14@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(allocation.routingNodes().unassigned().ignored().get(0).shardId(),equalTo(shardId))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testAllocator.clean()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testAllocator.addData(node1,\"MATCH\",new StoreFileMetaData(\"file1\",10,\"MATCH_CHECKSUM\",MIN_SUPPORTED_LUCENE_VERSION)).addData(node2,\"MATCH\",new StoreFileMetaData(\"file1\",10,\"MATCH_CHECKSUM\",MIN_SUPPORTED_LUCENE_VERSION))@@@12@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "RoutingAllocation allocation = onePrimaryOnNode1And1Replica(new AllocationDeciders(Arrays.asList(new TestAllocateDecision(Decision.YES),new SameShardAllocationDecider(Settings.EMPTY,new ClusterSettings(Settings.EMPTY,ClusterSettings.BUILT_IN_CLUSTER_SETTINGS)),new AllocationDecider(){@Override public Decision canAllocate(ShardRouting shardRouting,RoutingNode node,RoutingAllocation allocation){if (node.node().equals(node2)) {return Decision.THROTTLE}return Decision.YES}})))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testAllocator.addData(node1,\"MATCH\",new StoreFileMetadata(\"file1\",10,\"MATCH_CHECKSUM\",MIN_SUPPORTED_LUCENE_VERSION)).addData(node2,\"MATCH\",new StoreFileMetadata(\"file1\",10,\"MATCH_CHECKSUM\",MIN_SUPPORTED_LUCENE_VERSION))@@@12@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "assertThat(allocation.routingNodes().unassigned().ignored().size(),equalTo(1))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "testNoAsyncFetchData['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testAllocator.allocateUnassigned(allocation)@@@13@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "RoutingAllocation allocation = onePrimaryOnNode1And1Replica(yesAllocationDeciders())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testAllocator.allocateUnassigned(allocation)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testThrottleWhenAllocatingToMatchingNode['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(allocation.routingNodes().unassigned().ignored().get(0).shardId(),equalTo(shardId))@@@15@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testThrottleWhenAllocatingToMatchingNode['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->3 [style = bold, label=""];
+13->10 [style = bold, label=""];
+6->4 [style = bold, label=""];
+10->9 [style = bold, label=""];
+7->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+10->8 [style = solid, label="allocation"];
+0->4 [style = solid, label="allocation"];
+9->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->6 [style = bold, label=""];
+8->12 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+12->11 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

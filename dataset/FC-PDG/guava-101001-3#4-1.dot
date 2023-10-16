@@ -1,0 +1,19 @@
+digraph {
+3 [style = filled, label = "copyOfImmutableNetwork_optimized['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(network2).isSameInstanceAs(network1)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "Network<String,String> network2 = ImmutableNetwork.copyOf(network1)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "copyOfImmutableNetwork_optimized['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "assertThat(network2).isSameAs(network1)@@@5@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Network<String,String> network1 = ImmutableNetwork.copyOf(NetworkBuilder.directed().build())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "copyOfImmutableNetwork_optimized['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+2->1 [style = solid, label="network1"];
+2->5 [style = solid, label="network1"];
+0->1 [style = bold, label=""];
+0->5 [style = bold, label=""];
+2->0 [style = solid, label="network1"];
+6->2 [style = bold, label=""];
+}

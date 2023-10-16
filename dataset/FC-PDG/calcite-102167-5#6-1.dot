@@ -1,0 +1,23 @@
+digraph {
+7 [style = filled, label = "SqlRexContext cx@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "SqlRexContext cx@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "SqlRexContext cx@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "SqlMultisetQueryConstructor op@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "SqlMultisetValueConstructor op@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "SqlMultisetValueConstructor op@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "SqlCall call@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "SqlCall call@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "convertMultiset['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "convertMultisetQuery['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "convertMultiset['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->3 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+3->10 [style = dashed, label="0"];
+2->0 [style = dotted, label="true"];
+8->9 [style = dotted, label="true"];
+6->3 [style = dotted, label="true"];
+6->4 [style = dotted, label="true"];
+8->10 [style = dotted, label="true"];
+2->1 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+}

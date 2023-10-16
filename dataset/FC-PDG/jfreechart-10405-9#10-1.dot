@@ -1,0 +1,29 @@
+digraph {
+10 [style = filled, label = "XYPlot<?> plot = (XYPlot)chart.getPlot()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "plot.setRenderer(new StackedXYBarRenderer())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertTrue(bounds.contains(8.0))@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testFindRangeBounds['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Range bounds = rangeAxis.getRange()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "NumberAxis rangeAxis = (NumberAxis)plot.getRangeAxis()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertTrue(bounds.contains(6.0))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testFindRangeBounds['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "TableXYDataset<String> dataset = RendererXYPackageUtils.createTestTableXYDataset()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testFindRangeBounds['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "XYPlot<String> plot = (XYPlot)chart.getPlot()@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "JFreeChart chart = ChartFactory.createStackedXYAreaChart(\"Test Chart\",\"X\",\"Y\",dataset,PlotOrientation.VERTICAL,false,false,false)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+8->10 [style = bold, label=""];
+10->3 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+11->0 [style = bold, label=""];
+6->0 [style = bold, label=""];
+7->1 [style = bold, label=""];
+9->0 [style = bold, label=""];
+8->2 [style = bold, label=""];
+0->8 [style = solid, label="dataset"];
+3->4 [style = bold, label=""];
+2->4 [style = bold, label=""];
+4->7 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->8 [style = bold, label=""];
+}

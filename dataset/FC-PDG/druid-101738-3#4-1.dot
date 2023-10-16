@@ -1,0 +1,13 @@
+digraph {
+0 [style = filled, label = "testQuery(\"SELECT COUNT(*) FROM druid.foo\" + \"WHERE\" + \"FLOOR(__time TO MONTH) <> TIMESTAMP '2001-01-01 00:00:00'\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(QSS(new Interval(DateTimes.MIN,DateTimes.of(\"2001-01-01\")),new Interval(DateTimes.of(\"2001-02-01\"),DateTimes.MAX))).granularity(Granularities.ALL).aggregators(AGGS(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91bac0))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "testQuery(\"SELECT COUNT(*) FROM druid.foo\" + \"WHERE\" + \"FLOOR(__time TO MONTH) <> TIMESTAMP '2001-01-01 00:00:00'\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(new Interval(DateTimes.MIN,DateTimes.of(\"2001-01-01\")),new Interval(DateTimes.of(\"2001-02-01\"),DateTimes.MAX))).granularity(Granularities.ALL).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91bb05))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testQuery(\"SELECT COUNT(*) FROM druid.foo\" + \"WHERE\" + \"FLOOR(__time TO MONTH) < TIMESTAMP '2000-02-01 00:00:00'\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(QSS(new Interval(DateTimes.MIN,DateTimes.of(\"2000-02-01\")))).granularity(Granularities.ALL).aggregators(AGGS(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91bb41))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testFilterOnTimeFloorComparison['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testFilterOnNotTimeFloor['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testFilterOnNotTimeFloor['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0->2 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+}

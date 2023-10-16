@@ -1,0 +1,13 @@
+digraph {
+2 [style = filled, label = "channelInactive['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "Throwable cause@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "ChannelHandlerContext ctx@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "channelInactive['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ChannelHandlerContext ctx@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "exceptionCaught['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->4 [style = dashed, label="0"];
+5->3 [style = dotted, label="true"];
+2->1 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+}

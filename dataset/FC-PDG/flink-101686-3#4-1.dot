@@ -1,0 +1,32 @@
+digraph {
+7 [style = filled, label = "configuration.set(JobManagerOptions.TOTAL_PROCESS_MEMORY,MemorySize.ofMebiBytes(768))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "configuration.setString(CLASSPATH_INCLUDE_USER_JAR,userJarInclusion.toString())@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "configuration.setString(CLASSPATH_INCLUDE_USER_JAR,YarnConfigOptions.UserJarInclusion.DISABLED.toString())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "getDefaultConfiguration['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "configuration.setString(AkkaOptions.ASK_TIMEOUT,\"30 s\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "createDefaultConfiguration['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Configuration configuration = new Configuration()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "YarnConfigOptions.UserJarInclusion userJarInclusion@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "configuration.set(TaskManagerOptions.TOTAL_PROCESS_MEMORY,MemorySize.parse(\"1g\"))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "createDefaultConfiguration['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "final Configuration configuration = new Configuration()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return configuration@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->7 [style = bold, label=""];
+7->6 [style = bold, label=""];
+5->6 [style = bold, label=""];
+8->5 [style = bold, label=""];
+3->1 [style = bold, label=""];
+9->10 [style = bold, label=""];
+5->1 [style = solid, label="configuration"];
+5->10 [style = dashed, label="0"];
+11->1 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+10->6 [style = bold, label=""];
+2->11 [style = bold, label=""];
+10->1 [style = solid, label="configuration"];
+0->4 [style = dotted, label="true"];
+8->4 [style = dotted, label="true"];
+2->3 [style = bold, label=""];
+0->5 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

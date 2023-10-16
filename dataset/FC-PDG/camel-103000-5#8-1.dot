@@ -1,0 +1,9 @@
+digraph {
+2 [style = filled, label = "createRouteBuilder['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "createRouteBuilder['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return new RouteBuilder(){public void configure(){DataFormat hl7 = new HL7DataFormat()from(\"netty4:tcp://127.0.0.1:\" + getPort() + \"?sync=true&decoder=#hl7decoder&encoder=#hl7encoder\").unmarshal(hl7).choice().when(header(\"CamelHL7TriggerEvent\").isEqualTo(\"A19\")).bean(\"hl7service\",\"handleA19\").to(\"mock:a19\").when(header(\"CamelHL7TriggerEvent\").isEqualTo(\"A01\")).to(\"mock:a01\").bean(\"hl7service\",\"handleA01\").to(\"mock:a19\").otherwise().to(\"mock:unknown\").end().marshal(hl7)}}@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "createRouteBuilder['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->0 [style = bold, label=""];
+3->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

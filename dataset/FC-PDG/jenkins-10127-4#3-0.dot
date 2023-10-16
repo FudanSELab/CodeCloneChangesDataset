@@ -1,0 +1,34 @@
+digraph {
+4 [style = filled, label = "final CLICommandInvoker.Result result = command.authorizedTo(Jenkins.READ,Job.READ,Item.BUILD).invokeWithArgs(\"aProject\")@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "j.createFreeStyleProject(\"aProject\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final CLICommandInvoker.Result result = command.authorizedTo(Jenkins.READ,Jenkins.ADMINISTER).invokeWithArgs(\"-timeout\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "quietDownShouldFailWithEmptyTimeout['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "consoleShouldFailWhenLastBuildDoesNotExist['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(result,failedWith(4))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final CLICommandInvoker.Result result = command.authorizedTo(Jenkins.READ,Item.READ,Item.BUILD).invokeWithArgs(\"aProject\")@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "consoleShouldFailWhenLastBuildDoesNotExist['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "assertThat(result,hasNoStandardOutput())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertThat(result,failedWith(2))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertThat(result.stderr(),containsString(\"ERROR: Option \"-timeout\" takes an operand\"))@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(result.stderr(),containsString(\"ERROR: Permalink lastBuild produced no build\"))@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+3->0 [style = bold, label=""];
+8->10 [style = bold, label=""];
+4->3 [style = solid, label="result"];
+7->5 [style = bold, label=""];
+8->11 [style = solid, label="result"];
+10->11 [style = bold, label=""];
+4->2 [style = bold, label=""];
+6->3 [style = solid, label="result"];
+5->6 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+4->6 [style = dashed, label="0"];
+11->3 [style = bold, label=""];
+9->8 [style = bold, label=""];
+8->10 [style = solid, label="result"];
+4->2 [style = solid, label="result"];
+6->2 [style = solid, label="result"];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

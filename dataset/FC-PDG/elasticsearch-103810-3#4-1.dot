@@ -1,0 +1,29 @@
+digraph {
+12 [style = filled, label = "final SystemIndices systemIndices = new SystemIndices(Map.of(\"test\",List.of(new SystemIndexDescriptor(\".test-(a-c(\",\"\"))))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(systemIndices.isSystemIndex(\".test-\"),equalTo(false))@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThat(systemIndices.isSystemIndex(\".test-aa\"),equalTo(false))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(systemIndices.isSystemIndex(\".test-a\"),equalTo(true))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(systemIndices.isSystemIndex(\".test-c\"),equalTo(true))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testPatternWithSimpleRange['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testPatternWithSimpleRange['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "assertThat(systemIndices.isSystemIndex(\".test-d\"),equalTo(false))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final SystemIndices systemIndices = new SystemIndices(Map.of(\"test\",new SystemIndices.Feature(\"test feature\",List.of(new SystemIndexDescriptor(\".test-(abc(\",\"\")))))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "assertThat(systemIndices.isSystemIndex(\".test-=\"),equalTo(false))@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final SystemIndices systemIndices = new SystemIndices(Map.of(\"test\",List.of(new SystemIndexDescriptor(\".test-(abc(\",\"\"))))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "testPatternWithComplexRange['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(systemIndices.isSystemIndex(\".test-b\"),equalTo(true))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+2->5 [style = bold, label=""];
+6->0 [style = bold, label=""];
+10->9 [style = bold, label=""];
+12->3 [style = bold, label=""];
+7->4 [style = bold, label=""];
+11->12 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+8->7 [style = bold, label=""];
+0->8 [style = bold, label=""];
+}

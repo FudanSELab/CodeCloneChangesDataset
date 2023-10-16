@@ -1,0 +1,33 @@
+digraph {
+2 [style = filled, label = "Result result = command.authorizedTo(Jenkins.READ,Computer.DISCONNECT).invokeWithArgs(slave.getNodeName(),\"-m\",\"Custom cause message\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "CLICommandInvoker command = new CLICommandInvoker(j,\"offline-node\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "UserCause cause = (UserCause)slave.toComputer().getOfflineCause()@@@9@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Slave slave = j.createOnlineSlave()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "offline['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertTrue(slave.toComputer().isOffline())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "disconnect['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "OfflineCause.UserCause cause = (OfflineCause.UserCause)slave.toComputer().getOfflineCause()@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "disconnect['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "assertThat(cause.toString(),endsWith(\"Custom cause message\"))@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(cause.getUser(),equalTo(command.user()))@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertTrue(slave.toComputer().isOnline())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(result,succeededSilently())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "CLICommandInvoker command = new CLICommandInvoker(j,\"disconnect-node\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+4->8 [style = bold, label=""];
+4->10 [style = bold, label=""];
+12->13 [style = bold, label=""];
+11->0 [style = bold, label=""];
+2->7 [style = bold, label=""];
+7->4 [style = bold, label=""];
+6->9 [style = bold, label=""];
+13->6 [style = bold, label=""];
+5->0 [style = bold, label=""];
+10->1 [style = bold, label=""];
+8->10 [style = dashed, label="0"];
+0->6 [style = bold, label=""];
+9->2 [style = bold, label=""];
+2->7 [style = solid, label="result"];
+0->13 [style = dashed, label="0"];
+}

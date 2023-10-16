@@ -1,0 +1,13 @@
+digraph {
+0 [style = filled, label = "testCountStarWithFilterOnCastedString['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testQuery(\"SELECT COUNT(*) FROM druid.foo WHERE dim1 like 'a%' OR dim2 like '%xb%' escape 'x'\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).filters(or(new LikeDimFilter(\"dim1\",\"a%\",null,null),new LikeDimFilter(\"dim2\",\"%xb%\",\"x\",null))).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9a66a1))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testCountStarWithLikeFilter['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testCountStarWithFilterOnCastedString['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "testQuery(\"SELECT COUNT(*) FROM druid.foo WHERE CAST(dim1 AS bigint) = 2\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).filters(numericSelector(\"dim1\",\"2\",null)).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9a665f))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "testQuery(\"SELECT COUNT(*) FROM druid.foo WHERE CAST(dim1 AS bigint) = 2\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).filters(numeric_Selector(\"dim1\",\"2\",null)).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9a6626))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1->4 [style = dashed, label="0"];
+1->3 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

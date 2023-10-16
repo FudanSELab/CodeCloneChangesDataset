@@ -1,0 +1,26 @@
+digraph {
+6 [style = filled, label = "assertThat(traces().getTraces(traceIds).execute()).containsOnly(asList(LOTS_OF_SPANS(0())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "getTraces_onlyReturnsTracesThatMatch['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "accept(LOTS_OF_SPANS(0(,LOTS_OF_SPANS(1()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(traces().getTraces(longTraceIds).execute()).isEmpty()@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "getTraces_onlyReturnsTracesThatMatch['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(traces().getTraces(traceIds).execute()).containsExactlyInAnyOrder(asList(LOTS_OF_SPANS(0(),asList(LOTS_OF_SPANS(1())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "List<String> traceIds = asList(LOTS_OF_SPANS(0(.traceId(),LOTS_OF_SPANS(1(.traceId())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "accept(LOTS_OF_SPANS(0(,LOTS_OF_SPANS(2()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "getTraces_returnsEmptyOnNotFound['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(traces().getTraces(traceIds).execute()).isEmpty()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "List<String> longTraceIds = traceIds.stream().map(null).collect(Collectors.toList())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->5 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+10->3 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->8 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+0->6 [style = bold, label=""];
+7->3 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

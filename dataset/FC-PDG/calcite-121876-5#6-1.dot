@@ -1,0 +1,31 @@
+digraph {
+11 [style = filled, label = "return (int)Lattice.getRowCount(lattice.getFactRowCount(),counts)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "counts.add(cache.get(column))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "List<Lattice.Column> columns@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "cardinality['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return (int)Lattice.getRowCount(lattice.getFactRowCount(),counts)@@@12@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "counts.add(cardinality(lattice,column))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "cardinality['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "UncheckedExecutionException|ExecutionException e@@@8@@@['1', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "cardinality['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "throw Util.throwAsRuntime(Util.causeOrSelf(e))@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "List<Lattice.Column> columns@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "final List<Double> counts = new ArrayList<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+3->10 [style = bold, label=""];
+4->1 [style = bold, label=""];
+6->2 [style = dotted, label="true"];
+0->5 [style = dotted, label="true"];
+3->1 [style = solid, label="counts"];
+7->8 [style = dotted, label="true"];
+3->11 [style = solid, label="counts"];
+3->4 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+9->2 [style = dotted, label="true"];
+7->3 [style = bold, label=""];
+5->4 [style = bold, label=""];
+0->5 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

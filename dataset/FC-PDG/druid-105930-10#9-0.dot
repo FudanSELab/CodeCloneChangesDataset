@@ -1,0 +1,31 @@
+digraph {
+6 [style = filled, label = "QueryRunner runner = new FinalizeResultsQueryRunner(factory.createRunner(segment),factory.getToolchest())@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testSpatialQueryMorePoints['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "TestHelper.assertExpectedResults(expectedResults,runner.run(QueryPlus.wrap(query),new HashMap<>()))@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testSpatialQueryMorePoints['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "HashMap<String,Object> context = new HashMap<String,Object>()@@@12@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "TestHelper.assertExpectedResults(expectedResults,runner.run(QueryPlus.wrap(query),context))@@@13@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "TimeseriesQuery query = Druids.newTimeseriesQueryBuilder().dataSource(\"test\").granularity(Granularities.DAY).intervals(Collections.singletonList(Intervals.of(\"2013-01-01/2013-01-07\"))).filters(new SpatialDimFilter(\"dim.geo\",new RectangularBound(new float((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a88b6b,new float((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a88b70))).aggregators(Arrays.asList(new CountAggregatorFactory(\"rows\"),new LongSumAggregatorFactory(\"val\",\"val\"))).build()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "TimeseriesQueryRunnerFactory factory = new TimeseriesQueryRunnerFactory(new TimeseriesQueryQueryToolChest(QueryRunnerTestHelper.noopIntervalChunkingQueryRunnerDecorator()),new TimeseriesQueryEngine(),QueryRunnerTestHelper.NOOP_QUERYWATCHER)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testSpatialQueryMorePoints['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "TestHelper.assertExpectedResults(expectedResults,runner.run(QueryPlus.wrap(query)))@@@12@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "List<Result<TimeseriesResultValue>> expectedResults = Arrays.asList(new Result<TimeseriesResultValue>(DateTimes.of(\"2013-01-01T00:00:00.000Z\"),new TimeseriesResultValue(ImmutableMap.builder().put(\"rows\",1L).put(\"val\",17L).build())),new Result<TimeseriesResultValue>(DateTimes.of(\"2013-01-02T00:00:00.000Z\"),new TimeseriesResultValue(ImmutableMap.builder().put(\"rows\",1L).put(\"val\",29L).build())),new Result<TimeseriesResultValue>(DateTimes.of(\"2013-01-03T00:00:00.000Z\"),new TimeseriesResultValue(ImmutableMap.builder().put(\"rows\",1L).put(\"val\",13L).build())),new Result<TimeseriesResultValue>(DateTimes.of(\"2013-01-04T00:00:00.000Z\"),new TimeseriesResultValue(ImmutableMap.builder().put(\"rows\",1L).put(\"val\",91L).build())),new Result<TimeseriesResultValue>(DateTimes.of(\"2013-01-05T00:00:00.000Z\"),new TimeseriesResultValue(ImmutableMap.builder().put(\"rows\",1L).put(\"val\",47L).build())))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+1->8 [style = solid, label="expectedResults"];
+6->3 [style = bold, label=""];
+3->0 [style = solid, label="context"];
+3->10 [style = dashed, label="0"];
+4->2 [style = bold, label=""];
+1->0 [style = solid, label="expectedResults"];
+5->6 [style = bold, label=""];
+2->10 [style = solid, label="query"];
+2->8 [style = solid, label="query"];
+9->2 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->0 [style = solid, label="query"];
+2->1 [style = bold, label=""];
+6->10 [style = bold, label=""];
+1->10 [style = solid, label="expectedResults"];
+3->0 [style = bold, label=""];
+6->8 [style = bold, label=""];
+}

@@ -1,0 +1,38 @@
+digraph {
+10 [style = filled, label = "assertTrue(ranTestCase.get(),\"Didn't find the expected node\")@@@33@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "BinaryOutputArchive oa = new BinaryOutputArchive(out){@Override public void writeRecord(Record r,String tag){if (r instanceof DataNode) {DataNode node = (DataNode)rif (node.data.length == 1 && node.data(0( == 42) {final Semaphore semaphore = new Semaphore(0)new Thread(new Runnable(){@Override public void run(){synchronized (markerNode) {semaphore.release()}}}).start()try {boolean acquired = semaphore.tryAcquire(30,TimeUnit.SECONDS)assertTrue(\"Couldn't acquire a lock on the DataNode while we were calling tree.serialize\",acquired)}catch (InterruptedException e1) ranTestCase.set(true)}}super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@3aebc0rtag}}@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testSerializeDoesntLockACLCacheWhileWriting['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testSerializeDoesntLockDataNodeWhileWriting['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertTrue(\"Didn't find the expected node\",ranTestCase.get())@@@33@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "tree.createNode(\"/marker\",new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@3aeab7,null,-1,1,1,1)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "tree.serialize(oa,\"test\")@@@32@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "tree.serialize(oa,\"test\")@@@38@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertTrue(\"Didn't find the expected node\",ranTestCase.get())@@@39@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "final DataNode markerNode = tree.getNode(\"/marker\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "tree.createNode(\"/marker\",new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@3aeb38,null,-1,1,1,1)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final AtomicBoolean ranTestCase = new AtomicBoolean()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "DataTree tree = new DataTree()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testSerializeDoesntLockACLCacheWhileWriting['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "DataOutputStream out = new DataOutputStream(new ByteArrayOutputStream())@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+4->10 [style = bold, label=""];
+5->8 [style = bold, label=""];
+7->1 [style = bold, label=""];
+4->6 [style = bold, label=""];
+1->0 [style = bold, label=""];
+8->7 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+11->5 [style = bold, label=""];
+0->14 [style = bold, label=""];
+1->0 [style = solid, label="out"];
+0->14 [style = solid, label="oa"];
+3->7 [style = bold, label=""];
+0->4 [style = bold, label=""];
+13->7 [style = bold, label=""];
+14->12 [style = bold, label=""];
+0->4 [style = solid, label="oa"];
+9->5 [style = bold, label=""];
+3->13 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+2->5 [style = bold, label=""];
+}

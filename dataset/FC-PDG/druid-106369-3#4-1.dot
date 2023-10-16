@@ -1,0 +1,23 @@
+digraph {
+4 [style = filled, label = "TopNQuery query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).dimension(new ExtractionDimensionSpec(QueryRunnerTestHelper.marketDimension,QueryRunnerTestHelper.marketDimension,new LookupExtractionFn(new MapLookupExtractor(ImmutableMap.of(\"spot\",\"2spot0\",\"total_market\",\"1total_market0\",\"upfront\",\"3upfront0\"),false),false,\"MISSING\",true,false))).metric(\"rows\").threshold(4).intervals(QueryRunnerTestHelper.firstToThird).aggregators(commonAggregators).postAggregators(QueryRunnerTestHelper.addRowsIndexConstant).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "TopNQuery query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).dimension(new ExtractionDimensionSpec(QueryRunnerTestHelper.marketDimension,QueryRunnerTestHelper.marketDimension,new LookupExtractionFn(new MapLookupExtractor(ImmutableMap.of(\"spot\",\"2spot0\",\"total_market\",\"1total_market0\",\"upfront\",\"3upfront0\"),false),false,\"MISSING\",false,false))).metric(\"rows\").threshold(4).intervals(QueryRunnerTestHelper.firstToThird).aggregators(commonAggregators).postAggregators(Collections.singletonList(QueryRunnerTestHelper.addRowsIndexConstant)).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testTopNDimExtractionFastTopNOptimalWithReplaceMissing['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "List<Result<TopNResultValue>> expectedResults = Collections.singletonList(new Result<>(DateTimes.of(\"2011-04-01T00:00:00.000Z\"),new TopNResultValue(Arrays.asList(ImmutableMap.of(QueryRunnerTestHelper.marketDimension,\"2spot0\",\"rows\",18L,\"index\",2231.876812D,\"addRowsIndexConstant\",2250.876812D,\"uniques\",QueryRunnerTestHelper.UNIQUES_9),ImmutableMap.of(QueryRunnerTestHelper.marketDimension,\"1total_market0\",\"rows\",4L,\"index\",5351.814783D,\"addRowsIndexConstant\",5356.814783D,\"uniques\",QueryRunnerTestHelper.UNIQUES_2),ImmutableMap.of(QueryRunnerTestHelper.marketDimension,\"3upfront0\",\"rows\",4L,\"index\",4875.669692D,\"addRowsIndexConstant\",4880.669692D,\"uniques\",QueryRunnerTestHelper.UNIQUES_2)))))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "TopNQuery query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).dimension(new ExtractionDimensionSpec(QueryRunnerTestHelper.marketDimension,QueryRunnerTestHelper.marketDimension,new LookupExtractionFn(new MapLookupExtractor(ImmutableMap.of(\"spot\",\"2spot0\",\"total_market\",\"1total_market0\",\"upfront\",\"3upfront0\"),false),false,\"MISSING\",true,false))).metric(\"rows\").threshold(4).intervals(QueryRunnerTestHelper.firstToThird).aggregators(commonAggregators).postAggregators(Collections.singletonList(QueryRunnerTestHelper.addRowsIndexConstant)).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "testTopNDimExtractionFastTopNOptimalWithReplaceMissing['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertExpectedResults(expectedResults,query)@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testTopNDimExtractionFastTopNUnOptimalWithReplaceMissing['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+1->4 [style = dashed, label="0"];
+6->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+6->2 [style = solid, label="query"];
+3->2 [style = bold, label=""];
+3->2 [style = solid, label="expectedResults"];
+4->2 [style = solid, label="query"];
+1->6 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+1->2 [style = solid, label="query"];
+5->4 [style = bold, label=""];
+7->6 [style = bold, label=""];
+}

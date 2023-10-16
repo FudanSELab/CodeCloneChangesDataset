@@ -1,0 +1,32 @@
+digraph {
+11 [style = filled, label = "assertThat(this.mongoTemplate.collectionExists(\"exampleDocuments\")).isTrue()@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(this.mongoTemplate.collectionExists(\"exampleDocuments\").block()).isTrue()@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "exampleDocument = this.exampleRepository.save(exampleDocument).block(Duration.ofSeconds(30))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "testRepository['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "exampleDocument = this.exampleRepository.save(exampleDocument)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "exampleDocument = this.exampleRepository.save(exampleDocument).block()@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "testRepository['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThat(this.mongoTemplate.collectionExists(\"exampleDocuments\").block(Duration.ofSeconds(30))).isTrue()@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "assertThat(exampleDocument.getId()).isNotNull()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "ExampleDocument exampleDocument = new ExampleDocument()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "exampleDocument.setText(\"Look, new @DataMongoTest!\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testRepository['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9->5 [style = bold, label=""];
+4->8 [style = bold, label=""];
+5->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+2->11 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+7->5 [style = bold, label=""];
+1->6 [style = bold, label=""];
+1->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+4->11 [style = bold, label=""];
+1->10 [style = bold, label=""];
+0->4 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+0->10 [style = dashed, label="0"];
+5->10 [style = solid, label="exampleDocument"];
+0->6 [style = dashed, label="0"];
+10->4 [style = bold, label=""];
+}

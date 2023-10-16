@@ -1,0 +1,32 @@
+digraph {
+12 [style = filled, label = "sql(sql).with(hepPlanner).checkUnchanged()@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testReduceNestedCaseWhen['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "sql(sql).with(hepPlanner).check()@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "final String sql = \"SELECT deptno, ename, CASE WHEN 1=2 \" + \"THEN substring(ename, 1, cast(2 as int)) ELSE NULL end from emp\" + \" group by deptno, ename, case when 1=2 then substring(ename,1, cast(2 as int)) else null end\"@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final String sql = \"select sal\" + \"from emp\" + \"where case when (sal = 1000) then\" + \"(case when sal = 1000 then null else 1 end is null) else\" + \"(case when sal = 2000 then null else 1 end is null) end is true\"@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "hepPlanner.addRule(CoreRules.PROJECT_REDUCE_EXPRESSIONS)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "hepPlanner.addRule(CoreRules.FILTER_REDUCE_EXPRESSIONS)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "HepProgramBuilder builder = new HepProgramBuilder()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "HepProgram preProgram = new HepProgramBuilder().build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "sql(sql).withPre(preProgram).with(hepPlanner).check()@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "builder.addRuleClass()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testReduceNestedCaseWhen['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "HepPlanner hepPlanner = new HepPlanner(builder.build())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testReduceNullableCase2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9->5 [style = bold, label=""];
+7->6 [style = dashed, label="0"];
+1->12 [style = dashed, label="0"];
+1->8 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+13->12 [style = bold, label=""];
+10->5 [style = bold, label=""];
+6->7 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->4 [style = bold, label=""];
+11->10 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->6 [style = bold, label=""];
+3->8 [style = bold, label=""];
+6->13 [style = bold, label=""];
+7->3 [style = bold, label=""];
+}

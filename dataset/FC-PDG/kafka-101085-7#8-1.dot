@@ -1,0 +1,29 @@
+digraph {
+9 [style = filled, label = "EasyMock.expect(supplier.get()).andReturn(inner)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "expect(supplier.get()).andReturn(inner)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "expect(supplier.metricsScope()).andReturn(\"metricScope\")@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "builder = new KeyValueStoreBuilder<>(supplier,Serdes.String(),Serdes.String(),new MockTime())@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "setUp['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "setUp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "EasyMock.replay(supplier)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "EasyMock.expect(supplier.name()).andReturn(\"name\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "builder = new WindowStoreBuilder<>(supplier,Serdes.String(),Serdes.String(),new MockTime())@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "replay(supplier)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "expect(supplier.name()).andReturn(\"name\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "setUp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->11 [style = dashed, label="0"];
+6->4 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+9->11 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+11->10 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+10->7 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+2->5 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

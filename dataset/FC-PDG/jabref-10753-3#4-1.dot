@@ -1,0 +1,23 @@
+digraph {
+4 [style = filled, label = "assertEquals(Collections.singletonList(expected),importer.importAnnotations(Path.of(\"src/test/resources/pdfs/minimal-strikeout.pdf\")))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "strikeoutWithNoteMinimal['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "strikeoutWithNoteMinimal['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final FileAnnotation expected = new FileAnnotation(\"Linus Dietz\",LocalDateTime.of(2017,3,16,9,21,1),1,\"polygon annotation\",FileAnnotationType.POLYGON,Optional.empty())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final FileAnnotation expectedLinkedAnnotation = new FileAnnotation(\"lynyus\",LocalDateTime.of(2017,6,1,13,2,3),1,\"striked out\",FileAnnotationType.STRIKEOUT,Optional.empty())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(Collections.singletonList(expected),importer.importAnnotations(Paths.get(\"src/test/resources/pdfs/minimal-polygon.pdf\")))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final FileAnnotation expected = new FileAnnotation(\"lynyus\",LocalDateTime.of(2017,6,1,13,2,3),1,\"World\",FileAnnotationType.STRIKEOUT,Optional.of(expectedLinkedAnnotation))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(Collections.singletonList(expected),importer.importAnnotations(Paths.get(\"src/test/resources/pdfs/minimal-strikeout.pdf\")))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "polygonNoNoteMinimal['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8->7 [style = bold, label=""];
+2->1 [style = solid, label="expectedLinkedAnnotation"];
+1->4 [style = bold, label=""];
+5->2 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+7->6 [style = solid, label="expected"];
+3->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+1->4 [style = solid, label="expected"];
+7->6 [style = bold, label=""];
+1->0 [style = solid, label="expected"];
+}

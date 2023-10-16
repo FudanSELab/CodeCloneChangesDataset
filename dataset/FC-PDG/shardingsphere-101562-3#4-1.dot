@@ -1,0 +1,38 @@
+digraph {
+6 [style = filled, label = "final PredicateContext ctx@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "boolean not = null != ctx.NOT()? true: false@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "boolean not = null != ctx.NOT()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "ExpressionSegment left = (ExpressionSegment)visit(ctx.bitExpr(0))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "return result@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ExpressionSegment and = (ExpressionSegment)visit(ctx.predicate())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "createBetweenSegment['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "createBetweenSegment['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "createBetweenSegment['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "BetweenExpression result = new BetweenExpression(ctx.start.getStartIndex(),ctx.stop.getStopIndex(),left,between,and,not)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "return new BetweenExpression(ctx.start.getStartIndex(),ctx.stop.getStopIndex(),left,between,and,not)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "ExpressionSegment between = (ExpressionSegment)visit(ctx.bitExpr(1))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->3 [style = bold, label=""];
+8->10 [style = bold, label=""];
+3->1 [style = bold, label=""];
+9->2 [style = bold, label=""];
+5->6 [style = dotted, label="true"];
+1->0 [style = solid, label="result"];
+1->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+2->10 [style = solid, label="left"];
+9->6 [style = dotted, label="true"];
+11->2 [style = bold, label=""];
+4->1 [style = solid, label="and"];
+5->2 [style = bold, label=""];
+7->10 [style = solid, label="between"];
+11->6 [style = dotted, label="true"];
+4->10 [style = solid, label="and"];
+2->1 [style = solid, label="left"];
+3->8 [style = dashed, label="0"];
+4->8 [style = bold, label=""];
+3->1 [style = solid, label="not"];
+2->7 [style = bold, label=""];
+7->1 [style = solid, label="between"];
+8->10 [style = solid, label="not"];
+}

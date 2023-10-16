@@ -1,0 +1,30 @@
+digraph {
+2 [style = filled, label = "factory.setSsl(getSsl(null,\"password\",\"src/test/resources/test.jks\"))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(response.getHeaders().get(\"Server\")).containsExactly(\"MyServer\")@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "serverHeaderIsDisabledByDefaultWhenUsingSsl['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "SSLConnectionSocketFactory socketFactory = new SSLConnectionSocketFactory(new SSLContextBuilder().loadTrustMaterial(null,new TrustSelfSignedStrategy()).build())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "this.webServer.start()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "AbstractServletWebServerFactory factory = getFactory()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "serverHeaderIsDisabledByDefaultWhenUsingSsl['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "serverHeaderCanBeCustomizedWhenUsingSsl['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "HttpClient httpClient = HttpClients.custom().setSSLSocketFactory(socketFactory).build()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ClientHttpResponse response = getClientResponse(getLocalUrl(\"https\",\"/hello\"),HttpMethod.GET,new HttpComponentsClientHttpRequestFactory(httpClient))@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(response.getHeaders().get(\"Server\")).isNullOrEmpty()@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "this.webServer = factory.getWebServer(new ServletRegistrationBean<>(new ExampleServlet(true,false),\"/hello\"))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "factory.setServerHeader(\"MyServer\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12->2 [style = bold, label=""];
+7->5 [style = bold, label=""];
+6->0 [style = bold, label=""];
+7->11 [style = bold, label=""];
+1->8 [style = bold, label=""];
+9->0 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+4->7 [style = solid, label="httpClient"];
+4->7 [style = bold, label=""];
+10->0 [style = bold, label=""];
+0->12 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

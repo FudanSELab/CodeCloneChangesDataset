@@ -1,0 +1,27 @@
+digraph {
+7 [style = filled, label = "testMergeResults['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "TimeBoundaryQuery query = new TimeBoundaryQuery(new TableDataSource(\"test\"),null,null,null,null)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Iterable<Result<TimeBoundaryResultValue>> actual = query.mergeResults(results)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testMergeResultsEmptyResults['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "List<Result<TimeBoundaryResultValue>> results = Arrays.asList(new Result<>(DateTimes.nowUtc(),new TimeBoundaryResultValue(ImmutableMap.of(\"maxTime\",\"2012-01-01\",\"minTime\",\"2011-01-01\"))),new Result<>(DateTimes.nowUtc(),new TimeBoundaryResultValue(ImmutableMap.of(\"maxTime\",\"2012-02-01\",\"minTime\",\"2011-01-01\"))))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "Assert.assertTrue(actual.iterator().next().getValue().getMaxTime().equals(DateTimes.of(\"2012-02-01\")))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "List<Result<TimeBoundaryResultValue>> results = Lists.newArrayList()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "List<Result<TimeBoundaryResultValue>> results = new ArrayList<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "Assert.assertFalse(actual.iterator().hasNext())@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testMergeResultsEmptyResults['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8->1 [style = bold, label=""];
+6->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+4->9 [style = bold, label=""];
+1->4 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+8->4 [style = solid, label="results"];
+5->6 [style = bold, label=""];
+0->4 [style = solid, label="results"];
+3->9 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+0->1 [style = bold, label=""];
+6->4 [style = solid, label="results"];
+}

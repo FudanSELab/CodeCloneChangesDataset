@@ -1,0 +1,26 @@
+digraph {
+0 [style = filled, label = "testFindWorkerForTaskWithNulls['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Assert.assertNull(worker)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "EqualDistributionWorkerSelectStrategy strategy = new EqualDistributionWithAffinityWorkerSelectStrategy(new AffinityConfig(ImmutableMap.of(\"foo\",ImmutableSet.of(\"localhost\")),false))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testIsolation['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ImmutableWorkerInfo worker = strategy.findWorkerForTask(new RemoteTaskRunnerConfig(),ImmutableMap.of(\"lhost\",new ImmutableWorkerInfo(new Worker(\"http\",\"lhost\",\"lhost\",1,\"v1\"),0,new HashSet<>(),new HashSet<>(),DateTimes.nowUtc()),\"localhost\",new ImmutableWorkerInfo(new Worker(\"http\",\"localhost\",\"localhost\",1,\"v1\"),0,new HashSet<>(),new HashSet<>(),DateTimes.nowUtc())),new NoopTask(null,null,null,1,0,null,null,null))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "testFindWorkerForTaskWithNulls['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "ImmutableWorkerInfo worker = strategy.findWorkerForTask(new RemoteTaskRunnerConfig(),ImmutableMap.of(\"lhost\",new ImmutableWorkerInfo(new Worker(\"http\",\"lhost\",\"lhost\",1,\"v1\",WorkerConfig.DEFAULT_CATEGORY),0,new HashSet<>(),new HashSet<>(),DateTimes.nowUtc()),\"localhost\",new ImmutableWorkerInfo(new Worker(\"http\",\"localhost\",\"localhost\",1,\"v1\",WorkerConfig.DEFAULT_CATEGORY),0,new HashSet<>(),new HashSet<>(),DateTimes.nowUtc())),new NoopTask(null,null,null,1,0,null,null,null))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "ImmutableWorkerInfo worker = strategy.findWorkerForTask(new RemoteTaskRunnerConfig(),ImmutableMap.of(\"localhost\",new ImmutableWorkerInfo(new Worker(\"http\",\"localhost\",\"localhost\",1,\"v1\"),0,new HashSet<>(),new HashSet<>(),DateTimes.nowUtc())),new NoopTask(null,null,null,1,0,null,null,null))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Assert.assertEquals(\"lhost\",worker.getWorker().getHost())@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "FillCapacityWorkerSelectStrategy strategy = new FillCapacityWithAffinityWorkerSelectStrategy(new AffinityConfig(ImmutableMap.of(\"foo\",ImmutableSet.of(\"localhost\")),false))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+2->5 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+8->6 [style = bold, label=""];
+6->7 [style = solid, label="worker"];
+6->7 [style = bold, label=""];
+9->8 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

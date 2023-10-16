@@ -1,0 +1,11 @@
+digraph {
+0 [style = filled, label = "testTableModifyInsertWithSubQuery['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final AssertThat that = CalciteAssert.model(JdbcTest.FOODMART_MODEL).enable(CalciteAssert.DB == DatabaseInstance.HSQLDB)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testTableModifyInsertWithSubQuery['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "that.doWithConnection(new Function<CalciteConnection,Void>(){public Void apply(CalciteConnection connection){try {tableModifyTestDbInitializer(connection.createStatement())final String sql = \"DELETE FROM \"foodmart\".\"expense_fact\"\" + \"WHERE \"store_id\"=666\"final String explain = \"PLAN=JdbcToEnumerableConverter\" + \" JdbcTableModify(table=((foodmart, expense_fact((, operation=(DELETE(, flattened=(false()\" + \" JdbcFilter(condition=(=($0, 666)()\" + \" JdbcTableScan(table=((foodmart, expense_fact((\"final String jdbcSql = \"DELETE FROM \"foodmart\".\"expense_fact\"\" + \"WHERE \"store_id\" = 666\"that.query(sql).explainContains(explain).planUpdateHasSql(jdbcSql,1)return null}catch (SQLException e) }})@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testTableModifyDelete['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4->2 [style = bold, label=""];
+0->2 [style = bold, label=""];
+3->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+}

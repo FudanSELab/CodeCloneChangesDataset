@@ -1,0 +1,27 @@
+digraph {
+3 [style = filled, label = "StepVerifier.create(this.interceptor.preHandle(request,\"/a\")).consumeNextWith(null).verifyComplete()@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "BDDMockito.given(this.tokenValidator.validate(any())).willReturn(Mono.empty())@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "MockServerWebExchange request = MockServerWebExchange.from(MockServerHttpRequest.get(\"/a\").header(HttpHeaders.AUTHORIZATION,mockAccessToken()).build())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "StepVerifier.create(this.interceptor.preHandle(request,\"/a\")).consumeNextWith(null).verifyComplete()@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "preHandleWhenAccessIsNotAllowedShouldReturnAccessDenied['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "preHandleWhenTokenIsNotBearerShouldReturnMissingAuthorization['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "preHandleWhenAccessIsNotAllowedShouldReturnAccessDenied['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "BDDMockito.given(this.securityService.getAccessLevel(mockAccessToken(),\"my-app-id\")).willReturn(Mono.just(AccessLevel.RESTRICTED))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "MockServerWebExchange request = MockServerWebExchange.from(MockServerHttpRequest.get(\"/a\").header(HttpHeaders.AUTHORIZATION,\"bearer \" + mockAccessToken()).build())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "given(this.tokenValidator.validate(any())).willReturn(Mono.empty())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "StepVerifier.create(this.interceptor.preHandle(request,\"/a\")).consumeNextWith(null).verifyComplete()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "given(this.securityService.getAccessLevel(mockAccessToken(),\"my-app-id\")).willReturn(Mono.just(AccessLevel.RESTRICTED))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1->3 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+5->7 [style = bold, label=""];
+6->5 [style = bold, label=""];
+7->1 [style = bold, label=""];
+1->8 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+2->7 [style = dashed, label="0"];
+11->9 [style = bold, label=""];
+2->1 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

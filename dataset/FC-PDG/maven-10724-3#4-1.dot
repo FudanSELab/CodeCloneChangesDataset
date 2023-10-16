@@ -1,0 +1,25 @@
+digraph {
+5 [style = filled, label = "final Key<T> key@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "scope['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final Key<T> key@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final Provider<T> unscoped@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "return new Provider<T>(){@SuppressWarnings(\"unchecked\") public T get(){LinkedList<ScopeState> stack = values.get()if (stack == null || stack.isEmpty()) {throw new OutOfScopeException(\"Cannot access \" + key + \" outside of a scoping block\")}ScopeState state = stack.getFirst()Provider<?> seeded = state.seeded.get(key)if (seeded != null) {return (T)seeded.get()}T provided = (T)state.provided.get(key)if (provided == null && unscoped != null) {provided = unscoped.get()state.provided.put(key,provided)}return provided}}@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return null@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "scope['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "scope['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final Provider<T> unscoped@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2->3 [style = dotted, label="true"];
+8->0 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+6->4 [style = bold, label=""];
+1->0 [style = solid, label="unscoped"];
+6->5 [style = dotted, label="true"];
+2->0 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+3->0 [style = solid, label="key"];
+6->3 [style = dotted, label="true"];
+2->1 [style = dotted, label="true"];
+7->0 [style = solid, label="key"];
+8->3 [style = dotted, label="true"];
+3->0 [style = solid, label="unscoped"];
+}

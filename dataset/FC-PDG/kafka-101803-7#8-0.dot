@@ -1,0 +1,38 @@
+digraph {
+10 [style = filled, label = "assertFalse(builder.internalTopologyBuilder.earliestResetTopicsPattern().matcher(topicTwo).matches())@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "shouldAddRegexTopicToLatestAutoOffsetResetList['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "builder.stream(topicPattern,new ConsumedInternal<>(Consumed.with(AutoOffsetReset.EARLIEST)))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "builder.stream(topicPattern,new ConsumedInternal<>(Consumed.with(AutoOffsetReset.LATEST)))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "shouldAddRegexTopicToEarliestAutoOffsetResetList['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "final String topicTwo = \"topic-1000000\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "builder.buildAndOptimizeTopology()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertFalse(builder.internalTopologyBuilder.latestResetTopicsPattern().matcher(topicTwo).matches())@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "shouldAddRegexTopicToEarliestAutoOffsetResetList['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final Pattern topicPattern = Pattern.compile(\"topic-\d+\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(builder.internalTopologyBuilder.offsetResetStrategy(topicTwo),equalTo(OffsetResetStrategy.EARLIEST))@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "assertTrue(builder.internalTopologyBuilder.earliestResetTopicsPattern().matcher(topicTwo).matches())@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "assertTrue(builder.internalTopologyBuilder.latestResetTopicsPattern().matcher(topicTwo).matches())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final String topicTwo = \"topic-500000\"@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+4->9 [style = bold, label=""];
+1->4 [style = bold, label=""];
+0->6 [style = bold, label=""];
+0->7 [style = solid, label="topicTwo"];
+4->12 [style = solid, label="topicPattern"];
+4->0 [style = bold, label=""];
+6->12 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+12->2 [style = bold, label=""];
+4->6 [style = solid, label="topicPattern"];
+5->11 [style = dashed, label="0"];
+11->10 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+9->12 [style = bold, label=""];
+2->7 [style = bold, label=""];
+8->4 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+0->9 [style = dashed, label="0"];
+2->11 [style = bold, label=""];
+2->5 [style = bold, label=""];
+13->4 [style = bold, label=""];
+}

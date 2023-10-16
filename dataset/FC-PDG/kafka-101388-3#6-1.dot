@@ -1,0 +1,27 @@
+digraph {
+4 [style = filled, label = "setup['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "windowedCogroupedStream = cogroupedStream.windowedBy(TimeWindows.of(ofMillis(500L)))@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "cogroupedStream = groupedStream.cogroup(MockAggregator.TOSTRING_ADDER).cogroup(groupedStream2,MockAggregator.TOSTRING_REMOVER)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final KStream<String,String> stream2 = builder.stream(TOPIC2,Consumed.with(Serdes.String(),Serdes.String()))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "groupedStream2 = stream2.groupByKey(Grouped.with(Serdes.String(),Serdes.String()))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "windowedCogroupedStream = cogroupedStream.windowedBy(SlidingWindows.withTimeDifferenceAndGrace(ofMillis(500L),ofMillis(2000L)))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "groupedStream = stream.groupByKey(Grouped.with(Serdes.String(),Serdes.String()))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "windowedCogroupedStream = cogroupedStream.windowedBy(TimeWindows.of(ofMillis(WINDOW_SIZE)))@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "setup['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final KStream<String,String> stream = builder.stream(TOPIC,Consumed.with(Serdes.String(),Serdes.String()))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "setup['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->0 [style = solid, label="stream"];
+6->3 [style = bold, label=""];
+1->6 [style = bold, label=""];
+10->5 [style = bold, label=""];
+6->9 [style = bold, label=""];
+6->7 [style = bold, label=""];
+5->0 [style = bold, label=""];
+8->5 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+3->7 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+2->1 [style = bold, label=""];
+1->6 [style = solid, label="groupedStream2"];
+0->2 [style = bold, label=""];
+}

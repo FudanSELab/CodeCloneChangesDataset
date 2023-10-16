@@ -1,0 +1,11 @@
+digraph {
+2 [style = filled, label = "getParser['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "return new Parser<ComplexNumberJpa>(){@Override public ComplexNumberJpa parseTextRepresentation(final Parser.Context context,final String entry){return ComplexNumberJpa.parse(entry).orElse(null)}@Override public int typicalLength(){return 30}@Override public String presentationValue(final Parser.Context context,final ComplexNumberJpa object){return object != null? object.title(): \"NaN\"}@Override public String parseableTextRepresentation(final Parser.Context context,final ComplexNumberJpa existing){return presentationValue(context,existing)}}@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return new Parser<ComplexNumberJdo>(){@Override public ComplexNumberJdo parseTextRepresentation(final ValueSemanticsProvider.Context context,final String entry){return ComplexNumberJdo.parse(entry).orElse(null)}@Override public int typicalLength(){return 30}@Override public String parseableTextRepresentation(final ValueSemanticsProvider.Context context,final ComplexNumberJdo existing){return existing != null? existing.title(): null}}@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "getParser['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "getParser['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->0 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+4->3 [style = bold, label=""];
+}

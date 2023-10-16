@@ -1,0 +1,36 @@
+digraph {
+9 [style = filled, label = "doSetProperty(\"bridgeErrorHandler\",bridgeErrorHandler)@@@22@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "boolean basicPropertyBinding@@@13@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "boolean bridgeErrorHandler@@@21@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "doSetProperty(\"basicPropertyBinding\",basicPropertyBinding)@@@14@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "bridgeErrorHandler['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "boolean bridgeErrorHandler@@@13@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "return this@@@15@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "basicPropertyBinding['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "bridgeErrorHandler['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "doSetProperty(\"bridgeErrorHandler\",bridgeErrorHandler)@@@14@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "return this@@@23@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7->9 [style = solid, label="useGlobalSslContextParameters"];
+6->4 [style = solid, label="lazyStartProducer"];
+2->3 [style = bold, label=""];
+5->6 [style = dotted, label="true"];
+1->3 [style = solid, label="basicPropertyBinding"];
+9->8 [style = bold, label=""];
+3->4 [style = dashed, label="0"];
+7->9 [style = solid, label="lazyStartProducer"];
+3->0 [style = bold, label=""];
+4->0 [style = bold, label=""];
+7->9 [style = solid, label="bridgeErrorHandler"];
+1->3 [style = solid, label="lazyStartProducer"];
+2->1 [style = dotted, label="true"];
+6->4 [style = solid, label="basicPropertyBinding"];
+1->6 [style = dashed, label="0"];
+7->9 [style = solid, label="basicPropertyBinding"];
+1->3 [style = solid, label="bridgeErrorHandler"];
+5->4 [style = bold, label=""];
+6->4 [style = solid, label="bridgeErrorHandler"];
+10->9 [style = bold, label=""];
+7->9 [style = solid, label="configuration"];
+1->7 [style = dashed, label="0"];
+10->7 [style = dotted, label="true"];
+}

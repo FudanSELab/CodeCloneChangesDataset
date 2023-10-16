@@ -1,0 +1,36 @@
+digraph {
+3 [style = filled, label = "reset.currentBlock().add(Expressions.statement(Expressions.assign(acc.get(1),Expressions.new_(afi.declaringClass))))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "List<Expression> acc = reset.accumulator()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "reset.currentBlock().add(Expressions.statement(Expressions.assign(acc.get(1),getDefaultValue(acc.get(1).getType()))))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "implementNotNullReset['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "AggResetContext reset@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "AggResetContext reset@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "implementNotNullReset['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "AggContext info@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "!afi.isStatic@@@4@@@['1', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "AggResetContext reset@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "reset.currentBlock().add(Expressions.statement(Expressions.assign(acc.get(0),Expressions.constant(false))))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "AggContext info@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "implementReset['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "AggContext info@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "reset.currentBlock().add(Expressions.statement(Expressions.assign(acc.get(0),Expressions.call(afi.isStatic? null: acc.get(1),afi.initMethod))))@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->1 [style = bold, label=""];
+6->3 [style = bold, label=""];
+12->13 [style = bold, label=""];
+4->5 [style = dotted, label="true"];
+14->2 [style = bold, label=""];
+14->11 [style = dotted, label="true"];
+5->9 [style = dashed, label="0"];
+4->2 [style = bold, label=""];
+7->9 [style = dotted, label="true"];
+6->3 [style = dotted, label="true"];
+3->1 [style = bold, label=""];
+7->8 [style = dotted, label="true"];
+5->11 [style = dashed, label="0"];
+3->13 [style = dashed, label="0"];
+7->2 [style = bold, label=""];
+2->6 [style = bold, label=""];
+14->10 [style = dotted, label="true"];
+2->12 [style = bold, label=""];
+4->0 [style = dotted, label="true"];
+}

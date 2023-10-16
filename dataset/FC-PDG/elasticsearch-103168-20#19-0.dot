@@ -1,0 +1,36 @@
+digraph {
+8 [style = filled, label = "testIndexOptions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "assertThat(e.getMessage(),containsString(\"The (\" + FIELD_TYPE + \"( field does not support positions, got (index_options(=\" + indexOptions))@@@10@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "MapperParsingException e = expectThrows(,null)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertEquals(IndexOptions.DOCS_AND_FREQS,fields(0(.fieldType().indexOptions())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "DocumentMapper mapper = createDocumentMapper(fieldMapping(null))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "IndexableField(( fields = doc.rootDoc().getFields(\"field\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ParsedDocument doc = mapper.parse(source(null))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "assertThat(e.getMessage(),containsString(\"Unknown value (\" + indexOptions + \"( for field (index_options( - accepted values are (docs, freqs(\"))@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertThat(e.getMessage(),containsString(\"Unknown value (\" + indexOptions + \"( for field (index_options( - accepted values are (docs, freqs(\"))@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "testIndexOptions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "DocumentMapper mapper = createDocumentMapper(fieldMapping(null))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Exception e = expectThrows(,null)@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testIndexOptions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertEquals(2,fields.length)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->12 [style = dashed, label="0"];
+0->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+5->7 [style = bold, label=""];
+6->1 [style = bold, label=""];
+8->1 [style = bold, label=""];
+12->13 [style = bold, label=""];
+3->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->2 [style = bold, label=""];
+13->12 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+4->13 [style = dashed, label="0"];
+9->7 [style = bold, label=""];
+5->12 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+11->2 [style = bold, label=""];
+4->7 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

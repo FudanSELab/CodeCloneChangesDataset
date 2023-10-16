@@ -1,0 +1,27 @@
+digraph {
+2 [style = filled, label = "assertIngestionSchema(ingestionSpecs,expectedDimensionsSpec,AGGREGATORS,SEGMENT_INTERVALS,Granularities.MONTH)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final List<IndexIngestionSpec> ingestionSpecs = CompactionTask.createIngestionSchema(toolbox,new SegmentProvider(DATA_SOURCE,new CompactionIntervalSpec(COMPACTION_INTERVAL,null)),new PartitionConfigurationManager(null,TUNING_CONFIG),null,null,null,OBJECT_MAPPER,COORDINATOR_CLIENT,segmentLoaderFactory,RETRY_POLICY_FACTORY)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "testCreateIngestionSchema['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "testCreateIngestionSchemaWithCustomSegments['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testCreateIngestionSchema['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Assert.assertEquals(6,ingestionSpecs.size())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final List<IndexIngestionSpec> ingestionSpecs = CompactionTask.createIngestionSchema(toolbox,new SegmentProvider(DATA_SOURCE,COMPACTION_INTERVAL),new PartitionConfigurationManager(null,TUNING_CONFIG),null,null,null,objectMapper,coordinatorClient,segmentLoaderFactory,retryPolicyFactory)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "final List<IndexIngestionSpec> ingestionSpecs = CompactionTask.createIngestionSchema(toolbox,new SegmentProvider(SEGMENTS),new PartitionConfigurationManager(null,TUNING_CONFIG),null,null,null,objectMapper,coordinatorClient,segmentLoaderFactory,retryPolicyFactory)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ingestionSpecs.sort(null)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final List<DimensionsSpec> expectedDimensionsSpec = getExpectedDimensionsSpecForAutoGeneration()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->8 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+6->5 [style = bold, label=""];
+1->4 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+6->2 [style = solid, label="ingestionSpecs"];
+4->2 [style = bold, label=""];
+8->2 [style = solid, label="ingestionSpecs"];
+8->5 [style = bold, label=""];
+9->8 [style = bold, label=""];
+0->2 [style = solid, label="ingestionSpecs"];
+3->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+0->5 [style = bold, label=""];
+5->2 [style = solid, label="expectedDimensionsSpec"];
+}

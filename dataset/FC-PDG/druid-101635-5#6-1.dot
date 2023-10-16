@@ -1,0 +1,11 @@
+digraph {
+2 [style = filled, label = "testGroupByExpressionAliasedAsOriginalColumnName['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "testQuery(\"SELECT\" + \"FLOOR(__time TO MONTH) AS __time,\" + \"COUNT(*)\" + \"FROM druid.foo\" + \"GROUP BY FLOOR(__time TO MONTH)\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.MONTH).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@941ca6,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@941cad))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testQuery(\"SELECT gran, SUM(cnt) FROM (\" + \" SELECT floor(__time TO month) AS gran,\" + \" cnt FROM druid.foo\" + \") AS x\" + \"GROUP BY gran\" + \"ORDER BY gran DESC\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.MONTH).aggregators(aggregators(new LongSumAggregatorFactory(\"a0\",\"cnt\"))).descending(true).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@941ced,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@941cf4))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testGroupByExpressionAliasedAsOriginalColumnName['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testTimeseriesDescending['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2->0 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+4->3 [style = bold, label=""];
+}

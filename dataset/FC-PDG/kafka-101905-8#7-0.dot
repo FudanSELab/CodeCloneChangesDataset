@@ -1,0 +1,31 @@
+digraph {
+6 [style = filled, label = "shouldFailOnEosCommitTxFatal['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "eosMockProducer.beginTransactionException = new KafkaException(\"KABOOM!\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertThat(thrown.getCause(),is(eosMockProducer.beginTransactionException))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertThat(eosMockProducer.sentOffsets(),is(true))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(thrown.getMessage(),is(\"KABOOM!\"))@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "eosMockProducer.commitTransactionException = new RuntimeException(\"KABOOM!\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final RuntimeException thrown = assertThrows(,null)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "final StreamsException thrown = assertThrows(,null)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "shouldFailOnEosCommitTxFatal['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final RuntimeException thrown = assertThrows(,null)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "assertThat(thrown.getMessage(),is(\"Error encountered trying to begin a new transaction (test(\"))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "shouldThrowTaskMigrateExceptionOnEosBeginTxnError['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4->5 [style = dashed, label="0"];
+5->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+2->7 [style = dashed, label="0"];
+9->8 [style = bold, label=""];
+8->11 [style = bold, label=""];
+2->4 [style = bold, label=""];
+10->7 [style = bold, label=""];
+7->8 [style = solid, label="beginTransactionException"];
+3->0 [style = bold, label=""];
+2->5 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

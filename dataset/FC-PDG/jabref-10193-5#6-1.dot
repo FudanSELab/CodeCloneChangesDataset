@@ -1,0 +1,35 @@
+digraph {
+2 [style = filled, label = "expected.remove()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "List<SearchBasedFetcher> searchBasedFetchers = WebFetchers.getSearchBasedFetchers(importFormatPreferences)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "getSearchBasedFetchersReturnsAllFetcherDerivingFromSearchBasedFetcher['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "getIdBasedFetchersReturnsAllFetcherDerivingFromIdBasedFetcher['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "expected.remove()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertEquals(expected,getClasses(searchBasedFetchers))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertEquals(expected,getClasses(idFetchers))@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "List<IdBasedFetcher> idFetchers = WebFetchers.getIdBasedFetchers(importFormatPreferences)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "expected.remove()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "expected.remove()@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Set<Class<? extends IdBasedFetcher>> expected = reflections.getSubTypesOf()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "Set<Class<? extends SearchBasedFetcher>> expected = reflections.getSubTypesOf()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "expected.remove()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "getIdBasedFetchersReturnsAllFetcherDerivingFromIdBasedFetcher['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+13->10 [style = bold, label=""];
+6->4 [style = solid, label="expected"];
+13->12 [style = solid, label="expected"];
+5->9 [style = dashed, label="0"];
+5->4 [style = solid, label="idFetchers"];
+7->10 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+6->13 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+6->7 [style = bold, label=""];
+8->5 [style = bold, label=""];
+9->12 [style = solid, label="searchBasedFetchers"];
+11->9 [style = bold, label=""];
+10->12 [style = bold, label=""];
+7->2 [style = bold, label=""];
+3->4 [style = bold, label=""];
+9->13 [style = bold, label=""];
+}

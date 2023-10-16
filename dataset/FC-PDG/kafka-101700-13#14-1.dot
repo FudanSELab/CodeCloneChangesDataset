@@ -1,0 +1,27 @@
+digraph {
+2 [style = filled, label = "final KTable<String,Integer> reduced = builder.table(topic,Consumed.with(Serdes.String(),Serdes.Double()),Materialized.as(\"store\").withKeySerde(Serdes.String()).withValueSerde(Serdes.Double())).groupBy(intProjection).reduce(MockReducer.INTEGER_ADDER,MockReducer.INTEGER_SUBTRACTOR,Materialized.as(\"reduced\"))@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "shouldReduceWithInternalStoreName['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final Map<String,Integer> results = getReducedResults(reduced)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final KTable<String,Integer> reduced = builder.table(topic,Consumed.with(Serdes.String(),Serdes.Double()),Materialized.as(\"store\").withKeySerde(Serdes.String()).withValueSerde(Serdes.Double())).groupBy(intProjection).reduce(MockReducer.INTEGER_ADDER,MockReducer.INTEGER_SUBTRACTOR)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertEquals(reduced.queryableStoreName(),\"reduced\")@@@13@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final KeyValueMapper<String,Number,KeyValue<String,Integer>> intProjection = new KeyValueMapper<String,Number,KeyValue<String,Integer>>(){@Override public KeyValue<String,Integer> apply(String key,Number value){return KeyValue.pair(key,value.intValue())}}@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "shouldReduce['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "shouldReduce['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "assertNull(reduced.queryableStoreName())@@@13@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertReduced(results,topic,driver)@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->5 [style = bold, label=""];
+8->1 [style = bold, label=""];
+6->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+5->0 [style = solid, label="results"];
+3->1 [style = bold, label=""];
+5->0 [style = bold, label=""];
+0->4 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+4->7 [style = dashed, label="0"];
+9->5 [style = solid, label="reduced"];
+1->9 [style = bold, label=""];
+2->5 [style = bold, label=""];
+0->7 [style = bold, label=""];
+2->5 [style = solid, label="reduced"];
+}

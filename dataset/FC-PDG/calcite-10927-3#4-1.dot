@@ -1,0 +1,21 @@
+digraph {
+3 [style = filled, label = "final String expected = \"SELECT *\" + \"FROM `T` MATCH_RECOGNIZE(\" + \"MEASURES `STRT`.`TS` AS `START_TS`, \" + \"LAST(`DOWN`.`TS`, 0) AS `BOTTOM_TS`, \" + \"AVG(`STDN`.`PRICE`) AS `STDN_AVG`\" + \"PATTERN (((`STRT` (`DOWN` +)) (`UP` +)))\" + \"SUBSET (`STDN` = (`STRT`, `DOWN`)), (`STDN2` = (`STRT`, `DOWN`))\" + \"DEFINE `DOWN` AS (`DOWN`.`PRICE` < PREV(`DOWN`.`PRICE`, 1)), \" + \"`UP` AS (`UP`.`PRICE` > PREV(`UP`.`PRICE`, 1))\" + \") AS `MR`\"@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final String expected = \"SELECT *\" + \"FROM `T` MATCH_RECOGNIZE(\" + \"MEASURES `STRT`.`TS` AS `START_TS`, \" + \"LAST(`DOWN`.`TS`, 0) AS `BOTTOM_TS`, \" + \"AVG(`STDN`.`PRICE`) AS `STDN_AVG`\" + \"ALL ROWS PER MATCH\" + \"PATTERN (((`STRT` (`DOWN` +)) (`UP` +)))\" + \"SUBSET (`STDN` = (`STRT`, `DOWN`)), (`STDN2` = (`STRT`, `DOWN`))\" + \"DEFINE `DOWN` AS (`DOWN`.`PRICE` < PREV(`DOWN`.`PRICE`, 1)), \" + \"`UP` AS (`UP`.`PRICE` > PREV(`UP`.`PRICE`, 1))\" + \") AS `MR`\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testMatchRecognizeSubset3['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testMatchRecognizeSubset3['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final String sql = \"select *\" + \" from t match_recognize\" + \" (\" + \" measures STRT.ts as start_ts,\" + \" LAST(DOWN.ts) as bottom_ts,\" + \" AVG(stdn.price) as stdn_avg\" + \" ALL ROWS PER MATCH\" + \" pattern (strt down+ up+)\" + \" subset stdn = (strt, down), stdn2 = (strt, down)\" + \" define\" + \" down as down.price < PREV(down.price),\" + \" up as up.price > prev(up.price)\" + \" ) mr\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testMatchRecognizeRowsPerMatch2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "sql(sql).ok(expected)@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final String sql = \"select *\" + \" from t match_recognize\" + \" (\" + \" measures STRT.ts as start_ts,\" + \" LAST(DOWN.ts) as bottom_ts,\" + \" AVG(stdn.price) as stdn_avg\" + \" pattern (strt down+ up+)\" + \" subset stdn = (strt, down), stdn2 = (strt, down)\" + \" define\" + \" down as down.price < PREV(down.price),\" + \" up as up.price > prev(up.price)\" + \" ) mr\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+3->2 [style = solid, label="expected"];
+5->2 [style = bold, label=""];
+7->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+0->1 [style = bold, label=""];
+5->2 [style = solid, label="expected"];
+}

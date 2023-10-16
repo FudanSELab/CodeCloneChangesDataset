@@ -1,0 +1,17 @@
+digraph {
+3 [style = filled, label = "getExceptionalStreamsProducerOnSend['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "final Exception exception@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "getExceptionalStreamsProducerOnSend['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "getExceptionalStreamProducerOnPartitionsFor['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return new StreamsProducer(config,processId + \"-StreamThread-1\",new MockClientSupplier(){@Override public Producer<byte((,byte((> getProducer(final Map<String,Object> config){return new MockProducer<byte((,byte((>(cluster,true,new DefaultPartitioner(),byteArraySerializer,byteArraySerializer){@Override public synchronized List<PartitionInfo> partitionsFor(final String topic){throw exception}}}},null,null,logContext)@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final RuntimeException exception@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3->0 [style = bold, label=""];
+4->0 [style = solid, label="exception"];
+1->0 [style = bold, label=""];
+1->2 [style = dotted, label="true"];
+5->0 [style = bold, label=""];
+2->0 [style = solid, label="exception"];
+5->4 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+2->4 [style = dashed, label="0"];
+}

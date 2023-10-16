@@ -1,0 +1,38 @@
+digraph {
+5 [style = filled, label = "mysqlComStmtExecuteExecutor.execute()@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "when(databaseCommunicationEngine.execute()).thenReturn(new QueryResponseHeader(Collections.singletonList(mock())))@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "assertIsUpdateResponse['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "FieldSetter.setField(mysqlComStmtExecuteExecutor,.getDeclaredField(\"databaseCommunicationEngine\"),databaseCommunicationEngine)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "when(backendConnection.getDefaultSchemaName()).thenReturn(\"logic_db\")@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "assertIsQueryResponse['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "when(packet.getSql()).thenReturn(\"SELECT 1\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "MySQLComStmtExecuteExecutor mysqlComStmtExecuteExecutor = new MySQLComStmtExecuteExecutor(packet,backendConnection)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "BackendConnection backendConnection = mock()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertIsQueryResponse['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "MySQLComStmtExecutePacket packet = mock()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "when(databaseCommunicationEngine.execute()).thenReturn(new UpdateResponseHeader(mock()))@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(mysqlComStmtExecuteExecutor.getResponseType(),is(ResponseType.QUERY))@@@12@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "assertThat(mysqlComStmtExecuteExecutor.getResponseType(),is(ResponseType.UPDATE))@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "when(backendConnection.getSchemaName()).thenReturn(\"logic_db\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+14->3 [style = bold, label=""];
+1->4 [style = bold, label=""];
+12->5 [style = bold, label=""];
+9->1 [style = solid, label="mysqlComStmtExecuteExecutor"];
+7->9 [style = solid, label="packet"];
+10->3 [style = bold, label=""];
+7->8 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+3->9 [style = solid, label="backendConnection"];
+6->13 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->13 [style = bold, label=""];
+8->9 [style = bold, label=""];
+1->12 [style = bold, label=""];
+2->7 [style = bold, label=""];
+9->1 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->11 [style = bold, label=""];
+11->7 [style = bold, label=""];
+}

@@ -1,0 +1,28 @@
+digraph {
+7 [style = filled, label = "assertThat(buildRule.getFullLog(),not(containsString(\"Skipped grammar file.\")))@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "buildRule.executeTarget(\"normalRecompile\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testNormalRecompile['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "buildRule.executeTarget(\"test9\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testNormalRecompile['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testSupergrammarChangeRecompile['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "buildRule.executeTarget(\"supergrammarChangeRecompile\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(buildRule.getFullLog(),not(containsString(\"Skipped grammar file.\")))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "FileUtilities.rollbackTimestamps(buildRule.getOutputDir(),5)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertNotContains(\"Skipped grammar file.\",buildRule.getFullLog())@@@7@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertNotContains(\"Skipped grammar file.\",buildRule.getFullLog())@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+6->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+8->4 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+5->9 [style = bold, label=""];
+2->4 [style = bold, label=""];
+4->6 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+3->7 [style = dashed, label="0"];
+0->7 [style = bold, label=""];
+10->4 [style = bold, label=""];
+}

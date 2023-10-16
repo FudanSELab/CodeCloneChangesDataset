@@ -1,0 +1,34 @@
+digraph {
+1 [style = filled, label = "Assert.assertEquals(.getName(),explanation.getImplementingClass())@@@7@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "JDBCStream stream@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Assert.assertEquals(\"topic\",explanation.getFunctionName())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Assert.assertEquals(.getName(),explanation.getImplementingClass())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "Assert.assertEquals(1,((StreamExplanation)explanation).getChildren().size())@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "TopicStream stream@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "testTopicStream['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "stream = new TopicStream(StreamExpressionParser.parse(\"topic(collection2, collection1, q=*:*, fl=\"id,a_s,a_i,a_f\", id=\"blah\", checkpointEvery=1000)\"),factory)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+14 [style = filled, label = "stream = new JDBCStream(StreamExpressionParser.parse(\"jdbc(connection=\"jdbc:hsqldb:mem:.\", sql=\"select PEOPLE.ID, PEOPLE.NAME, COUNTRIES.COUNTRY_NAME from PEOPLE inner join COUNTRIES on PEOPLE.COUNTRY_CODE = COUNTRIES.CODE order by PEOPLE.ID\", sort=\"ID asc\")\"),factory)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "String expressionString@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testTopicStream['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testJDBCStream['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Explanation explanation = stream.toExplanation(factory)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Explanation explanation = stream.toExplanation(factory)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "Assert.assertEquals(\"jdbc\",explanation.getFunctionName())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->13 [style = dashed, label="0"];
+12->14 [style = bold, label=""];
+5->1 [style = bold, label=""];
+11->8 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+7->0 [style = bold, label=""];
+13->9 [style = bold, label=""];
+4->2 [style = bold, label=""];
+9->10 [style = bold, label=""];
+6->7 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+8->12 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->5 [style = bold, label=""];
+14->5 [style = bold, label=""];
+5->13 [style = bold, label=""];
+}

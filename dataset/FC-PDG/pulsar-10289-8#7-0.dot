@@ -1,0 +1,38 @@
+digraph {
+6 [style = filled, label = "when(admin.namespaces()).thenReturn(mockNamespaces)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "CmdNamespaces namespaces = new CmdNamespaces(null)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "policies.bundles = new BundlesData(5)@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "verify(mockNamespaces).createNamespace(\"my-prop/my-namespace\",policies)@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "verify(mockNamespaces).createNamespace(\"my-prop/my-cluster/my-namespace\",5)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "namespacesCreateWithBundlesAndClusters['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "verify(mockNamespaces).setNamespaceReplicationClusters(\"my-prop/my-cluster/my-namespace\",Sets.newHashSet(\"a\",\"b\",\"c\"))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "namespaces.run(split(\"create my-prop/my-cluster/my-namespace --bundles 5 --clusters a,b,c\"))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Policies policies = new Policies()@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Namespaces mockNamespaces = mock()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "namespaces.run(split(\"create my-prop/my-namespace --bundles 5 --clusters a,b,c\"))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "namespacesCreateV1WithBundlesAndClusters['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "namespacesCreateWithBundlesAndClusters['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "policies.replication_clusters = Sets.newHashSet(\"a\",\"b\",\"c\")@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "policies.bundles = BundlesData.builder().numBundles(5).build()@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "PulsarAdmin admin = Mockito.mock()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->13 [style = bold, label=""];
+4->10 [style = bold, label=""];
+8->13 [style = dashed, label="0"];
+10->3 [style = bold, label=""];
+14->9 [style = bold, label=""];
+15->12 [style = bold, label=""];
+1->6 [style = bold, label=""];
+13->15 [style = bold, label=""];
+8->4 [style = bold, label=""];
+4->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+9->1 [style = bold, label=""];
+5->9 [style = bold, label=""];
+7->8 [style = bold, label=""];
+11->9 [style = bold, label=""];
+1->6 [style = solid, label="mockNamespaces"];
+4->0 [style = solid, label="policies"];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+}

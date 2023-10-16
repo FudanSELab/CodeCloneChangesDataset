@@ -1,0 +1,38 @@
+digraph {
+12 [style = filled, label = "TopNQuery query = builder.intervals(\"2011-01-01/2011-01-10\").metric(\"avg_imps_per_row_double\").aggregators(AGGS).postAggregators(DIFF_ORDER_POST_AGGS).build()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testQueryCaching(runner,builder.build(),Intervals.of(\"2011-01-01/2011-01-02\"),makeTopNResultsWithoutRename(),Intervals.of(\"2011-01-02/2011-01-03\"),makeTopNResultsWithoutRename(),Intervals.of(\"2011-01-05/2011-01-10\"),makeTopNResultsWithoutRename(DateTimes.of(\"2011-01-05\"),\"a\",50,4994,\"b\",50,4993,\"c\",50,4992,DateTimes.of(\"2011-01-06\"),\"a\",50,4991,\"b\",50,4990,\"c\",50,4989,DateTimes.of(\"2011-01-07\"),\"a\",50,4991,\"b\",50,4990,\"c\",50,4989,DateTimes.of(\"2011-01-08\"),\"a\",50,4988,\"b\",50,4987,\"c\",50,4986,DateTimes.of(\"2011-01-09\"),\"c1\",50,4985,\"b\",50,4984,\"c\",50,4983),Intervals.of(\"2011-01-05/2011-01-10\"),makeTopNResultsWithoutRename(DateTimes.of(\"2011-01-05T01\"),\"a\",50,4994,\"b\",50,4993,\"c\",50,4992,DateTimes.of(\"2011-01-06T01\"),\"a\",50,4991,\"b\",50,4990,\"c\",50,4989,DateTimes.of(\"2011-01-07T01\"),\"a\",50,4991,\"b\",50,4990,\"c\",50,4989,DateTimes.of(\"2011-01-08T01\"),\"a\",50,4988,\"b\",50,4987,\"c\",50,4986,DateTimes.of(\"2011-01-09T01\"),\"c2\",50,4985,\"b\",50,4984,\"c\",50,4983))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "final TopNQueryBuilder builder = new TopNQueryBuilder().dataSource(DATA_SOURCE).dimension(TOP_DIM).metric(\"avg_imps_per_row_double\").threshold(3).intervals(SEG_SPEC).filters(DIM_FILTER).granularity(GRANULARITY).aggregators(AGGS).postAggregators(POST_AGGS).context(CONTEXT)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "TestHelper.assertExpectedResults(makeTopNResultsWithoutRename(DateTimes.of(\"2011-01-05\"),\"a\",50,4994,\"b\",50,4993,\"c\",50,4992,DateTimes.of(\"2011-01-05T01\"),\"a\",50,4994,\"b\",50,4993,\"c\",50,4992,DateTimes.of(\"2011-01-06\"),\"a\",50,4991,\"b\",50,4990,\"c\",50,4989,DateTimes.of(\"2011-01-06T01\"),\"a\",50,4991,\"b\",50,4990,\"c\",50,4989,DateTimes.of(\"2011-01-07\"),\"a\",50,4991,\"b\",50,4990,\"c\",50,4989,DateTimes.of(\"2011-01-07T01\"),\"a\",50,4991,\"b\",50,4990,\"c\",50,4989,DateTimes.of(\"2011-01-08\"),\"a\",50,4988,\"b\",50,4987,\"c\",50,4986,DateTimes.of(\"2011-01-08T01\"),\"a\",50,4988,\"b\",50,4987,\"c\",50,4986,DateTimes.of(\"2011-01-09\"),\"c1\",50,4985,\"b\",50,4984,\"c\",50,4983,DateTimes.of(\"2011-01-09T01\"),\"c2\",50,4985,\"b\",50,4984,\"c\",50,4983),runner.run(QueryPlus.wrap(query)))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "QueryRunner runner = new FinalizeResultsQueryRunner(getDefaultQueryRunner(),new TopNQueryQueryToolChest(new TopNQueryConfig(),QueryRunnerTestHelper.noopIntervalChunkingQueryRunnerDecorator()))@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "TestHelper.assertExpectedResults(makeRenamedTopNResults(DateTimes.of(\"2011-01-01\"),\"a\",50,5000,\"b\",50,4999,\"c\",50,4998,DateTimes.of(\"2011-01-02\"),\"a\",50,4997,\"b\",50,4996,\"c\",50,4995,DateTimes.of(\"2011-01-05\"),\"a\",50,4994,\"b\",50,4993,\"c\",50,4992,DateTimes.of(\"2011-01-05T01\"),\"a\",50,4994,\"b\",50,4993,\"c\",50,4992,DateTimes.of(\"2011-01-06\"),\"a\",50,4991,\"b\",50,4990,\"c\",50,4989,DateTimes.of(\"2011-01-06T01\"),\"a\",50,4991,\"b\",50,4990,\"c\",50,4989,DateTimes.of(\"2011-01-07\"),\"a\",50,4991,\"b\",50,4990,\"c\",50,4989,DateTimes.of(\"2011-01-07T01\"),\"a\",50,4991,\"b\",50,4990,\"c\",50,4989,DateTimes.of(\"2011-01-08\"),\"a\",50,4988,\"b\",50,4987,\"c\",50,4986,DateTimes.of(\"2011-01-08T01\"),\"a\",50,4988,\"b\",50,4987,\"c\",50,4986,DateTimes.of(\"2011-01-09\"),\"c1\",50,4985,\"b\",50,4984,\"c\",50,4983,DateTimes.of(\"2011-01-09T01\"),\"c2\",50,4985,\"b\",50,4984,\"c\",50,4983),runner.run(QueryPlus.wrap(query)))@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "TopNQuery query = builder.intervals(\"2011-01-01/2011-01-10\").metric(\"imps\").aggregators(RENAMED_AGGS).postAggregators(DIFF_ORDER_POST_AGGS).build()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testTopNOnPostAggMetricCaching['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "QueryRunner runner = new FinalizeResultsQueryRunner(getDefaultQueryRunner(),new TopNQueryQueryToolChest(new TopNQueryConfig()))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "final TopNQueryBuilder builder = new TopNQueryBuilder().dataSource(DATA_SOURCE).dimension(TOP_DIM).metric(\"imps\").threshold(3).intervals(SEG_SPEC).filters(DIM_FILTER).granularity(GRANULARITY).aggregators(AGGS).postAggregators(POST_AGGS).context(CONTEXT)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testQueryCaching(runner,builder.build(),Intervals.of(\"2011-01-01/2011-01-02\"),makeTopNResultsWithoutRename(DateTimes.of(\"2011-01-01\"),\"a\",50,5000,\"b\",50,4999,\"c\",50,4998),Intervals.of(\"2011-01-02/2011-01-03\"),makeTopNResultsWithoutRename(DateTimes.of(\"2011-01-02\"),\"a\",50,4997,\"b\",50,4996,\"c\",50,4995),Intervals.of(\"2011-01-05/2011-01-10\"),makeTopNResultsWithoutRename(DateTimes.of(\"2011-01-05\"),\"a\",50,4994,\"b\",50,4993,\"c\",50,4992,DateTimes.of(\"2011-01-06\"),\"a\",50,4991,\"b\",50,4990,\"c\",50,4989,DateTimes.of(\"2011-01-07\"),\"a\",50,4991,\"b\",50,4990,\"c\",50,4989,DateTimes.of(\"2011-01-08\"),\"a\",50,4988,\"b\",50,4987,\"c\",50,4986,DateTimes.of(\"2011-01-09\"),\"c1\",50,4985,\"b\",50,4984,\"c\",50,4983),Intervals.of(\"2011-01-05/2011-01-10\"),makeTopNResultsWithoutRename(DateTimes.of(\"2011-01-05T01\"),\"a\",50,4994,\"b\",50,4993,\"c\",50,4992,DateTimes.of(\"2011-01-06T01\"),\"a\",50,4991,\"b\",50,4990,\"c\",50,4989,DateTimes.of(\"2011-01-07T01\"),\"a\",50,4991,\"b\",50,4990,\"c\",50,4989,DateTimes.of(\"2011-01-08T01\"),\"a\",50,4988,\"b\",50,4987,\"c\",50,4986,DateTimes.of(\"2011-01-09T01\"),\"c2\",50,4985,\"b\",50,4984,\"c\",50,4983))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testTopNCaching['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testTopNCaching['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4->10 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+9->11 [style = bold, label=""];
+0->6 [style = bold, label=""];
+11->4 [style = bold, label=""];
+6->2 [style = solid, label="runner"];
+7->0 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+4->2 [style = bold, label=""];
+4->2 [style = solid, label="runner"];
+4->6 [style = dashed, label="0"];
+5->1 [style = solid, label="query"];
+3->0 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+4->10 [style = solid, label="runner"];
+5->1 [style = bold, label=""];
+0->4 [style = bold, label=""];
+10->12 [style = bold, label=""];
+12->8 [style = bold, label=""];
+12->8 [style = solid, label="query"];
+1->8 [style = dashed, label="0"];
+2->5 [style = bold, label=""];
+}

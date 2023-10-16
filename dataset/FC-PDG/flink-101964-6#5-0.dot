@@ -1,0 +1,33 @@
+digraph {
+3 [style = filled, label = "createDecodingFormat['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ReadableConfig formatOptions@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "DynamicTableFactory.Context context@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "FactoryUtil.validateFactoryOptions(this,formatOptions)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String schemaRegistryURL = formatOptions.get(SCHEMA_REGISTRY_URL)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "String schemaRegistryURL = formatOptions.get(URL)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "DynamicTableFactory.Context context@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "createDecodingFormat['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "createDecodingFormat['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "ReadableConfig formatOptions@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "return new DecodingFormat<DeserializationSchema<RowData>>(){@Override public DeserializationSchema<RowData> createRuntimeDecoder(DynamicTableSource.Context context,DataType producedDataType){final RowType rowType = (RowType)producedDataType.getLogicalType()final TypeInformation<RowData> rowDataTypeInfo = context.createTypeInformation(producedDataType)return new AvroRowDataDeserializationSchema(rowType,rowDataTypeInfo)}@Override public ChangelogMode getChangelogMode(){return ChangelogMode.insertOnly()}}@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->2 [style = solid, label="schemaRegistryURL"];
+8->1 [style = bold, label=""];
+1->4 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->5 [style = dotted, label="true"];
+4->2 [style = bold, label=""];
+8->6 [style = dotted, label="true"];
+9->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+8->5 [style = dotted, label="true"];
+9->10 [style = dotted, label="true"];
+4->7 [style = dashed, label="0"];
+1->7 [style = bold, label=""];
+7->2 [style = bold, label=""];
+6->1 [style = solid, label="formatOptions"];
+5->1 [style = solid, label="formatOptions"];
+7->2 [style = solid, label="schemaRegistryURL"];
+10->1 [style = solid, label="formatOptions"];
+3->0 [style = dotted, label="true"];
+9->5 [style = dotted, label="true"];
+}

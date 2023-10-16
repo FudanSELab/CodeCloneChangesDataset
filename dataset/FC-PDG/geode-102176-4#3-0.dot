@@ -1,0 +1,33 @@
+digraph {
+7 [style = filled, label = "assertTrue(CacheClientNotifier.singletonHasClientProxies())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "CacheClientNotifier ccn = CacheClientNotifier.getInstance((InternalCache)cache,mock(),mock(),mock(),100000,100000,mock(),null,false)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "return ccn@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testSingletonHasClientProxiesTrue['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "InternalCache internalCache = Fakes.cache()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "when(proxy.getAcceptorId()).thenReturn(Long.valueOf(111))@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "CacheClientNotifier ccn = CacheClientNotifier.getInstance(internalCache,mock(),mock(),mock(),10,10,mock(),null,true)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "when(proxy.getProxyID()).thenReturn(mock())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "CacheClientNotifier ccn = CacheClientNotifier.getInstance(cache,mock(),mock(),mock(),100000,100000,mock(),null,false)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "createCacheClientNotifier['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ccn.shutdown(111)@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "ccn.addClientProxy(proxy)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "createCacheClientNotifier['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "CacheClientProxy proxy = mock()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11->12 [style = solid, label="proxy"];
+9->5 [style = bold, label=""];
+0->2 [style = solid, label="ccn"];
+0->4 [style = dashed, label="0"];
+4->2 [style = solid, label="ccn"];
+8->9 [style = solid, label="internalCache"];
+1->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+13->8 [style = bold, label=""];
+5->12 [style = bold, label=""];
+11->9 [style = bold, label=""];
+8->11 [style = bold, label=""];
+7->10 [style = bold, label=""];
+3->4 [style = bold, label=""];
+10->6 [style = bold, label=""];
+12->7 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

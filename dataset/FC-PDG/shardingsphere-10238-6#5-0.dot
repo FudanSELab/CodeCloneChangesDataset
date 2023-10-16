@@ -1,0 +1,38 @@
+digraph {
+7 [style = filled, label = "checkToBeCreatedLoadBalancers['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "Collection<String> invalidKeyGenerators = getToBeCreatedKeyGenerators(sqlStatement).stream().distinct().filter(null).collect(Collectors.toList())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "throw new InvalidKeyGeneratorsException(invalidKeyGenerators)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "checkToBeCreatedKeyGenerators['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "checkToBeCreatedLoadBalancers['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final CreateReadwriteSplittingRuleStatement sqlStatement@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "throw new InvalidLoadBalancersException(notExistedLoadBalancers)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "throw new InvalidAlgorithmConfigurationException(\"Load balancers\",notExistedLoadBalancers)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "!invalidKeyGenerators.isEmpty()@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "!notExistedLoadBalancers.isEmpty()@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final CreateReadwriteSplittingRuleStatement sqlStatement@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "final CreateShardingTableRuleStatement sqlStatement@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Collection<String> notExistedLoadBalancers = sqlStatement.getRules().stream().map(null).distinct().filter(null).collect(Collectors.toList())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+7->6 [style = dotted, label="true"];
+0->5 [style = dotted, label="true"];
+8->9 [style = solid, label="invalidKeyGenerators"];
+4->3 [style = solid, label="notExistedLoadBalancers"];
+11->9 [style = dotted, label="true"];
+0->11 [style = dashed, label="0"];
+1->10 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+11->9 [style = bold, label=""];
+2->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+12->10 [style = dotted, label="true"];
+4->5 [style = solid, label="notExistedLoadBalancers"];
+3->9 [style = dashed, label="0"];
+2->1 [style = dotted, label="true"];
+12->8 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+4->8 [style = dashed, label="0"];
+0->3 [style = dotted, label="true"];
+8->11 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

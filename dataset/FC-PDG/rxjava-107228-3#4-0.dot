@@ -1,0 +1,26 @@
+digraph {
+2 [style = filled, label = "SubscriberWrapper<Integer> wrapper = new SubscriberWrapper<Integer>(ts)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "normalOnNextBackpressured['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "normalOnNextBackpressured['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "requestMore['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "TestSubscriberEx<Integer> ts = new TestSubscriberEx<Integer>(0)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "ts.assertEmpty().requestMore(1).assertValue(1).requestMore(2).assertValues(1,2,3).requestMore(2).assertResult(1,2,3,4,5)@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "TestSubscriberEx<Integer> ts = new TestSubscriberEx<>(0)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "SubscriberWrapper<Integer> wrapper = new SubscriberWrapper<>(ts)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "Flowable.range(1,5).test(0).requestMore(1).assertValue(1).requestMore(2).assertValues(1,2,3).requestMore(3).assertResult(1,2,3,4,5)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Flowable.range(1,5).subscribe(wrapper)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->2 [style = solid, label="ts"];
+7->4 [style = solid, label="wrapper"];
+5->7 [style = solid, label="ts"];
+5->7 [style = bold, label=""];
+6->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+7->4 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+2->7 [style = dashed, label="0"];
+2->4 [style = solid, label="wrapper"];
+9->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

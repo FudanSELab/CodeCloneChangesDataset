@@ -1,0 +1,37 @@
+digraph {
+7 [style = filled, label = "assertFalse(Functions.all(ints,null))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertFalse(Functions.exists(empty,Functions.truePredicate1()))@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertFalse(Functions.exists(empty,Functions.falsePredicate1()))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final List<Integer> empty = Collections.emptyList()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final List<Integer> ints = Arrays.asList(1,10,2)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testExists['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "testExists['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertFalse(Functions.exists(ints,null))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertTrue(Functions.all(empty,Functions.falsePredicate1()))@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertTrue(Functions.all(empty,Functions.truePredicate1()))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertFalse(Functions.all(ints,null))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertTrue(Functions.all(ints,null))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "testAll['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->4 [style = bold, label=""];
+1->7 [style = solid, label="ints"];
+3->1 [style = bold, label=""];
+7->10 [style = bold, label=""];
+11->1 [style = bold, label=""];
+1->10 [style = solid, label="ints"];
+12->9 [style = bold, label=""];
+4->9 [style = solid, label="empty"];
+4->7 [style = bold, label=""];
+6->1 [style = bold, label=""];
+4->12 [style = solid, label="empty"];
+5->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+10->8 [style = bold, label=""];
+1->5 [style = solid, label="ints"];
+4->2 [style = solid, label="empty"];
+0->8 [style = dashed, label="0"];
+1->8 [style = solid, label="ints"];
+5->7 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+8->12 [style = bold, label=""];
+4->0 [style = solid, label="empty"];
+}

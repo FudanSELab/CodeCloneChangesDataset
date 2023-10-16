@@ -1,0 +1,35 @@
+digraph {
+3 [style = filled, label = "List list = context.getInstance()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "run['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Random random = context.container().random()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "forget(context,elementIndex)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "forgetElement(context,elementIndex)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "run['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "@SuppressWarnings(\"unchecked\") List<Object> list = context.getInstance()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "int elementIndex = random.nextInt(list.size())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "list.size() > 0@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Context context@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "run['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4->6 [style = dotted, label="true"];
+0->2 [style = solid, label="elementIndex"];
+5->3 [style = bold, label=""];
+1->2 [style = solid, label="context"];
+4->6 [style = bold, label=""];
+4->10 [style = dotted, label="true"];
+3->7 [style = dashed, label="0"];
+5->1 [style = dotted, label="true"];
+4->0 [style = dotted, label="true"];
+0->2 [style = bold, label=""];
+1->10 [style = solid, label="context"];
+6->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+3->4 [style = bold, label=""];
+8->7 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+8->1 [style = dotted, label="true"];
+0->10 [style = bold, label=""];
+9->1 [style = dotted, label="true"];
+9->3 [style = bold, label=""];
+0->10 [style = solid, label="elementIndex"];
+4->2 [style = dotted, label="true"];
+}

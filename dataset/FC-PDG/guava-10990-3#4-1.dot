@@ -1,0 +1,22 @@
+digraph {
+5 [style = filled, label = "assertThat(graph.edges()).containsExactly(\"i\",\"e\",\"p\").inOrder()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(graph.edgeOrder()).isEqualTo(ElementOrder.insertion())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "edgeOrder_insertion['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "MutableNetwork<Integer,String> graph = NetworkBuilder.directed().build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "edgeOrder_insertion['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "addEdges(graph)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(graph.nodeOrder()).isEqualTo(ElementOrder.insertion())@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "edgeOrder_default['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "MutableNetwork<Integer,String> graph = NetworkBuilder.directed().edgeOrder(insertion()).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+8->3 [style = solid, label="graph"];
+1->3 [style = solid, label="graph"];
+6->1 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+7->8 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

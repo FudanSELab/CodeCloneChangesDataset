@@ -1,0 +1,29 @@
+digraph {
+7 [style = filled, label = "visitTableName['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "SimpleTableSegment result = new SimpleTableSegment(new TableNameSegment(ctx.name().getStart().getStartIndex(),ctx.name().getStop().getStopIndex(),(IdentifierValue)visit(ctx.name())))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "SimpleTableSegment result = new SimpleTableSegment(new TableNameSegment(ctx.getStart().getStartIndex(),ctx.getStop().getStopIndex(),(IdentifierValue)visit(ctx.name())))@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "visitTableName['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "result.setOwner(new OwnerSegment(owner.getStart().getStartIndex(),owner.getStop().getStopIndex(),(IdentifierValue)visit(owner.identifier())))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return result@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "visitTableName['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "OwnerContext owner = ctx.owner()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final TableNameContext ctx@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "null != owner@@@5@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+4->6 [style = solid, label="result"];
+9->1 [style = dotted, label="true"];
+8->5 [style = bold, label=""];
+7->1 [style = dotted, label="true"];
+7->8 [style = bold, label=""];
+0->6 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->4 [style = bold, label=""];
+2->1 [style = dotted, label="true"];
+8->6 [style = solid, label="result"];
+3->0 [style = bold, label=""];
+9->4 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+3->0 [style = dotted, label="true"];
+5->3 [style = solid, label="owner"];
+}

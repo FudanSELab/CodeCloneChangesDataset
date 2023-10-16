@@ -1,0 +1,22 @@
+digraph {
+6 [style = filled, label = "dataFileSchema['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Types.StructType partitionType@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return Types.StructType.of(DataFile.FILE_PATH,DataFile.FILE_FORMAT,required(DataFile.PARTITION_ID,DataFile.PARTITION_NAME,partitionType),DataFile.RECORD_COUNT,DataFile.FILE_SIZE,BLOCK_SIZE,DataFile.COLUMN_SIZES,DataFile.VALUE_COUNTS,DataFile.NULL_VALUE_COUNTS,DataFile.LOWER_BOUNDS,DataFile.UPPER_BOUNDS,DataFile.KEY_METADATA,DataFile.SPLIT_OFFSETS)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "fileType['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "return Types.StructType.of(DataFile.CONTENT.asRequired(),DataFile.FILE_PATH,DataFile.FILE_FORMAT,required(DataFile.PARTITION_ID,DataFile.PARTITION_NAME,partitionType,DataFile.PARTITION_DOC),DataFile.RECORD_COUNT,DataFile.FILE_SIZE,DataFile.COLUMN_SIZES,DataFile.VALUE_COUNTS,DataFile.NULL_VALUE_COUNTS,DataFile.LOWER_BOUNDS,DataFile.UPPER_BOUNDS,DataFile.KEY_METADATA,DataFile.SPLIT_OFFSETS)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "fileType['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return Types.StructType.of(DataFile.CONTENT.asRequired(),DataFile.FILE_PATH,DataFile.FILE_FORMAT,required(DataFile.PARTITION_ID,DataFile.PARTITION_NAME,partitionType,DataFile.PARTITION_DOC),DataFile.RECORD_COUNT,DataFile.FILE_SIZE,DataFile.COLUMN_SIZES,DataFile.VALUE_COUNTS,DataFile.NULL_VALUE_COUNTS,DataFile.LOWER_BOUNDS,DataFile.UPPER_BOUNDS,DataFile.KEY_METADATA,DataFile.SPLIT_OFFSETS,DataFile.EQUALITY_IDS)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "Types.StructType partitionType@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1->4 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+0->2 [style = dotted, label="true"];
+1->5 [style = dashed, label="0"];
+2->7 [style = dashed, label="0"];
+2->4 [style = solid, label="partitionType"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->1 [style = solid, label="partitionType"];
+7->5 [style = solid, label="partitionType"];
+3->2 [style = dotted, label="true"];
+6->7 [style = dotted, label="true"];
+}

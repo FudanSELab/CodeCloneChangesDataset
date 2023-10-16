@@ -1,0 +1,22 @@
+digraph {
+6 [style = filled, label = "HepProgram program = new HepProgramBuilder().addRuleInstance(PushFilterPastProjectRule.INSTANCE).addRuleInstance(PushFilterPastSetOpRule.INSTANCE).addRuleInstance(FilterToCalcRule.INSTANCE).addRuleInstance(ProjectToCalcRule.INSTANCE).addRuleInstance(MergeCalcRule.INSTANCE).addRuleInstance(ReduceExpressionsRule.CALC_INSTANCE).addRuleInstance(RemoveEmptyRules.UNION_INSTANCE).addRuleInstance(ProjectToCalcRule.INSTANCE).addRuleInstance(MergeCalcRule.INSTANCE).addRuleInstance(ReduceExpressionsRule.CALC_INSTANCE).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testReduceConstantsCalc['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "checkPlanning(program,\"insert into sales.depts(name) \" + \"select cast(gender as varchar(128)) from sales.emps\")@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testReduceCastsNullable['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "testReduceCastsNullable['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "checkPlanning(program,\"select * from (\" + \" select upper(substring(x FROM 1 FOR 2) || substring(x FROM 3)) as u,\" + \" substring(x FROM 1 FOR 1) as s\" + \" from (\" + \" select 'table' as x from (values (true))\" + \" union\" + \" select 'view' from (values (true))\" + \" union\" + \" select 'foreign table' from (values (true))\" + \" )\" + \") where u = 'TABLE'\")@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "HepProgram program = new HepProgramBuilder().addRuleInstance(new CoerceInputsRule(,false)).addRuleInstance(ProjectToCalcRule.INSTANCE).addRuleInstance(MergeCalcRule.INSTANCE).addRuleInstance(ReduceExpressionsRule.CALC_INSTANCE).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "HepProgram program = new HepProgramBuilder().addRuleInstance(new CoerceInputsRule(,false)).addRuleInstance(ProjectToCalcRule.INSTANCE).addRuleInstance(CalcMergeRule.INSTANCE).addRuleInstance(ReduceExpressionsRule.CALC_INSTANCE).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6->5 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+0->4 [style = dashed, label="0"];
+0->6 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+4->2 [style = solid, label="program"];
+6->5 [style = solid, label="program"];
+3->4 [style = bold, label=""];
+0->2 [style = solid, label="program"];
+7->6 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

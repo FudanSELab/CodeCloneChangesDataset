@@ -1,0 +1,35 @@
+digraph {
+10 [style = filled, label = "List<EventListener> listeners = Arrays.asList(m.getListeners())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "Marker m = new ValueMarker(1.0)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testAddRangeMarker['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "plot.clearRangeMarkers()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "listeners = Arrays.asList(m.getListeners())@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testAddRangeMarker['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "XYPlot plot = new XYPlot()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertFalse(listeners.contains(plot))@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertTrue(listeners.contains(plot))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "plot.addRangeMarker(m)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "List listeners = Arrays.asList(m.getListeners())@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testAddRangeMarker['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "CategoryPlot plot = new CategoryPlot()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->1 [style = bold, label=""];
+4->10 [style = bold, label=""];
+5->8 [style = bold, label=""];
+0->2 [style = solid, label="plot"];
+12->2 [style = solid, label="plot"];
+11->12 [style = bold, label=""];
+1->6 [style = bold, label=""];
+0->8 [style = solid, label="plot"];
+7->4 [style = bold, label=""];
+9->0 [style = bold, label=""];
+10->8 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+0->12 [style = dashed, label="0"];
+12->8 [style = solid, label="plot"];
+4->5 [style = bold, label=""];
+12->7 [style = bold, label=""];
+3->0 [style = bold, label=""];
+7->4 [style = solid, label="m"];
+0->7 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

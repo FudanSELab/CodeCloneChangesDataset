@@ -1,0 +1,34 @@
+digraph {
+4 [style = filled, label = "return false@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "ApiTokenProperty.TokenInfoAndStats legacyStats@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "legacyStats == null@@@3@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "hasMoreRecentlyUsedToken['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "hasFreshToken['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "@Nullable ApiTokenProperty.TokenInfoAndStats legacyStats@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "@Nonnull User user@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "@Nullable ApiTokenProperty.TokenInfoAndStats legacyStats@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return apiTokenProperty.getTokenList().stream().filter(null).anyMatch(null)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "@Nonnull User user@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "hasFreshToken['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "@Nonnull User user@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "ApiTokenProperty apiTokenProperty = user.getProperty()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->7 [style = dotted, label="true"];
+4->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+12->2 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->9 [style = dotted, label="true"];
+0->5 [style = dotted, label="true"];
+5->9 [style = dashed, label="0"];
+12->10 [style = dotted, label="true"];
+8->2 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+1->2 [style = solid, label="legacyStats"];
+2->4 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+2->4 [style = dotted, label="true"];
+11->2 [style = solid, label="legacyStats"];
+9->2 [style = solid, label="legacyStats"];
+12->11 [style = dotted, label="true"];
+}

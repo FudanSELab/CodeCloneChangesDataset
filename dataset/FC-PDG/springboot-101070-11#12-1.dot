@@ -1,0 +1,32 @@
+digraph {
+9 [style = filled, label = "this.webTestClient.get().uri(\"/\").exchange().expectStatus().is2xxSuccessful().expectBody().consumeWith(document(\"default-snippets\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(new File(defaultSnippetsDir,\"response-fields.md\")).isFile()@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "given(this.documentationSpec).filter(document(\"default-snippets\",preprocessRequest(modifyUris().scheme(\"https\").host(\"api.example.com\").removePort()))).when().port(this.port).get(\"/\").then().assertThat().statusCode(is(200))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "File defaultSnippetsDir = new File(this.generatedSnippets,\"default-snippets\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "snippetGeneration['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertThat(new File(defaultSnippetsDir,\"http-response.md\")).isFile()@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(contentOf(new File(defaultSnippetsDir,\"curl-request.adoc\"))).contains(\"'https://api.example.com/'\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "snippetGeneration['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(new File(defaultSnippetsDir,\"http-response.adoc\")).isFile()@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertThat(defaultSnippetsDir).exists()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "assertThat(contentOf(new File(defaultSnippetsDir,\"http-request.adoc\"))).contains(\"api.example.com\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertThat(contentOf(new File(defaultSnippetsDir,\"http-request.md\"))).contains(\"api.example.com\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "defaultSnippetsAreWritten['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(contentOf(new File(defaultSnippetsDir,\"curl-request.md\"))).contains(\"'https://api.example.com/'\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+5->3 [style = bold, label=""];
+9->5 [style = bold, label=""];
+3->11 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+3->6 [style = bold, label=""];
+10->9 [style = bold, label=""];
+13->12 [style = bold, label=""];
+7->13 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+11->13 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+6->11 [style = dashed, label="0"];
+}

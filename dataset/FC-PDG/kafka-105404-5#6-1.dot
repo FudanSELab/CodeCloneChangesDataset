@@ -1,0 +1,31 @@
+digraph {
+10 [style = filled, label = "SourceRecord transformed = xform.apply(new SourceRecord(null,null,\"topic\",0,Time.SCHEMA,TIME.getTime()))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertEquals(DATE_PLUS_TIME.getTime(),transformed.value())@@@7@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "xformValue.configure(Collections.singletonMap(TimestampConverter.TARGET_TYPE_CONFIG,\"Timestamp\"))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "assertEquals(Timestamp.SCHEMA,transformed.valueSchema())@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "testWithSchemaIdentity['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "xform.configure(Collections.singletonMap(TimestampConverter.TARGET_TYPE_CONFIG,\"Timestamp\"))@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "SourceRecord transformed = xform.apply(new SourceRecord(null,null,\"topic\",0,Timestamp.SCHEMA,DATE_PLUS_TIME.getTime()))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "SourceRecord transformed = xformValue.apply(new SourceRecord(null,null,\"topic\",0,Timestamp.SCHEMA,DATE_PLUS_TIME.getTime()))@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "testWithSchemaTimeToTimestamp['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertEquals(TIME.getTime(),transformed.value())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertEquals(Timestamp.SCHEMA,transformed.valueSchema())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testWithSchemaIdentity['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "TimestampConverter<SourceRecord> xform = new TimestampConverter.Value<>()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->5 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+8->6 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+10->5 [style = bold, label=""];
+6->9 [style = bold, label=""];
+5->12 [style = bold, label=""];
+7->8 [style = bold, label=""];
+2->10 [style = bold, label=""];
+11->1 [style = bold, label=""];
+0->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+}

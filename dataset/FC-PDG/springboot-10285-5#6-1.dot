@@ -1,0 +1,14 @@
+digraph {
+3 [style = filled, label = "testEmptyMapIsNotAdded['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "ApplicationContextRunner contextRunner = new ApplicationContextRunner().withUserConfiguration().withPropertyValues(\"foo.list(0(:foo\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ApplicationContextRunner contextRunner = new ApplicationContextRunner().withUserConfiguration()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "contextRunner.run(null)@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testList['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testEmptyMapIsNotAdded['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->4 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+3->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

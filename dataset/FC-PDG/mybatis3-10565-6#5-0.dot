@@ -1,0 +1,36 @@
+digraph {
+9 [style = filled, label = "Assertions.assertNotNull(person,\"Persons must not be null\")@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "testAncestor['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Assert.assertNotNull(\"Persons must not be null\",person)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final Person actualAncestor = person.getAncestor()@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testAncestor['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Assert.assertEquals(expectedAncestor,actualAncestor)@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "Person expectedAncestor = personMapper.selectById(1)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Assert.assertEquals(\"Ancestor must be John Smith sr.\",expectedAncestor,person.getAncestor())@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Assertions.assertEquals(expectedAncestor,actualAncestor)@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "Person person = personMapper.selectById(3)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testAncestor['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "PersonMapper personMapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->8 [style = bold, label=""];
+5->6 [style = solid, label="person"];
+5->9 [style = bold, label=""];
+5->9 [style = solid, label="person"];
+2->3 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+7->3 [style = bold, label=""];
+6->1 [style = bold, label=""];
+5->6 [style = bold, label=""];
+4->10 [style = solid, label="expectedAncestor"];
+11->3 [style = bold, label=""];
+1->0 [style = solid, label="actualAncestor"];
+6->10 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+1->8 [style = solid, label="actualAncestor"];
+4->0 [style = solid, label="expectedAncestor"];
+9->1 [style = bold, label=""];
+4->8 [style = solid, label="expectedAncestor"];
+4->5 [style = bold, label=""];
+}

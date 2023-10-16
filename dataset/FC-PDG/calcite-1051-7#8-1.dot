@@ -1,0 +1,21 @@
+digraph {
+7 [style = filled, label = "testFullJoin['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "String s = Linq4j.asEnumerable(emps).concat(Linq4j.asEnumerable(badEmps)).join(Linq4j.asEnumerable(depts),EMP_DEPTNO_SELECTOR,DEPT_DEPTNO_SELECTOR,null,null,true,false).orderBy(Functions.identitySelector()).toList().toString()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "assertEquals(\"(Bill works in Marketing, \" + \"Cedric works in null, \" + \"Eric works in Sales, \" + \"Fred works in Sales, \" + \"Janet works in Sales, \" + \"null works in HR(\",s)@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testRightJoin['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testRightJoin['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "assertEquals(\"(Bill works in Marketing, \" + \"Eric works in Sales, \" + \"Fred works in Sales, \" + \"Janet works in Sales, \" + \"null works in HR(\",s)@@@4@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "String s = Linq4j.asEnumerable(emps).concat(Linq4j.asEnumerable(badEmps)).join(Linq4j.asEnumerable(depts),EMP_DEPTNO_SELECTOR,DEPT_DEPTNO_SELECTOR,new Function2<Employee,Department,String>(){public String apply(Employee v1,Department v2){return (v1 == null? null: v1.name) + \" works in \" + (v2 == null? null: v2.name)}},null,true,true).orderBy(Functions.identitySelector()).toList().toString()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertEquals(\"(Bill works in Marketing, \" + \"Eric works in Sales, \" + \"Fred works in Sales, \" + \"Janet works in Sales, \" + \"null works in HR(\",s)@@@9@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->6 [style = solid, label="s"];
+4->5 [style = solid, label="s"];
+7->0 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+0->6 [style = bold, label=""];
+0->2 [style = solid, label="s"];
+4->5 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

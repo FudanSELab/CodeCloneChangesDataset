@@ -1,0 +1,27 @@
+digraph {
+10 [style = filled, label = "entry.setField(StandardField.AUTHOR,\"John Doe and Donald Smith and Will Wonder\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertEquals(Optional.of(\"Doe2016\"),entry.getCitationKey())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "generateDefaultKeyStartDuplicatesAtB['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "generateDefaultKeyStartDuplicatesAtB['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "new CitationKeyGenerator(bibtexKeyPattern,database,preferences).generateAndSetKey(entry)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "new CitationKeyGenerator(bibtexKeyPattern,database,preferences).generateAndSetKey(entry)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertEquals(Optional.of(\"Doe2016\"),entry.getCiteKeyOptional())@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "bibtexKeyPattern.setDefaultValue(\"(auth((year(\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertEquals(Optional.of(\"Doe3016\"),entry.getCiteKeyOptional())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "preferences = new CitationKeyPatternPreferences(false,false,false,CitationKeyPatternPreferences.KeySuffix.SECOND_WITH_A,\"2\",\"3\",DEFAULT_UNWANTED_CHARACTERS,pattern,',')@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "preferences = new CitationKeyPatternPreferences(false,false,false,CitationKeyPatternPreferences.KeySuffix.SECOND_WITH_B,\"\",\"\",DEFAULT_UNWANTED_CHARACTERS,pattern,',')@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "generateKeyRegExReplace['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+1->4 [style = bold, label=""];
+5->2 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+9->7 [style = bold, label=""];
+3->4 [style = dashed, label="0"];
+2->9 [style = dashed, label="0"];
+7->10 [style = bold, label=""];
+2->1 [style = bold, label=""];
+11->6 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->9 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

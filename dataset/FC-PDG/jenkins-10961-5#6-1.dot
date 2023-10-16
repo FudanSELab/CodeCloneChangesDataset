@@ -1,0 +1,29 @@
+digraph {
+7 [style = filled, label = "@CheckForNull Slave it@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "@Nonnull Slave.SlaveDescriptor itDescriptor@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "return r@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "r.add(d)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = ".isAssignableFrom(d.getKlass().toJavaClass())@@@5@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "List<Descriptor<ComputerLauncher>> r = new ArrayList<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "applicableDescriptors['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "applicableDescriptors['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "getApplicableDescriptors['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "@Nonnull Slave.SlaveDescriptor itDescriptor@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "List<Descriptor<ComputerLauncher>> r = new ArrayList<Descriptor<ComputerLauncher>>()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->2 [style = solid, label="r"];
+3->8 [style = dashed, label="0"];
+4->5 [style = dotted, label="true"];
+4->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+10->3 [style = bold, label=""];
+8->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+9->7 [style = dotted, label="true"];
+9->8 [style = bold, label=""];
+8->2 [style = solid, label="r"];
+0->6 [style = bold, label=""];
+4->1 [style = dotted, label="true"];
+0->2 [style = bold, label=""];
+6->2 [style = bold, label=""];
+9->5 [style = dotted, label="true"];
+}

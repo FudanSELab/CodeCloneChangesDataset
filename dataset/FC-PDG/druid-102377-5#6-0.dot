@@ -1,0 +1,35 @@
+digraph {
+0 [style = filled, label = "JsonConfigProvider.bind(binder,\"druid.kinesis\",,Names.named(\"kinesis\"))@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "configure['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "PolyBind.createChoice(binder,\"druid.indexer.task.chathandler.type\",Key.get(),Key.get())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "Binder binder@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final MapBinder<String,ChatHandlerProvider> handlerProviderBinder = PolyBind.optionBinder(binder,Key.get())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "JsonConfigProvider.bind(binder,PROPERTY_BASE,,Names.named(AWS_SCOPE))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "Binder binder@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "handlerProviderBinder.addBinding(\"announce\").to().in()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "handlerProviderBinder.addBinding(\"noop\").to().in()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "binder.bind().in()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "binder.bind().in()@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "binder.bind(new TypeLiteral<SeekableStreamIndexTaskClientFactory<KinesisIndexTaskClient>>(){}).to().in()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "configure['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "bindChatHandler['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+2->0 [style = solid, label="binder"];
+4->3 [style = bold, label=""];
+10->8 [style = solid, label="binder"];
+11->8 [style = bold, label=""];
+3->5 [style = bold, label=""];
+10->11 [style = solid, label="binder"];
+6->7 [style = bold, label=""];
+1->2 [style = dotted, label="true"];
+0->5 [style = dashed, label="0"];
+13->10 [style = dotted, label="true"];
+12->6 [style = bold, label=""];
+13->11 [style = bold, label=""];
+8->12 [style = bold, label=""];
+2->5 [style = solid, label="binder"];
+3->0 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+4->2 [style = dotted, label="true"];
+}

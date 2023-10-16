@@ -1,0 +1,35 @@
+digraph {
+11 [style = filled, label = "tester.checkNull(\"log10(cast(null as real))\")@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "tester.checkNull(\"exp(cast(null as integer))\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "tester.checkScalarApprox(\"log10(cast(10e-3 as real))\",\"DOUBLE NOT NULL\",-2.0,0.000001)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "tester.checkScalarApprox(\"exp(2)\",\"DOUBLE NOT NULL\",7.389056,0.000001)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "tester.setFor(SqlStdOperatorTable.EXP,VM_FENNEL)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "tester.checkScalarApprox(\"log10(10)\",\"DOUBLE NOT NULL\",1.0,0.000001)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testExpFunc['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "tester.checkScalarApprox(\"log10(100.0)\",\"DOUBLE NOT NULL\",2.0,0.000001)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testExpFunc['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "tester.checkScalarApprox(\"log10(cast(10e2 as float))\",\"DOUBLE NOT NULL\",3.0,0.000001)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "tester.checkNull(\"exp(cast(null as double))\")@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "tester.checkScalarApprox(\"log10(cast(10e8 as double))\",\"DOUBLE NOT NULL\",9.0,0.000001)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "tester.checkScalarApprox(\"exp(-2)\",\"DOUBLE NOT NULL\",0.1353,0.0001)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testLogFunc['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "tester.setFor(SqlStdOperatorTable.LOG10)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+5->13 [style = dashed, label="0"];
+3->8 [style = dashed, label="0"];
+6->3 [style = bold, label=""];
+8->10 [style = bold, label=""];
+12->14 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+13->9 [style = bold, label=""];
+9->12 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+4->10 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+10->13 [style = bold, label=""];
+7->8 [style = bold, label=""];
+14->11 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

@@ -1,0 +1,23 @@
+digraph {
+1 [style = filled, label = "database.setDatabasePath(file)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertEquals(Collections.singletonList(currentWorkingDir.resolve(file.getParent())),database.getFileDirectories(fileDirPrefs))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "getFileDirectoriesWithAbsoluteDbParent['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertEquals(Collections.singletonList(currentWorkingDir.resolve(file.getParent())),database.getFileDirectoriesAsPaths(fileDirPrefs))@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "getFileDirectoriesWithRelativeDottedDbParent['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Path file = Path.of(\"/absolute/subdir\").resolve(\"biblio.bib\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "BibDatabaseContext database = new BibDatabaseContext()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Path file = Path.of(\"./relative/subdir\").resolve(\"biblio.bib\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "getFileDirectoriesWithRelativeDottedDbParent['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->3 [style = bold, label=""];
+1->5 [style = bold, label=""];
+8->0 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+6->4 [style = bold, label=""];
+4->1 [style = solid, label="file"];
+8->1 [style = solid, label="file"];
+7->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+4->0 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+}

@@ -1,0 +1,36 @@
+digraph {
+11 [style = filled, label = "isUnswapMethod['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "MethodInfo mi@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "MethodInfo mi@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "BeanContext bc@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ClassInfo rt@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "ClassInfo ci@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "MethodInfo mi@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "ClassInfo rt@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "isUnswapMethod['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "BeanContext bc@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "ClassInfo ci@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "ClassInfo rt@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "return mi.isNotDeprecated() && mi.isStatic() && mi.isVisible(bc.getBeanMethodVisibility()) && mi.hasName(UNSWAP_METHOD_NAMES) && mi.hasFuzzyParamTypes(,rt.inner()) && mi.hasReturnTypeParent(ci) && !bc.hasAnnotation(,mi)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "isUnswapMethod['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "return mi.isNotDeprecated() && mi.isStatic() && mi.hasName(UNSWAP_METHOD_NAMES) && mi.hasFuzzyParamTypes(,rt.inner()) && mi.hasReturnTypeParent(ci) && !bc.hasAnnotation(,mi)@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->4 [style = solid, label="ci"];
+2->3 [style = dotted, label="true"];
+10->8 [style = dotted, label="true"];
+11->4 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+10->6 [style = dotted, label="true"];
+11->5 [style = dotted, label="true"];
+10->9 [style = bold, label=""];
+2->0 [style = dotted, label="true"];
+11->13 [style = dotted, label="true"];
+2->5 [style = dotted, label="true"];
+10->5 [style = dotted, label="true"];
+2->1 [style = dotted, label="true"];
+2->4 [style = bold, label=""];
+10->7 [style = dotted, label="true"];
+8->9 [style = solid, label="ci"];
+11->12 [style = dotted, label="true"];
+14->4 [style = solid, label="ci"];
+11->14 [style = dotted, label="true"];
+}

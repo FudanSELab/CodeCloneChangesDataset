@@ -1,0 +1,11 @@
+digraph {
+1 [style = filled, label = "sanitizeWithDefaultSettings['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "this.contextRunner.withUserConfiguration().withPropertyValues(\"test.keys-to-sanitize=.*pass.*\").run(assertProperties(\"test\",null))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "sanitizeWithDefaultSettings['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "sanitizeWithCustomKeyPattern['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "this.contextRunner.withUserConfiguration().run(assertProperties(\"test\",null,null))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->0 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+4->3 [style = bold, label=""];
+}

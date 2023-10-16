@@ -1,0 +1,19 @@
+digraph {
+3 [style = filled, label = "final List<RelDataTypeField> fieldList = table.getRowType().getFieldList()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final RelDataTypeFactory.Builder builder = getCluster().getTypeFactory().builder()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "deriveRowType['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "deriveRowType['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "builder.add(fieldList.get(field))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "return builder.build()@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final RelDataTypeFactory.FieldInfoBuilder builder = getCluster().getTypeFactory().builder()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "deriveRowType['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4->5 [style = dashed, label="0"];
+0->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+3->4 [style = bold, label=""];
+7->3 [style = bold, label=""];
+}

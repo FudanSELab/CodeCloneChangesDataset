@@ -1,0 +1,30 @@
+digraph {
+2 [style = filled, label = "CalciteAssert.that().enable(enabled()).withModel(FOODMART).with(CalciteConnectionProperty.TIME_ZONE.camelName(),\"EST\").query(sql2).runs().returnsOrdered(\"EXPR$0=19\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final String sql2 = \"SELECT EXTRACT(HOUR from CAST(\"timestamp\" AS TIMESTAMP)) \" + \"from \"foodmart\" WHERE\" + \" EXTRACT(HOUR from CAST(\"timestamp\" AS TIMESTAMP)) = 19 \" + \"group by EXTRACT(HOUR from CAST(\"timestamp\" AS TIMESTAMP)) \"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "testExtractHourFilterExpressionWithCast['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final String sql = \"SELECT EXTRACT(HOUR from \"timestamp\") \" + \"from \"foodmart\" WHERE EXTRACT(HOUR from \"timestamp\") = 17 \" + \"group by EXTRACT(HOUR from \"timestamp\") \"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "CalciteAssert.that().enable(enabled()).withModel(FOODMART).with(CalciteConnectionProperty.TIME_ZONE.camelName(),\"UTC\").query(sql3).runs().returnsOrdered(\"EXPR$0=0\")@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testExtractHourFilterExpression['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testExtractHourFilterExpression['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "final String sql = \"SELECT EXTRACT(HOUR from CAST(\"timestamp\" AS TIMESTAMP)) \" + \"from \"foodmart\" WHERE EXTRACT(HOUR from \"timestamp\") = 17 \" + \"group by EXTRACT(HOUR from CAST(\"timestamp\" AS TIMESTAMP)) \"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "CalciteAssert.that().enable(enabled()).withModel(FOODMART).with(CalciteConnectionProperty.TIME_ZONE.camelName(),\"America/Los_Angeles\").query(sql).runs().returnsOrdered(\"EXPR$0=17\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final String sql2 = \"SELECT EXTRACT(HOUR from \"timestamp\") \" + \"from \"foodmart\" WHERE\" + \" EXTRACT(HOUR from \"timestamp\") = 19 \" + \"group by EXTRACT(HOUR from \"timestamp\") \"@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final String sql3 = \"SELECT EXTRACT(HOUR from CAST(\"timestamp\" AS TIMESTAMP)) \" + \"from \"foodmart\" WHERE EXTRACT(HOUR from CAST(\"timestamp\" AS TIMESTAMP)) = 0 \" + \"group by EXTRACT(HOUR from CAST(\"timestamp\" AS TIMESTAMP)) \"@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final String sql3 = \"SELECT EXTRACT(HOUR from \"timestamp\") \" + \"from \"foodmart\" WHERE EXTRACT(HOUR from \"timestamp\") = 0 \" + \"group by EXTRACT(HOUR from \"timestamp\") \"@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+11->8 [style = bold, label=""];
+3->6 [style = bold, label=""];
+5->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+0->9 [style = bold, label=""];
+6->0 [style = bold, label=""];
+6->8 [style = dashed, label="0"];
+5->9 [style = dashed, label="0"];
+4->10 [style = dashed, label="0"];
+10->1 [style = bold, label=""];
+2->10 [style = bold, label=""];
+2->4 [style = bold, label=""];
+9->2 [style = bold, label=""];
+7->6 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

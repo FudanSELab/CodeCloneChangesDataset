@@ -1,0 +1,21 @@
+digraph {
+6 [style = filled, label = "shouldHashCodeTriggerLazyLoading['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "shouldHashCodeTriggerLazyLoading['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "shouldCloneTriggerLazyLoading['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "User user = mapper.getUser(1)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "sqlSessionFactory.getConfiguration().setAggressiveLazyLoading(false)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "user.hashCode()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(3,user.setterCounter)@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "user.clone()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+6->0 [style = bold, label=""];
+7->0 [style = bold, label=""];
+1->8 [style = bold, label=""];
+5->0 [style = bold, label=""];
+0->4 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

@@ -1,0 +1,19 @@
+digraph {
+1 [style = filled, label = "Request request = trace.getRequest()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "HttpTrace trace = new HttpExchangeTracer(EnumSet.of(Include.REQUEST_HEADERS,Include.AUTHORIZATION_HEADER)).receivedRequest(createRequest(Collections.singletonMap(mixedCase(HttpHeaders.AUTHORIZATION),Arrays.asList(\"secret\"))))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(request.getHeaders()).containsOnlyKeys(HttpHeaders.AUTHORIZATION)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "mixedCaseAuthorizationHeaderCanBeIncluded['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(request.getHeaders()).containsOnlyKeys(mixedCase(HttpHeaders.AUTHORIZATION))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "authorizationHeaderCanBeIncluded['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "HttpTrace trace = new HttpExchangeTracer(EnumSet.of(Include.REQUEST_HEADERS,Include.AUTHORIZATION_HEADER)).receivedRequest(createRequest(Collections.singletonMap(HttpHeaders.AUTHORIZATION,Arrays.asList(\"secret\"))))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "authorizationHeaderCanBeIncluded['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+5->7 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+1->6 [style = bold, label=""];
+7->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+2->6 [style = dashed, label="0"];
+}

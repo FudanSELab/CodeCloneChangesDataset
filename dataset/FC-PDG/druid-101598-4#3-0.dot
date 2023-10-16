@@ -1,0 +1,25 @@
+digraph {
+1 [style = filled, label = "testGroupByLimitWrappingOrderByAgg['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testQuery(\"SELECT dim1, dim2, COUNT(*) FROM druid.foo GROUP BY dim1, dim2 ORDER BY dim1 DESC\",OUTER_LIMIT_CONTEXT,ImmutableList.of(new GroupByQuery.Builder().setDataSource(CalciteTests.DATASOURCE1).setInterval(querySegmentSpec(Filtration.eternity())).setGranularity(Granularities.ALL).setDimensions(new DefaultDimensionSpec(\"dim1\",\"d0\",ValueType.STRING),new DefaultDimensionSpec(\"dim2\",\"d1\",ValueType.STRING)).setLimitSpec(new DefaultLimitSpec(ImmutableList.of(new OrderByColumnSpec(\"d0\",Direction.DESCENDING,StringComparators.LEXICOGRAPHIC)),2)).setAggregatorSpecs(aggregators(new CountAggregatorFactory(\"a0\"))).setContext(OUTER_LIMIT_CONTEXT).build()),expected)@@@18@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "List<Object((> expected@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testGroupByLimitWrapping['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "expected = ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@98de86,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@98de8c)@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testGroupByLimitWrappingOrderByAgg['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "testQuery(\"SELECT dim1, dim2, COUNT(*) FROM druid.foo GROUP BY 1, 2 ORDER BY 3 DESC\",OUTER_LIMIT_CONTEXT,ImmutableList.of(new GroupByQuery.Builder().setDataSource(CalciteTests.DATASOURCE1).setInterval(querySegmentSpec(Filtration.eternity())).setGranularity(Granularities.ALL).setDimensions(new DefaultDimensionSpec(\"dim1\",\"d0\",ValueType.STRING),new DefaultDimensionSpec(\"dim2\",\"d1\",ValueType.STRING)).setLimitSpec(new DefaultLimitSpec(ImmutableList.of(new OrderByColumnSpec(\"a0\",Direction.DESCENDING,StringComparators.NUMERIC)),2)).setAggregatorSpecs(aggregators(new CountAggregatorFactory(\"a0\"))).setContext(OUTER_LIMIT_CONTEXT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@98de52,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@98de58))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "expected = ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@98de72,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@98de78)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testQuery(\"SELECT dim1, dim2, COUNT(*) FROM druid.foo GROUP BY 1, 2 ORDER BY 3 DESC\",OUTER_LIMIT_CONTEXT,ImmutableList.of(new GroupByQuery.Builder().setDataSource(CalciteTests.DATASOURCE1).setInterval(querySegmentSpec(Filtration.eternity())).setGranularity(Granularities.ALL).setDimensions(new DefaultDimensionSpec(\"dim1\",\"d0\",ValueType.STRING),new DefaultDimensionSpec(\"dim2\",\"d1\",ValueType.STRING)).setLimitSpec(new DefaultLimitSpec(ImmutableList.of(new OrderByColumnSpec(\"a0\",Direction.DESCENDING,StringComparators.NUMERIC)),2)).setAggregatorSpecs(aggregators(new CountAggregatorFactory(\"a0\"))).setContext(OUTER_LIMIT_CONTEXT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@98ddf7,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@98ddfd))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "NullHandling.replaceWithDefault()@@@4@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+6->5 [style = solid, label="expected"];
+6->5 [style = bold, label=""];
+7->6 [style = dotted, label="true"];
+0->2 [style = dashed, label="0"];
+4->5 [style = solid, label="expected"];
+1->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+3->2 [style = bold, label=""];
+9->7 [style = bold, label=""];
+4->5 [style = bold, label=""];
+7->4 [style = dotted, label="false"];
+7->6 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

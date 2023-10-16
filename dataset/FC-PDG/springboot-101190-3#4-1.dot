@@ -1,0 +1,30 @@
+digraph {
+10 [style = filled, label = "assertThat(this.context.getParent().getEnvironment().acceptsProfiles(\"admin\")).isTrue()@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(this.context.getParent().getEnvironment().getProperty(\"transport\")).isEqualTo(\"redis\")@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(this.context.getEnvironment().getProperty(\"transport\")).isEqualTo(\"redis\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "parentFirstCreationWithProfileAndDefaultArgs['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "this.context = application.run()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "parentFirstWithDifferentProfileAndExplicitEnvironment['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(this.context.getParent().getEnvironment().acceptsProfiles(\"node\")).isTrue()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(this.context.getEnvironment().acceptsProfiles(\"node\",\"admin\")).isTrue()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "SpringApplicationBuilder application = new SpringApplicationBuilder().environment(new StandardEnvironment()).profiles(\"node\").properties(\"transport=redis\").child().profiles(\"admin\").web(WebApplicationType.NONE)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "parentFirstCreationWithProfileAndDefaultArgs['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "SpringApplicationBuilder application = new SpringApplicationBuilder().profiles(\"node\").properties(\"transport=redis\").child().web(WebApplicationType.NONE)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(this.context.getEnvironment().acceptsProfiles(\"node\")).isTrue()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(this.context.getEnvironment().getProperty(\"bar\")).isEqualTo(\"spam\")@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->12 [style = bold, label=""];
+6->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->5 [style = bold, label=""];
+12->10 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+8->2 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+11->9 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+1->7 [style = bold, label=""];
+9->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

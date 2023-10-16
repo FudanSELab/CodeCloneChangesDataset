@@ -1,0 +1,29 @@
+digraph {
+5 [style = filled, label = "vectorTriggers['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "vectorTriggers['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertEquals(,t.getClass())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "AbstractProject<?,?> p = (AbstractProject<?,?>)j.jenkins.createProjectFromXML(\"foo\",getClass().getResourceAsStream(\"AbstractProjectTest/vectorTriggers.xml\"))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "assertEquals(\"H/5 * * * *\",t.getSpec())@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertEquals(\"*/10 * * * *\",t.getSpec())@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Trigger<?> t = p.triggers().get(0)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "SCMTrigger newTrigger = new SCMTrigger(\"H/5 * * * *\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "addTriggerSameType['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "p.addTrigger(newTrigger)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "AbstractProject<?,?> p = (AbstractProject)j.jenkins.createProjectFromXML(\"foo\",getClass().getResourceAsStream(\"AbstractProjectTest/vectorTriggers.xml\"))@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(1,p.triggers().size())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->10 [style = bold, label=""];
+8->1 [style = bold, label=""];
+10->8 [style = solid, label="newTrigger"];
+4->1 [style = bold, label=""];
+7->1 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+10->8 [style = bold, label=""];
+9->4 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+2->11 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

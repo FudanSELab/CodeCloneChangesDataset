@@ -1,0 +1,26 @@
+digraph {
+8 [style = filled, label = "params.set(\"follower\",false)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "params.set(\"slave\",false)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "ModifiableSolrParams params = new ModifiableSolrParams()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "getDetails['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "long gen@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "QueryRequest request = new QueryRequest(params)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "params.set(CommonParams.QT,ReplicationHandler.PATH)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "params.set(COMMAND,CMD_DETAILS)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "getDetails['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return client.request(request)@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "fetchFileList['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+4->1 [style = bold, label=""];
+6->8 [style = dashed, label="0"];
+1->6 [style = bold, label=""];
+4->5 [style = solid, label="params"];
+1->8 [style = bold, label=""];
+7->4 [style = bold, label=""];
+8->2 [style = bold, label=""];
+9->10 [style = dotted, label="true"];
+0->4 [style = bold, label=""];
+5->3 [style = solid, label="request"];
+2->5 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

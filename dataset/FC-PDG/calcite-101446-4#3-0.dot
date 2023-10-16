@@ -1,0 +1,37 @@
+digraph {
+0 [style = filled, label = "testOverWithoutOrderKey['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "String relJson = RelOptUtil.dumpPlan(\"\",rel,SqlExplainFormat.JSON,SqlExplainLevel.EXPPLAN_ATTRIBUTES)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(s,isLinux(expected))@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testOverWithoutOrderKey['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final String expected = \"\" + \"LogicalProject($f0=(COUNT() OVER (PARTITION BY $7)()\" + \" LogicalTableScan(table=((scott, EMP(()\"@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "final RelNode rel = mockCountOver(\"EMP\",ImmutableList.of(\"DEPTNO\"),ImmutableList.of())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final String expected = \"\" + \"LogicalProject($f0=(COUNT() OVER (ORDER BY $7 NULLS LAST ROWS\" + \" BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)()\" + \" LogicalTableScan(table=((scott, EMP(()\"@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final String expected = \"\" + \"LogicalProject($f0=(COUNT() OVER\" + \" (PARTITION BY $7 ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)()\" + \" LogicalTableScan(table=((scott, EMP(()\"@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "testOverWithoutPartition['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "String s = deserializeAndDumpToTextFormat(getSchema(rel),relJson)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final RelNode rel = mockCountOver(\"EMP\",ImmutableList.of(),ImmutableList.of(\"DEPTNO\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+5->1 [style = solid, label="rel"];
+3->1 [style = bold, label=""];
+2->4 [style = solid, label="expected"];
+9->4 [style = bold, label=""];
+8->3 [style = bold, label=""];
+8->3 [style = solid, label="rel"];
+7->4 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+1->7 [style = bold, label=""];
+1->9 [style = bold, label=""];
+8->1 [style = solid, label="rel"];
+6->5 [style = bold, label=""];
+1->4 [style = solid, label="s"];
+10->8 [style = bold, label=""];
+3->1 [style = solid, label="relJson"];
+2->9 [style = dashed, label="0"];
+5->3 [style = solid, label="rel"];
+9->4 [style = solid, label="expected"];
+5->8 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+7->4 [style = solid, label="expected"];
+0->5 [style = bold, label=""];
+}

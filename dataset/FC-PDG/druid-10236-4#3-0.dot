@@ -1,0 +1,35 @@
+digraph {
+8 [style = filled, label = "Assert.assertEquals(segments.stream().map(null).collect(Collectors.toList()),getUsedSegmentIds())@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "coordinator.announceHistoricalSegments(segments)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Assert.assertArrayEquals(mapper.writeValueAsString(segment).getBytes(\"UTF-8\"),derbyConnector.lookup(derbyConnectorRule.metadataTablesConfigSupplier().get().getSegmentsTable(),\"id\",\"payload\",segment.getIdentifier()))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "Assert.assertArrayEquals(mapper.writeValueAsString(segment).getBytes(\"UTF-8\"),derbyConnector.lookup(derbyConnectorRule.metadataTablesConfigSupplier().get().getSegmentsTable(),\"id\",\"payload\",segment.getIdentifier()))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "additionalNumberedShardTest['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "coordinator.announceHistoricalSegments(segments)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Assert.assertEquals(0,metadataUpdateCounter.get())@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Assert.assertArrayEquals(mapper.writeValueAsString(segment).getBytes(StandardCharsets.UTF_8),derbyConnector.lookup(derbyConnectorRule.metadataTablesConfigSupplier().get().getSegmentsTable(),\"id\",\"payload\",segment.getId().toString()))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "Assert.assertEquals(ImmutableList.of(defaultSegment4.getIdentifier()),getUsedIdentifiers())@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "additionalNumberedShardTest['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Assert.assertEquals(segments.stream().map(null).collect(Collectors.toList()),getUsedIdentifiers())@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "final ImmutableSet<DataSegment> segments = ImmutableSet.of(defaultSegment,defaultSegment2,defaultSegment4)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Set<DataSegment> segments@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testOvershadowingAnnounce['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+7->0 [style = bold, label=""];
+1->13 [style = dashed, label="0"];
+4->3 [style = dotted, label="true"];
+3->0 [style = solid, label="segments"];
+8->5 [style = bold, label=""];
+9->10 [style = bold, label=""];
+10->13 [style = bold, label=""];
+11->9 [style = solid, label="segments"];
+11->9 [style = bold, label=""];
+0->6 [style = bold, label=""];
+7->3 [style = dotted, label="true"];
+2->1 [style = bold, label=""];
+6->8 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+12->11 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

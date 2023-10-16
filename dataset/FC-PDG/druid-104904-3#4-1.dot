@@ -1,0 +1,36 @@
+digraph {
+1 [style = filled, label = "testWithCacheAndFetch['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertNumRemainingCacheFiles(firehoseTmpDir,1)@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertNumRemainingCacheFiles(firehoseTmpDir,2)@@@12@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertResult(rows)@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final File firehoseTmpDir = createFirehoseTmpDir(\"testWithCacheAndFetch\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "final File firehoseTmpDir = createFirehoseTmpDir(\"testWithSmallCacheAndLargeFetch\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "rows.add(firehose.nextRow())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final TestPrefetchableTextFilesFirehoseFactory factory = TestPrefetchableTextFilesFirehoseFactory.with(TEST_DIR,1024,2048)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final TestPrefetchableTextFilesFirehoseFactory factory = TestPrefetchableTextFilesFirehoseFactory.of(TEST_DIR)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "firehose.hasMore()@@@7@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final List<Row> rows = new ArrayList<>()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testWithSmallCacheAndLargeFetch['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testWithCacheAndFetch['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6->3 [style = bold, label=""];
+7->2 [style = dotted, label="true"];
+6->9 [style = dashed, label="0"];
+8->6 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+3->12 [style = bold, label=""];
+3->4 [style = bold, label=""];
+12->7 [style = bold, label=""];
+4->7 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+7->5 [style = bold, label=""];
+1->6 [style = bold, label=""];
+5->0 [style = bold, label=""];
+4->0 [style = solid, label="firehoseTmpDir"];
+7->2 [style = bold, label=""];
+9->3 [style = bold, label=""];
+12->11 [style = solid, label="firehoseTmpDir"];
+5->11 [style = bold, label=""];
+10->9 [style = bold, label=""];
+2->7 [style = bold, label=""];
+3->5 [style = solid, label="rows"];
+}

@@ -1,0 +1,26 @@
+digraph {
+9 [style = filled, label = "ofNameWhenDoubleRunOnAndAssociative['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "ofNameWhenDoubleRunOnAndAssociative['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(name.getElement(0,Form.ORIGINAL)).isEqualTo(\"foo\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ConfigurationPropertyName name = ConfigurationPropertyName.of(\"foo(bar(baz\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "ConfigurationPropertyName name = ConfigurationPropertyName.of(\"foo.(bar(.baz\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(name.getElement(1,Form.ORIGINAL)).isEqualTo(\"bar\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "ofNameWhenDoubleDotAndAssociative['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertThat(name.isIndexed(1)).isTrue()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThat(name.isIndexed(0)).isFalse()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(name.getElement(2,Form.ORIGINAL)).isEqualTo(\"baz\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(name.toString()).isEqualTo(\"foo(bar(.baz\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(name.isIndexed(2)).isFalse()@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->10 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+10->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->8 [style = bold, label=""];
+6->7 [style = bold, label=""];
+9->7 [style = bold, label=""];
+11->10 [style = bold, label=""];
+7->2 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->5 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

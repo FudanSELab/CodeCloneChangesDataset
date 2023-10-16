@@ -1,0 +1,38 @@
+digraph {
+11 [style = filled, label = "testWriteIdempotentWithInvalidBaseSequence['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "long pid = 9809@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "buffer.position(bufferOffset)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "short epoch = 15@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "builder.close()@@@9@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "MemoryRecordsBuilder builder = new MemoryRecordsBuilder(buffer,RecordBatch.CURRENT_MAGIC_VALUE,compressionType,TimestampType.CREATE_TIME,0L,0L,pid,epoch,sequence,true,false,RecordBatch.NO_PARTITION_LEADER_EPOCH,buffer.capacity())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThrows(,null)@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "ByteBuffer buffer = ByteBuffer.allocate(128)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "int sequence = RecordBatch.NO_SEQUENCE@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "int sequence = 2342@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "long pid = RecordBatch.NO_PRODUCER_ID@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testWriteTransactionalWithInvalidPID['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "testWriteTransactionalWithInvalidPID['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6->3 [style = bold, label=""];
+0->6 [style = solid, label="sequence"];
+10->6 [style = solid, label="sequence"];
+0->6 [style = bold, label=""];
+9->2 [style = bold, label=""];
+7->10 [style = bold, label=""];
+7->0 [style = bold, label=""];
+2->6 [style = solid, label="buffer"];
+2->4 [style = bold, label=""];
+1->7 [style = bold, label=""];
+10->6 [style = bold, label=""];
+11->2 [style = bold, label=""];
+12->7 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+1->6 [style = solid, label="pid"];
+1->12 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+12->6 [style = solid, label="pid"];
+7->6 [style = solid, label="epoch"];
+6->8 [style = bold, label=""];
+4->12 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+}

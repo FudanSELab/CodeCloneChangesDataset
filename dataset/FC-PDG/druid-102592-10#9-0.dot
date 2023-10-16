@@ -1,0 +1,22 @@
+digraph {
+0 [style = filled, label = "return new ParallelIndexTuningConfig(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "return new ParallelIndexTuningConfig(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "int maxNumConcurrentSubTasks@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "PartitionsSpec partitionsSpec@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "return new ParallelIndexTuningConfig(null,null,null,null,null,null,null,new MaxSizeSplitHintSpec(null,1),partitionsSpec,null,null,null,forceGuaranteedRollup,null,null,null,null,maxNumConcurrentSubTasks,null,null,null,null,null,null,null,null,null,null)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "defaultConfig['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "defaultConfig['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "newTuningConfig['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "boolean forceGuaranteedRollup@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7->8 [style = solid, label="forceGuaranteedRollup"];
+0->8 [style = dashed, label="0"];
+0->2 [style = dashed, label="0"];
+5->8 [style = solid, label="maxNumConcurrentSubTasks"];
+1->0 [style = bold, label=""];
+4->8 [style = solid, label="partitionsSpec"];
+3->2 [style = bold, label=""];
+6->4 [style = dotted, label="true"];
+6->8 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+6->7 [style = dotted, label="true"];
+}

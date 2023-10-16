@@ -1,0 +1,24 @@
+digraph {
+7 [style = filled, label = "final FileAnnotation expected = new FileAnnotation(\"Linus Dietz\",LocalDateTime.of(2017,3,12,20,36,9),1,\"Hello\",FileAnnotationType.UNDERLINE,Optional.of(expectedLinkedAnnotation))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final FileAnnotation expectedLinkedAnnotation = new FileAnnotation(\"Linus Dietz\",LocalDateTime.of(2017,3,12,20,36,9),1,\"underlined\",FileAnnotationType.UNDERLINE,Optional.empty())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "underlineWithNoteMinimal['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final FileAnnotation expected = new FileAnnotation(\"Linus Dietz\",LocalDateTime.of(2017,3,12,20,25),1,\"inline note annotation\",FileAnnotationType.FREETEXT,Optional.empty())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(Collections.singletonList(expected),importer.importAnnotations(Paths.get(\"src/test/resources/pdfs/minimal-underline.pdf\")))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "inlineNoteMinimal['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "assertEquals(Collections.singletonList(expected),importer.importAnnotations(Paths.get(\"src/test/resources/pdfs/minimal-inlinenote.pdf\")))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(Collections.singletonList(expected),importer.importAnnotations(Path.of(\"src/test/resources/pdfs/minimal-inlinenote.pdf\")))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "inlineNoteMinimal['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+5->7 [style = bold, label=""];
+4->1 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+5->7 [style = solid, label="expectedLinkedAnnotation"];
+1->0 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+7->6 [style = solid, label="expected"];
+8->5 [style = bold, label=""];
+2->1 [style = bold, label=""];
+7->6 [style = bold, label=""];
+1->3 [style = solid, label="expected"];
+1->0 [style = solid, label="expected"];
+}

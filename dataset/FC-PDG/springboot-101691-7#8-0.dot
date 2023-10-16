@@ -1,0 +1,36 @@
+digraph {
+6 [style = filled, label = "assertThat(this.context.getBeanFactory().getSingleton(\"b\")).isEqualTo(\"b\")@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "StaticApplicationContext context = new StaticApplicationContext()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "TestPropertySourceUtils.addInlinedPropertiesToEnvironment(this.context,\"context.listener.classes=\" + .getName() + \",\" + .getName())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "this.listener.onApplicationEvent(new ApplicationEnvironmentPreparedEvent(new SpringApplication(),new String((((,this.context.getEnvironment()))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+14 [style = filled, label = "orderedInitialize['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "this.context.getBeanFactory().registerSingleton(\"testListener\",this.listener)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "orderedInitialize['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "this.context.refresh()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "orderedInitialize['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(context.getBeanFactory().getSingleton(\"a\")).isEqualTo(\"a\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertThat(context.getBeanFactory().getSingleton(\"b\")).isEqualTo(\"b\")@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "this.initializer.initialize(context)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "TestPropertySourceUtils.addInlinedPropertiesToEnvironment(context,\"context.initializer.classes=\" + .getName() + \",\" + .getName())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "this.listener.onApplicationEvent(new ApplicationEnvironmentPreparedEvent(new DefaultBootstrapContext(),new SpringApplication(),new String((((,this.context.getEnvironment()))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "assertThat(this.context.getBeanFactory().getSingleton(\"a\")).isEqualTo(\"a\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->4 [style = bold, label=""];
+13->12 [style = solid, label="context"];
+13->12 [style = bold, label=""];
+14->13 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+9->10 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+11->9 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+1->7 [style = bold, label=""];
+13->11 [style = solid, label="context"];
+2->1 [style = bold, label=""];
+7->3 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+12->11 [style = bold, label=""];
+}

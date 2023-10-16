@@ -1,0 +1,32 @@
+digraph {
+0 [style = filled, label = "addObjectExtraActions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "addObjectExtraActions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "addObjectExtraActions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "actions.add(new SQLDatabasePersistAction(\"Comment on Script\",\"COMMENT ON SCRIPT \" + command.getObject().getFullyQualifiedName(DBPEvaluationContext.DDL) + \" IS \" + SQLUtils.quoteString(command.getObject(),command.getObject().getDescription())))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Map<String,Object> options@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "command.getProperty(\"description\") != null@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "List<DBEPersistAction> actions@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "SQLObjectEditor.NestedObjectCommand<ExasolFunction,SQLObjectEditor<ExasolFunction,ExasolSchema>.PropertyHandler> command@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "List<DBEPersistAction> actions@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "NestedObjectCommand<ExasolFunction,PropertyHandler> command@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "List<DBEPersistAction> actions@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "org.jkiss.dbeaver.model.impl.sql.edit.SQLObjectEditor.NestedObjectCommand<ExasolScript,SQLObjectEditor<ExasolScript,ExasolSchema>.PropertyHandler> command@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "actions.add(new SQLDatabasePersistAction(\"Comment on Script\",\"COMMENT ON FUNCTION \" + command.getObject().getFullyQualifiedName(DBPEvaluationContext.DDL) + \" IS \" + SQLUtils.quoteString(command.getObject(),command.getObject().getDescription())))@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->10 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+12->2 [style = bold, label=""];
+0->3 [style = dotted, label="true"];
+0->2 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+8->6 [style = dotted, label="true"];
+4->11 [style = dashed, label="0"];
+8->2 [style = bold, label=""];
+8->5 [style = dotted, label="true"];
+2->10 [style = bold, label=""];
+2->1 [style = dotted, label="true"];
+4->7 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+0->4 [style = dotted, label="true"];
+12->9 [style = dotted, label="true"];
+12->11 [style = dotted, label="true"];
+}

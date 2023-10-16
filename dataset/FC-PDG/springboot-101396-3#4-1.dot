@@ -1,0 +1,26 @@
+digraph {
+0 [style = filled, label = "bindToArrayWhenNonSequentialShouldThrowException['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "source.put(\"foo(1(\",\"1\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "this.binder.bind(\"foo\",INTEGER_LIST)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "bindToArrayWhenNonSequentialShouldThrowException['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "source.put(\"foo(0(\",\"2\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "fail(\"No exception thrown\")@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "bindToCollectionWhenNonSequentialShouldThrowException['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "MockConfigurationPropertySource source = new MockConfigurationPropertySource()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "source.put(\"foo(3(\",\"3\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "this.sources.add(source)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "this.binder.bind(\"foo\",INTEGER_ARRAY)@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+8->1 [style = bold, label=""];
+5->7 [style = bold, label=""];
+6->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+1->2 [style = solid, label="source"];
+4->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+2->9 [style = bold, label=""];
+10->1 [style = bold, label=""];
+2->6 [style = bold, label=""];
+0->1 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+}

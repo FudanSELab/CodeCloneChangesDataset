@@ -1,0 +1,31 @@
+digraph {
+3 [style = filled, label = "Assert.assertEquals(2,scheduler.getTotalPrioritizedAndLaned().get())@@@21@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testTopNScanMultiValue['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "final TopNQuery query = new TopNQueryBuilder().dataSource(new QueryDataSource(subquery)).granularity(Granularities.ALL).intervals(Intervals.ONLY_ETERNITY).dimension(DefaultDimensionSpec.of(\"s\")).metric(\"sum_n\").threshold(100).aggregators(new LongSumAggregatorFactory(\"sum_n\",\"n\")).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testGroupByOnScanMultiValue['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "Assert.assertEquals(1,scheduler.getTotalPrioritizedAndLaned().get())@@@21@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "Assert.assertEquals(2,scheduler.getTotalAcquired().get())@@@22@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final GroupByQuery query = GroupByQuery.builder().setDataSource(new QueryDataSource(subquery)).setGranularity(Granularities.ALL).setInterval(Intervals.ONLY_ETERNITY).setDimensions(DefaultDimensionSpec.of(\"s\")).setAggregatorSpecs(new LongSumAggregatorFactory(\"sum_n\",\"n\")).build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Assert.assertEquals(2,scheduler.getTotalReleased().get())@@@23@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testQuery(query,ImmutableList.of(ExpectedQuery.cluster(subquery),ExpectedQuery.local(query.withDataSource(InlineDataSource.fromIterable(ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9141a8,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9141b1,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9141ba,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9141c2),RowSignature.builder().add(\"s\",null).add(\"n\",null).build())))),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9141da,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9141e4,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9141ee))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Assert.assertEquals(2,scheduler.getTotalRun().get())@@@20@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ScanQuery subquery = new Druids.ScanQueryBuilder().dataSource(MULTI).columns(\"s\",\"n\").intervals(new MultipleIntervalSegmentSpec(ImmutableList.of(Intervals.ETERNITY))).legacy(false).resultFormat(ScanQuery.ResultFormat.RESULT_FORMAT_COMPACTED_LIST).build()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testGroupByOnScanMultiValue['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+0->7 [style = solid, label="query"];
+1->4 [style = bold, label=""];
+7->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+10->7 [style = solid, label="query"];
+9->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+5->9 [style = bold, label=""];
+8->2 [style = bold, label=""];
+2->10 [style = bold, label=""];
+2->7 [style = solid, label="subquery"];
+10->7 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+11->2 [style = bold, label=""];
+0->7 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

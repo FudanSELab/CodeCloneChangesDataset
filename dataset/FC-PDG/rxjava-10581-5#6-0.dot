@@ -1,0 +1,25 @@
+digraph {
+2 [style = filled, label = "to.assertValues(1,2)@@@5@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "to.assertNever(new Predicate<Integer>(){@Override public boolean test(final Integer o){return o == 1}})@@@7@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThrows(,null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "to.assertNever(new Predicate<Integer>(){@Override public boolean test(final Integer o){return o == 1}})@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "thrown.expect()@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "assertNeverAtMatchingPredicate['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Observable.just(1,2).subscribe(to)@@@4@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "TestObserverEx<Integer> to = new TestObserverEx<>()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertNeverAtNotMatchingPredicate['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Observable.just(2,3).subscribe(to)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertNeverAtMatchingPredicate['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->8 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+7->6 [style = bold, label=""];
+5->0 [style = bold, label=""];
+0->8 [style = solid, label="to"];
+0->1 [style = solid, label="to"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+10->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->8 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

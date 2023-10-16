@@ -1,0 +1,22 @@
+digraph {
+1 [style = filled, label = "final SqlDialect mssqlDialect = DatabaseProduct.MSSQL.getDialect()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "withMysql8['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "return dialect(new SqlDialect(SqlDialect.EMPTY_CONTEXT.withDatabaseProduct(DatabaseProduct.MYSQL).withDatabaseMajorVersion(8).withIdentifierQuoteString(mysqlDialect.quoteIdentifier(\"\").substring(0,1)).withNullCollation(mysqlDialect.getNullCollation())))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final SqlDialect mysqlDialect = DatabaseProduct.MYSQL.getDialect()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return dialect(new MssqlSqlDialect(SqlDialect.EMPTY_CONTEXT.withDatabaseProduct(DatabaseProduct.MSSQL).withDatabaseMajorVersion(majorVersion).withIdentifierQuoteString(mssqlDialect.quoteIdentifier(\"\").substring(0,1)).withNullCollation(mssqlDialect.getNullCollation())))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "return dialect(new MssqlSqlDialect(MssqlSqlDialect.DEFAULT_CONTEXT.withDatabaseMajorVersion(majorVersion).withIdentifierQuoteString(mssqlDialect.quoteIdentifier(\"\").substring(0,1)).withNullCollation(mssqlDialect.getNullCollation())))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "int majorVersion@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "withMssql['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "withMssql['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->3 [style = dotted, label="true"];
+6->8 [style = bold, label=""];
+5->1 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+5->3 [style = dotted, label="true"];
+0->7 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+8->7 [style = bold, label=""];
+}

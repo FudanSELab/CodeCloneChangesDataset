@@ -1,0 +1,38 @@
+digraph {
+1 [style = filled, label = "bibEntry.setField(\"isbn\",\"0321356683\")@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "bibEntry.setField(\"author\",\"Bloch, Joshua\")@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+17 [style = filled, label = "setUp['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "bibEntry.setField(\"year\",\"2008\")@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "bibEntry.setField(\"publisher\",\"Addison Wesley\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "bibEntry.setField(\"date\",\"2008-05-08\")@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "setUp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "fetcher = new IsbnFetcher(JabRefPreferences.getInstance().getImportFormatPreferences())@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+15 [style = filled, label = "fetcher = new IsbnFetcher(mock(,Answers.RETURNS_DEEP_STUBS))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "bibEntry.setField(\"bibtexkey\",\"9780321356680\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "bibEntry.setField(\"pagetotal\",\"384\")@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "bibEntry.setField(\"title\",\"Effective Java\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "bibEntry.setType(BiblatexEntryTypes.BOOK)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "bibEntry.setField(\"ean\",\"9780321356680\")@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "setUp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "bibEntry.setField(\"url\",\"http://www.ebook.de/de/product/6441328/joshua_bloch_effective_java.html\")@@@14@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "bibEntry = new BibEntry()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+16 [style = filled, label = "fetcher = new IsbnViaEbookDeFetcher(JabRefPreferences.getInstance().getImportFormatPreferences())@@@15@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+8->16 [style = bold, label=""];
+14->15 [style = bold, label=""];
+10->9 [style = bold, label=""];
+12->10 [style = bold, label=""];
+6->0 [style = bold, label=""];
+4->1 [style = bold, label=""];
+7->11 [style = bold, label=""];
+15->2 [style = bold, label=""];
+0->13 [style = bold, label=""];
+17->2 [style = bold, label=""];
+5->12 [style = bold, label=""];
+11->15 [style = dashed, label="0"];
+3->8 [style = bold, label=""];
+11->2 [style = bold, label=""];
+9->6 [style = bold, label=""];
+2->5 [style = bold, label=""];
+13->4 [style = bold, label=""];
+}

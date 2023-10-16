@@ -1,0 +1,30 @@
+digraph {
+9 [style = filled, label = "ConfigurableApplicationContext context = new SpringApplicationBuilder().child().web(WebApplicationType.NONE).run()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "CountDownLatch parentLatch = context.getBean().latch@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "ConfigurableApplicationContext context = new SpringApplicationBuilder().child().web(WebApplicationType.NONE).run()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(childLatch.await(10,TimeUnit.SECONDS)).isTrue()@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "shutdownChild['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "CountDownLatch childLatch = context.getBean().latch@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(context.getBean().shutdown().get(\"message\")).startsWith(\"Shutting down\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "shutdownParent['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "shutdownChild['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "CountDownLatch latch = context.getBean().latch@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(context.getBean().shutdown().get(\"message\")).startsWith(\"Shutting down\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(parentLatch.await(10,TimeUnit.SECONDS)).isTrue()@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(context.isActive()).isTrue()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+6->3 [style = bold, label=""];
+11->12 [style = bold, label=""];
+4->2 [style = bold, label=""];
+9->10 [style = bold, label=""];
+10->8 [style = bold, label=""];
+8->2 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+1->11 [style = bold, label=""];
+}

@@ -1,0 +1,30 @@
+digraph {
+8 [style = filled, label = "STREAMS_CONFIG.put(StreamsConfig.APPLICATION_ID_CONFIG,appID + \"-multi-inner\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "leftStream.join(rightStream,valueJoiner,JoinWindows.of(10000)).join(rightStream,valueJoiner,JoinWindows.of(10000)).to(OUTPUT_TOPIC)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final List<List<String>> expectedResult = Arrays.asList(null,null,null,Collections.singletonList(\"A-a\"),Collections.singletonList(\"B-a\"),Arrays.asList(\"A-b\",\"B-b\"),null,null,Arrays.asList(\"C-a\",\"C-b\"),Arrays.asList(\"A-c\",\"B-c\",\"C-c\"),null,null,null,Arrays.asList(\"A-d\",\"B-d\",\"C-d\"),Arrays.asList(\"D-a\",\"D-b\",\"D-c\",\"D-d\"))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final List<List<String>> expectedResult = Arrays.asList(null,null,null,Collections.singletonList(\"A-a-a\"),Collections.singletonList(\"B-a-a\"),Arrays.asList(\"A-b-a\",\"B-b-a\",\"A-a-b\",\"B-a-b\",\"A-b-b\",\"B-b-b\"),null,null,Arrays.asList(\"C-a-a\",\"C-a-b\",\"C-b-a\",\"C-b-b\"),Arrays.asList(\"A-c-a\",\"A-c-b\",\"B-c-a\",\"B-c-b\",\"C-c-a\",\"C-c-b\",\"A-a-c\",\"B-a-c\",\"A-b-c\",\"B-b-c\",\"C-a-c\",\"C-b-c\",\"A-c-c\",\"B-c-c\",\"C-c-c\"),null,null,null,Arrays.asList(\"A-d-a\",\"A-d-b\",\"A-d-c\",\"B-d-a\",\"B-d-b\",\"B-d-c\",\"C-d-a\",\"C-d-b\",\"C-d-c\",\"A-a-d\",\"B-a-d\",\"A-b-d\",\"B-b-d\",\"C-a-d\",\"C-b-d\",\"A-c-d\",\"B-c-d\",\"C-c-d\",\"A-d-d\",\"B-d-d\",\"C-d-d\"),Arrays.asList(\"D-a-a\",\"D-a-b\",\"D-a-c\",\"D-a-d\",\"D-b-a\",\"D-b-b\",\"D-b-c\",\"D-b-d\",\"D-c-a\",\"D-c-b\",\"D-c-c\",\"D-c-d\",\"D-d-a\",\"D-d-b\",\"D-d-c\",\"D-d-d\"))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "leftStream.map(MockMapper.noOpKeyValueMapper()).join(rightStream.flatMap(MockMapper.noOpFlatKeyValueMapper()).selectKey(MockMapper.selectKeyKeyValueMapper()),valueJoiner,JoinWindows.of(ofSeconds(10))).to(OUTPUT_TOPIC)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "STREAMS_CONFIG.put(StreamsConfig.APPLICATION_ID_CONFIG,appID + \"-inner-repartitioned\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "runTest(expectedResult)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testInnerRepartitioned['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "leftStream.map(MockMapper.noOpKeyValueMapper()).join(rightStream.flatMap(MockMapper.noOpFlatKeyValueMapper()).selectKey(MockMapper.selectKeyKeyValueMapper()),valueJoiner,JoinWindows.of(10000)).to(OUTPUT_TOPIC)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "testInnerRepartitioned['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testMultiInner['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+5->3 [style = bold, label=""];
+4->3 [style = solid, label="expectedResult"];
+4->9 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+10->8 [style = bold, label=""];
+9->7 [style = bold, label=""];
+9->3 [style = solid, label="expectedResult"];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+7->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->9 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

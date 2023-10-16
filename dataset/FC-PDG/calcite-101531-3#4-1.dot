@@ -1,0 +1,38 @@
+digraph {
+4 [style = filled, label = "testNestedAggregatesMySqlTable['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "relFn(relFn).withMysql().ok(expectedSql)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "testNestedAggregatesMySqlStar['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testNestedAggregatesMySqlTable['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "final Function<RelBuilder,RelNode> relFn = null@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "final String expectedSql = \"SELECT COUNT(`MGR`) AS `c`\" + \"FROM `scott`.`EMP`\" + \"WHERE `DEPTNO` = 10\"@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final String expectedSql = \"SELECT COUNT(`MGR`) AS `c`\" + \"FROM `scott`.`EMP`\"@@@6@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(toSql(root,dialect),isLinux(expectedSql))@@@7@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final String expectedSql = \"SELECT COUNT(`MGR`) AS `c`\" + \"FROM `scott`.`EMP`\"@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final RelNode root = builder.scan(\"EMP\").aggregate(builder.groupKey(),builder.count(false,\"c\",builder.field(3))).build()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "final RelBuilder builder = relBuilder()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final RelNode root = builder.scan(\"EMP\").filter(builder.equals(builder.field(\"DEPTNO\"),builder.literal(10))).aggregate(builder.groupKey(),builder.count(false,\"c\",builder.field(3))).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final SqlDialect dialect = SqlDialect.DatabaseProduct.MYSQL.getDialect()@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+10->2 [style = solid, label="root"];
+8->6 [style = solid, label="expectedSql"];
+1->9 [style = dashed, label="0"];
+8->6 [style = bold, label=""];
+1->0 [style = bold, label=""];
+9->8 [style = bold, label=""];
+12->1 [style = bold, label=""];
+11->2 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+7->9 [style = bold, label=""];
+11->2 [style = solid, label="expectedSql"];
+0->2 [style = solid, label="root"];
+10->5 [style = bold, label=""];
+3->2 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+5->11 [style = bold, label=""];
+3->2 [style = solid, label="expectedSql"];
+1->10 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+0->5 [style = bold, label=""];
+5->2 [style = solid, label="dialect"];
+}

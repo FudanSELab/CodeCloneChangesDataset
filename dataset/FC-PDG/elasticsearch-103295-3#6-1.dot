@@ -1,0 +1,24 @@
+digraph {
+6 [style = filled, label = "initializeAdditionalMappings['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "XContentBuilder mapping = jsonBuilder().startObject().startObject(\"_doc\").startObject(\"properties\").startObject(\"prefix_field\").field(\"type\",\"text\").startObject(\"index_prefixes\").endObject().endObject().endObject().endObject().endObject()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "mapperService.merge(\"_doc\",new CompressedXContent(Strings.toString(mapping)),MapperService.MergeReason.MAPPING_UPDATE)@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "XContentBuilder mapping = jsonBuilder().startObject().startObject(\"_doc\").startObject(\"properties\").startObject(\"prefix_field\").field(\"type\",\"text\").startObject(\"index_prefixes\").endObject().endObject().startObject(\"prefix_field_alias\").field(\"type\",\"alias\").field(\"path\",\"prefix_field\").endObject().startObject(\"body\").field(\"type\",\"text\").endObject().endObject().endObject().endObject()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "MapperService mapperService@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "XContentBuilder mapping = jsonBuilder().startObject().startObject(\"_doc\").startObject(\"properties\").startObject(\"prefix_field\").field(\"type\",\"text\").startObject(\"index_prefixes\").endObject().endObject().startObject(\"prefix_field_alias\").field(\"type\",\"alias\").field(\"path\",\"prefix_field\").endObject().endObject().endObject().endObject()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "initializeAdditionalMappings['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "initializeAdditionalMappings['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->2 [style = solid, label="mapping"];
+5->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+6->0 [style = dotted, label="true"];
+1->5 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+7->2 [style = solid, label="mapping"];
+3->1 [style = bold, label=""];
+1->2 [style = solid, label="mapping"];
+6->7 [style = bold, label=""];
+4->5 [style = bold, label=""];
+7->2 [style = bold, label=""];
+4->0 [style = dotted, label="true"];
+3->0 [style = dotted, label="true"];
+}

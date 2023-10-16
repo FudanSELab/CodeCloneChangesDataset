@@ -1,0 +1,21 @@
+digraph {
+1 [style = filled, label = "assertEquals(table.queryableStoreName(),\"session-store\")@@@27@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "table.toStream().foreach(new ForeachAction<Windowed<String>,Integer>(){@Override public void apply(final Windowed<String> key,final Integer value){results.put(key,value)}})@@@20@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "doAggregateSessionWindows(results)@@@26@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "shouldAggregateSessionWindows['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "KTable table = groupedStream.aggregate(new Initializer<Integer>(){@Override public Integer apply(){return 0}},new Aggregator<String,String,Integer>(){@Override public Integer apply(final String aggKey,final String value,final Integer aggregate){return aggregate + 1}},new Merger<String,Integer>(){@Override public Integer apply(final String aggKey,final Integer aggOne,final Integer aggTwo){return aggOne + aggTwo}},SessionWindows.with(30),Serdes.Integer())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "shouldAggregateSessionWindows['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "assertNull(table.queryableStoreName())@@@27@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final Map<Windowed<String>,Integer> results = new HashMap<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "shouldAggregateSessionWindowsWithInternalStoreName['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+4->8 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+7->5 [style = bold, label=""];
+5->4 [style = solid, label="results"];
+0->4 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

@@ -1,0 +1,32 @@
+digraph {
+9 [style = filled, label = "testGroupByWithHavingOnFinalizedHyperUnique['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "List<ResultRow> expectedResults = Collections.singletonList(makeRow(query,\"1970-01-01T00:00:00.000Z\",\"market\",\"spot\",QueryRunnerTestHelper.UNIQUE_METRIC,QueryRunnerTestHelper.UNIQUES_9,QueryRunnerTestHelper.HYPER_UNIQUE_FINALIZING_POST_AGG_METRIC,QueryRunnerTestHelper.UNIQUES_9))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "TestHelper.assertExpectedObjects(expectedResults,results,\"order-limit\")@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "GroupByQuery query = makeQueryBuilder().setDataSource(QueryRunnerTestHelper.DATA_SOURCE).setGranularity(QueryRunnerTestHelper.ALL_GRAN).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.MARKET_DIMENSION,QueryRunnerTestHelper.MARKET_DIMENSION)).setInterval(QueryRunnerTestHelper.FULL_ON_INTERVAL_SPEC).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(QueryRunnerTestHelper.UNIQUE_METRIC,OrderByColumnSpec.Direction.DESCENDING)),3)).setHavingSpec(new GreaterThanHavingSpec(QueryRunnerTestHelper.UNIQUE_METRIC,8)).setAggregatorSpecs(QueryRunnerTestHelper.QUALITY_UNIQUES).setPostAggregatorSpecs(Collections.singletonList(new HyperUniqueFinalizingPostAggregator(QueryRunnerTestHelper.HYPER_UNIQUE_FINALIZING_POST_AGG_METRIC,QueryRunnerTestHelper.UNIQUE_METRIC))).build()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "testGroupByWithHavingOnHyperUnique['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "GroupByQuery query = makeQueryBuilder().setDataSource(QueryRunnerTestHelper.dataSource).setGranularity(QueryRunnerTestHelper.allGran).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.marketDimension,QueryRunnerTestHelper.marketDimension)).setInterval(QueryRunnerTestHelper.fullOnIntervalSpec).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(QueryRunnerTestHelper.uniqueMetric,OrderByColumnSpec.Direction.DESCENDING)),3)).setHavingSpec(new GreaterThanHavingSpec(QueryRunnerTestHelper.uniqueMetric,8)).setAggregatorSpecs(QueryRunnerTestHelper.qualityUniques).setPostAggregatorSpecs(Collections.singletonList(new HyperUniqueFinalizingPostAggregator(QueryRunnerTestHelper.hyperUniqueFinalizingPostAggMetric,QueryRunnerTestHelper.uniqueMetric))).build()@@@3@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "GroupByQuery query = makeQueryBuilder().setDataSource(QueryRunnerTestHelper.dataSource).setGranularity(QueryRunnerTestHelper.allGran).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.marketDimension,QueryRunnerTestHelper.marketDimension)).setInterval(QueryRunnerTestHelper.fullOnIntervalSpec).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(QueryRunnerTestHelper.hyperUniqueFinalizingPostAggMetric,OrderByColumnSpec.Direction.DESCENDING)),3)).setHavingSpec(new GreaterThanHavingSpec(QueryRunnerTestHelper.hyperUniqueFinalizingPostAggMetric,8)).setAggregatorSpecs(QueryRunnerTestHelper.qualityUniques).setPostAggregatorSpecs(Collections.singletonList(new HyperUniqueFinalizingPostAggregator(QueryRunnerTestHelper.hyperUniqueFinalizingPostAggMetric,QueryRunnerTestHelper.uniqueMetric))).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testGroupByWithHavingOnHyperUnique['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "List<ResultRow> expectedResults = Collections.singletonList(makeRow(query,\"1970-01-01T00:00:00.000Z\",\"market\",\"spot\",QueryRunnerTestHelper.uniqueMetric,QueryRunnerTestHelper.UNIQUES_9,QueryRunnerTestHelper.hyperUniqueFinalizingPostAggMetric,QueryRunnerTestHelper.UNIQUES_9))@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Iterable<ResultRow> results = GroupByQueryRunnerTestHelper.runQuery(factory,runner,query)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->4 [style = solid, label="expectedResults"];
+3->2 [style = solid, label="query"];
+1->3 [style = bold, label=""];
+3->0 [style = bold, label=""];
+8->0 [style = bold, label=""];
+7->2 [style = solid, label="query"];
+5->2 [style = bold, label=""];
+7->5 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+0->4 [style = solid, label="expectedResults"];
+6->7 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+9->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+3->0 [style = solid, label="query"];
+2->4 [style = solid, label="results"];
+8->0 [style = solid, label="query"];
+7->5 [style = solid, label="query"];
+0->2 [style = bold, label=""];
+8->2 [style = solid, label="query"];
+}

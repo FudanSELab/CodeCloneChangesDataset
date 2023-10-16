@@ -1,0 +1,32 @@
+digraph {
+0 [style = filled, label = "Mockito.verify(mockServiceEmitter).emit(ArgumentMatchers.any())@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "TestDruidCoordinatorConfig druidCoordinatorConfig = new TestDruidCoordinatorConfig(null,null,null,new Duration(\"PT5S\"),null,null,null,null,null,null,null,new Duration(\"PT6S\"),new Duration(\"PT1S\"),null,null,10,null)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "exception.expectMessage(\"coordinator rule kill period must be >= druid.coordinator.period.metadataStoreManagementPeriod\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "TestDruidCoordinatorConfig druidCoordinatorConfig = new TestDruidCoordinatorConfig(null,null,null,new Duration(\"PT5S\"),null,null,null,null,null,null,null,new Duration(\"PT3S\"),new Duration(\"PT1S\"),10,null)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "TestDruidCoordinatorConfig druidCoordinatorConfig = new TestDruidCoordinatorConfig(null,null,null,new Duration(\"PT5S\"),null,null,null,null,null,null,null,new Duration(\"PT6S\"),new Duration(\"PT1S\"),10,null)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "Mockito.verify(mockRuleManager).removeRulesForEmptyDatasourcesOlderThan(ArgumentMatchers.anyLong())@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "exception.expect()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testRunNotSkipIfLastRunMoreThanPeriod['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Mockito.when(mockDruidCoordinatorRuntimeParams.getEmitter()).thenReturn(mockServiceEmitter)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "killRules = new KillRules(druidCoordinatorConfig)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testConstructorFailIfInvalidPeriod['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "killRules = new KillRules(druidCoordinatorConfig)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testRunNotSkipIfLastRunMoreThanPeriod['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->5 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+1->5 [style = solid, label="druidCoordinatorConfig"];
+8->5 [style = solid, label="druidCoordinatorConfig"];
+6->0 [style = bold, label=""];
+11->4 [style = solid, label="druidCoordinatorConfig"];
+9->10 [style = bold, label=""];
+8->5 [style = bold, label=""];
+3->1 [style = bold, label=""];
+11->9 [style = bold, label=""];
+4->6 [style = bold, label=""];
+3->8 [style = bold, label=""];
+7->3 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+12->11 [style = bold, label=""];
+10->4 [style = bold, label=""];
+}

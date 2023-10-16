@@ -1,0 +1,19 @@
+digraph {
+3 [style = filled, label = "testDatabaseMetaDataTablesAsSuperuser['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "final DatabaseMetaData metaData = client.getMetaData()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Assert.assertEquals(ImmutableList.of(row(Pair.of(\"TABLE_CAT\",\"druid\"),Pair.of(\"TABLE_NAME\",CalciteTests.DATASOURCE1),Pair.of(\"TABLE_SCHEM\",\"druid\"),Pair.of(\"TABLE_TYPE\",\"TABLE\")),row(Pair.of(\"TABLE_CAT\",\"druid\"),Pair.of(\"TABLE_NAME\",CalciteTests.DATASOURCE2),Pair.of(\"TABLE_SCHEM\",\"druid\"),Pair.of(\"TABLE_TYPE\",\"TABLE\")),row(Pair.of(\"TABLE_CAT\",\"druid\"),Pair.of(\"TABLE_NAME\",CalciteTests.DATASOURCE4),Pair.of(\"TABLE_SCHEM\",\"druid\"),Pair.of(\"TABLE_TYPE\",\"TABLE\")),row(Pair.of(\"TABLE_CAT\",\"druid\"),Pair.of(\"TABLE_NAME\",CalciteTests.DATASOURCE5),Pair.of(\"TABLE_SCHEM\",\"druid\"),Pair.of(\"TABLE_TYPE\",\"TABLE\")),row(Pair.of(\"TABLE_CAT\",\"druid\"),Pair.of(\"TABLE_NAME\",CalciteTests.DATASOURCE3),Pair.of(\"TABLE_SCHEM\",\"druid\"),Pair.of(\"TABLE_TYPE\",\"TABLE\"))),getRows(metaData.getTables(null,\"druid\",\"%\",null),ImmutableSet.of(\"TABLE_CAT\",\"TABLE_NAME\",\"TABLE_SCHEM\",\"TABLE_TYPE\")))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testDatabaseMetaDataTables['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final DatabaseMetaData metaData = superuserClient.getMetaData()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Assert.assertEquals(ImmutableList.of(ROW(Pair.of(\"TABLE_CAT\",\"druid\"),Pair.of(\"TABLE_NAME\",CalciteTests.DATASOURCE1),Pair.of(\"TABLE_SCHEM\",\"druid\"),Pair.of(\"TABLE_TYPE\",\"TABLE\")),ROW(Pair.of(\"TABLE_CAT\",\"druid\"),Pair.of(\"TABLE_NAME\",CalciteTests.DATASOURCE2),Pair.of(\"TABLE_SCHEM\",\"druid\"),Pair.of(\"TABLE_TYPE\",\"TABLE\")),ROW(Pair.of(\"TABLE_CAT\",\"druid\"),Pair.of(\"TABLE_NAME\",CalciteTests.FORBIDDEN_DATASOURCE),Pair.of(\"TABLE_SCHEM\",\"druid\"),Pair.of(\"TABLE_TYPE\",\"TABLE\"))),getRows(metaData.getTables(null,\"druid\",\"%\",null),ImmutableSet.of(\"TABLE_CAT\",\"TABLE_NAME\",\"TABLE_SCHEM\",\"TABLE_TYPE\")))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "Assert.assertEquals(ImmutableList.of(ROW(Pair.of(\"TABLE_CAT\",\"druid\"),Pair.of(\"TABLE_NAME\",CalciteTests.DATASOURCE1),Pair.of(\"TABLE_SCHEM\",\"druid\"),Pair.of(\"TABLE_TYPE\",\"TABLE\")),ROW(Pair.of(\"TABLE_CAT\",\"druid\"),Pair.of(\"TABLE_NAME\",CalciteTests.DATASOURCE2),Pair.of(\"TABLE_SCHEM\",\"druid\"),Pair.of(\"TABLE_TYPE\",\"TABLE\")),ROW(Pair.of(\"TABLE_CAT\",\"druid\"),Pair.of(\"TABLE_NAME\",CalciteTests.FORBIDDEN_DATASOURCE),Pair.of(\"TABLE_SCHEM\",\"druid\"),Pair.of(\"TABLE_TYPE\",\"TABLE\")),ROW(Pair.of(\"TABLE_CAT\",\"druid\"),Pair.of(\"TABLE_NAME\",CalciteTests.DATASOURCE3),Pair.of(\"TABLE_SCHEM\",\"druid\"),Pair.of(\"TABLE_TYPE\",\"TABLE\"))),getRows(metaData.getTables(null,\"druid\",\"%\",null),ImmutableSet.of(\"TABLE_CAT\",\"TABLE_NAME\",\"TABLE_SCHEM\",\"TABLE_TYPE\")))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "testDatabaseMetaDataTablesAsSuperuser['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->5 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->5 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+2->4 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

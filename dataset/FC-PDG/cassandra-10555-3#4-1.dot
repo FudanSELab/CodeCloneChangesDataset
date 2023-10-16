@@ -1,0 +1,34 @@
+digraph {
+4 [style = filled, label = "session.init(future)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "StreamSession session = streamCoordinator.getOrCreateNextSession(peer)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "StreamCoordinator streamCoordinator = new StreamCoordinator(StreamOperation.BOOTSTRAP,1,new DefaultConnectionFactory(),false,null,PreviewKind.NONE)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "streamCoordinator.addSessionInfo(new SessionInfo(peer,0,peer,Collections.emptyList(),Collections.emptyList(),StreamSession.State.INITIALIZED))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "setupStreamingSessionForTest['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "StreamCoordinator streamCoordinator = new StreamCoordinator(StreamOperation.BOOTSTRAP,1,new DefaultConnectionFactory(),false,false,null,PreviewKind.NONE)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "setupStreamingSessionForTest['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "StreamResultFuture future = StreamResultFuture.createInitiator(UUID.randomUUID(),StreamOperation.BOOTSTRAP,Collections.emptyList(),streamCoordinator)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "setupStreamingSessionForTest['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return session@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "StreamResultFuture future = StreamResultFuture.init(UUID.randomUUID(),StreamOperation.BOOTSTRAP,Collections.emptyList(),streamCoordinator)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "InetAddressAndPort peer = FBUtilities.getBroadcastAddressAndPort()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+3->6 [style = bold, label=""];
+11->5 [style = bold, label=""];
+10->9 [style = bold, label=""];
+3->6 [style = solid, label="peer"];
+5->9 [style = dashed, label="0"];
+8->4 [style = solid, label="future"];
+1->8 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+5->1 [style = solid, label="streamCoordinator"];
+7->0 [style = solid, label="session"];
+6->7 [style = bold, label=""];
+9->8 [style = bold, label=""];
+3->7 [style = solid, label="peer"];
+1->4 [style = solid, label="future"];
+9->8 [style = solid, label="streamCoordinator"];
+2->5 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

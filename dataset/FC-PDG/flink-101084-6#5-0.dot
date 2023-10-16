@@ -1,0 +1,36 @@
+digraph {
+12 [style = filled, label = "tableEnv.executeSql(\"insert into bounded_table values (1,'a',10),(2,'a',21),(2,'b',22),(3,'c',33)\").await()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testLookupJoinPartitionedTableWithCreateTime['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "List<Row> results = CollectionUtil.iteratorToList(flinkTable.execute().collect())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "testLookupJoinBoundedTable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "TableImpl flinkTable = (TableImpl)tableEnv.sqlQuery(\"select p.x, p.y, b.z from \" + \" default_catalog.default_database.probe as p \" + \" join bounded_table for system_time as of p.p as b on p.x=b.x and p.y=b.y\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testLookupJoinPartitionedTableWithCreateTime['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "List<Row> results = CollectionUtil.iteratorToList(flinkTable.execute().collect())@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "TableImpl flinkTable = (TableImpl)tableEnv.sqlQuery(\"select p.x, p.y, b.z, b.pt_year, b.pt_mon, b.pt_day from \" + \" default_catalog.default_database.probe as p\" + \" join partition_table_3 for system_time as of p.p as b on p.x=b.x and p.y=b.y\")@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+16 [style = filled, label = "assertEquals(\"(+I(1, a, 10(, +I(2, b, 22(, +I(3, c, 33((\",results.toString())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "batchEnv.executeSql(\"insert overwrite partition_table_3 values \" + \"(1,'a',08,2020,'month1','01'),\" + \"(1,'a',10,2020,'month2','02'),\" + \"(2,'a',21,2020,'month1','02'),\" + \"(2,'b',22,2020,'month3','20'),\" + \"(3,'c',22,2020,'month3','20'),\" + \"(3,'c',33,2017,'08','31'),\" + \"(1,'a',101,2017,'09','01'),\" + \"(2,'a',121,2019,'09','01'),\" + \"(2,'b',122,2019,'09','01')\").await()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertEquals(\"(+I(1, a, 101, 2020, 08, 01(, +I(2, b, 122, 2020, 08, 01((\",results.toString())@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "TableEnvironment batchEnv = HiveTestUtils.createTableEnvWithBlinkPlannerBatchMode(SqlDialect.HIVE)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "batchEnv.registerCatalog(hiveCatalog.getName(),hiveCatalog)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "TableEnvironment batchEnv = HiveTestUtils.createTableEnvInBatchMode(SqlDialect.HIVE)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+15 [style = filled, label = "tableEnv.getConfig().setSqlDialect(SqlDialect.DEFAULT)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "batchEnv.executeSql(\"insert overwrite partition_table_3 values \" + \"(1,'a',101,2020,'08','01'),\" + \"(2,'a',121,2020,'08','01'),\" + \"(2,'b',122,2020,'08','01')\").await()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "batchEnv.useCatalog(hiveCatalog.getName())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+11->16 [style = bold, label=""];
+5->8 [style = bold, label=""];
+4->3 [style = bold, label=""];
+10->9 [style = bold, label=""];
+7->0 [style = bold, label=""];
+15->12 [style = bold, label=""];
+13->15 [style = bold, label=""];
+9->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+0->6 [style = bold, label=""];
+14->11 [style = bold, label=""];
+2->16 [style = dashed, label="0"];
+8->7 [style = bold, label=""];
+12->14 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

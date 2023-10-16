@@ -1,0 +1,9 @@
+digraph {
+3 [style = filled, label = "allEndpointsAvailableUnderCloudFoundryWithoutExposeAllOnWeb['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "endpointPathCustomizationIsNotApplied['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "this.contextRunner.withUserConfiguration().withPropertyValues(\"VCAP_APPLICATION:---\",\"vcap.application.application_id:my-app-id\",\"vcap.application.cf_api:http://my-cloud-controller.com\").run(null)@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "endpointPathCustomizationIsNotApplied['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+}

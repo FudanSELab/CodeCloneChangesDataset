@@ -1,0 +1,27 @@
+digraph {
+5 [style = filled, label = "shouldReduce['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final KeyValueMapper<String,Number,KeyValue<String,Integer>> intProjection = new KeyValueMapper<String,Number,KeyValue<String,Integer>>(){@Override public KeyValue<String,Integer> apply(String key,Number value){return KeyValue.pair(key,value.intValue())}}@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "shouldReduceWithInternalStoreName['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertEquals(reduced.queryableStoreName(),\"reduced\")@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final String topic = \"input\"@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "doShouldReduce(reduced,topic)@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final KTable<String,Integer> reduced = builder.table(Serdes.String(),Serdes.Double(),topic,\"store\").groupBy(intProjection).reduce(MockReducer.INTEGER_ADDER,MockReducer.INTEGER_SUBTRACTOR,\"reduced\")@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "shouldReduce['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "assertNull(reduced.queryableStoreName())@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final KTable<String,Integer> reduced = builder.table(Serdes.String(),Serdes.Double(),topic,\"store\").groupBy(intProjection).reduce(MockReducer.INTEGER_ADDER,MockReducer.INTEGER_SUBTRACTOR)@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->0 [style = bold, label=""];
+3->9 [style = bold, label=""];
+0->3 [style = solid, label="topic"];
+6->1 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+2->3 [style = solid, label="reduced"];
+5->0 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+1->7 [style = bold, label=""];
+7->3 [style = bold, label=""];
+2->3 [style = bold, label=""];
+7->3 [style = solid, label="reduced"];
+}

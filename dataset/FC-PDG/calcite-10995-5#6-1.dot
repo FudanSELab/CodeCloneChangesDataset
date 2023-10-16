@@ -1,0 +1,24 @@
+digraph {
+1 [style = filled, label = "final EnumSet<SqlKind> functionsToReduce = EnumSet.of(SqlKind.AVG,SqlKind.VAR_POP)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testReduceAllAggregateFunctions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final String sql = \"select name, stddev_pop(deptno), avg(deptno),\" + \" stddev_samp(deptno), var_pop(deptno), var_samp(deptno)\" + \"from sales.dept group by name\"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final String sql = \"select name, stddev_pop(deptno), avg(deptno),\" + \" var_pop(deptno)\" + \"from sales.dept group by name\"@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testReduceAverageAndVarWithNoReduceStddev['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testReduceAverageAndVarWithNoReduceStddev['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final EnumSet<SqlKind> functionsToReduce = EnumSet.of(SqlKind.AVG,SqlKind.SUM,SqlKind.STDDEV_POP,SqlKind.STDDEV_SAMP,SqlKind.VAR_POP,SqlKind.VAR_SAMP)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final RelOptRule rule = new AggregateReduceFunctionsRule(,RelFactories.LOGICAL_BUILDER,functionsToReduce)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "sql(sql).withRule(rule).check()@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->2 [style = solid, label="functionsToReduce"];
+5->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+7->2 [style = solid, label="functionsToReduce"];
+6->0 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->6 [style = bold, label=""];
+8->7 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

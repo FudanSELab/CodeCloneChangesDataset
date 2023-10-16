@@ -1,0 +1,9 @@
+digraph {
+3 [style = filled, label = "produceGlobalTableValues['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "IntegrationTestUtils.produceKeyValuesSynchronously(globalTableTopic,Arrays.asList(new KeyValue<>(1L,\"F\"),new KeyValue<>(2L,\"G\"),new KeyValue<>(3L,\"H\"),new KeyValue<>(4L,\"I\"),new KeyValue<>(5L,\"J\")),TestUtils.producerConfig(CLUSTER.bootstrapServers(),,,new Properties()),mockTime)@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "produceGlobalTableValues['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "produceGlobalTableValues['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+}

@@ -1,0 +1,23 @@
+digraph {
+1 [style = filled, label = "assertEquals(Optional.of(FileFieldWriter.getStringRepresentation(new LinkedFile(\"\",\"test.pdf\",\"\"))),entry.getField(StandardField.FILE))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertTrue(Files.exists(fileAfter))@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertFalse(Files.exists(fileBefore))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "when(filePreferences.getFileDirectoryPattern()).thenReturn(\"\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "when(filePreferences.getFileDirPattern()).thenReturn(\"\")@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "cleanup.cleanup(entry)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "movesFile['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "doesNotMoveFileWithEmptyFileDirPattern['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Path fileAfter = defaultFileFolder.resolve(\"test.pdf\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "movesFile['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+8->7 [style = bold, label=""];
+6->4 [style = bold, label=""];
+3->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+4->5 [style = solid, label="fileAfter"];
+9->0 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+0->6 [style = bold, label=""];
+7->6 [style = bold, label=""];
+}

@@ -1,0 +1,23 @@
+digraph {
+4 [style = filled, label = "compressionStrategies['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "Set<List<Object>> combinations = Sets.cartesianProduct(Sets.newHashSet(compressionStrategies),Sets.newHashSet(ByteOrder.BIG_ENDIAN,ByteOrder.LITTLE_ENDIAN))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "compressionStrategies['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Set<List<Object>> combinations = Sets.cartesianProduct(Sets.newHashSet(CompressionStrategy.noNoneValues()),Sets.newHashSet(ByteOrder.BIG_ENDIAN,ByteOrder.LITTLE_ENDIAN))@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "Set<List<Object>> combinations = Sets.cartesianProduct(Sets.newHashSet(CompressionStrategy.noNoneValues()),Sets.newHashSet(ByteOrder.BIG_ENDIAN,ByteOrder.LITTLE_ENDIAN))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "compressionStrategiesAndByteOrders['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "return Iterables.transform(combinations,(Function<List,Object((>)null)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "return Iterables.transform(combinations,(Function<List,Object((>)null)@@@4@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final Iterable<CompressionStrategy> compressionStrategies = Iterables.transform(CompressionStrategyTest.compressionStrategies(),null)@@@3@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return Iterables.transform(combinations,(Function<List,Object((>)null)@@@5@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+2->0 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->1 [style = solid, label="combinations"];
+3->1 [style = bold, label=""];
+9->8 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->3 [style = solid, label="compressionStrategies"];
+9->8 [style = solid, label="combinations"];
+5->6 [style = solid, label="combinations"];
+}

@@ -1,0 +1,38 @@
+digraph {
+7 [style = filled, label = "this.numStoredFields(numBufferedDocs( = numStoredFieldsInDoc@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "++numBufferedDocs@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "numBufferedDocs == this.numStoredFields.length@@@3@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "endOffsets(numBufferedDocs( = Math.toIntExact(bufferedDocs.size())@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final int newLength = ArrayUtil.oversize(numBufferedDocs + 1,4)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "this.numStoredFields = ArrayUtil.growExact(this.numStoredFields,newLength)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "flush()@@@13@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "triggerFlush()@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "finishDocument['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "finishDocument['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "endOffsets = ArrayUtil.growExact(endOffsets,newLength)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "flush(false)@@@13@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "numStoredFieldsInDoc = 0@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "finishDocument['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13->10 [style = bold, label=""];
+4->3 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+3->6 [style = bold, label=""];
+9->7 [style = bold, label=""];
+10->9 [style = dotted, label="true"];
+7->8 [style = bold, label=""];
+2->10 [style = bold, label=""];
+10->7 [style = bold, label=""];
+1->9 [style = bold, label=""];
+6->5 [style = bold, label=""];
+11->10 [style = bold, label=""];
+0->1 [style = bold, label=""];
+0->1 [style = solid, label="newLength"];
+10->0 [style = bold, label=""];
+10->0 [style = dotted, label="true"];
+6->12 [style = dotted, label="true"];
+10->1 [style = dotted, label="true"];
+8->4 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+0->9 [style = solid, label="newLength"];
+6->12 [style = bold, label=""];
+}

@@ -1,0 +1,26 @@
+digraph {
+4 [style = filled, label = "final List<List<T>> lists@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "observeWindow['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "observeWindow['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "final List<T> list@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final List<List<T>> lists@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "observeWindow['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "return new Consumer<Observable<T>>(){@Override public void accept(Observable<T> stringObservable){stringObservable.subscribe(new DefaultObserver<T>(){@Override public void onComplete(){lists.add(new ArrayList<T>(list))list.clear()}@Override public void onError(Throwable e){Assert.fail(e.getMessage())}@Override public void onNext(T args){list.add(args)}})}}@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final List<T> list@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "return new Consumer<Flowable<T>>(){@Override public void accept(Flowable<T> stringFlowable){stringFlowable.subscribe(new DefaultSubscriber<T>(){@Override public void onComplete(){lists.add(new ArrayList<>(list))list.clear()}@Override public void onError(Throwable e){Assert.fail(e.getMessage())}@Override public void onNext(T args){list.add(args)}})}}@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final List<T> list@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3->2 [style = solid, label="list"];
+5->2 [style = bold, label=""];
+0->3 [style = dotted, label="true"];
+0->2 [style = bold, label=""];
+5->3 [style = dotted, label="true"];
+1->2 [style = solid, label="list"];
+6->9 [style = dotted, label="true"];
+3->9 [style = dashed, label="0"];
+2->8 [style = dashed, label="0"];
+5->4 [style = dotted, label="true"];
+6->8 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+7->8 [style = solid, label="list"];
+6->7 [style = dotted, label="true"];
+}

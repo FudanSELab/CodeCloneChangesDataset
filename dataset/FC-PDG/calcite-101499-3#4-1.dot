@@ -1,0 +1,32 @@
+digraph {
+10 [style = filled, label = "checkDateRange(f,f.and(f.eq(f.exYearTs,f.literal(2010)),f.eq(f.exMonthTs,f.literal(10)),f.eq(f.exYearD,f.literal(2011)),f.eq(f.exMonthD,f.literal(5))),is(\"AND(AND(>=($9, 2010-01-01 00:00:00), <($9, 2011-01-01 00:00:00)),\" + \" AND(>=($9, 2010-10-01 00:00:00), <($9, 2010-11-01 00:00:00)),\" + \" AND(>=($8, 2011-01-01), <($8, 2012-01-01)), AND(>=($8, 2011-05-01),\" + \" <($8, 2011-06-01)))\"))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final Fixture2 f = new Fixture2()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "checkDateRange(f,f.and(f.eq(f.exYearTs,f.literal(2010)),f.eq(f.exMonthTs,f.literal(14))),is(\"AND(AND(>=($9, 2010-01-01 00:00:00), <($9, 2011-01-01 00:00:00)),\" + \" false)\"))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "checkDateRange(f,f.and(f.eq(f.exYearTs,f.literal(2010)),f.eq(f.exMonthTs,f.literal(0))),is(\"AND(AND(>=($9, 2010-01-01 00:00:00), <($9, 2011-01-01 00:00:00)),\" + \" false)\"))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testExtractRewriteForInvalidMonthComparison['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "checkDateRange(f,f.and(f.eq(f.exYearTs,f.literal(2010)),f.eq(f.exMonthTs,f.literal(13))),is(\"AND(AND(>=($9, 2010-01-01 00:00:00), <($9, 2011-01-01 00:00:00)),\" + \" false)\"))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "checkDateRange(f,f.and(f.eq(f.exYearTs,f.literal(2010)),f.eq(f.exMonthTs,f.literal(12))),is(\"AND(AND(>=($9, 2010-01-01 00:00:00), <($9, 2011-01-01 00:00:00)),\" + \" AND(>=($9, 2010-12-01 00:00:00), <($9, 2011-01-01 00:00:00)))\"))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "checkDateRange(f,f.and(f.eq(f.exYearTs,f.literal(2010)),f.eq(f.exMonthTs,f.literal(1))),is(\"AND(AND(>=($9, 2010-01-01 00:00:00), <($9, 2011-01-01 00:00:00)),\" + \" AND(>=($9, 2010-01-01 00:00:00), <($9, 2010-02-01 00:00:00)))\"))@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "checkDateRange(f,f.and(f.eq(f.exYearTs,f.literal(2010)),f.eq(f.exMonthTs,f.literal(10)),f.eq(f.exMonthD,f.literal(5))),is(\"AND(AND(>=($9, 2010-01-01 00:00:00), <($9, 2011-01-01 00:00:00)),\" + \" AND(>=($9, 2010-10-01 00:00:00), <($9, 2010-11-01 00:00:00)),\" + \" =(EXTRACT(FLAG(MONTH), $8), 5))\"))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testExtractRewriteForInvalidMonthComparison['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testExtractRewriteMultipleOperands['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->0 [style = solid, label="f"];
+5->3 [style = bold, label=""];
+7->5 [style = bold, label=""];
+5->10 [style = solid, label="f"];
+1->6 [style = bold, label=""];
+5->4 [style = solid, label="f"];
+6->0 [style = bold, label=""];
+5->1 [style = solid, label="f"];
+9->10 [style = bold, label=""];
+3->1 [style = bold, label=""];
+5->3 [style = solid, label="f"];
+5->9 [style = bold, label=""];
+0->4 [style = bold, label=""];
+8->5 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+1->10 [style = dashed, label="0"];
+5->9 [style = solid, label="f"];
+5->6 [style = solid, label="f"];
+2->5 [style = bold, label=""];
+}

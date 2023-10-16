@@ -1,0 +1,35 @@
+digraph {
+8 [style = filled, label = "testNonBooleans['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "check(null,node,expected)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "check(Boolean.FALSE,node,expected)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "String expected = node.toString()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "RexNode node = rexBuilder.makeCall(SqlStdOperatorTable.PLUS,x,y)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "check(Boolean.TRUE,node,expected)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testOrUnchanged['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "RexNode node = rexBuilder.makeCall(SqlStdOperatorTable.OR,x,y)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "RexNode node = or(x,y)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "testOrUnchanged['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9->2 [style = solid, label="node"];
+0->3 [style = solid, label="node"];
+7->1 [style = bold, label=""];
+7->5 [style = solid, label="node"];
+1->2 [style = solid, label="expected"];
+1->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+1->3 [style = solid, label="expected"];
+0->5 [style = solid, label="node"];
+9->5 [style = solid, label="node"];
+3->2 [style = bold, label=""];
+7->2 [style = solid, label="node"];
+0->1 [style = bold, label=""];
+1->5 [style = solid, label="expected"];
+7->3 [style = solid, label="node"];
+0->2 [style = solid, label="node"];
+9->3 [style = solid, label="node"];
+8->9 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+9->1 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+2->5 [style = bold, label=""];
+}

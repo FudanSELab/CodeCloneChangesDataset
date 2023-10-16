@@ -1,0 +1,25 @@
+digraph {
+1 [style = filled, label = "MetadataStorageConnectorConfig connectorConfig = new MetadataStorageConnectorConfig(){@Override public String getConnectURI(){return \"jdbc:postgresql://localhost:3306/test?user=maytas&password=secret&keyonly\"}}@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "new MySQLFirehoseDatabaseConnector(connectorConfig,securityConfig)@@@18@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "testIgnoreInvalidPropertyWhenNotEnforcingAllowList['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "new MySQLFirehoseDatabaseConnector(connectorConfig,null,securityConfig)@@@18@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "new PostgresqlFirehoseDatabaseConnector(connectorConfig,securityConfig)@@@18@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testIgnoreInvalidPropertyWhenNotEnforcingAllowList['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "JdbcAccessSecurityConfig securityConfig = new JdbcAccessSecurityConfig(){@Override public Set<String> getAllowedProperties(){return ImmutableSet.of(\"user\",\"nonenone\")}@Override public boolean isEnforceAllowedProperties(){return false}}@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testIgnoreInvalidPropertyWhenNotEnforcingAllowList['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3->5 [style = dashed, label="0"];
+2->3 [style = solid, label="securityConfig"];
+6->1 [style = bold, label=""];
+1->7 [style = solid, label="connectorConfig"];
+4->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->7 [style = solid, label="securityConfig"];
+2->7 [style = bold, label=""];
+1->5 [style = solid, label="connectorConfig"];
+1->3 [style = solid, label="connectorConfig"];
+3->7 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->5 [style = bold, label=""];
+2->5 [style = solid, label="securityConfig"];
+}

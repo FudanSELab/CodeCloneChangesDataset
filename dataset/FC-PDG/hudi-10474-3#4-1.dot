@@ -1,0 +1,21 @@
+digraph {
+6 [style = filled, label = "testMapToPair['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "List<String> mapList = Arrays.asList(\"hudi_flink\",\"hudi_spark\",\"hudi_java\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Assertions.assertNotNull(resultMap.get(\"hudi\"))@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testMapToPair['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Assertions.assertEquals(resultMap.get(\"spark\"),resultMap.get(\"flink\"))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testMapToPair['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "List<String> mapList = Arrays.asList(\"spark_hudi\",\"flink_hudi\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Map<String,String> resultMap = context.mapToPair(mapList,null,2)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->5 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+5->2 [style = solid, label="mapList"];
+4->1 [style = bold, label=""];
+2->7 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+3->7 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+1->2 [style = solid, label="mapList"];
+}

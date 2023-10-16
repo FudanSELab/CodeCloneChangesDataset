@@ -1,0 +1,24 @@
+digraph {
+1 [style = filled, label = "factory.create(null,null,config)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Map<String,Object> config = new HashMap<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testCreateNullValue['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testCreateMissingField['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "fail(\"factory create should have failed\")@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "factory.create(null,null,null,config)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "config.put(\"field\",\"field1\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "config.put(\"value\",null)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testCreateMissingField['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+0->1 [style = solid, label="config"];
+5->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->5 [style = solid, label="config"];
+7->1 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+0->6 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

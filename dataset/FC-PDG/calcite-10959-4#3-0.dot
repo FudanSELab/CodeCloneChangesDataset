@@ -1,0 +1,35 @@
+digraph {
+12 [style = filled, label = "testReduceNestedCaseWhen['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "sql(sql).with(hepPlanner).check()@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "final String sql = \"select sal\" + \"from emp\" + \"where case when (sal = 1000) then\" + \"(case when sal = 1000 then null else 1 end is null) else\" + \"(case when sal = 2000 then null else 1 end is null) end is true\"@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "sql(sql).with(hepPlanner).checkUnchanged()@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "HepProgram preProgram = new HepProgramBuilder().build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final String sql = \"SELECT CASE WHEN 1=2 \" + \"THEN cast((values(1)) as integer) \" + \"ELSE 2 end from (values(1))\"@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "hepPlanner.addRule(ReduceExpressionsRule.FILTER_INSTANCE)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testReduceNullableCase['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "HepProgramBuilder builder = new HepProgramBuilder()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "HepProgramBuilder builder = new HepProgramBuilder()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "checkPlanning(tester,preProgram,hepPlanner,sql)@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testReduceNullableCase['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "HepPlanner hepPlanner = new HepPlanner(builder.build())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "builder.addRuleClass()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+12->13 [style = bold, label=""];
+6->4 [style = bold, label=""];
+13->10 [style = solid, label="preProgram"];
+5->9 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+1->0 [style = bold, label=""];
+5->6 [style = bold, label=""];
+6->7 [style = bold, label=""];
+5->9 [style = bold, label=""];
+9->11 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+11->10 [style = solid, label="sql"];
+11->10 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+5->10 [style = solid, label="hepPlanner"];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+13->2 [style = bold, label=""];
+}

@@ -1,0 +1,14 @@
+digraph {
+6 [style = filled, label = "testEarliestAggregatorsNumericNulls['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "skipVectorize()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testSimpleLongAggregations['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testQuery(\"SELECT MIN(l1), MIN(cnt) FROM druid.numfoo\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE3).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).aggregators(aggregators(new LongMinAggregatorFactory(\"a0\",\"l1\"),new LongMinAggregatorFactory(\"a1\",\"cnt\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9e049c))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "testQuery(\"SELECT EARLIEST(l1), EARLIEST(d1), EARLIEST(f1) FROM druid.numfoo\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE3).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).aggregators(aggregators(new LongFirstAggregatorFactory(\"a0\",\"l1\"),new DoubleFirstAggregatorFactory(\"a1\",\"d1\"),new FloatFirstAggregatorFactory(\"a2\",\"f1\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9e0518))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testSimpleLongAggregations['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "testQuery(\"SELECT MIN(l1), MIN(cnt), MAX(l1) FROM druid.numfoo\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE3).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).aggregators(aggregators(new LongMinAggregatorFactory(\"a0\",\"l1\"),new LongMinAggregatorFactory(\"a1\",\"cnt\"),new LongMaxAggregatorFactory(\"a2\",\"l1\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9e04d8))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6->5 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

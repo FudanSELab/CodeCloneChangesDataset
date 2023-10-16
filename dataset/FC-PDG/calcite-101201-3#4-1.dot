@@ -1,0 +1,24 @@
+digraph {
+8 [style = filled, label = "s.sql(\"insert into ^empnullables^ values (?)\").fails(\"Column 'ENAME' has no default value and does not allow NULLs\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "s.sql(\"insert into ^empnullables_20^ values (1)\").fails(\"Column 'ENAME' has no default value and does not allow NULLs\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "s.sql(\"insert into empnullables ^values (?, null)^\").fails(\"Column 'ENAME' has no default value and does not allow NULLs\")@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "s.sql(\"insert into empnullables_20 ^values (45, null)^\").fails(\"Column 'ENAME' has no default value and does not allow NULLs\")@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testInsertBindSubsetFailNullability['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "s.sql(\"insert into empnullables ^values (null, ?)^\").fails(\"Column 'EMPNO' has no default value and does not allow NULLs\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testInsertSubsetViewFailNullability['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "s.sql(\"insert into empnullables_20 ^values (null, 'Liam')^\").fails(\"Column 'EMPNO' has no default value and does not allow NULLs\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final Sql s = sql(\"?\").withConformance(SqlConformanceEnum.PRAGMATIC_2003)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testInsertSubsetViewFailNullability['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+9->7 [style = bold, label=""];
+0->4 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+3->7 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+0->8 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

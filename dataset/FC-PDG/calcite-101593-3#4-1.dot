@@ -1,0 +1,35 @@
+digraph {
+12 [style = filled, label = "testRollupWithGroupBy['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "sql(query).ok(expected).withSpark().ok(expectedInSpark).withPresto().ok(expectedPresto)@@@7@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final String expectedPresto = \"SELECT COUNT(*)\" + \"FROM \"foodmart\".\"product\"\" + \"GROUP BY ROLLUP(\"product_id\", \"product_class_id\")\"@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testCubeWithGroupBy['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final String expectedInSpark = \"SELECT COUNT(*)\" + \"FROM foodmart.product\" + \"GROUP BY product_id, product_class_id WITH CUBE\"@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final String expected = \"SELECT COUNT(*)\" + \"FROM \"foodmart\".\"product\"\" + \"GROUP BY ROLLUP(\"product_id\", \"product_class_id\")\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "final String expectedInSpark = \"SELECT COUNT(*)\" + \"FROM foodmart.product\" + \"GROUP BY product_id, product_class_id WITH ROLLUP\"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testCubeWithGroupBy['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "final String expected = \"SELECT COUNT(*)\" + \"FROM \"foodmart\".\"product\"\" + \"GROUP BY CUBE(\"product_id\", \"product_class_id\")\"@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "sql(query).ok(expected).withPresto().ok(expectedPresto).withSpark().ok(expectedInSpark)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "final String expectedPresto = \"SELECT COUNT(*)\" + \"FROM \"foodmart\".\"product\"\" + \"GROUP BY CUBE(\"product_id\", \"product_class_id\")\"@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final String query = \"select count(*) \" + \"from \"foodmart\".\"product\" \" + \"group by rollup(\"product_id\",\"product_class_id\")\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final String query = \"select count(*) \" + \"from \"foodmart\".\"product\" \" + \"group by cube(\"product_id\",\"product_class_id\")\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+4->1 [style = bold, label=""];
+10->9 [style = bold, label=""];
+1->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+3->2 [style = solid, label="expectedPresto"];
+3->2 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+8->11 [style = bold, label=""];
+11->10 [style = bold, label=""];
+9->2 [style = bold, label=""];
+12->8 [style = bold, label=""];
+9->2 [style = solid, label="expectedPresto"];
+1->11 [style = dashed, label="0"];
+0->10 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+0->6 [style = solid, label="expectedInSpark"];
+2->6 [style = dashed, label="0"];
+}

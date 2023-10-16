@@ -1,0 +1,30 @@
+digraph {
+2 [style = filled, label = "final Label label = new Label(ID_SCALAR_IF_COMPACT,newTextFieldValueModel()){@Override public IConverter<C> getConverter(Class<C> type){return (IConverter<C>)converter}}@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "label.add(new AttributeModifier(\"size\",Model.of(\"\" + length)))@@@15@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "final int length = dateTimePattern.length() + lengthAdjust@@@14@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final int lengthAdjust = getLengthAdjustHint() != null? getLengthAdjustHint(): 1@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "createComponentForCompact['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "label.setEnabled(false)@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Fragment compactFragment = getCompactFragment(CompactType.SPAN)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "createComponentForCompact['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return label@@@17@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "createComponentForCompact['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "compactFragment.add(label)@@@16@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final String dateTimePattern = converter.getDateTimePattern(getLocale())@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+3->9 [style = bold, label=""];
+8->0 [style = bold, label=""];
+11->8 [style = bold, label=""];
+9->11 [style = solid, label="lengthAdjust"];
+6->5 [style = bold, label=""];
+5->2 [style = bold, label=""];
+7->5 [style = bold, label=""];
+2->4 [style = solid, label="label"];
+9->10 [style = bold, label=""];
+11->8 [style = solid, label="length"];
+0->4 [style = bold, label=""];
+2->0 [style = solid, label="label"];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

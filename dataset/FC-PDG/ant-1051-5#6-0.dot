@@ -1,0 +1,38 @@
+digraph {
+13 [style = filled, label = "buildRule.executeTarget(\"testinner\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "buildRule.executeTarget(\"testdirect\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertTrue(\"Result did not contain D.class\",files.containsKey(\"D.class\"))@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Hashtable files = getResultFiles()@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "assertEquals(\"Depend did not leave correct number of files\",0,getResultFiles().size())@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "Hashtable<String,String> files = getResultFiles()@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+14 [style = filled, label = "buildRule.executeTarget(\"src2setup\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "testInner['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testDirect['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "buildRule.executeTarget(\"compile\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "FileUtilities.rollbackTimestamps(new File(buildRule.getProject().getProperty(\"classes.dir\")),5)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testDirect['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "assertTrue(\"Result did not contain A.class\",files.containsKey(\"A.class\"))@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "buildRule.executeTarget(\"src1setup\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "FileUtilities.rollbackTimestamps(new File(buildRule.getProject().getProperty(\"tempsrc.dir\")),5)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(\"Depend did not leave correct number of files\",3,files.size())@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->14 [style = dashed, label="0"];
+5->7 [style = bold, label=""];
+3->6 [style = bold, label=""];
+11->0 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+13->12 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+6->9 [style = bold, label=""];
+7->13 [style = dashed, label="0"];
+15->14 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+9->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+7->10 [style = bold, label=""];
+10->6 [style = bold, label=""];
+5->13 [style = bold, label=""];
+7->3 [style = bold, label=""];
+2->5 [style = bold, label=""];
+14->4 [style = bold, label=""];
+}

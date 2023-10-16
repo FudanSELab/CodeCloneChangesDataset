@@ -1,0 +1,37 @@
+digraph {
+11 [style = filled, label = "CalciteAssert.that().withMaterializations(HR_FKUK_MODEL,\"m0\",\"select * from \"emps\" where \"empid\" < 300\",\"m1\",\"select * from \"emps\" where \"empid\" < 600\").query(q).withHook(Hook.SUB,(Consumer<RelNode>)null).enableMaterializations(true).sameResultWithMaterializationsDisabled()@@@58@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testMaterializationSubstitution['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final List<List<List<String>>> substitutedNames = new ArrayList<>()@@@99@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "String q = \"select *\" + \"from (select * from \"emps\" where \"empid\" < 300)\" + \"join (select * from \"emps\" where \"empid\" < 200) using (\"empid\")\"@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "substitutedNames.sort(CASE_INSENSITIVE_LIST_LIST_COMPARATOR)@@@59@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "MaterializationService.setThreadLocal()@@@98@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testMaterializationSubstitution2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "CalciteAssert.that().withMaterializations(HR_FKUK_MODEL,\"m0\",\"select * from \"emps\" where \"empid\" < 300\",\"m1\",\"select * from \"emps\" where \"empid\" < 600\",\"m2\",\"select * from \"m1\"\").query(q).withHook(Hook.SUB,new Function<RelNode,Void>(){public Void apply(RelNode input){substitutedNames.add(new TableNameVisitor().run(input))return null}}).enableMaterializations(true).sameResultWithMaterializationsDisabled()@@@100@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testMaterializationSubstitution['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "CalciteAssert.that().withMaterializations(HR_FKUK_MODEL,\"m0\",\"select * from \"emps\" where \"empid\" < 300\",\"m1\",\"select * from \"emps\" where \"empid\" < 600\").query(q).withHook(Hook.SUB,new Function<RelNode,Void>(){public Void apply(RelNode input){substitutedNames.add(new TableNameVisitor().run(input))return null}}).enableMaterializations(true).sameResultWithMaterializationsDisabled()@@@58@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "assertThat(substitutedNames,is(list3(expectedNames)))@@@60@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "final String(((((( expectedNames = {{{\"hr\",\"emps\"},{\"hr\",\"m0\"}},{{\"hr\",\"emps\"},{\"hr\",\"m1\"}},{{\"hr\",\"emps\"},{\"hr\",\"m2\"}},{{\"hr\",\"m0\"},{\"hr\",\"emps\"}},{{\"hr\",\"m0\"},{\"hr\",\"m0\"}},{{\"hr\",\"m0\"},{\"hr\",\"m1\"}},{{\"hr\",\"m0\"},{\"hr\",\"m2\"}},{{\"hr\",\"m1\"},{\"hr\",\"emps\"}},{{\"hr\",\"m1\"},{\"hr\",\"m0\"}},{{\"hr\",\"m1\"},{\"hr\",\"m1\"}},{{\"hr\",\"m1\"},{\"hr\",\"m2\"}},{{\"hr\",\"m2\"},{\"hr\",\"emps\"}},{{\"hr\",\"m2\"},{\"hr\",\"m0\"}},{{\"hr\",\"m2\"},{\"hr\",\"m1\"}},{{\"hr\",\"m2\"},{\"hr\",\"m2\"}}}@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Collections.sort(substitutedNames,CASE_INSENSITIVE_LIST_LIST_COMPARATOR)@@@107@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(substitutedNames,is(list3(expectedNames)))@@@108@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->0 [style = solid, label="substitutedNames"];
+1->3 [style = bold, label=""];
+3->11 [style = bold, label=""];
+7->11 [style = dashed, label="0"];
+6->9 [style = solid, label="expectedNames"];
+3->12 [style = bold, label=""];
+6->1 [style = bold, label=""];
+12->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+10->5 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->7 [style = bold, label=""];
+7->2 [style = bold, label=""];
+8->9 [style = bold, label=""];
+13->5 [style = bold, label=""];
+7->12 [style = dashed, label="0"];
+11->8 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->2 [style = solid, label="substitutedNames"];
+6->0 [style = solid, label="expectedNames"];
+3->9 [style = solid, label="substitutedNames"];
+}

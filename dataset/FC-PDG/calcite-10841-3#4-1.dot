@@ -1,0 +1,26 @@
+digraph {
+5 [style = filled, label = "testUniquifyNotCaseSensitive['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "testUniquifyOrderingNotCaseSensitive['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "List<String> nameList = Lists.newArrayList(\"col1\",\"COL1\",\"col_ABC\",\"col_abC\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "checkChangedFieldList(nameList,resultList,false)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "List<String> resultList = SqlValidatorUtil.uniquify(nameList,SqlValidatorUtil.EXPR_SUGGESTER,false)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(resultList,not(nameList))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testUniquifyNotCaseSensitive['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "List<String> nameList = Lists.newArrayList(\"k68s\",\"def\",\"col1\",\"COL1\",\"abc\",\"123\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->4 [style = bold, label=""];
+5->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+6->0 [style = bold, label=""];
+2->0 [style = solid, label="nameList"];
+2->1 [style = solid, label="nameList"];
+0->1 [style = solid, label="resultList"];
+3->2 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+0->4 [style = solid, label="resultList"];
+6->1 [style = solid, label="nameList"];
+2->4 [style = solid, label="nameList"];
+7->6 [style = bold, label=""];
+6->0 [style = solid, label="nameList"];
+6->4 [style = solid, label="nameList"];
+}

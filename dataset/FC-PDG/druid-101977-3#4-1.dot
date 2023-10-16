@@ -1,0 +1,13 @@
+digraph {
+3 [style = filled, label = "testQuery(\"SELECT COUNT(*)\" + \"FROM druid.numfoo\" + \"WHERE l1 > 3\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE3).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).filters(bound(\"l1\",\"3\",null,true,false,null,StringComparators.NUMERIC)).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(QUERY_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8ec52c))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "testLongPredicateFilterNulls['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testQuery(\"SELECT COUNT(*)\" + \"FROM druid.numfoo\" + \"WHERE l1 > 3\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE3).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).filters(bound(\"l1\",\"3\",null,true,false,null,StringComparators.NUMERIC)).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8ec4e9))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "testLongs['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testQuery(\"SELECT COUNT(*)\" + \"FROM druid.numfoo\" + \"WHERE l1 > ?\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE3).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).filters(bound(\"l1\",\"3\",null,true,false,null,StringComparators.NUMERIC)).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8ec56f),ImmutableList.of(new SqlParameter(SqlType.BIGINT,3L)))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testLongPredicateFilterNulls['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0->4 [style = dashed, label="0"];
+0->3 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

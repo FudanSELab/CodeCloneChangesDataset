@@ -1,0 +1,36 @@
+digraph {
+6 [style = filled, label = "Assert.assertEquals(2,scheduler.getTotalReleased().get())@@@13@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testJoinOnGroupByOnTable['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "Assert.assertEquals(2,scheduler.getTotalPrioritizedAndLaned().get())@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final GroupByQuery query = (GroupByQuery)GroupByQuery.builder().setDataSource(JoinDataSource.create(new TableDataSource(FOO),new TableDataSource(BAR),\"j.\",\"\"j.s\" == \"s\"\",JoinType.INNER,ExprMacroTable.nil())).setGranularity(Granularities.ALL).setInterval(Intervals.ONLY_ETERNITY).setDimensions(DefaultDimensionSpec.of(\"s\"),DefaultDimensionSpec.of(\"j.s\")).setAggregatorSpecs(new CountAggregatorFactory(\"cnt\")).build().withId(UUID.randomUUID().toString())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testQuery(query,ImmutableList.of(ExpectedQuery.cluster(subquery),ExpectedQuery.cluster(query.withDataSource(query.getDataSource().withChildren(ImmutableList.of(query.getDataSource().getChildren().get(0),InlineDataSource.fromIterable(ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8e34b2),RowSignature.builder().add(\"s\",ValueType.STRING).build())))))),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8e34c4))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final GroupByQuery query = (GroupByQuery)GroupByQuery.builder().setDataSource(JoinDataSource.create(new TableDataSource(FOO),new QueryDataSource(subquery),\"j.\",\"\"j.s\" == \"s\"\",JoinType.INNER,ExprMacroTable.nil())).setGranularity(Granularities.ALL).setInterval(Intervals.ONLY_ETERNITY).setDimensions(DefaultDimensionSpec.of(\"s\"),DefaultDimensionSpec.of(\"j.s\")).setAggregatorSpecs(new CountAggregatorFactory(\"cnt\")).build().withId(UUID.randomUUID().toString())@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "expectedException.expectMessage(\"Cannot handle subquery structure for dataSource\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Assert.assertEquals(2,scheduler.getTotalAcquired().get())@@@12@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Assert.assertEquals(2,scheduler.getTotalRun().get())@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testQuery(query,ImmutableList.of(),ImmutableList.of())@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testJoinOnGroupByOnTable['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "testJoinOnTableErrorCantInlineTable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "expectedException.expect()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final GroupByQuery subquery = GroupByQuery.builder().setDataSource(FOO).setGranularity(Granularities.ALL).setInterval(Collections.singletonList(INTERVAL)).setDimensions(DefaultDimensionSpec.of(\"s\")).setDimFilter(new SelectorDimFilter(\"s\",\"y\",null)).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final GroupByQuery query = (GroupByQuery)GroupByQuery.builder().setDataSource(JoinDataSource.create(new TableDataSource(FOO),new QueryDataSource(subquery),\"j.\",\"\"j.s\" == \"s\"\",JoinType.INNER,null,ExprMacroTable.nil())).setGranularity(Granularities.ALL).setInterval(Intervals.ONLY_ETERNITY).setDimensions(DefaultDimensionSpec.of(\"s\"),DefaultDimensionSpec.of(\"j.s\")).setAggregatorSpecs(new CountAggregatorFactory(\"cnt\")).build().withId(UUID.randomUUID().toString())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9->5 [style = bold, label=""];
+8->1 [style = bold, label=""];
+5->8 [style = bold, label=""];
+8->1 [style = solid, label="query"];
+11->13 [style = solid, label="query"];
+4->1 [style = bold, label=""];
+3->5 [style = bold, label=""];
+11->12 [style = bold, label=""];
+12->10 [style = bold, label=""];
+1->0 [style = bold, label=""];
+2->7 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+10->13 [style = bold, label=""];
+14->11 [style = bold, label=""];
+4->1 [style = solid, label="query"];
+5->1 [style = solid, label="subquery"];
+5->4 [style = bold, label=""];
+7->6 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

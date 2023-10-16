@@ -1,0 +1,30 @@
+digraph {
+9 [style = filled, label = "assertJQ(req(\"q\",IndexSchema.NEST_PATH_FIELD_NAME + \":*/grandChild#*\",\"fl\",\"*\",\"sort\",\"id desc\",\"wt\",\"json\"),tests)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testDeeplyNestedURPChildren['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final String(( childrenTests = {\"/response/docs/(0(/id=='2'\",\"/response/docs/(1(/id=='3'\",\"/response/docs/(0(/\" + IndexSchema.NEST_PATH_FIELD_NAME + \"=='children#0'\",\"/response/docs/(1(/\" + IndexSchema.NEST_PATH_FIELD_NAME + \"=='children#1'\"}@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertJQ(req(\"q\",IndexSchema.NEST_PATH_FIELD_NAME + \":anotherChildList/\",\"fl\",\"*, _nest_path_\",\"sort\",\"id asc\",\"wt\",\"json\"),\"/response/docs/(0(/id=='4'\",\"/response/docs/(0(/\" + IndexSchema.NEST_PATH_FIELD_NAME + \"=='anotherChildList#0'\")@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "assertJQ(req(\"q\",IndexSchema.NEST_PATH_FIELD_NAME + \":children/\",\"fl\",\"*, _nest_path_\",\"sort\",\"id asc\",\"wt\",\"json\"),childrenTests)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "final String(( tests = {\"/response/docs/(0(/id=='4'\",\"/response/docs/(0(/\" + IndexSchema.NEST_PATH_FIELD_NAME + \"=='children#0/grandChild#'\"}@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "indexSampleData(jDoc)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testDeeplyNestedURPChildren['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertJQ(req(\"q\",IndexSchema.NEST_PATH_FIELD_NAME + \":anotherChildList#?\",\"fl\",\"*\",\"sort\",\"id asc\",\"wt\",\"json\"),\"/response/docs/(0(/id=='4'\",\"/response/docs/(0(/\" + IndexSchema.NEST_PATH_FIELD_NAME + \"=='anotherChildList#0'\")@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "testDeeplyNestedURPGrandChild['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertJQ(req(\"q\",IndexSchema.NEST_PATH_FIELD_NAME + \":children#?\",\"fl\",\"*\",\"sort\",\"id asc\",\"wt\",\"json\"),childrenTests)@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0->3 [style = bold, label=""];
+1->5 [style = solid, label="childrenTests"];
+5->7 [style = bold, label=""];
+6->1 [style = bold, label=""];
+8->10 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+0->9 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+10->9 [style = solid, label="tests"];
+3->9 [style = dashed, label="0"];
+1->3 [style = solid, label="childrenTests"];
+10->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

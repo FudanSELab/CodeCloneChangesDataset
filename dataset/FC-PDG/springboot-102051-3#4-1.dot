@@ -1,0 +1,36 @@
+digraph {
+10 [style = filled, label = "this.tomcat.start()@@@15@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThat(sslHostConfig.getEnabledProtocols()).containsExactlyInAnyOrder(\"TLSv1.1\",\"TLSv1.2\")@@@18@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "assertThat(sslHostConfig.getEnabledProtocols()).containsExactly(\"TLSv1.2\")@@@18@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "sslEnabledMultipleProtocolsConfiguration['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ssl.setEnabledProtocols(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1ce3053)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Connector connector = this.tomcat.getConnector()@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "ssl.setKeyStore(\"src/test/resources/test.jks\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "sslEnabledProtocolsConfiguration['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "customizer.customize(connector)@@@14@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "SslConnectorCustomizer customizer = new SslConnectorCustomizer(ssl,null)@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ssl.setCiphers(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1ce305b)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "sslEnabledMultipleProtocolsConfiguration['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertThat(sslHostConfig.getSslProtocol()).isEqualTo(\"TLS\")@@@17@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ssl.setKeyPassword(\"password\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Ssl ssl = new Ssl()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "SSLHostConfig sslHostConfig = connector.getProtocolHandler().findSslHostConfigs()(0(@@@16@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->9 [style = bold, label=""];
+14->9 [style = bold, label=""];
+5->11 [style = bold, label=""];
+11->12 [style = bold, label=""];
+6->0 [style = bold, label=""];
+12->10 [style = bold, label=""];
+1->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+13->9 [style = bold, label=""];
+9->5 [style = solid, label="ssl"];
+11->12 [style = solid, label="connector"];
+10->1 [style = bold, label=""];
+4->5 [style = bold, label=""];
+8->15 [style = dashed, label="0"];
+2->8 [style = bold, label=""];
+2->15 [style = bold, label=""];
+9->6 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

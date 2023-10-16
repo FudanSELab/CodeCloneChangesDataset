@@ -1,0 +1,30 @@
+digraph {
+4 [style = filled, label = "sql(sql).with(program).check()@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final EnumSet<SqlKind> functionsToReduce = EnumSet.of(SqlKind.AVG,SqlKind.SUM,SqlKind.STDDEV_POP,SqlKind.STDDEV_SAMP,SqlKind.VAR_POP,SqlKind.VAR_SAMP)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final String sql = \"select name, stddev_pop(deptno), avg(deptno),\" + \" stddev_samp(deptno), var_pop(deptno), var_samp(deptno)\" + \"from sales.dept group by name\"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testReduceAllAggregateFunctions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "sql(sql).withRule(rule).check()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "testReduceAverageAndVarWithNoReduceStddev['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "final EnumSet<SqlKind> functionsToReduce = EnumSet.of(SqlKind.AVG,SqlKind.VAR_POP)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final String sql = \"select name, stddev_pop(deptno), avg(deptno),\" + \" var_pop(deptno)\" + \"from sales.dept group by name\"@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testReduceAverageAndVarWithNoReduceStddev['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "HepProgram program = new HepProgramBuilder().addRuleInstance(new AggregateReduceFunctionsRule(,RelFactories.LOGICAL_BUILDER,functionsToReduce)).build()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final RelOptRule rule = new AggregateReduceFunctionsRule(,RelFactories.LOGICAL_BUILDER,functionsToReduce)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8->1 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+0->9 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+10->8 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+0->6 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+1->9 [style = bold, label=""];
+9->4 [style = bold, label=""];
+2->5 [style = bold, label=""];
+2->5 [style = solid, label="functionsToReduce"];
+}

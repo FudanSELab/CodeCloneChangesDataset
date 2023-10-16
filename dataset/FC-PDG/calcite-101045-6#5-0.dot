@@ -1,0 +1,19 @@
+digraph {
+1 [style = filled, label = "config['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "CalciteAssert.model(TPCDS_MODEL).doWithConnection(null)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "config['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "config['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final SchemaPlus rootSchema = Frameworks.createRootSchema(true)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return Frameworks.newConfigBuilder().parserConfig(SqlParser.Config.DEFAULT).defaultSchema(root.get()).traitDefs((List<RelTraitDef>)null).programs(Programs.heuristicJoinOrder(Programs.RULE_SET,true,2))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "return Frameworks.newConfigBuilder().parserConfig(SqlParser.Config.DEFAULT).defaultSchema(CalciteAssert.addSchema(rootSchema,CalciteAssert.SchemaSpec.SCOTT_WITH_TEMPORAL)).traitDefs((List<RelTraitDef>)null).programs(Programs.heuristicJoinOrder(Programs.RULE_SET,true,2))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "final Holder<SchemaPlus> root = Holder.of(null)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "return Frameworks.newConfigBuilder().parserConfig(SqlParser.Config.DEFAULT).defaultSchema(CalciteAssert.addSchema(rootSchema,CalciteAssert.SchemaSpec.SCOTT)).traitDefs((List<RelTraitDef>)null).programs(Programs.heuristicJoinOrder(Programs.RULE_SET,true,2))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->5 [style = bold, label=""];
+8->6 [style = bold, label=""];
+1->0 [style = bold, label=""];
+2->3 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

@@ -1,0 +1,36 @@
+digraph {
+1 [style = filled, label = "SQLCheckEngine.check(logicSQL.getSqlStatementContext().getSqlStatement(),logicSQL.getParameters(),metaDataContexts.getDefaultMetaData(),null)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "return result@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "createExecutionContext['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "clearStatements()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "findGeneratedKey(result).ifPresent(null)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ExecutionContext result = kernelProcessor.generateExecutionContext(logicSQL,metaDataContexts.getDefaultMetaData(),metaDataContexts.getProps())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "LogicSQL logicSQL = createLogicSQL()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "LogicSQL logicSQL = createLogicSQL(sql)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "SQLCheckEngine.check(logicSQL.getSqlStatementContext().getSqlStatement(),logicSQL.getParameters(),metaDataContexts.getDefaultMetaData(),metaDataContexts.getGlobalRuleMetaData(),null)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "createExecutionContext['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "createExecutionContext['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final String sql@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "logSQL(logicSQL,metaDataContexts.getProps(),result)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->3 [style = bold, label=""];
+1->4 [style = bold, label=""];
+8->10 [style = solid, label="sql"];
+12->8 [style = dotted, label="true"];
+9->10 [style = bold, label=""];
+12->9 [style = bold, label=""];
+11->2 [style = bold, label=""];
+4->11 [style = solid, label="result"];
+5->4 [style = solid, label="logicSQL"];
+10->4 [style = solid, label="logicSQL"];
+5->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+10->11 [style = solid, label="logicSQL"];
+7->5 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+10->4 [style = bold, label=""];
+4->11 [style = bold, label=""];
+4->2 [style = solid, label="result"];
+0->5 [style = bold, label=""];
+}

@@ -1,0 +1,35 @@
+digraph {
+2 [style = filled, label = "QueryRunner mergedRunner = factory.getToolchest().mergeResults(new QueryRunner<Row>(){@Override public Sequence<Row> run(QueryPlus<Row> queryPlus,Map<String,Object> responseContext){final QueryPlus queryPlus1 = queryPlus.withQuerySegmentSpec(new MultipleIntervalSegmentSpec(Collections.singletonList(Intervals.of(\"2011-04-02/2011-04-03\"))))final QueryPlus queryPlus2 = queryPlus.withQuerySegmentSpec(new MultipleIntervalSegmentSpec(Collections.singletonList(Intervals.of(\"2011-04-03/2011-04-04\"))))return new MergeSequence(queryPlus.getQuery().getResultOrdering(),Sequences.simple(Arrays.asList(runner.run(queryPlus1,responseContext),runner.run(queryPlus2,responseContext))))}})@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Map<String,Object> context = new HashMap<>()@@@14@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "testPostAggMergedHavingSpec['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testPostAggMergedHavingSpec['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "Map<String,Object> context = Maps.newHashMap()@@@14@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "GroupByQuery.Builder builder = GroupByQuery.builder().setDataSource(QueryRunnerTestHelper.dataSource).setInterval(\"2011-04-02/2011-04-04\").setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\")).setAggregatorSpecs(QueryRunnerTestHelper.rowsCount,new LongSumAggregatorFactory(\"index\",\"index\")).setPostAggregatorSpecs(ImmutableList.of(QueryRunnerTestHelper.addRowsIndexConstant)).setGranularity(new PeriodGranularity(new Period(\"P1M\"),null,null)).setHavingSpec(new OrHavingSpec(ImmutableList.of(new GreaterThanHavingSpec(QueryRunnerTestHelper.addRowsIndexConstantMetric,1000L))))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "TestHelper.assertExpectedObjects(expectedResults,mergedRunner.run(QueryPlus.wrap(fullQuery),context),\"merged\")@@@15@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "TestHelper.assertExpectedObjects(expectedResults,GroupByQueryRunnerTestHelper.runQuery(factory,runner,fullQuery),\"\")@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testPostAggHavingSpec['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "List<Row> expectedResults = Arrays.asList(GroupByQueryRunnerTestHelper.createExpectedRow(\"2011-04-01\",\"alias\",\"mezzanine\",\"rows\",6L,\"index\",4420L,QueryRunnerTestHelper.addRowsIndexConstantMetric,(double)(6L + 4420L + 1L)),GroupByQueryRunnerTestHelper.createExpectedRow(\"2011-04-01\",\"alias\",\"premium\",\"rows\",6L,\"index\",4416L,QueryRunnerTestHelper.addRowsIndexConstantMetric,(double)(6L + 4416L + 1L)))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "GroupByQuery.Builder builder = GroupByQuery.builder().setDataSource(QueryRunnerTestHelper.dataSource).setInterval(\"2011-04-02/2011-04-04\").setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\")).setAggregatorSpecs(QueryRunnerTestHelper.rowsCount,new LongSumAggregatorFactory(\"index\",\"index\")).setPostAggregatorSpecs(ImmutableList.of(QueryRunnerTestHelper.addRowsIndexConstant)).setGranularity(new PeriodGranularity(new Period(\"P1M\"),null,null)).setHavingSpec(new OrHavingSpec(ImmutableList.of(new GreaterThanHavingSpec(QueryRunnerTestHelper.addRowsIndexConstantMetric,1000L))))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final GroupByQuery fullQuery = builder.build()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->9 [style = bold, label=""];
+0->4 [style = solid, label="fullQuery"];
+8->4 [style = solid, label="context"];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+3->4 [style = solid, label="context"];
+3->4 [style = bold, label=""];
+10->6 [style = bold, label=""];
+6->5 [style = bold, label=""];
+11->0 [style = bold, label=""];
+1->6 [style = bold, label=""];
+0->9 [style = solid, label="fullQuery"];
+6->4 [style = solid, label="expectedResults"];
+5->0 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+6->11 [style = bold, label=""];
+7->6 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+8->4 [style = bold, label=""];
+6->9 [style = solid, label="expectedResults"];
+2->8 [style = bold, label=""];
+}

@@ -1,0 +1,30 @@
+digraph {
+7 [style = filled, label = "final RelTraitSet childTraits@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final RelTraitSet required@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "deriveTraits['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "passThroughTraits['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final List<RexNode> exps = Util.transform(program.getProjectList(),null)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final RelTraitSet required@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "passThroughTraits['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "return EnumerableTraitsUtils.deriveTraitsForProject(childTraits,childId,exps,input.getRowType(),input.getCluster().getTypeFactory(),traitSet)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final int childId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return EnumerableTraitsUtils.passThroughTraitsForProject(required,exps,input.getRowType(),input.getCluster().getTypeFactory(),traitSet)@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->0 [style = solid, label="required"];
+2->6 [style = solid, label="exps"];
+4->5 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+1->9 [style = dashed, label="0"];
+7->6 [style = solid, label="childTraits"];
+2->0 [style = bold, label=""];
+8->9 [style = dotted, label="true"];
+4->2 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+8->2 [style = bold, label=""];
+9->6 [style = solid, label="childId"];
+2->6 [style = bold, label=""];
+1->0 [style = solid, label="required"];
+2->0 [style = solid, label="exps"];
+3->1 [style = dotted, label="true"];
+0->6 [style = dashed, label="0"];
+}

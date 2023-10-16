@@ -1,0 +1,20 @@
+digraph {
+8 [style = filled, label = "new ProviderSqlSource(new Configuration(),.getMethod(\"getUsersByNameWithParamName\",).getAnnotation()).getBoundSql(new Object())@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "expectedException.expect()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "new ProviderSqlSource(new Configuration(),.getMethod(\"getUsersByName\",,).getAnnotation()).getBoundSql(new Object())@@@5@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "notSupportParameterObjectOnMultipleArguments['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "notSupportParameterObjectOnMultipleArguments['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "new ProviderSqlSource(new Configuration(),.getMethod(\"getUsersByName\",,).getAnnotation()).getBoundSql(new Object())@@@4@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "expectedException.expectMessage(is(\"Error invoking SqlProvider method (org.apache.ibatis.submitted.sqlprovider.OurSqlBuilder.buildGetUsersByNameWithParamNameQuery). Cannot invoke a method that holds named argument(@Param) using a specifying parameterObject. In this case, please specify a 'java.util.Map' object.\"))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "expectedException.expectMessage(is(\"Error invoking SqlProvider method (org.apache.ibatis.submitted.sqlprovider.OurSqlBuilder.buildGetUsersByNameQuery). Cannot invoke a method that holds multiple arguments using a specifying parameterObject. In this case, please specify a 'java.util.Map' object.\"))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "notSupportParameterObjectOnNamedArgument['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+5->4 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+2->8 [style = dashed, label="0"];
+7->3 [style = bold, label=""];
+3->0 [style = bold, label=""];
+6->8 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

@@ -1,0 +1,31 @@
+digraph {
+8 [style = filled, label = "executeAndCloseAndExecuteIRMultipleTimes['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "final String cqName@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "VM vm@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "executeAndCloseAndExecuteIRMultipleTimes['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final String queryStr@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "vm.invoke(null)@@@3@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "VM vm@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "VM vm@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final String cqName@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "vm.invoke(new CacheSerializableRunnable(\"Create CQ :\" + cqName){public void run2(){LogWriterUtils.getLogWriter().info(\"### Create CQ. ###\" + cqName)QueryService cqService = nulltry {cqService = getCache().getQueryService()}catch (Exception cqe) CqAttributesFactory cqf = new CqAttributesFactory()CqListener(( cqListeners = {new CqQueryTestListener(LogWriterUtils.getLogWriter())}cqf.initCqListeners(cqListeners)CqAttributes cqa = cqf.create()CqQuery cq1try {cq1 = cqService.newCq(cqName,queryStr,cqa)assertTrue(\"newCq() state mismatch\",cq1.getState().isStopped())}catch (Exception ex) try {cq1.executeWithInitialResults()try {cq1.executeWithInitialResults()}catch (IllegalStateException e) cq1.close()try {cq1.executeWithInitialResults()}catch (CqClosedException e) fail(\"should have received cqClosedException\")}catch (Exception e) }})@@@3@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "closeCQ['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "vm.invoke(new CacheSerializableRunnable(\"Close CQ :\" + cqName){public void run2(){LogWriterUtils.getLogWriter().info(\"### Close CQ. ###\" + cqName)QueryService cqService = nulltry {cqService = getCache().getQueryService()}catch (Exception cqe) CqQuery cq1 = nulltry {cq1 = cqService.getCq(cqName)cq1.close()}catch (Exception ex) assertTrue(\"Close CQ state mismatch\",cq1.getState().isClosed())}})@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final String queryStr@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+0->1 [style = solid, label="queryStr"];
+11->9 [style = dotted, label="true"];
+4->1 [style = bold, label=""];
+9->10 [style = solid, label="cqName"];
+4->3 [style = dotted, label="true"];
+3->6 [style = dashed, label="0"];
+8->6 [style = dotted, label="true"];
+3->12 [style = dashed, label="0"];
+1->10 [style = dashed, label="0"];
+8->5 [style = dotted, label="true"];
+11->10 [style = bold, label=""];
+3->1 [style = solid, label="cqName"];
+4->2 [style = dotted, label="true"];
+8->7 [style = bold, label=""];
+4->0 [style = dotted, label="true"];
+11->12 [style = dotted, label="true"];
+}

@@ -1,0 +1,11 @@
+digraph {
+2 [style = filled, label = "getEndpointsShouldIncludeControllerEndpoints['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "this.contextRunner.withUserConfiguration().withConfiguration(AutoConfigurations.of()).run(assertDiscoverer(null))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "this.contextRunner.withUserConfiguration().run(assertDiscoverer(null))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "getEndpointsShouldDiscoverProxyControllerEndpoints['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "getEndpointsShouldIncludeControllerEndpoints['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->4 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+}

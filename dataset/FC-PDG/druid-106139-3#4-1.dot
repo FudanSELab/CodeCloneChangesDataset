@@ -1,0 +1,28 @@
+digraph {
+1 [style = filled, label = "List<JoinableClause> joinableClauses = ImmutableList.of(factToCountryOnIsoCode(JoinType.LEFT))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "test_makeCursors_factToCountryFullWithBaseFilter['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "JoinTestHelper.verifyCursors(new HashJoinSegmentStorageAdapter(factSegment.asStorageAdapter(),Filters.or(Arrays.asList(new SelectorDimFilter(\"countryIsoCode\",\"CA\",null).toFilter(),new SelectorDimFilter(\"countryIsoCode\",\"MatchNothing\",null).toFilter())),joinableClauses,joinFilterPreAnalysis).makeCursors(null,Intervals.ETERNITY,VirtualColumns.EMPTY,Granularities.ALL,false,null),ImmutableList.of(\"page\",\"countryIsoCode\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"countryIsoCode\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"countryName\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"countryNumber\"),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f377,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f37f,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f387,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f38f,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f39c,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f3a4,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f3ac,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f3b4,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f3bc,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f3c4,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f3cc,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f3d4,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f3dc,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f3e4,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f3ec,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f3f4,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f3fc,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f404,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f40c,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f414,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f41c))@@@5@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "test_makeCursors_factToCountryLeftWithBaseFilter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "JoinFilterPreAnalysis joinFilterPreAnalysis = makeDefaultConfigPreAnalysis(null,joinableClauses,VirtualColumns.EMPTY)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "JoinTestHelper.verifyCursors(new HashJoinSegmentStorageAdapter(factSegment.asStorageAdapter(),baseFilter,joinableClauses,joinFilterPreAnalysis).makeCursors(null,Intervals.ETERNITY,VirtualColumns.EMPTY,Granularities.ALL,false,null),ImmutableList.of(\"page\",\"countryIsoCode\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"countryIsoCode\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"countryName\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"countryNumber\"),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f2fb,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f303,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f30b,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@91f313))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "test_makeCursors_factToCountryLeftWithBaseFilter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "final Filter baseFilter = Filters.or(Arrays.asList(new SelectorDimFilter(\"countryIsoCode\",\"CA\",null).toFilter(),new SelectorDimFilter(\"countryIsoCode\",\"MatchNothing\",null).toFilter()))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "List<JoinableClause> joinableClauses = ImmutableList.of(factToCountryOnIsoCode(JoinType.FULL))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "JoinFilterPreAnalysis joinFilterPreAnalysis = makeDefaultConfigPreAnalysis(baseFilter,joinableClauses,VirtualColumns.EMPTY)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0->3 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+6->1 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+1->4 [style = solid, label="joinableClauses"];
+1->4 [style = bold, label=""];
+1->0 [style = solid, label="joinableClauses"];
+0->4 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+9->0 [style = bold, label=""];
+9->0 [style = solid, label="joinableClauses"];
+6->4 [style = solid, label="baseFilter"];
+4->5 [style = bold, label=""];
+2->1 [style = bold, label=""];
+7->6 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

@@ -1,0 +1,11 @@
+digraph {
+3 [style = filled, label = "String instanceName@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "formatInstanceName['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "formatServiceName['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "formatServiceName['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "String serviceName@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1->0 [style = dotted, label="true"];
+2->0 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+0->3 [style = dashed, label="0"];
+}

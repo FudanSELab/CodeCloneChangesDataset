@@ -1,0 +1,21 @@
+digraph {
+6 [style = filled, label = "testOnlyPrefix['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final PrecedenceClimbingParser p = new PrecedenceClimbingParser.Builder().prefix(\"-\",3).prefix(\"-\",3).atom(1).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testRepeatedPrefixPostfix['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final PrecedenceClimbingParser.Token token = p.parse()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(p.print(token),is(\"((+ (- (+ (+ (a !))))) + (- (- ((b !) !))))\"))@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testRepeatedPrefixPostfix['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final PrecedenceClimbingParser p = new PrecedenceClimbingParser.Builder().prefix(\"+\",3).prefix(\"-\",3).prefix(\"+\",3).prefix(\"+\",3).atom(\"a\").postfix(\"!\",4).infix(\"+\",1,true).prefix(\"-\",3).prefix(\"-\",3).atom(\"b\").postfix(\"!\",4).postfix(\"!\",4).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(p.print(token),is(\"(- (- 1))\"))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->3 [style = bold, label=""];
+0->1 [style = solid, label="token"];
+7->0 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+0->5 [style = solid, label="token"];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

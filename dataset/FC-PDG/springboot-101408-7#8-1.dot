@@ -1,0 +1,30 @@
+digraph {
+6 [style = filled, label = "existing.add(1001)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(result).containsExactly(1)@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "bindToCollectionWhenHasExistingCollectionShouldReplaceAllContents['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "List<Integer> result = this.binder.bind(\"foo\",INTEGER_LIST.withExistingValue(existing)).get()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "BindResult<List<Integer>> result = this.binder.bind(\"foo\",INTEGER_LIST.withExistingValue(existing))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "existing.add(1000)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "this.sources.add(new MockConfigurationPropertySource(\"foo(0(\",\"1\"))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(result).isExactlyInstanceOf()@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(result.isBound()).isFalse()@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "List<Integer> existing = new LinkedList<>()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "this.sources.add(new MockConfigurationPropertySource(\"faf(0(\",\"1\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "bindToCollectionWhenHasExistingCollectionShouldReplaceAllContents['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "bindToCollectionWhenHasExistingCollectionButNoValueShouldReturnUnbound['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8->0 [style = bold, label=""];
+5->1 [style = bold, label=""];
+5->9 [style = solid, label="existing"];
+12->10 [style = bold, label=""];
+1->6 [style = bold, label=""];
+10->5 [style = bold, label=""];
+9->11 [style = bold, label=""];
+6->7 [style = bold, label=""];
+3->2 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+7->3 [style = bold, label=""];
+1->9 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+}

@@ -1,0 +1,16 @@
+digraph {
+0 [style = filled, label = "return new ACLProvider(){@Override public List<ACL> getDefaultAcl(){return zkACLProvider.getACLsToAdd(null)}@Override public List<ACL> getAclForPath(String path){List<ACL> acls = zkACLProvider.getACLsToAdd(path)return acls}}@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final ZkACLProvider zkACLProvider = zkClient.getZkACLProvider()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "SolrZkClient zkClient@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "createACLProvider['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "createACLProvider['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "createACLProvider['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->1 [style = bold, label=""];
+4->1 [style = bold, label=""];
+1->0 [style = solid, label="zkACLProvider"];
+1->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+4->2 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+5->2 [style = dotted, label="true"];
+}

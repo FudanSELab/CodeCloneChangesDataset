@@ -1,0 +1,38 @@
+digraph {
+7 [style = filled, label = "assertEquals(\"string4\",d.getFieldValue(\"bar_pdt\"))@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "d = processAdd(\"trim-classes\",doc(f(\"id\",\"1111\"),f(\"foo_t\",\" string1 \"),f(\"foo_s\",\" string2 \"),f(\"bar_dt\",\" string3 \")))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "assertEquals(\"string3\",d.getFieldValue(\"bar_dt\"))@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "d = processAdd(\"trim-classes\",doc(f(\"id\",\"1111\"),f(\"foo_t\",\" string1 \"),f(\"foo_s\",\" string2 \"),f(\"bar_dt\",\" string3 \"),f(\"bar_pdt\",\" string4 \")))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(\" string1 \",d.getFieldValue(\"foo_t\"))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "d = processAdd(\"trim-multi\",doc(f(\"id\",\"1111\"),f(\"foo_t\",\" string1 \"),f(\"foo_s\",\" string2 \"),f(\"bar_dt\",\" string3 \"),f(\"foo_pdt\",\" string4 \")))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "testTrimMultipleRules['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertNotNull(d)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testTrimClasses['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "assertEquals(\"string2\",d.getFieldValue(\"foo_s\"))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "assertEquals(\"string4\",d.getFieldValue(\"foo_pdt\"))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertEquals(\" string3 \",d.getFieldValue(\"bar_dt\"))@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "SolrInputDocument d = null@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testTrimClasses['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->4 [style = bold, label=""];
+3->1 [style = bold, label=""];
+9->2 [style = bold, label=""];
+9->2 [style = solid, label="d"];
+2->6 [style = bold, label=""];
+4->2 [style = solid, label="d"];
+0->11 [style = bold, label=""];
+6->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+12->1 [style = bold, label=""];
+1->9 [style = bold, label=""];
+10->2 [style = solid, label="d"];
+8->1 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+5->11 [style = dashed, label="0"];
+11->13 [style = bold, label=""];
+7->13 [style = dashed, label="0"];
+5->7 [style = bold, label=""];
+10->2 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+1->10 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

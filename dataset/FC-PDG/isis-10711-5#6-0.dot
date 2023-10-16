@@ -1,0 +1,30 @@
+digraph {
+8 [style = filled, label = "when_not_annotated['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Assert.assertThat(facet,is((Matcher)IsisMatchers.anInstanceOf()))@@@15@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Assert.assertThat(facet.value(),is(PromptStyle.INLINE))@@@14@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "when_annotated_with_as_configured['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "when_annotated_with_as_configured['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "context.checking(new Expectations(){})@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Assert.assertThat(facet,is((Matcher)IsisMatchers.anInstanceOf()))@@@15@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "PromptStyleFacet facet = PromptStyleFacetForPropertyLayoutAnnotation.create(mockPropertyLayout,mockConfiguration,mockFacetHolder)@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Assert.assertThat(facet,is((Matcher)anInstanceOf()))@@@15@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "PromptStyleFacet facet = PromptStyleFacetForPropertyLayoutAnnotation.create(Collections.singletonList(mockPropertyLayout),mockConfiguration,mockFacetHolder)@@@14@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "Assert.assertThat(facet.value(),is(PromptStyle.INLINE))@@@16@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+3->10 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+10->9 [style = bold, label=""];
+6->0 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->6 [style = solid, label="facet"];
+4->6 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+9->2 [style = bold, label=""];
+2->4 [style = solid, label="facet"];
+7->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+8->3 [style = bold, label=""];
+10->2 [style = solid, label="facet"];
+}

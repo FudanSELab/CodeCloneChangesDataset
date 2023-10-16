@@ -1,0 +1,29 @@
+digraph {
+7 [style = filled, label = "removeSortOverEnumerableNestedLoopJoin['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "RelNode actualPlan = transform(sql,prepareRules)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(toString(actualPlan),allOf(containsString(\"EnumerableHashJoin\"),not(containsString(\"EnumerableSort\"))))@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "removeSortOverEnumerableHashJoin['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "String sql = \"select e.\"deptno\" from \"hr\".\"emps\" e \" + joinType + \" join \"hr\".\"depts\" d \" + \" on e.\"deptno\" > d.\"deptno\" \" + \"order by e.\"empid\" \"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertThat(toString(actualPlan),allOf(containsString(\"EnumerableNestedLoopJoin\"),not(containsString(\"EnumerableSort\"))))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "removeSortOverEnumerableHashJoin['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "RuleSet prepareRules = RuleSets.ofList(SortProjectTransposeRule.INSTANCE,EnumerableRules.ENUMERABLE_JOIN_RULE,EnumerableRules.ENUMERABLE_PROJECT_RULE,EnumerableRules.ENUMERABLE_SORT_RULE,EnumerableRules.ENUMERABLE_TABLE_SCAN_RULE)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "String sql = \"select e.\"deptno\" from \"hr\".\"emps\" e \" + joinType + \" join \"hr\".\"depts\" d \" + \" on e.\"deptno\" = d.\"deptno\" \" + \"order by e.\"empid\" \"@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+8->6 [style = bold, label=""];
+6->3 [style = solid, label="sql"];
+4->8 [style = dashed, label="0"];
+3->4 [style = solid, label="actualPlan"];
+2->3 [style = solid, label="prepareRules"];
+1->3 [style = solid, label="sql"];
+3->4 [style = bold, label=""];
+2->6 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->8 [style = bold, label=""];
+7->2 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+3->8 [style = solid, label="actualPlan"];
+0->2 [style = bold, label=""];
+}

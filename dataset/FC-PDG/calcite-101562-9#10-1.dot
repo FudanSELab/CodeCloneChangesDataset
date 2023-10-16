@@ -1,0 +1,26 @@
+digraph {
+7 [style = filled, label = "testMatchRecognizePatternExpression13['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final String expected = \"SELECT *\" + \"FROM (SELECT *\" + \"FROM \"foodmart\".\"product\") MATCH_RECOGNIZE(\" + \"ONE ROW PER MATCH\" + \"AFTER MATCH SKIP TO NEXT ROW\" + \"PATTERN (\"STRT\" \"DOWN\" + \"UP\" +)\" + \"DEFINE \" + \"\"DOWN\" AS PREV(\"DOWN\".\"net_weight\", 0) < \" + \"PREV(\"DOWN\".\"net_weight\", 1), \" + \"\"UP\" AS PREV(\"UP\".\"net_weight\", 0) > \" + \"PREV(\"UP\".\"net_weight\", 1))\" + \"ORDER BY \"net_weight\"\"@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "final String sql = \"select *\" + \" from \"product\" match_recognize\" + \" (\" + \" pattern (strt down+ up+)\" + \" define\" + \" down as down.\"net_weight\" < PREV(down.\"net_weight\"),\" + \" up as up.\"net_weight\" > prev(up.\"net_weight\")\" + \" ) mr order by MR.\"net_weight\"\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final String expected = \"SELECT *\" + \"FROM (SELECT *\" + \"FROM \"foodmart\".\"product\") MATCH_RECOGNIZE(\" + \"ONE ROW PER MATCH\" + \"AFTER MATCH SKIP TO NEXT ROW\" + \"PATTERN (\"STRT\" \"DOWN\" + \"UP\" +)\" + \"DEFINE \" + \"\"DOWN\" AS \"DOWN\".\"net_weight\" < \" + \"PREV(\"DOWN\".\"net_weight\", 1), \" + \"\"UP\" AS \"UP\".\"net_weight\" > \" + \"PREV(\"UP\".\"net_weight\", 1))\" + \"ORDER BY \"net_weight\"\"@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "final String expected = \"SELECT *\" + \"FROM (SELECT *\" + \"FROM \"foodmart\".\"sales_fact_1997\"\" + \"INNER JOIN \"foodmart\".\"customer\" \" + \"ON \"sales_fact_1997\".\"customer_id\" = \"customer\".\"customer_id\"\" + \"INNER JOIN \"foodmart\".\"product\" \" + \"ON \"sales_fact_1997\".\"product_id\" = \"product\".\"product_id\"\" + \"INNER JOIN \"foodmart\".\"product_class\" \" + \"ON \"product\".\"product_class_id\" = \"product_class\".\"product_class_id\"\" + \"WHERE \"customer\".\"city\" = 'San Francisco' \" + \"AND \"product_class\".\"product_department\" = 'Snacks') \" + \"MATCH_RECOGNIZE(\" + \"ONE ROW PER MATCH\" + \"AFTER MATCH SKIP TO NEXT ROW\" + \"PATTERN (\"STRT\" \"DOWN\" + \"UP\" +)\" + \"DEFINE \" + \"\"DOWN\" AS PREV(\"DOWN\".\"net_weight\", 0) < \" + \"PREV(\"DOWN\".\"net_weight\", 1), \" + \"\"UP\" AS PREV(\"UP\".\"net_weight\", 0) > \" + \"PREV(\"UP\".\"net_weight\", 1))\" + \"ORDER BY \"net_weight\"\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testMatchRecognizePatternExpression12['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testMatchRecognizePatternExpression12['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "sql(sql).ok(expected)@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final String sql = \"select *\" + \" from (\" + \"select *\" + \"from \"sales_fact_1997\" as s\" + \"join \"customer\" as c using (\"customer_id\")\" + \"join \"product\" as p using (\"product_id\")\" + \"join \"product_class\" as pc using (\"product_class_id\")\" + \"where c.\"city\" = 'San Francisco'\" + \"and pc.\"product_department\" = 'Snacks'\" + \") match_recognize\" + \" (\" + \" pattern (strt down+ up+)\" + \" define\" + \" down as down.\"net_weight\" < PREV(down.\"net_weight\"),\" + \" up as up.\"net_weight\" > prev(up.\"net_weight\")\" + \" ) mr order by MR.\"net_weight\"\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+8->6 [style = bold, label=""];
+6->2 [style = solid, label="expected"];
+1->5 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+7->8 [style = bold, label=""];
+1->2 [style = solid, label="expected"];
+1->6 [style = dashed, label="0"];
+5->2 [style = solid, label="expected"];
+6->2 [style = bold, label=""];
+}

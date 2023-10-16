@@ -1,0 +1,38 @@
+digraph {
+4 [style = filled, label = "DataStream<Integer> source = env.fromElements(1,10).map(NoOpIntMap)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+14 [style = filled, label = "DataStream<Integer> source = env.fromElements(1,10).map(NoOpIntMap)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "iter2.closeWith(iter2.map(NoOpCoMap)).print()@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertEquals(sourceSinkPair.f0.getOutEdges().get(0).getTargetVertex(),sourceSinkPair.f1.getInEdges().get(0).getSourceVertex())@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "iter1.closeWith(iter1.map(NoOpIntMap).setParallelism(DEFAULT_PARALLELISM / 2))@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testDifferingParallelism['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "testImmutabilityWithCoiteration['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "StreamGraph graph = env.getStreamGraph()@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "DataStream<Integer> source = env.fromElements(1,10).map(noOpIntMap)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "ConnectedIterativeStreams<Integer,String> iter2 = iter1.withFeedbackType()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "IterativeStream<Integer> iter1 = source.iterate()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "iter1.closeWith(iter1.map(NoOpIntMap)).print()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testDifferingParallelism['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "iter1.closeWith(iter1.map(noOpIntMap).setParallelism(DEFAULT_PARALLELISM / 2))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "assertEquals(2,graph.getIterationSourceSinkPairs().size())@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3->13 [style = bold, label=""];
+14->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+12->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+4->14 [style = dashed, label="0"];
+1->5 [style = dashed, label="0"];
+13->8 [style = bold, label=""];
+15->11 [style = bold, label=""];
+3->1 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->6 [style = bold, label=""];
+9->15 [style = bold, label=""];
+11->10 [style = bold, label=""];
+2->14 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

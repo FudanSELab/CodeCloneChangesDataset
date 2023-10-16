@@ -1,0 +1,37 @@
+digraph {
+3 [style = filled, label = "assertEquals(expectedCrossingResult,crossingResult)@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "TexBibEntriesResolverResult expectedCrossingResult = new TexBibEntriesResolverResult(parserResult)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Path texFile = Paths.get(.getResource(\"paper.tex\").toURI())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testSingleFile['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "expectedCrossingResult.insertEntry(database,EINSTEIN)@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "TexParserResult parserResult = new DefaultTexParser().parse(texFile)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testSingleFile['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "TexBibEntriesResolverResult crossingResult = new TexBibEntriesResolver(database,importFormatPreferences,fileMonitor).resolve(parserResult)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "Path texFile = Paths.get(.getResource(\"nested.tex\").toURI())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "expectedCrossingResult.insertEntry(database,DARWIN)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testNestedFiles['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "TexBibEntriesResolverResult crossingResult = new TexBibEntriesResolver(database).resolveKeys(parserResult)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->8 [style = dashed, label="0"];
+0->6 [style = bold, label=""];
+2->3 [style = bold, label=""];
+1->3 [style = bold, label=""];
+1->7 [style = bold, label=""];
+10->0 [style = solid, label="texFile"];
+6->1 [style = bold, label=""];
+0->1 [style = solid, label="parserResult"];
+8->1 [style = bold, label=""];
+5->0 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+0->6 [style = solid, label="parserResult"];
+7->2 [style = bold, label=""];
+11->10 [style = bold, label=""];
+10->0 [style = bold, label=""];
+0->8 [style = bold, label=""];
+8->3 [style = solid, label="crossingResult"];
+6->3 [style = solid, label="crossingResult"];
+9->5 [style = bold, label=""];
+5->0 [style = solid, label="texFile"];
+1->3 [style = solid, label="expectedCrossingResult"];
+4->5 [style = bold, label=""];
+0->8 [style = solid, label="parserResult"];
+}

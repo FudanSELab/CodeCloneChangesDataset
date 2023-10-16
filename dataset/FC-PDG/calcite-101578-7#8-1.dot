@@ -1,0 +1,26 @@
+digraph {
+4 [style = filled, label = "final String expected = \"SELECT *\" + \"FROM (SELECT *\" + \"FROM \"foodmart\".\"product\") \" + \"MATCH_RECOGNIZE(\" + \"MEASURES \" + \"FINAL \"STRT\".\"net_weight\" AS \"START_NW\", \" + \"FINAL LAST(\"DOWN\".\"net_weight\", 0) AS \"BOTTOM_NW\", \" + \"FINAL (SUM(\"STDN\".\"net_weight\") / \" + \"COUNT(\"STDN\".\"net_weight\")) AS \"AVG_STDN\"\" + \"ONE ROW PER MATCH\" + \"AFTER MATCH SKIP TO NEXT ROW\" + \"PATTERN (\"STRT\" \"DOWN\" + \"UP\" +)\" + \"SUBSET \"STDN\" = (\"DOWN\", \"STRT\")\" + \"DEFINE \" + \"\"DOWN\" AS PREV(\"DOWN\".\"net_weight\", 0) < \" + \"PREV(\"DOWN\".\"net_weight\", 1), \" + \"\"UP\" AS PREV(\"UP\".\"net_weight\", 0) > \" + \"PREV(\"UP\".\"net_weight\", 1))\"@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "sql(sql).ok(expected)@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final String sql = \"select *\" + \" from \"product\" match_recognize\" + \" (\" + \" measures STRT.\"net_weight\" as start_nw,\" + \" LAST(DOWN.\"net_weight\") as bottom_nw,\" + \" SUM(STDN.\"net_weight\") as avg_stdn\" + \" pattern (strt down+ up+)\" + \" subset stdn = (strt, down), stdn2 = (strt, down)\" + \" define\" + \" down as down.\"net_weight\" < PREV(down.\"net_weight\"),\" + \" up as up.\"net_weight\" > prev(up.\"net_weight\")\" + \" ) mr\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final String expected = \"SELECT *\" + \"FROM (SELECT *\" + \"FROM \"foodmart\".\"product\") \" + \"MATCH_RECOGNIZE(\" + \"MEASURES \" + \"\"STRT\".\"net_weight\" AS \"START_NW\", \" + \"LAST(\"DOWN\".\"net_weight\", 0) AS \"BOTTOM_NW\", \" + \"SUM(\"STDN\".\"net_weight\") / \" + \"COUNT(\"STDN\".\"net_weight\") AS \"AVG_STDN\"\" + \"ONE ROW PER MATCH\" + \"AFTER MATCH SKIP TO NEXT ROW\" + \"PATTERN (\"STRT\" \"DOWN\" + \"UP\" +)\" + \"SUBSET \"STDN\" = (\"DOWN\", \"STRT\")\" + \"DEFINE \" + \"\"DOWN\" AS \"DOWN\".\"net_weight\" < \" + \"PREV(\"DOWN\".\"net_weight\", 1), \" + \"\"UP\" AS \"UP\".\"net_weight\" > \" + \"PREV(\"UP\".\"net_weight\", 1))\"@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "final String expected = \"SELECT *\" + \"FROM (SELECT *\" + \"FROM \"foodmart\".\"product\") \" + \"MATCH_RECOGNIZE(\" + \"MEASURES \" + \"\"STRT\".\"net_weight\" AS \"START_NW\", \" + \"LAST(\"DOWN\".\"net_weight\", 0) AS \"BOTTOM_NW\", \" + \"SUM(\"STDN\".\"net_weight\") AS \"AVG_STDN\"\" + \"ONE ROW PER MATCH\" + \"AFTER MATCH SKIP TO NEXT ROW\" + \"PATTERN (\"STRT\" \"DOWN\" + \"UP\" +)\" + \"SUBSET \"STDN\" = (\"DOWN\", \"STRT\"), \"STDN2\" = (\"DOWN\", \"STRT\")\" + \"DEFINE \" + \"\"DOWN\" AS \"DOWN\".\"net_weight\" < \" + \"PREV(\"DOWN\".\"net_weight\", 1), \" + \"\"UP\" AS \"UP\".\"net_weight\" > \" + \"PREV(\"UP\".\"net_weight\", 1))\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testMatchRecognizeSubset2['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final String sql = \"select *\" + \" from \"product\" match_recognize\" + \" (\" + \" measures STRT.\"net_weight\" as start_nw,\" + \" LAST(DOWN.\"net_weight\") as bottom_nw,\" + \" AVG(STDN.\"net_weight\") as avg_stdn\" + \" pattern (strt down+ up+)\" + \" subset stdn = (strt, down)\" + \" define\" + \" down as down.\"net_weight\" < PREV(down.\"net_weight\"),\" + \" up as up.\"net_weight\" > prev(up.\"net_weight\")\" + \" ) mr\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testMatchRecognizeSubset2['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testMatchRecognizeSubset4['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7->1 [style = solid, label="expected"];
+2->4 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+8->6 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+7->1 [style = bold, label=""];
+4->1 [style = solid, label="expected"];
+6->7 [style = bold, label=""];
+5->0 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+2->1 [style = solid, label="expected"];
+2->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

@@ -1,0 +1,21 @@
+digraph {
+5 [style = filled, label = "final String expected = \"SELECT *\" + \"FROM (SELECT *\" + \"FROM \"foodmart\".\"product\") MATCH_RECOGNIZE(\" + \"MEASURES \" + \"FINAL FIRST(\"STRT\".\"net_weight\", 0) AS \"START_NW\", \" + \"FINAL LAST(\"DOWN\".\"net_weight\", 0) AS \"UP_CNT\", \" + \"FINAL SUM(\"DOWN\".\"net_weight\") AS \"DOWN_CNT\"\" + \"ONE ROW PER MATCH\" + \"AFTER MATCH SKIP TO NEXT ROW\" + \"PATTERN \" + \"(\"STRT\" \"DOWN\" + \"UP\" +)\" + \"DEFINE \" + \"\"DOWN\" AS PREV(\"DOWN\".\"net_weight\", 0) < \" + \"PREV(\"DOWN\".\"net_weight\", 1), \" + \"\"UP\" AS PREV(\"UP\".\"net_weight\", 0) > \" + \"PREV(\"UP\".\"net_weight\", 1))\" + \"ORDER BY \"START_NW\", \"UP_CNT\"\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testMatchRecognizeMeasures6['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "final String expected = \"SELECT *\" + \"FROM (SELECT *\" + \"FROM \"foodmart\".\"product\") MATCH_RECOGNIZE(\" + \"MEASURES \" + \"FINAL FIRST(\"STRT\".\"net_weight\", 0) AS \"START_NW\", \" + \"FINAL LAST(\"DOWN\".\"net_weight\", 0) AS \"UP_CNT\", \" + \"FINAL SUM(\"DOWN\".\"net_weight\") AS \"DOWN_CNT\"\" + \"ONE ROW PER MATCH\" + \"AFTER MATCH SKIP TO NEXT ROW\" + \"PATTERN \" + \"(\"STRT\" \"DOWN\" + \"UP\" +)\" + \"DEFINE \" + \"\"DOWN\" AS PREV(\"DOWN\".\"net_weight\", 0) < \" + \"PREV(\"DOWN\".\"net_weight\", 1), \" + \"\"UP\" AS PREV(\"UP\".\"net_weight\", 0) > \" + \"PREV(\"UP\".\"net_weight\", 1))\"@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final String sql = \"select *\" + \" from \"product\" match_recognize\" + \" (\" + \" measures \" + \" FIRST(STRT.\"net_weight\") as start_nw,\" + \" LAST(DOWN.\"net_weight\") as up_cnt,\" + \" FINAL SUM(DOWN.\"net_weight\") as down_cnt\" + \" pattern (strt down+ up+)\" + \" define\" + \" down as down.\"net_weight\" < PREV(down.\"net_weight\"),\" + \" up as up.\"net_weight\" > prev(up.\"net_weight\")\" + \" ) mr\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testMatchRecognizeMeasures6['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "sql(sql).ok(expected)@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testMatchRecognizeMeasures7['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final String sql = \"select *\" + \" from \"product\" match_recognize\" + \" (\" + \" measures \" + \" FIRST(STRT.\"net_weight\") as start_nw,\" + \" LAST(DOWN.\"net_weight\") as up_cnt,\" + \" FINAL SUM(DOWN.\"net_weight\") as down_cnt\" + \" pattern (strt down+ up+)\" + \" define\" + \" down as down.\"net_weight\" < PREV(down.\"net_weight\"),\" + \" up as up.\"net_weight\" > prev(up.\"net_weight\")\" + \" ) mr order by start_nw, up_cnt\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+3->2 [style = solid, label="expected"];
+6->5 [style = bold, label=""];
+5->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+3->2 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+7->6 [style = bold, label=""];
+5->2 [style = solid, label="expected"];
+}

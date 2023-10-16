@@ -1,0 +1,38 @@
+digraph {
+3 [style = filled, label = "!isGeneric && !context.isTemporary()@@@6@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "createTableSource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "return TableFactoryUtil.findAndCreateTableSource(context)@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "TableSourceFactory.Context context@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "createTableSink['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Preconditions.checkArgument(table instanceof CatalogTableImpl)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "boolean isGeneric = Boolean.parseBoolean(table.getProperties().get(CatalogConfig.IS_GENERIC))@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "throw new UnsupportedOperationException(\"Hive table should be resolved by HiveDynamicTableFactory.\")@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "return TableFactoryUtil.findAndCreateTableSink(context)@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "boolean isGeneric = Boolean.parseBoolean(table.getOptions().get(CatalogConfig.IS_GENERIC))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "createTableSource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "TableSinkFactory.Context context@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "CatalogTable table = checkNotNull(context.getTable())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+7->2 [style = solid, label="table"];
+4->1 [style = dotted, label="true"];
+8->3 [style = bold, label=""];
+3->11 [style = bold, label=""];
+3->6 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+1->10 [style = dashed, label="0"];
+3->6 [style = dotted, label="true"];
+9->7 [style = bold, label=""];
+3->0 [style = dotted, label="false"];
+12->7 [style = bold, label=""];
+4->7 [style = bold, label=""];
+3->0 [style = bold, label=""];
+10->11 [style = solid, label="context"];
+12->10 [style = dotted, label="true"];
+3->11 [style = dotted, label="false"];
+7->2 [style = bold, label=""];
+9->1 [style = dotted, label="true"];
+1->0 [style = solid, label="context"];
+5->8 [style = dashed, label="0"];
+2->8 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

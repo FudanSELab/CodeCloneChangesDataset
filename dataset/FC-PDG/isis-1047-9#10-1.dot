@@ -1,0 +1,30 @@
+digraph {
+5 [style = filled, label = "withBookDo(null)@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "wrapperSyncExecutionNoRules['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "wrapperSyncExecutionNoRules['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "withBookDo(null)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "context.bind(commitListener)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return true@@@21@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "throw _Exceptions.unmatchedCase(context.getScenario())@@@19@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final PublishingTestContext context@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final PublishingTestContext context@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "wrapperSyncExecutionNoRules['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "context.getScenario()@@@4@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->1 [style = bold, label=""];
+5->1 [style = bold, label=""];
+4->7 [style = dotted, label="true"];
+10->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+0->3 [style = dotted, label="true"];
+4->2 [style = bold, label=""];
+0->5 [style = dotted, label="true"];
+3->1 [style = bold, label=""];
+0->6 [style = dotted, label="true"];
+0->6 [style = bold, label=""];
+9->2 [style = bold, label=""];
+10->7 [style = dotted, label="true"];
+0->5 [style = bold, label=""];
+9->8 [style = dotted, label="true"];
+7->8 [style = dashed, label="0"];
+}

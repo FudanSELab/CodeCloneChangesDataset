@@ -1,0 +1,37 @@
+digraph {
+10 [style = filled, label = "System.out.println(\"done starting TestObservable thread\")@@@23@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "t.start()@@@22@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "System.out.println(\"TestSingleThreadedObservable subscribed to ...\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "t = new Thread(new Runnable(){@Override public void run(){try {System.out.println(\"running TestObservable thread\")for (String s : values){System.out.println(\"TestObservable onNext: \" + s)observer.onNext(s)}observer.onComplete()}catch (Throwable e) }})@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "observer.onSubscribe(upstream)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "subscribe['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "subscribe['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "System.out.println(\"starting TestObservable thread\")@@@21@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "subscribe['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "observer.onSubscribe(Disposables.empty())@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "final Observer<? super String> observer@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "System.out.println(\"done starting TestSingleThreadedObservable thread\")@@@23@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "observer.onSubscribe(Disposable.empty())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "System.out.println(\"starting TestSingleThreadedObservable thread\")@@@21@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "System.out.println(\"TestObservable subscribed to ...\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+12->13 [style = bold, label=""];
+1->4 [style = bold, label=""];
+0->10 [style = bold, label=""];
+11->0 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+1->9 [style = dashed, label="0"];
+2->10 [style = dashed, label="0"];
+13->6 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+4->6 [style = bold, label=""];
+5->7 [style = dotted, label="true"];
+14->7 [style = dotted, label="true"];
+6->11 [style = bold, label=""];
+14->12 [style = bold, label=""];
+3->0 [style = bold, label=""];
+9->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

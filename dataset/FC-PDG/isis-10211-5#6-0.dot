@@ -1,0 +1,35 @@
+digraph {
+1 [style = filled, label = "final @NonNull Where where@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return inferElementSpecification(objects).map(null).orElseGet(null)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "final @NonNull Where where@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "final ManagedObject collection@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "fromCollection['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "fromCollection['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "val objects = collectionFacet.stream(collection).collect(Can.toCan())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "val collectionFacet = collection.getSpecification().getFacet()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "val objects = collectionFacet.stream(collection).collect(Collectors.toList())@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "return inferElementSpecification(objects).map(null).orElseGet(null)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final @NonNull UiContext uiContext@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final @NonNull ManagedObject collection@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "fromCollection['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "final @NonNull UiContext uiContext@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "return ManagedObjects.commonSpecification(objects).map(null).orElseGet(null)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3->13 [style = bold, label=""];
+5->13 [style = dashed, label="0"];
+6->4 [style = bold, label=""];
+4->3 [style = bold, label=""];
+12->14 [style = dotted, label="true"];
+3->5 [style = bold, label=""];
+7->11 [style = bold, label=""];
+6->0 [style = dotted, label="true"];
+8->4 [style = bold, label=""];
+6->2 [style = dotted, label="true"];
+8->9 [style = dotted, label="true"];
+8->10 [style = dotted, label="true"];
+12->4 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+3->7 [style = dashed, label="0"];
+8->2 [style = dotted, label="true"];
+4->7 [style = bold, label=""];
+6->1 [style = dotted, label="true"];
+}

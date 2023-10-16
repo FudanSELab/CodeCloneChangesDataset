@@ -1,0 +1,37 @@
+digraph {
+4 [style = filled, label = "ConfigurableListableBeanFactory beanFactory@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "postProcessBeanFactory['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "!ObjectUtils.isEmpty(this.basePackages)@@@4@@@['1', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1ced077beanFactory@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "!this.annotatedClasses.isEmpty()@@@7@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "!this.registeredBeans.isEmpty()@@@10@@@['1', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "this.scanner.scan(this.basePackages)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "postProcessBeanFactory['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "registerBeans(this.reader)@@@11@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "this.basePackages != null && this.basePackages.length > 0@@@4@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "postProcessBeanFactory['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "this.reader.register(ClassUtils.toClassArray(this.annotatedClasses))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->3 [style = bold, label=""];
+5->10 [style = bold, label=""];
+4->5 [style = solid, label="beanFactory"];
+6->1 [style = dotted, label="true"];
+1->3 [style = bold, label=""];
+10->3 [style = bold, label=""];
+11->4 [style = dotted, label="true"];
+7->8 [style = bold, label=""];
+3->0 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+0->7 [style = bold, label=""];
+6->1 [style = bold, label=""];
+11->5 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->7 [style = bold, label=""];
+2->4 [style = dotted, label="true"];
+3->0 [style = dotted, label="true"];
+9->5 [style = bold, label=""];
+9->4 [style = dotted, label="true"];
+10->1 [style = dotted, label="true"];
+10->1 [style = bold, label=""];
+7->8 [style = dotted, label="true"];
+2->5 [style = bold, label=""];
+}

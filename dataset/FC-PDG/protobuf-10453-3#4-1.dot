@@ -1,0 +1,28 @@
+digraph {
+3 [style = filled, label = "findDescriptorByFullName['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(TypeRegistry.getEmptyTypeRegistry().find(descriptor.getFullName())).isNull()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "assertSame(descriptor,TypeRegistry.newBuilder().add(descriptor).build().find(descriptor.getFullName()))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "assertThat(TypeRegistry.newBuilder().add(descriptor).build().find(descriptor.getFullName())).isSameInstanceAs(descriptor)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "findDescriptorByFullName['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "findDescriptorByTypeUrl['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertNull(TypeRegistry.getEmptyTypeRegistry().getDescriptorForTypeUrl(\"type.googleapis.com/\" + descriptor.getFullName()))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Descriptor descriptor = UnittestProto.TestAllTypes.getDescriptor()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertSame(descriptor,TypeRegistry.newBuilder().add(descriptor).build().getDescriptorForTypeUrl(\"type.googleapis.com/\" + descriptor.getFullName()))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertNull(TypeRegistry.getEmptyTypeRegistry().find(descriptor.getFullName()))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1->5 [style = bold, label=""];
+7->9 [style = bold, label=""];
+8->1 [style = bold, label=""];
+6->1 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+1->0 [style = solid, label="descriptor"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->9 [style = solid, label="descriptor"];
+0->4 [style = dashed, label="0"];
+0->9 [style = dashed, label="0"];
+1->4 [style = solid, label="descriptor"];
+3->1 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+1->7 [style = bold, label=""];
+5->4 [style = bold, label=""];
+}

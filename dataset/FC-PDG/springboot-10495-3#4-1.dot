@@ -1,0 +1,35 @@
+digraph {
+6 [style = filled, label = "assertThat(meterBinder).isInstanceOf()@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "javax.cache.CacheManager cacheManager = mock()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "IMap<Object,Object> nativeCache = mock()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "given(cacheManager.getURI()).willReturn(new URI(\"/test\"))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "given(this.nativeCache.getName()).willReturn(\"test\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "jCacheCacheProvider['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "MeterBinder meterBinder = new HazelcastCacheMeterBinderProvider().getMeterBinder(cache,Collections.emptyList())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertThat(meterBinder).isInstanceOf()@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "JCacheCache cache = new JCacheCache(this.nativeCache)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "jCacheCacheProvider['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "MeterBinder meterBinder = new JCacheCacheMeterBinderProvider().getMeterBinder(cache,Collections.emptyList())@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "given(this.nativeCache.getCacheManager()).willReturn(cacheManager)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "hazelcastCacheProvider['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "HazelcastCache cache = new HazelcastCache(nativeCache)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "given(nativeCache.getName()).willReturn(\"test\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+14->9 [style = bold, label=""];
+1->4 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+10->12 [style = solid, label="cache"];
+0->2 [style = bold, label=""];
+9->10 [style = bold, label=""];
+2->3 [style = solid, label="cacheManager"];
+3->1 [style = bold, label=""];
+8->2 [style = bold, label=""];
+14->10 [style = solid, label="nativeCache"];
+4->7 [style = solid, label="cache"];
+10->12 [style = bold, label=""];
+13->14 [style = bold, label=""];
+4->7 [style = bold, label=""];
+7->6 [style = bold, label=""];
+2->5 [style = bold, label=""];
+12->11 [style = bold, label=""];
+}

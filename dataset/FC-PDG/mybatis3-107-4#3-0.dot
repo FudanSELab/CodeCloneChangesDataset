@@ -1,0 +1,35 @@
+digraph {
+1 [style = filled, label = "assertTrue(result instanceof Class)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertEquals(,resultClass.getComponentType())@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testReturn_Lv1Array['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Class<?> clazz = @@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Method method = clazz.getMethod(\"selectArray\",)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "Method method = clazz.getMethod(\"simpleSelectArray\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertTrue(resultClass.isArray())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testReturn_Lv1Array['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testReturn_SimpleArray['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Type result = TypeParameterResolver.resolveReturnType(method,clazz)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Method method = clazz.getMethod(\"selectArray\")@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "Class<?> resultClass = (Class<?>)result@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->3 [style = bold, label=""];
+0->9 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->3 [style = solid, label="clazz"];
+3->7 [style = solid, label="result"];
+10->3 [style = bold, label=""];
+3->1 [style = solid, label="result"];
+6->0 [style = bold, label=""];
+10->3 [style = solid, label="method"];
+1->7 [style = bold, label=""];
+8->0 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+0->10 [style = bold, label=""];
+11->0 [style = bold, label=""];
+0->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+9->3 [style = solid, label="method"];
+9->3 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+4->3 [style = solid, label="method"];
+2->5 [style = bold, label=""];
+}

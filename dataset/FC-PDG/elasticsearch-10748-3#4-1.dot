@@ -1,0 +1,31 @@
+digraph {
+4 [style = filled, label = "testSynonymsWrappedByMultiplexer['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "BaseTokenStreamTestCase.assertAnalyzesTo(indexAnalyzers.get(\"synonymAnalyzer\"),\"Some developers are odd\",new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@125dae1,new int((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@125daea)@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Settings settings = Settings.builder().put(IndexMetadata.SETTING_VERSION_CREATED,Version.CURRENT).put(\"path.home\",createTempDir().toString()).put(\"index.analysis.filter.synonyms.type\",\"synonym\").putList(\"index.analysis.filter.synonyms.synonyms\",\"programmer, developer\").put(\"index.analysis.filter.my_english.type\",\"stemmer\").put(\"index.analysis.filter.my_english.language\",\"porter2\").put(\"index.analysis.filter.stem_repeat.type\",\"multiplexer\").putList(\"index.analysis.filter.stem_repeat.filters\",\"my_english, synonyms\").put(\"index.analysis.analyzer.synonymAnalyzer.tokenizer\",\"standard\").putList(\"index.analysis.analyzer.synonymAnalyzer.filter\",\"lowercase\",\"stem_repeat\").build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "testSynonymsWrappedByMultiplexer['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "testPreconfigured['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "IndexSettings idxSettings = IndexSettingsModule.newIndexSettings(\"index\",settings)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "BaseTokenStreamTestCase.assertAnalyzesTo(indexAnalyzers.get(\"my_analyzer\"),\"w鐃緒申鐃緒申鐃緒申rst\",new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@125db3f,new int((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@125db44)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Settings settings = Settings.builder().put(IndexMetaData.SETTING_VERSION_CREATED,Version.CURRENT).put(\"path.home\",createTempDir().toString()).put(\"index.analysis.filter.synonyms.type\",\"synonym\").putList(\"index.analysis.filter.synonyms.synonyms\",\"w鐃緒申鐃緒申鐃緒申rst, sausage\").put(\"index.analysis.analyzer.my_analyzer.tokenizer\",\"standard\").putList(\"index.analysis.analyzer.my_analyzer.filter\",\"lowercase\",\"asciifolding\",\"synonyms\").build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "indexAnalyzers = createTestAnalysis(idxSettings,settings,new CommonAnalysisPlugin()).indexAnalyzers@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Settings settings = Settings.builder().put(IndexMetaData.SETTING_VERSION_CREATED,Version.CURRENT).put(\"path.home\",createTempDir().toString()).put(\"index.analysis.filter.synonyms.type\",\"synonym\").putList(\"index.analysis.filter.synonyms.synonyms\",\"programmer, developer\").put(\"index.analysis.filter.my_english.type\",\"stemmer\").put(\"index.analysis.filter.my_english.language\",\"porter2\").put(\"index.analysis.filter.stem_repeat.type\",\"multiplexer\").putList(\"index.analysis.filter.stem_repeat.filters\",\"my_english, synonyms\").put(\"index.analysis.analyzer.synonymAnalyzer.tokenizer\",\"standard\").putList(\"index.analysis.analyzer.synonymAnalyzer.filter\",\"lowercase\",\"stem_repeat\").build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8->0 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+3->8 [style = dashed, label="0"];
+3->2 [style = solid, label="settings"];
+4->3 [style = bold, label=""];
+6->5 [style = bold, label=""];
+5->0 [style = solid, label="settings"];
+0->2 [style = bold, label=""];
+2->7 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+8->2 [style = solid, label="settings"];
+9->8 [style = bold, label=""];
+8->0 [style = solid, label="settings"];
+2->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->2 [style = solid, label="idxSettings"];
+3->0 [style = solid, label="settings"];
+5->2 [style = solid, label="settings"];
+}

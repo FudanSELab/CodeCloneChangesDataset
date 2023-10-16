@@ -1,0 +1,35 @@
+digraph {
+6 [style = filled, label = "nodes.add(new Node().setId(\"2\").setName(\"projectB-pid:27960@skywalking-server-0001\").setType(\"Tomcat\").setIsReal(\"true\"))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "nodes.add(new Node().setId(\"3\").setName(\"projectB-pid:27961@skywalking-server-0001\").setType(\"Tomcat\").setIsReal(\"true\"))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "shouldVariableNotFound['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final Topology topology = new Topology().setNodes(nodes).setCalls(calls)@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "shouldSuccess['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "final List<Call> calls = new ArrayList<>()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final List<Node> nodes = new ArrayList<>()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "assertThrows(,null)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "shouldSuccess['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "calls.add(new Call().setId(\"1-2\").setSource(\"1\").setTarget(\"2\"))@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "calls.add(new Call().setId(\"1-3\").setSource(\"1\").setTarget(\"3\"))@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "calls.add(new Call().setId(\"1_2\").setSource(\"1\").setTarget(\"2\"))@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "nodes.add(new Node().setId(\"1\").setName(\"User\").setType(\"USER\").setIsReal(\"false\"))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "calls.add(new Call().setId(\"1_3\").setSource(\"1\").setTarget(\"3\"))@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "topoMatcher.verify(topology)@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->11 [style = bold, label=""];
+4->8 [style = bold, label=""];
+3->4 [style = solid, label="calls"];
+3->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+9->10 [style = dashed, label="0"];
+14->13 [style = bold, label=""];
+6->7 [style = bold, label=""];
+5->9 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+12->1 [style = bold, label=""];
+11->10 [style = bold, label=""];
+4->8 [style = solid, label="topology"];
+2->6 [style = bold, label=""];
+0->1 [style = bold, label=""];
+7->3 [style = bold, label=""];
+9->4 [style = bold, label=""];
+10->4 [style = bold, label=""];
+}

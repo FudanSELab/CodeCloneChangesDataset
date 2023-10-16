@@ -1,0 +1,28 @@
+digraph {
+6 [style = filled, label = "List<Span> spans = IntStream.rangeClosed(0,50).mapToObj(null).collect(Collectors.toList())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "List<Span> spans = IntStream.rangeClosed(0,50).mapToObj(null).collect(Collectors.toList())@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThat(names().getRemoteServiceNames(\"frontend\").execute()).containsExactly(CLIENT_SPAN.remoteServiceName())@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "accept(spans)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "TestInfo testInfo@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "accept(spans)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "getSpanNames_dedupes['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "getRemoteServiceNames_dedupes['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "String testSuffix = testSuffix(testInfo)@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "assertThat(names().getSpanNames(spans.get(0).localServiceName()).execute()).containsExactly(spans.get(0).name())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "getSpanNames_dedupes['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->7 [style = solid, label="testInfo"];
+4->5 [style = dotted, label="true"];
+1->2 [style = bold, label=""];
+9->0 [style = bold, label=""];
+1->10 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+0->1 [style = solid, label="spans"];
+0->1 [style = bold, label=""];
+6->2 [style = solid, label="spans"];
+4->7 [style = bold, label=""];
+3->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+2->8 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+}

@@ -1,0 +1,38 @@
+digraph {
+2 [style = filled, label = "final Map<TaskId,Long> allTaskEndOffsetSums = Collections.singletonMap(taskId01,500L)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "assertThat(client.lagFor(TASK_0_1),equalTo(500L))@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "assertThat(client.lagFor(taskId01),equalTo(500L))@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "shouldReturnEndOffsetSumForLagOfTaskWeDidNotPreviouslyOwn['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "shouldReturnEndOffsetSumIfOffsetSumIsGreaterThanEndOffsetSum['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "final Map<TaskId,Long> taskOffsetSums = Collections.singletonMap(taskId01,5L)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "final Map<TaskId,Long> allTaskEndOffsetSums = Collections.singletonMap(taskId01,1L)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "shouldReturnEndOffsetSumForLagOfTaskWeDidNotPreviouslyOwn['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(client.lagFor(taskId01),equalTo(1L))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "client.addPreviousTasksAndOffsetSums(taskOffsetSums)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "client.computeTaskLags(null,allTaskEndOffsetSums)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final Map<TaskId,Long> taskOffsetSums = Collections.emptyMap()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final Map<TaskId,Long> allTaskEndOffsetSums = Collections.singletonMap(TASK_0_1,500L)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5->12 [style = dashed, label="0"];
+11->3 [style = solid, label="allTaskEndOffsetSums"];
+4->6 [style = bold, label=""];
+11->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->3 [style = solid, label="allTaskEndOffsetSums"];
+4->1 [style = solid, label="taskOffsetSums"];
+1->3 [style = bold, label=""];
+4->2 [style = bold, label=""];
+3->12 [style = bold, label=""];
+9->10 [style = bold, label=""];
+6->1 [style = bold, label=""];
+3->5 [style = bold, label=""];
+3->7 [style = bold, label=""];
+0->4 [style = bold, label=""];
+2->3 [style = solid, label="allTaskEndOffsetSums"];
+2->6 [style = dashed, label="0"];
+2->11 [style = dashed, label="0"];
+10->1 [style = solid, label="taskOffsetSums"];
+8->4 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+4->10 [style = dashed, label="0"];
+10->11 [style = bold, label=""];
+}

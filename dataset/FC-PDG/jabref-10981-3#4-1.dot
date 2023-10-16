@@ -1,0 +1,36 @@
+digraph {
+9 [style = filled, label = "formatter.addBody(sb,al,FieldName.EDITOR,DocBookVersion.DOCBOOK_5)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String fieldText@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "format['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "formatter.addBody(sb,al,StandardField.AUTHOR.getName(),DocBookVersion.DOCBOOK_4)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "format['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "StringBuilder sb = new StringBuilder(100)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "DocBookAuthorFormatter formatter = new DocBookAuthorFormatter()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "format['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "return sb.toString()@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "formatter.addBody(sb,al,FieldName.AUTHOR,DocBookVersion.DOCBOOK_4)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "AuthorList al = AuthorList.parse(fieldText)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+6->8 [style = dashed, label="0"];
+5->9 [style = solid, label="al"];
+9->4 [style = bold, label=""];
+5->8 [style = solid, label="al"];
+6->9 [style = dashed, label="0"];
+3->6 [style = bold, label=""];
+7->0 [style = dotted, label="true"];
+2->8 [style = solid, label="sb"];
+3->9 [style = bold, label=""];
+6->4 [style = bold, label=""];
+5->6 [style = solid, label="al"];
+7->2 [style = bold, label=""];
+3->8 [style = bold, label=""];
+0->5 [style = solid, label="fieldText"];
+2->9 [style = solid, label="sb"];
+10->0 [style = dotted, label="true"];
+10->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+1->0 [style = dotted, label="true"];
+8->4 [style = bold, label=""];
+2->6 [style = solid, label="sb"];
+2->5 [style = bold, label=""];
+}

@@ -1,0 +1,32 @@
+digraph {
+3 [style = filled, label = "this.filter.addErrorPages(new ErrorPage(\"/error\"))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "globalError['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(this.response.getForwardedUrl()).isEqualTo(\"/400\")@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "globalError['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "statusError['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "this.chain = new TestFilterChain(null)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(((HttpServletResponseWrapper)this.chain.getResponse()).getStatus()).isEqualTo(400)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(this.request.getAttribute(RequestDispatcher.ERROR_REQUEST_URI)).isEqualTo(\"/test/path\")@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(this.request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE)).isEqualTo(400)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(this.response.isCommitted()).isTrue()@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "this.filter.addErrorPages(new ErrorPage(HttpStatus.BAD_REQUEST,\"/400\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(this.request.getAttribute(RequestDispatcher.ERROR_MESSAGE)).isEqualTo(\"BAD\")@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(this.response.getForwardedUrl()).isEqualTo(\"/error\")@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "this.filter.doFilter(this.request,this.response,this.chain)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->7 [style = bold, label=""];
+10->3 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+1->6 [style = bold, label=""];
+7->1 [style = bold, label=""];
+8->4 [style = bold, label=""];
+13->12 [style = bold, label=""];
+6->9 [style = bold, label=""];
+9->0 [style = bold, label=""];
+9->11 [style = bold, label=""];
+8->4 [style = solid, label="chain"];
+3->12 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+12->8 [style = bold, label=""];
+3->8 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

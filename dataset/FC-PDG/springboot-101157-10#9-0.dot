@@ -1,0 +1,37 @@
+digraph {
+11 [style = filled, label = "customExceptionConversionWord['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "this.loggingSystem.initialize(this.initializationContext,null,getLogFile(null,tmpDir()))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertThat(fileContents).contains(\"java.lang.RuntimeException: Expected\").doesNotContain(\"Wrapped by:\")@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "this.loggingSystem.initialize(null,null,getLogFile(null,tmpDir()))@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "CapturedOutput output@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "{System.clearProperty(LoggingSystemProperties.EXCEPTION_CONVERSION_WORD)}@@@13@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "customExceptionConversionWord['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "customExceptionConversionWord['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(output).contains(\"java.lang.RuntimeException: Expected\").doesNotContain(\"Wrapped by:\")@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "this.loggingSystem.beforeInitialize()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "this.logger.info(\"Hidden\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "System.setProperty(LoggingSystemProperties.EXCEPTION_CONVERSION_WORD,\"%ex\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "this.loggingSystem.initialize(null,getRelativeClasspathLocation(\"log4j2-file.xml\"),getLogFile(null,tmpDir()))@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "this.logger.warn(\"Expected exception\",new RuntimeException(\"Expected\",new RuntimeException(\"Cause\")))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "String fileContents = contentOf(new File(tmpDir() + \"/spring.log\"))@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+13->6 [style = dotted, label="true"];
+3->10 [style = bold, label=""];
+14->10 [style = bold, label=""];
+7->3 [style = bold, label=""];
+12->10 [style = bold, label=""];
+13->9 [style = bold, label=""];
+1->8 [style = bold, label=""];
+2->9 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+3->14 [style = dashed, label="0"];
+10->1 [style = bold, label=""];
+11->9 [style = bold, label=""];
+2->6 [style = dotted, label="true"];
+7->12 [style = bold, label=""];
+11->6 [style = dotted, label="true"];
+4->7 [style = bold, label=""];
+9->4 [style = bold, label=""];
+0->5 [style = bold, label=""];
+7->14 [style = bold, label=""];
+}

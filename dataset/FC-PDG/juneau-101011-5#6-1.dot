@@ -1,0 +1,33 @@
+digraph {
+2 [style = filled, label = "client.get(\"/a3\").run().assertCode().is(307).assertBody().is(\"Temporary Redirect\").assertHeader(\"Location\").is(\"/foo\")@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "MockRestClient client = MockRestClient.createLax().disableRedirectHandling().build()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "a01_basic['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "client.get(\"/a3\").run().assertCode().is(308).assertBody().is(\"Permanent Redirect\").assertHeader(\"Location\").is(\"/foo\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "client.get(\"/a3\").run().assertCode().is(307).assertHeader(\"Location\").is(\"/foo\")@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "a01_basic['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "a01_basic['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "client.get(\"/a1\").run().assertCode().is(307).assertBody().is(\"Temporary Redirect\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "client.get(\"/a1\").run().assertCode().is(308).assertBody().is(\"Permanent Redirect\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "client.get(\"/a2\").run().assertCode().is(308).assertBody().is(\"foo\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "client.get(\"/a4\").run().assertCode().is(307).assertHeader(\"Foo\").is(\"bar\")@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "client.get(\"/a4\").run().assertCode().is(308).assertHeader(\"Foo\").is(\"bar\")@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "client.get(\"/a2\").run().assertCode().is(307).assertBody().is(\"foo\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+4->10 [style = bold, label=""];
+6->4 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+7->1 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+3->7 [style = bold, label=""];
+12->9 [style = bold, label=""];
+0->4 [style = bold, label=""];
+10->12 [style = bold, label=""];
+4->5 [style = bold, label=""];
+9->8 [style = bold, label=""];
+2->1 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+2->9 [style = dashed, label="0"];
+11->4 [style = bold, label=""];
+}

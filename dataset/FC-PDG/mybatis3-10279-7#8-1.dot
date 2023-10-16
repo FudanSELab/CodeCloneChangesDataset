@@ -1,0 +1,33 @@
+digraph {
+6 [style = filled, label = "assertEquals(\"User2\",users.get(2).getName())@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "{sqlSession.close()}@@@13@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(\"User4\",users.get(0).getName())@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "SqlSession sqlSession = sqlSessionFactory.openSession()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(\"User1\",users.get(3).getName())@@@11@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "{sqlSession.close()}@@@23@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "{List<User> users = mapper.getUsersByNameWithParamName(null)assertEquals(4,users.size())assertEquals(\"User4\",users.get(0).getName())assertEquals(\"User3\",users.get(1).getName())assertEquals(\"User2\",users.get(2).getName())assertEquals(\"User1\",users.get(3).getName())}@@@14@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(4,users.size())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "shouldGetUsersByNameWithParamNameUsingMap['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "shouldGetUsersByNameWithParamNameUsingMap['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertEquals(\"User1\",users.get(3).getName())@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+15 [style = filled, label = "{List<User> users = mapper.getUsersByNameWithParamName(\"User\")assertEquals(4,users.size())assertEquals(\"User4\",users.get(0).getName())assertEquals(\"User3\",users.get(1).getName())assertEquals(\"User2\",users.get(2).getName())assertEquals(\"User1\",users.get(3).getName())}@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "shouldGetUsersByNameWithParamName['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertEquals(\"User3\",users.get(1).getName())@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+14->13 [style = bold, label=""];
+5->6 [style = bold, label=""];
+6->9 [style = bold, label=""];
+3->1 [style = bold, label=""];
+15->14 [style = bold, label=""];
+9->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+12->1 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->15 [style = bold, label=""];
+11->2 [style = bold, label=""];
+8->7 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

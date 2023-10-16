@@ -1,0 +1,17 @@
+digraph {
+3 [style = filled, label = "testFilterOnTimeExtract['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "testQuery(\"SELECT COUNT(*) FROM druid.foo\" + \"WHERE EXTRACT(YEAR FROM __time) = 2000\" + \"AND EXTRACT(MONTH FROM __time) = 1\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).virtualColumns(expressionVirtualColumn(\"v0\",\"timestamp_extract(\"__time\",'YEAR','UTC')\",ValueType.LONG),expressionVirtualColumn(\"v1\",\"timestamp_extract(\"__time\",'MONTH','UTC')\",ValueType.LONG)).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).filters(and(selector(\"v0\",\"2000\",null),selector(\"v1\",\"1\",null))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9414ab))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "testFilterOnTimeExtract['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "cannotVectorize()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testQuery(\"SELECT COUNT(*) FROM druid.foo\" + \"WHERE EXTRACT(YEAR FROM __time) = 2000\" + \"AND EXTRACT(MONTH FROM __time) = 1\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).virtualColumns(expressionVirtualColumn(\"v0\",\"timestamp_extract(\"__time\",'YEAR','UTC')\",ValueType.LONG),expressionVirtualColumn(\"v1\",\"timestamp_extract(\"__time\",'MONTH','UTC')\",ValueType.LONG)).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).filters(and(selector(\"v0\",\"2000\",null),selector(\"v1\",\"1\",null))).context(QUERY_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@941502))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testFilterOnTimeExtractWithMultipleDays['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testQuery(\"SELECT COUNT(*) FROM druid.foo\" + \"WHERE EXTRACT(YEAR FROM __time) = 2000\" + \"AND EXTRACT(DAY FROM __time) IN (2, 3, 5)\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).virtualColumns(expressionVirtualColumn(\"v0\",\"timestamp_extract(\"__time\",'YEAR','UTC')\",ValueType.LONG),expressionVirtualColumn(\"v1\",\"timestamp_extract(\"__time\",'DAY','UTC')\",ValueType.LONG)).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).filters(and(selector(\"v0\",\"2000\",null),in(\"v1\",ImmutableList.of(\"2\",\"3\",\"5\"),null))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@94155e))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->4 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+3->2 [style = bold, label=""];
+2->4 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+2->6 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

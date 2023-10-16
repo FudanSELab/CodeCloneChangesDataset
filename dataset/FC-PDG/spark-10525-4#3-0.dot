@@ -1,0 +1,38 @@
+digraph {
+11 [style = filled, label = "JavaRDD<Integer> sizes = rdd1.zipPartitions(rdd2,sizesFn)@@@19@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "zipPartitions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertEquals(\"(3, 2, 3, 2(\",sizes.collect().toString())@@@12@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "Assert.assertEquals(\"(3, 2, 3, 2(\",sizes.collect().toString())@@@20@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "JavaRDD<Integer> sizes = rdd1.zipPartitions(rdd2,sizesFn)@@@11@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "JavaRDD<Integer> rdd1 = sc.parallelize(Arrays.asList(1,2,3,4,5,6),2)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "FlatMapFunction2<Iterator<Integer>,Iterator<String>,Integer> sizesFn = new FlatMapFunction2<Iterator<Integer>,Iterator<String>,Integer>(){@Override public Iterator<Integer> call(Iterator<Integer> i,Iterator<String> s){return Arrays.asList(Iterators.size(i),Iterators.size(s)).iterator()}}@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "zipPartitions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "JavaRDD<Integer> sizes = rdd1.zipPartitions(rdd2,sizesFn)@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "FlatMapFunction2<Iterator<Integer>,Iterator<String>,Integer> sizesFn = null@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "zipPartitions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "JavaRDD<String> rdd2 = sc.parallelize(Arrays.asList(\"1\",\"2\",\"3\",\"4\"),2)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "FlatMapFunction2<Iterator<Integer>,Iterator<String>,Integer> sizesFn = null@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertEquals(\"(3, 2, 3, 2(\",sizes.collect().toString())@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+1->5 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+2->11 [style = solid, label="rdd2"];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+2->6 [style = solid, label="rdd2"];
+11->12 [style = bold, label=""];
+2->9 [style = bold, label=""];
+2->10 [style = bold, label=""];
+9->6 [style = bold, label=""];
+4->0 [style = bold, label=""];
+8->0 [style = bold, label=""];
+2->1 [style = solid, label="rdd2"];
+3->1 [style = solid, label="sizesFn"];
+3->9 [style = dashed, label="0"];
+3->10 [style = dashed, label="0"];
+9->6 [style = solid, label="sizesFn"];
+6->7 [style = bold, label=""];
+13->0 [style = bold, label=""];
+10->11 [style = bold, label=""];
+10->11 [style = solid, label="sizesFn"];
+}

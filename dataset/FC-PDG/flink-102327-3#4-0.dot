@@ -1,0 +1,37 @@
+digraph {
+8 [style = filled, label = "final ServiceStatus serviceStatus = new ServiceStatusBuilder().withLoadBalancer(new LoadBalancerStatus(Collections.singletonList(new LoadBalancerIngress(hostname,ip,new ArrayList<>())))).build()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "return buildExternalService(KubernetesConfigOptions.ServiceExposedType.LoadBalancer,servicePort,serviceStatus)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "buildExternalServiceWithNodePort['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "@Nullable String hostname@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "buildExternalServiceWithLoadBalancer['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "final ServiceStatus serviceStatus = new ServiceStatusBuilder().withLoadBalancer(new LoadBalancerStatus(Collections.singletonList(new LoadBalancerIngress(hostname,ip)))).build()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "final ServiceStatus serviceStatus = new ServiceStatusBuilder().withLoadBalancer(new LoadBalancerStatus(Collections.emptyList())).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "final ServicePort servicePort = new ServicePortBuilder().withName(Constants.REST_PORT_NAME).withPort(REST_PORT).withNodePort(NODE_PORT).withNewTargetPort(REST_PORT).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "return buildExternalService(KubernetesConfigOptions.ServiceExposedType.NodePort,servicePort,serviceStatus)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "@Nullable String ip@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "buildExternalServiceWithLoadBalancer['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final ServicePort servicePort = new ServicePortBuilder().withName(Constants.REST_PORT_NAME).withPort(REST_PORT).withNewTargetPort(REST_PORT).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "@Nullable String hostname@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4->3 [style = bold, label=""];
+7->6 [style = dotted, label="true"];
+4->1 [style = dotted, label="true"];
+2->5 [style = solid, label="serviceStatus"];
+4->0 [style = dotted, label="true"];
+12->11 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+12->10 [style = solid, label="servicePort"];
+7->3 [style = bold, label=""];
+11->10 [style = solid, label="serviceStatus"];
+8->5 [style = solid, label="serviceStatus"];
+3->12 [style = dashed, label="0"];
+8->5 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+11->10 [style = bold, label=""];
+3->8 [style = bold, label=""];
+3->5 [style = solid, label="servicePort"];
+2->11 [style = dashed, label="0"];
+9->12 [style = bold, label=""];
+7->1 [style = dotted, label="true"];
+2->5 [style = bold, label=""];
+}

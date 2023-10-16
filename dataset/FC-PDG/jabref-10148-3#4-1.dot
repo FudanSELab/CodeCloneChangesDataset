@@ -1,0 +1,33 @@
+digraph {
+5 [style = filled, label = "BibEntry entry = TestEntry.getTestEntry()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "String expectedCitation = \"(1(B. Smith, B. Jones, and J. Williams, �ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽTitle of the test entry,�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ BibTeX Journal, vol. 34, no. 3, pp. 45�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ67, Jul. 2016.\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String actualCitation = CitationStyleGenerator.generateCitation(entry,style,format)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "CitationStyleOutputFormat format = CitationStyleOutputFormat.HTML@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testHtmlFormat['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "CitationStyleOutputFormat format = CitationStyleOutputFormat.TEXT@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testTextFormat['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertEquals(expectedCitation,actualCitation)@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testHtmlFormat['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "String style = CitationStyle.getDefault().getSource()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String expectedCitation = \" <div class=\"csl-entry\">\" + \" <div class=\"csl-left-margin\">(1(</div><div class=\"csl-right-inline\">B. Smith, B. Jones, and J. Williams, �ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽTitle of the test entry,�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ <i>BibTeX Journal</i>, vol. 34, no. 3, pp. 45�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ�ｿｽ67, Jul. 2016.</div>\" + \" </div>\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+8->0 [style = bold, label=""];
+8->0 [style = solid, label="format"];
+4->9 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+10->9 [style = bold, label=""];
+6->0 [style = bold, label=""];
+6->8 [style = dashed, label="0"];
+6->0 [style = solid, label="format"];
+7->4 [style = bold, label=""];
+5->0 [style = solid, label="entry"];
+2->0 [style = solid, label="style"];
+9->3 [style = solid, label="expectedCitation"];
+4->3 [style = solid, label="expectedCitation"];
+4->5 [style = bold, label=""];
+2->6 [style = bold, label=""];
+0->3 [style = solid, label="actualCitation"];
+2->8 [style = bold, label=""];
+}

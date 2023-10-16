@@ -1,0 +1,25 @@
+digraph {
+7 [style = filled, label = "final RelOptRule rule = AggregateReduceFunctionsRule.Config.DEFAULT.withOperandFor().withFunctionsToReduce(EnumSet.noneOf()).toRule()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testNoReduceAverage['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "sql(sql).withRule(rule).checkUnchanged()@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final RelOptRule rule = new AggregateReduceFunctionsRule(,RelFactories.LOGICAL_BUILDER,functionsToReduce)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testNoReduceSum['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final EnumSet<SqlKind> functionsToReduce = EnumSet.noneOf()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "String sql = \"select name, sum(deptno)\" + \" from sales.dept group by name\"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "sql(sql).withRule(rule).checkUnchanged()@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "String sql = \"select name, max(name), avg(deptno), min(name)\" + \" from sales.dept group by name\"@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "testNoReduceAverage['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->7 [style = bold, label=""];
+4->8 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+1->4 [style = solid, label="functionsToReduce"];
+6->0 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+9->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+8->2 [style = bold, label=""];
+7->6 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

@@ -1,0 +1,26 @@
+digraph {
+0 [style = filled, label = "when(contextManager.getMetaDataContexts()).thenReturn(metaDataContexts)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ContextManager contextManager = mock(,RETURNS_DEEP_STUBS)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "setUp['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "MetaDataContexts metaDataContexts = new MetaDataContexts(mock(),getMetaDataMap(),mock(),mock(),new ConfigurationProperties(new Properties()),mock())@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "setUp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "contextManagerField.set(ProxyContext.getInstance(),contextManager)@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "setUp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "MetaDataContexts metaDataContexts = new MetaDataContexts(mock(),getMetaDataMap(),mock(),mock(),new ConfigurationProperties(new Properties()),mock())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "contextManagerField.setAccessible(true)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Field contextManagerField = ProxyContext.getInstance().getClass().getDeclaredField(\"contextManager\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->8 [style = bold, label=""];
+3->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+2->1 [style = solid, label="contextManager"];
+4->2 [style = bold, label=""];
+8->2 [style = bold, label=""];
+8->0 [style = solid, label="metaDataContexts"];
+0->1 [style = bold, label=""];
+7->3 [style = bold, label=""];
+5->4 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+4->0 [style = solid, label="metaDataContexts"];
+}

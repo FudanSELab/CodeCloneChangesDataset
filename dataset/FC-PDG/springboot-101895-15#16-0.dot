@@ -1,0 +1,30 @@
+digraph {
+6 [style = filled, label = "Mono<String> result = getWebClient(this.webServer.getPort()).build().post().uri(\"/test\").contentType(MediaType.TEXT_PLAIN).body(BodyInserters.fromValue(\"Hello World\")).exchange().flatMap(null)@@@12@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "int specificPort = doWithRetry(null)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(this.webServer.getPort()).isEqualTo(specificPort)@@@14@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "AbstractServletWebServerFactory factory = getFactory()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "specificPort['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "assertThat(this.webServer.getPort()).isEqualTo(specificPort)@@@13@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(result.block(Duration.ofSeconds(30))).isEqualTo(\"Hello World\")@@@13@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "specificPort['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "specificPort['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(getResponse(\"http://localhost:\" + specificPort + \"/hello\")).isEqualTo(\"Hello World\")@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "AbstractReactiveWebServerFactory factory = getFactory()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Mono<String> result = getWebClient().build().post().uri(\"/test\").contentType(MediaType.TEXT_PLAIN).body(BodyInserters.fromValue(\"Hello World\")).exchange().flatMap(null)@@@12@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3->11 [style = bold, label=""];
+5->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->5 [style = bold, label=""];
+3->1 [style = bold, label=""];
+11->10 [style = bold, label=""];
+4->5 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+3->10 [style = solid, label="specificPort"];
+3->0 [style = solid, label="specificPort"];
+8->9 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

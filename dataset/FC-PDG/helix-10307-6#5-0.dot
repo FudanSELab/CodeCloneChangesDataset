@@ -1,0 +1,34 @@
+digraph {
+9 [style = filled, label = "assignableNode.release(removingReplica)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "AssignableNode assignableNode = new AssignableNode(testCache.getClusterConfig(),testCache.getInstanceConfigMap().get(_testInstanceId),_testInstanceId,Collections.emptyList())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Assert.assertEquals(assignableNode.getMaxCapacity(),_capacityDataMap)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "InstanceConfig testInstanceConfig = new InstanceConfig(\"testInstanceConfigId\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "AssignableNode assignableNode = new AssignableNode(testClusterConfig,testInstanceConfig,_testInstanceId,Collections.emptyList())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testDefaultInstanceCapacity['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "AssignableNode assignableNode = new AssignableNode(testClusterConfig,testInstanceConfig,_testInstanceId)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "ClusterConfig testClusterConfig = new ClusterConfig(\"testClusterConfigId\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "ResourceControllerDataProvider testCache = setupClusterDataCache()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testClusterConfig.setDefaultInstanceCapacityMap(_capacityDataMap)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testDefaultInstanceCapacity['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "testReleaseNoPartition['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "AssignableReplica removingReplica = new AssignableReplica(testCache.getResourceConfig(_resourceNames.get(1)),_partitionNames.get(2) + \"non-exist\",\"MASTER\",1)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+1->0 [style = solid, label="testClusterConfig"];
+5->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+7->1 [style = bold, label=""];
+2->6 [style = solid, label="testInstanceConfig"];
+10->12 [style = bold, label=""];
+12->8 [style = bold, label=""];
+2->6 [style = bold, label=""];
+11->10 [style = bold, label=""];
+2->0 [style = solid, label="testInstanceConfig"];
+0->6 [style = dashed, label="0"];
+8->9 [style = bold, label=""];
+8->9 [style = solid, label="removingReplica"];
+1->6 [style = solid, label="testClusterConfig"];
+}

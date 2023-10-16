@@ -1,0 +1,32 @@
+digraph {
+10 [style = filled, label = "TestAllExtensionsLite messageWithExtensions = TestAllExtensionsLite.newBuilder().setExtension(UnittestLite.optionalInt32ExtensionLite,123).addExtension(UnittestLite.repeatedStringExtensionLite,\"spam\").addExtension(UnittestLite.repeatedStringExtensionLite,\"eggs\").setExtension(UnittestLite.optionalNestedEnumExtensionLite,NestedEnum.BAZ).setExtension(UnittestLite.optionalNestedMessageExtensionLite,NestedMessage.newBuilder().setBb(7).build()).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testParseFromByteBuffer_extensions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(message).isEqualTo(copy)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "TestAllExtensionsLite messageWithUnknownFields = TestAllExtensionsLite.parseFrom(messageWithExtensions.toByteArray())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertEquals(message,copy)@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "testParseFromByteBuffer_extensions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "TestAllExtensionsLite copy = TestAllExtensionsLite.parseFrom(message.toByteString().asReadOnlyByteBuffer(),registry)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "UnittestLite.registerAllExtensions(registry)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "TestAllExtensionsLite message = TestAllExtensionsLite.newBuilder().setExtension(UnittestLite.optionalInt32ExtensionLite,123).addExtension(UnittestLite.repeatedStringExtensionLite,\"hello\").setExtension(UnittestLite.optionalNestedEnumExtensionLite,NestedEnum.BAZ).setExtension(UnittestLite.optionalNestedMessageExtensionLite,NestedMessage.newBuilder().setBb(7).build()).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testToStringUnknownFields['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "ExtensionRegistryLite registry = ExtensionRegistryLite.newInstance()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertToStringEquals(\"1: 12318: \"\b\a\"21: 344: \"spam\"44: \"eggs\"\",messageWithUnknownFields)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->2 [style = solid, label="copy"];
+11->8 [style = bold, label=""];
+0->6 [style = solid, label="copy"];
+3->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+7->5 [style = bold, label=""];
+11->8 [style = solid, label="messageWithUnknownFields"];
+1->0 [style = bold, label=""];
+9->10 [style = bold, label=""];
+4->1 [style = solid, label="registry"];
+5->10 [style = dashed, label="0"];
+5->2 [style = solid, label="message"];
+0->6 [style = bold, label=""];
+5->4 [style = bold, label=""];
+4->0 [style = solid, label="registry"];
+0->2 [style = bold, label=""];
+10->11 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

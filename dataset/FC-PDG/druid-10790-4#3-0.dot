@@ -1,0 +1,37 @@
+digraph {
+7 [style = filled, label = "overlordExpectedRequest.headers.forEach(null)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "HttpURLConnection connection = ((HttpURLConnection)new URL(StringUtils.format(\"http://localhost:%d%s\",port,overlordExpectedRequest.path)).openConnection())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testOverlordProxyLeader['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "HttpURLConnection connection = ((HttpURLConnection)new URL(StringUtils.format(\"http://localhost:%d/proxy/overlord/%s\",port,overlordExpectedRequest.path)).openConnection())@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "connection.setRequestMethod(overlordExpectedRequest.method)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "HttpURLConnection connection = ((HttpURLConnection)new URL(StringUtils.format(\"http://localhost:%d/proxy/overlord%s\",port,overlordExpectedRequest.path)).openConnection())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "Assert.assertEquals(200,connection.getResponseCode())@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "overlordExpectedRequest.method = \"GET\"@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assert.assertTrue(\"overlord called\",overlordExpectedRequest.called)@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Assert.assertFalse(\"coordinator called\",coordinatorExpectedRequest.called)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "overlordExpectedRequest.headers = ImmutableMap.of(\"Authorization\",\"Basic bXl1c2VyOm15cGFzc3dvcmQ=\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testOverlordTaskStatus['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "overlordExpectedRequest.path = \"/druid/indexer/v1/task/myTaskId/status\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "overlordExpectedRequest.path = \"/druid/indexer/v1/leader\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testOverlordProxyLeader['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3->2 [style = solid, label="method"];
+14->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+6->4 [style = bold, label=""];
+0->11 [style = bold, label=""];
+1->2 [style = bold, label=""];
+7->5 [style = bold, label=""];
+4->14 [style = dashed, label="0"];
+1->13 [style = dashed, label="0"];
+2->7 [style = bold, label=""];
+0->13 [style = bold, label=""];
+5->9 [style = bold, label=""];
+9->8 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+11->2 [style = bold, label=""];
+3->0 [style = bold, label=""];
+12->14 [style = bold, label=""];
+13->2 [style = bold, label=""];
+10->4 [style = bold, label=""];
+}

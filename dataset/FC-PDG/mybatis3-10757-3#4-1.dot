@@ -1,0 +1,24 @@
+digraph {
+2 [style = filled, label = "verify(statement).setQueryTimeout(5)@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "handler.setStatementTimeout(statement,5)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "specifyQueryTimeoutZeroAndTransactionTimeout['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "doReturn(10).when(configuration).getDefaultStatementTimeout()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "doReturn(0).when(configuration).getDefaultStatementTimeout()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "specifyQueryTimeoutZeroAndTransactionTimeout['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "specifyQueryTimeoutAndTransactionTimeoutMinIsQueryTimeout['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "handler.setStatementTimeout(statement,20)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "BaseStatementHandler handler = new SimpleStatementHandler(null,mappedStatementBuilder.build(),null,null,null,null)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "verify(statement).setQueryTimeout(10)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+8->6 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+3->4 [style = bold, label=""];
+3->8 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+2->6 [style = dashed, label="0"];
+}

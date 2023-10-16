@@ -1,0 +1,18 @@
+digraph {
+7 [style = filled, label = "given(this.tokenValidator.validate(any())).willReturn(Mono.empty())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "preHandleWhenTokenIsNotBearerShouldReturnMissingAuthorization['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "preHandleWhenTokenIsNotBearerShouldReturnMissingAuthorization['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "StepVerifier.create(this.interceptor.preHandle(request,\"/a\")).consumeNextWith(null).verifyComplete()@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "MockServerWebExchange request = MockServerWebExchange.from(MockServerHttpRequest.get(\"/a\").header(HttpHeaders.AUTHORIZATION,mockAccessToken()).build())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "MockServerWebExchange request = MockServerWebExchange.from(MockServerHttpRequest.get(\"/a\").header(HttpHeaders.AUTHORIZATION,\"bearer \" + mockAccessToken()).build())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "StepVerifier.create(this.interceptor.preHandle(request,\"/a\")).consumeNextWith(null).verifyComplete()@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "given(this.securityService.getAccessLevel(mockAccessToken(),\"my-app-id\")).willReturn(Mono.just(AccessLevel.RESTRICTED))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "preHandleWhenAccessIsNotAllowedShouldReturnAccessDenied['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->7 [style = bold, label=""];
+4->8 [style = bold, label=""];
+6->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+3->2 [style = bold, label=""];
+}

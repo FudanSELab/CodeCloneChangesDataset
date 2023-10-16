@@ -1,0 +1,30 @@
+digraph {
+0 [style = filled, label = "LatexParserResult parserResult = new DefaultLatexParser().parse(texFile)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Path texFile = Paths.get(.getResource(\"unknown_key.tex\").toURI())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testUnknownKey['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "LatexBibEntriesResolverResult expectedCrossingResult = new LatexBibEntriesResolverResult(parserResult)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testSingleFile['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testSingleFile['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertEquals(expectedCrossingResult,crossingResult)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Path texFile = Path.of(.getResource(\"paper.tex\").toURI())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "Path texFile = Paths.get(.getResource(\"paper.tex\").toURI())@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "LatexBibEntriesResolverResult crossingResult = new TexBibEntriesResolver(database,importFormatPreferences,fileMonitor).resolve(parserResult)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->0 [style = solid, label="texFile"];
+4->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+9->0 [style = solid, label="texFile"];
+6->0 [style = bold, label=""];
+3->2 [style = solid, label="expectedCrossingResult"];
+1->0 [style = bold, label=""];
+9->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+6->0 [style = solid, label="texFile"];
+0->4 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+4->2 [style = solid, label="crossingResult"];
+0->3 [style = solid, label="parserResult"];
+7->6 [style = bold, label=""];
+0->4 [style = solid, label="parserResult"];
+8->9 [style = bold, label=""];
+}

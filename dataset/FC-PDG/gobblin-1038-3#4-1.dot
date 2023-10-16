@@ -1,0 +1,27 @@
+digraph {
+3 [style = filled, label = "Assert.fail(\"Metric reporting unexpectedly succeeded.\")@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testMetricFileReporterSuccessful['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Properties properties = ConfigUtils.configToProperties(config)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testMetricFileReporterThrowsException['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "GobblinMetrics gobblinMetrics = GobblinMetrics.get(id)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Config config = ConfigFactory.empty().withValue(ConfigurationKeys.METRICS_REPORTING_FILE_ENABLED_KEY,ConfigValueFactory.fromAnyRef(true)).withValue(ConfigurationKeys.METRICS_LOG_DIR_KEY,ConfigValueFactory.fromAnyRef(\"/tmp\")).withValue(ConfigurationKeys.FAILURE_LOG_DIR_KEY,ConfigValueFactory.fromAnyRef(\"/tmp\"))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Config config = ConfigFactory.empty().withValue(ConfigurationKeys.METRICS_REPORTING_FILE_ENABLED_KEY,ConfigValueFactory.fromAnyRef(true))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "gobblinMetrics.startMetricReporting(properties)@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "String id = getClass().getSimpleName() + \"-\" + System.currentTimeMillis()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testMetricFileReporterThrowsException['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9->5 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+7->5 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->8 [style = bold, label=""];
+8->2 [style = bold, label=""];
+5->1 [style = solid, label="id"];
+2->6 [style = solid, label="properties"];
+8->2 [style = solid, label="config"];
+2->6 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->2 [style = bold, label=""];
+0->2 [style = solid, label="config"];
+}

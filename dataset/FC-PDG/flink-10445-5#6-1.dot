@@ -1,0 +1,34 @@
+digraph {
+8 [style = filled, label = "testReal['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "check(new Row((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1b4ff63,DB_URL,\"REAL_TABLE\",new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1b4ff6c)@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "env.getConfig().enableObjectReuse()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "StreamTableEnvironment tEnv = StreamTableEnvironment.create(env)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "EnvironmentSettings envSettings = EnvironmentSettings.newInstance().useBlinkPlanner().inStreamingMode().build()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "StreamTableEnvironment tEnv = StreamTableEnvironment.create(env,envSettings)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testReal['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testReal['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "tEnv.executeSql(\"INSERT INTO upsertSink SELECT CAST(1.0 as FLOAT)\").await()@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "tEnv.executeSql(\"CREATE TABLE upsertSink (\" + \" real_data float\" + \") WITH (\" + \" 'connector'='jdbc',\" + \" 'url'='\" + DB_URL + \"',\" + \" 'table-name'='\" + OUTPUT_TABLE4 + \"'\" + \")\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "check(new Row((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1b4ff1b,DB_URL,\"REAL_TABLE\",new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1b4ff24)@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "tEnv.executeSql(\"CREATE TABLE upsertSink (\" + \" real_data float\" + \") WITH (\" + \" 'connector.type'='jdbc',\" + \" 'connector.url'='\" + DB_URL + \"',\" + \" 'connector.table'='REAL_TABLE'\" + \")\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->3 [style = bold, label=""];
+4->7 [style = solid, label="envSettings"];
+5->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+1->6 [style = bold, label=""];
+7->1 [style = bold, label=""];
+6->0 [style = bold, label=""];
+3->7 [style = solid, label="env"];
+13->3 [style = bold, label=""];
+12->6 [style = bold, label=""];
+2->4 [style = bold, label=""];
+11->10 [style = bold, label=""];
+10->12 [style = bold, label=""];
+2->11 [style = bold, label=""];
+4->7 [style = bold, label=""];
+5->4 [style = bold, label=""];
+8->3 [style = bold, label=""];
+3->11 [style = solid, label="env"];
+}

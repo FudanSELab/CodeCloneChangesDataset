@@ -1,0 +1,28 @@
+digraph {
+3 [style = filled, label = "cmbFilterKind.setSelectedItem(FilterKind.ALL)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "filterModel.addElement(FilterKind.ID)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "filterModel.addElement(FilterKind.USER)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "initializeFilter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "filterModel.addElement(FilterKind.MESSAGE)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "initializeFilter['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "cmbFilterKind.setModel(filterModel)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "DefaultComboBoxModel<FilterKind> filterModel = new DefaultComboBoxModel<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "filterModel.addElement(FilterKind.ALL)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "txtFilter.getDocument().addDocumentListener(this)@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "DefaultComboBoxModel filterModel = new DefaultComboBoxModel()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "initializeFilter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+4->8 [style = bold, label=""];
+3->6 [style = bold, label=""];
+7->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+4->5 [style = solid, label="filterModel"];
+10->5 [style = solid, label="filterModel"];
+2->7 [style = bold, label=""];
+9->10 [style = bold, label=""];
+10->8 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+11->4 [style = bold, label=""];
+}

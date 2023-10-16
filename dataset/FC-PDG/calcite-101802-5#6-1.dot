@@ -1,0 +1,9 @@
+digraph {
+1 [style = filled, label = "getPrecedenceList['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "getPrecedenceList['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "getPrecedenceList['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return new RelDataTypePrecedenceList(){@Override public boolean containsType(RelDataType type){return type.getSqlTypeName() == getSqlTypeName() && type.getComponentType() != null && getComponentType().getPrecedenceList().containsType(type.getComponentType())}@Override public int compareTypePrecedence(RelDataType type1,RelDataType type2){if (!containsType(type1)) {throw new IllegalArgumentException(\"must contain type: \" + type1)}if (!containsType(type2)) {throw new IllegalArgumentException(\"must contain type: \" + type2)}return getComponentType().getPrecedenceList().compareTypePrecedence(type1.getComponentType(),type2.getComponentType())}}@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->0 [style = bold, label=""];
+3->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

@@ -1,0 +1,33 @@
+digraph {
+3 [style = filled, label = "exe.setWorkingDirectory(aProj.getBaseDir())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Commandline cmd@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "run['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "exe.setAntRun(aProj)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return exe.execute()@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "exe.setCommandline(cmd.getCommandline())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "runCmd['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Project aProj = getProject()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Commandline cmd@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "run['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "ExecuteStreamHandler out@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Execute exe = new Execute(new LogStreamHandler(this,Project.MSG_INFO,Project.MSG_WARN))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Execute exe = new Execute(out)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->0 [style = bold, label=""];
+2->11 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+0->9 [style = bold, label=""];
+12->10 [style = dotted, label="true"];
+5->0 [style = bold, label=""];
+3->7 [style = bold, label=""];
+9->4 [style = bold, label=""];
+12->0 [style = bold, label=""];
+10->9 [style = solid, label="out"];
+0->1 [style = bold, label=""];
+8->2 [style = dotted, label="true"];
+7->6 [style = bold, label=""];
+5->2 [style = dotted, label="true"];
+0->4 [style = solid, label="aProj"];
+12->11 [style = dotted, label="true"];
+}

@@ -1,0 +1,38 @@
+digraph {
+14 [style = filled, label = "testCleanPreviousCorruptedCleanFiles['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "HoodieWriteConfig config = HoodieWriteConfig.newBuilder().withPath(basePath).withAssumeDatePartitioning(true).withCompactionConfig(HoodieCompactionConfig.newBuilder().withCleanerPolicy(HoodieCleaningPolicy.KEEP_LATEST_FILE_VERSIONS).retainFileVersions(2).build()).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "boolean retryFailure@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "List<String> cleanerFileNames = Arrays.asList(HoodieTimeline.makeRequestedCleanerFileName(commitTime),HoodieTimeline.makeInflightCleanerFileName(commitTime))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testKeepLatestVersionsWithPendingCompactions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "HoodieWriteConfig config = HoodieWriteConfig.newBuilder().withPath(basePath).withAssumeDatePartitioning(true).withCompactionConfig(HoodieCompactionConfig.newBuilder().withCleanerPolicy(HoodieCleaningPolicy.KEEP_LATEST_FILE_VERSIONS).retainFileVersions(1).build()).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "metaClient = HoodieTableMetaClient.reload(metaClient)@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testKeepLatestVersionsWithPendingCompactions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "List<HoodieCleanStat> cleanStats = runCleaner(config)@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "Path commitFile = new Path(Paths.get(metaClient.getBasePath(),HoodieTableMetaClient.METAFOLDER_NAME,f).toString())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "os.write(new byte(((()@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "boolean retryFailure@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "testPendingCompactions(config,36,9,retryFailure)@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertEquals(0,cleanStats.size(),\"Must not clean any files\")@@@14@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "String commitTime = makeNewCommitTime(1)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+0->3 [style = solid, label="config"];
+7->12 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+2->3 [style = solid, label="retryFailure"];
+1->0 [style = bold, label=""];
+9->10 [style = bold, label=""];
+5->4 [style = dotted, label="true"];
+8->13 [style = solid, label="commitTime"];
+5->0 [style = bold, label=""];
+6->8 [style = bold, label=""];
+4->3 [style = solid, label="retryFailure"];
+10->9 [style = bold, label=""];
+13->9 [style = bold, label=""];
+6->7 [style = solid, label="config"];
+1->2 [style = dotted, label="true"];
+14->6 [style = bold, label=""];
+11->7 [style = bold, label=""];
+8->13 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+10->11 [style = bold, label=""];
+}

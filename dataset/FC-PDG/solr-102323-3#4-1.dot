@@ -1,0 +1,18 @@
+digraph {
+4 [style = filled, label = "Arrays.sort(arr,new Comparator<ShardFacetCount>(){public int compare(ShardFacetCount o1,ShardFacetCount o2){if (o2.count < o1.count) return -1if (o1.count < o2.count) return 1return o1.indexed.compareTo(o2.indexed)}})@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "getLexSorted['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "countSorted = arr@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "getLexSorted['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "getCountSorted['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return arr@@@13@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ShardFacetCount(( arr = counts.values().toArray(new ShardFacetCount(((()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+3->1 [style = solid, label="arr"];
+3->0 [style = solid, label="arr"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+3->4 [style = solid, label="arr"];
+}

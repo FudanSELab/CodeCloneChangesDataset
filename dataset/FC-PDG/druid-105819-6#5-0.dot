@@ -1,0 +1,30 @@
+digraph {
+3 [style = filled, label = "Assert.assertEquals(ValueType.STRING,capabilities.getType())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Assert.assertTrue(capabilities.isComplete())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "test_getColumnCapabilities_string['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Assert.assertFalse(capabilities.isComplete())@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "Assert.assertFalse(capabilities.hasMultipleValues())@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final ColumnCapabilities capabilities = adapter.getColumnCapabilities(ValueType.STRING.name())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final RowBasedStorageAdapter<Integer> adapter = createIntAdapter(0,1,2)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final ColumnCapabilities capabilities = adapter.getColumnCapabilities(ValueType.LONG.name())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "test_getColumnCapabilities_string['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "test_getColumnCapabilities_long['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Assert.assertTrue(capabilities.hasMultipleValues().isUnknown())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "Assert.assertEquals(ValueType.LONG,capabilities.getType())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+8->1 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+0->9 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+9->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+10->0 [style = bold, label=""];
+1->11 [style = bold, label=""];
+}

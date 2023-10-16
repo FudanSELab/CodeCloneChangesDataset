@@ -1,0 +1,26 @@
+digraph {
+4 [style = filled, label = "@NonNull Action onDispose@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "return RxJavaPlugins.onAssembly(new MaybePeek<>(this,Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.EMPTY_ACTION,Functions.EMPTY_ACTION,Objects.requireNonNull(onDispose,\"onDispose is null\")))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "return RxJavaPlugins.onAssembly(new MaybePeek<T>(this,Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.EMPTY_ACTION,Functions.EMPTY_ACTION,Objects.requireNonNull(onDispose,\"onDispose is null\")))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "Objects.requireNonNull(onSubscribe,\"onSubscribe is null\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "doOnSubscribe['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "@NonNull Consumer<? super Subscription> onSubscribe@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "doOnDispose['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "doOnDispose['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "return RxJavaPlugins.onAssembly(new ParallelPeek<T>(this,Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.EMPTY_ACTION,Functions.EMPTY_ACTION,onSubscribe,Functions.EMPTY_LONG_CONSUMER,Functions.EMPTY_ACTION))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Action onDispose@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+1->2 [style = solid, label="onDispose"];
+1->4 [style = dashed, label="0"];
+3->4 [style = dotted, label="true"];
+2->5 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->6 [style = dotted, label="true"];
+4->5 [style = solid, label="onDispose"];
+6->9 [style = solid, label="onSubscribe"];
+9->7 [style = bold, label=""];
+6->7 [style = solid, label="onSubscribe"];
+1->6 [style = dashed, label="0"];
+0->1 [style = dotted, label="true"];
+8->9 [style = bold, label=""];
+}

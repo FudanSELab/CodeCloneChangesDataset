@@ -1,0 +1,29 @@
+digraph {
+9 [style = filled, label = "collectStream.onCompleted()@@@17@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "sendBrowserPerfData['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "org.apache.skywalking.apm.network.language.agent.v3.BrowserErrorLog browserErrorLog@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "latch.await()@@@18@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "BrowserPerfData browserPerfData@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "collectStream.onNext(browserErrorLog)@@@16@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "sendBrowserErrorLog['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "browserPerfServiceStub.collectPerfData(browserPerfData,new StreamObserver<Commands>(){@Override public void onNext(Commands commands){}@Override public void onError(Throwable throwable){LOGGER.warn(throwable.getMessage(),throwable)latch.countDown()}@Override public void onCompleted(){latch.countDown()}})@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "sendBrowserPerfData['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "final CountDownLatch latch = new CountDownLatch(1)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "StreamObserver<org.apache.skywalking.apm.network.language.agent.v3.BrowserErrorLog> collectStream = browserPerfServiceStub.collectErrorLogs(new StreamObserver<Commands>(){@Override public void onNext(Commands commands){}@Override public void onError(Throwable throwable){throwable.printStackTrace()latch.countDown()}@Override public void onCompleted(){latch.countDown()}})@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->7 [style = bold, label=""];
+7->9 [style = bold, label=""];
+6->10 [style = dotted, label="true"];
+3->8 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+10->7 [style = solid, label="browserErrorLog"];
+9->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+0->4 [style = dotted, label="true"];
+4->3 [style = solid, label="browserPerfData"];
+5->4 [style = dotted, label="true"];
+2->3 [style = bold, label=""];
+2->8 [style = bold, label=""];
+0->2 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

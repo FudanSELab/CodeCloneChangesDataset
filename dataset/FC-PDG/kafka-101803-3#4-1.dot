@@ -1,0 +1,36 @@
+digraph {
+11 [style = filled, label = "shouldAddRegexTopicToLatestAutoOffsetResetList['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "builder.stream(AutoOffsetReset.EARLIEST,null,null,null,topicPattern)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "final String topicTwo = \"topic-500000\"@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertFalse(builder.internalTopologyBuilder.earliestResetTopicsPattern().matcher(topicTwo).matches())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "builder.stream(AutoOffsetReset.LATEST,null,null,null,topicPattern)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final Pattern topicPattern = Pattern.compile(\"topic-\d+\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "shouldAddRegexTopicToEarliestAutoOffsetResetList['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertTrue(builder.internalTopologyBuilder.earliestResetTopicsPattern().matcher(topicTwo).matches())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertFalse(builder.internalTopologyBuilder.latestResetTopicsPattern().matcher(topicTwo).matches())@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final String topicTwo = \"topic-1000000\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertTrue(builder.internalTopologyBuilder.latestResetTopicsPattern().matcher(topicTwo).matches())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "shouldAddRegexTopicToEarliestAutoOffsetResetList['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "builder.stream(topicPattern,new ConsumedInternal<>(Consumed.with(AutoOffsetReset.EARLIEST)))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+2->6 [style = bold, label=""];
+0->6 [style = solid, label="topicPattern"];
+0->2 [style = bold, label=""];
+7->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+12->9 [style = bold, label=""];
+9->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+4->12 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+0->10 [style = bold, label=""];
+11->0 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+10->12 [style = bold, label=""];
+5->8 [style = dashed, label="0"];
+0->12 [style = solid, label="topicPattern"];
+0->4 [style = solid, label="topicPattern"];
+}

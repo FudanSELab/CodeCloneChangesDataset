@@ -1,0 +1,30 @@
+digraph {
+8 [style = filled, label = "testDetailsAreIncludedInAuditEvent['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "AuditApplicationEvent event = handleAuthorizationEvent(new AuthorizationFailureEvent(this,Collections.singletonList(new SecurityConfig(\"USER\")),authentication,new AccessDeniedException(\"Bad user\")))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "AuditApplicationEvent event = handleAuthenticationEvent(new AuthenticationFailureExpiredEvent(authentication,new BadCredentialsException(\"Bad user\")))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(event.getAuditEvent().getType()).isEqualTo(AuthorizationAuditListener.AUTHORIZATION_FAILURE)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThat(event.getAuditEvent().getType()).isEqualTo(AuthenticationAuditListener.AUTHENTICATION_FAILURE)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "authentication.setDetails(details)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testDetailsAreIncludedInAuditEvent['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(event.getAuditEvent().getData()).containsEntry(\"details\",details)@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testDetailsAreIncludedInAuditEvent['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "Object details = new Object()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(\"user\",\"password\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+3->9 [style = bold, label=""];
+5->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+10->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+4->3 [style = solid, label="details"];
+4->2 [style = solid, label="details"];
+8->4 [style = bold, label=""];
+7->4 [style = bold, label=""];
+9->10 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+1->10 [style = dashed, label="0"];
+0->9 [style = solid, label="authentication"];
+0->5 [style = solid, label="authentication"];
+4->0 [style = bold, label=""];
+}

@@ -1,0 +1,23 @@
+digraph {
+7 [style = filled, label = "processDependencies(trace)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "List<Span> trace = asList(Span.newBuilder().traceId(\"20\").id(\"20\").name(\"get\").timestamp(TODAY * 1000L).duration(350L * 1000L).localEndpoint(Endpoint.newBuilder().ip(\"172.17.0.4\").build()).remoteEndpoint(FRONTEND).build(),Span.newBuilder().traceId(\"20\").parentId(\"20\").id(\"21\").name(\"get\").timestamp((TODAY + 50) * 1000L).duration(250L * 1000L).localEndpoint(FRONTEND).remoteEndpoint(BACKEND).build(),Span.newBuilder().traceId(\"20\").parentId(\"21\").id(\"22\").name(\"get\").timestamp((TODAY + 150) * 1000L).duration(50L * 1000L).localEndpoint(BACKEND).remoteEndpoint(DB).build())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(store().getDependencies(TODAY + 1000,1000L).execute()).containsOnly(DependencyLink.newBuilder().parent(\"frontend\").child(\"backend\").callCount(1).build(),DependencyLink.newBuilder().parent(\"backend\").child(\"db\").callCount(1).build())@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "spanKindIsNotRequiredWhenEndpointsArePresent['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "spanKindIsNotRequiredWhenEndpointsArePresent['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "List<Span> trace = asList(Span.newBuilder().traceId(\"20\").id(\"20\").name(\"get\").timestamp(TODAY * 1000L).duration(350L * 1000L).localEndpoint(someClient).remoteEndpoint(FRONTEND).build(),Span.newBuilder().traceId(\"20\").parentId(\"20\").id(\"21\").name(\"get\").timestamp((TODAY + 50) * 1000L).duration(250L * 1000L).localEndpoint(FRONTEND).remoteEndpoint(BACKEND).build(),Span.newBuilder().traceId(\"20\").parentId(\"21\").id(\"22\").name(\"get\").timestamp((TODAY + 150) * 1000L).duration(50L * 1000L).localEndpoint(BACKEND).remoteEndpoint(DB).build())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Endpoint someClient = Endpoint.newBuilder().serviceName(\"some-client\").ip(\"172.17.0.4\").build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "unnamedEndpointsAreSkipped['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(store().getDependencies(TODAY + 1000,1000L).execute()).containsOnly(DependencyLink.newBuilder().parent(\"some-client\").child(\"frontend\").callCount(1).build(),DependencyLink.newBuilder().parent(\"frontend\").child(\"backend\").callCount(1).build(),DependencyLink.newBuilder().parent(\"backend\").child(\"db\").callCount(1).build())@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+8->6 [style = bold, label=""];
+7->1 [style = bold, label=""];
+2->1 [style = dashed, label="0"];
+4->1 [style = solid, label="trace"];
+6->7 [style = bold, label=""];
+5->0 [style = bold, label=""];
+6->7 [style = solid, label="trace"];
+0->4 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

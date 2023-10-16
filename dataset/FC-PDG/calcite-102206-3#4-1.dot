@@ -1,0 +1,29 @@
+digraph {
+4 [style = filled, label = "throw new IllegalStateException(\"No records to index. Empty file ?\")@@@18@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Resources.readLines(.getResource(\"/zips-mini.json\"),StandardCharsets.UTF_8,new LineProcessor<Void>(){@Override public boolean processLine(String line){line = line.replaceAll(\"_id\",\"id\")bulk.add((ObjectNode)NODE.mapper().readTree(line))return true}@Override public Void getResult(){return null}})@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "NODE.createIndex(ZIPS,mapping)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final Map<String,String> mapping = ImmutableMap.of(\"city\",\"keyword\",\"state\",\"keyword\",\"pop\",\"long\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "bulk.isEmpty()@@@17@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "setupInstance['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "setupInstance['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "NODE.insertBulk(ZIPS,bulk)@@@20@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final Map<String,String> mapping = ImmutableMap.of(\"city\",\"text\",\"state\",\"keyword\",\"pop\",\"long\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "setup['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final List<ObjectNode> bulk = new ArrayList<>()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+9->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+10->9 [style = bold, label=""];
+2->7 [style = bold, label=""];
+1->3 [style = solid, label="mapping"];
+9->3 [style = solid, label="mapping"];
+0->6 [style = bold, label=""];
+2->4 [style = bold, label=""];
+4->7 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->4 [style = dotted, label="true"];
+0->7 [style = solid, label="bulk"];
+6->2 [style = bold, label=""];
+}

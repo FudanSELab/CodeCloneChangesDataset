@@ -1,0 +1,36 @@
+digraph {
+0 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.create(\"/multi/a\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.create(\"/multi/a/1\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.delete(\"/multi/a/1\",0),Op.delete(\"/multi/a\",0),Op.delete(\"/multi\",0)))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.create(\"/multi/a\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.create(\"/multi/a/1\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.delete(\"/multi/a/1\",0),Op.delete(\"/multi/a\",0),Op.delete(\"/multi\",0)),useAsync)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "assertNull(zk.exists(\"/multi\",null))@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "LOG.error(\"STACKTRACE: \",e)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.setData(\"/multi\",\"X\".getBytes(),0),Op.setData(\"/multi\",\"Y\".getBytes(),1)))@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertNull(zk.exists(\"/multi/a/1\",null))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "boolean useAsync@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testNestedCreate['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "assertNull(zk.exists(\"/multi/a\",null))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "fail(\"Should have thrown a KeeperException for invalid version\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.setData(\"/multi\",\"X\".getBytes(),0),Op.setData(\"/multi\",\"Y\".getBytes(),0)))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "KeeperException e@@@8@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "testUpdateConflict['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "assertNull(zk.exists(\"/multi\",null))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testNestedCreate['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertArrayEquals(zk.getData(\"/multi\",false,null),\"Y\".getBytes())@@@13@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+5->6 [style = dotted, label="true"];
+5->7 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+11->12 [style = bold, label=""];
+12->10 [style = bold, label=""];
+14->8 [style = bold, label=""];
+13->15 [style = bold, label=""];
+9->1 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+1->10 [style = bold, label=""];
+10->14 [style = bold, label=""];
+15->9 [style = bold, label=""];
+3->4 [style = bold, label=""];
+7->3 [style = bold, label=""];
+11->12 [style = dotted, label="true"];
+6->7 [style = solid, label="useAsync"];
+}

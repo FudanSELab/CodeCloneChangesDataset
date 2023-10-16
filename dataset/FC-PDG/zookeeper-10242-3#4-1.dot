@@ -1,0 +1,35 @@
+digraph {
+4 [style = filled, label = "votes.put(3L,new Vote(0x1,4L,ZxidUtils.makeZxid(2,1),2,2,ServerState.FOLLOWING))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "votes.put(4L,new Vote(0x1,4L,ZxidUtils.makeZxid(2,1),2,2,ServerState.LEADING))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testIgnoringZxidElectionEpoch['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "testIgnoringZxidElectionEpoch['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "votes.put(1L,new Vote(0x1,4L,ZxidUtils.makeZxid(1,1),1,1,ServerState.FOLLOWING))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "votes.put(3L,new Vote(4L,ZxidUtils.makeZxid(2,1),2,2,ServerState.FOLLOWING))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "votes.put(0L,new Vote(0x1,4L,ZxidUtils.makeZxid(1,1),1,2,ServerState.FOLLOWING))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Assert.assertTrue(fle.getVoteTracker(votes,new Vote(4L,ZxidUtils.makeZxid(2,1),2,2,ServerState.FOLLOWING)).hasAllQuorums())@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertTrue(fle.getVoteTracker(votes,new Vote(4L,ZxidUtils.makeZxid(2,1),2,2,ServerState.FOLLOWING)).hasAllQuorums())@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "Map<Long,Vote> votes = new HashMap<Long,Vote>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "votes.put(1L,new Vote(0x1,4L,ZxidUtils.makeZxid(1,2),1,2,ServerState.FOLLOWING))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testElectionWIthDifferentVersion['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "votes.put(4L,new Vote(4L,ZxidUtils.makeZxid(2,1),2,2,ServerState.LEADING))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "votes.put(0L,new Vote(0x1,4L,ZxidUtils.makeZxid(1,1),1,1,ServerState.FOLLOWING))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6->3 [style = bold, label=""];
+5->7 [style = bold, label=""];
+12->13 [style = bold, label=""];
+1->4 [style = bold, label=""];
+1->12 [style = dashed, label="0"];
+8->6 [style = bold, label=""];
+11->0 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+4->13 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+5->11 [style = dashed, label="0"];
+10->12 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->6 [style = bold, label=""];
+13->11 [style = bold, label=""];
+6->10 [style = bold, label=""];
+9->6 [style = bold, label=""];
+}

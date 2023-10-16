@@ -1,0 +1,28 @@
+digraph {
+3 [style = filled, label = "assertEquals(3,user.setterCounter)@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "shouldEqualsTriggerLazyLoading['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "user.equals(null)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "shouldToStringTriggerLazyLoading['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "SqlSession sqlSession = sqlSessionFactory.openSession()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "{sqlSession.close()}@@@11@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "shouldToStringTriggerLazyLoading['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "assertEquals(3,user.setterCounter)@@@9@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "sqlSessionFactory.getConfiguration().setAggressiveLazyLoading(false)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "User user = mapper.getUser(1)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->7 [style = bold, label=""];
+11->5 [style = bold, label=""];
+1->4 [style = bold, label=""];
+3->5 [style = bold, label=""];
+8->6 [style = bold, label=""];
+1->8 [style = bold, label=""];
+9->1 [style = bold, label=""];
+10->1 [style = bold, label=""];
+4->6 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->11 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

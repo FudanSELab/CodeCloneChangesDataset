@@ -1,0 +1,28 @@
+digraph {
+7 [style = filled, label = "a04_headers_List['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "assertObject(x.getFirstHeader(\"Bar\").getValue()).doesNotExist()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertObject(x.getAllHeaders()).asJson().is(\"('Foo: bar','Foo: baz','null: bar','Bar: null'(\")@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "assertObject(x.getHeaders()).asJson().is(\"('Foo: bar','Foo: baz','null: bar','Bar: null'(\")@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "a04_headers_List['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertObject(x.getHeaders()).asJson().is(\"('Foo: bar','Foo: baz','Bar: null'(\")@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertString(x.getFirstHeader(\"Foo\").toString()).is(\"Foo: bar\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "StringResource x = stringResource(\"foo\").headers(AList.of(header(\"Foo\",\"bar\"),header(\"Foo\",\"baz\"),header(null,\"bar\"),header(\"Bar\",null),null)).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "StringResource x = stringResource(\"foo\").headers(header(\"Foo\",\"bar\"),header(\"Foo\",\"baz\"),header(null,\"bar\"),header(\"Bar\",null),null).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertString(x.getLastHeader(\"Foo\").toString()).is(\"Foo: baz\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertObject(x.getLastHeader(\"Bar\").getValue()).doesNotExist()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "a05_headers_array['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+4->10 [style = bold, label=""];
+6->1 [style = bold, label=""];
+4->8 [style = bold, label=""];
+3->6 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+9->6 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+3->9 [style = dashed, label="0"];
+11->9 [style = bold, label=""];
+7->3 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

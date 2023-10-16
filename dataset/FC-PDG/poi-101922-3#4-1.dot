@@ -1,0 +1,29 @@
+digraph {
+1 [style = filled, label = "throw new RuntimeException(e)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Record r = (org.apache.poi.hssf.record.Record)rb@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "out.write(r.serialize())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "IOException e@@@9@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "UnsynchronizedByteArrayOutputStream out = new UnsynchronizedByteArrayOutputStream()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "toByteArray['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "return out.toByteArray()@@@13@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "toByteArray['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "List<RecordBase> records@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "toByteArray['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ByteArrayOutputStream out = new ByteArrayOutputStream()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+3->7 [style = dotted, label="true"];
+1->6 [style = bold, label=""];
+1->0 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+9->7 [style = dotted, label="true"];
+5->0 [style = bold, label=""];
+9->8 [style = bold, label=""];
+2->1 [style = dotted, label="true"];
+3->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+10->7 [style = dotted, label="true"];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+10->4 [style = bold, label=""];
+}

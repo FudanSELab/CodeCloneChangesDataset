@@ -1,0 +1,18 @@
+digraph {
+6 [style = filled, label = "fail(\"Expected error (table names are case-sensitive), but got \" + root)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final RelNode root = RelBuilder.create(config().build()).scan(\"ZZZ\",\"EMP\").build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testScanValidTableWrongCase['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testScanInvalidSchema['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "fail(\"expected error, got \" + root)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testScanInvalidSchema['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "final RelNode root = RelBuilder.create(config().build()).scan(\"emp\").build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2->0 [style = solid, label="root"];
+2->5 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+4->5 [style = bold, label=""];
+5->6 [style = solid, label="root"];
+0->6 [style = dashed, label="0"];
+}

@@ -1,0 +1,35 @@
+digraph {
+1 [style = filled, label = "multicastEvent(new ContextClosedEvent(this.context))@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(loggingSystem.cleanedUp).isFalse()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "System.setProperty(LoggingSystem.SYSTEM_PROPERTY,.getName())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "multicastEvent(new ApplicationStartingEvent(this.bootstrapContext,this.springApplication,new String(((())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "TestCleanupLoggingSystem loggingSystem = (TestCleanupLoggingSystem)ReflectionTestUtils.getField(this.initializer,\"loggingSystem\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "childContext.setParent(this.context)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "closingContextCleansUpLoggingSystem['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(loggingSystem.cleanedUp).isTrue()@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "multicastEvent(new ContextClosedEvent(childContext))@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "GenericApplicationContext childContext = new GenericApplicationContext()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "assertThat(loggingSystem.cleanedUp).isFalse()@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "childContext.close()@@@13@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "closingChildContextDoesNotCleanUpLoggingSystem['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "multicastEvent(new ApplicationStartingEvent(this.springApplication,new String(((())@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "closingContextCleansUpLoggingSystem['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->5 [style = bold, label=""];
+3->11 [style = bold, label=""];
+6->3 [style = bold, label=""];
+8->6 [style = bold, label=""];
+7->0 [style = bold, label=""];
+9->10 [style = bold, label=""];
+5->14 [style = bold, label=""];
+3->1 [style = bold, label=""];
+10->13 [style = bold, label=""];
+11->9 [style = bold, label=""];
+12->0 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+2->6 [style = bold, label=""];
+13->1 [style = bold, label=""];
+11->10 [style = solid, label="childContext"];
+4->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+0->8 [style = bold, label=""];
+}

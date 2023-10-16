@@ -1,0 +1,24 @@
+digraph {
+6 [style = filled, label = "{TestOneof2.Builder builder = TestOneof2.newBuilder()TestOneof2 message = builder.setFooMessage(TestOneof2.NestedMessage.newBuilder().setQuxInt(234).build()).build()ByteString serialized = message.toByteString()TestOneof2 message2 = TestOneof2.parseFrom(serialized)assertTrue(message2.hasFooMessage())assertEquals(message2.getFooMessage().getQuxInt(),234)}@@@27@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "{TestOneof2.Builder builder = TestOneof2.newBuilder()TestOneof2 message = builder.setFooInt(123).build()ByteString serialized = message.toByteString()TestOneof2 message2 = TestOneof2.parseFrom(serialized)assertTrue(message2.hasFooInt())assertEquals(message2.getFooInt(),123)}@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "{TestOneof2.Builder builder = TestOneof2.newBuilder()TestOneof2 message = builder.setFooEnum(TestOneof2.NestedEnum.BAR).build()ByteString serialized = message.toByteString()TestOneof2 message2 = TestOneof2.parseFrom(serialized)assertTrue(message2.hasFooEnum())assertEquals(message2.getFooEnum(),TestOneof2.NestedEnum.BAR)}@@@19@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testOneofMerge['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "{TestOneof2.Builder builder = TestOneof2.newBuilder()TestOneof2 message = builder.setFooString(\"foo\").build()ByteString serialized = message.toByteString()TestOneof2 message2 = TestOneof2.parseFrom(serialized)assertTrue(message2.hasFooString())assertEquals(message2.getFooString(),\"foo\")}@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "{TestOneof2.Builder builder = TestOneof2.newBuilder()TestOneof2 message = builder.setFooString(\"foo\").build()TestOneof2 message2 = TestOneof2.newBuilder().mergeFrom(message).build()assertTrue(message2.hasFooString())assertEquals(\"foo\",message2.getFooString())}@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testOneofSerialization['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testOneofMerge['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "{TestOneof2.Builder builder = TestOneof2.newBuilder()TestOneof2 message = builder.setFooMessage(TestOneof2.NestedMessage.newBuilder().setQuxInt(234).build()).build()TestOneof2 message2 = TestOneof2.newBuilder().mergeFrom(message).build()assertTrue(message2.hasFooMessage())assertEquals(234,message2.getFooMessage().getQuxInt())}@@@24@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "{TestOneof2.Builder builder = TestOneof2.newBuilder()TestOneof2 message = builder.setFooEnum(TestOneof2.NestedEnum.BAR).build()TestOneof2 message2 = TestOneof2.newBuilder().mergeFrom(message).build()assertTrue(message2.hasFooEnum())assertEquals(TestOneof2.NestedEnum.BAR,message2.getFooEnum())}@@@17@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+9->8 [style = solid, label="serialized"];
+0->9 [style = bold, label=""];
+8->6 [style = bold, label=""];
+7->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+0->9 [style = solid, label="serialized"];
+5->0 [style = bold, label=""];
+9->8 [style = bold, label=""];
+3->4 [style = bold, label=""];
+8->6 [style = solid, label="serialized"];
+}

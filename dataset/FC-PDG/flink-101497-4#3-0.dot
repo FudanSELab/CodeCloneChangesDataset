@@ -1,0 +1,32 @@
+digraph {
+10 [style = filled, label = "env.execute()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "writerAndGlobalCommitterExecuteInStreamingMode['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "final StreamExecutionEnvironment env = buildStreamEnv()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThat(getSplittedGlobalCommittedData(),containsInAnyOrder(EXPECTED_GLOBAL_COMMITTED_DATA_IN_STREAMING_MODE.toArray()))@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "final FiniteTestSource<Integer> source = new FiniteTestSource<>(SOURCE_DATA)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "assertThat(COMMIT_QUEUE,containsInAnyOrder(EXPECTED_COMMITTED_DATA_IN_BATCH_MODE.toArray()))@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final StreamExecutionEnvironment env = buildBatchEnv()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "env.addSource(source,IntegerTypeInfo.INT_TYPE_INFO).sinkTo(TestSink.newBuilder().setCommittableSerializer(TestSink.StringCommittableSerializer.INSTANCE).setGlobalCommitter((Supplier<Queue<String>>)null).build())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "writerAndCommitterExecuteInBatchMode['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final FiniteTestSource<Integer> source = new FiniteTestSource<>(GLOBAL_COMMIT_QUEUE_RECEIVE_ALL_DATA,SOURCE_DATA)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "env.fromCollection(SOURCE_DATA).sinkTo(TestSink.newBuilder().setDefaultCommitter((Supplier<Queue<String>>)null).build())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "writerAndGlobalCommitterExecuteInStreamingMode['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(GLOBAL_COMMIT_QUEUE,containsInAnyOrder(EXPECTED_GLOBAL_COMMITTED_DATA_IN_STREAMING_MODE.toArray()))@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0->3 [style = bold, label=""];
+1->4 [style = dashed, label="0"];
+4->8 [style = bold, label=""];
+6->3 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+3->5 [style = bold, label=""];
+11->12 [style = bold, label=""];
+12->10 [style = bold, label=""];
+9->11 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+3->7 [style = bold, label=""];
+2->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+10->4 [style = bold, label=""];
+}

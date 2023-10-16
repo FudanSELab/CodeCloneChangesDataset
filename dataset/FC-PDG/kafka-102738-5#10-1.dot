@@ -1,0 +1,17 @@
+digraph {
+6 [style = filled, label = "produceInitialGlobalTableValues['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "produceInitialGlobalTableValues['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "IntegrationTestUtils.produceKeyValuesSynchronously(globalTableTopic,Arrays.asList(new KeyValue<>(1L,\"A\"),new KeyValue<>(2L,\"B\"),new KeyValue<>(3L,\"C\"),new KeyValue<>(4L,\"D\")),TestUtils.producerConfig(CLUSTER.bootstrapServers(),,),mockTime)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "properties.put(ProducerConfig.TRANSACTIONAL_ID_CONFIG,\"someid\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "IntegrationTestUtils.produceKeyValuesSynchronously(globalTableTopic,Arrays.asList(new KeyValue<>(1L,\"A\"),new KeyValue<>(2L,\"B\"),new KeyValue<>(3L,\"C\"),new KeyValue<>(4L,\"D\")),TestUtils.producerConfig(CLUSTER.bootstrapServers(),,,properties),mockTime,true)@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "properties.put(ProducerConfig.RETRIES_CONFIG,1)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "produceInitialGlobalTableValues['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final Properties properties = new Properties()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+2->3 [style = solid, label="properties"];
+5->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+2->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

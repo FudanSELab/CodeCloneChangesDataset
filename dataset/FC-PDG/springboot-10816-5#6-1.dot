@@ -1,0 +1,13 @@
+digraph {
+2 [style = filled, label = "linksPageIsNotAvailableWhenDisabled['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "WebApplicationContextRunner contextRunner = getContextRunner(new Class<?>((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1cd1ee8,getAutoconfigurations(,))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "contextRunner.run(null)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "getContextRunner(new Class<?>((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1cd1ed5).withPropertyValues(\"management.endpoints.web.discovery.enabled:false\").run(null)@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "actuatorEndpointsWhenSecurityAvailable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "linksPageIsNotAvailableWhenDisabled['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4->3 [style = bold, label=""];
+2->0 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+5->4 [style = bold, label=""];
+}

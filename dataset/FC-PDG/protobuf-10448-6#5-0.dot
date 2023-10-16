@@ -1,0 +1,33 @@
+digraph {
+11 [style = filled, label = "testInterleavedFieldsAndExtensions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "ByteString data = TestFieldOrderings.newBuilder().setMyInt(1).setMyString(\"foo\").setMyFloat(1.0F).setExtension(UnittestProto.myExtensionInt,23).setExtension(UnittestProto.myExtensionString,\"bar\").build().toByteString()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "DynamicMessage source = DynamicMessage.newBuilder(TestFieldOrderings.getDescriptor()).setField(descriptor.findFieldByName(\"my_int\"),1L).setField(descriptor.findFieldByName(\"my_string\"),\"foo\").setField(descriptor.findFieldByName(\"my_float\"),1.0F).setField(UnittestProto.myExtensionInt.getDescriptor(),23).setField(UnittestProto.myExtensionString.getDescriptor(),\"bar\").build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Descriptors.Descriptor descriptor = TestFieldOrderings.getDescriptor()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertFieldsInOrder(dynamicData)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertFieldsInOrder(data)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Descriptors.Descriptor descriptor = TestFieldOrderings.getDescriptor()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(source,dest)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "assertThat(source).isEqualTo(dest)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testParseMultipleExtensionRangesDynamic['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testParseMultipleExtensionRangesDynamic['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "ByteString dynamicData = DynamicMessage.newBuilder(TestFieldOrderings.getDescriptor()).setField(descriptor.findFieldByName(\"my_int\"),1L).setField(descriptor.findFieldByName(\"my_string\"),\"foo\").setField(descriptor.findFieldByName(\"my_float\"),1.0F).setField(UnittestProto.myExtensionInt.getDescriptor(),23).setField(UnittestProto.myExtensionString.getDescriptor(),\"bar\").build().toByteString()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2->0 [style = solid, label="source"];
+8->9 [style = solid, label="dynamicData"];
+6->1 [style = bold, label=""];
+10->3 [style = bold, label=""];
+1->3 [style = solid, label="descriptor"];
+4->1 [style = bold, label=""];
+3->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+7->10 [style = solid, label="data"];
+0->5 [style = dashed, label="0"];
+3->0 [style = solid, label="dest"];
+7->10 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+3->8 [style = bold, label=""];
+11->7 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+3->5 [style = solid, label="dest"];
+8->9 [style = bold, label=""];
+}

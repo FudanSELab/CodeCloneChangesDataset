@@ -1,0 +1,22 @@
+digraph {
+8 [style = filled, label = "testUnUsedUnderlapHigh['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "coordinator.announceHistoricalSegments(SEGMENTS)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "markAllSegmentsUnused()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "Assert.assertTrue(coordinator.getUnusedSegmentsForInterval(defaultSegment.getDataSource(),new Interval(defaultSegment.getInterval().getStart().plus(1),defaultSegment.getInterval().getEnd())).isEmpty())@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "unUseSegment()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testUnusedUnderlapLow['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "testUnUsedUnderlapLow['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Assert.assertTrue(coordinator.retrieveUnusedSegmentsForInterval(defaultSegment.getDataSource(),new Interval(defaultSegment.getInterval().getStart().plus(1),defaultSegment.getInterval().getEnd())).isEmpty())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "Assert.assertTrue(coordinator.getUnusedSegmentsForInterval(defaultSegment.getDataSource(),new Interval(defaultSegment.getInterval().getStart(),defaultSegment.getInterval().getEnd().minus(1))).isEmpty())@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+5->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+1->6 [style = bold, label=""];
+2->7 [style = bold, label=""];
+3->4 [style = dashed, label="0"];
+3->7 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

@@ -1,0 +1,35 @@
+digraph {
+1 [style = filled, label = "final AlterEncryptRuleStatement sqlStatement@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "!invalidEncryptors.isEmpty()@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "throw new InvalidLoadBalancersException(invalidLoadBalances)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "checkToBeAlteredEncryptors['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "checkToBeAlteredLoadBalancer['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "final AlterReadwriteSplittingRuleStatement sqlStatement@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "throw new InvalidEncryptorsException(invalidEncryptors)@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Collection<String> invalidEncryptors = encryptors.stream().filter(null).collect(Collectors.toList())@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "checkToBeAlteredEncryptors['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "Collection<String> encryptors = new LinkedHashSet<>()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Collection<String> invalidLoadBalances = sqlStatement.getRules().stream().map(null).distinct().filter(null).collect(Collectors.toList())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "!invalidLoadBalances.isEmpty()@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "encryptors.addAll(each.getColumns().stream().map(null).collect(Collectors.toSet()))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final AlterEncryptRuleStatement sqlStatement@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+0->3 [style = bold, label=""];
+6->2 [style = solid, label="invalidEncryptors"];
+1->8 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->12 [style = dashed, label="0"];
+9->10 [style = bold, label=""];
+10->13 [style = bold, label=""];
+7->8 [style = dotted, label="true"];
+11->9 [style = bold, label=""];
+10->13 [style = dotted, label="true"];
+4->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+7->3 [style = bold, label=""];
+11->12 [style = dotted, label="true"];
+5->2 [style = dotted, label="true"];
+9->13 [style = solid, label="invalidLoadBalances"];
+0->1 [style = dotted, label="true"];
+}

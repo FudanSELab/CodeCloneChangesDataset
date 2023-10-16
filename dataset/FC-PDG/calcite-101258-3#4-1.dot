@@ -1,0 +1,31 @@
+digraph {
+1 [style = filled, label = "RelNode root = builder.scan(\"DEPT\").distinct().build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final String expectedType = \"RecordType(TINYINT NOT NULL DEPTNO, BOOLEAN NOT NULL $f1) NOT NULL\"@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(root,hasTree(expected))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final RelBuilder builder = RelBuilder.create(config().build())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testDistinctAlready['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final String expected = \"LogicalTableScan(table=((scott, DEPT(()\"@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testDistinctAlready['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "assertThat(root.getRowType().getFullTypeString(),is(expectedType))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testEmpty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final String expected = \"LogicalValues(tuples=(((()\"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "RelNode root = builder.scan(\"DEPT\").project(builder.field(0),builder.literal(false)).empty().build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+0->3 [style = bold, label=""];
+3->10 [style = bold, label=""];
+9->3 [style = bold, label=""];
+4->2 [style = solid, label="expected"];
+1->4 [style = bold, label=""];
+8->2 [style = solid, label="expected"];
+1->2 [style = solid, label="root"];
+4->2 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+10->2 [style = solid, label="root"];
+10->8 [style = bold, label=""];
+3->1 [style = bold, label=""];
+8->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+2->6 [style = bold, label=""];
+6->7 [style = solid, label="expectedType"];
+4->8 [style = dashed, label="0"];
+}

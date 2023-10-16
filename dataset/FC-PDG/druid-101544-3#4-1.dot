@@ -1,0 +1,22 @@
+digraph {
+4 [style = filled, label = "testTimestampsInResponseLosAngelesTimeZone['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "Assert.assertEquals(ImmutableList.of(ImmutableMap.of(\"x\",\"a\",\"y\",\"a\")),rows)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final List<Map<String,Object>> rows = doPost(new SqlQuery(\"SELECT __time, CAST(__time AS DATE) AS t2 FROM druid.foo LIMIT 1\",ResultFormat.OBJECT,false,ImmutableMap.of(PlannerContext.CTX_SQL_TIME_ZONE,\"America/Los_Angeles\"))).rhs@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "final List<Map<String,Object>> rows = doPost(new SqlQuery(\"SELECT __time, CAST(__time AS DATE) AS t2 FROM druid.foo LIMIT 1\",ResultFormat.OBJECT,false,ImmutableMap.of(PlannerContext.CTX_SQL_TIME_ZONE,\"America/Los_Angeles\"),null)).rhs@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "testTimestampsInResponseLosAngelesTimeZone['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testFieldAliasingSelect['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Assert.assertEquals(ImmutableList.of(ImmutableMap.of(\"__time\",\"1999-12-31T16:00:00.000-08:00\",\"t2\",\"1999-12-31T00:00:00.000-08:00\")),rows)@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final List<Map<String,Object>> rows = doPost(new SqlQuery(\"SELECT dim2 \"x\", dim2 \"y\" FROM druid.foo LIMIT 1\",ResultFormat.OBJECT,false,null)).rhs@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->7 [style = bold, label=""];
+7->6 [style = solid, label="rows"];
+4->3 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->3 [style = dashed, label="0"];
+1->0 [style = solid, label="rows"];
+1->7 [style = dashed, label="0"];
+3->0 [style = solid, label="rows"];
+2->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

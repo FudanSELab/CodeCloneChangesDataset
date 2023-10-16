@@ -1,0 +1,34 @@
+digraph {
+3 [style = filled, label = "sql(\"select stream count(*) as c\" + \"from orders ^group by ()^\").fails(STR_AGG_REQUIRES_MONO)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "sql(\"select stream ^count(*)^ as c\" + \"from orders\").fails(STR_AGG_REQUIRES_MONO)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testStreamGroupBy['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "sql(\"select stream floor(rowtime to minute), productId\" + \"from orders\" + \"order by floor(rowtime to hour)\").ok()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "sql(\"select stream *\" + \"from orders\" + \"order by rowtime\").ok()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "sql(\"select stream rowtime, productId, count(*) as c\" + \"from orders\" + \"group by productId, rowtime\").ok()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "sql(\"select stream floor(rowtime to minute), productId\" + \"from orders\" + \"order by floor(rowtime to minute), productId desc\").ok()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testStreamGroupBy['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "sql(\"select stream floor(rowtime to hour) as rowtime, productId,\" + \" count(*) as c\" + \"from orders\" + \"group by floor(rowtime to hour), productId\").ok()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "sql(\"select stream *\" + \"from orders\" + \"order by floor(rowtime to hour), rowtime desc\").ok()@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "testStreamOrderBy['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "sql(\"select stream *\" + \"from orders\" + \"order by ^rowtime desc^\").fails(STR_ORDER_REQUIRES_MONO)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "sql(\"select stream productId, count(*) as c\" + \"from orders\" + \"^group by productId^\").fails(STR_AGG_REQUIRES_MONO)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "sql(\"select stream *\" + \"from orders\" + \"order by ^productId^, rowtime\").fails(STR_ORDER_REQUIRES_MONO)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "sql(\"select stream *\" + \"from orders\" + \"order by floor(rowtime to hour)\").ok()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+11->12 [style = bold, label=""];
+7->11 [style = bold, label=""];
+14->8 [style = bold, label=""];
+9->10 [style = bold, label=""];
+5->0 [style = bold, label=""];
+10->13 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+13->7 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+3->7 [style = dashed, label="0"];
+0->13 [style = dashed, label="0"];
+8->9 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

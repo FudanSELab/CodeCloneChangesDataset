@@ -1,0 +1,34 @@
+digraph {
+11 [style = filled, label = "val objects = collectionFacet.stream(collection).collect(Collectors.toList())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "val collectionFacet = collection.getSpecification().getFacet()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final @NonNull Where where@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final @NonNull UiContext uiContext@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return ManagedObjects.commonSpecification(objects).map(null).orElseGet(null)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final @NonNull Where where@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "final ManagedObject collection@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final @NonNull ManagedObject collection@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "fromCollection['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final @NonNull ManagedObject collection@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "final @NonNull UiContextFx uiContext@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "fromCollection['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "return inferElementSpecification(objects).map(null).orElseGet(null)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "val objects = collectionFacet.stream(collection).collect(Can.toCan())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "fromCollection['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->3 [style = bold, label=""];
+4->6 [style = dotted, label="true"];
+4->5 [style = dotted, label="true"];
+10->8 [style = dotted, label="true"];
+10->7 [style = dotted, label="true"];
+10->2 [style = bold, label=""];
+14->2 [style = bold, label=""];
+11->12 [style = bold, label=""];
+4->2 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+10->9 [style = dotted, label="true"];
+1->11 [style = dashed, label="0"];
+2->11 [style = bold, label=""];
+2->1 [style = bold, label=""];
+14->13 [style = dotted, label="true"];
+4->0 [style = dotted, label="true"];
+6->9 [style = dashed, label="0"];
+}

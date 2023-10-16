@@ -1,0 +1,35 @@
+digraph {
+9 [style = filled, label = "final List<Row> results = rows.toList()@@@14@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Assert.assertEquals(ImmutableMap.of(\"sally\",\"bo\",\"cnt\",1L),row.getEvent())@@@17@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "row = (MapBasedRow)results.get(1)@@@18@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final GroupByQueryEngine engine = new GroupByQueryEngine(Suppliers.ofInstance(new GroupByQueryConfig(){@Override public int getMaxIntermediateRows(){return 5}}),pool)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "function['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Assert.assertEquals(ImmutableMap.of(\"billy\",\"hi\",\"cnt\",1L),row.getEvent())@@@19@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "index.add(new MapBasedInputRow(System.currentTimeMillis() - 1,Collections.singletonList(\"sally\"),ImmutableMap.of(\"sally\",\"bo\")))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "MapBasedRow row = (MapBasedRow)results.get(0)@@@16@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "index.add(new MapBasedInputRow(System.currentTimeMillis() - 1,Collections.singletonList(\"billy\"),ImmutableMap.of(\"billy\",\"hi\")))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "IncrementalIndex index = indexCreator.createIndex()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "Assert.assertEquals(2,results.size())@@@15@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testSanity['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+15 [style = filled, label = "function['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final Sequence<Row> rows = engine.process(GroupByQuery.builder().setDataSource(\"test\").setGranularity(Granularities.ALL).setInterval(new Interval(DateTimes.EPOCH,DateTimes.nowUtc())).addDimension(\"billy\").addDimension(\"sally\").addAggregator(new LongSumAggregatorFactory(\"cnt\",\"cnt\")).build(),new IncrementalIndexStorageAdapter(index))@@@13@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "IncrementalIndex<?> index = indexCreator.createIndex()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "testSanity['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3->11 [style = bold, label=""];
+9->5 [style = bold, label=""];
+4->10 [style = bold, label=""];
+12->2 [style = bold, label=""];
+0->1 [style = solid, label="index"];
+5->4 [style = bold, label=""];
+6->0 [style = bold, label=""];
+13->12 [style = bold, label=""];
+12->1 [style = solid, label="index"];
+0->12 [style = dashed, label="0"];
+15->14 [style = bold, label=""];
+7->8 [style = bold, label=""];
+11->1 [style = bold, label=""];
+10->7 [style = bold, label=""];
+1->9 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

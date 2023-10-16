@@ -1,0 +1,31 @@
+digraph {
+1 [style = filled, label = "final HiveSqlDialect hive2_2_Dialect = new HiveSqlDialect(SqlDialect.EMPTY_CONTEXT.withDatabaseMajorVersion(2).withDatabaseMinorVersion(2).withNullCollation(NullCollation.LOW))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testHiveSelectQueryWithOverDescAndHighNullsWithVersionGreaterThanOrEq21['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "final HiveSqlDialect hive2_1_0_Dialect = new HiveSqlDialect(SqlDialect.EMPTY_CONTEXT.withDatabaseMajorVersion(2).withDatabaseMinorVersion(0).withNullCollation(NullCollation.LOW))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "final String query = \"SELECT row_number() over \" + \"(order by \"hire_date\" desc nulls first) FROM \"employee\"\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "sql(query).dialect(hive2_2_Dialect).ok(expected)@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final HiveSqlDialect hive2_1Dialect = new HiveSqlDialect(SqlDialect.EMPTY_CONTEXT.withDatabaseMajorVersion(2).withDatabaseMinorVersion(1).withNullCollation(NullCollation.LOW))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testHiveSelectQueryWithOverDescAndHighNullsWithVersionGreaterThanOrEq21['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "sql(query).dialect(hive2_1_0_Dialect).ok(expected)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final String expected = \"SELECT ROW_NUMBER() OVER (ORDER BY hire_date DESC NULLS FIRST)\" + \"FROM foodmart.employee\"@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "sql(query).dialect(hive2_1Dialect).ok(expected)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testHiveSelectQueryWithOverDescAndHighNullsWithVersion20['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final String expected = \"SELECT ROW_NUMBER() OVER \" + \"(ORDER BY hire_date IS NULL DESC, hire_date DESC)\" + \"FROM foodmart.employee\"@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->5 [style = solid, label="expected"];
+6->4 [style = solid, label="expected"];
+3->0 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+2->10 [style = solid, label="expected"];
+1->2 [style = bold, label=""];
+7->0 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+2->10 [style = bold, label=""];
+8->11 [style = bold, label=""];
+9->8 [style = bold, label=""];
+2->6 [style = bold, label=""];
+0->1 [style = bold, label=""];
+11->2 [style = bold, label=""];
+5->4 [style = bold, label=""];
+6->2 [style = dashed, label="0"];
+}

@@ -1,0 +1,29 @@
+digraph {
+4 [style = filled, label = "@Query(n=\"d\",cf=\"uon\") Map<ImplicitSwappedPojo,ImplicitSwappedPojo((((((> d@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "@FormData(n=\"d\",cf=\"uon\") Map<SwappedPojo,SwappedPojo((((((> d@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "@Query(n=\"b\",cf=\"uon\") ImplicitSwappedPojo(((((( b@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "assertClass['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "@Query(n=\"c\",cf=\"uon\") Map<ImplicitSwappedPojo,ImplicitSwappedPojo> c@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "@Query(n=\"c\",cf=\"uon\") Map<ImplicitSwappedPojo,ImplicitSwappedPojo> c@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "@FormData(n=\"b\",cf=\"uon\") SwappedPojo(((((( b@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "@Query(n=\"b\",cf=\"uon\") ImplicitSwappedPojo(((((( b@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertObject['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertClass['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "implicitSwappedPojoQueries['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "@Query(n=\"d\",cf=\"uon\") Map<ImplicitSwappedPojo,ImplicitSwappedPojo((((((> d@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "@FormData(n=\"c\",cf=\"uon\") Map<SwappedPojo,SwappedPojo> c@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "swappedPojoFormData['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "implicitSwappedPojoQueries['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3->4 [style = dotted, label="true"];
+14->11 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+14->12 [style = dotted, label="true"];
+6->9 [style = dotted, label="true"];
+6->8 [style = dotted, label="true"];
+3->1 [style = dotted, label="true"];
+14->10 [style = dotted, label="true"];
+14->13 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+3->0 [style = dotted, label="true"];
+6->7 [style = dotted, label="true"];
+}

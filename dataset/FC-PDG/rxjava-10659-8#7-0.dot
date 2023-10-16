@@ -1,0 +1,17 @@
+digraph {
+2 [style = filled, label = "assertValueAtInvalidIndex['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "Observable.just(1,2).subscribe(to)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThrows(\"Invalid index: 2 (latch = 0, values = 2, errors = 0, completions = 1)\",,null)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "TestObserverEx<Integer> to = new TestObserverEx<>()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "to.assertValueAt(1,new Predicate<Integer>(){@Override public boolean test(final Integer o){return o == 2}})@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertValueAtInvalidIndex['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertValueAtPredicateMatch['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertThrowsWithMessage(\"Index 2 is out of range (0, 2) (latch = 0, values = 2, errors = 0, completions = 1)\",,null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1->3 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+7->4 [style = solid, label="to"];
+6->7 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

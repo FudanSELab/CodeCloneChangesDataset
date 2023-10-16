@@ -1,0 +1,31 @@
+digraph {
+7 [style = filled, label = "assertBufferListsEqual(exec0Fetch.buffers,Arrays.asList(exec0Blocks))@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "assertTrue(exec0Fetch.failedBlocks.isEmpty())@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertEquals(Sets.newHashSet(\"shuffle_0_0_0\",\"shuffle_0_0_1\",\"shuffle_0_0_2\"),exec0Fetch.successBlocks)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testFetchThreeSort['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "FetchResult exec0Fetch = fetchBlocks(\"exec-0\",new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1a8266c)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertEquals(Sets.newHashSet(\"shuffle_2_0_0\"),execFetch.failedBlocks)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "testFetchNonexistent['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertBufferListsEqual(exec0Fetch.buffers,Lists.newArrayList(exec0Blocks))@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "assertTrue(execFetch.successBlocks.isEmpty())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "exec0Fetch.releaseBuffers()@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testFetchThreeSort['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "registerExecutor(\"exec-0\",dataContext0.createExecutorInfo(SORT_MANAGER))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "FetchResult execFetch = fetchBlocks(\"exec-0\",new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1a826a7)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->10 [style = bold, label=""];
+5->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+6->4 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+3->5 [style = bold, label=""];
+7->0 [style = bold, label=""];
+8->4 [style = bold, label=""];
+10->9 [style = bold, label=""];
+9->11 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+12->4 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+1->7 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+}

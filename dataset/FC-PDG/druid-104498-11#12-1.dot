@@ -1,0 +1,30 @@
+digraph {
+6 [style = filled, label = "final Builder builder = new Builder(DATA_SOURCE,objectMapper,AuthTestUtils.TEST_AUTHORIZER_MAPPER,null,rowIngestionMetersFactory,coordinatorClient,segmentLoaderFactory,retryPolicyFactory,appenderatorsManager)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "testSerdeWithSegments['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final CompactionTask task = builder.interval(COMPACTION_INTERVAL).tuningConfig(createTuningConfig()).context(ImmutableMap.of(\"testKey\",\"testContext\")).build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertEquals(task,fromJson)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final CompactionTask fromJson = objectMapper.readValue(bytes,)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testSerdeWithInterval['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "final Builder builder = new Builder(DATA_SOURCE,objectMapper,AuthTestUtils.TEST_AUTHORIZER_MAPPER,null,rowIngestionMetersFactory,coordinatorClient,segmentLoaderFactory,retryPolicyFactory)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final CompactionTask task = builder.segments(SEGMENTS).tuningConfig(createTuningConfig()).context(ImmutableMap.of(\"testKey\",\"testContext\")).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final byte(( bytes = objectMapper.writeValueAsBytes(task)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testSerdeWithInterval['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9->3 [style = bold, label=""];
+0->2 [style = solid, label="task"];
+5->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+0->5 [style = solid, label="task"];
+1->2 [style = bold, label=""];
+5->1 [style = solid, label="bytes"];
+6->0 [style = bold, label=""];
+1->2 [style = solid, label="fromJson"];
+3->6 [style = dashed, label="0"];
+0->8 [style = dashed, label="0"];
+8->5 [style = bold, label=""];
+8->5 [style = solid, label="task"];
+3->8 [style = bold, label=""];
+8->2 [style = solid, label="task"];
+3->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

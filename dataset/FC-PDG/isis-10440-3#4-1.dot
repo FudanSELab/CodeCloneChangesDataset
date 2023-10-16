@@ -1,0 +1,33 @@
+digraph {
+0 [style = filled, label = "whenJavaUtilDate['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(representation.getString(\"format\"),is(\"date-time\"))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "jsonValueEncoder.appendValueAndFormat(mockObjectAdapter,mockObjectSpec,representation,null,false)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(representation.getString(\"extensions.x-isis-format\"),is(\"javautildate\"))@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "allowingObjectAdapterToReturn(asDateTime(\"2014-04-25T12:34:45Z\"))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "allowingLogicalTypeReturnObjectTypeFor()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "allowingObjectSpecToReturnSpecIdFor()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "assertThat(representation.getString(\"extensions.x-isis-format\"),is(\"jodadatetime\"))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "allowingObjectSpecToReturnSpecIdFor()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(representation.getString(\"value\"),is(\"2014-04-25T12:34:45Z\"))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "whenJodaDateTime['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertThat(representation.isString(\"value\"),is(true))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "whenJavaUtilDate['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "allowingObjectAdapterToReturn(new org.joda.time.DateTime(asDateTime(\"2014-04-25T12:34:45Z\")))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+5->13 [style = dashed, label="0"];
+1->8 [style = dashed, label="0"];
+1->10 [style = dashed, label="0"];
+8->5 [style = bold, label=""];
+10->13 [style = bold, label=""];
+3->7 [style = bold, label=""];
+9->8 [style = bold, label=""];
+13->3 [style = bold, label=""];
+2->4 [style = bold, label=""];
+11->10 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->12 [style = bold, label=""];
+7->6 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+}

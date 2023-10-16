@@ -1,0 +1,13 @@
+digraph {
+0 [style = filled, label = "remove['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "@NonNull String signature@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "remove['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "@Nonnull String signature@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "@Nonnull String signature@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "removeBlacklistSignature['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4->5 [style = dotted, label="true"];
+1->2 [style = dashed, label="0"];
+1->5 [style = dashed, label="0"];
+3->2 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+}

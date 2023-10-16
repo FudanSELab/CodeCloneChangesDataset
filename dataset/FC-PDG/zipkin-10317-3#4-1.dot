@@ -1,0 +1,37 @@
+digraph {
+0 [style = filled, label = "HttpCall.RequestSupplier supplier = builder.build().request@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "i++@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "i < 10@@@5@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "builder.index(spanIndex,\"span\",CLIENT_SPAN,BulkIndexWriter.SPAN)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "BulkCallBuilder builder = new BulkCallBuilder(es,V6_0,\"index-span\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "supplier.writeBody(null)@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "BulkCallBuilder builder = new BulkCallBuilder(es,6.7f,\"index-span\")@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "buildAndWriteRequest_singleSpan['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "buildAndWriteRequest_tenSpans['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "HttpRequestWriter request = HttpRequest.streaming(supplier.headers())@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "int i = 0@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "buildAndWriteRequest_singleSpan['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "return request@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->2 [style = solid, label="request"];
+4->9 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->10 [style = bold, label=""];
+1->4 [style = bold, label=""];
+10->12 [style = solid, label="i"];
+12->5 [style = bold, label=""];
+0->6 [style = bold, label=""];
+11->4 [style = bold, label=""];
+12->0 [style = bold, label=""];
+9->10 [style = solid, label="i"];
+8->7 [style = bold, label=""];
+7->5 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+12->10 [style = dotted, label="true"];
+12->5 [style = dotted, label="true"];
+10->12 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+9->12 [style = bold, label=""];
+4->5 [style = bold, label=""];
+9->12 [style = solid, label="i"];
+}

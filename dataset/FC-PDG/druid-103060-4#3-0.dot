@@ -1,0 +1,38 @@
+digraph {
+7 [style = filled, label = "makeCertlessClient['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "String certAlias@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "makeCertlessClient['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "String keystorePath@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "HttpClient adminClient = new CredentialedHttpClient(new BasicCredentials(\"admin\",\"priest\"),client)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "HttpClient client = HttpClientInit.createClient(builder.build(),LifecycleUtils.asMmxLifecycle(lifecycle))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final HttpClientConfig.Builder builder = getHttpClientConfigBuilder(certlessClientSSLContext)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "SSLContext certlessClientSSLContext = new TLSUtils.ClientSSLContextBuilder().setProtocol(sslClientConfig.getProtocol()).setTrustStoreType(sslClientConfig.getTrustStoreType()).setTrustStorePath(sslClientConfig.getTrustStorePath()).setTrustStoreAlgorithm(sslClientConfig.getTrustStoreAlgorithm()).setTrustStorePasswordProvider(sslClientConfig.getTrustStorePasswordProvider()).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "SSLContext certlessClientSSLContext = new TLSUtils.ClientSSLContextBuilder().setProtocol(sslClientConfig.getProtocol()).setTrustStoreType(sslClientConfig.getTrustStoreType()).setTrustStorePath(sslClientConfig.getTrustStorePath()).setTrustStoreAlgorithm(sslClientConfig.getTrustStoreAlgorithm()).setTrustStorePasswordProvider(sslClientConfig.getTrustStorePasswordProvider()).setCertificateChecker(certificateChecker).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "final HttpClientConfig.Builder builder = getHttpClientConfigBuilder(intermediateClientSSLContext)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "makeCustomHttpClient['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "SSLContext intermediateClientSSLContext = new TLSUtils.ClientSSLContextBuilder().setProtocol(sslClientConfig.getProtocol()).setTrustStoreType(sslClientConfig.getTrustStoreType()).setTrustStorePath(sslClientConfig.getTrustStorePath()).setTrustStoreAlgorithm(sslClientConfig.getTrustStoreAlgorithm()).setTrustStorePasswordProvider(sslClientConfig.getTrustStorePasswordProvider()).setKeyStoreType(sslClientConfig.getKeyStoreType()).setKeyStorePath(keystorePath).setKeyStoreAlgorithm(sslClientConfig.getKeyManagerFactoryAlgorithm()).setCertAlias(certAlias).setKeyStorePasswordProvider(sslClientConfig.getKeyStorePasswordProvider()).setKeyManagerFactoryPasswordProvider(sslClientConfig.getKeyManagerPasswordProvider()).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final Lifecycle lifecycle = new Lifecycle()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return adminClient@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+9->12 [style = dotted, label="true"];
+6->8 [style = dashed, label="0"];
+6->4 [style = solid, label="certlessClientSSLContext"];
+13->11 [style = solid, label="intermediateClientSSLContext"];
+4->2 [style = bold, label=""];
+7->8 [style = bold, label=""];
+3->5 [style = solid, label="adminClient"];
+13->11 [style = bold, label=""];
+11->2 [style = bold, label=""];
+6->4 [style = bold, label=""];
+3->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+2->0 [style = solid, label="lifecycle"];
+1->6 [style = bold, label=""];
+6->13 [style = dashed, label="0"];
+0->3 [style = solid, label="client"];
+8->4 [style = solid, label="certlessClientSSLContext"];
+8->4 [style = bold, label=""];
+4->11 [style = dashed, label="0"];
+9->10 [style = dotted, label="true"];
+9->13 [style = bold, label=""];
+}

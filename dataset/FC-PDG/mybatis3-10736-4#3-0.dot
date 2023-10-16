@@ -1,0 +1,23 @@
+digraph {
+3 [style = filled, label = "final Configuration config@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "prepareSelectTwoSetsOfAuthorsProc['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "MappedStatement ms = new MappedStatement.Builder(config,\"selectAuthor\",new StaticSqlSource(config,\"SELECT * FROM author WHERE id = 99\"),SqlCommandType.SELECT).statementType(StatementType.STATEMENT).parameterMap(new ParameterMap.Builder(config,\"defaultParameterMap\",,new ArrayList<>()).build()).resultMaps(new ArrayList<ResultMap>(){}).build()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "createSelectAuthorWithIDof99MappedStatement['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "selectTwoSetsOfAuthors['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final TypeHandlerRegistry registry = config.getTypeHandlerRegistry()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "createSelectAuthorWithIDof99MappedStatement['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "MappedStatement ms = new MappedStatement.Builder(config,\"selectAuthor\",new StaticSqlSource(config,\"SELECT * FROM author WHERE id = 99\"),SqlCommandType.SELECT).statementType(StatementType.STATEMENT).parameterMap(new ParameterMap.Builder(config,\"defaultParameterMap\",,new ArrayList<ParameterMapping>()).build()).resultMaps(new ArrayList<ResultMap>(){}).build()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "return ms@@@19@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->4 [style = bold, label=""];
+5->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+1->6 [style = bold, label=""];
+0->3 [style = dotted, label="true"];
+2->4 [style = solid, label="ms"];
+5->3 [style = dotted, label="true"];
+6->4 [style = solid, label="ms"];
+7->8 [style = dotted, label="true"];
+2->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

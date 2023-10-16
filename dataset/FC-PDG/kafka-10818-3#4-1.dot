@@ -1,0 +1,37 @@
+digraph {
+5 [style = filled, label = "final int entrySize = memoryCacheEntrySize(new byte((((,new byte((((,\"\")@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "shouldSkipEntriesWhereValueHasBeenEvictedFromCacheReverseRange['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "final ThreadCache cache = setupThreadCache(4,0,entrySize * 5L,true)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "final ThreadCache cache = setupThreadCache(0,5,entrySize * 5,false)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final ThreadCache cache = setupThreadCache(4,0,entrySize * 5,true)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "final ThreadCache.MemoryLRUCacheBytesIterator range = cache.reverseRange(namespace,Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@b978bf),Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@b978c6))@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertEquals(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@b9791a),range.peekNextKey())@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertEquals(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@b978d0),range.peekNextKey())@@@16@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "shouldSkipEntriesWhereValueHasBeenEvictedFromCacheReverseRange['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final long entrySize = memoryCacheEntrySize(new byte((((,new byte((((,\"\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "final ThreadCache.MemoryLRUCacheBytesIterator range = cache.all(namespace)@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(5,cache.size())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "cache.put(namespace,Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@b97902),dirtyEntry(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@b97908))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "shouldReturnAllUnevictedValuesFromCache['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4->3 [style = bold, label=""];
+12->5 [style = bold, label=""];
+5->6 [style = solid, label="entrySize"];
+6->9 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+13->1 [style = bold, label=""];
+8->7 [style = bold, label=""];
+7->9 [style = bold, label=""];
+6->1 [style = bold, label=""];
+0->10 [style = bold, label=""];
+6->13 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+0->4 [style = bold, label=""];
+5->13 [style = solid, label="entrySize"];
+5->13 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+9->1 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+7->9 [style = solid, label="entrySize"];
+2->5 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

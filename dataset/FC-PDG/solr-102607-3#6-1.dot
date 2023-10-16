@@ -1,0 +1,38 @@
+digraph {
+4 [style = filled, label = "sb.append(o == null? \"(null)\": o.toString())@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "args@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "VERBOSE@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "StringBuilder sb = new StringBuilder(\"VERBOSE:\")@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "verbose['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "!VERBOSE@@@3@@@['1', '0', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "verbose['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "Object args@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "Object o@@@5@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "sb.append(' ')@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Object args@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return@@@3@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "ifVerbose['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "log.info(sb.toString())@@@9@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->3 [style = bold, label=""];
+13->3 [style = dotted, label="true"];
+13->12 [style = dotted, label="true"];
+9->11 [style = dotted, label="true"];
+2->3 [style = bold, label=""];
+6->1 [style = dotted, label="true"];
+0->11 [style = dashed, label="0"];
+5->0 [style = dotted, label="true"];
+13->7 [style = dotted, label="true"];
+13->10 [style = dotted, label="true"];
+3->4 [style = bold, label=""];
+4->7 [style = bold, label=""];
+6->2 [style = bold, label=""];
+13->2 [style = dotted, label="true"];
+6->1 [style = bold, label=""];
+6->13 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+13->2 [style = bold, label=""];
+8->0 [style = dotted, label="true"];
+1->2 [style = bold, label=""];
+13->4 [style = dotted, label="true"];
+9->13 [style = bold, label=""];
+}

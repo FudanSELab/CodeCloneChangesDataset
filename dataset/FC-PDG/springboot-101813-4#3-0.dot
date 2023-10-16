@@ -1,0 +1,36 @@
+digraph {
+6 [style = filled, label = "assertThat(converted).containsExactly(\"a\",\"b\")@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "convertWhenHasCollectionObjectTypeShouldUseCollectionObjectType['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertThat(converted).isInstanceOf()@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "TypeDescriptor sourceType = TypeDescriptor.valueOf()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Object converted = this.conversionService.convert(\"a*b\",sourceType,targetType)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "assertThat(converted).containsExactly(\"a\",\"b\",\"c\")@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "MyCustomList<String> converted = (MyCustomList<String>)this.conversionService.convert(\"a*b\",sourceType,targetType)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "TypeDescriptor targetType = TypeDescriptor.nested(ReflectionUtils.findField(,\"specificType\"),0)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "convertWhenHasNoElementTypeShouldReturnTrimmedString['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "convertWhenHasCollectionObjectTypeShouldUseCollectionObjectType['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Collection<String> converted = (Collection<String>)this.conversionService.convert(\" a | b| c \",sourceType,targetType)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "TypeDescriptor targetType = TypeDescriptor.nested(ReflectionUtils.findField(,\"noElementType\"),0)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9->0 [style = bold, label=""];
+0->11 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+0->7 [style = solid, label="sourceType"];
+2->8 [style = dashed, label="0"];
+4->7 [style = solid, label="targetType"];
+4->7 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->10 [style = solid, label="sourceType"];
+10->8 [style = bold, label=""];
+5->0 [style = bold, label=""];
+0->4 [style = bold, label=""];
+11->10 [style = bold, label=""];
+7->6 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+4->1 [style = solid, label="targetType"];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+11->10 [style = solid, label="targetType"];
+0->1 [style = solid, label="sourceType"];
+1->7 [style = dashed, label="0"];
+4->11 [style = dashed, label="0"];
+}

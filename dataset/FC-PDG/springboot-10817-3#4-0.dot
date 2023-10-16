@@ -1,0 +1,15 @@
+digraph {
+2 [style = filled, label = "linksPageIsNotAvailableWhenDisabled['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "testJerseyEndpoints['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "linksPageIsNotAvailableWhenDisabled['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "getContextRunner(new Class((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1d1d5ff).withPropertyValues(\"management.endpoints.web.discovery.enabled:false\").run(null)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "getContextRunner(new Class<?>((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1d1d611).withPropertyValues(\"management.endpoints.web.discovery.enabled:false\").run(null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "Class<?>(( userConfigurations@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "getContextRunner(userConfigurations).run(null)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->6 [style = dotted, label="true"];
+1->3 [style = dashed, label="0"];
+1->5 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

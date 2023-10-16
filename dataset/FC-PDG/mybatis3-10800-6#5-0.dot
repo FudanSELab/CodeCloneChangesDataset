@@ -1,0 +1,29 @@
+digraph {
+0 [style = filled, label = "List<Post> posts = session.selectList(\"domain.blog.mappers.PostMapper.selectOddPostsInKeysList\",new HashMap(){})@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "shouldFindPostsInList['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "shouldSelectOddPostsInKeysList['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "shouldSelectOddPostsInKeysList['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "SqlSession session = sqlMapper.openSession()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "{session.close()}@@@15@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(1,posts.get(0).getId())@@@21@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertEquals(3,posts.size())@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "List<Post> posts = session.selectList(\"domain.blog.mappers.PostMapper.selectOddPostsInKeysList\",new HashMap<String,List<Integer>>(){})@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "List<Post> posts = session.selectList(\"domain.blog.mappers.PostMapper.selectPostIn\",new ArrayList(){})@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertEquals(3,posts.get(1).getId())@@@22@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(2,posts.size())@@@20@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->9 [style = bold, label=""];
+6->1 [style = bold, label=""];
+11->4 [style = bold, label=""];
+1->2 [style = bold, label=""];
+8->4 [style = bold, label=""];
+10->5 [style = bold, label=""];
+9->10 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+0->7 [style = dashed, label="0"];
+0->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+4->7 [style = bold, label=""];
+7->6 [style = bold, label=""];
+4->0 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

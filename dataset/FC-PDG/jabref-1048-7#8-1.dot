@@ -1,0 +1,37 @@
+digraph {
+7 [style = filled, label = "database.insertEntry(entry)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "entry.setField(StandardField.AUTHOR,\"Eric von Hippel\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(Collections.singletonList(author),result)@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "completeBeginningOfFirstNameReturnsNameWithVon['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "completeVonReturnsName['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "BibEntry entry = new BibEntry()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "completeBeginningOfFirstNameReturnsNameWithVon['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Author author = new Author(\"Eric\",\"E.\",\"von\",\"Hippel\",\"\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Collection<Author> result = autoCompleter.call(getRequest((\"Eric\")))@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "Collection<Author> result = autoCompleter.call(getRequest((\"von\")))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "autoCompleter.indexEntry(entry)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Collection<Author> result = autoCompleter.provideSuggestions(getRequest((\"Eric\")))@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4->3 [style = bold, label=""];
+1->4 [style = bold, label=""];
+7->1 [style = bold, label=""];
+1->8 [style = bold, label=""];
+9->2 [style = bold, label=""];
+8->3 [style = bold, label=""];
+10->3 [style = bold, label=""];
+2->0 [style = solid, label="entry"];
+11->2 [style = bold, label=""];
+6->2 [style = bold, label=""];
+1->3 [style = solid, label="author"];
+5->0 [style = bold, label=""];
+0->1 [style = bold, label=""];
+4->3 [style = solid, label="result"];
+4->8 [style = dashed, label="0"];
+5->7 [style = bold, label=""];
+8->3 [style = solid, label="result"];
+2->7 [style = solid, label="entry"];
+10->3 [style = solid, label="result"];
+4->10 [style = dashed, label="0"];
+0->7 [style = dashed, label="0"];
+1->10 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

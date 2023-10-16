@@ -1,0 +1,34 @@
+digraph {
+0 [style = filled, label = "Dataset<ArrayRecord> dataset = spark.read().format(\"json\").schema(\"id int, intervals array<struct<startTime: bigint, endTime: bigint>>, \" + \"ints array<int>\").load(\"src/test/resources/test-data/with-array-fields.json\").as(encoder)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testBeanWithArrayFieldDeserialization['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assert.assertEquals(records,MAP_RECORDS)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Assert.assertEquals(ARRAY_RECORDS,records)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "Assert.assertEquals(records,ARRAY_RECORDS)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "testBeanWithArrayFieldDeserialization['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "testBeanWithMapFieldsDeserialization['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "List<ArrayRecord> records = dataset.collectAsList()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Encoder<MapRecord> encoder = Encoders.bean()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "List<MapRecord> records = dataset.collectAsList()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "Dataset<MapRecord> dataset = spark.read().format(\"json\").schema(\"id int, intervals map<string, struct<startTime: bigint, endTime: bigint>>\").load(\"src/test/resources/test-data/with-map-fields.json\").as(encoder)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Encoder<ArrayRecord> encoder = Encoders.bean()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->5 [style = dashed, label="0"];
+2->5 [style = solid, label="records"];
+6->1 [style = bold, label=""];
+7->8 [style = solid, label="records"];
+2->5 [style = bold, label=""];
+11->7 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+9->10 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+10->11 [style = solid, label="encoder"];
+7->8 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+1->0 [style = solid, label="encoder"];
+2->4 [style = solid, label="records"];
+0->2 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

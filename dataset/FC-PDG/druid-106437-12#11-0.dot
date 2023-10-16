@@ -1,0 +1,37 @@
+digraph {
+13 [style = filled, label = "QueryRunner mergedRunner = factory.getToolchest().mergeResults(new QueryRunner<ResultRow>(){@Override public Sequence<ResultRow> run(QueryPlus<ResultRow> queryPlus,ResponseContext responseContext){final QueryPlus queryPlus1 = queryPlus.withQuerySegmentSpec(new MultipleIntervalSegmentSpec(Collections.singletonList(Intervals.of(\"2011-04-02/2011-04-03\"))))final QueryPlus queryPlus2 = queryPlus.withQuerySegmentSpec(new MultipleIntervalSegmentSpec(Collections.singletonList(Intervals.of(\"2011-04-03/2011-04-04\"))))return new MergeSequence(queryPlus.getQuery().getResultOrdering(),Sequences.simple(Arrays.asList(runner.run(queryPlus1,responseContext),runner.run(queryPlus2,responseContext))))}})@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testMergedHavingSpec['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "testMergedHavingSpec['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "QueryRunner mergedRunner = factory.getToolchest().mergeResults(new QueryRunner<ResultRow>(){@Override public Sequence<ResultRow> run(QueryPlus<ResultRow> queryPlus,ResponseContext responseContext){final QueryPlus queryPlus1 = queryPlus.withQuerySegmentSpec(new MultipleIntervalSegmentSpec(Collections.singletonList(Intervals.of(\"2011-04-02/2011-04-03\"))))final QueryPlus queryPlus2 = queryPlus.withQuerySegmentSpec(new MultipleIntervalSegmentSpec(Collections.singletonList(Intervals.of(\"2011-04-03/2011-04-04\"))))return new MergeSequence(queryPlus.getQuery().getResultOrdering(),Sequences.simple(Arrays.asList(runner.run(queryPlus1,responseContext),runner.run(queryPlus2,responseContext))))}})@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "List<ResultRow> expectedResults@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final GroupByQuery query = baseQuery.withLimitSpec(limitSpec)@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "doTestMergeResultsWithOrderBy['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "GroupByQuery fullQuery = builder.build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "GroupByQuery.Builder builder = makeQueryBuilder().setDataSource(QueryRunnerTestHelper.DATA_SOURCE).setInterval(\"2011-04-02/2011-04-04\").setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\")).setAggregatorSpecs(QueryRunnerTestHelper.ROWS_COUNT,new LongSumAggregatorFactory(\"idx\",\"index\")).setGranularity(new PeriodGranularity(new Period(\"P1M\"),null,null)).setHavingSpec(new OrHavingSpec(ImmutableList.of(new GreaterThanHavingSpec(\"rows\",2L),new EqualToHavingSpec(\"idx\",217L))))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "LimitSpec limitSpec@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "List<ResultRow> expectedResults = Arrays.asList(makeRow(fullQuery,\"2011-04-01\",\"alias\",\"business\",\"rows\",2L,\"idx\",217L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"mezzanine\",\"rows\",6L,\"idx\",4420L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"premium\",\"rows\",6L,\"idx\",4416L))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "GroupByQuery.Builder builder = makeQueryBuilder().setDataSource(QueryRunnerTestHelper.dataSource).setInterval(\"2011-04-02/2011-04-04\").setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\")).setAggregatorSpecs(QueryRunnerTestHelper.rowsCount,new LongSumAggregatorFactory(\"idx\",\"index\")).setGranularity(new PeriodGranularity(new Period(\"P1M\"),null,null)).setHavingSpec(new OrHavingSpec(ImmutableList.of(new GreaterThanHavingSpec(\"rows\",2L),new EqualToHavingSpec(\"idx\",217L))))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "GroupByQuery baseQuery@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "TestHelper.assertExpectedObjects(expectedResults,mergedRunner.run(QueryPlus.wrap(fullQuery)),\"merged\")@@@14@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "TestHelper.assertExpectedObjects(expectedResults,mergedRunner.run(QueryPlus.wrap(query)),\"merged\")@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+8->14 [style = bold, label=""];
+5->1 [style = solid, label="expectedResults"];
+2->5 [style = solid, label="fullQuery"];
+8->14 [style = solid, label="query"];
+0->2 [style = bold, label=""];
+11->9 [style = dotted, label="true"];
+13->8 [style = bold, label=""];
+6->7 [style = bold, label=""];
+3->1 [style = bold, label=""];
+9->14 [style = solid, label="expectedResults"];
+0->7 [style = dashed, label="0"];
+7->2 [style = bold, label=""];
+11->10 [style = dotted, label="true"];
+10->8 [style = solid, label="limitSpec"];
+11->13 [style = bold, label=""];
+4->0 [style = bold, label=""];
+2->5 [style = bold, label=""];
+11->12 [style = dotted, label="true"];
+2->1 [style = solid, label="fullQuery"];
+}

@@ -1,0 +1,27 @@
+digraph {
+9 [style = filled, label = "assertThat(fooReference1).isNotSameInstanceAs(fooReference2)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "assertThat(mapCache.remove(fooReference2)).isEqualTo(\"bar\")@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testRemoveEqualKeyWithDifferentReference['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "testRemoveEqualKeyWithDifferentReference['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testRemoveEqualKeyWithDifferentReference['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "String fooReference2 = new String(\"foo\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(mapCache.put(fooReference1,\"bar\")).isNull()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(mapCache.get(fooReference1)).isNull()@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "String fooReference1 = new String(\"foo\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(mapCache.get(fooReference1)).isEqualTo(\"bar\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(fooReference1).isNotSameAs(fooReference2)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->5 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+3->6 [style = bold, label=""];
+5->2 [style = bold, label=""];
+0->9 [style = bold, label=""];
+8->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+7->1 [style = bold, label=""];
+2->7 [style = bold, label=""];
+0->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+10->6 [style = bold, label=""];
+0->9 [style = solid, label="fooReference2"];
+0->4 [style = solid, label="fooReference2"];
+}

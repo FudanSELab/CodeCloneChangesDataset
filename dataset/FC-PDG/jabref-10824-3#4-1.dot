@@ -1,0 +1,26 @@
+digraph {
+5 [style = filled, label = "assertEquals(Collections.singletonList(currentWorkingDir.resolve(file.getParent()).toString()),fileDirectories)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "getFileDirectoriesWithRelativeDottedDbParent['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "dbContext.setDatabaseFile(file.toFile())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "BibDatabaseContext dbContext = new BibDatabaseContext()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Path file = Paths.get(\"./relative/subdir\").resolve(\"biblio.bib\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "getFileDirectoriesWithRelativeDottedDbParent['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "getFileDirectoriesWithAbsoluteDbParent['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "List<String> fileDirectories = dbContext.getFileDirectories(\"file\",fileDirPrefs)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "List<String> fileDirectories = dbContext.getFileDirectories(StandardField.FILE,fileDirPrefs)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "Path file = Paths.get(\"/absolute/subdir\").resolve(\"biblio.bib\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->1 [style = bold, label=""];
+6->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+6->5 [style = solid, label="fileDirectories"];
+3->6 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+9->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+2->6 [style = bold, label=""];
+3->5 [style = solid, label="fileDirectories"];
+2->3 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+}

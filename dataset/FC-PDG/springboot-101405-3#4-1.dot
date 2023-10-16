@@ -1,0 +1,26 @@
+digraph {
+6 [style = filled, label = "assertThat(this.binder.bind(\"foo\",Bindable.listOf()).get()).containsExactly(,)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "bindToArrayWhenStringShouldUsePropertyEditor['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "source.put(\"foo\",\"java.lang.RuntimeException,java.lang.IllegalStateException\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "bindToCollectionShouldUsePropertyEditor['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "this.sources.add(source)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "this.sources.add(source)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "MockConfigurationPropertySource source = new MockConfigurationPropertySource()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "source.put(\"foo(0(\",\"java.lang.RuntimeException\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "bindToArrayWhenStringShouldUsePropertyEditor['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "source.put(\"foo(1(\",\"java.lang.IllegalStateException\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+2->1 [style = solid, label="source"];
+2->7 [style = bold, label=""];
+8->4 [style = bold, label=""];
+3->1 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+4->6 [style = bold, label=""];
+9->2 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+2->4 [style = solid, label="source"];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

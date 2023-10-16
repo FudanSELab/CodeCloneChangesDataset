@@ -1,0 +1,16 @@
+digraph {
+0 [style = filled, label = "assertEquals(\"OK\",r)@@@16@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String r = proxy.swappedPojoFormData(new SwappedPojo(),new SwappedPojo((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15837fe,new AMap<SwappedPojo,SwappedPojo>().append(new SwappedPojo(),new SwappedPojo()),new AMap<SwappedPojo,SwappedPojo((((((>().append(new SwappedPojo(),new SwappedPojo((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1583816))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "a05_swappedPojoHeaders['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "String r = proxy.swappedPojoHeaders(new SwappedPojo(),new SwappedPojo((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15837cc,AMap.of(new SwappedPojo(),new SwappedPojo()),AMap.of(new SwappedPojo(),new SwappedPojo((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15837e2))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "a05_swappedPojoHeaders['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "c05_swappedPojoFormData['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->0 [style = solid, label="r"];
+4->0 [style = solid, label="r"];
+1->4 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

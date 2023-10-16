@@ -1,0 +1,25 @@
+digraph {
+3 [style = filled, label = "c06a_multipleOf_floats['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "c06a_multipleOf_floats['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "assertThrown(null).is(\"Multiple-of not met.\")@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "s.validateOutput(null,BeanContext.DEFAULT)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "s.validateOutput(20.2f,BeanContext.DEFAULT)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThrown(null).message().is(\"Multiple-of not met.\")@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "s.validateOutput(10.1f,BeanContext.DEFAULT)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "s.validateOutput(0,BeanContext.DEFAULT)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "HttpPartSchema s = HttpPartSchema.create().apply(,).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "HttpPartSchema s = HttpPartSchema.create().apply(,).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "c06a_multipleOf_floats['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+8->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+10->5 [style = bold, label=""];
+5->6 [style = bold, label=""];
+9->10 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->4 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+0->7 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

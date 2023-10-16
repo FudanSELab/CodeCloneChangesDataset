@@ -1,0 +1,35 @@
+digraph {
+8 [style = filled, label = "expectedResult.put(fullReplica(address01,threeToken,fourToken),transientReplica(address04,threeToken,sixToken))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "invokeCalculateRangesToFetchWithPreferredEndpoints(calculateStreamAndFetchRangesMoveForward().right,constructTMDsMoveForward(),expectedResult.asImmutableView())@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "expectedResult.put(transientReplica(aAddress,sixToken,nineToken),transientReplica(eAddress,sixToken,nineToken))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "expectedResult.put(fullReplica(aAddress,nineToken,elevenToken),fullReplica(eAddress,nineToken,elevenToken))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "EndpointsByReplica.Mutable expectedResult = new EndpointsByReplica.Mutable()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "InetAddressAndPort cOrBAddress = (downNodes.contains(address03) || sourceFilterDownNodes.contains(address03))? address02: address03@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "testMoveForwardCalculateRangesToFetchWithPreferredEndpoints['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "testMoveBackwardBetweenCalculateRangesToFetchWithPreferredEndpoints['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "expectedResult.put(fullReplica(address01,threeToken,fourToken),fullReplica(cOrBAddress,threeToken,sixToken))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "invokeCalculateRangesToFetchWithPreferredEndpoints(calculateStreamAndFetchRangesMoveBackwardBetween().right,constructTMDsMoveBackwardBetween(),expectedResult.asImmutableView())@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "expectedResult.put(fullReplica(aAddress,threeToken,fourToken),fullReplica(cOrBAddress,threeToken,sixToken))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "expectedResult.put(fullReplica(aAddress,threeToken,fourToken),transientReplica(dAddress,threeToken,sixToken))@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "InetAddressAndPort cOrBAddress = (downNodes.contains(cAddress) || sourceFilterDownNodes.contains(cAddress))? bAddress: cAddress@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "testMoveForwardCalculateRangesToFetchWithPreferredEndpoints['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->8 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+1->6 [style = bold, label=""];
+0->4 [style = solid, label="cOrBAddress"];
+1->0 [style = bold, label=""];
+6->7 [style = bold, label=""];
+3->1 [style = bold, label=""];
+8->2 [style = bold, label=""];
+7->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+9->1 [style = bold, label=""];
+4->5 [style = bold, label=""];
+1->10 [style = bold, label=""];
+10->12 [style = bold, label=""];
+6->7 [style = solid, label="cOrBAddress"];
+13->1 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+0->6 [style = dashed, label="0"];
+12->11 [style = bold, label=""];
+}

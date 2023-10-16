@@ -1,0 +1,29 @@
+digraph {
+5 [style = filled, label = "configureShouldApplyFilter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "configureShouldBeCalledInOrderCustomizerFilterBinder['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "this.customizers.add(this.mockCustomizer)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "ordered.verify(this.mockConfig).meterFilter(this.mockFilter)@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "this.filters.add(this.mockFilter)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "configurer.configure(this.mockRegistry)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "InOrder ordered = inOrder(this.mockBinder,this.mockConfig,this.mockCustomizer)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "MeterRegistryConfigurer configurer = new MeterRegistryConfigurer(createObjectProvider(this.customizers),createObjectProvider(this.filters),createObjectProvider(this.binders),false,false)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "ordered.verify(this.mockCustomizer).customize(this.mockRegistry)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "ordered.verify(this.mockBinder).bindTo(this.mockRegistry)@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "this.binders.add(this.mockBinder)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "this.filters.add(this.mockFilter)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "configureShouldApplyFilter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6->3 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->10 [style = bold, label=""];
+9->6 [style = bold, label=""];
+8->4 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+7->12 [style = bold, label=""];
+3->4 [style = bold, label=""];
+3->8 [style = bold, label=""];
+11->7 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

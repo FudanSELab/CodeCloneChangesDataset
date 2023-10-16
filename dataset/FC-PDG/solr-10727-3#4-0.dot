@@ -1,0 +1,34 @@
+digraph {
+0 [style = filled, label = "Assert.assertEquals(.getName(),explanation.getImplementingClass())@@@7@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Assert.assertEquals(\"select\",explanation.getFunctionName())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testSelectStream['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "IntersectStream stream@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testIntersectStream['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testSelectStream['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Assert.assertEquals(\"intersect\",explanation.getFunctionName())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Assert.assertEquals(.getName(),explanation.getImplementingClass())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Explanation explanation = stream.toExplanation(factory)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "Assert.assertEquals(2,((StreamExplanation)explanation).getChildren().size())@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "stream = new SelectStream(StreamExpressionParser.parse(\"select(\"a_s as fieldA\", search(collection1, q=*:*, fl=\"id,a_s,a_i,a_f\", sort=\"a_f asc, a_i asc\"))\"),factory)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+14 [style = filled, label = "stream = new IntersectStream(StreamExpressionParser.parse(\"intersect(\" + \"search(collection1, q=\"id:(0 3 4)\", fl=\"id,a_s,a_i,a_f\", sort=\"a_f asc, a_s asc\"),\" + \"search(collection1, q=\"id:(1 2)\", fl=\"id,a_s,a_i,a_f\", sort=\"a_f asc, a_s asc\"),\" + \"on=\"a_f, a_s\")\"),factory)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "String expressionString@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "SelectStream stream@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "Explanation explanation = stream.toExplanation(factory)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+5->13 [style = dashed, label="0"];
+0->8 [style = dashed, label="0"];
+6->4 [style = bold, label=""];
+14->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+13->12 [style = bold, label=""];
+4->2 [style = bold, label=""];
+2->9 [style = bold, label=""];
+10->13 [style = bold, label=""];
+9->8 [style = bold, label=""];
+8->11 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+7->6 [style = bold, label=""];
+12->14 [style = bold, label=""];
+}

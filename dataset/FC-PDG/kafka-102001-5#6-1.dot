@@ -1,0 +1,31 @@
+digraph {
+10 [style = filled, label = "shouldPropagateTaskMigratedExceptionsInPunctuateActiveTasks['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "taskManager.handleAssignment(taskId00Assignment,emptyMap())@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "expect(activeTaskCreator.createTasks(anyObject(),eq(taskId00Assignment))).andReturn(singletonList(task00)).anyTimes()@@@10@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "replay(activeTaskCreator,consumer,changeLogReader)@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThrows(,null)@@@15@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertThat(task00.state(),is(Task.State.RUNNING))@@@14@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "shouldPropagateKafkaExceptionsInPunctuateActiveTasks['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "expect(activeTaskCreator.createTasks(anyObject(),eq(taskId00Assignment))).andStubReturn(singletonList(task00))@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "expectRestoreToBeCompleted(consumer,changeLogReader)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(taskManager.tryToCompleteRestoration(time.milliseconds()),is(true))@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "shouldPropagateTaskMigratedExceptionsInPunctuateActiveTasks['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThrows(,null)@@@15@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final StateMachineTask task00 = new StateMachineTask(taskId00,taskId00Partitions,true){@Override public boolean maybePunctuateStreamTime(){throw new KafkaException(\"oops\")}}@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->3 [style = bold, label=""];
+6->1 [style = bold, label=""];
+3->6 [style = bold, label=""];
+0->9 [style = bold, label=""];
+7->11 [style = bold, label=""];
+8->11 [style = dashed, label="0"];
+12->4 [style = bold, label=""];
+7->8 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+1->7 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+4->9 [style = solid, label="task00"];
+10->4 [style = bold, label=""];
+}

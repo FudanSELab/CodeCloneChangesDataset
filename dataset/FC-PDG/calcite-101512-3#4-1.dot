@@ -1,0 +1,38 @@
+digraph {
+2 [style = filled, label = "final Fixture2 f = new Fixture2()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "checkDateRange(f,f.gt(f.floorYear,f.timestampLiteral(TimestampString.fromCalendarFields(c))),is(\">=($9, 2011-01-01 00:00:00)\"))@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "c.clear()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "c.set(2010,Calendar.FEBRUARY,10,11,12,05)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testCeilGtRewrite['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "checkDateRange(f,f.gt(f.floorYear,f.timestampLiteral(TimestampString.fromCalendarFields(c))),is(\">=($9, 2011-01-01 00:00:00)\"))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testFloorGtRewrite['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "checkDateRange(f,f.gt(f.ceilYear,f.timestampLiteral(TimestampString.fromCalendarFields(c))),is(\">($9, 2010-01-01 00:00:00)\"))@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "c.clear()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "checkDateRange(f,f.gt(f.ceilYear,f.timestampLiteral(TimestampString.fromCalendarFields(c))),is(\">($9, 2010-01-01 00:00:00)\"))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final Calendar c = Util.calendar()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "c.set(2010,Calendar.JANUARY,1,0,0,0)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testFloorGtRewrite['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->8 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->12 [style = solid, label="f"];
+0->12 [style = bold, label=""];
+2->10 [style = solid, label="f"];
+2->3 [style = bold, label=""];
+5->4 [style = solid, label="c"];
+5->12 [style = solid, label="c"];
+1->0 [style = bold, label=""];
+5->3 [style = solid, label="c"];
+2->10 [style = bold, label=""];
+2->4 [style = solid, label="f"];
+8->7 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+11->5 [style = bold, label=""];
+0->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+9->5 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+5->10 [style = solid, label="c"];
+10->1 [style = bold, label=""];
+2->3 [style = solid, label="f"];
+}

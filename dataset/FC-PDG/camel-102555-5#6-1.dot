@@ -1,0 +1,34 @@
+digraph {
+1 [style = filled, label = "return this@@@27@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "doSetProperty(\"configuration\",configuration)@@@26@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "configuration['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "configuration['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "org.apache.camel.component.aws2.eks.EKS2Configuration configuration@@@45@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "org.apache.camel.component.aws2.mq.MQ2Configuration configuration@@@25@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "configuration['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3->5 [style = dashed, label="0"];
+5->2 [style = solid, label="basicPropertyBinding"];
+5->2 [style = solid, label="lazyStartProducer"];
+3->2 [style = solid, label="proxyHost"];
+2->1 [style = bold, label=""];
+5->2 [style = solid, label="secretKey"];
+3->2 [style = solid, label="accessKey"];
+3->2 [style = solid, label="proxyProtocol"];
+0->2 [style = bold, label=""];
+3->2 [style = solid, label="region"];
+4->2 [style = bold, label=""];
+3->2 [style = solid, label="lazyStartProducer"];
+3->2 [style = solid, label="operation"];
+6->2 [style = bold, label=""];
+3->2 [style = solid, label="configuration"];
+4->3 [style = dotted, label="true"];
+0->3 [style = dotted, label="true"];
+5->2 [style = solid, label="region"];
+3->2 [style = solid, label="secretKey"];
+5->2 [style = solid, label="configuration"];
+3->2 [style = solid, label="eksClient"];
+3->2 [style = solid, label="proxyPort"];
+6->5 [style = dotted, label="true"];
+3->2 [style = solid, label="basicPropertyBinding"];
+5->2 [style = solid, label="accessKey"];
+}

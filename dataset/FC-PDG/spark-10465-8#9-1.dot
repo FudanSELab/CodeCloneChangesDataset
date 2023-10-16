@@ -1,0 +1,36 @@
+digraph {
+1 [style = filled, label = "main['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String(( args@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "JavaRDD<AssociationRules.Rule<String>> results = arules.run(freqItemsets)@@@13@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "JavaRDD<FPGrowth.FreqItemset<String>> freqItemsets = sc.parallelize(Arrays.asList(new FreqItemset<>(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1a58801,15L),new FreqItemset<>(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1a58808,35L),new FreqItemset<>(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1a5880f,12L)))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "AssociationRules arules = new AssociationRules().setMinConfidence(0.8)@@@12@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "@SuppressWarnings(\"unchecked\") JavaRDD<FPGrowth.FreqItemset<String>> freqItemsets = jsc.parallelize(Arrays.asList(new FreqItemset<String>(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1a58855,15L),new FreqItemset<String>(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1a5885c,35L),new FreqItemset<String>(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1a58863,12L)))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "System.out.println(rule.javaAntecedent() + \" => \" + rule.javaConsequent() + \", \" + rule.confidence())@@@15@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "JavaSparkContext sc = new JavaSparkContext(sparkConf)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "main['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "sc.stop()@@@17@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "runAssociationRules['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "JavaRDD<AssociationRules.Rule<String>> results = (new AssociationRules()).run(freqItemsets)@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "JavaRDD<FPGrowth.FreqItemset<String>> freqItemsets = sc.parallelize(Arrays.asList(new FreqItemset<String>(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1a5879b,15L),new FreqItemset<String>(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1a587a2,35L),new FreqItemset<String>(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1a587a9,12L)))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "SparkConf sparkConf = new SparkConf().setAppName(\"JavaAssociationRulesExample\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+7->8 [style = solid, label="freqItemsets"];
+1->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+9->4 [style = dotted, label="true"];
+3->6 [style = bold, label=""];
+10->2 [style = bold, label=""];
+7->10 [style = dashed, label="0"];
+11->12 [style = bold, label=""];
+10->8 [style = solid, label="freqItemsets"];
+1->4 [style = dotted, label="true"];
+2->12 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+7->2 [style = bold, label=""];
+3->6 [style = solid, label="sparkConf"];
+13->11 [style = bold, label=""];
+11->12 [style = solid, label="freqItemsets"];
+2->8 [style = bold, label=""];
+0->5 [style = bold, label=""];
+6->10 [style = bold, label=""];
+}

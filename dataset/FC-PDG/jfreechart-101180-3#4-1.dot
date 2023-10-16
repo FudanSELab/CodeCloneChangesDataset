@@ -1,0 +1,32 @@
+digraph {
+4 [style = filled, label = "s1.add(new Year(2008),3.0,3.3,3.3,3.3)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "s1.add(new Year(2007),2.0,2.2,2.2,2.2)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(new Year(2007),s1.getPeriod(0))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(Integer.MAX_VALUE,s1.getMaximumItemCount())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "OHLCSeries s1 = new OHLCSeries(\"s1\")@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testSetMaximumItemCount['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertEquals(new Year(2008),s1.getPeriod(1))@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "s1.setMaximumItemCount(2)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "s1.setMaximumItemCount(2)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "s1.add(new Year(2006),1.0,1.1,1.1,1.1)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testSetMaximumItemCount['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "assertEquals(2,s1.getMaximumItemCount())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testSetMaximumItemCount2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "OHLCSeries<String> s1 = new OHLCSeries<>(\"s1\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4->12 [style = bold, label=""];
+6->3 [style = bold, label=""];
+8->6 [style = bold, label=""];
+9->6 [style = bold, label=""];
+13->9 [style = bold, label=""];
+9->10 [style = dashed, label="0"];
+2->9 [style = bold, label=""];
+9->1 [style = bold, label=""];
+10->1 [style = bold, label=""];
+7->8 [style = bold, label=""];
+11->10 [style = bold, label=""];
+1->7 [style = bold, label=""];
+3->4 [style = bold, label=""];
+12->0 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

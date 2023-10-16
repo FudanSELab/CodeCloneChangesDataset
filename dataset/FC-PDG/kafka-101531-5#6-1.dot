@@ -1,0 +1,38 @@
+digraph {
+4 [style = filled, label = "shouldMaterializeAggregated['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "windowedStream.reduce(MockReducer.STRING_ADDER,Materialized.as(\"reduced\").withKeySerde(Serdes.String()).withValueSerde(Serdes.String()))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "shouldMaterializeReduced['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "assertThat(data,equalTo(Arrays.asList(KeyValue.pair(new Windowed<>(\"1\",new TimeWindow(0,500)),\"1+2\"),KeyValue.pair(new Windowed<>(\"1\",new TimeWindow(500,1000)),\"3\"),KeyValue.pair(new Windowed<>(\"2\",new TimeWindow(500,1000)),\"1\"))))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "shouldMaterializeAggregated['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "final WindowStore<String,String> windowStore = (WindowStore<String,String>)driver.allStateStores().get(\"reduced\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "processData()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final List<KeyValue<Windowed<String>,String>> data = StreamsTestUtils.toList(sessionStore.fetch(\"1\",\"2\"))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final SessionStore<String,String> sessionStore = (SessionStore<String,String>)driver.allStateStores().get(\"aggregated\")@@@5@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final List<KeyValue<Windowed<String>,String>> data = StreamsTestUtils.toList(sessionStore.fetch(\"1\",\"2\"))@@@6@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final List<KeyValue<Windowed<String>,String>> data = StreamsTestUtils.toList(windowStore.fetch(\"1\",\"2\",0,1000))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "stream.aggregate(MockInitializer.STRING_INIT,MockAggregator.TOSTRING_ADDER,sessionMerger,Materialized.as(\"aggregated\").withValueSerde(Serdes.String()))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final SessionStore<String,String> sessionStore = driver.getSessionStore(\"aggregated\")@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "assertThat(data,equalTo(Arrays.asList(KeyValue.pair(new Windowed<>(\"1\",new SessionWindow(10,15)),\"0+0+1+2\"),KeyValue.pair(new Windowed<>(\"1\",new SessionWindow(600,600)),\"0+3\"),KeyValue.pair(new Windowed<>(\"2\",new SessionWindow(600,600)),\"0+1\"))))@@@8@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "processData(driver)@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+13->10 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->14 [style = dashed, label="0"];
+11->14 [style = bold, label=""];
+0->12 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->3 [style = bold, label=""];
+12->11 [style = bold, label=""];
+1->7 [style = bold, label=""];
+3->0 [style = bold, label=""];
+9->6 [style = bold, label=""];
+3->9 [style = bold, label=""];
+6->1 [style = bold, label=""];
+5->1 [style = bold, label=""];
+1->7 [style = solid, label="data"];
+2->12 [style = dashed, label="0"];
+5->11 [style = dashed, label="0"];
+10->0 [style = bold, label=""];
+5->1 [style = solid, label="data"];
+11->14 [style = solid, label="data"];
+2->5 [style = bold, label=""];
+}

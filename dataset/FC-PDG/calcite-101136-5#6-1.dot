@@ -1,0 +1,30 @@
+digraph {
+8 [style = filled, label = "testDistributionHashEmpty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final RelDistribution dist = RelDistributions.hash(ImmutableList.of(1))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final RelMetadataQuery mq = rel.getCluster().getMetadataQuery()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testDistributionHash['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testDistributionHash['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "assertThat(d,is(dist))@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final RelDistribution dist = RelDistributions.hash(ImmutableList.of())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final RelNode rel = convertSql(\"select * from emp\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final LogicalExchange exchange = LogicalExchange.create(rel,dist)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "RelDistribution d = mq.getDistribution(exchange)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->9 [style = bold, label=""];
+5->1 [style = bold, label=""];
+5->6 [style = solid, label="dist"];
+5->9 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+8->4 [style = bold, label=""];
+9->1 [style = bold, label=""];
+2->6 [style = solid, label="d"];
+9->1 [style = solid, label="dist"];
+1->2 [style = solid, label="exchange"];
+4->5 [style = bold, label=""];
+2->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+4->1 [style = solid, label="rel"];
+5->1 [style = solid, label="dist"];
+9->6 [style = solid, label="dist"];
+0->2 [style = bold, label=""];
+}

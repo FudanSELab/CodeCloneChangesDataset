@@ -1,0 +1,24 @@
+digraph {
+6 [style = filled, label = "TopNQuery query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(Granularities.ALL).dimension(QueryRunnerTestHelper.marketDimension).metric(new DimensionTopNMetricSpec(null,StringComparators.NUMERIC)).threshold(2).intervals(QueryRunnerTestHelper.secondOnly).aggregators(duplicateAggregators(QueryRunnerTestHelper.rowsCount,new CountAggregatorFactory(\"rows1\"))).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "TestHelper.assertExpectedResults(expectedResults,runner.run(QueryPlus.wrap(query),new HashMap<String,Object>()))@@@5@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "TestHelper.assertExpectedResults(expectedResults,runner.run(QueryPlus.wrap(query)))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "testAlphaNumericTopNWithNullPreviousStop['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "TopNQuery query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(Granularities.ALL).dimension(QueryRunnerTestHelper.marketDimension).metric(new DimensionTopNMetricSpec(null,StringComparators.ALPHANUMERIC)).threshold(2).intervals(QueryRunnerTestHelper.secondOnly).aggregators(duplicateAggregators(QueryRunnerTestHelper.rowsCount,new CountAggregatorFactory(\"rows1\"))).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "List<Result<TopNResultValue>> expectedResults = Collections.singletonList(new Result<>(DateTimes.of(\"2011-04-02T00:00:00.000Z\"),new TopNResultValue(withDuplicateResults(Arrays.asList(ImmutableMap.of(\"market\",\"spot\",\"rows\",9L),ImmutableMap.of(\"market\",\"total_market\",\"rows\",2L)),\"rows\",\"rows1\"))))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testNumericDimensionTopNWithNullPreviousStop['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testAlphaNumericTopNWithNullPreviousStop['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->3 [style = bold, label=""];
+3->0 [style = solid, label="expectedResults"];
+6->3 [style = bold, label=""];
+4->1 [style = bold, label=""];
+3->5 [style = bold, label=""];
+3->5 [style = solid, label="expectedResults"];
+0->5 [style = dashed, label="0"];
+1->6 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+1->0 [style = solid, label="query"];
+3->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+6->0 [style = solid, label="query"];
+1->5 [style = solid, label="query"];
+}

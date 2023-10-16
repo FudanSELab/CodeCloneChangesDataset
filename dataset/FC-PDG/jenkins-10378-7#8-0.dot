@@ -1,0 +1,33 @@
+digraph {
+11 [style = filled, label = "expectedException.expectMessage(\"manager is missing a permission, one of Job/WipeOut, Run/Artifacts is required\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "expectedException.expect()@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "jenkins.setAuthorizationStrategy(new MockAuthorizationStrategy().grant(Jenkins.READ).everywhere().to(\"manager\"))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Exception e = Assert.assertThrows(,null)@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "jenkins.getACL().checkAnyPermission(Item.WIPEOUT,Build.ARTIFACTS)@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "checkAnyPermissionShouldShowDisabledPermissionsIfNotImplied['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "jenkins.getACL().checkAnyPermission(Jenkins.MANAGE,Jenkins.SYSTEM_READ)@@@10@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "checkAnyPermissionDoesNotShowDisabledPermissionsInError['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final User manager = User.getOrCreateByIdOrFullName(\"manager\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assert.assertEquals(\"manager is missing the Overall/Administer permission\",e.getMessage())@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "Jenkins jenkins = r.jenkins@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "expectedException.expectMessage(\"manager is missing the Overall/Administer permission\")@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "jenkins.setSecurityRealm(r.createDummySecurityRealm())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "checkAnyPermissionDoesNotShowDisabledPermissionsInError['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->5 [style = bold, label=""];
+6->1 [style = bold, label=""];
+5->2 [style = bold, label=""];
+7->0 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+10->8 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+3->7 [style = bold, label=""];
+1->10 [style = bold, label=""];
+9->7 [style = bold, label=""];
+0->6 [style = bold, label=""];
+2->4 [style = bold, label=""];
+13->7 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+11->2 [style = bold, label=""];
+2->12 [style = bold, label=""];
+1->11 [style = bold, label=""];
+}

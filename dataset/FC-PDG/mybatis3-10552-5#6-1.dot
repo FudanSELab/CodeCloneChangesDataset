@@ -1,0 +1,38 @@
+digraph {
+11 [style = filled, label = "Assertions.fail(\"We should have failed since we call next() when hasNext() returned false\")@@@12@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "Assert.assertEquals(1,usersCursor.getCurrentIndex())@@@9@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testCursorIteratorNoSuchElementExceptionWithHasNext['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "Assert.fail(\"We should have failed since we call next() when is no more items\")@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Iterator<User> iterator = usersCursor.iterator()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assertions.assertEquals(1,usersCursor.getCurrentIndex())@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "Assert.fail(\"We should have failed since we call next() when hasNext() returned false\")@@@12@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "Assert.assertEquals(\"User2\",user.getName())@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Assertions.assertEquals(\"User2\",user.getName())@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "iterator.next()@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "User user = iterator.next()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "testCursorIteratorNoSuchElementExceptionNoHasNext['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "Assertions.assertFalse(iterator.hasNext())@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "Assert.assertFalse(iterator.hasNext())@@@10@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "testCursorIteratorNoSuchElementExceptionWithHasNext['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->13 [style = dashed, label="0"];
+0->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+8->10 [style = bold, label=""];
+6->8 [style = dashed, label="0"];
+7->1 [style = bold, label=""];
+2->6 [style = bold, label=""];
+3->11 [style = bold, label=""];
+10->3 [style = bold, label=""];
+6->0 [style = bold, label=""];
+9->8 [style = bold, label=""];
+12->7 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+4->7 [style = bold, label=""];
+1->9 [style = bold, label=""];
+14->7 [style = bold, label=""];
+3->5 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+2->9 [style = dashed, label="0"];
+3->13 [style = bold, label=""];
+1->2 [style = bold, label=""];
+}

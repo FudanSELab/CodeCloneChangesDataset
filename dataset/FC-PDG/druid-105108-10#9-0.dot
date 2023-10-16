@@ -1,0 +1,31 @@
+digraph {
+7 [style = filled, label = "manualFlushEmitterWithBasicAuthenticationAndNewlineSeparating['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "manualFlushEmitterWithBasicAuthenticationAndNewlineSeparating['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return emitter@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "HttpEmitterConfig config = new HttpEmitterConfig.Builder(TARGET_URL).setFlushMillis(Long.MAX_VALUE).setFlushCount(Integer.MAX_VALUE).setFlushTimeout(BaseHttpEmittingConfig.TEST_FLUSH_TIMEOUT_MILLIS).setBasicAuthentication(authentication).setBatchingStrategy(BatchingStrategy.NEWLINES).setMaxBatchSize(1024 * 1024).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "HttpEmitterConfig config = new HttpEmitterConfig.Builder(TARGET_URL).setFlushMillis(Long.MAX_VALUE).setFlushTimeout(TimeUnit.MILLISECONDS.convert(10,TimeUnit.SECONDS)).setFlushCount(size).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "PasswordProvider authentication@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "int size@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "sizeBasedEmitter['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "emitter.start()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "HttpPostEmitter emitter = new HttpPostEmitter(config,httpClient,JSON_MAPPER)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "HttpEmitterConfig config = new HttpEmitterConfig.Builder(TARGET_URL).setFlushMillis(Long.MAX_VALUE).setFlushCount(Integer.MAX_VALUE).setBasicAuthentication(authentication).setBatchingStrategy(BatchingStrategy.NEWLINES).setMaxBatchSize(1024 * 1024).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0->8 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+6->4 [style = solid, label="config"];
+4->1 [style = solid, label="emitter"];
+9->10 [style = bold, label=""];
+2->4 [style = solid, label="config"];
+3->2 [style = bold, label=""];
+7->0 [style = dotted, label="true"];
+2->6 [style = dashed, label="0"];
+10->4 [style = solid, label="config"];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+7->6 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+3->0 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+10->4 [style = bold, label=""];
+}

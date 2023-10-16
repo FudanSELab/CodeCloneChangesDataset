@@ -1,0 +1,27 @@
+digraph {
+9 [style = filled, label = "assertThat(graph.outDegree(N1)).isEqualTo(1)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "degree_selfLoop['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "assume().that(allowsSelfLoops()).isTrue()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "outDegree_selfLoop['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(graph.degree(N1)).isEqualTo(2)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "putEdge(N1,N1)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assume().that(graph.allowsSelfLoops()).isTrue()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "putEdge(N1,N2)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(graph.degree(N1)).isEqualTo(3)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThat(graph.outDegree(N1)).isEqualTo(2)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "degree_selfLoop['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+3->9 [style = bold, label=""];
+5->8 [style = dashed, label="0"];
+1->8 [style = bold, label=""];
+3->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+9->1 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+2->9 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+7->3 [style = bold, label=""];
+10->0 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

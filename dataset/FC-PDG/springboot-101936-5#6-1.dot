@@ -1,0 +1,31 @@
+digraph {
+9 [style = filled, label = "Map<String,String> mappings = new HashMap<>()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "MimeMappings mappings = new MimeMappings()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(clone.get(\"baz\")).isNull()@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "mappings.put(\"foo\",\"bar\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "createFromExisting['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "MimeMappings clone = new MimeMappings(mappings)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "createFromExisting['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "createFromMap['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(clone.get(\"foo\")).isEqualTo(\"bar\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "mappings.put(\"baz\",\"bar\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "mappings.add(\"foo\",\"bar\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "mappings.add(\"baz\",\"bar\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->8 [style = dashed, label="0"];
+6->3 [style = bold, label=""];
+9->6 [style = solid, label="mappings"];
+5->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+7->0 [style = bold, label=""];
+0->6 [style = solid, label="mappings"];
+1->0 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+9->10 [style = bold, label=""];
+8->5 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+11->9 [style = bold, label=""];
+0->4 [style = bold, label=""];
+4->6 [style = bold, label=""];
+10->6 [style = bold, label=""];
+6->8 [style = bold, label=""];
+}

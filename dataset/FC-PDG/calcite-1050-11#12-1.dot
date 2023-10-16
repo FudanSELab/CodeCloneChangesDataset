@@ -1,0 +1,18 @@
+digraph {
+2 [style = filled, label = "testLeftJoin['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(\"(Bill works in Marketing, \" + \"Cedric works in null, \" + \"Eric works in Sales, \" + \"Fred works in Sales, \" + \"Janet works in Sales, \" + \"null works in HR(\",s)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(\"(Bill works in Marketing, \" + \"Cedric works in null, \" + \"Eric works in Sales, \" + \"Fred works in Sales, \" + \"Janet works in Sales(\",s)@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testFullJoin['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testLeftJoin['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "String s = Linq4j.asEnumerable(emps).concat(Linq4j.asEnumerable(badEmps)).hashJoin(Linq4j.asEnumerable(depts),EMP_DEPTNO_SELECTOR,DEPT_DEPTNO_SELECTOR,null,null,true,true).orderBy(Functions.identitySelector()).toList().toString()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String s = Linq4j.asEnumerable(emps).concat(Linq4j.asEnumerable(badEmps)).hashJoin(Linq4j.asEnumerable(depts),EMP_DEPTNO_SELECTOR,DEPT_DEPTNO_SELECTOR,null,null,false,true).orderBy(Functions.identitySelector()).toList().toString()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->4 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+0->1 [style = solid, label="s"];
+2->0 [style = bold, label=""];
+5->4 [style = bold, label=""];
+5->4 [style = solid, label="s"];
+0->5 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+}

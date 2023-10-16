@@ -1,0 +1,26 @@
+digraph {
+11 [style = filled, label = "Tokenizer tokenizer@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final MessageReflection.MergeTarget target@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "mergeField['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "final ExtensionRegistry extensionRegistry@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "TextFormatParseInfoTree.Builder parseTreeBuilder@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "final Tokenizer tokenizer@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final ExtensionRegistry extensionRegistry@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "skipField['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "mergeField['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final Tokenizer tokenizer@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "TextFormatParseInfoTree.Builder parseTreeBuilder@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final MessageReflection.MergeTarget target@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "List<String> unknownFields@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+2->3 [style = dotted, label="true"];
+5->6 [style = dotted, label="true"];
+5->9 [style = dotted, label="true"];
+2->0 [style = dotted, label="true"];
+5->8 [style = dotted, label="true"];
+4->10 [style = dashed, label="0"];
+2->1 [style = dotted, label="true"];
+5->7 [style = dotted, label="true"];
+5->10 [style = dotted, label="true"];
+2->4 [style = dotted, label="true"];
+12->11 [style = dotted, label="true"];
+}

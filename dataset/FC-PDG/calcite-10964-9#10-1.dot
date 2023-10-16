@@ -1,0 +1,31 @@
+digraph {
+0 [style = filled, label = "hepPlanner.addRule(ProjectToWindowRule.PROJECT)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final String sql = \"select\" + \" sum(deptno) over(partition by deptno order by sal) as sum1,\" + \"sum(deptno + sal) over(partition by deptno order by sal) as sum2\" + \"from emp\"@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "sql(sql).with(hepPlanner).check()@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "HepProgram preProgram = new HepProgramBuilder().build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final String sql = \"select\" + \" count(*) over(partition by empno order by sal) as count1,\" + \" count(*) over(partition by deptno order by sal) as count2,\" + \" sum(deptno) over(partition by empno order by sal) as sum1,\" + \" sum(deptno) over(partition by deptno order by sal) as sum2\" + \"from emp\"@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testProjectToWindowRuleForMultipleWindows['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testProjectToWindowRuleForMultipleWindows['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "testExpressionInWindowFunction['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "HepProgramBuilder builder = new HepProgramBuilder()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "hepPlanner.addRule(CoreRules.PROJECT_TO_LOGICAL_PROJECT_AND_WINDOW)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "builder.addRuleClass()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "HepPlanner hepPlanner = new HepPlanner(builder.build())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "sql(sql).withPre(preProgram).with(hepPlanner).check()@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->1 [style = bold, label=""];
+7->3 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->5 [style = bold, label=""];
+0->9 [style = bold, label=""];
+8->6 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+3->12 [style = bold, label=""];
+3->7 [style = bold, label=""];
+9->7 [style = bold, label=""];
+10->1 [style = bold, label=""];
+4->6 [style = bold, label=""];
+11->10 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+}

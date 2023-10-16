@@ -1,0 +1,13 @@
+digraph {
+3 [style = filled, label = "testInvalidDecimalConversions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "testInvalidConversions(Literal.of(new BigDecimal(\"34.11\")),Types.BooleanType.get(),Types.IntegerType.get(),Types.LongType.get(),Types.FloatType.get(),Types.DoubleType.get(),Types.DateType.get(),Types.TimeType.get(),Types.TimestampType.withZone(),Types.TimestampType.withoutZone(),Types.DecimalType.of(9,4),Types.StringType.get(),Types.UUIDType.get(),Types.FixedType.ofLength(1),Types.BinaryType.get())@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "testInvalidDecimalConversions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testInvalidConversions(Literal.of(new BigDecimal(\"34.11\")),Types.BooleanType.get(),Types.IntegerType.get(),Types.LongType.get(),Types.FloatType.get(),Types.DoubleType.get(),Types.DateType.get(),Types.TimeType.get(),Types.TimestampType.withZone(),Types.TimestampType.withoutZone(),Types.StringType.get(),Types.UUIDType.get(),Types.FixedType.ofLength(1),Types.BinaryType.get())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testInvalidConversions(Literal.of(34.11D),Types.BooleanType.get(),Types.IntegerType.get(),Types.LongType.get(),Types.DateType.get(),Types.TimeType.get(),Types.TimestampType.withZone(),Types.TimestampType.withoutZone(),Types.StringType.get(),Types.UUIDType.get(),Types.FixedType.ofLength(1),Types.BinaryType.get())@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testInvalidDoubleConversions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->4 [style = dashed, label="0"];
+1->2 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+}

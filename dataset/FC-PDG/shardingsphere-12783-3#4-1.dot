@@ -1,0 +1,27 @@
+digraph {
+5 [style = filled, label = "YamlReadwriteSplittingDataSourceRuleConfiguration result = new YamlReadwriteSplittingDataSourceRuleConfiguration()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "result.setAutoAwareDataSourceName(dataSourceRuleConfig.getAutoAwareDataSourceName())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "swapToYamlConfiguration['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "result.setReadDataSourceNames(dataSourceRuleConfig.getReadDataSourceNames())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "swapToYamlConfiguration['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "result.setQueryConsistent(dataSourceRuleConfig.isQueryConsistent())@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "result.setWriteDataSourceName(dataSourceRuleConfig.getWriteDataSourceName())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return result@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "result.setLoadBalancerName(dataSourceRuleConfig.getLoadBalancerName())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final ReadwriteSplittingDataSourceRuleConfiguration dataSourceRuleConfig@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "swapToYamlConfiguration['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7->9 [style = bold, label=""];
+8->1 [style = dotted, label="true"];
+4->3 [style = bold, label=""];
+10->1 [style = dotted, label="true"];
+2->7 [style = bold, label=""];
+10->5 [style = bold, label=""];
+3->2 [style = bold, label=""];
+8->5 [style = bold, label=""];
+5->6 [style = solid, label="result"];
+0->1 [style = dotted, label="true"];
+5->4 [style = bold, label=""];
+7->6 [style = bold, label=""];
+9->6 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

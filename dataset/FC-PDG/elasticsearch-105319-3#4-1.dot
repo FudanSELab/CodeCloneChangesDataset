@@ -1,0 +1,23 @@
+digraph {
+8 [style = filled, label = "testUnmappedWithBadMissingField['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testBadMissingField['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "expectThrows(,null)@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "MappedFieldType fieldType = new NumberFieldMapper.NumberFieldType(NumberFieldMapper.NumberType.INTEGER)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testBadMissingField['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "MinAggregationBuilder aggregationBuilder = new MinAggregationBuilder(\"min\").field(\"number\").missing(\"not_a_number\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "BoxplotAggregationBuilder aggregationBuilder = new BoxplotAggregationBuilder(\"boxplot\").field(\"does_not_exist\").missing(\"not_a_number\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "fieldType.setName(\"number\")@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "expectThrows(,null)@@@5@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "MappedFieldType fieldType = new NumberFieldMapper.NumberFieldType(\"number\",NumberFieldMapper.NumberType.INTEGER)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6->1 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+7->5 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+1->7 [style = bold, label=""];
+9->2 [style = bold, label=""];
+4->0 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

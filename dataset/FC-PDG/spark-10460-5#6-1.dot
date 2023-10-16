@@ -1,0 +1,38 @@
+digraph {
+3 [style = filled, label = "JavaPairDStream<Integer,Double> prediction = slr.predictOnValues(test)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "List<Tuple2<Integer,Vector>> testBatch = Arrays.asList(new Tuple2<Integer,Vector>(10,Vectors.dense(1.0)),new Tuple2<Integer,Vector>(11,Vectors.dense(0.0)))@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "slr.trainOn(training)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "attachTestOutputStream(prediction.count())@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "List<LabeledPoint> trainingBatch = Arrays.asList(new LabeledPoint(1.0,Vectors.dense(1.0)),new LabeledPoint(0.0,Vectors.dense(0.0)))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "List<Tuple2<Integer,Vector>> testBatch = Arrays.asList(new Tuple2<>(10,Vectors.dense(1.0)),new Tuple2<>(11,Vectors.dense(0.0)))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "javaAPI['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "StreamingLinearRegressionWithSGD slr = new StreamingLinearRegressionWithSGD().setNumIterations(2).setInitialWeights(Vectors.dense(0.0))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "StreamingLogisticRegressionWithSGD slr = new StreamingLogisticRegressionWithSGD().setNumIterations(2).setInitialWeights(Vectors.dense(0.0))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "javaAPI['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "JavaDStream<LabeledPoint> training = attachTestInputStream(ssc,Arrays.asList(trainingBatch,trainingBatch),2)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "JavaPairDStream<Integer,Vector> test = JavaPairDStream.fromJavaDStream(attachTestInputStream(ssc,Arrays.asList(testBatch,testBatch),2))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "javaAPI['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "runStreams(ssc,2,2)@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->6 [style = solid, label="trainingBatch"];
+7->12 [style = bold, label=""];
+2->3 [style = bold, label=""];
+6->2 [style = solid, label="training"];
+0->11 [style = dashed, label="0"];
+6->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+0->7 [style = solid, label="testBatch"];
+13->1 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+0->7 [style = bold, label=""];
+12->2 [style = bold, label=""];
+1->6 [style = bold, label=""];
+8->5 [style = bold, label=""];
+3->8 [style = bold, label=""];
+6->11 [style = bold, label=""];
+7->3 [style = solid, label="test"];
+9->1 [style = bold, label=""];
+10->1 [style = bold, label=""];
+11->7 [style = bold, label=""];
+11->7 [style = solid, label="testBatch"];
+}

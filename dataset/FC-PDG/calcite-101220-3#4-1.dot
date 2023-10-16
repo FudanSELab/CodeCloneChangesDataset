@@ -1,0 +1,17 @@
+digraph {
+1 [style = filled, label = "final String sql = \"select * from emp e\" + \"join dept d on e.deptno=d.deptno\" + \"order by e.ename\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testCorrelateInnerJoinDeriveLeft['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Query.create(sql).addRule(JoinToCorrelateRule.INSTANCE).removeRule(EnumerableRules.ENUMERABLE_JOIN_RULE).removeRule(EnumerableRules.ENUMERABLE_MERGE_JOIN_RULE).removeRule(EnumerableRules.ENUMERABLE_SORT_RULE).check()@@@4@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testCorrelateInnerJoinNoDerive['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final String sql = \"select * from emp e\" + \"join dept d on e.deptno=d.deptno\" + \"order by e.ename, d.name\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Query.create(sql).addRule(CoreRules.JOIN_TO_CORRELATE).removeRule(EnumerableRules.ENUMERABLE_JOIN_RULE).removeRule(EnumerableRules.ENUMERABLE_MERGE_JOIN_RULE).removeRule(EnumerableRules.ENUMERABLE_SORT_RULE).check()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testCorrelateInnerJoinDeriveLeft['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->3 [style = bold, label=""];
+4->1 [style = bold, label=""];
+6->0 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+5->6 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+}

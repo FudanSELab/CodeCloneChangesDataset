@@ -1,0 +1,22 @@
+digraph {
+0 [style = filled, label = "util.tableEnv().executeSql(\"CREATE TABLE hTable (\" + \" family1 ROW<col1 INT>,\" + \" family2 ROW<col1 STRING, col2 BIGINT>,\" + \" rowkey STRING, \" + \" PRIMARY KEY (family1) NOT ENFORCED \" + \") WITH (\" + \" 'connector' = 'hbase-1.4',\" + \" 'table-name' = 'my_table',\" + \" 'zookeeper.quorum' = 'localhost:2021'\" + \")\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "util.tableEnv().executeSql(\"CREATE TABLE hTable (\" + \" family1 ROW<col1 INT>,\" + \" family2 ROW<col1 STRING, col2 BIGINT>\" + \") WITH (\" + \" 'connector' = 'hbase-2.2',\" + \" 'table-name' = 'my_table',\" + \" 'zookeeper.quorum' = 'localhost:2021'\" + \")\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testNoneRowKey['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testInvalidPrimaryKey['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "util.verifyExecPlan(\"SELECT * FROM hTable\")@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "thrown().expect(containsCause(new IllegalArgumentException(\"HBase table requires to define a row key field. \" + \"A row key field is defined as an atomic type, \" + \"column families and qualifiers are defined as ROW type.\")))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testInvalidPrimaryKey['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "util.verifyPlan(\"SELECT * FROM hTable\")@@@5@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "thrown().expect(containsCause(new IllegalArgumentException(\"Primary key of HBase table must be defined on the row key field. \" + \"A row key field is defined as an atomic type, \" + \"column families and qualifiers are defined as ROW type.\")))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->8 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+1->2 [style = bold, label=""];
+8->6 [style = bold, label=""];
+5->0 [style = bold, label=""];
+7->8 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+}

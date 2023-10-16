@@ -1,0 +1,36 @@
+digraph {
+7 [style = filled, label = "buffer.append(LS).append(\"Metadata Type: \").append(getClass().getName())@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "buffer.append(LS).append(\"GroupId: \").append(getGroupId())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "StringBuilder buffer = new StringBuilder(256)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "extendedToString['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "extendedToString['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "buffer.append(LS).append(\"ArtifactId: \").append(getArtifactId())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "buffer.append(\"ArtifactId: \").append(getArtifactId())@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "buffer.append(LS).append(\"Artifact Metadata\").append(LS).append(\"--------------------------\")@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "extendedToString['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "buffer.append(\"Repository Metadata--------------------------\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return buffer.toString()@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "buffer.append(\"Artifact Metadata--------------------------\")@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "buffer.append(\"GroupId: \").append(getGroupId())@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "buffer.append(\"Metadata Type: \").append(getClass().getName())@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+5->8 [style = bold, label=""];
+3->6 [style = bold, label=""];
+7->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+5->12 [style = bold, label=""];
+8->11 [style = bold, label=""];
+11->10 [style = bold, label=""];
+4->5 [style = bold, label=""];
+10->7 [style = bold, label=""];
+2->1 [style = bold, label=""];
+12->6 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+6->11 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+13->5 [style = bold, label=""];
+}

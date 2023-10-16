@@ -1,0 +1,36 @@
+digraph {
+6 [style = filled, label = "GroupByQueryRunnerTestHelper.runQuery(FACTORY,runner,query)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "Assert.assertEquals(2,MERGE_BUFFER_POOL.getMinRemainBufferNum())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "Assert.assertEquals(2,mergeBufferPool.getMinRemainBufferNum())@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "Assert.assertEquals(3,MERGE_BUFFER_POOL.getPoolSize())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "testSimpleGroupBy['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "final GroupByQuery query = GroupByQuery.builder().setDataSource(QueryRunnerTestHelper.DATA_SOURCE).setGranularity(Granularities.ALL).setInterval(QueryRunnerTestHelper.FIRST_TO_THIRD).setAggregatorSpecs(new LongSumAggregatorFactory(\"rows\",\"rows\")).setContext(ImmutableMap.of(QueryContexts.TIMEOUT_KEY,TIMEOUT)).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "final GroupByQuery query = GroupByQuery.builder().setDataSource(new QueryDataSource(GroupByQuery.builder().setDataSource(QueryRunnerTestHelper.dataSource).setInterval(QueryRunnerTestHelper.firstToThird).setGranularity(Granularities.ALL).setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\")).setAggregatorSpecs(Collections.singletonList(QueryRunnerTestHelper.rowsCount)).build())).setGranularity(Granularities.ALL).setInterval(QueryRunnerTestHelper.firstToThird).setAggregatorSpecs(new LongSumAggregatorFactory(\"rows\",\"rows\")).setContext(ImmutableMap.of(QueryContexts.TIMEOUT_KEY,TIMEOUT)).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "Assert.assertEquals(1,mergeBufferPool.getMinRemainBufferNum())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testSimpleGroupBy['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "GroupByQueryRunnerTestHelper.runQuery(factory,runner,query)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Assert.assertEquals(3,mergeBufferPool.getPoolSize())@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testNestedGroupBy['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final GroupByQuery query = GroupByQuery.builder().setDataSource(QueryRunnerTestHelper.dataSource).setGranularity(Granularities.ALL).setInterval(QueryRunnerTestHelper.firstToThird).setAggregatorSpecs(new LongSumAggregatorFactory(\"rows\",\"rows\")).setContext(ImmutableMap.of(QueryContexts.TIMEOUT_KEY,TIMEOUT)).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3->5 [style = dashed, label="0"];
+9->6 [style = solid, label="query"];
+0->12 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+9->6 [style = bold, label=""];
+7->9 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+11->0 [style = bold, label=""];
+8->5 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+6->8 [style = bold, label=""];
+4->1 [style = bold, label=""];
+12->3 [style = bold, label=""];
+1->0 [style = solid, label="query"];
+10->11 [style = bold, label=""];
+11->0 [style = solid, label="query"];
+}

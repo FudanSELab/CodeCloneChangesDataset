@@ -1,0 +1,27 @@
+digraph {
+11 [style = filled, label = "newSchema = new SchemaUpdate(SCHEMA,SCHEMA_LAST_COLUMN_ID).addColumn(\"new\",Types.StructType.of(Types.NestedField.optional(SCHEMA_LAST_COLUMN_ID + 1,\"field\",Types.StringType.get()))).setIdentifierFields(\"new.field\").apply()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Schema newSchema = new SchemaUpdate(SCHEMA,SCHEMA_LAST_COLUMN_ID).addColumn(null,\"dot.field\",Types.StringType.get()).setIdentifierFields(\"id\",\"dot.field\").apply()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "newSchema = new SchemaUpdate(SCHEMA,SCHEMA_LAST_COLUMN_ID).addColumn(\"new\",Types.StructType.of(Types.NestedField.optional(SCHEMA_LAST_COLUMN_ID + 1,\"field\",Types.StructType.of(Types.NestedField.optional(SCHEMA_LAST_COLUMN_ID + 2,\"nested\",Types.StringType.get()))))).setIdentifierFields(\"new.field.nested\").apply()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "Schema newSchema = new SchemaUpdate(SCHEMA,SCHEMA_LAST_COLUMN_ID).setIdentifierFields(\"preferences.feature1\").apply()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Assert.assertEquals(\"add a field with dot as identifier should succeed\",Sets.newHashSet(newSchema.findField(\"id\").fieldId(),newSchema.findField(\"dot.field\").fieldId()),newSchema.identifierFieldIds())@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Assert.assertEquals(\"set existing nested field as identifier should succeed\",Sets.newHashSet(newSchema.findField(\"preferences.feature1\").fieldId()),newSchema.identifierFieldIds())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testAddNestedIdentifierFieldColumns['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Schema newSchema = new SchemaUpdate(SCHEMA,SCHEMA_LAST_COLUMN_ID).allowIncompatibleChanges().addRequiredColumn(null,\"dot.field\",Types.StringType.get()).setIdentifierFields(\"id\",\"dot.field\").apply()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "testAddDottedIdentifierFieldColumns['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assert.assertEquals(\"set newly added multi-layer nested field as identifier should succeed\",Sets.newHashSet(newSchema.findField(\"new.field.nested\").fieldId()),newSchema.identifierFieldIds())@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Assert.assertEquals(\"set newly added nested field as identifier should succeed\",Sets.newHashSet(newSchema.findField(\"new.field\").fieldId()),newSchema.identifierFieldIds())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testAddDottedIdentifierFieldColumns['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7->9 [style = bold, label=""];
+5->10 [style = bold, label=""];
+11->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+4->0 [style = bold, label=""];
+10->8 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+6->11 [style = bold, label=""];
+9->6 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+}

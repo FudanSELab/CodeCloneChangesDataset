@@ -1,0 +1,32 @@
+digraph {
+3 [style = filled, label = "return jetty@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "nodeProperties.setProperty(\"solr.data.dir\",instance.getDataDir())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "createAndStartJetty['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "JettySolrRunner jetty = new JettySolrRunner(instance.getHomeDir(),nodeProperties,jettyConfig)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "SolrInstance instance@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "FileUtils.copyFile(new File(SolrTestCaseJ4.TEST_HOME(),\"solr.xml\"),new File(instance.getHomeDir(),\"solr.xml\"))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "JettyConfig jettyConfig = JettyConfig.builder().setContext(\"/solr\").setPort(0).build()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Properties nodeProperties = new Properties()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "createAndStartJetty['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "TestReplicationHandler.SolrInstance instance@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "createAndStartJetty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "SolrInstance instance@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "jetty.start()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->6 [style = dotted, label="true"];
+7->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+1->8 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+10->1 [style = bold, label=""];
+5->0 [style = solid, label="jettyConfig"];
+10->9 [style = dotted, label="true"];
+11->1 [style = bold, label=""];
+0->3 [style = solid, label="jetty"];
+11->12 [style = dotted, label="true"];
+8->7 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->0 [style = solid, label="nodeProperties"];
+6->12 [style = dashed, label="0"];
+}

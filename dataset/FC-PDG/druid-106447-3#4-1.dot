@@ -1,0 +1,26 @@
+digraph {
+4 [style = filled, label = "List<Row> expectedResults = Collections.singletonList(GroupByQueryRunnerTestHelper.createExpectedRow(\"1970-01-01T00:00:00.000Z\",\"market\",\"spot\",QueryRunnerTestHelper.uniqueMetric,QueryRunnerTestHelper.UNIQUES_9,QueryRunnerTestHelper.hyperUniqueFinalizingPostAggMetric,QueryRunnerTestHelper.UNIQUES_9))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "TestHelper.assertExpectedObjects(expectedResults,results,\"order-limit\")@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "GroupByQuery query = new GroupByQuery.Builder().setDataSource(QueryRunnerTestHelper.dataSource).setGranularity(QueryRunnerTestHelper.allGran).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.marketDimension,QueryRunnerTestHelper.marketDimension)).setInterval(QueryRunnerTestHelper.fullOnInterval).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(QueryRunnerTestHelper.uniqueMetric,OrderByColumnSpec.Direction.DESCENDING)),3)).setHavingSpec(new GreaterThanHavingSpec(QueryRunnerTestHelper.uniqueMetric,8)).setAggregatorSpecs(QueryRunnerTestHelper.qualityUniques).setPostAggregatorSpecs(Collections.singletonList(new HyperUniqueFinalizingPostAggregator(QueryRunnerTestHelper.hyperUniqueFinalizingPostAggMetric,QueryRunnerTestHelper.uniqueMetric))).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "GroupByQuery query = new GroupByQuery.Builder().setDataSource(QueryRunnerTestHelper.dataSource).setGranularity(QueryRunnerTestHelper.allGran).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.marketDimension,QueryRunnerTestHelper.marketDimension)).setInterval(QueryRunnerTestHelper.fullOnIntervalSpec).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(QueryRunnerTestHelper.uniqueMetric,OrderByColumnSpec.Direction.DESCENDING)),3)).setHavingSpec(new GreaterThanHavingSpec(QueryRunnerTestHelper.uniqueMetric,8)).setAggregatorSpecs(QueryRunnerTestHelper.qualityUniques).setPostAggregatorSpecs(Collections.singletonList(new HyperUniqueFinalizingPostAggregator(QueryRunnerTestHelper.hyperUniqueFinalizingPostAggMetric,QueryRunnerTestHelper.uniqueMetric))).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "testGroupByWithHavingOnHyperUnique['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "GroupByQuery query = new GroupByQuery.Builder().setDataSource(QueryRunnerTestHelper.dataSource).setGranularity(QueryRunnerTestHelper.allGran).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.marketDimension,QueryRunnerTestHelper.marketDimension)).setInterval(QueryRunnerTestHelper.fullOnInterval).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(QueryRunnerTestHelper.hyperUniqueFinalizingPostAggMetric,OrderByColumnSpec.Direction.DESCENDING)),3)).setHavingSpec(new GreaterThanHavingSpec(QueryRunnerTestHelper.hyperUniqueFinalizingPostAggMetric,8)).setAggregatorSpecs(QueryRunnerTestHelper.qualityUniques).setPostAggregatorSpecs(Collections.singletonList(new HyperUniqueFinalizingPostAggregator(QueryRunnerTestHelper.hyperUniqueFinalizingPostAggMetric,QueryRunnerTestHelper.uniqueMetric))).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testGroupByWithHavingOnHyperUnique['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Iterable<Row> results = GroupByQueryRunnerTestHelper.runQuery(factory,runner,query)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testGroupByWithHavingOnFinalizedHyperUnique['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6->5 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+7->1 [style = solid, label="query"];
+2->1 [style = solid, label="query"];
+1->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+3->2 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+5->1 [style = solid, label="query"];
+2->4 [style = bold, label=""];
+1->0 [style = solid, label="results"];
+4->0 [style = solid, label="expectedResults"];
+5->4 [style = bold, label=""];
+8->7 [style = bold, label=""];
+}

@@ -1,0 +1,37 @@
+digraph {
+4 [style = filled, label = "GeoShapeFieldMapper geoShapeFieldMapper = (GeoShapeFieldMapper)fieldMapper@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(geoShapeFieldMapper.fieldType().hasDocValues(),equalTo(false))@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertTrue(geoShapeFieldMapper.fieldType().hasDocValues())@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testDefaultConfiguration['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(fieldMapper,instanceOf())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertThat(geoShapeFieldMapper.fieldType().orientation(),equalTo(ShapeBuilder.Orientation.RIGHT))@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Mapper fieldMapper = mapper.mappers().getMapper(\"field\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "GeoShapeWithDocValuesFieldMapper geoShapeFieldMapper = (GeoShapeWithDocValuesFieldMapper)fieldMapper@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "testDefaultConfiguration['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "DocumentMapper mapper = createDocumentMapper(fieldMapping(null))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(fieldMapper,instanceOf())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThat(geoShapeFieldMapper.fieldType().orientation(),equalTo(Orientation.RIGHT))@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "testDefaultConfiguration['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9->0 [style = bold, label=""];
+0->6 [style = bold, label=""];
+1->12 [style = solid, label="fieldMapper"];
+2->1 [style = bold, label=""];
+1->4 [style = solid, label="fieldMapper"];
+1->3 [style = bold, label=""];
+8->6 [style = bold, label=""];
+12->9 [style = bold, label=""];
+1->3 [style = solid, label="fieldMapper"];
+3->4 [style = bold, label=""];
+11->2 [style = bold, label=""];
+4->0 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+4->9 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+0->10 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+7->2 [style = bold, label=""];
+1->9 [style = solid, label="fieldMapper"];
+1->12 [style = bold, label=""];
+4->8 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+}

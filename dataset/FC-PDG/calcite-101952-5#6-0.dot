@@ -1,0 +1,28 @@
+digraph {
+7 [style = filled, label = "RelOptRuleCall call@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Match rel@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Match rel@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "return ImmutableList.copyOf(match(mq,rel.getInput(),rel.getRowType(),rel.getPattern(),rel.isStrictStart(),rel.isStrictEnd(),rel.getPatternDefinitions(),rel.getMeasures(),rel.getAfter(),rel.getSubsets(),rel.isAllRows(),rel.getPartitionKeys(),rel.getOrderKeys(),rel.getInterval()))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "collations['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "call.transformTo(match)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "collations['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "RelMetadataQuery mq@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return copyOf(match(mq,rel.getInput(),rel.getRowType(),rel.getPattern(),rel.isStrictStart(),rel.isStrictEnd(),rel.getPatternDefinitions(),rel.getMeasures(),rel.getAfter(),rel.getSubsets(),rel.isAllRows(),rel.getPartitionKeys(),rel.getOrderKeys(),rel.getInterval()))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "onMatch['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final RelNode match = LogicalMatch.create(oldRel.getCluster(),oldRel.getTraitSet(),oldRel.getInput(),oldRel.getRowType(),oldRel.getPattern(),oldRel.isStrictStart(),oldRel.isStrictEnd(),oldRel.getPatternDefinitions(),oldRel.getMeasures(),oldRel.getAfter(),oldRel.getSubsets(),oldRel.isAllRows(),oldRel.getPartitionKeys(),oldRel.getOrderKeys(),oldRel.getInterval())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "final LogicalMatch oldRel = call.rel(0)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2->3 [style = dotted, label="true"];
+11->7 [style = dotted, label="true"];
+6->4 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+2->0 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+6->3 [style = dotted, label="true"];
+10->8 [style = bold, label=""];
+8->9 [style = solid, label="match"];
+2->1 [style = dotted, label="true"];
+11->10 [style = bold, label=""];
+3->0 [style = solid, label="mq"];
+3->4 [style = solid, label="mq"];
+8->9 [style = bold, label=""];
+}

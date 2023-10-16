@@ -1,0 +1,38 @@
+digraph {
+1 [style = filled, label = "this.ignoreAbove = Integer.MAX_VALUE@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "KeywordFieldType['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "String name@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "KeywordFieldType['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "KeywordFieldType['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "super(name,fieldType.indexOptions() != IndexOptions.NONE,false,false,new TextSearchInfo(fieldType,null,Lucene.KEYWORD_ANALYZER,Lucene.KEYWORD_ANALYZER),Collections.emptyMap())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "FieldType fieldType@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "this.normalizer = Lucene.KEYWORD_ANALYZER@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "FieldType fieldType@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "String name@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "this.eagerGlobalOrdinals = false@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "NamedAnalyzer analyzer@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "this.scriptValues = null@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+14 [style = filled, label = "super(name,true,false,true,new TextSearchInfo(Defaults.FIELD_TYPE,null,analyzer,analyzer),Collections.emptyMap())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "this.nullValue = null@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11->14 [style = bold, label=""];
+9->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+11->12 [style = dotted, label="true"];
+8->4 [style = solid, label="fieldType"];
+11->13 [style = dotted, label="true"];
+0->6 [style = dotted, label="true"];
+7->4 [style = solid, label="name"];
+9->8 [style = dotted, label="true"];
+13->14 [style = solid, label="name"];
+3->10 [style = bold, label=""];
+5->1 [style = bold, label=""];
+12->14 [style = solid, label="analyzer"];
+0->4 [style = bold, label=""];
+7->13 [style = dashed, label="0"];
+6->4 [style = solid, label="fieldType"];
+1->2 [style = bold, label=""];
+9->7 [style = dotted, label="true"];
+4->5 [style = bold, label=""];
+0->7 [style = dotted, label="true"];
+14->5 [style = bold, label=""];
+}

@@ -1,0 +1,38 @@
+digraph {
+6 [style = filled, label = "Schema schema = KafkaReporterUtils.getGobblinTrackingEventSchema()@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Builder<?> builder@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "KafkaAvroEventKeyValueReporter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "this.serializer.setSchemaVersionWriter(new SchemaRegistryVersionWriter(builder.registry.get(),builder.topic,Optional.of(schema)))@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "KafkaAvroEventReporter['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "super(builder)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Schema schema = new Schema.Parser().parse(getClass().getClassLoader().getResourceAsStream(\"GobblinTrackingEvent.avsc\"))@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "KafkaAvroEventKeyValueReporter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "Builder<?> builder@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "builder.registry.isPresent()@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "this.serializer.setSchemaVersionWriter(schemaVersionWriter)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "SchemaRegistryVersionWriter schemaVersionWriter = builder.schemaId.isPresent()? new SchemaRegistryVersionWriter(builder.registry.get(),builder.topic,schema,builder.schemaId.get()): new SchemaRegistryVersionWriter(builder.registry.get(),builder.topic,schema)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2->3 [style = dotted, label="true"];
+9->0 [style = dotted, label="true"];
+7->8 [style = solid, label="schemaVersionWriter"];
+11->1 [style = bold, label=""];
+2->6 [style = bold, label=""];
+11->10 [style = dotted, label="true"];
+3->5 [style = solid, label="schema"];
+2->3 [style = bold, label=""];
+4->0 [style = dotted, label="true"];
+7->8 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+10->1 [style = solid, label="builder"];
+3->5 [style = bold, label=""];
+2->6 [style = dotted, label="true"];
+2->7 [style = dotted, label="true"];
+6->7 [style = solid, label="schema"];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+9->1 [style = bold, label=""];
+2->5 [style = dotted, label="true"];
+2->8 [style = dotted, label="true"];
+0->1 [style = solid, label="builder"];
+}

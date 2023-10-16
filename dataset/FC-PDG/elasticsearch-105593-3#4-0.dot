@@ -1,0 +1,13 @@
+digraph {
+2 [style = filled, label = "return Arrays.asList(new NamedXContentRegistry.Entry(,new ParseField(TestPersistentTasksExecutor.NAME),null),new NamedXContentRegistry.Entry(,new ParseField(TestPersistentTasksExecutor.NAME),null))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "getNamedXContent['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "xContentRegistry['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "return new NamedXContentRegistry(Arrays.asList(new NamedXContentRegistry.Entry(,new ParseField(TestPersistentTasksExecutor.NAME),null),new NamedXContentRegistry.Entry(,new ParseField(TestPersistentTasksExecutor.NAME),null)))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "getNamedXContent['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "return Arrays.asList(new NamedXContentRegistry.Entry(,new ParseField(PersistentTasksCustomMetaData.TYPE),null),new NamedXContentRegistry.Entry(,new ParseField(TestPersistentTasksExecutor.NAME),null),new NamedXContentRegistry.Entry(,new ParseField(TestPersistentTasksExecutor.NAME),null))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0->2 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+}

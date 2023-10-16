@@ -1,0 +1,35 @@
+digraph {
+11 [style = filled, label = "String target@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertTrue(new File(getOutputDir(),\"E\").exists())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "executeTarget(\"testDirectoryRetaining\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertTrue(new File(getOutputDir(),\"E/1\").exists())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "testDirectoryRetaining['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertTrue(getProject().resolveFile(\"A\").exists())@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "testDirectoryRetaining['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "assertTrue(!new File(getOutputDir(),\"A/1\").exists())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "executeTarget(target)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertTrue(new File(getOutputDir(),\"A\").exists())@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "testCompleteDirectoryMove['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertTrue(getProject().resolveFile(\"E/1\").exists())@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertTrue(getProject().resolveFile(\"E\").exists())@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertTrue(!getProject().resolveFile(\"A/1\").exists())@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->9 [style = bold, label=""];
+13->11 [style = dotted, label="true"];
+4->3 [style = bold, label=""];
+11->12 [style = solid, label="target"];
+1->4 [style = bold, label=""];
+2->0 [style = bold, label=""];
+12->3 [style = bold, label=""];
+13->12 [style = bold, label=""];
+8->4 [style = bold, label=""];
+9->10 [style = bold, label=""];
+3->2 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+5->6 [style = dashed, label="0"];
+2->9 [style = dashed, label="0"];
+3->7 [style = dashed, label="0"];
+10->6 [style = bold, label=""];
+4->7 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+0->5 [style = bold, label=""];
+}

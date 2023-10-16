@@ -1,0 +1,17 @@
+digraph {
+1 [style = filled, label = "Query.create(sql).addRule(ProjectToCalcRule.INSTANCE).addRule(EnumerableRules.ENUMERABLE_CALC_RULE).removeRule(EnumerableRules.ENUMERABLE_SORT_RULE).removeRule(EnumerableRules.ENUMERABLE_PROJECT_RULE).removeRule(EnumerableRules.ENUMERABLE_JOIN_RULE).check()@@@4@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final String sql = \"select * from\" + \"(select ename, cast(job as varchar) as job, sal + 1 from\" + \"(select ename, job, sal from sales.emp limit 100) t) r\" + \"join sales.bonus s on r.job=s.job and r.ename=s.ename\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final String sql = \"select * from\" + \"(select ename, job, max_sal + 1 from\" + \"(select ename, job, max(sal) as max_sal from sales.emp \" + \"group by ename, job) t) r\" + \"join sales.bonus s on r.job=s.job and r.ename=s.ename\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testSortCalcDerive3['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testSortCalcDerive1['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Query.create(sql).addRule(CoreRules.PROJECT_TO_CALC).addRule(EnumerableRules.ENUMERABLE_CALC_RULE).removeRule(EnumerableRules.ENUMERABLE_SORT_RULE).removeRule(EnumerableRules.ENUMERABLE_PROJECT_RULE).removeRule(EnumerableRules.ENUMERABLE_JOIN_RULE).check()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "testSortCalcDerive1['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->4 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+6->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+}

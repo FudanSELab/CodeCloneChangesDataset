@@ -1,0 +1,37 @@
+digraph {
+9 [style = filled, label = "Assertions.assertNotNull(person,\"person must not be null\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Assertions.assertEquals(\"Christian\",person.getFirstName())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Person person = personMapper.getWithComplex(2L)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "Person person = personMapper.getWithComplex(2l)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "Assertions.assertEquals(\"Smith\",parent.getLastName())@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Assertions.assertEquals(\"Poitras\",person.getLastName())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Assertions.assertEquals(\"John\",parent.getFirstName())@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Assertions.assertNotNull(parent,\"parent must not be null\")@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "PersonMapper personMapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testWithComplex['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "testWithComplex['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "Person person = personMapper.getWithComplex2(2l)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "testWithComplex2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Person parent = person.getParent()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+4->10 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+9->0 [style = bold, label=""];
+5->9 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->9 [style = solid, label="person"];
+11->4 [style = bold, label=""];
+10->9 [style = solid, label="person"];
+12->9 [style = bold, label=""];
+7->6 [style = solid, label="parent"];
+6->2 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+3->7 [style = bold, label=""];
+7->6 [style = bold, label=""];
+4->12 [style = bold, label=""];
+10->9 [style = bold, label=""];
+8->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+13->4 [style = bold, label=""];
+12->9 [style = solid, label="person"];
+}

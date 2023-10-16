@@ -1,0 +1,32 @@
+digraph {
+7 [style = filled, label = "diff.writeTo(stream)@@@7@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "stream.setVersion(nodeVersion)@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "DiscoveryNode node@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "return bStream.bytes()@@@9@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "long clusterStateVersion@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Diff<ClusterState> diff@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "DiscoveryNode node@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+13 [style = filled, label = "ClusterState clusterState@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Version nodeVersion@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "serializeDiffClusterState['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final BytesStreamOutput bStream = new BytesStreamOutput()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "serializeDiffClusterState['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Diff<ClusterState> diff@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "stream.writeBoolean(false)@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "serializeFullClusterState['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7->9 [style = bold, label=""];
+12->14 [style = dotted, label="true"];
+5->11 [style = bold, label=""];
+12->13 [style = dotted, label="true"];
+5->8 [style = dotted, label="true"];
+6->7 [style = bold, label=""];
+2->14 [style = dashed, label="0"];
+4->6 [style = bold, label=""];
+3->1 [style = dotted, label="true"];
+5->10 [style = dotted, label="true"];
+8->4 [style = solid, label="nodeVersion"];
+2->10 [style = dashed, label="0"];
+3->2 [style = dotted, label="true"];
+11->4 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+}

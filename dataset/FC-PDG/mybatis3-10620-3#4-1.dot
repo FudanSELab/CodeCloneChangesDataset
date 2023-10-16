@@ -1,0 +1,30 @@
+digraph {
+6 [style = filled, label = "assertEquals(2,persons.size())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "shouldResolveListTypeParam['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "SqlSession sqlSession = sqlSessionFactory.openSession()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "PersonListMapper mapper = sqlSession.getMapper()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "PersonMapper mapper = sqlSession.getMapper()@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "shouldResolveListTypeParam['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "{sqlSession.close()}@@@11@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertEquals(2,persons.size())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertEquals(\"John\",persons.get(1).getName())@@@9@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "shouldResolveParameterizedReturnType['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "List<Person> persons = mapper.select(null)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(\"Jane\",persons.get(0).getName())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "List<Person> persons = mapper.selectList(null)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->1 [style = bold, label=""];
+3->10 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+11->3 [style = bold, label=""];
+12->6 [style = bold, label=""];
+10->12 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->4 [style = bold, label=""];
+1->7 [style = bold, label=""];
+7->2 [style = bold, label=""];
+9->4 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

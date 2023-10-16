@@ -1,0 +1,33 @@
+digraph {
+7 [style = filled, label = "QueryStringQueryBuilder query = queryStringQuery(\"12~1.0\").defaultField(INT_FIELD_NAME)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertEquals(\"Can only use fuzzy queries on keyword and text fields - not on (mapped_int( which is of type (integer(\",e.getMessage())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "QueryShardException e = expectThrows(,null)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertEquals(\"Can only use regexp queries on keyword and text fields - not on (mapped_int( which is of type (integer(\",e.getMessage())@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "SearchExecutionContext context = createSearchExecutionContext()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "testNumeric['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "query.lenient(true)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testFuzzyNumeric['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "QueryShardContext context = createShardContext()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testNumeric['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThat(query.toQuery(context),Matchers.instanceOf())@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "RegexpQueryBuilder query = new RegexpQueryBuilder(INT_FIELD_NAME,\"12\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "IllegalArgumentException e = expectThrows(,null)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+1->5 [style = bold, label=""];
+3->11 [style = bold, label=""];
+6->1 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+12->10 [style = bold, label=""];
+9->12 [style = bold, label=""];
+4->2 [style = bold, label=""];
+4->11 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+11->9 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->10 [style = solid, label="context"];
+7->3 [style = bold, label=""];
+5->4 [style = bold, label=""];
+8->7 [style = bold, label=""];
+}

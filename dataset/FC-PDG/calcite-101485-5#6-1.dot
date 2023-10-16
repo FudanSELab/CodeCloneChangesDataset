@@ -1,0 +1,33 @@
+digraph {
+9 [style = filled, label = "final RelNode rel = builder.scan(\"EMP\").limit(0,10).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "String expectedPhysical = \"\" + \"EnumerableLimit(fetch=(10()\" + \" EnumerableTableScan(table=((scott, EMP(()\"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testProject['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "String expectedLogical = \"\" + \"LogicalSort(fetch=(10()\" + \" LogicalTableScan(table=((scott, EMP(()\"@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testLimit['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final RelBuilder builder = builder()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testProject['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "String expectedPhysical = \"\" + \"EnumerableProject(DEPTNO=($7()\" + \" EnumerableTableScan(table=((scott, EMP(()\"@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "verify(rel,expectedPhysical,expectedLogical)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final RelNode rel = builder.scan(\"EMP\").project(builder.field(\"DEPTNO\")).build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String expectedLogical = \"\" + \"LogicalProject(DEPTNO=($7()\" + \" LogicalTableScan(table=((scott, EMP(()\"@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->5 [style = solid, label="expectedPhysical"];
+0->9 [style = bold, label=""];
+6->0 [style = bold, label=""];
+8->5 [style = solid, label="expectedLogical"];
+1->0 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+8->5 [style = bold, label=""];
+9->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+9->5 [style = solid, label="rel"];
+4->5 [style = solid, label="expectedLogical"];
+4->5 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->5 [style = solid, label="rel"];
+2->9 [style = dashed, label="0"];
+3->5 [style = solid, label="expectedPhysical"];
+10->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+}

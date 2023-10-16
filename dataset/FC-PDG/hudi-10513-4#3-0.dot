@@ -1,0 +1,32 @@
+digraph {
+0 [style = filled, label = "Timer.Context indexTimer = metrics.getIndexCtx()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "filterExists['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "return recordsWithLocation.stream().filter(null).collect(Collectors.toList())@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "filterExists['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "metrics.updateIndexMetrics(LOOKUP_STR,metrics.getDurationInMs(indexTimer == null? 0L: indexTimer.stop()))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "HoodieFlinkTable<T> table = HoodieFlinkTable.create(config,(HoodieFlinkEngineContext)context)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "List<HoodieRecord<T>> recordsWithLocation = getIndex().tagLocation(hoodieRecords,context,table)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "HoodieJavaTable<T> table = HoodieJavaTable.create(config,(HoodieJavaEngineContext)context)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "List<HoodieRecord<T>> hoodieRecords@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "filterExists['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "HoodieFlinkTable<T> table = getHoodieTable()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8->7 [style = bold, label=""];
+8->1 [style = dotted, label="true"];
+6->3 [style = bold, label=""];
+3->2 [style = solid, label="table"];
+10->0 [style = bold, label=""];
+7->2 [style = solid, label="table"];
+7->0 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+0->4 [style = solid, label="indexTimer"];
+9->10 [style = bold, label=""];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+10->2 [style = solid, label="table"];
+3->0 [style = bold, label=""];
+1->2 [style = solid, label="hoodieRecords"];
+0->2 [style = bold, label=""];
+9->1 [style = dotted, label="true"];
+6->1 [style = dotted, label="true"];
+}

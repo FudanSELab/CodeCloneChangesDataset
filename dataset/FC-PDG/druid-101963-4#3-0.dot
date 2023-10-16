@@ -1,0 +1,13 @@
+digraph {
+0 [style = filled, label = "testCountStarWithBoundFilterSimplifyAnd['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testQuery(\"SELECT COUNT(*) FROM druid.foo WHERE (dim1 >= 'a' and dim1 < 'b') and dim1 = 'abc'\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).filters(selector(\"dim1\",\"abc\",null)).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@aa1e23))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testQuery(\"SELECT COUNT(*) FROM druid.foo WHERE 2.5 < m1 AND m1 < 3.5\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(QSS(Filtration.eternity())).granularity(Granularities.ALL).filters(BOUND(\"m1\",\"2.5\",\"3.5\",true,true,null,StringComparators.NUMERIC)).aggregators(AGGS(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@aa1e62))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testCountStarWithBoundFilterSimplifyOnMetric['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testQuery(\"SELECT COUNT(*) FROM druid.foo WHERE (dim1 >= 'a' and dim1 < 'b') and dim1 = 'abc'\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(QSS(Filtration.eternity())).granularity(Granularities.ALL).filters(SELECTOR(\"dim1\",\"abc\",null)).aggregators(AGGS(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@aa1dea))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "testCountStarWithBoundFilterSimplifyAnd['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->2 [style = dashed, label="0"];
+1->5 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

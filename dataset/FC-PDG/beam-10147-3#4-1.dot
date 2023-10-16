@@ -1,0 +1,35 @@
+digraph {
+10 [style = filled, label = "equals['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Key<?> key = (Key<?>)o@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return false@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Object o@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "o == null || getClass() != o.getClass()@@@6@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "return true@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return Objects.equals(view,key.view) && Objects.equals(window,key.window)@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "equals['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "@Nullable Object o@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "this == o@@@3@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "equals['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->3 [style = bold, label=""];
+4->6 [style = solid, label="o"];
+8->7 [style = solid, label="o"];
+4->7 [style = solid, label="o"];
+3->6 [style = bold, label=""];
+7->0 [style = bold, label=""];
+5->3 [style = dotted, label="true"];
+7->0 [style = dotted, label="true"];
+9->7 [style = bold, label=""];
+10->7 [style = bold, label=""];
+8->5 [style = solid, label="o"];
+9->8 [style = dotted, label="true"];
+6->1 [style = bold, label=""];
+7->5 [style = bold, label=""];
+4->5 [style = solid, label="o"];
+5->6 [style = bold, label=""];
+2->4 [style = dotted, label="true"];
+4->8 [style = dashed, label="0"];
+2->7 [style = bold, label=""];
+10->4 [style = dotted, label="true"];
+8->6 [style = solid, label="o"];
+0->5 [style = bold, label=""];
+}

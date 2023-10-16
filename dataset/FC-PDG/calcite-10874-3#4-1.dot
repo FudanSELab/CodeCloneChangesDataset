@@ -1,0 +1,22 @@
+digraph {
+4 [style = filled, label = "assertNotSame(sqlNodeVisited,sqlNode)@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final SqlNode sqlNodeVisited = sqlNode.accept(new SqlShuttle(){@Override public SqlNode visit(SqlIdentifier identifier){return new SqlIdentifier(identifier.names,identifier.getParserPosition())}})@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testVisitSqlMatchRecognizeWithSqlShuttle['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final String sql = \"select *\" + \"from emp \" + \"match_recognize (\" + \" pattern (strt down+ up+)\" + \" define\" + \" down as down.sal < PREV(down.sal),\" + \" up as up.sal > PREV(up.sal)\" + \") mr\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final SqlNode sqlNode = getSqlParser(sql).parseStmt()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testVisitSqlInsertWithSqlShuttle['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(sqlNodeVisited.getKind(),is(SqlKind.INSERT))@@@12@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final String sql = \"insert into emps select * from emps\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testVisitSqlInsertWithSqlShuttle['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7->1 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->4 [style = solid, label="sqlNodeVisited"];
+2->1 [style = bold, label=""];
+1->4 [style = solid, label="sqlNode"];
+8->7 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

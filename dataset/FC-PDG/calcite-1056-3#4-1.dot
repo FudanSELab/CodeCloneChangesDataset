@@ -1,0 +1,19 @@
+digraph {
+7 [style = filled, label = "testTakeEnumerableGreaterThanLength['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "assertEquals(depts(0(,depList.get(0))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testTakeQueryableGreaterThanLength['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final List<Department> depList = EnumerableDefaults.take(enumerableDepts,5).toList()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertEquals(depts(1(,depList.get(1))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(3,depList.size())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final Enumerable<Department> enumerableDepts = Linq4j.asEnumerable(depts)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testTakeEnumerableGreaterThanLength['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(depts(2(,depList.get(2))@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->1 [style = bold, label=""];
+3->6 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+2->0 [style = bold, label=""];
+8->6 [style = bold, label=""];
+4->5 [style = bold, label=""];
+7->6 [style = bold, label=""];
+}

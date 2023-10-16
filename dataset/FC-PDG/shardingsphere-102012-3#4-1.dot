@@ -1,0 +1,22 @@
+digraph {
+8 [style = filled, label = "mockDataRecord['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "DataRecord result = new DataRecord(new WalPosition(new PostgreSQLLogSequenceNumber(LogSequenceNumber.valueOf(100L))),2)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "mockDataRecord['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "result.addColumn(new Column(\"name\",\"\",true,false))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "mockDataRecord['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "result.setTableName(\"t_order\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "result.addColumn(new Column(\"id\",1,true,true))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "return result@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "DataRecord result = new DataRecord(new WalPosition(LogSequenceNumber.valueOf(100L)),2)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+5->0 [style = solid, label="result"];
+4->3 [style = bold, label=""];
+5->2 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+8->5 [style = bold, label=""];
+7->0 [style = solid, label="result"];
+2->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+3->0 [style = bold, label=""];
+}

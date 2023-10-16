@@ -1,0 +1,18 @@
+digraph {
+6 [style = filled, label = "getSyntheticProperties['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "result.put(.getName() + \"#value\",new TriggerBinding(){public FullBinding createBinding(SourceBinding source,TargetBinding target){return new JSliderValueBinding((PropertyBinding)source,target)}})@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "getSyntheticProperties['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return result@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Map<String,TriggerBinding> result = new HashMap<String,TriggerBinding>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "getSyntheticProperties['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "result.put(.getName() + \"#value\",new TriggerBinding(){@Override public FullBinding createBinding(SourceBinding source,TargetBinding target){return new JScrollBarValueBinding((PropertyBinding)source,target)}})@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->5 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+0->2 [style = bold, label=""];
+2->1 [style = solid, label="result"];
+4->2 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->5 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

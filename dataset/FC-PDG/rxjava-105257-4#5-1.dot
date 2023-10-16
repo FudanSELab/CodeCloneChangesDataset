@@ -1,0 +1,38 @@
+digraph {
+2 [style = filled, label = "xsp.connect()@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "TestSubscriber<Integer> ts = new TestSubscriber<>()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "ConnectableFlowable<Integer> xsp = xs.publish()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "TestObserver<Integer> to = new TestObserver<Integer>()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "xsp.takeUntil(xsp.skipWhile(new Predicate<Integer>(){@Override public boolean test(Integer i){return i <= 3}})).subscribe(to)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "System.out.println(ts.values())@@@13@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "takeUntilWithPublishedStream['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "ConnectableObservable<Integer> xsp = xs.publish()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "TestSubscriber<Integer> ts = new TestSubscriber<Integer>()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "takeUntilWithPublishedStream['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Flowable<Integer> xs = Flowable.range(0,Flowable.bufferSize() * 2)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "System.out.println(to.values())@@@13@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "takeUntilWithPublishedStream['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "Observable<Integer> xs = Observable.range(0,Flowable.bufferSize() * 2)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13->10 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->4 [style = bold, label=""];
+8->3 [style = solid, label="ts"];
+1->10 [style = dashed, label="0"];
+0->12 [style = dashed, label="0"];
+2->12 [style = bold, label=""];
+6->1 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+1->3 [style = solid, label="ts"];
+6->13 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+10->3 [style = solid, label="to"];
+11->13 [style = bold, label=""];
+7->6 [style = bold, label=""];
+6->8 [style = bold, label=""];
+9->3 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+10->9 [style = bold, label=""];
+8->4 [style = bold, label=""];
+}

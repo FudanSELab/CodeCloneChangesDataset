@@ -1,0 +1,30 @@
+digraph {
+2 [style = filled, label = "assertThat(sql,is(expectedSql))@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final String expectedSql = \"SELECT *\" + \"FROM \"scott\".\"EMP\"\" + \"WHERE ROW(\"DEPTNO\", \"JOB\") IN (ROW(1, 'PRESIDENT'), ROW(2, 'PRESIDENT'))\"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(sql,isLinux(expectedSql))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "testUnparseInStruct2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final String expectedSql = \"SELECT *\" + \"FROM \"scott\".\"EMP\"\" + \"WHERE ROW(\"DEPTNO\", \"JOB\") IN (ROW(1, 'PRESIDENT'))\"@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testUnparseInStruct1['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final RexNode condition = builder.call(SqlStdOperatorTable.IN,builder.call(SqlStdOperatorTable.ROW,builder.field(\"DEPTNO\"),builder.field(\"JOB\")),builder.call(SqlStdOperatorTable.ROW,builder.literal(1),builder.literal(\"PRESIDENT\")),builder.call(SqlStdOperatorTable.ROW,builder.literal(2),builder.literal(\"PRESIDENT\")))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final RexNode condition = builder.call(SqlStdOperatorTable.IN,builder.call(SqlStdOperatorTable.ROW,builder.field(\"DEPTNO\"),builder.field(\"JOB\")),builder.call(SqlStdOperatorTable.ROW,builder.literal(1),builder.literal(\"PRESIDENT\")))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final String sql = unparseRelTree(empScan.filter(condition).build())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testUnparseInStruct1['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+4->5 [style = solid, label="expectedSql"];
+8->2 [style = solid, label="expectedSql"];
+2->5 [style = dashed, label="0"];
+6->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+4->2 [style = solid, label="expectedSql"];
+0->9 [style = dashed, label="0"];
+8->2 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->4 [style = bold, label=""];
+3->8 [style = bold, label=""];
+3->2 [style = solid, label="sql"];
+3->5 [style = solid, label="sql"];
+4->8 [style = dashed, label="0"];
+}

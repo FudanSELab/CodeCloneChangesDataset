@@ -1,0 +1,24 @@
+digraph {
+9 [style = filled, label = "testQuery(\"SELECT\" + \"TDIGEST_GENERATE_SKETCH(m1, 200)\" + \"FROM foo\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(new MultipleIntervalSegmentSpec(ImmutableList.of(Filtration.eternity()))).granularity(Granularities.ALL).aggregators(ImmutableList.of(new TDigestSketchAggregatorFactory(\"a0:agg\",\"m1\",200))).context(QUERY_CONTEXT_DEFAULT).build()),ImmutableList.of(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a7027b))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "testQuery(\"SELECT DS_GET_QUANTILE(y, 0.5), DS_GET_QUANTILE(y, 0.98) from (\" + \"SELECT DS_QUANTILES_SKETCH(m1) as y FROM druid.foo ORDER BY DS_GET_QUANTILE(DS_QUANTILES_SKETCH(m1), 0.5) DESC LIMIT 10\" + \")\",Collections.singletonList(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(new MultipleIntervalSegmentSpec(ImmutableList.of(Filtration.eternity()))).granularity(Granularities.ALL).aggregators(ImmutableList.of(new DoublesSketchAggregatorFactory(\"a0:agg\",\"m1\",128))).postAggregators(ImmutableList.of(new FieldAccessPostAggregator(\"p0\",\"a0:agg\"),new DoublesSketchToQuantilePostAggregator(\"p2\",new FieldAccessPostAggregator(\"p1\",\"a0:agg\"),0.5),new DoublesSketchToQuantilePostAggregator(\"s1\",new FieldAccessPostAggregator(\"s0\",\"p0\"),0.5),new DoublesSketchToQuantilePostAggregator(\"s3\",new FieldAccessPostAggregator(\"s2\",\"p0\"),0.9800000190734863))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a702d8))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "testDoublesSketchPostAggsPostSort['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Assert.assertEquals(expectedResults.size(),results.size())@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "testComputingSketchOnNumericValues['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "final List<Object((> results = sqlLifecycle.runSimple(sql,TIMESERIES_CONTEXT_DEFAULT,DEFAULT_PARAMETERS,AUTH_RESULT).toList()@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "Assert.assertEquals(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(new MultipleIntervalSegmentSpec(ImmutableList.of(Filtration.eternity()))).granularity(Granularities.ALL).aggregators(ImmutableList.of(new TDigestSketchAggregatorFactory(\"a0:agg\",\"m1\",200))).context(TIMESERIES_CONTEXT_DEFAULT).build(),Iterables.getOnlyElement(queryLogHook.getRecordedQueries()))@@@10@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "final List<String((> expectedResults = ImmutableList.of(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a70202)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "testComputingSketchOnNumericValues['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final String sql = \"SELECT\" + \"TDIGEST_GENERATE_SKETCH(m1, 200)\" + \"FROM foo\"@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "cannotVectorize()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "SqlLifecycle sqlLifecycle = getSqlLifecycle()@@@3@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+3->1 [style = bold, label=""];
+11->10 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->6 [style = bold, label=""];
+8->7 [style = bold, label=""];
+}

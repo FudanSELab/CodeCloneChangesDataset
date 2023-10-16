@@ -1,0 +1,26 @@
+digraph {
+6 [style = filled, label = "rel.set == set && traitSet.satisfies(rel.getTraitSet())@@@6@@@['0', '1', '0']", fillcolor = red, shape = diamond image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "list.add(parent)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final Set<RelNode> list = new LinkedHashSet<RelNode>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "getParentRels['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "getParents['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "getParents['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "rel.set == set && rel.getTraitSet().equals(traitSet)@@@6@@@['1', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return list@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+6->4 [style = bold, label=""];
+0->3 [style = solid, label="list"];
+7->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+6->4 [style = dotted, label="true"];
+5->0 [style = bold, label=""];
+2->4 [style = bold, label=""];
+0->6 [style = bold, label=""];
+4->6 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+2->4 [style = dotted, label="true"];
+2->6 [style = dashed, label="0"];
+}

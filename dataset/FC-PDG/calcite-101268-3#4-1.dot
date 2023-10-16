@@ -1,0 +1,31 @@
+digraph {
+3 [style = filled, label = "final String expected = \"\" + \"LogicalProject(EMPNO=($0()\" + \" LogicalSort(sort0=($0(, dir0=(ASC()\" + \" LogicalTableScan(table=((scott, EMP(()\"@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "RelNode root = builder.scan(\"EMP\").as(\"e\").sort(0).project(builder.field(\"e\",\"EMPNO\")).build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final RelBuilder builder = RelBuilder.create(config().build())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "RelNode root = builder.scan(\"EMP\").as(\"e\").sort(1).sortLimit(10,20).project(builder.field(\"e\",\"EMPNO\")).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final String expected = \"\" + \"LogicalProject(EMPNO=($0()\" + \" LogicalSort(sort0=($1(, dir0=(ASC(, offset=(10(, fetch=(20()\" + \" LogicalTableScan(table=((scott, EMP(()\"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(root,hasTree(expected))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "testAliasSort['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testAliasLimit['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testAliasSort['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertThat(str(root),is(expected))@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+3->2 [style = solid, label="expected"];
+4->8 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+3->6 [style = bold, label=""];
+1->4 [style = bold, label=""];
+0->2 [style = solid, label="root"];
+0->6 [style = solid, label="root"];
+7->4 [style = bold, label=""];
+3->2 [style = bold, label=""];
+9->2 [style = solid, label="expected"];
+3->9 [style = dashed, label="0"];
+3->6 [style = solid, label="expected"];
+9->2 [style = bold, label=""];
+8->2 [style = solid, label="root"];
+5->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+8->9 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

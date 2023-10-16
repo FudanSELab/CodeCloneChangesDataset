@@ -1,0 +1,23 @@
+digraph {
+9 [style = filled, label = "testMissingDateStringWithNumberField['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "MappedFieldType fieldType = new NumberFieldMapper.NumberFieldType(NumberFieldMapper.NumberType.INTEGER)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "expectThrows(,null)@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "fieldType.setName(NUMBER_FIELD_NAME)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testMissingDateWithNumberField['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "testMissingDateWithNumberField['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "RangeAggregationBuilder aggregationBuilder = new RangeAggregationBuilder(\"range\").field(NUMBER_FIELD_NAME).addRange(-2d,5d).missing(\"1979-01-01T00:00:00\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "MappedFieldType fieldType = new NumberFieldMapper.NumberFieldType(NUMBER_FIELD_NAME,NumberFieldMapper.NumberType.INTEGER)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "DateRangeAggregationBuilder aggregationBuilder = new DateRangeAggregationBuilder(\"date_range\").field(NUMBER_FIELD_NAME).addRange(\"2015-11-13\",\"2015-11-14\").missing(\"1979-01-01T00:00:00\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "expectThrows(,null)@@@5@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+6->1 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+7->5 [style = bold, label=""];
+4->2 [style = bold, label=""];
+8->4 [style = bold, label=""];
+9->8 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+1->7 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

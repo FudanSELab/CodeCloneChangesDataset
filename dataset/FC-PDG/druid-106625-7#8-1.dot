@@ -1,0 +1,34 @@
+digraph {
+0 [style = filled, label = "testSimpleGroupBy['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final GroupByQuery query = GroupByQuery.builder().setDataSource(QueryRunnerTestHelper.DATA_SOURCE).setGranularity(Granularities.ALL).setInterval(QueryRunnerTestHelper.FIRST_TO_THIRD).setAggregatorSpecs(new LongSumAggregatorFactory(\"rows\",\"rows\")).setContext(ImmutableMap.of(QueryContexts.TIMEOUT_KEY,TIMEOUT)).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Assert.assertEquals(4,MERGE_BUFFER_POOL.getPoolSize())@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "Assert.assertEquals(0,MERGE_BUFFER_POOL.getMinRemainBufferNum())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Assert.assertEquals(0,GroupByStrategyV2.countRequiredMergeBufferNum(query))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "Assert.assertEquals(3,MERGE_BUFFER_POOL.getMinRemainBufferNum())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "testSimpleGroupBy['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "Assert.assertEquals(3,MERGE_BUFFER_POOL.getPoolSize())@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final GroupByQuery query = GroupByQuery.builder().setDataSource(new QueryDataSource(GroupByQuery.builder().setDataSource(GroupByQuery.builder().setDataSource(GroupByQuery.builder().setDataSource(QueryRunnerTestHelper.DATA_SOURCE).setInterval(QueryRunnerTestHelper.FIRST_TO_THIRD).setGranularity(Granularities.ALL).setDimensions(Lists.newArrayList(new DefaultDimensionSpec(\"quality\",\"alias\"),new DefaultDimensionSpec(\"market\",null),new DefaultDimensionSpec(\"placement\",null))).setAggregatorSpecs(Collections.singletonList(QueryRunnerTestHelper.ROWS_COUNT)).build()).setInterval(QueryRunnerTestHelper.FIRST_TO_THIRD).setGranularity(Granularities.ALL).setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\"),new DefaultDimensionSpec(\"market\",null)).setAggregatorSpecs(Collections.singletonList(QueryRunnerTestHelper.ROWS_COUNT)).build()).setInterval(QueryRunnerTestHelper.FIRST_TO_THIRD).setGranularity(Granularities.ALL).setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\")).setAggregatorSpecs(Collections.singletonList(QueryRunnerTestHelper.ROWS_COUNT)).build())).setGranularity(Granularities.ALL).setInterval(QueryRunnerTestHelper.FIRST_TO_THIRD).setAggregatorSpecs(new LongSumAggregatorFactory(\"rows\",\"rows\")).setContext(ImmutableMap.of(QueryContexts.TIMEOUT_KEY,TIMEOUT)).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testTripleNestedGroupBy['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Assert.assertEquals(2,MERGE_BUFFER_POOL.getMinRemainBufferNum())@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "GroupByQueryRunnerTestHelper.runQuery(FACTORY,runner,query)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+1->8 [style = dashed, label="0"];
+4->9 [style = dashed, label="0"];
+10->9 [style = bold, label=""];
+4->6 [style = solid, label="query"];
+4->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+8->5 [style = bold, label=""];
+11->3 [style = bold, label=""];
+4->2 [style = solid, label="query"];
+0->4 [style = bold, label=""];
+4->6 [style = bold, label=""];
+9->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+2->11 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+2->8 [style = bold, label=""];
+6->2 [style = bold, label=""];
+9->2 [style = solid, label="query"];
+}

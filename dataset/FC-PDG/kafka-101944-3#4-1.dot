@@ -1,0 +1,32 @@
+digraph {
+11 [style = filled, label = "writeCheckpointFile(taskId00,changelogOffsets)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "shouldComputeOffsetSumForNonRunningActiveTask['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "restoringTask.setChangelogOffsets(changelogOffsets)@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "makeTaskFolders(taskId00.toString())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final StateMachineTask restoringTask = handleAssignment(emptyMap(),emptyMap(),taskId00Assignment).get(taskId00)@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "replay(stateDirectory)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(taskManager.getTaskOffsetSums(),is(expectedOffsetSums))@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "expectLockObtainedFor(taskId00)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "taskManager.handleRebalanceStart(singleton(\"topic\"))@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final Map<TopicPartition,Long> changelogOffsets = mkMap(mkEntry(new TopicPartition(\"changelog\",0),5L),mkEntry(new TopicPartition(\"changelog\",1),10L))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "shouldComputeOffsetSumForNonRunningActiveTask['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final Map<TaskId,Long> expectedOffsetSums = mkMap(mkEntry(taskId00,15L))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "shouldComputeOffsetSumForUnassignedTaskWeCanLock['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+10->3 [style = bold, label=""];
+3->5 [style = bold, label=""];
+7->0 [style = bold, label=""];
+1->6 [style = bold, label=""];
+12->3 [style = bold, label=""];
+2->7 [style = bold, label=""];
+8->4 [style = bold, label=""];
+7->4 [style = bold, label=""];
+5->4 [style = solid, label="expectedOffsetSums"];
+3->11 [style = solid, label="changelogOffsets"];
+11->2 [style = bold, label=""];
+6->11 [style = bold, label=""];
+3->8 [style = solid, label="changelogOffsets"];
+0->8 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

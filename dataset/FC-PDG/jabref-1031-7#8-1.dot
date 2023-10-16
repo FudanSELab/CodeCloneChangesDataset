@@ -1,0 +1,31 @@
+digraph {
+3 [style = filled, label = "TextFlowEqualityHelper.assertEquals(expectedTexts,description)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "TextFlow description = new ContainsAndRegexBasedSearchRuleDescriber(false,false,query).getDescription()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "TextFlow description = new ContainsAndRegexBasedSearchRuleDescriber(true,true,query).getDescription()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "String query = \"a b\"@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testNoAst['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "List<Text> expectedTexts = Arrays.asList(TooltipTextUtil.createText(\"This search contains entries in which any field contains the term \"),TooltipTextUtil.createText(\"a\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\" and \"),TooltipTextUtil.createText(\"b\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\" (case insensitive). \"),TooltipTextUtil.createText(\"Hint: To search specific fields only, enter for example:\"),TooltipTextUtil.createText(\" author=smith and title=electrical\",TooltipTextUtil.TextType.MONOSPACED))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "List<Text> expectedTexts = List.of(TooltipTextUtil.createText(\"This search contains entries in which any field contains the term \"),TooltipTextUtil.createText(\"a\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\" and \"),TooltipTextUtil.createText(\"b\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\" (case insensitive). \"))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "List<Text> expectedTexts = Arrays.asList(TooltipTextUtil.createText(\"This search contains entries in which any field contains the regular expression \"),TooltipTextUtil.createText(\"a\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\" and \"),TooltipTextUtil.createText(\"b\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\" (case sensitive). \"),TooltipTextUtil.createText(\"Hint: To search specific fields only, enter for example:\"),TooltipTextUtil.createText(\" author=smith and title=electrical\",TooltipTextUtil.TextType.MONOSPACED))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testNoAst['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testNoAstRegexCaseSensitive['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7->9 [style = bold, label=""];
+9->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+2->7 [style = bold, label=""];
+9->3 [style = solid, label="description"];
+5->3 [style = solid, label="expectedTexts"];
+8->2 [style = bold, label=""];
+7->3 [style = solid, label="expectedTexts"];
+0->5 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+4->3 [style = solid, label="description"];
+0->7 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+2->5 [style = bold, label=""];
+6->2 [style = bold, label=""];
+0->3 [style = solid, label="expectedTexts"];
+}

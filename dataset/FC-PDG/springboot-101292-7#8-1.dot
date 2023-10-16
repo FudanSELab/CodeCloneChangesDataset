@@ -1,0 +1,27 @@
+digraph {
+8 [style = filled, label = "given(source.containsDescendantOf(name)).willReturn(ConfigurationPropertyState.PRESENT)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ConfigurationPropertySource aliased = source.withAliases(new ConfigurationPropertyNameAliases(\"foo\",\"bar\"))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "given(source.containsDescendantOf(name)).willReturn(ConfigurationPropertyState.ABSENT)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ConfigurationPropertyName name = ConfigurationPropertyName.of(\"foo\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ConfigurationPropertySource source = mock(,Answers.CALLS_REAL_METHODS)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "given(source.containsDescendantOf(ConfigurationPropertyName.of(\"bar\"))).willReturn(ConfigurationPropertyState.ABSENT)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "containsDescendantOfWhenAllAreAbsentShouldReturnAbsent['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "assertThat(filtered.containsDescendantOf(name)).isEqualTo(ConfigurationPropertyState.UNKNOWN)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "ConfigurationPropertySource filtered = source.filter(null)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "containsDescendantOfWhenAllAreAbsentShouldReturnAbsent['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "containsDescendantOfWhenSourceReturnsTrueShouldReturnEmpty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(aliased.containsDescendantOf(name)).isEqualTo(ConfigurationPropertyState.ABSENT)@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+1->9 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+7->6 [style = bold, label=""];
+11->9 [style = bold, label=""];
+8->11 [style = bold, label=""];
+0->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+10->6 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->8 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

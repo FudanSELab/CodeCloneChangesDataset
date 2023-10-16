@@ -1,0 +1,20 @@
+digraph {
+3 [style = filled, label = "final List<String> nameSeqs = Linq4j.asEnumerable(depts).selectMany(null).select(null).toList()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertEquals(\"(#0: Fred@Sales, #1: Eric@Sales, #2: Janet@Sales, #3: Bill@Marketing(\",nameSeqs.toString())@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertEquals(\"(#0: Fred, #1: Eric, #2: Janet, #3: Bill(\",nameSeqs.toString())@@@12@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testSelectManyWithIndexableSelector['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "testSelectManyWithIndexableSelector['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final int(( indexRef = {0}@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "testSelectManyWithResultSelector['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final List<String> nameSeqs = Linq4j.asEnumerable(depts).selectMany(DEPT_EMPLOYEES_SELECTOR,null).select(null).toList()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final int(( indexRef = new int((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@11134e2@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8->7 [style = bold, label=""];
+6->8 [style = bold, label=""];
+3->0 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+}

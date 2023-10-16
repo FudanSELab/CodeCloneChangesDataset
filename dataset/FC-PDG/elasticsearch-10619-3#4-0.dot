@@ -1,0 +1,37 @@
+digraph {
+3 [style = filled, label = "assertEquals(ise.getMessage(),\"supplier must be null, can't serialize suppliers, missing a rewriteAndFetch?\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "QueryBuilder termsQueryBuilder = Rewriteable.rewrite(builder,createShardContext())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testSerializationFailsUnlessFetched['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "QueryBuilder builder = new TermsQueryBuilder(TEXT_FIELD_NAME,randomTermsLookup())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "testSerializationFailsUnlessFetched['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "IllegalStateException ise = expectThrows(,null)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "QueryBuilder queryBuilder = Rewriteable.rewrite(builder,createShardContext())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "builder.writeTo(new BytesStreamOutput(10))@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "builder = rewriteAndFetch(builder,createShardContext())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "IllegalStateException ise = expectThrows(,null)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "QueryBuilder builder = new TermsQueryBuilder(STRING_FIELD_NAME,randomTermsLookup())@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "QueryBuilder builder = doCreateTestQueryBuilder(true)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testSerializationFailsUnlessFetched['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8->2 [style = solid, label="builder"];
+9->11 [style = bold, label=""];
+0->2 [style = solid, label="builder"];
+2->1 [style = bold, label=""];
+0->2 [style = bold, label=""];
+0->5 [style = solid, label="builder"];
+1->3 [style = bold, label=""];
+6->0 [style = bold, label=""];
+0->12 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+12->9 [style = bold, label=""];
+3->5 [style = bold, label=""];
+8->2 [style = bold, label=""];
+11->3 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+10->12 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+12->5 [style = solid, label="builder"];
+12->9 [style = solid, label="builder"];
+8->5 [style = solid, label="builder"];
+}

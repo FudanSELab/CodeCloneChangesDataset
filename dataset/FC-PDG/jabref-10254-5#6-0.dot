@@ -1,0 +1,30 @@
+digraph {
+7 [style = filled, label = "expectedEntry.setField(\"keywords\",\"Female\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testKeyWords['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "List<BibEntry> actualEntries = importer.importDatabase(reader).getDatabase().getEntries()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(Collections.singletonList(expectedEntry),actualEntries)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "BibEntry expectedEntry = new BibEntry()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "expectedEntry.setField(StandardField.KEYWORDS,\"Female, Male\")@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "expectedEntry.setType(\"article\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testKeyWords['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testAllArticleTypes['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertEquals(Collections.singletonList(expectedEntry),actualEntries)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "expectedEntry.setField(\"keywords\",\"Female, Male\")@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4->5 [style = dashed, label="0"];
+5->3 [style = bold, label=""];
+1->10 [style = solid, label="actualEntries"];
+6->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+9->1 [style = bold, label=""];
+2->4 [style = bold, label=""];
+7->10 [style = bold, label=""];
+0->1 [style = bold, label=""];
+1->3 [style = solid, label="actualEntries"];
+2->3 [style = solid, label="expectedEntry"];
+2->10 [style = solid, label="expectedEntry"];
+8->7 [style = bold, label=""];
+2->8 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

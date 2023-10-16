@@ -1,0 +1,36 @@
+digraph {
+12 [style = filled, label = "insert['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final String taskKey@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "pushTaskFile['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "final String path@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final String taskKey@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "LOG.info(\"Inserting (%s( to (%s(\",file,path)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final File logFile@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "InputStreamContent mediaContent = new InputStreamContent(\"text/plain\",fileStream)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "mediaContent.setLength(logFile.length())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "RetryUtils.retry((RetryUtils.Task<Void>)null,null,1,5)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "final String contentType@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "FileInputStream fileStream = new FileInputStream(logFile)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "final File file@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "RetryUtils.retry((RetryUtils.Task<Void>)null,null,1,5)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "pushTaskFile['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+14->10 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+12->13 [style = dotted, label="true"];
+13->14 [style = solid, label="path"];
+1->0 [style = bold, label=""];
+4->13 [style = dashed, label="0"];
+9->14 [style = solid, label="file"];
+0->6 [style = bold, label=""];
+8->4 [style = dotted, label="true"];
+4->1 [style = solid, label="logFile"];
+5->2 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+1->0 [style = solid, label="fileStream"];
+12->14 [style = bold, label=""];
+12->9 [style = dotted, label="true"];
+12->11 [style = dotted, label="true"];
+}

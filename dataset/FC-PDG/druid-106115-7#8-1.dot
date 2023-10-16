@@ -1,0 +1,37 @@
+digraph {
+11 [style = filled, label = "JoinTestHelper.verifyCursors(new HashJoinSegmentStorageAdapter(factSegment.asStorageAdapter(),joinableClauses,joinFilterPreAnalysisGroup).makeCursors(originalFilter,Intervals.ETERNITY,VirtualColumns.EMPTY,Granularities.ALL,false,null),ImmutableList.of(\"page\",\"countryIsoCode\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"k\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"v\"),ImmutableList.of())@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "JoinFilterPreAnalysis joinFilterPreAnalysis = makeDefaultConfigPreAnalysis(filter,joinableClauses,VirtualColumns.EMPTY)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "List<JoinableClause> joinableClauses = ImmutableList.of(factToCountryNameUsingIsoCodeLookup(JoinType.LEFT))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "JoinTestHelper.verifyCursors(new HashJoinSegmentStorageAdapter(factSegment.asStorageAdapter(),joinableClauses,joinFilterPreAnalysis).makeCursors(filter,Intervals.ETERNITY,VirtualColumns.EMPTY,Granularities.ALL,false,null),ImmutableList.of(\"page\",\"countryIsoCode\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"k\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"v\"),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@92b19d,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@92b1a4))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "test_makeCursors_factToCountryLeftWithFilterOnJoinableUsingLookup['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "JoinTestHelper.verifyCursors(new HashJoinSegmentStorageAdapter(factSegment.asStorageAdapter(),joinableClauses,joinFilterPreAnalysisGroup).makeCursors(filter,Intervals.ETERNITY,VirtualColumns.EMPTY,Granularities.ALL,false,null),ImmutableList.of(\"page\",\"countryIsoCode\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"k\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"v\"),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@92b133,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@92b13a))@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "JoinFilterPreAnalysisGroup joinFilterPreAnalysisGroup = makeDefaultConfigPreAnalysisGroup(originalFilter,joinableClauses,VirtualColumns.EMPTY)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "JoinFilterPreAnalysisGroup joinFilterPreAnalysisGroup = makeDefaultConfigPreAnalysisGroup(filter,joinableClauses,VirtualColumns.EMPTY)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "test_makeCursors_factToCountryLeft_filterExcludesAllLeftRowsUsingLookup['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "Filter originalFilter = new SelectorFilter(\"page\",\"this matches nothing\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "List<JoinableClause> joinableClauses = ImmutableList.of(factToCountryNameUsingIsoCodeLookup(JoinType.LEFT))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "test_makeCursors_factToCountryLeftWithFilterOnJoinableUsingLookup['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->4 [style = bold, label=""];
+1->8 [style = bold, label=""];
+1->7 [style = solid, label="filter"];
+2->1 [style = bold, label=""];
+1->4 [style = solid, label="filter"];
+2->4 [style = solid, label="joinableClauses"];
+9->10 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+4->0 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->0 [style = solid, label="filter"];
+1->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+1->6 [style = solid, label="filter"];
+10->8 [style = solid, label="originalFilter"];
+1->8 [style = solid, label="joinableClauses"];
+10->11 [style = solid, label="originalFilter"];
+4->11 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+10->1 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+8->11 [style = bold, label=""];
+2->6 [style = solid, label="joinableClauses"];
+}

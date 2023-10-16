@@ -1,0 +1,30 @@
+digraph {
+9 [style = filled, label = "Map<Set<String>,ApiResult<String,Long>> bazRetry = map(mkSet(\"baz\"),completed(\"baz\",45L))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testFulfillmentRetry['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "TestContext ctx = TestContext.staticMapped(map(\"foo\",0,\"bar\",1,\"baz\",1))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "ctx.poll(emptyMap(),fulfillmentResults)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testFulfillmentFailure['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "ctx.poll(emptyMap(),bazRetry)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Map<Set<String>,ApiResult<String,Long>> fulfillmentResults = map(mkSet(\"foo\"),failed(\"foo\",new UnknownServerException()),mkSet(\"bar\",\"baz\"),completed(\"bar\",30L,\"baz\",45L))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testFulfillmentFailure['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "TestContext ctx = new TestContext(Keys.staticMapped(map(\"foo\",0,\"bar\",1,\"baz\",1)))@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ctx.poll(emptyMap(),emptyMap())@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Map<Set<String>,ApiResult<String,Long>> fulfillmentResults = map(mkSet(\"foo\"),completed(\"foo\",15L),mkSet(\"bar\",\"baz\"),completed(\"bar\",30L))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+3->10 [style = bold, label=""];
+4->2 [style = solid, label="fulfillmentResults"];
+6->5 [style = bold, label=""];
+10->2 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+4->2 [style = bold, label=""];
+2->9 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+9->8 [style = bold, label=""];
+9->8 [style = solid, label="bazRetry"];
+3->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+10->2 [style = solid, label="fulfillmentResults"];
+7->3 [style = bold, label=""];
+5->4 [style = bold, label=""];
+}

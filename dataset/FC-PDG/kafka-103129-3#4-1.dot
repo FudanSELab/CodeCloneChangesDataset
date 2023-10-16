@@ -1,0 +1,36 @@
+digraph {
+7 [style = filled, label = "return serde@@@9@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "return serde@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "serde == null@@@5@@@['0', '1', '0']", fillcolor = red, shape = diamond image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "Serde<?> serde = getConfiguredInstance(KEY_SERDE_CLASS_CONFIG,)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "serde.configure(originals(),false)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Serde<?> serde = getConfiguredInstance(DEFAULT_KEY_SERDE_CLASS_CONFIG,)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "defaultKeySerde['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "serde = getConfiguredInstance(DEFAULT_KEY_SERDE_CLASS_CONFIG,)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "serde.configure(originals(),true)@@@5@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Serde<?> serde = getConfiguredInstance(DEFAULT_VALUE_SERDE_CLASS_CONFIG,)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "defaultValueSerde['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "serde.configure(originals(),true)@@@8@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "defaultKeySerde['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3->5 [style = dashed, label="0"];
+5->8 [style = bold, label=""];
+3->1 [style = bold, label=""];
+4->6 [style = bold, label=""];
+2->3 [style = bold, label=""];
+5->7 [style = solid, label="serde"];
+8->6 [style = bold, label=""];
+11->12 [style = bold, label=""];
+1->0 [style = bold, label=""];
+12->0 [style = bold, label=""];
+8->4 [style = dotted, label="true"];
+5->8 [style = solid, label="serde"];
+3->0 [style = solid, label="serde"];
+1->12 [style = dashed, label="0"];
+11->0 [style = solid, label="serde"];
+9->5 [style = bold, label=""];
+4->7 [style = solid, label="serde"];
+8->4 [style = bold, label=""];
+6->7 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+10->11 [style = bold, label=""];
+}

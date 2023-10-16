@@ -1,0 +1,30 @@
+digraph {
+10 [style = filled, label = "testSharedSnowflake['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testFoodmart['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "final String q = \"select \"s\".\"store_country\" as \"c0\",\" + \" \"r\".\"sales_region\" as \"c1\",\" + \" \"r1\".\"sales_region\" as \"c2\",\" + \" sum(\"f\".\"unit_sales\") as \"m0\"\" + \"from \"store\" as \"s\",\" + \" \"sales_fact_1997\" as \"f\",\" + \" \"region\" as \"r\",\" + \" \"region\" as \"r1\",\" + \" \"customer\" as \"c\"\" + \"where \"f\".\"store_id\" = \"s\".\"store_id\"\" + \" and \"s\".\"store_country\" = 'USA'\" + \" and \"s\".\"region_id\" = \"r\".\"region_id\"\" + \" and \"r\".\"sales_region\" = 'South West'\" + \" and \"f\".\"customer_id\" = \"c\".\"customer_id\"\" + \" and \"c\".\"customer_region_id\" = \"r1\".\"region_id\"\" + \" and \"r1\".\"sales_region\" = 'South West'\" + \"group by \"s\".\"store_country\",\" + \" \"r\".\"sales_region\",\" + \" \"r1\".\"sales_region\"\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(t.s.space.g.toString(),is(expected))@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final Tester t = new Tester().foodmart()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final String g = \"sales_fact_1997\" + \" (product:product_id (product_class:product_class_id)\" + \" time_by_day:time_id)\"@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final String g = \"sales_fact_1997\" + \" (customer:customer_id (region:customer_region_id)\" + \" store:store_id (region:region_id))\"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertThat(t.addQuery(q),isGraphs(g,\"(SUM(sales_fact_1997.unit_sales)(\"))@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final String expected = \"graph(\" + \"vertices: (\" + \"(foodmart, product(, \" + \"(foodmart, product_class(, \" + \"(foodmart, sales_fact_1997(, \" + \"(foodmart, time_by_day((, \" + \"edges: (\" + \"Step((foodmart, product(, (foodmart, product_class(,\" + \" product_class_id:product_class_id), \" + \"Step((foodmart, sales_fact_1997(, (foodmart, product(,\" + \" product_id:product_id), \" + \"Step((foodmart, sales_fact_1997(, (foodmart, time_by_day(,\" + \" time_id:time_id)()\"@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testFoodmart['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final String q = \"select \"t\".\"the_year\" as \"c0\",\" + \" \"t\".\"quarter\" as \"c1\",\" + \" \"pc\".\"product_family\" as \"c2\",\" + \" sum(\"s\".\"unit_sales\") as \"m0\"\" + \"from \"time_by_day\" as \"t\",\" + \" \"sales_fact_1997\" as \"s\",\" + \" \"product_class\" as \"pc\",\" + \" \"product\" as \"p\"\" + \"where \"s\".\"time_id\" = \"t\".\"time_id\"\" + \"and \"t\".\"the_year\" = 1997\" + \"and \"s\".\"product_id\" = \"p\".\"product_id\"\" + \"and \"p\".\"product_class_id\" = \"pc\".\"product_class_id\"\" + \"group by \"t\".\"the_year\",\" + \" \"t\".\"quarter\",\" + \" \"pc\".\"product_family\"\"@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+3->9 [style = bold, label=""];
+6->4 [style = solid, label="expected"];
+6->4 [style = bold, label=""];
+5->1 [style = bold, label=""];
+10->3 [style = bold, label=""];
+3->5 [style = bold, label=""];
+9->0 [style = solid, label="q"];
+1->8 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+8->0 [style = solid, label="g"];
+1->0 [style = solid, label="g"];
+5->0 [style = solid, label="q"];
+9->8 [style = bold, label=""];
+0->6 [style = bold, label=""];
+7->3 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

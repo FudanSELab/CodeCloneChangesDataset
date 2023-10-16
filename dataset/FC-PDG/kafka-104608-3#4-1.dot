@@ -1,0 +1,32 @@
+digraph {
+1 [style = filled, label = "expectedAdminProps.put(\"connections.max.idle.ms\",\"10000\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(expectedAdminProps,connectorAdminProps)@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Map<String,Object> connectorAdminProps = config.sourceAdminConfig()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testSourceAdminConfig['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "testTargetAdminConfig['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertEquals(expectedAdminProps,connectorAdminProps,MirrorConnectorConfig.ADMIN_CLIENT_PREFIX + \" source connector admin props not matching\")@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "Map<String,Object> connectorAdminProps = config.targetAdminConfig()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Map<String,String> connectorProps = makeProps(MirrorConnectorConfig.ADMIN_CLIENT_PREFIX + \"connections.max.idle.ms\",\"10000\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testSourceAdminConfig['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "MirrorConnectorConfig config = new MirrorConnectorConfig(connectorProps)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Map<String,Object> expectedAdminProps = new HashMap<>()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->0 [style = solid, label="expectedAdminProps"];
+6->1 [style = bold, label=""];
+5->0 [style = solid, label="connectorAdminProps"];
+4->10 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+6->8 [style = solid, label="expectedAdminProps"];
+2->4 [style = solid, label="connectorProps"];
+5->6 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+1->8 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+10->0 [style = solid, label="connectorAdminProps"];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+7->2 [style = bold, label=""];
+10->6 [style = bold, label=""];
+9->2 [style = bold, label=""];
+5->8 [style = solid, label="connectorAdminProps"];
+}

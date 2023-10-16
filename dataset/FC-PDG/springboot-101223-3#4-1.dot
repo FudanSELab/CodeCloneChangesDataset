@@ -1,0 +1,32 @@
+digraph {
+6 [style = filled, label = "TestPropertySourceUtils.addInlinedPropertiesToEnvironment(this.context,\"logging.config=classpath:logback-nondefault.xml\",\"logging.file=target/foo.log\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Log logger = LogFactory.getLog()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "addLogFileProperty['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "this.initializer.initialize(this.context.getEnvironment(),this.context.getClassLoader())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "String output = this.outputCapture.toString().trim()@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "addLogFileProperty['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "logger.info(\"Hello world\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(output).startsWith(\"target/foo/spring.log\")@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "TestPropertySourceUtils.addInlinedPropertiesToEnvironment(this.context,\"logging.config=classpath:logback-nondefault.xml\",\"logging.path=target/foo/\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "addLogPathProperty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "String output = this.outputCapture.toString().substring(existingOutput.length()).trim()@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "String existingOutput = this.outputCapture.toString()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "assertThat(output).startsWith(\"target/foo.log\")@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+3->9 [style = bold, label=""];
+4->8 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+11->0 [style = bold, label=""];
+6->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+10->11 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+8->5 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->6 [style = bold, label=""];
+9->4 [style = bold, label=""];
+6->11 [style = dashed, label="0"];
+1->12 [style = bold, label=""];
+}

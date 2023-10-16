@@ -1,0 +1,9 @@
+digraph {
+3 [style = filled, label = "generateFloatTypeHandler['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "generateIntTypeHandler['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "generateIntTypeHandler['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "return new JsonToAvroFieldProcessor(){@Override public Pair<Boolean,Object> convert(Object value,String name,Schema schema){if (value instanceof Number) {return Pair.of(true,((Number)value).floatValue())}if (value instanceof String) {return Pair.of(true,Float.valueOf((String)value))}return Pair.of(false,null)}}@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+}

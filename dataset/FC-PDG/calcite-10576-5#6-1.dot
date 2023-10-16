@@ -1,0 +1,36 @@
+digraph {
+11 [style = filled, label = "final Pattern p = Pattern.builder().symbol(\"a\").star().symbol(\"b\").seq().build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final Pattern p = Pattern.builder().symbol(\"a\").symbol(\"b\").seq().build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(matcher.match(rows).toString(),is(expected))@@@10@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(p.toString(),is(\"(a)* b\"))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final String expected = \"((a, ab(, (ab, b((\"@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(p.toString(),is(\"a b\"))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testSequence['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "final String expected = \"((b(, (ab(, (ab(, (ab, a, ab(, (a, ab(, (b(, (ab, b(, (ab, a, ab, b(, \" + \"(a, ab, b(, (b((\"@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final String(( rows = {\"\",\"a\",\"\",\"b\",\"\",\"ab\",\"a\",\"ab\",\"b\",\"b\"}@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testStar['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertThat(matcher.match(rows),isMatchList(expected))@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "final Matcher<String> matcher = Matcher.builder(p.toAutomaton()).add(\"a\",null).add(\"b\",null).build()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testSequence['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+2->6 [style = bold, label=""];
+6->7 [style = dashed, label="0"];
+12->6 [style = solid, label="expected"];
+3->7 [style = solid, label="rows"];
+4->2 [style = bold, label=""];
+11->9 [style = bold, label=""];
+12->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+8->5 [style = bold, label=""];
+5->0 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+2->7 [style = solid, label="expected"];
+2->6 [style = solid, label="expected"];
+4->12 [style = bold, label=""];
+9->3 [style = bold, label=""];
+2->7 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+10->11 [style = bold, label=""];
+}

@@ -1,0 +1,20 @@
+digraph {
+2 [style = filled, label = "ASet<String> s = ASet.of().aif(description != null,\"description\").aif(schema != null,\"schema\").aif(headers != null,\"headers\").aif(example != null,\"example\").aif(examples != null,\"examples\")@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "keySet['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "return new MultiSet<>(s,super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15c1161)@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ASet<String> s = ASet.of().appendIf(description != null,\"description\").appendIf(schema != null,\"schema\").appendIf(headers != null,\"headers\").appendIf(example != null,\"example\").appendIf(examples != null,\"examples\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "keySet['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "keySet['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "ASet<String> s = ASet.of().aif(format != null,\"format\").aif(title != null,\"title\").aif(description != null,\"description\").aif(_default != null,\"default\").aif(multipleOf != null,\"multipleOf\").aif(maximum != null,\"maximum\").aif(exclusiveMaximum != null,\"exclusiveMaximum\").aif(minimum != null,\"minimum\").aif(exclusiveMinimum != null,\"exclusiveMinimum\").aif(maxLength != null,\"maxLength\").aif(minLength != null,\"minLength\").aif(pattern != null,\"pattern\").aif(maxItems != null,\"maxItems\").aif(minItems != null,\"minItems\").aif(uniqueItems != null,\"uniqueItems\").aif(maxProperties != null,\"maxProperties\").aif(minProperties != null,\"minProperties\").aif(required != null,\"required\").aif(_enum != null,\"enum\").aif(type != null,\"type\").aif(items != null,\"items\").aif(allOf != null,\"allOf\").aif(properties != null,\"properties\").aif(additionalProperties != null,\"additionalProperties\").aif(discriminator != null,\"discriminator\").aif(readOnly != null,\"readOnly\").aif(xml != null,\"xml\").aif(externalDocs != null,\"externalDocs\").aif(example != null,\"example\").aif(ref != null,\"$ref\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2->0 [style = solid, label="s"];
+6->0 [style = solid, label="s"];
+4->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+6->0 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->0 [style = solid, label="s"];
+2->3 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

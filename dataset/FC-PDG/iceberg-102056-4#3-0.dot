@@ -1,0 +1,32 @@
+digraph {
+11 [style = filled, label = "testAddExistingIdentifierFields['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Assert.assertEquals(\"set existing nested field as identifier should succeed\",Sets.newHashSet(newSchema.findField(\"preferences.feature1\").fieldId()),newSchema.identifierFieldIds())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Schema newSchema = new SchemaUpdate(SCHEMA,SCHEMA_LAST_COLUMN_ID).setIdentifierFields(\"preferences.feature1\").apply()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Schema newSchema = new SchemaUpdate(SCHEMA,SCHEMA_LAST_COLUMN_ID).setIdentifierFields(\"id\").apply()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "Assert.assertEquals(\"add an existing field as identifier field should succeed\",Sets.newHashSet(newSchema.findField(\"id\").fieldId()),newSchema.identifierFieldIds())@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Assert.assertEquals(\"set newly added nested field as identifier should succeed\",Sets.newHashSet(newSchema.findField(\"new.field\").fieldId()),newSchema.identifierFieldIds())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "newSchema = new SchemaUpdate(SCHEMA,SCHEMA_LAST_COLUMN_ID).allowIncompatibleChanges().addRequiredColumn(\"new\",Types.StructType.of(Types.NestedField.required(SCHEMA_LAST_COLUMN_ID + 1,\"field\",Types.StructType.of(Types.NestedField.required(SCHEMA_LAST_COLUMN_ID + 2,\"nested\",Types.StringType.get()))))).setIdentifierFields(\"new.field.nested\").apply()@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "newSchema = new SchemaUpdate(SCHEMA,SCHEMA_LAST_COLUMN_ID).addColumn(\"new\",Types.StructType.of(Types.NestedField.optional(SCHEMA_LAST_COLUMN_ID + 1,\"field\",Types.StringType.get()))).setIdentifierFields(\"new.field\").apply()@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "newSchema = new SchemaUpdate(SCHEMA,SCHEMA_LAST_COLUMN_ID).allowIncompatibleChanges().addRequiredColumn(\"new\",Types.StructType.of(Types.NestedField.required(SCHEMA_LAST_COLUMN_ID + 1,\"field\",Types.StringType.get()))).setIdentifierFields(\"new.field\").apply()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "newSchema = new SchemaUpdate(SCHEMA,SCHEMA_LAST_COLUMN_ID).addColumn(\"new\",Types.StructType.of(Types.NestedField.optional(SCHEMA_LAST_COLUMN_ID + 1,\"field\",Types.StructType.of(Types.NestedField.optional(SCHEMA_LAST_COLUMN_ID + 2,\"nested\",Types.StringType.get()))))).setIdentifierFields(\"new.field.nested\").apply()@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "testAddNestedIdentifierFieldColumns['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testAddNestedIdentifierFieldColumns['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "Assert.assertEquals(\"set newly added multi-layer nested field as identifier should succeed\",Sets.newHashSet(newSchema.findField(\"new.field.nested\").fieldId()),newSchema.identifierFieldIds())@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->8 [style = dashed, label="0"];
+4->8 [style = bold, label=""];
+4->3 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+3->5 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+7->1 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+8->5 [style = bold, label=""];
+5->9 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+10->12 [style = bold, label=""];
+11->10 [style = bold, label=""];
+2->6 [style = bold, label=""];
+0->1 [style = bold, label=""];
+9->6 [style = bold, label=""];
+}

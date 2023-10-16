@@ -1,0 +1,26 @@
+digraph {
+0 [style = filled, label = "Iterator<Elements> i = t.iterator()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertTrue(row.get(2).text().equals(\"R0C2\"))@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertTrue(row.get(0).text().equals(\"R1C0\"))@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "row = i.next()@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "FileReader t = new FileReader(source)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testFileReaderData['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Elements row = i.next()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testFileReaderData['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "final Source source = resource(\"tableNoTH.html\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testFileReaderDataNoTh['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final Source source = resource(\"tableOK.html\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->3 [style = bold, label=""];
+10->9 [style = bold, label=""];
+1->0 [style = bold, label=""];
+9->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+9->1 [style = solid, label="source"];
+7->2 [style = bold, label=""];
+5->4 [style = bold, label=""];
+8->3 [style = bold, label=""];
+2->5 [style = bold, label=""];
+0->7 [style = bold, label=""];
+3->1 [style = solid, label="source"];
+}

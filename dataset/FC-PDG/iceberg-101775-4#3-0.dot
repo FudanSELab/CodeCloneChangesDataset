@@ -1,0 +1,31 @@
+digraph {
+6 [style = filled, label = "verify(asList(4L,24L,44L,64L,84L,104L),108L,2,asList(asList(4L,20L),asList(24L,20L),asList(44L,20L),asList(64L,20L),asList(84L,20L),asList(104L,4L)))@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "verify(asList(4L,10L,15L,18L,30L,45L),46L,asList(asList(4L,6L),asList(10L,5L),asList(15L,3L),asList(18L,12L),asList(30L,15L),asList(45L,1L)))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "verify(asList(4L,10L,15L,18L,30L,45L),48L,asList(asList(4L,6L),asList(10L,5L),asList(15L,3L),asList(18L,12L),asList(30L,15L),asList(45L,3L)))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "verify(asList(4L),48L,asList(asList(4L,44L)))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "verify(15L,100L,asList(asList(0L,15L),asList(15L,15L),asList(30L,15L),asList(45L,15L),asList(60L,15L),asList(75L,15L),asList(90L,10L)))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "verify(asList(4L,24L,44L,64L,84L,104L),108L,20,asList(asList(4L,20L),asList(24L,20L),asList(44L,20L),asList(64L,20L),asList(84L,20L),asList(104L,4L)))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "verify(20L,10L,asList(asList(0L,10L)))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "verify(asList(4L,24L,44L,64L,84L,104L),124L,20,asList(asList(4L,20L),asList(24L,20L),asList(44L,20L),asList(64L,20L),asList(84L,20L),asList(104L,20L)))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "testSplits['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "verify(10L,10L,asList(asList(0L,10L)))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "verify(asList(4L,10L,15L,18L,30L,45L),48L,20,asList(asList(4L,14L),asList(18L,12L),asList(30L,18L)))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "testSplits['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testSplits['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "verify(asList(4L,10L,15L,18L,30L,45L),46L,20,asList(asList(4L,14L),asList(18L,12L),asList(30L,16L)))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9->5 [style = bold, label=""];
+5->7 [style = bold, label=""];
+4->8 [style = bold, label=""];
+8->6 [style = bold, label=""];
+12->10 [style = bold, label=""];
+13->12 [style = bold, label=""];
+1->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+0->12 [style = dashed, label="0"];
+0->5 [style = dashed, label="0"];
+2->7 [style = dashed, label="0"];
+3->4 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

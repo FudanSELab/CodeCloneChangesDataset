@@ -1,0 +1,27 @@
+digraph {
+10 [style = filled, label = "stateManager.initialize()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "initializeConsumer(1,0,t1)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "initializeConsumer(1,1,t1)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "stateManager.register(new NoOpReadOnlyStore(store1.name()){@Override public void flush(){throw new RuntimeException(\"KABOOM!\")}},false,stateRestoreCallback)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "stateManager.flush()@@@12@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final TheStateRestoreCallback stateRestoreCallback = new TheStateRestoreCallback()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "stateManager.initialize(context)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "stateManager.registerStore(new NoOpReadOnlyStore<Object,Object>(store1.name()){@Override public void close(){throw new RuntimeException(\"KABOOM!\")}},stateRestoreCallback)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "shouldThrowProcessorStateStoreExceptionIfStoreCloseFailed['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "shouldThrowProcessorStateStoreExceptionIfStoreFlushFailed['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "assertThrows(,null)@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "shouldThrowProcessorStateStoreExceptionIfStoreFlushFailed['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->9 [style = dashed, label="0"];
+6->0 [style = bold, label=""];
+4->3 [style = solid, label="stateRestoreCallback"];
+4->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+7->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+11->10 [style = bold, label=""];
+10->7 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

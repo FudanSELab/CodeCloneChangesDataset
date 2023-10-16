@@ -1,0 +1,34 @@
+digraph {
+9 [style = filled, label = "testTaskAssignment['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "_gSetupTool.getClusterManagementTool().enableInstance(CLUSTER_NAME,PARTICIPANT_PREFIX + \"_\" + (_startPort + 0),false)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "_driver.pollForWorkflowState(jobResource,TaskState.COMPLETED)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Assert.assertNull(_driver.getJobContext(TaskUtil.getNamespacedJobName(jobResource)).getPartitionState(0))@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Thread.sleep(1000L)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testTaskAssignment['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Assert.assertEquals(ctx.getAssignedParticipant(0),PARTICIPANT_PREFIX + \"_\" + (_startPort + 1))@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "_driver.start(flow)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "JobContext ctx = _driver.getJobContext(TaskUtil.getNamespacedJobName(jobResource))@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "_setupTool.getClusterManagementTool().enableInstance(CLUSTER_NAME,PARTICIPANT_PREFIX + \"_\" + (_startPort + 0),false)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testTaskWithInstanceDisabled['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "JobConfig.Builder jobBuilder = new JobConfig.Builder().setCommand(MockTask.TASK_COMMAND).setTargetResource(WorkflowGenerator.DEFAULT_TGT_DB)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "String jobResource = TestHelper.getTestMethodName()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Workflow flow = WorkflowGenerator.generateSingleJobWorkflowBuilder(jobResource,jobBuilder).build()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->13 [style = bold, label=""];
+6->3 [style = bold, label=""];
+2->11 [style = dashed, label="0"];
+6->3 [style = solid, label="flow"];
+5->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+7->0 [style = bold, label=""];
+1->4 [style = bold, label=""];
+7->13 [style = solid, label="jobResource"];
+12->4 [style = bold, label=""];
+9->8 [style = bold, label=""];
+0->6 [style = bold, label=""];
+13->11 [style = bold, label=""];
+11->10 [style = bold, label=""];
+4->7 [style = bold, label=""];
+7->11 [style = solid, label="jobResource"];
+8->7 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+}

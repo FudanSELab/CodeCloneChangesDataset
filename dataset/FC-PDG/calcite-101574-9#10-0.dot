@@ -1,0 +1,26 @@
+digraph {
+7 [style = filled, label = "testMatchRecognizeSubset1['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final String expected = \"SELECT *\" + \"FROM (SELECT *\" + \"FROM \"foodmart\".\"product\") MATCH_RECOGNIZE(\" + \"ONE ROW PER MATCH\" + \"AFTER MATCH SKIP TO LAST \"DOWN\"\" + \"PATTERN (\"STRT\" \"DOWN\" + \"UP\" +)\" + \"SUBSET \"STDN\" = (\"DOWN\", \"STRT\")\" + \"DEFINE \" + \"\"DOWN\" AS \"DOWN\".\"net_weight\" < \" + \"PREV(\"DOWN\".\"net_weight\", 1), \" + \"\"UP\" AS \"UP\".\"net_weight\" > \" + \"NEXT(\"UP\".\"net_weight\", 1))\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "String sql = \"select *\" + \" from \"product\" match_recognize\" + \" (\" + \" partition by \"product_class_id\", \"brand_name\" \" + \" order by \"product_class_id\" asc, \"brand_name\" desc \" + \" pattern (strt down+ up+)\" + \" define\" + \" down as down.\"net_weight\" < PREV(down.\"net_weight\"),\" + \" up as up.\"net_weight\" > prev(up.\"net_weight\")\" + \" ) mr\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "String expected = \"SELECT *\" + \"FROM (SELECT *\" + \"FROM \"foodmart\".\"product\") MATCH_RECOGNIZE(\" + \"PARTITION BY \"product_class_id\", \"brand_name\"\" + \"ORDER BY \"product_class_id\", \"brand_name\" DESC\" + \"ONE ROW PER MATCH\" + \"AFTER MATCH SKIP TO NEXT ROW\" + \"PATTERN (\"STRT\" \"DOWN\" + \"UP\" +)\" + \"DEFINE \" + \"\"DOWN\" AS PREV(\"DOWN\".\"net_weight\", 0) < \" + \"PREV(\"DOWN\".\"net_weight\", 1), \" + \"\"UP\" AS PREV(\"UP\".\"net_weight\", 0) > \" + \"PREV(\"UP\".\"net_weight\", 1))\"@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "String expected = \"SELECT *\" + \"FROM (SELECT *\" + \"FROM \"foodmart\".\"product\") MATCH_RECOGNIZE(\" + \"PARTITION BY \"product_class_id\", \"brand_name\"\" + \"ORDER BY \"product_class_id\", \"brand_name\" DESC\" + \"ONE ROW PER MATCH\" + \"AFTER MATCH SKIP TO NEXT ROW\" + \"PATTERN (\"STRT\" \"DOWN\" + \"UP\" +)\" + \"DEFINE \" + \"\"DOWN\" AS \"DOWN\".\"net_weight\" < \" + \"PREV(\"DOWN\".\"net_weight\", 1), \" + \"\"UP\" AS \"UP\".\"net_weight\" > \" + \"PREV(\"UP\".\"net_weight\", 1))\"@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "final String sql = \"select *\" + \" from \"product\" match_recognize\" + \" (\" + \" after match skip to down\" + \" pattern (strt down+ up+)\" + \" subset stdn = (strt, down)\" + \" define\" + \" down as down.\"net_weight\" < PREV(down.\"net_weight\"),\" + \" up as up.\"net_weight\" > NEXT(up.\"net_weight\")\" + \" ) mr\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testMatchRecognizePatternExpression['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "testMatchRecognizePatternExpression['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "sql(sql).ok(expected)@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->8 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+3->5 [style = bold, label=""];
+8->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+6->0 [style = solid, label="expected"];
+1->0 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+7->8 [style = bold, label=""];
+5->0 [style = solid, label="expected"];
+1->6 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+1->0 [style = solid, label="expected"];
+}

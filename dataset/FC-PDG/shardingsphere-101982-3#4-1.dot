@@ -1,0 +1,33 @@
+digraph {
+11 [style = filled, label = "scalingAPI.remove(jobId.get())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertTrue(getJobInfo(jobId.get()).isPresent())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "assertRemove['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertTrue(jobId.isPresent())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertStartOrStopById['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "Optional<Long> jobId = scalingAPI.start(ResourceUtil.mockJobConfig())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "assertStartOrStopById['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "scalingAPI.stop(jobId.get())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertTrue(getNonNullJobInfo(jobId.get()).isActive())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertFalse(getJobInfo(jobId.get()).isPresent())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertFalse(getNonNullJobInfo(jobId.get()).isActive())@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Optional<Long> jobId = scalingAPI.start(JobConfigurationUtil.initJobConfig(\"/config.json\"))@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertTrue(getNonNullJobInfo(jobId.get()).isActive())@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "scalingAPI.start(jobId.get())@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+7->11 [style = dashed, label="0"];
+1->8 [style = dashed, label="0"];
+6->0 [style = bold, label=""];
+8->5 [style = bold, label=""];
+3->1 [style = bold, label=""];
+5->12 [style = bold, label=""];
+9->8 [style = bold, label=""];
+11->10 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->6 [style = bold, label=""];
+4->7 [style = bold, label=""];
+5->4 [style = bold, label=""];
+13->1 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+2->10 [style = dashed, label="0"];
+12->11 [style = bold, label=""];
+}

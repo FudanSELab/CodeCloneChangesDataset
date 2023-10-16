@@ -1,0 +1,36 @@
+digraph {
+2 [style = filled, label = "FailureAnalysis analysis = performAnalysis(failure)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "analysisWithKnownPropertyAndNoReason['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "analysisWithKnownProperty['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(analysis.getAction()).contains(\"Review the value of the property with the provided reason.\")@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertCommonParts(failure,analysis)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "analysisWithKnownProperty['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "assertThat(analysis.getAction()).contains(\"Review the value of the property.\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "InvalidConfigurationPropertyValueException failure = new InvalidConfigurationPropertyValueException(\"test.property\",\"invalid\",\"This is not valid.\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "MapPropertySource source = new MapPropertySource(\"test\",Collections.singletonMap(\"test.property\",\"invalid\"))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "InvalidConfigurationPropertyValueException failure = new InvalidConfigurationPropertyValueException(\"test.property\",\"invalid\",null)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertThat(analysis.getDescription()).contains(\"Validation failed for the following reason\").contains(\"This is not valid.\").doesNotContain(\"Additionally, this property is also set\")@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(analysis.getDescription()).contains(\"No reason was provided.\").doesNotContain(\"Additionally, this property is also set\")@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "this.environment.getPropertySources().addFirst(OriginCapablePropertySource.get(source))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->11 [style = bold, label=""];
+0->2 [style = bold, label=""];
+0->2 [style = solid, label="failure"];
+3->6 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+8->6 [style = bold, label=""];
+1->0 [style = bold, label=""];
+2->9 [style = bold, label=""];
+0->5 [style = solid, label="failure"];
+12->6 [style = bold, label=""];
+4->7 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+6->1 [style = solid, label="source"];
+6->1 [style = bold, label=""];
+10->2 [style = solid, label="failure"];
+2->5 [style = solid, label="analysis"];
+5->4 [style = bold, label=""];
+10->2 [style = bold, label=""];
+4->11 [style = dashed, label="0"];
+1->10 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

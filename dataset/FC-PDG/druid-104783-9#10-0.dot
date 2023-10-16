@@ -1,0 +1,37 @@
+digraph {
+2 [style = filled, label = "ParallelIndexTuningConfig tuningConfig@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final IndexTuningConfig indexTuningConfig = (IndexTuningConfig)tuningConfig@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "return new IndexTuningConfig(null,null,tuningConfig.getAppendableIndexSpec(),tuningConfig.getMaxRowsInMemory(),tuningConfig.getMaxBytesInMemory(),tuningConfig.isSkipBytesInMemoryOverheadCheck(),null,null,null,null,tuningConfig.getPartitionsSpec(),tuningConfig.getIndexSpec(),tuningConfig.getIndexSpecForIntermediatePersists(),tuningConfig.getMaxPendingPersists(),tuningConfig.isForceGuaranteedRollup(),tuningConfig.isReportParseExceptions(),null,tuningConfig.getPushTimeout(),tuningConfig.getSegmentWriteOutMediumFactory(),tuningConfig.isLogParseExceptions(),tuningConfig.getMaxParseExceptions(),tuningConfig.getMaxSavedParseExceptions(),tuningConfig.getMaxColumnsToMerge(),tuningConfig.getAwaitSegmentAvailabilityTimeoutMillis())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "return new IndexTuningConfig(null,null,tuningConfig.getAppendableIndexSpec(),tuningConfig.getMaxRowsInMemory(),tuningConfig.getMaxBytesInMemory(),tuningConfig.isSkipBytesInMemoryOverheadCheck(),null,null,null,null,tuningConfig.getPartitionsSpec(),tuningConfig.getIndexSpec(),tuningConfig.getIndexSpecForIntermediatePersists(),tuningConfig.getMaxPendingPersists(),tuningConfig.isForceGuaranteedRollup(),tuningConfig.isReportParseExceptions(),null,tuningConfig.getPushTimeout(),tuningConfig.getSegmentWriteOutMediumFactory(),tuningConfig.isLogParseExceptions(),tuningConfig.getMaxParseExceptions(),tuningConfig.getMaxSavedParseExceptions(),tuningConfig.getMaxColumnsToMerge())@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "tuningConfig instanceof ParallelIndexTuningConfig@@@3@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "return new ParallelIndexTuningConfig(null,indexTuningConfig.getMaxRowsPerSegment(),indexTuningConfig.getAppendableIndexSpec(),indexTuningConfig.getMaxRowsPerSegment(),indexTuningConfig.getMaxBytesInMemory(),indexTuningConfig.isSkipBytesInMemoryOverheadCheck(),indexTuningConfig.getMaxTotalRows(),indexTuningConfig.getNumShards(),null,indexTuningConfig.getPartitionsSpec(),indexTuningConfig.getIndexSpec(),indexTuningConfig.getIndexSpecForIntermediatePersists(),indexTuningConfig.getMaxPendingPersists(),indexTuningConfig.isForceGuaranteedRollup(),indexTuningConfig.isReportParseExceptions(),indexTuningConfig.getPushTimeout(),indexTuningConfig.getSegmentWriteOutMediumFactory(),null,null,null,null,null,null,null,null,indexTuningConfig.isLogParseExceptions(),indexTuningConfig.getMaxParseExceptions(),indexTuningConfig.getMaxSavedParseExceptions(),indexTuningConfig.getMaxColumnsToMerge())@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "TuningConfig tuningConfig@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "getTuningConfig['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "convertToIndexTuningConfig['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "throw new ISE(\"Unknown tuningConfig type: (%s(, Must be either (%s( or (%s(\",tuningConfig.getClass().getName(),.getName(),.getName())@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "tuningConfig instanceof IndexTuningConfig@@@6@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "convertToIndexTuningConfig['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "return (ParallelIndexTuningConfig)tuningConfig@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->3 [style = bold, label=""];
+5->8 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+7->12 [style = bold, label=""];
+1->0 [style = bold, label=""];
+9->8 [style = solid, label="tuningConfig"];
+9->12 [style = solid, label="tuningConfig"];
+10->9 [style = dotted, label="true"];
+10->7 [style = bold, label=""];
+7->12 [style = dotted, label="true"];
+9->7 [style = solid, label="tuningConfig"];
+7->5 [style = bold, label=""];
+5->11 [style = dotted, label="true"];
+5->6 [style = bold, label=""];
+5->6 [style = dotted, label="false"];
+2->9 [style = dashed, label="0"];
+9->5 [style = solid, label="tuningConfig"];
+5->8 [style = dotted, label="true"];
+7->5 [style = dotted, label="false"];
+1->2 [style = dotted, label="true"];
+8->11 [style = bold, label=""];
+4->2 [style = dotted, label="true"];
+}

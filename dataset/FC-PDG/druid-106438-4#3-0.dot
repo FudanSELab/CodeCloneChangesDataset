@@ -1,0 +1,34 @@
+digraph {
+6 [style = filled, label = "TestHelper.assertExpectedObjects(expectedResults,mergedRunner.run(QueryPlus.wrap(fullQuery),context),\"merged\")@@@15@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "GroupByQuery fullQuery = builder.build()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "TestHelper.assertExpectedObjects(expectedResults,GroupByQueryRunnerTestHelper.runQuery(factory,runner,fullQuery),\"\")@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Map<String,Object> context = Maps.newHashMap()@@@14@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "GroupByQuery.Builder builder = GroupByQuery.builder().setDataSource(QueryRunnerTestHelper.dataSource).setInterval(\"2011-04-02/2011-04-04\").setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\")).setAggregatorSpecs(QueryRunnerTestHelper.rowsCount,new LongSumAggregatorFactory(\"idx\",\"index\")).setGranularity(new PeriodGranularity(new Period(\"P1M\"),null,null)).setHavingSpec(new OrHavingSpec(ImmutableList.of(new GreaterThanHavingSpec(\"rows\",2L),new EqualToHavingSpec(\"idx\",217L))))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Map<String,Object> context = new HashMap<>()@@@14@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "testMergedHavingSpec['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "QueryRunner mergedRunner = factory.getToolchest().mergeResults(new QueryRunner<Row>(){@Override public Sequence<Row> run(QueryPlus<Row> queryPlus,Map<String,Object> responseContext){final QueryPlus queryPlus1 = queryPlus.withQuerySegmentSpec(new MultipleIntervalSegmentSpec(Collections.singletonList(Intervals.of(\"2011-04-02/2011-04-03\"))))final QueryPlus queryPlus2 = queryPlus.withQuerySegmentSpec(new MultipleIntervalSegmentSpec(Collections.singletonList(Intervals.of(\"2011-04-03/2011-04-04\"))))return new MergeSequence(queryPlus.getQuery().getResultOrdering(),Sequences.simple(Arrays.asList(runner.run(queryPlus1,responseContext),runner.run(queryPlus2,responseContext))))}})@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testMergedHavingSpec['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "List<Row> expectedResults = Arrays.asList(GroupByQueryRunnerTestHelper.createExpectedRow(\"2011-04-01\",\"alias\",\"business\",\"rows\",2L,\"idx\",217L),GroupByQueryRunnerTestHelper.createExpectedRow(\"2011-04-01\",\"alias\",\"mezzanine\",\"rows\",6L,\"idx\",4420L),GroupByQueryRunnerTestHelper.createExpectedRow(\"2011-04-01\",\"alias\",\"premium\",\"rows\",6L,\"idx\",4416L))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final GroupByQuery fullQuery = builder.build()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testHavingSpec['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+8->0 [style = bold, label=""];
+9->11 [style = solid, label="fullQuery"];
+3->0 [style = bold, label=""];
+10->0 [style = bold, label=""];
+2->6 [style = solid, label="context"];
+5->9 [style = dashed, label="0"];
+1->9 [style = bold, label=""];
+7->6 [style = solid, label="context"];
+4->2 [style = bold, label=""];
+0->11 [style = solid, label="expectedResults"];
+9->11 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+0->6 [style = solid, label="expectedResults"];
+2->6 [style = bold, label=""];
+0->1 [style = bold, label=""];
+4->7 [style = bold, label=""];
+5->4 [style = bold, label=""];
+7->6 [style = bold, label=""];
+5->6 [style = solid, label="fullQuery"];
+}

@@ -1,0 +1,13 @@
+digraph {
+0 [style = filled, label = "asDruidConvention['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return new DruidJoinQueryRel(getCluster(),getTraitSet().replace(DruidConvention.instance()),joinRel.copy(joinRel.getTraitSet(),joinRel.getInputs().stream().map(null).collect(Collectors.toList())),partialQuery,getQueryMaker())@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "return new DruidUnionDataSourceRel(getCluster(),getTraitSet().replace(DruidConvention.instance()),(Union)unionRel.copy(unionRel.getTraitSet(),unionRel.getInputs().stream().map(null).collect(Collectors.toList())),unionColumnNames,partialQuery,getQueryMaker())@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "asDruidConvention['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "return new DruidJoinQueryRel(getCluster(),getTraitSet().replace(DruidConvention.instance()),joinRel.copy(joinRel.getTraitSet(),joinRel.getInputs().stream().map(null).collect(Collectors.toList())),leftFilter,partialQuery,getQueryMaker())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "asDruidConvention['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->4 [style = dashed, label="0"];
+1->2 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+}

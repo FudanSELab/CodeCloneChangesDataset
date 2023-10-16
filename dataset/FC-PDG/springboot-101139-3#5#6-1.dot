@@ -1,0 +1,37 @@
+digraph {
+7 [style = filled, label = "LoggingInitializationContext loggingInitializationContext = new LoggingInitializationContext(environment)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testMaxFileSizePropertyWithXmlConfiguration['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(getLineWithText(file,\"Hello world\")).contains(\"INFO\")@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "this.loggingSystem.initialize(loggingInitializationContext,\"classpath:logback-include-base.xml\",logFile)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "LogFile logFile = getLogFile(file.getPath(),null)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(ReflectionTestUtils.getField(getRollingPolicy(),\"maxFileSize\").toString()).isEqualTo(\"100 MB\")@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "MockEnvironment environment = new MockEnvironment()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testMaxFileSizePropertyWithXmlConfiguration['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "assertThat(ReflectionTestUtils.getField(getRollingPolicy(),\"maxFileSize\").toString()).isEqualTo(\"100 MB\")@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "environment.setProperty(\"logging.file.max-size\",\"100MB\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "LoggingInitializationContext loggingInitializationContext = new LoggingInitializationContext(environment)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "File file = new File(tmpDir(),\"logback-test.log\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "this.logger.info(\"Hello world\")@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testMaxFileSizePropertyWithXmlConfiguration['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+9->4 [style = bold, label=""];
+4->5 [style = solid, label="logFile"];
+7->11 [style = dashed, label="0"];
+3->6 [style = bold, label=""];
+11->5 [style = solid, label="loggingInitializationContext"];
+11->9 [style = bold, label=""];
+1->7 [style = bold, label=""];
+1->11 [style = bold, label=""];
+7->9 [style = bold, label=""];
+8->1 [style = bold, label=""];
+7->5 [style = solid, label="loggingInitializationContext"];
+6->13 [style = dashed, label="0"];
+10->8 [style = bold, label=""];
+5->0 [style = bold, label=""];
+8->11 [style = solid, label="environment"];
+12->8 [style = bold, label=""];
+8->7 [style = solid, label="environment"];
+3->13 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->8 [style = bold, label=""];
+}

@@ -1,0 +1,26 @@
+digraph {
+1 [style = filled, label = "assertThat(this.outputCapture.toString()).doesNotContain(\"testatdebug\").doesNotContain(\"testatfatal\")@@@7@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "TestPropertySourceUtils.addInlinedPropertiesToEnvironment(this.context,\"logging.level.org.springframework.boot=OFF\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "this.logger.debug(\"testatdebug\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "this.logger.error(\"testaterror\")@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "TestPropertySourceUtils.addInlinedPropertiesToEnvironment(this.context,\"logging.level.org.springframework.boot=false\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "this.logger.fatal(\"testatfatal\")@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "parseLevelsMapsFalseToOff['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "parseLevelsNone['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(this.outputCapture.toString()).doesNotContain(\"testatdebug\").doesNotContain(\"testaterror\")@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "this.initializer.initialize(this.context.getEnvironment(),this.context.getClassLoader())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "parseLevelsNone['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->3 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+2->5 [style = bold, label=""];
+10->5 [style = bold, label=""];
+9->10 [style = bold, label=""];
+8->2 [style = bold, label=""];
+3->7 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+7->6 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

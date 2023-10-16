@@ -1,0 +1,29 @@
+digraph {
+10 [style = filled, label = "testRestoreMissingCoreParamResultsIn400SolrException['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "params.put(\"name\",\"any-name-param\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "CoreAdminOperation.RESTORECORE_OP.execute(callInfo)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testBackupMissingCoreParamResultsIn400SolrException['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertSolrExceptionWithCode(ex,ErrorCode.BAD_REQUEST.code)@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "fail(\"Expected restore-core to fail when no 'core' param present\")@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Exception ex = expectThrows(,null)@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "whenCoreAdminOpHasParams(params)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testBackupMissingCoreParamResultsIn400SolrException['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "fail(\"Expected backup-core to fail when no 'core' param present\")@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "CoreAdminOperation.BACKUPCORE_OP.execute(callInfo)@@@7@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final Map<String,String> params = Maps.newHashMap()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+8->6 [style = solid, label="ex"];
+5->8 [style = bold, label=""];
+10->0 [style = bold, label=""];
+5->2 [style = bold, label=""];
+5->11 [style = bold, label=""];
+8->6 [style = bold, label=""];
+7->0 [style = bold, label=""];
+0->5 [style = solid, label="params"];
+2->11 [style = dashed, label="0"];
+4->9 [style = dashed, label="0"];
+11->9 [style = bold, label=""];
+2->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+}

@@ -1,0 +1,37 @@
+digraph {
+10 [style = filled, label = "client.gauge(\"broker.query.cache.total.hitRate\",0.54)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testConvertRangeWithDogstatsd['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "EasyMock.replay(client)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "emitter.emit(new ServiceMetricEvent.Builder().setDimension(\"dataSource\",\"data-source\").setDimension(\"type\",\"groupBy\").build(DateTimes.nowUtc(),\"query/time\",10).build(\"druid/broker\",\"brokerHost1\"))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "client.time(\"druid.query.time\",10,\"service:druid/broker\",\"dataSource:data-source\",\"type:groupBy\",\"hostname:brokerHost1\")@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "StatsDEmitter emitter = new StatsDEmitter(new StatsDEmitterConfig(\"localhost\",8888,null,null,true,null,null,true,null,true),new ObjectMapper(),client)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "emitter.emit(new ServiceMetricEvent.Builder().setDimension(\"dataSource\",\"data-source\").build(DateTimes.nowUtc(),\"query/cache/total/hitRate\",0.54).build(\"broker\",\"brokerHost1\"))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "StatsDEmitter emitter = new StatsDEmitter(new StatsDEmitterConfig(\"localhost\",8888,null,null,null,null,null,true,null,null),new ObjectMapper(),client)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testServiceAsTagOption['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "testServiceAsTagOption['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "client.time(\"druid.query.time\",10,\"druid_service:druid/broker\",\"dataSource:data-source\",\"type:groupBy\",\"hostname:brokerHost1\")@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "StatsDClient client = EasyMock.createMock()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "EasyMock.verify(client)@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->3 [style = bold, label=""];
+9->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->6 [style = bold, label=""];
+11->1 [style = bold, label=""];
+0->12 [style = bold, label=""];
+7->0 [style = bold, label=""];
+0->1 [style = solid, label="client"];
+0->12 [style = solid, label="client"];
+6->12 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+12->10 [style = bold, label=""];
+5->4 [style = bold, label=""];
+6->8 [style = bold, label=""];
+10->4 [style = bold, label=""];
+5->8 [style = dashed, label="0"];
+0->6 [style = solid, label="client"];
+8->4 [style = bold, label=""];
+0->4 [style = solid, label="client"];
+4->11 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+}

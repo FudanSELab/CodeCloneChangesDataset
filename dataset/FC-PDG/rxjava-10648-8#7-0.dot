@@ -1,0 +1,17 @@
+digraph {
+3 [style = filled, label = "assertValuePredicateNoMatch['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "to.assertValue(new Predicate<Integer>(){@Override public boolean test(final Integer o){return o == 1}})@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertValuePredicateNoMatch['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "TestObserverEx<Integer> to = new TestObserverEx<>()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertValuePredicateMatch['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Observable.just(1).subscribe(to)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThrows(\"Value not present\",,null)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "assertThrowsWithMessage(\"Value 1 (class: Integer) at position 0 did not pass the predicate (latch = 0, values = 1, errors = 0, completions = 1)\",,null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6->4 [style = bold, label=""];
+7->5 [style = bold, label=""];
+1->2 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+4->7 [style = bold, label=""];
+4->7 [style = solid, label="to"];
+}

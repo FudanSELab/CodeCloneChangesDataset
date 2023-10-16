@@ -1,0 +1,26 @@
+digraph {
+2 [style = filled, label = "BoundAuthorMapper mapper = session.getMapper()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "when(mapper).insertAuthorInvalidSelectKey(author)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Author author = new Author(-1,\"cbegin\",\"******\",\"cbegin@nowhere.com\",\"N/A\",Section.NEWS)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "verifyErrorMessageFromSelectKey['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "verifyErrorMessageFromInsertAfterSelectKey['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "when(mapper).insertAuthorInvalidInsert(author)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "verifyErrorMessageFromSelectKey['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "then(caughtException()).isInstanceOf().hasMessageContaining(\"### The error may exist in org/apache/ibatis/binding/BoundAuthorMapper.xml\" + System.lineSeparator() + \"### The error may involve org.apache.ibatis.binding.BoundAuthorMapper.insertAuthorInvalidInsert\" + System.lineSeparator() + \"### The error occurred while executing an update\")@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "{session.rollback()}@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "then(caughtException()).isInstanceOf().hasMessageContaining(\"### The error may exist in org/apache/ibatis/binding/BoundAuthorMapper.xml\" + System.lineSeparator() + \"### The error may involve org.apache.ibatis.binding.BoundAuthorMapper.insertAuthorInvalidSelectKey!selectKey\" + System.lineSeparator() + \"### The error occurred while executing a query\")@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->7 [style = bold, label=""];
+5->2 [style = bold, label=""];
+3->8 [style = solid, label="author"];
+7->1 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+9->2 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->8 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+3->4 [style = solid, label="author"];
+}

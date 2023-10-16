@@ -1,0 +1,35 @@
+digraph {
+1 [style = filled, label = "PieSectionEntity<String> e2 = (PieSectionEntity)TestUtils.serialised(e1)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "assertTrue(e1 != e2)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertTrue(e1.getClass() == e2.getClass())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "PieSectionEntity<String> e1 = new PieSectionEntity<>(new Rectangle2D.Double(1.0,2.0,3.0,4.0),new DefaultPieDataset<String>(),1,2,\"Key\",\"ToolTip\",\"URL\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertTrue(e1.equals(e2))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testSerialization['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(e1,e2)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testSerialization['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "PieSectionEntity<String> e2 = (PieSectionEntity)e1.clone()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "PieSectionEntity<String> e2 = TestUtils.serialised(e1)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "testCloning['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+8->3 [style = bold, label=""];
+3->1 [style = solid, label="e1"];
+1->0 [style = solid, label="e2"];
+1->4 [style = dashed, label="0"];
+9->6 [style = solid, label="e2"];
+1->9 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+3->4 [style = bold, label=""];
+10->7 [style = bold, label=""];
+9->6 [style = bold, label=""];
+4->0 [style = bold, label=""];
+3->9 [style = bold, label=""];
+9->7 [style = solid, label="e2"];
+4->0 [style = solid, label="e2"];
+3->0 [style = solid, label="e1"];
+6->10 [style = bold, label=""];
+3->4 [style = solid, label="e1"];
+3->6 [style = solid, label="e1"];
+}

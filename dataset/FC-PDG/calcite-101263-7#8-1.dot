@@ -1,0 +1,28 @@
+digraph {
+3 [style = filled, label = "final RelBuilder builder = RelBuilder.create(config().build())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThat(str(root),is(\"LogicalMinus(all=(false()\" + \" LogicalProject(DEPTNO=($0()\" + \" LogicalTableScan(table=((scott, DEPT(()\" + \" LogicalProject(EMPNO=($0()\" + \" LogicalFilter(condition=(=($7, 20)()\" + \" LogicalTableScan(table=((scott, EMP(()\"))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final String expected = \"\" + \"LogicalIntersect(all=(false()\" + \" LogicalProject(DEPTNO=($0()\" + \" LogicalTableScan(table=((scott, DEPT(()\" + \" LogicalProject(EMPNO=($0()\" + \" LogicalFilter(condition=(=($7, 20)()\" + \" LogicalTableScan(table=((scott, EMP(()\"@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "testIntersect['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "assertThat(root,hasTree(expected))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "RelNode root = builder.scan(\"DEPT\").project(builder.field(\"DEPTNO\")).scan(\"EMP\").filter(builder.call(SqlStdOperatorTable.EQUALS,builder.field(\"DEPTNO\"),builder.literal(20))).project(builder.field(\"EMPNO\")).intersect(false).build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testExcept['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testIntersect['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "RelNode root = builder.scan(\"DEPT\").project(builder.field(\"DEPTNO\")).scan(\"EMP\").filter(builder.call(SqlStdOperatorTable.EQUALS,builder.field(\"DEPTNO\"),builder.literal(20))).project(builder.field(\"EMPNO\")).minus(false).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertThat(str(root),is(\"LogicalIntersect(all=(false()\" + \" LogicalProject(DEPTNO=($0()\" + \" LogicalTableScan(table=((scott, DEPT(()\" + \" LogicalProject(EMPNO=($0()\" + \" LogicalFilter(condition=(=($7, 20)()\" + \" LogicalTableScan(table=((scott, EMP(()\"))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+2->0 [style = solid, label="root"];
+0->8 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+4->5 [style = solid, label="expected"];
+7->8 [style = solid, label="root"];
+0->4 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+3->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+2->5 [style = solid, label="root"];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+}

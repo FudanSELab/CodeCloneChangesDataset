@@ -1,0 +1,36 @@
+digraph {
+8 [style = filled, label = "tester.checkString(\"lower('A')\",\"a\",\"CHAR(1) NOT NULL\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "tester.checkString(\"lower('a')\",\"a\",\"CHAR(1) NOT NULL\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "testLowerFunc['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "tester.setFor(SqlStdOperatorTable.LOWER)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "tester.checkString(\"upper('a')\",\"A\",\"CHAR(1) NOT NULL\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "tester.checkNull(\"upper(cast(null as varchar(1)))\")@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "tester.checkString(\"upper('1')\",\"1\",\"CHAR(1) NOT NULL\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "tester.checkString(\"upper('A')\",\"A\",\"CHAR(1) NOT NULL\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testUpperFunc['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "tester.checkString(\"upper('aa')\",\"AA\",\"CHAR(2) NOT NULL\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "tester.checkString(\"lower('1')\",\"1\",\"CHAR(1) NOT NULL\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "tester.checkNull(\"lower(cast(null as varchar(1)))\")@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "tester.checkString(\"lower('AA')\",\"aa\",\"CHAR(2) NOT NULL\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testUpperFunc['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "tester.setFor(SqlStdOperatorTable.UPPER)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+13->10 [style = bold, label=""];
+6->3 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->0 [style = bold, label=""];
+11->12 [style = bold, label=""];
+6->8 [style = dashed, label="0"];
+5->14 [style = dashed, label="0"];
+10->8 [style = bold, label=""];
+12->9 [style = bold, label=""];
+8->11 [style = bold, label=""];
+0->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+3->11 [style = dashed, label="0"];
+4->12 [style = dashed, label="0"];
+9->14 [style = bold, label=""];
+}

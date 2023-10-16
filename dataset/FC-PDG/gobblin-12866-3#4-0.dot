@@ -1,0 +1,25 @@
+digraph {
+10 [style = filled, label = "return getURIIteratorByQuery(statement)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "getSpecURIsImpl['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "log.error(\"Failed to deserialize spec\",e)@@@12@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "return specs@@@16@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "getSpecsImpl['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "specs.add(rs.getString(3) == null? this.specSerDe.deserialize(rs.getString(2).getBytes(Charsets.UTF_8)): this.specSerDe.deserialize(ByteStreams.toByteArray(rs.getBlob(3).getBinaryStream())))@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "getSpecsImpl['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "return getSpecsInternal(statement)@@@5@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "rs.next()@@@7@@@['1', '0', '0']", fillcolor = red, shape = diamond image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "SQLException|SpecSerDeException e@@@11@@@['1', '0', '0']", fillcolor = red, shape = diamond image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "List<Spec> specs = new ArrayList<>()@@@5@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->1 [style = bold, label=""];
+1->0 [style = bold, label=""];
+0->5 [style = dotted, label="true"];
+9->10 [style = bold, label=""];
+5->0 [style = bold, label=""];
+7->8 [style = bold, label=""];
+1->3 [style = solid, label="specs"];
+2->4 [style = bold, label=""];
+2->4 [style = dotted, label="true"];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

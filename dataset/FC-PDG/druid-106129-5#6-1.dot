@@ -1,0 +1,34 @@
+digraph {
+8 [style = filled, label = "test_makeCursors_factToCountryUsingVirtualColumnUsingLookup['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "List<JoinableClause> joinableClauses = ImmutableList.of(new JoinableClause(FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX,LookupJoinable.wrap(countryIsoCodeToNameLookup),JoinType.INNER,JoinConditionAnalysis.forExpression(StringUtils.format(\"\"%sk\" == virtual\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX),FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX,ExprMacroTable.nil())))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "JoinTestHelper.verifyCursors(new HashJoinSegmentStorageAdapter(factSegment.asStorageAdapter(),joinableClauses,preAnalysis).makeCursors(null,Intervals.ETERNITY,virtualColumns,Granularities.ALL,false,null),ImmutableList.of(\"page\",\"countryIsoCode\",\"virtual\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"k\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"v\"),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8eb22c,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8eb234,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8eb23c,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8eb244))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "test_makeCursors_factToCountryUsingVirtualColumn['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "JoinTestHelper.verifyCursors(new HashJoinSegmentStorageAdapter(factSegment.asStorageAdapter(),joinableClauses,preAnalysis).makeCursors(null,Intervals.ETERNITY,virtualColumns,Granularities.ALL,false,null),ImmutableList.of(\"page\",\"countryIsoCode\",\"virtual\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"countryIsoCode\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"countryName\"),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8eb117,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8eb11f,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8eb127,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8eb12f))@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "JoinTestHelper.verifyCursors(new HashJoinSegmentStorageAdapter(factSegment.asStorageAdapter(),joinableClauses,joinFilterPreAnalysisGroup).makeCursors(null,Intervals.ETERNITY,virtualColumns,Granularities.ALL,false,null),ImmutableList.of(\"page\",\"countryIsoCode\",\"virtual\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"countryIsoCode\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"countryName\"),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8eb19c,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8eb1a4,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8eb1ac,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8eb1b4))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "VirtualColumns virtualColumns = VirtualColumns.create(Collections.singletonList(new ExpressionVirtualColumn(\"virtual\",\"concat(substring(countryIsoCode, 0, 1),'L')\",ValueType.STRING,ExprMacroTable.nil())))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "JoinFilterPreAnalysisGroup joinFilterPreAnalysisGroup = makeDefaultConfigPreAnalysisGroup(null,joinableClauses,virtualColumns)@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "JoinFilterPreAnalysis preAnalysis = JoinFilterAnalyzer.computeJoinFilterPreAnalysis(JoinableClauses.fromList(joinableClauses),virtualColumns,null,true,true,true,QueryContexts.DEFAULT_ENABLE_JOIN_FILTER_REWRITE_MAX_SIZE)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "List<JoinableClause> joinableClauses = ImmutableList.of(new JoinableClause(FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX,new IndexedTableJoinable(countriesTable),JoinType.INNER,JoinConditionAnalysis.forExpression(StringUtils.format(\"\"%scountryIsoCode\" == virtual\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX),FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX,ExprMacroTable.nil())))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "test_makeCursors_factToCountryUsingVirtualColumn['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8->10 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+2->5 [style = solid, label="virtualColumns"];
+10->1 [style = solid, label="joinableClauses"];
+2->3 [style = solid, label="virtualColumns"];
+2->1 [style = bold, label=""];
+0->2 [style = bold, label=""];
+1->3 [style = bold, label=""];
+7->0 [style = bold, label=""];
+0->1 [style = solid, label="joinableClauses"];
+0->10 [style = dashed, label="0"];
+1->9 [style = bold, label=""];
+4->0 [style = bold, label=""];
+2->1 [style = solid, label="virtualColumns"];
+0->5 [style = solid, label="joinableClauses"];
+5->6 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+2->9 [style = solid, label="virtualColumns"];
+2->6 [style = solid, label="virtualColumns"];
+10->2 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

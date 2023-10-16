@@ -1,0 +1,38 @@
+digraph {
+2 [style = filled, label = "m.put(\"X\",r)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Reader r@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(\"<object><X _type='object'><foo>bar</foo><baz>quz</baz></X></object>\",s.serialize(m))@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Map<String,Object> m@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testHtml['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "XmlSerializer s = XmlSerializer.create().sq().swaps().build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "HtmlSerializer s = HtmlSerializer.create().sq().swaps().build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "m = new HashMap<>()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "r = reader(\"<object><foo _type='string'>bar</foo><baz _type='string'>quz</baz></object>\")@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "r = new StringReader(\"<object><foo _type='string'>bar</foo><baz _type='string'>quz</baz></object>\")@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "r = new StringReader(\"<table><tr><td>foo</td><td>bar</td></tr><tr><td>baz</td><td>quz</td></tr></table>\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testXml['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "assertEquals(\"<table><tr><td>X</td><td><table><tr><td>foo</td><td>bar</td></tr><tr><td>baz</td><td>quz</td></tr></table></td></tr></table>\",s.serialize(m))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testXml['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7->1 [style = bold, label=""];
+4->6 [style = bold, label=""];
+9->2 [style = solid, label="r"];
+11->4 [style = bold, label=""];
+10->2 [style = solid, label="r"];
+13->11 [style = bold, label=""];
+2->12 [style = bold, label=""];
+3->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+8->5 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+7->9 [style = dashed, label="0"];
+6->10 [style = bold, label=""];
+5->4 [style = bold, label=""];
+1->0 [style = solid, label="m"];
+1->2 [style = bold, label=""];
+1->12 [style = solid, label="m"];
+6->9 [style = bold, label=""];
+6->7 [style = bold, label=""];
+9->1 [style = bold, label=""];
+10->1 [style = bold, label=""];
+7->2 [style = solid, label="r"];
+}

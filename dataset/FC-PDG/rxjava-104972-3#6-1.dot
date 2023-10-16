@@ -1,0 +1,13 @@
+digraph {
+0 [style = filled, label = "collectIntoObservable['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Observable.just(1,1,1,1,2).collectInto(new HashSet<>(),new BiConsumer<HashSet<Integer>,Integer>(){@Override public void accept(HashSet<Integer> s,Integer v){s.add(v)}}).toObservable().test().assertResult(new HashSet<>(Arrays.asList(1,2)))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "Observable.just(1,1,1,1,2).collectInto(new HashSet<Integer>(),new BiConsumer<HashSet<Integer>,Integer>(){@Override public void accept(HashSet<Integer> s,Integer v){s.add(v)}}).toObservable().test().assertResult(new HashSet<Integer>(Arrays.asList(1,2)))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "collectIntoFlowable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "collectIntoObservable['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "Flowable.just(1,1,1,1,2).collectInto(new HashSet<Integer>(),new BiConsumer<HashSet<Integer>,Integer>(){@Override public void accept(HashSet<Integer> s,Integer v){s.add(v)}}).toFlowable().test().assertResult(new HashSet<Integer>(Arrays.asList(1,2)))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = dashed, label="0"];
+1->3 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

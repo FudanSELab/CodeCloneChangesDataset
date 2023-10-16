@@ -1,0 +1,36 @@
+digraph {
+2 [style = filled, label = "Assert.assertEquals(\"Poitras\",person.getLastName())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Person person = personMapper.getWithoutComplex(2l)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Assert.assertEquals(\"John\",parent.getFirstName())@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testWithoutComplex['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Assert.assertNotNull(\"person must not be null\",person)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testWithoutComplex['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "testWithParamAttributes['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "SqlSession sqlSession = sqlSessionFactory.openSession()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Assert.assertEquals(\"Smith\",parent.getLastName())@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Assert.assertEquals(\"Christian\",person.getFirstName())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Person parent = person.getParent()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "sqlSession.close()@@@13@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Assert.assertNotNull(\"parent must not be null\",parent)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "PersonMapper personMapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "Person person = personMapper.getComplexWithParamAttributes(2l)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+14->0 [style = solid, label="person"];
+10->5 [style = bold, label=""];
+3->14 [style = dashed, label="0"];
+14->0 [style = bold, label=""];
+5->9 [style = bold, label=""];
+3->0 [style = solid, label="person"];
+7->8 [style = bold, label=""];
+12->9 [style = bold, label=""];
+2->4 [style = bold, label=""];
+4->6 [style = bold, label=""];
+0->1 [style = bold, label=""];
+4->6 [style = solid, label="parent"];
+6->11 [style = bold, label=""];
+11->7 [style = bold, label=""];
+3->0 [style = bold, label=""];
+9->14 [style = bold, label=""];
+13->5 [style = bold, label=""];
+}

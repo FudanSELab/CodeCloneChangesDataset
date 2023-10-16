@@ -1,0 +1,29 @@
+digraph {
+5 [style = filled, label = "loader.addLoader(\"id\",null,null)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "author2.getId()@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "Author author2 = (Author)deserialize(serialize(deserialize(serialize((Serializable)proxy))))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "shouldCreateAProxyForAPartiallyLoadedBean['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertTrue(author2.getClass().getName().contains(\"CGLIB\"))@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "assertTrue(author2 instanceof Factory)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "ResultLoaderMap loader = new ResultLoaderMap()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "shouldNotLetReadUnloadedPropertyAfterTwoSerializations['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Object proxy = proxyFactory.createProxy(author,loader,new Configuration(),new DefaultObjectFactory(),new ArrayList<Class<?>>(),new ArrayList<Object>())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Author author2 = (Author)deserialize(serialize((Serializable)proxy))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "shouldCreateAProxyForAPartiallyLoadedBean['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->4 [style = solid, label="proxy"];
+4->3 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+10->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->9 [style = bold, label=""];
+5->0 [style = bold, label=""];
+2->0 [style = solid, label="loader"];
+9->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+4->7 [style = solid, label="author2"];
+0->9 [style = solid, label="proxy"];
+3->7 [style = dashed, label="0"];
+4->7 [style = bold, label=""];
+2->5 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

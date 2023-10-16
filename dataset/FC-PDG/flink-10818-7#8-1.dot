@@ -1,0 +1,24 @@
+digraph {
+6 [style = filled, label = "validateWrongFlushSize['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "sinkFactory.createDynamicTableSink(context().withOption(ElasticsearchConnectorOptions.INDEX_OPTION.key(),\"MyIndex\").withOption(ElasticsearchConnectorOptions.HOSTS_OPTION.key(),\"http://localhost:1234\").withOption(ElasticsearchConnectorOptions.BULK_FLASH_MAX_SIZE_OPTION.key(),\"1kb\").build())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "Elasticsearch6DynamicSinkFactory sinkFactory = new Elasticsearch6DynamicSinkFactory()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "validateWrongFlushSize['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "sinkFactory.createDynamicTableSink(context().withOption(ElasticsearchOptions.INDEX_OPTION.key(),\"MyIndex\").withOption(ElasticsearchOptions.HOSTS_OPTION.key(),\"http://localhost:1234\").withOption(ElasticsearchOptions.BULK_FLASH_MAX_SIZE_OPTION.key(),\"1kb\").build())@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "Elasticsearch7DynamicSinkFactory sinkFactory = new Elasticsearch7DynamicSinkFactory()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "validateWrongFlushSize['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "sinkFactory.createDynamicTableSink(context().withOption(ElasticsearchOptions.INDEX_OPTION.key(),\"MyIndex\").withOption(ElasticsearchOptions.DOCUMENT_TYPE_OPTION.key(),\"MyType\").withOption(ElasticsearchOptions.HOSTS_OPTION.key(),\"http://localhost:1234\").withOption(ElasticsearchOptions.BULK_FLASH_MAX_SIZE_OPTION.key(),\"1kb\").build())@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "thrown.expectMessage(\"'sink.bulk-flush.max-size' must be in MB granularity. Got: 1024 bytes\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "thrown.expect()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+4->5 [style = dashed, label="0"];
+6->3 [style = bold, label=""];
+1->4 [style = bold, label=""];
+1->8 [style = bold, label=""];
+3->2 [style = bold, label=""];
+9->7 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+7->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+}

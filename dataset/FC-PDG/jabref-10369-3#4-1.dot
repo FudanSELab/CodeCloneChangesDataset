@@ -1,0 +1,13 @@
+digraph {
+0 [style = filled, label = "return new BibEntry(StandardEntryType.InProceedings).withField(StandardField.AUTHOR,\"Shelah, Saharon and Ziegler, Martin\").withField(StandardField.TITLE,\"Algebraically closed groups of large cardinality\").withField(StandardField.JOURNAL,\"The Journal of Symbolic Logic\").withField(StandardField.YEAR,\"1979\").withCiteKey(\"algegrou1979\")@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "getBibEntryExample2['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "getBibEntryExample3['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "getBibEntryExample2['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "return new BibEntry(StandardEntryType.InProceedings).withField(StandardField.AUTHOR,\"Hodges, Wilfrid and Shelah, Saharon\").withField(StandardField.TITLE,\"Infinite games and reduced products\").withField(StandardField.JOURNAL,\"Annals of Mathematical Logic\").withField(StandardField.YEAR,\"1981\").withCiteKey(\"infigame1981\")@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "return new BibEntry(StandardEntryType.InProceedings).withField(StandardField.AUTHOR,\"Shelah, Saharon and Ziegler, Martin\").withField(StandardField.TITLE,\"Algebraically closed groups of large cardinality\").withField(StandardField.JOURNAL,\"The Journal of Symbolic Logic\").withField(StandardField.YEAR,\"1979\").withCitationKey(\"algegrou1979\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0->4 [style = dashed, label="0"];
+0->3 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

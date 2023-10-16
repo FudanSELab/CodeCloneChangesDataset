@@ -1,0 +1,37 @@
+digraph {
+6 [style = filled, label = "int(( featureIds@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Map<String,Object> params = new HashMap<String,Object>()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final Feature f = Feature.getInstance(solrResourceLoader,.getName(),\"f\" + i,params)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "params.put(\"value\",i)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final List<Feature> features = new ArrayList<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "makeFilterFeatures['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "int(( featureIds@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "f.setIndex(i)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return features@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "makeFeatures['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "makeFilterFeatures['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "final Feature f = Feature.getInstance(solrResourceLoader,.getCanonicalName(),\"f\" + i,params)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "features.add(f)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->10 [style = bold, label=""];
+5->8 [style = bold, label=""];
+3->1 [style = solid, label="features"];
+8->10 [style = dashed, label="0"];
+4->8 [style = solid, label="params"];
+2->3 [style = bold, label=""];
+11->12 [style = dotted, label="true"];
+7->0 [style = bold, label=""];
+4->10 [style = solid, label="params"];
+9->6 [style = dotted, label="true"];
+3->4 [style = bold, label=""];
+10->7 [style = bold, label=""];
+8->7 [style = bold, label=""];
+10->0 [style = solid, label="f"];
+6->12 [style = dashed, label="0"];
+11->3 [style = bold, label=""];
+0->4 [style = bold, label=""];
+2->6 [style = dotted, label="true"];
+0->1 [style = bold, label=""];
+9->3 [style = bold, label=""];
+8->0 [style = solid, label="f"];
+4->5 [style = bold, label=""];
+}

@@ -1,0 +1,38 @@
+digraph {
+2 [style = filled, label = "testIsNullPushDown['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final String sql = \"select empno, deptno, w_count from (\" + \" select empno, deptno, count(empno) over (w) w_count\" + \" from emp\" + \" window w as (partition by deptno order by empno)\" + \") sub_query where w_count is null\"@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "preBuilder.addRuleInstance(ProjectToWindowRule.PROJECT)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "HepProgramBuilder builder = new HepProgramBuilder()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testIsNullPushDown2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "builder.addRuleInstance(ReduceExpressionsRule.FILTER_INSTANCE)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "preBuilder.addRuleInstance(CoreRules.PROJECT_TO_LOGICAL_PROJECT_AND_WINDOW)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "HepProgramBuilder preBuilder = new HepProgramBuilder()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "sql(sql).withPre(preBuilder.build()).with(hepPlanner).check()@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testIsNullPushDown['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "HepPlanner hepPlanner = new HepPlanner(builder.build())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "final String sql = \"select empno, deptno, w_count from (\" + \" select empno, deptno, count(empno) over (ROWS BETWEEN 10 PRECEDING AND 1 PRECEDING) w_count\" + \" from emp\" + \") sub_query where w_count is null\"@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "builder.addRuleInstance(CoreRules.FILTER_REDUCE_EXPRESSIONS)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "builder.addRuleInstance(ReduceExpressionsRule.PROJECT_INSTANCE)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "builder.addRuleInstance(CoreRules.PROJECT_REDUCE_EXPRESSIONS)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3->1 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+0->11 [style = bold, label=""];
+8->6 [style = bold, label=""];
+9->10 [style = bold, label=""];
+12->0 [style = bold, label=""];
+10->7 [style = bold, label=""];
+7->3 [style = bold, label=""];
+14->1 [style = bold, label=""];
+7->14 [style = bold, label=""];
+6->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+8->9 [style = bold, label=""];
+4->8 [style = bold, label=""];
+5->7 [style = bold, label=""];
+11->8 [style = bold, label=""];
+4->11 [style = dashed, label="0"];
+3->14 [style = dashed, label="0"];
+13->0 [style = bold, label=""];
+}

@@ -1,0 +1,16 @@
+digraph {
+3 [style = filled, label = "final OneToManyAssociation collection@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final ObjectAction objectAction@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final OneToManyAssociation collection@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "appendCollectionTo['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "appendObjectActionInvokePath['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "actionReturnTypeFor['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final ObjectSpecification objectSpec@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "appendCollectionTo['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->0 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+1->2 [style = dotted, label="true"];
+4->2 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+6->7 [style = dotted, label="true"];
+}

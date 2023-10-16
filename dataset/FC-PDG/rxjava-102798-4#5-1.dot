@@ -1,0 +1,37 @@
+digraph {
+2 [style = filled, label = "assertEquals(Flowable.bufferSize() * 2,ts.values().size())@@@30@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "backpressureWithSelectorDelayAndSubscriptionDelay['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ts.awaitDone(5,TimeUnit.SECONDS)@@@28@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "TestSubscriber<Integer> ts = new TestSubscriber<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "assertEquals(Flowable.bufferSize() * 2,to.values().size())@@@25@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "backpressureWithSelectorDelayAndSubscriptionDelay['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "Flowable.range(1,Flowable.bufferSize() * 2).delay(Flowable.defer(new Supplier<Flowable<Long>>(){@Override public Flowable<Long> get(){return Flowable.timer(500,TimeUnit.MILLISECONDS)}}),new Function<Integer,Flowable<Long>>(){@Override public Flowable<Long> apply(Integer i){return Flowable.timer(100,TimeUnit.MILLISECONDS)}}).observeOn(Schedulers.computation()).map(new Function<Integer,Integer>(){@Override public Integer apply(Integer t){if (c++ <= 0) {try {Thread.sleep(500)}catch (InterruptedException e) }return t}}).subscribe(ts)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "to.awaitDone(5,TimeUnit.SECONDS)@@@23@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "TestObserver<Integer> to = new TestObserver<Integer>()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "to.assertNoErrors()@@@24@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "backpressureWithSelectorDelay['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "ts.assertNoErrors()@@@29@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Observable.range(1,Flowable.bufferSize() * 2).delay(new Function<Integer,Observable<Long>>(){@Override public Observable<Long> apply(Integer i){return Observable.timer(100,TimeUnit.MILLISECONDS)}}).observeOn(Schedulers.computation()).map(new Function<Integer,Integer>(){@Override public Integer apply(Integer t){if (c++ <= 0) {try {Thread.sleep(500)}catch (InterruptedException e) }return t}}).subscribe(to)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "TestSubscriber<Integer> ts = new TestSubscriber<Integer>()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+6->3 [style = solid, label="ts"];
+0->6 [style = dashed, label="0"];
+8->9 [style = solid, label="to"];
+0->3 [style = solid, label="ts"];
+1->0 [style = bold, label=""];
+3->4 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+12->10 [style = bold, label=""];
+10->13 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+5->10 [style = dashed, label="0"];
+2->13 [style = dashed, label="0"];
+7->6 [style = bold, label=""];
+8->9 [style = bold, label=""];
+11->8 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+9->12 [style = bold, label=""];
+4->5 [style = bold, label=""];
+}

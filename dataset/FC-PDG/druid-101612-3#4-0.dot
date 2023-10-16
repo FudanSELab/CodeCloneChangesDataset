@@ -1,0 +1,13 @@
+digraph {
+1 [style = filled, label = "testQuery(\"SELECT ANY_VALUE(l1), ANY_VALUE(d1), ANY_VALUE(f1) FROM druid.numfoo\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE3).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).aggregators(aggregators(new LongAnyAggregatorFactory(\"a0\",\"l1\"),new DoubleAnyAggregatorFactory(\"a1\",\"d1\"),new FloatAnyAggregatorFactory(\"a2\",\"f1\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a16dad))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testQuery(\"SELECT MIN(m1), MAX(m1) FROM druid.numfoo\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE3).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).aggregators(aggregators(new FloatMinAggregatorFactory(\"a0\",\"m1\"),new FloatMaxAggregatorFactory(\"a1\",\"m1\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a16de6))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testSimpleFloatAggregations['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testAnyAggregatorsOnHeapNumericNulls['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "skipVectorize()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "testAnyAggregatorsOnHeapNumericNulls['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->0 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

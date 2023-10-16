@@ -1,0 +1,35 @@
+digraph {
+0 [style = filled, label = "LatexBibEntriesResolverResult expectedCrossingResult = new LatexBibEntriesResolverResult(parserResult)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Path texFile = Path.of(.getResource(\"crossref.tex\").toURI())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "expectedCrossingResult.addEntry(bibEntry)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "LatexBibEntriesResolverResult crossingResult = new TexBibEntriesResolver(database,importFormatPreferences,timestampPreferences,fileMonitor).resolve(parserResult)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "testUnknownKey['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "testCrossRef['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "LatexBibEntriesResolverResult crossingResult = new TexBibEntriesResolver(database,importFormatPreferences,fileMonitor).resolve(parserResult)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(expectedCrossingResult,crossingResult)@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "LatexParserResult parserResult = new DefaultLatexParser().parse(texFile)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Path texFile = Path.of(.getResource(\"unknown_key.tex\").toURI())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testUnknownKey['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+6->3 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+5->4 [style = solid, label="crossingResult"];
+7->0 [style = bold, label=""];
+1->0 [style = solid, label="parserResult"];
+1->7 [style = bold, label=""];
+1->5 [style = solid, label="parserResult"];
+9->1 [style = solid, label="texFile"];
+0->10 [style = bold, label=""];
+5->0 [style = bold, label=""];
+0->4 [style = solid, label="expectedCrossingResult"];
+1->7 [style = solid, label="parserResult"];
+0->4 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+8->9 [style = bold, label=""];
+10->4 [style = bold, label=""];
+3->1 [style = solid, label="texFile"];
+5->7 [style = dashed, label="0"];
+9->1 [style = bold, label=""];
+7->4 [style = solid, label="crossingResult"];
+}

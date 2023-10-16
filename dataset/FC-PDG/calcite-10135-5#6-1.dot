@@ -1,0 +1,21 @@
+digraph {
+5 [style = filled, label = "skipWhileN['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final Queryable<T> source@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final FunctionExpression<Predicate2<T,Integer>> predicate@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "return new BaseQueryable<T>(source.getProvider(),source.getElementType(),source.getExpression()){public Enumerator<T> enumerator(){return new EnumerableDefaults.TakeWhileEnumerator<>(source.enumerator(),predicate.getFunction())}}@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final FunctionExpression<Predicate2<T,Integer>> predicate@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final FunctionExpression<Predicate2<T,Integer>> predicate@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "skipWhileN['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final Queryable<T> source@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "takeWhileN['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+2->0 [style = dotted, label="true"];
+2->1 [style = dotted, label="true"];
+6->8 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+2->3 [style = bold, label=""];
+5->1 [style = dotted, label="true"];
+6->7 [style = dotted, label="true"];
+}

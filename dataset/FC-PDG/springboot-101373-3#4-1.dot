@@ -1,0 +1,35 @@
+digraph {
+8 [style = filled, label = "sources.addLast(new MapPropertySource(\"test1\",Collections.singletonMap(\"server.po-rt\",\"4567\")))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "sources.addLast(new SystemEnvironmentPropertySource(\"system\",Collections.singletonMap(\"SERVER_PORT\",\"1234\")))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Iterator<ConfigurationPropertySource> iterator = new SpringConfigurationPropertySources(sources).iterator()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Iterator<ConfigurationPropertySource> iterator = new SpringConfigurationPropertySources(sources).iterator()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(iterator.hasNext()).isFalse()@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "assertThat(iterator.next().getConfigurationProperty(name).getValue()).isEqualTo(\"1234\")@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "shouldNotAdaptSystemEnvironmentPropertyOverrideSource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThat(iterator.next().getConfigurationProperty(name).getValue()).isEqualTo(\"4567\")@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "shouldNotAdaptSystemEnvironmentPropertyOverrideSource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "ConfigurationPropertyName name = ConfigurationPropertyName.of(\"server.port\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "MutablePropertySources sources = new MutablePropertySources()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ConfigurationPropertyName name = ConfigurationPropertyName.of(\"server.port\")@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "sources.addLast(new MapPropertySource(\"test2\",Collections.singletonMap(\"a\",\"b\")))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "shouldAdaptMultiplePropertySources['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "sources.addLast(new SystemEnvironmentPropertySource(\"override\",Collections.singletonMap(\"server.port\",\"1234\")))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "assertThat(iterator.next().getConfigurationProperty(ConfigurationPropertyName.of(\"a\")).getValue()).isEqualTo(\"b\")@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+4->9 [style = bold, label=""];
+3->5 [style = bold, label=""];
+15->10 [style = bold, label=""];
+4->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+5->6 [style = bold, label=""];
+9->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+10->14 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+14->12 [style = bold, label=""];
+6->15 [style = bold, label=""];
+8->13 [style = bold, label=""];
+11->4 [style = bold, label=""];
+13->5 [style = bold, label=""];
+}

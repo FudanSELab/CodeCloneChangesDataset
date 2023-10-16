@@ -1,0 +1,36 @@
+digraph {
+2 [style = filled, label = "StringBuilder buffer = new StringBuilder(128)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "!location.isEmpty()@@@7@@@['0', '1', '0']", fillcolor = red, shape = diamond image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "return buffer.toString()@@@7@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "toString['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "buffer.append(getMessage())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "buffer.append('(').append(getSeverity()).append(\"( \")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "buffer.append(\" @ \").append(getLocation())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "return buffer.toString()@@@11@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "buffer.append(\" @ \")@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "String location = ModelProblemUtils.formatLocation(this,null)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "buffer.append(location)@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "buffer.append(\" @ \").append(ModelProblemUtils.formatLocation(this,null))@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "toString['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "toString['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4->12 [style = bold, label=""];
+3->0 [style = bold, label=""];
+4->3 [style = bold, label=""];
+10->7 [style = dotted, label="true"];
+10->8 [style = dotted, label="true"];
+1->2 [style = bold, label=""];
+10->9 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+3->12 [style = dashed, label="0"];
+6->8 [style = solid, label="location"];
+13->2 [style = bold, label=""];
+7->8 [style = bold, label=""];
+11->2 [style = bold, label=""];
+4->6 [style = bold, label=""];
+10->7 [style = bold, label=""];
+12->0 [style = bold, label=""];
+6->10 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->5 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

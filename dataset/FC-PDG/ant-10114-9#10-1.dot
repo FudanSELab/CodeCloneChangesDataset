@@ -1,0 +1,37 @@
+digraph {
+4 [style = filled, label = "Assume.assumeTrue(loginFailureMessage,loginSucceeded)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assumeTrue(loginFailureMessage,loginSucceeded)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "Assume.assumeTrue(\"Could not change remote directory\",changeRemoteDir(remoteTmpDir))@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testGetFollowSymlinksTrue['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assumeTrue(\"Could not change remote directory\",changeRemoteDir(remoteTmpDir))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "dsDestination.scan()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testGetFollowSymlinksTrue['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "testGetFollowSymlinksFalse['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Assume.assumeTrue(\"System does not support Symlinks\",supportsSymlinks)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "compareFiles(dsDestination,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ced054,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ced057)@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "buildRule.getProject().executeTarget(\"ftp-get-directory-no-symbolic-link\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assumeTrue(\"System does not support Symlinks\",supportsSymlinks)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "DirectoryScanner dsDestination = fsDestination.getDirectoryScanner(buildRule.getProject())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "buildRule.getProject().executeTarget(\"ftp-get-directory-symbolic-link\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "FileSet fsDestination = buildRule.getProject().getReference(\"fileset-destination-without-selector\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+7->12 [style = dashed, label="0"];
+2->11 [style = dashed, label="0"];
+4->9 [style = dashed, label="0"];
+11->5 [style = bold, label=""];
+5->14 [style = dashed, label="0"];
+4->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+5->6 [style = bold, label=""];
+9->11 [style = bold, label=""];
+8->1 [style = solid, label="dsDestination"];
+3->7 [style = bold, label=""];
+12->9 [style = bold, label=""];
+10->12 [style = bold, label=""];
+13->7 [style = bold, label=""];
+0->1 [style = bold, label=""];
+14->6 [style = bold, label=""];
+2->14 [style = bold, label=""];
+6->8 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

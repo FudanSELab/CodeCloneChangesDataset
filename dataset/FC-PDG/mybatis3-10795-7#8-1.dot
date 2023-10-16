@@ -1,0 +1,31 @@
+digraph {
+9 [style = filled, label = "shouldSelectOddPostsInKeysList['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertEquals(1,posts.get(0).getId())@@@21@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertEquals(3,posts.get(1).getId())@@@22@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "List<Post> posts = session.selectList(\"org.apache.ibatis.domain.blog.mappers.PostMapper.findPost\",new HashMap<String,List<Integer>>(){})@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "assertEquals(3,posts.size())@@@18@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "{session.close()}@@@20@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "List<Post> posts = session.selectList(\"domain.blog.mappers.PostMapper.selectOddPostsInKeysList\",new HashMap<String,List<Integer>>(){})@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "shouldFindPostsInSetOfIDsWithDynamicSql['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "SqlSession session = sqlMapper.openSession()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "{session.close()}@@@24@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "List<Post> posts = session.selectList(\"domain.blog.mappers.PostMapper.findPost\",new HashMap<String,List<Integer>>(){})@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "assertEquals(2,posts.size())@@@20@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "shouldFindPostsInSetOfIDsWithDynamicSql['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+3->8 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+1->4 [style = bold, label=""];
+2->0 [style = bold, label=""];
+6->0 [style = bold, label=""];
+9->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+8->11 [style = bold, label=""];
+11->10 [style = bold, label=""];
+10->12 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+12->7 [style = bold, label=""];
+0->5 [style = bold, label=""];
+0->8 [style = bold, label=""];
+}

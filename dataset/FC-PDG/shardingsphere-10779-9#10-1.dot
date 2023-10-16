@@ -1,0 +1,37 @@
+digraph {
+2 [style = filled, label = "DatabaseDiscoveryDataSourceRuleConfiguration ruleConfig = new DatabaseDiscoveryDataSourceRuleConfiguration(\"name\",Collections.singletonList(\"name\"),\"discoveryTypeName\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "AlgorithmProvidedDatabaseDiscoveryRuleConfiguration algorithmProvidedRuleConfig = mock()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "SchemaRuleBuilder builder = OrderedSPIRegistry.getRegisteredServices(Collections.singletonList(algorithmProvidedRuleConfig),).get(algorithmProvidedRuleConfig)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "SchemaRuleBuilder builder = OrderedSPIRegistry.getRegisteredServices(Collections.singletonList(algorithmProvidedRuleConfig),).get(algorithmProvidedRuleConfig)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "AlgorithmProvidedReadwriteSplittingRuleConfiguration algorithmProvidedRuleConfig = mock()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertBuild['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "ReadwriteSplittingDataSourceRuleConfiguration ruleConfig = new ReadwriteSplittingDataSourceRuleConfiguration(\"name\",\"pr_ds\",\"writeDataSourceName\",Collections.singletonList(\"name\"),\"loadBalancerName\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertBuild['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertThat(builder.build(\"\",Collections.emptyMap(),mock(),algorithmProvidedRuleConfig,Collections.emptyList()),instanceOf())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(builder.build(\"\",Collections.emptyMap(),mock(),algorithmProvidedRuleConfig,Collections.emptyList()),instanceOf())@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertBuild['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "when(algorithmProvidedRuleConfig.getDataSources()).thenReturn(Collections.singletonList(ruleConfig))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->10 [style = bold, label=""];
+7->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+8->10 [style = solid, label="algorithmProvidedRuleConfig"];
+5->4 [style = solid, label="algorithmProvidedRuleConfig"];
+3->4 [style = bold, label=""];
+8->4 [style = solid, label="algorithmProvidedRuleConfig"];
+6->5 [style = bold, label=""];
+5->2 [style = bold, label=""];
+2->3 [style = solid, label="ruleConfig"];
+3->7 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+4->7 [style = dashed, label="0"];
+8->9 [style = bold, label=""];
+5->8 [style = dashed, label="0"];
+9->3 [style = bold, label=""];
+11->8 [style = bold, label=""];
+4->1 [style = bold, label=""];
+5->1 [style = solid, label="algorithmProvidedRuleConfig"];
+5->7 [style = solid, label="algorithmProvidedRuleConfig"];
+9->3 [style = solid, label="ruleConfig"];
+0->5 [style = bold, label=""];
+}

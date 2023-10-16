@@ -1,0 +1,33 @@
+digraph {
+8 [style = filled, label = "SqlSessionFactory sqlSessionFactory@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "MultipleIncludePersonMapper personMapper = sqlSession.getMapper()@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertEquals(\"John\",person.getName())@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Person person = personMapper.select(1)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "SqlSessionFactory sqlSessionFactory@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testMultipleIncludes['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "testMultipleIncludes['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testReverseIncludes['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "SqlSession sqlSession = sqlSessionFactory.openSession()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Person person = personMapper.select(1)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "{sqlSession.close()}@@@10@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "SqlSessionFactory sqlSessionFactory@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "ReverseIncludePersonMapper personMapper = sqlSession.getMapper()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertEquals((Integer)1,person.getId())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->8 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+3->6 [style = bold, label=""];
+10->5 [style = bold, label=""];
+9->10 [style = bold, label=""];
+13->6 [style = bold, label=""];
+0->12 [style = dashed, label="0"];
+5->11 [style = dashed, label="0"];
+13->12 [style = dotted, label="true"];
+7->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->11 [style = bold, label=""];
+4->7 [style = bold, label=""];
+5->4 [style = bold, label=""];
+11->4 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+}

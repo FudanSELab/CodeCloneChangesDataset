@@ -1,0 +1,29 @@
+digraph {
+7 [style = filled, label = "assertEquals(2,users.size())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "List<User> users = mapper.getAllUsers(new RowBounds(0,4))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "List<User> users = mapper.getUsers()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(Integer.valueOf(2),users.get(1).getId())@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testReuseNamedResultsFromAnotherMapper['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "shouldGetFirstFourUsers['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "Assertions.assertEquals(4,users.size())@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertEquals(\"User1\",users.get(0).getName())@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(Integer.valueOf(1),users.get(0).getId())@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "AnotherMapper mapper = sqlSession.getMapper()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(\"User2\",users.get(1).getName())@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testReuseNamedResultsFromAnotherMapper['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7->11 [style = dashed, label="0"];
+5->3 [style = bold, label=""];
+7->0 [style = bold, label=""];
+1->6 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+9->10 [style = bold, label=""];
+8->5 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+3->7 [style = bold, label=""];
+10->12 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->2 [style = bold, label=""];
+12->11 [style = bold, label=""];
+}

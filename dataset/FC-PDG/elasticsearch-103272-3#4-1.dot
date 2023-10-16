@@ -1,0 +1,33 @@
+digraph {
+0 [style = filled, label = "{IllegalArgumentException e = expectThrows(,null)assertEquals(\"(match( requires query value\",e.getMessage())}@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testBadAnalyzer['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertThat(e.getMessage(),containsString(\"analyzer (bogusAnalyzer( not found\"))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "{IllegalArgumentException e = expectThrows(,null)assertEquals(\"(match( requires zeroTermsQuery to be non-null\",e.getMessage())}@@@24@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "{IllegalArgumentException e = expectThrows(,null)assertEquals(\"(match( requires maxExpansions to be positive.\",e.getMessage())}@@@16@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "matchQuery.analyzer(\"bogusAnalyzer\")@@@28@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "MatchQueryBuilder matchQuery = new MatchQueryBuilder(\"fieldName\",\"text\")@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "{IllegalArgumentException e = expectThrows(,null)assertEquals(\"(match( requires operator to be non-null\",e.getMessage())}@@@20@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testIllegalValues['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "{IllegalArgumentException e = expectThrows(,null)assertEquals(\"(match( requires prefix length to be non-negative.\",e.getMessage())}@@@12@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "{IllegalArgumentException e = expectThrows(,null)assertEquals(\"(match( requires fieldName\",e.getMessage())}@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "MatchPhrasePrefixQueryBuilder matchQuery = new MatchPhrasePrefixQueryBuilder(\"fieldName\",\"text\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "matchQuery.analyzer(\"bogusAnalyzer\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "{QueryShardException e = expectThrows(,null)assertThat(e.getMessage(),containsString(\"analyzer (bogusAnalyzer( not found\"))}@@@29@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "QueryShardException e = expectThrows(,null)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testIllegalValues['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+0->3 [style = bold, label=""];
+5->8 [style = bold, label=""];
+14->15 [style = bold, label=""];
+4->1 [style = bold, label=""];
+8->12 [style = dashed, label="0"];
+13->12 [style = bold, label=""];
+2->7 [style = bold, label=""];
+15->11 [style = bold, label=""];
+10->8 [style = bold, label=""];
+3->4 [style = bold, label=""];
+1->9 [style = bold, label=""];
+9->6 [style = bold, label=""];
+12->14 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

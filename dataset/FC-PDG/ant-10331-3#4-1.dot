@@ -1,0 +1,37 @@
+digraph {
+9 [style = filled, label = "assertEquals(String.format(\"<root bar=\"baz\" xmlns=\"urn:foo\" />%n\"),sw.toString())@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "Document d = DOMUtils.newDocument()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testNSOnElement['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "assertEquals(\"<root ns0:bar=\"baz\" xmlns=\"urn:foo\"\" + \" xmlns:ns0=\"urn:foo2\" />\" + StringUtils.LINE_SEP,sw.toString())@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Element root = d.createElementNS(\"urn:foo\",\"root\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "DOMElementWriter w = new DOMElementWriter(false,DOMElementWriter.XmlNamespacePolicy.ONLY_QUALIFY_ELEMENTS)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "StringWriter sw = new StringWriter()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testNSOnElement['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(\"<root bar=\"baz\" xmlns=\"urn:foo\" />\" + StringUtils.LINE_SEP,sw.toString())@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "DOMElementWriter w = new DOMElementWriter(false,DOMElementWriter.XmlNamespacePolicy.ONLY_QUALIFY_ELEMENTS)@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "w.write(root,sw,0,\" \")@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testNSPrefixOnAttribute['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "root.setAttributeNS(\"urn:foo2\",\"bar\",\"baz\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "DOMElementWriter w = new DOMElementWriter(false,DOMElementWriter.XmlNamespacePolicy.QUALIFY_ALL)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7->5 [style = solid, label="root"];
+7->1 [style = bold, label=""];
+5->9 [style = bold, label=""];
+3->5 [style = solid, label="sw"];
+6->9 [style = dashed, label="0"];
+1->3 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->7 [style = bold, label=""];
+6->12 [style = dashed, label="0"];
+8->0 [style = bold, label=""];
+3->10 [style = bold, label=""];
+2->0 [style = bold, label=""];
+11->0 [style = bold, label=""];
+10->5 [style = bold, label=""];
+5->6 [style = bold, label=""];
+5->12 [style = bold, label=""];
+13->5 [style = bold, label=""];
+3->13 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+4->13 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+}

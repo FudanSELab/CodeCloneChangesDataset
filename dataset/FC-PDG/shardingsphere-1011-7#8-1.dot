@@ -1,0 +1,28 @@
+digraph {
+6 [style = filled, label = "assertThat(spans.get(0).operationName(),is(\"/ShardingSphere/parseSQL/\"))@@@12@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "List<MockSpan> spans = COLLECTOR.finishedSpans()@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "assertThat(spans.size(),is(1))@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(spans.get(0).tags(),is(EXPECTED))@@@13@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertMethod['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "assertThat(spans.get(0).operationName(),is(\"/ShardingSphere/rootInvoke/\"))@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "ADVICE.beforeMethod(getTargetObject(),null,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@16af87c,new MethodInvocationResult())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertMethod['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(spans.get(0).logEntries().size(),is(0))@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "List<MockSpan> spans = collector.finishedSpans()@@@9@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertMethod['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ADVICE.afterMethod(getTargetObject(),null,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@16af888,new MethodInvocationResult())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->1 [style = bold, label=""];
+11->5 [style = bold, label=""];
+3->5 [style = bold, label=""];
+10->9 [style = bold, label=""];
+1->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+8->5 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+2->10 [style = bold, label=""];
+0->4 [style = bold, label=""];
+1->7 [style = bold, label=""];
+2->6 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+}

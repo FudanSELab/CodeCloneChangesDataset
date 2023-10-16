@@ -1,0 +1,31 @@
+digraph {
+9 [style = filled, label = "testMultiLevelAlias['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final RelBuilder builder = RelBuilder.create(config().build())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testAlias2['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "RelNode root = builder.scan(\"EMP\").as(\"e\").scan(\"EMP\").as(\"m\").scan(\"DEPT\").join(JoinRelType.INNER).join(JoinRelType.INNER).project(builder.field(\"DEPT\",\"DEPTNO\"),builder.field(16),builder.field(\"m\",\"EMPNO\"),builder.field(\"e\",\"MGR\")).as(\"all\").filter(builder.call(SqlStdOperatorTable.GREATER_THAN,builder.field(\"DEPT\",\"DEPTNO\"),builder.literal(100))).project(builder.field(\"DEPT\",\"DEPTNO\"),builder.field(\"all\",\"EMPNO\")).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final String expected = \"\" + \"LogicalProject(DEPTNO=($0(, EMPNO=($2()\" + \" LogicalFilter(condition=(>($0, 100)()\" + \" LogicalProject(DEPTNO=($16(, DEPTNO0=($16(, EMPNO=($8(, MGR=($3()\" + \" LogicalJoin(condition=(true(, joinType=(inner()\" + \" LogicalTableScan(table=((scott, EMP(()\" + \" LogicalJoin(condition=(true(, joinType=(inner()\" + \" LogicalTableScan(table=((scott, EMP(()\" + \" LogicalTableScan(table=((scott, DEPT(()\"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final String expected = \"\" + \"LogicalFilter(condition=(AND(=($7, $16), =($3, $8))()\" + \" LogicalJoin(condition=(true(, joinType=(inner()\" + \" LogicalTableScan(table=((scott, EMP(()\" + \" LogicalJoin(condition=(true(, joinType=(inner()\" + \" LogicalTableScan(table=((scott, EMP(()\" + \" LogicalTableScan(table=((scott, DEPT(()\"@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "RelNode root = builder.scan(\"EMP\").as(\"e\").scan(\"EMP\").as(\"m\").scan(\"DEPT\").join(JoinRelType.INNER).join(JoinRelType.INNER).filter(builder.equals(builder.field(\"e\",\"DEPTNO\"),builder.field(\"DEPT\",\"DEPTNO\")),builder.equals(builder.field(\"m\",\"EMPNO\"),builder.field(\"e\",\"MGR\"))).build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final String expected = \"\" + \"LogicalFilter(condition=(AND(=($7, $16), =($8, $3))()\" + \" LogicalJoin(condition=(true(, joinType=(inner()\" + \" LogicalTableScan(table=((scott, EMP(()\" + \" LogicalJoin(condition=(true(, joinType=(inner()\" + \" LogicalTableScan(table=((scott, EMP(()\" + \" LogicalTableScan(table=((scott, DEPT(()\"@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testAlias2['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(root,hasTree(expected))@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+9->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+0->2 [style = solid, label="expected"];
+5->2 [style = bold, label=""];
+8->2 [style = solid, label="expected"];
+1->2 [style = solid, label="root"];
+7->2 [style = solid, label="root"];
+0->8 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+3->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+8->2 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+5->2 [style = solid, label="expected"];
+0->2 [style = bold, label=""];
+}

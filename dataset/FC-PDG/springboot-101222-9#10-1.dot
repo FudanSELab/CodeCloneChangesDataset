@@ -1,0 +1,27 @@
+digraph {
+3 [style = filled, label = "this.logger.info(\"Hello world\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(new File(tmpDir() + \"/spring.log\").exists()).isFalse()@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "this.initializer.initialize(this.context.getEnvironment(),this.context.getClassLoader())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "addPropertiesToEnvironment(this.context,\"LOGGING_CONFIG=-Dnop\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertThat(new File(this.tempDir.toFile(),\"/spring.log\").exists()).isFalse()@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "String output = this.output.toString().trim()@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "azureDefaultLoggingConfigDoesNotCauseAFailure['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(this.output).contains(\"Hello world\").doesNotContain(\"???\")@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "tomcatNopLoggingConfigDoesNotCauseAFailure['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(output).contains(\"Hello world\").doesNotContain(\"???\")@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "addPropertiesToEnvironment(this.context,\"logging.config=-Djava.util.logging.config.file=\"d:\home\site\wwwroot\bin\apache-tomcat-7.0.52\conf\logging.properties\"\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "azureDefaultLoggingConfigDoesNotCauseAFailure['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0->3 [style = bold, label=""];
+6->1 [style = bold, label=""];
+3->6 [style = bold, label=""];
+1->2 [style = bold, label=""];
+11->0 [style = bold, label=""];
+4->11 [style = dashed, label="0"];
+3->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+6->7 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+9->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

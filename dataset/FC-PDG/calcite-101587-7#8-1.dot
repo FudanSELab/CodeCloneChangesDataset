@@ -1,0 +1,21 @@
+digraph {
+3 [style = filled, label = "final String expected = \"SELECT *\" + \"FROM (SELECT *\" + \"FROM \"foodmart\".\"product\") \" + \"MATCH_RECOGNIZE(\" + \"MEASURES \" + \"FINAL \"STRT\".\"net_weight\" AS \"START_NW\", \" + \"FINAL LAST(\"DOWN\".\"net_weight\", 0) AS \"BOTTOM_NW\", \" + \"FINAL SUM(\"STDN\".\"net_weight\") AS \"AVG_STDN\"\" + \"ONE ROW PER MATCH\" + \"AFTER MATCH SKIP TO NEXT ROW\" + \"PATTERN (\"STRT\" \"DOWN\" + \"UP\" +)\" + \"SUBSET \"STDN\" = (\"DOWN\", \"STRT\"), \"STDN2\" = (\"DOWN\", \"STRT\")\" + \"DEFINE \" + \"\"DOWN\" AS PREV(\"DOWN\".\"net_weight\", 0) < \" + \"PREV(\"DOWN\".\"net_weight\", 1), \" + \"\"UP\" AS PREV(\"UP\".\"net_weight\", 0) > \" + \"PREV(\"UP\".\"net_weight\", 1))\"@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testMatchRecognizeRowsPerMatch2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testMatchRecognizeSubset4['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "final String expected = \"SELECT *\" + \"FROM (SELECT *\" + \"FROM \"foodmart\".\"product\") \" + \"MATCH_RECOGNIZE(\" + \"MEASURES \" + \"RUNNING \"STRT\".\"net_weight\" AS \"START_NW\", \" + \"RUNNING LAST(\"DOWN\".\"net_weight\", 0) AS \"BOTTOM_NW\", \" + \"RUNNING SUM(\"STDN\".\"net_weight\") AS \"AVG_STDN\"\" + \"ALL ROWS PER MATCH\" + \"AFTER MATCH SKIP TO NEXT ROW\" + \"PATTERN (\"STRT\" \"DOWN\" + \"UP\" +)\" + \"SUBSET \"STDN\" = (\"DOWN\", \"STRT\"), \"STDN2\" = (\"DOWN\", \"STRT\")\" + \"DEFINE \" + \"\"DOWN\" AS PREV(\"DOWN\".\"net_weight\", 0) < \" + \"PREV(\"DOWN\".\"net_weight\", 1), \" + \"\"UP\" AS PREV(\"UP\".\"net_weight\", 0) > \" + \"PREV(\"UP\".\"net_weight\", 1))\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final String sql = \"select *\" + \" from \"product\" match_recognize\" + \" (\" + \" measures STRT.\"net_weight\" as start_nw,\" + \" LAST(DOWN.\"net_weight\") as bottom_nw,\" + \" SUM(STDN.\"net_weight\") as avg_stdn\" + \" ALL ROWS PER MATCH\" + \" pattern (strt down+ up+)\" + \" subset stdn = (strt, down), stdn2 = (strt, down)\" + \" define\" + \" down as down.\"net_weight\" < PREV(down.\"net_weight\"),\" + \" up as up.\"net_weight\" > prev(up.\"net_weight\")\" + \" ) mr\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testMatchRecognizeSubset4['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "sql(sql).ok(expected)@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final String sql = \"select *\" + \" from \"product\" match_recognize\" + \" (\" + \" measures STRT.\"net_weight\" as start_nw,\" + \" LAST(DOWN.\"net_weight\") as bottom_nw,\" + \" SUM(STDN.\"net_weight\") as avg_stdn\" + \" pattern (strt down+ up+)\" + \" subset stdn = (strt, down), stdn2 = (strt, down)\" + \" define\" + \" down as down.\"net_weight\" < PREV(down.\"net_weight\"),\" + \" up as up.\"net_weight\" > prev(up.\"net_weight\")\" + \" ) mr\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+5->7 [style = bold, label=""];
+4->1 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+6->0 [style = bold, label=""];
+6->0 [style = solid, label="expected"];
+1->7 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+3->0 [style = solid, label="expected"];
+}

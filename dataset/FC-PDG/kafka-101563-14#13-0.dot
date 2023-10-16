@@ -1,0 +1,24 @@
+digraph {
+4 [style = filled, label = "doCountWindowed(supplier)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final List<KeyValue<Windowed<String>,KeyValue<Long,Long>>> results = new ArrayList<>()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "shouldCountWindowed['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final MockProcessorSupplier<Windowed<String>,Long> supplier = new MockProcessorSupplier<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "groupedStream.windowedBy(TimeWindows.of(ofMillis(500L))).count(Materialized.as(\"aggregate-by-key-windowed\")).toStream().process(supplier)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "doCountWindowed(supplier)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "shouldCountWindowedWithInternalStoreName['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "groupedStream.windowedBy(TimeWindows.of(ofMillis(500L))).count().toStream().process(supplier)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "shouldCountWindowedWithInternalStoreName['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+6->8 [style = bold, label=""];
+2->6 [style = solid, label="supplier"];
+5->2 [style = bold, label=""];
+2->8 [style = solid, label="supplier"];
+2->3 [style = solid, label="supplier"];
+3->4 [style = bold, label=""];
+2->6 [style = bold, label=""];
+2->1 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->4 [style = solid, label="supplier"];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

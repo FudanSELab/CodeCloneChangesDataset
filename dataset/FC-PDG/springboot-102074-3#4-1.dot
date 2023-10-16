@@ -1,0 +1,22 @@
+digraph {
+2 [style = filled, label = "whenHttp2IsEnabledServerConnectorsHasSslAlpnH2AndHttpConnectionFactories['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Http2 http2 = new Http2()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Server server = createCustomizedServer(http2)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "alpnConnectionFactoryHasNullDefaultProtocolToAllowNegotiationToHttp11['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertThat(((ALPNServerConnectionFactory)factories.get(1)).getDefaultProtocol()).isNull()@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertThat(factories).extracting(null).containsExactly(,,,)@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(server.getConnectors()).hasSize(1)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "http2.setEnabled(true)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "whenHttp2IsEnabledServerConnectorsHasSslAlpnH2AndHttpConnectionFactories['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "List<ConnectionFactory> factories = new ArrayList<>(server.getConnectors()(0(.getConnectionFactories())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+8->0 [style = bold, label=""];
+4->9 [style = bold, label=""];
+6->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->0 [style = bold, label=""];
+0->1 [style = solid, label="http2"];
+0->6 [style = bold, label=""];
+5->4 [style = bold, label=""];
+}

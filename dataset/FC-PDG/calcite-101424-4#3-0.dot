@@ -1,0 +1,28 @@
+digraph {
+7 [style = filled, label = "final Tester t = new Tester().foodmart().withEvolve(true).withDialect(SqlDialect.DatabaseProduct.REDSHIFT.getDialect()).withLibrary(SqlLibrary.POSTGRESQL)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(t.s.latticeMap.size(),is(1))@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "t.addQuery(q0)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final String q0 = \"select `product_id`,\" + \" SUM(unit_sales)\" + \"from\" + \" `sales_fact_1997`\" + \"group by 1\"@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "final String q0 = \"select `product_id`,\" + \" countif(unit_sales > 1000) as num_over_thousand,\" + \" SUM(unit_sales)\" + \"from\" + \" `sales_fact_1997`\" + \"group by 1\"@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testBigQueryDialect['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "testBigQueryDialect['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testRedshiftDialect['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final Tester t = new Tester().foodmart().withEvolve(true).withDialect(SqlDialect.DatabaseProduct.BIG_QUERY.getDialect()).withLibrary(SqlLibrary.BIG_QUERY)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final String q0 = \"select\" + \" CONCAT(\"fname\", ' ', \"lname\") as \"full_name\",\" + \" convert_timezone('UTC', 'America/Los_Angeles',\" + \" cast('2019-01-01 01:00:00' as timestamp)),\" + \" left(\"fname\", 1) as \"initial\",\" + \" to_date('2019-01-01', 'YYYY-MM-DD'),\" + \" to_timestamp('2019-01-01 01:00:00', 'YYYY-MM-DD HH:MM:SS'),\" + \" count(*) as c,\" + \" avg(\"total_children\" - \"num_children_at_home\")\" + \"from \"customer\" join \"sales_fact_1997\" using (\"customer_id\")\" + \"group by \"fname\", \"lname\"\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->7 [style = bold, label=""];
+5->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+6->0 [style = solid, label="q0"];
+4->9 [style = dashed, label="0"];
+3->6 [style = bold, label=""];
+9->0 [style = solid, label="q0"];
+6->0 [style = bold, label=""];
+9->0 [style = bold, label=""];
+4->0 [style = solid, label="q0"];
+4->6 [style = dashed, label="0"];
+3->7 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

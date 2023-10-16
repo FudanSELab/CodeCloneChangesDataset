@@ -1,0 +1,28 @@
+digraph {
+8 [style = filled, label = "start['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "start['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "start['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(\"2-2\",list.get(1))@@@19@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(\"1-1\",list.get(0))@@@18@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(5,list.size())@@@17@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final ArrayList<String> list = new ArrayList<>()@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "assertEquals(\"5-5\",list.get(4))@@@20@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Flowable<String> os = OBSERVABLE_OF_5_INTEGERS.zipWith(OBSERVABLE_OF_5_INTEGERS,new BiFunction<Integer,Integer,String>(){@Override public String apply(Integer a,Integer b){return a + \"-\" + b}})@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Observable<String> os = OBSERVABLE_OF_5_INTEGERS.zipWith(OBSERVABLE_OF_5_INTEGERS,new BiFunction<Integer,Integer,String>(){@Override public String apply(Integer a,Integer b){return a + \"-\" + b}})@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final ArrayList<String> list = new ArrayList<String>()@@@9@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "os.subscribe(new Consumer<String>(){@Override public void accept(String s){System.out.println(s)list.add(s)}})@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->6 [style = bold, label=""];
+1->4 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+8->6 [style = bold, label=""];
+6->9 [style = bold, label=""];
+6->7 [style = bold, label=""];
+9->2 [style = bold, label=""];
+7->2 [style = bold, label=""];
+10->7 [style = bold, label=""];
+2->1 [style = bold, label=""];
+11->10 [style = bold, label=""];
+7->9 [style = dashed, label="0"];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

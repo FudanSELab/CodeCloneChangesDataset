@@ -1,0 +1,32 @@
+digraph {
+3 [style = filled, label = "final RelDataTypeFactory typeFactory = new SqlTypeFactoryImpl(RelDataTypeSystem.DEFAULT)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testEnsureTypeWithAny['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "RexNode node = new RexLiteral(Boolean.TRUE,typeFactory.createSqlType(SqlTypeName.BOOLEAN),SqlTypeName.BOOLEAN)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertNotEquals(node,ensuredNode)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "RexNode ensuredNode = builder.ensureType(typeFactory.createSqlType(SqlTypeName.ANY),node,true)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testEnsureTypeWithAny['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "testEnsureTypeWithDifference['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "RexNode ensuredNode = builder.ensureType(typeFactory.createSqlType(SqlTypeName.INTEGER),node,true)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertEquals(ensuredNode.getType(),typeFactory.createSqlType(SqlTypeName.INTEGER))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "RexBuilder builder = new RexBuilder(typeFactory)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertEquals(node,ensuredNode)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+7->10 [style = solid, label="ensuredNode"];
+6->3 [style = bold, label=""];
+4->7 [style = solid, label="node"];
+0->2 [style = solid, label="ensuredNode"];
+3->5 [style = solid, label="typeFactory"];
+4->2 [style = solid, label="node"];
+3->5 [style = bold, label=""];
+0->2 [style = bold, label=""];
+10->9 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+7->10 [style = bold, label=""];
+4->10 [style = solid, label="node"];
+4->7 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+4->0 [style = bold, label=""];
+4->0 [style = solid, label="node"];
+8->3 [style = bold, label=""];
+}

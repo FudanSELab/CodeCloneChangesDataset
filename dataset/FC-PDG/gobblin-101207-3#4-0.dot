@@ -1,0 +1,36 @@
+digraph {
+14 [style = filled, label = "Assert.assertTrue(registrationUnit.getSerDeProps().getProp(HiveAvroSerDeManager.SCHEMA_LITERAL).contains(\"example.avro\"))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "HiveRegistrationUnit registrationUnit = (new HiveTable.Builder()).withDbName(TEST_DB).withTableName(TEST_TABLE).build()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "HiveRegistrationUnit registrationUnit@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "State state = new State()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "HiveAvroSerDeManager manager = new HiveAvroSerDeManager(state)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Assert.assertTrue(columnTypes.get(1).equals(\"bigint\"))@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "manager.addSerDeProperties(this.testBasePath,registrationUnit)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "List<String> columns = Arrays.asList(registrationUnit.getSerDeProps().getProp(serdeConstants.LIST_COLUMNS).split(\",\"))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "HiveRegistrationUnit registrationUnit@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "Assert.assertTrue(columns.get(1).equals(\"timestamp\"))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Assert.assertTrue(columns.get(0).equals(\"name\"))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Assert.assertTrue(columnTypes.get(0).equals(\"string\"))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "List<String> columnTypes = Arrays.asList(registrationUnit.getSerDeProps().getProp(serdeConstants.LIST_COLUMN_TYPES).split(\",\"))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testSchemaLiteral['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "examineSchema['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "examineSchema['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+12->13 [style = bold, label=""];
+6->4 [style = bold, label=""];
+13->10 [style = bold, label=""];
+12->13 [style = solid, label="state"];
+4->1 [style = bold, label=""];
+11->12 [style = bold, label=""];
+10->15 [style = solid, label="registrationUnit"];
+4->14 [style = dashed, label="0"];
+10->15 [style = bold, label=""];
+15->14 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+5->2 [style = dotted, label="true"];
+0->7 [style = bold, label=""];
+9->8 [style = dotted, label="true"];
+}

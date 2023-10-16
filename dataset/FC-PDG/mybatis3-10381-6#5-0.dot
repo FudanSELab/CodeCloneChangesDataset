@@ -1,0 +1,34 @@
+digraph {
+13 [style = filled, label = "assertEquals(Integer.valueOf(2),users.get(1).getId())@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "AnotherMapper mapper = sqlSession.getMapper()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertEquals(2,users.size())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "testReuseNamedResultsFromAnotherMapper['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertEquals(\"User2\",users.get(1).getName())@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "sqlSessionFactory.getConfiguration().addMapper()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "shouldGetFirstFourUsers_Annotated['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Assertions.assertEquals(4,users.size())@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "shouldGetFirstFourUsers_Annotated['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "AnnotatedMapper mapper = sqlSession.getMapper()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(Integer.valueOf(1),users.get(0).getId())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "List<User> users = mapper.getAllUsers(new RowBounds(0,4))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "List<User> users = mapper.getUsers()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertEquals(\"User1\",users.get(0).getName())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Assert.assertEquals(4,users.size())@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9->13 [style = bold, label=""];
+13->10 [style = bold, label=""];
+4->3 [style = bold, label=""];
+6->4 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+3->14 [style = dashed, label="0"];
+0->12 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+11->14 [style = bold, label=""];
+2->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+12->7 [style = bold, label=""];
+14->12 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

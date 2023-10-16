@@ -1,0 +1,30 @@
+digraph {
+6 [style = filled, label = "commitConnections['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "rollbackConnections['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "each.commit()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final SQLException ex@@@8@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "result.add(ex)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "commitConnections['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return result@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Collection<SQLException> result = new LinkedList<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "{ConnectionSavepointManager.getInstance().transactionFinished(each)}@@@11@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "each.rollback()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+4->8 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+7->5 [style = bold, label=""];
+2->5 [style = solid, label="result"];
+7->1 [style = bold, label=""];
+3->2 [style = bold, label=""];
+8->5 [style = bold, label=""];
+0->4 [style = bold, label=""];
+9->2 [style = bold, label=""];
+4->5 [style = bold, label=""];
+1->7 [style = bold, label=""];
+2->1 [style = bold, label=""];
+4->7 [style = bold, label=""];
+2->8 [style = bold, label=""];
+0->4 [style = dotted, label="true"];
+6->2 [style = bold, label=""];
+}

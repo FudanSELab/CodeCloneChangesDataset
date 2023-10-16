@@ -1,0 +1,30 @@
+digraph {
+8 [style = filled, label = "new ShardingInsertStatementValidator(shardingConditions).preValidate(shardingRule,sqlStatementContext,Collections.emptyList(),mock())@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "assertValidateInsertSelectWithoutBindingTables['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "TablesContext multiTablesContext = createMultiTablesContext()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertValidateInsertSelectWithBindingTables['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "new ShardingInsertStatementValidator().preValidate(shardingRule,sqlStatementContext,Collections.emptyList(),mock())@@@9@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "when(shardingRule.isAllBindingTables(multiTablesContext.getTableNames())).thenReturn(false)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertValidateInsertSelectWithoutBindingTables['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "when(shardingRule.isAllBindingTables(multiTablesContext.getTableNames())).thenReturn(true)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "when(shardingRule.isGenerateKeyColumn(\"id\",\"user\")).thenReturn(true)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "SQLStatementContext<InsertStatement> sqlStatementContext = createInsertStatementContext(Collections.singletonList(1),createInsertSelectStatement())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "sqlStatementContext.getTablesContext().getTables().addAll(multiTablesContext.getTables())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "when(shardingRule.findGenerateKeyColumnName(\"user\")).thenReturn(Optional.of(\"id\"))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->10 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+6->5 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->8 [style = bold, label=""];
+10->5 [style = bold, label=""];
+5->8 [style = solid, label="sqlStatementContext"];
+4->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+9->2 [style = bold, label=""];
+11->2 [style = bold, label=""];
+2->3 [style = bold, label=""];
+5->0 [style = solid, label="sqlStatementContext"];
+6->10 [style = dashed, label="0"];
+}

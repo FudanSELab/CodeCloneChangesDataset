@@ -1,0 +1,26 @@
+digraph {
+1 [style = filled, label = "testSearchCase(new MatchAllDocsQuery(),Arrays.asList(\"2017-02-01T09:02:00.000Z\",\"2017-02-01T09:35:00.000Z\",\"2017-02-01T10:15:00.000Z\",\"2017-02-01T13:06:00.000Z\",\"2017-02-01T14:04:00.000Z\",\"2017-02-01T14:05:00.000Z\",\"2017-02-01T15:59:00.000Z\",\"2017-02-01T16:06:00.000Z\",\"2017-02-01T16:48:00.000Z\",\"2017-02-01T16:59:00.000Z\"),null,null)@@@3@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testIntervalHourWithTZ['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "testIntervalHourWithTZ['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testMatchAllDocs['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testSearchCase(query,dataset,null,null)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Query query = new MatchAllDocsQuery()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final List<DateTime> datesForHourInterval = Arrays.asList(new DateTime(2017,2,1,9,2,0,DateTimeZone.UTC),new DateTime(2017,2,1,9,35,0,DateTimeZone.UTC),new DateTime(2017,2,1,10,15,0,DateTimeZone.UTC),new DateTime(2017,2,1,13,6,0,DateTimeZone.UTC),new DateTime(2017,2,1,14,4,0,DateTimeZone.UTC),new DateTime(2017,2,1,14,5,0,DateTimeZone.UTC),new DateTime(2017,2,1,15,59,0,DateTimeZone.UTC),new DateTime(2017,2,1,16,6,0,DateTimeZone.UTC),new DateTime(2017,2,1,16,48,0,DateTimeZone.UTC),new DateTime(2017,2,1,16,59,0,DateTimeZone.UTC))@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "testSearchAndReduceCase(query,dataset,null,null)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testSearchAndReduceCase(DEFAULT_QUERY,datesForHourInterval,null,null)@@@17@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "testSearchAndReduceCase(new MatchAllDocsQuery(),Arrays.asList(\"2017-02-01T09:02:00.000Z\",\"2017-02-01T09:35:00.000Z\",\"2017-02-01T10:15:00.000Z\",\"2017-02-01T13:06:00.000Z\",\"2017-02-01T14:04:00.000Z\",\"2017-02-01T14:05:00.000Z\",\"2017-02-01T15:59:00.000Z\",\"2017-02-01T16:06:00.000Z\",\"2017-02-01T16:48:00.000Z\",\"2017-02-01T16:59:00.000Z\"),null,null)@@@38@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "testSearchCase(DEFAULT_QUERY,datesForHourInterval,null,null)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+5->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+3->6 [style = bold, label=""];
+1->2 [style = bold, label=""];
+5->3 [style = solid, label="datesForHourInterval"];
+7->9 [style = solid, label="query"];
+9->10 [style = bold, label=""];
+5->6 [style = solid, label="datesForHourInterval"];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+7->10 [style = solid, label="query"];
+8->7 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

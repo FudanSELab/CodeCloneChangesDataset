@@ -1,0 +1,37 @@
+digraph {
+9 [style = filled, label = "startUsesControllableProcessFromBuilder['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Cache cacheFromBuilder = createCache()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(serverLauncher.getCache()).isSameAs(cacheFromBuilder)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "startUsesCacheProviderFromBuilder['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "serverLauncher.start()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "ServerLauncher serverLauncher = new Builder().setControllableProcessFactory(null).setDisableDefaultServer(true).setServerLauncherCacheProvider(serverLauncherCacheProvider).build()@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "ControllableProcess controllableProcess = mock()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "startUsesControllableProcessFromBuilder['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "verify(controllableProcess).stop(anyBoolean())@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "ServerLauncher serverLauncher = new Builder().setServerLauncherCacheProvider(serverLauncherCacheProvider).setControllableProcessFactory(null).build()@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+13 [style = filled, label = "ServerLauncher serverLauncher = new Builder().setServerLauncherCacheProvider(serverLauncherCacheProvider).setControllableProcessFactory(null).build()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "when(serverLauncherCacheProvider.createCache(any(),any())).thenReturn(cacheFromBuilder)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "serverLauncher.stop()@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ServerLauncherCacheProvider serverLauncherCacheProvider = mock()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->13 [style = bold, label=""];
+1->11 [style = solid, label="cacheFromBuilder"];
+8->10 [style = dashed, label="0"];
+7->10 [style = bold, label=""];
+9->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->3 [style = bold, label=""];
+3->11 [style = bold, label=""];
+10->3 [style = bold, label=""];
+7->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+1->7 [style = bold, label=""];
+8->13 [style = dashed, label="0"];
+12->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+5->6 [style = bold, label=""];
+13->3 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+1->7 [style = solid, label="cacheFromBuilder"];
+4->1 [style = bold, label=""];
+}

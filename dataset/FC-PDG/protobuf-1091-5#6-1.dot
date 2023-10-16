@@ -1,0 +1,35 @@
+digraph {
+11 [style = filled, label = "testCharsetToString['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "String roundTripString = chopped.toString(UTF_8)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(classUnderTest + \".substring() must have the expected type\",classUnderTest,getActualClassName(chopped))@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testToString['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testToString['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertEquals(classUnderTest + \" unicode bytes must match\",testString.substring(2,testString.length() - 6),roundTripString)@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertWithMessage(\"%s unicode bytes must match\",classUnderTest).that(testString.substring(2,testString.length() - 6)).isEqualTo(roundTripString)@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "assertWithMessage(\"%s.substring() must have the expected type\",classUnderTest).that(classUnderTest).isEqualTo(getActualClassName(chopped))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "ByteString unicode = ByteString.wrap(testString.getBytes(Internal.UTF_8))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "String testString = \"I love unicode ሴ噸 characters\"@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "String roundTripString = chopped.toString(Internal.UTF_8)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ByteString chopped = unicode.substring(2,unicode.size() - 6)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->9 [style = solid, label="chopped"];
+9->2 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+10->3 [style = solid, label="roundTripString"];
+10->3 [style = bold, label=""];
+1->9 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+11->5 [style = bold, label=""];
+1->6 [style = bold, label=""];
+2->7 [style = solid, label="roundTripString"];
+8->5 [style = bold, label=""];
+5->0 [style = bold, label=""];
+0->1 [style = bold, label=""];
+6->10 [style = bold, label=""];
+2->7 [style = bold, label=""];
+1->6 [style = solid, label="chopped"];
+2->3 [style = solid, label="roundTripString"];
+4->5 [style = bold, label=""];
+}

@@ -1,0 +1,19 @@
+digraph {
+1 [style = filled, label = "assertThat(new DependencyLinker().putTrace(trace).link()).containsOnly(DependencyLink.newBuilder().parent(\"kafka\").child(\"consumer\").callCount(1L).build())@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "List<Span> trace = asList(span2(\"a\",null,\"a\",Kind.PRODUCER,\"producer\",null,false),span2(\"a\",\"a\",\"b\",Kind.CONSUMER,\"consumer\",\"kafka\",false))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "messagingSpansDontLinkWithoutBroker_consumer['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "List<Span> trace = asList(span(\"a\",null,\"a\",Kind.PRODUCER,\"producer\",null,false),span(\"a\",\"a\",\"b\",Kind.CONSUMER,\"consumer\",\"kafka\",false))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "producerLinksToServer_sameSpan['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "List<Span> trace = asList(span2(\"a\",null,\"a\",Kind.PRODUCER,\"producer\",null,false),span2(\"a\",null,\"a\",Kind.SERVER,\"server\",null,false).toBuilder().shared(true).build())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertThat(new DependencyLinker().putTrace(trace).link()).containsOnly(DependencyLink.newBuilder().parent(\"producer\").child(\"server\").callCount(1L).build())@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "messagingSpansDontLinkWithoutBroker_consumer['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4->3 [style = bold, label=""];
+5->6 [style = bold, label=""];
+6->7 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->3 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+0->2 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

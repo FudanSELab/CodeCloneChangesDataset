@@ -1,0 +1,38 @@
+digraph {
+1 [style = filled, label = "AtomicReference<Throwable> onError = new AtomicReference<Throwable>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertTrue(onError.get() instanceof SafeSubscriberTestException)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "safeObserver.onNext(\"one\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(\"onNextFail\",onError.get().getMessage())@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "onNextFailureSafe['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "SafeObserver<String> safeObserver = new SafeObserver<String>(OBSERVER_ONNEXT_FAIL(onError))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "safeObserver.onSubscribe(Disposable.empty())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "SafeSubscriber<String> safeObserver = new SafeSubscriber<String>(OBSERVER_ONNEXT_FAIL(onError))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "onNextFailureSafe['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "safeObserver.onSubscribe(new BooleanSubscription())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "safeObserver.onSubscribe(Disposables.empty())@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "assertNotNull(onError.get())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertTrue(onError.get() instanceof SafeObserverTestException)@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "onNextFailureSafe['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0->3 [style = bold, label=""];
+7->1 [style = bold, label=""];
+1->10 [style = solid, label="onError"];
+1->6 [style = solid, label="onError"];
+3->12 [style = bold, label=""];
+2->4 [style = bold, label=""];
+13->1 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+8->0 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+11->0 [style = bold, label=""];
+1->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+12->4 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+6->8 [style = bold, label=""];
+5->8 [style = dashed, label="0"];
+9->1 [style = bold, label=""];
+1->10 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

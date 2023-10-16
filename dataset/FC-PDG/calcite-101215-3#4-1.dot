@@ -1,0 +1,36 @@
+digraph {
+10 [style = filled, label = "final String sql1 = \"insert into EMP_MODIFIABLEVIEW2(extra2 BOOLEAN,\" + \" note VARCHAR) (deptno, empno, ename, extra2, note)\" + \"values (^?^, 10, '2', true, 'ok')\"@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final String error = \"Modifiable view constraint is not satisfied\" + \" for column 'DEPTNO' of base table 'EMP_MODIFIABLEVIEW2'\"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testInsertExtendedColumnModifiableView['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "s.sql(sql0).ok()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final String sql0 = \"insert into EMP_MODIFIABLEVIEW2(extra2 BOOLEAN,\" + \" note VARCHAR) (deptno, empno, ename, extra2, note)\" + \"values (^1^, 10, '2', true, 'ok')\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final String sql0 = \"insert into EMP_MODIFIABLEVIEW2(extra2 BOOLEAN,\" + \" note VARCHAR) (deptno, empno, ename, extra2, note)\" + \"values (20, 10, '2', true, 'ok')\"@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final String sql2 = \"insert into EMP_MODIFIABLEVIEW2(\"rank\" INT,\" + \" extra2 BOOLEAN)\" + \"values ('nom', 1, 'job', ^0^, true, 0, false,\" + \" timestamp '1970-01-01 00:00:00', 1, 1, 1, false)\"@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "s.sql(sql1).fails(error)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final Sql s = sql(\"?\").withExtendedCatalog()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testInsertExtendedColumnModifiableView['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "s.sql(sql2).fails(error)@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final String sql1 = \"insert into EMP_MODIFIABLEVIEW2(\"rank\" INT,\" + \" extra2 BOOLEAN)\" + \"values ('nom', 1, 'job', 20, true, 0, false,\" + \" timestamp '1970-01-01 00:00:00', 1, 1, 1, false)\"@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testInsertExtendedColumnModifiableViewFailConstraint['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "s.sql(sql0).fails(error)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "s.sql(sql1).ok()@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+14->10 [style = bold, label=""];
+12->2 [style = bold, label=""];
+7->14 [style = solid, label="error"];
+4->2 [style = bold, label=""];
+2->9 [style = bold, label=""];
+13->8 [style = bold, label=""];
+7->11 [style = solid, label="error"];
+10->13 [style = bold, label=""];
+9->7 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+8->11 [style = bold, label=""];
+7->13 [style = solid, label="error"];
+5->10 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+7->14 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

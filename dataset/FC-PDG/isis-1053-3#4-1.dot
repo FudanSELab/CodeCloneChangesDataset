@@ -1,0 +1,26 @@
+digraph {
+7 [style = filled, label = "em.persist(inventory)@@@8@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "setupBookForJpa['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "inventory.getProducts().forEach(null)@@@9@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "setupBookForJpa['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "products.add(JpaBook.of(\"Sample Book\",\"A sample book for testing.\",99.,\"Sample Author\",\"Sample ISBN\",\"Sample Publisher\"))@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "val inventory = JpaInventory.of(\"Sample Inventory\",products)@@@7@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "fixtureScripts.runPersona(JpaTestDomainPersona.PurgeAll)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "setupBookForJdo['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "val products = new HashSet<JpaProduct>()@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "val em = jpaSupport.getEntityManagerElseFail()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "transactionService.runTransactional(Propagation.REQUIRES_NEW,null)@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "em.flush()@@@14@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+10->7 [style = solid, label="inventory"];
+9->3 [style = bold, label=""];
+6->4 [style = bold, label=""];
+3->6 [style = bold, label=""];
+5->8 [style = bold, label=""];
+7->5 [style = bold, label=""];
+11->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+2->10 [style = bold, label=""];
+10->7 [style = bold, label=""];
+4->10 [style = solid, label="products"];
+}

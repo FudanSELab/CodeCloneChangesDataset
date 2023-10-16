@@ -1,0 +1,9 @@
+digraph {
+2 [style = filled, label = "securityFilter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "securityFilter['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return new OncePerRequestFilter(){@Override protected void doFilterInternal(HttpServletRequest request,HttpServletResponse response,FilterChain filterChain){filterChain.doFilter(new HttpServletRequestWrapper(request){@Override public Principal getUserPrincipal(){return new Principal(){@Override public String getName(){return \"Alice\"}}}},response)}}@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "securityFilter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->0 [style = bold, label=""];
+3->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

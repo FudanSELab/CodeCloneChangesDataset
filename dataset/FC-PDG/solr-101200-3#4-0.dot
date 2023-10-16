@@ -1,0 +1,28 @@
+digraph {
+3 [style = filled, label = "assertQ(req(\"extractedContent:Apache\"),\"//*(@numFound='0'(\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "loadLocal(\"version_control.txt\",\"fmap.created\",\"extractedDate\",\"fmap.producer\",\"extractedProducer\",\"fmap.creator\",\"extractedCreator\",\"fmap.Keywords\",\"extractedKeywords\",\"fmap.Author\",\"extractedAuthor\",\"literal.id\",\"one\",\"fmap.language\",\"extractedLanguage\",\"fmap.content\",\"extractedContent\",ExtractingParams.RESOURCE_NAME,\"version_control.txt\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "loadLocal(\"version_control.txt\",\"fmap.created\",\"extractedDate\",\"fmap.producer\",\"extractedProducer\",\"fmap.creator\",\"extractedCreator\",\"fmap.Keywords\",\"extractedKeywords\",\"fmap.Author\",\"extractedAuthor\",\"literal.id\",\"one\",\"fmap.language\",\"extractedLanguage\",\"fmap.content\",\"extractedContent\",ExtractingParams.STREAM_TYPE,\"text/plain\")@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "assertQ(req(\"extractedContent:Apache\"),\"//*(@numFound='1'(\")@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testPlainTextSpecifyingMimeType['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "testPlainTextSpecifyingMimeType['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "loadLocal(\"extraction/version_control.txt\",\"fmap.created\",\"extractedDate\",\"fmap.producer\",\"extractedProducer\",\"fmap.creator\",\"extractedCreator\",\"fmap.Keywords\",\"extractedKeywords\",\"fmap.Author\",\"extractedAuthor\",\"literal.id\",\"one\",\"fmap.language\",\"extractedLanguage\",\"fmap.content\",\"extractedContent\",ExtractingParams.STREAM_TYPE,\"text/plain\")@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "assertTrue(\"handler is null and it shouldn't be\",handler != null)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testPlainTextSpecifyingResourceName['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "ExtractingRequestHandler handler = (ExtractingRequestHandler)h.getCore().getRequestHandler(\"/update/extract\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertU(commit())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+4->10 [style = bold, label=""];
+6->4 [style = bold, label=""];
+10->3 [style = bold, label=""];
+7->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+8->6 [style = bold, label=""];
+9->6 [style = bold, label=""];
+5->6 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+6->4 [style = solid, label="handler"];
+4->7 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

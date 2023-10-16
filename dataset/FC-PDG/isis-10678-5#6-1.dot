@@ -1,0 +1,36 @@
+digraph {
+2 [style = filled, label = "assertThat(ev.getOf(),is(CollectionDomainEvent.Of.REMOVE_FROM))@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "defaultEventType['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "SomeDomainObject sdo = new SomeDomainObject()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertSame(ev.getSource(),sdo)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "SomeReferencedObject other = new SomeReferencedObject()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertSame(ev.getValue(),other)@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Identifier identifier = Identifier.propertyOrCollectionIdentifier(,\"references\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final CollectionDomainEvent<Object,Object> ev = Utils.domainEventHelper().newCollectionDomainEvent(,AbstractDomainEvent.Phase.EXECUTED,identifier,sdo,CollectionDomainEvent.Of.REMOVE_FROM,other)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "final CollectionDomainEvent<Object,Object> ev = new DomainEventHelper(null).newCollectionDomainEvent(,AbstractDomainEvent.Phase.EXECUTED,identifier,sdo,CollectionDomainEvent.Of.REMOVE_FROM,other)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "defaultEventType['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "collectionRemovedFromDefaultEventType['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(ev.getIdentifier(),is(identifier))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->3 [style = bold, label=""];
+0->9 [style = bold, label=""];
+5->9 [style = solid, label="sdo"];
+0->6 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+1->6 [style = solid, label="other"];
+1->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->9 [style = solid, label="other"];
+0->9 [style = solid, label="identifier"];
+3->4 [style = bold, label=""];
+1->8 [style = solid, label="other"];
+5->1 [style = bold, label=""];
+11->5 [style = bold, label=""];
+7->5 [style = bold, label=""];
+10->5 [style = bold, label=""];
+0->6 [style = solid, label="identifier"];
+9->3 [style = bold, label=""];
+5->6 [style = solid, label="sdo"];
+5->3 [style = solid, label="sdo"];
+0->4 [style = solid, label="identifier"];
+2->8 [style = bold, label=""];
+}

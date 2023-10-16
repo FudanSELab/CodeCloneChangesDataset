@@ -1,0 +1,28 @@
+digraph {
+3 [style = filled, label = "function['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "IncrementalIndex index = indexCreator.createIndex()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final GroupByQueryEngine engine = new GroupByQueryEngine(Suppliers.ofInstance(new GroupByQueryConfig(){@Override public int getMaxIntermediateRows(){return 5}}),pool)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final Sequence<Row> rows = engine.process(GroupByQuery.builder().setDataSource(\"test\").setGranularity(Granularities.ALL).setInterval(new Interval(DateTimes.EPOCH,DateTimes.nowUtc())).addDimension(\"billy\").addDimension(\"sally\").addAggregator(new LongSumAggregatorFactory(\"cnt\",\"cnt\")).setDimFilter(DimFilters.dimEquals(\"sally\",(String)null)).build(),new IncrementalIndexStorageAdapter(index))@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "function['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testFilterByNull['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "index.add(new MapBasedInputRow(System.currentTimeMillis() - 1,Collections.singletonList(\"billy\"),ImmutableMap.of(\"billy\",\"hi\")))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "index.add(new MapBasedInputRow(System.currentTimeMillis() - 1,Collections.singletonList(\"sally\"),ImmutableMap.of(\"sally\",\"bo\")))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "final List<Row> results = rows.toList()@@@14@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "MapBasedRow row = (MapBasedRow)results.get(0)@@@16@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "Assert.assertEquals(ImmutableMap.of(\"billy\",\"hi\",\"cnt\",1L),row.getEvent())@@@17@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "Assert.assertEquals(1,results.size())@@@15@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "function['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "function['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9->5 [style = bold, label=""];
+1->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+3->2 [style = bold, label=""];
+4->11 [style = bold, label=""];
+12->9 [style = bold, label=""];
+7->8 [style = solid, label="index"];
+10->7 [style = bold, label=""];
+8->12 [style = bold, label=""];
+6->8 [style = bold, label=""];
+11->6 [style = bold, label=""];
+5->13 [style = bold, label=""];
+}

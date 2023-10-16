@@ -1,0 +1,31 @@
+digraph {
+9 [style = filled, label = "print(admin.functions().getFunctionStats(tenant,namespace,functionName))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "print(admin.functions().getFunctionStats(tenant,namespace,functionName,Integer.parseInt(instanceId)))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "runCmd['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "isBlank(instanceId)@@@3@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "String json = JsonFormat.printer().print(isBlank(instanceId)? admin.source().getSourceStatus(tenant,namespace,sourceName): admin.source().getSourceStatus(tenant,namespace,sourceName,Integer.parseInt(instanceId)))@@@3@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Gson gson = new GsonBuilder().setPrettyPrinting().create()@@@4@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "print(admin.source().getSourceStatus(tenant,namespace,sourceName,Integer.parseInt(instanceId)))@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "System.out.println(gson.toJson(new JsonParser().parse(json)))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "runCmd['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "print(admin.source().getSourceStatus(tenant,namespace,sourceName))@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "isBlank(instanceId)@@@3@@@['0', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "runCmd['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4->8 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+10->9 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+12->10 [style = bold, label=""];
+8->5 [style = dotted, label="false"];
+10->11 [style = dotted, label="false"];
+5->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+8->5 [style = bold, label=""];
+2->1 [style = solid, label="json"];
+10->9 [style = dotted, label="true"];
+0->1 [style = bold, label=""];
+8->7 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

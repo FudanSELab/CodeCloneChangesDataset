@@ -1,0 +1,22 @@
+digraph {
+1 [style = filled, label = "Map<String,String> m = Splitter.on(\",\").withKeyValueSeparator(':').split(\"boy:tom,girl:tina,cat:kitty,dog:tommy\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Map<String,String> m = Splitter.on(\",\").withKeyValueSeparator(\":^&\").split(\"boy:^&tom,girl:^&tina,cat:^&kitty,dog:^&tommy\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testMapSplitter_CharacterSeparator['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "assertThat(asList(m.entrySet())).isEqualTo(asList(expected.entrySet()))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "assertThat(asList(m.entrySet())).is(asList(expected.entrySet()))@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testMapSplitter_CharacterSeparator['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(m).isEqualTo(expected)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ImmutableMap<String,String> expected = ImmutableMap.of(\"boy\",\"tom\",\"girl\",\"tina\",\"cat\",\"kitty\",\"dog\",\"tommy\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testMapSplitter_multiCharacterSeparator['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4->5 [style = dashed, label="0"];
+2->0 [style = solid, label="expected"];
+6->1 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+8->2 [style = bold, label=""];
+7->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

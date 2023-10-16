@@ -1,0 +1,37 @@
+digraph {
+6 [style = filled, label = "xformValue.configure(Collections.singletonMap(Cast.SPEC_CONFIG,\"float32\"))@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertEquals(42.f,transformed.value())@@@7@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "castWholeRecordValueWithSchemaFloat32['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final Cast<SourceRecord> xform = new Cast.Value<>()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "assertEquals(42,transformed.value())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "SourceRecord transformed = xform.apply(new SourceRecord(null,null,\"topic\",0,Schema.INT32_SCHEMA,42))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "castWholeRecordValueWithSchemaFloat32['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertEquals(42.f,transformed.value())@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "xform.configure(Collections.singletonMap(Cast.SPEC_CONFIG,\"float32\"))@@@4@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(Schema.Type.FLOAT32,transformed.valueSchema().type())@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "assertEquals(-42,transformed.valueSchema().defaultValue())@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "SourceRecord transformed = xform.apply(new SourceRecord(null,null,\"topic\",0,SchemaBuilder.float32().defaultValue(-42.125f).build(),42.125f))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "castWholeRecordDefaultValue['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "xform.configure(Collections.singletonMap(Cast.SPEC_CONFIG,\"int32\"))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "SourceRecord transformed = xformValue.apply(new SourceRecord(null,null,\"topic\",0,Schema.INT32_SCHEMA,42))@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "assertEquals(Schema.Type.INT32,transformed.valueSchema().type())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13->10 [style = bold, label=""];
+12->13 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+11->12 [style = bold, label=""];
+14->4 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+15->11 [style = bold, label=""];
+6->7 [style = bold, label=""];
+8->2 [style = bold, label=""];
+7->8 [style = bold, label=""];
+3->13 [style = dashed, label="0"];
+1->15 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+9->6 [style = bold, label=""];
+0->2 [style = bold, label=""];
+4->15 [style = bold, label=""];
+}

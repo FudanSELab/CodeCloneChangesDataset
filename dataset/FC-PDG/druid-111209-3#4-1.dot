@@ -1,0 +1,32 @@
+digraph {
+1 [style = filled, label = "return dbi.withHandle(new HandleCallback<List<AuditEntry>>(){@Override public List<AuditEntry> withHandle(Handle handle){return handle.createQuery(StringUtils.format(\"SELECT payload FROM %s WHERE type = :type and created_date between :start_date and :end_date ORDER BY created_date\",getAuditTable())).bind(\"type\",type).bind(\"start_date\",theInterval.getStart().toString()).bind(\"end_date\",theInterval.getEnd().toString()).map(new ResultSetMapper<AuditEntry>(){@Override public AuditEntry map(int index,ResultSet r,StatementContext ctx){try {return jsonMapper.readValue(r.getBytes(\"payload\"),)}catch (IOException e) }}).list()}})@@@4@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final String key@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "final String type@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "Interval interval@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final String type@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "final String type@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "fetchAuditHistory['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "final String key@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "return dbi.withHandle(null)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "Interval interval@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final Interval theInterval = getIntervalOrDefault(interval)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "fetchAuditHistory['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "fetchAuditHistory['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+0->2 [style = dotted, label="true"];
+0->5 [style = dotted, label="true"];
+1->7 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+3->7 [style = bold, label=""];
+11->3 [style = bold, label=""];
+6->9 [style = dotted, label="true"];
+6->8 [style = dotted, label="true"];
+11->10 [style = dotted, label="true"];
+5->3 [style = solid, label="interval"];
+6->5 [style = dotted, label="true"];
+0->4 [style = dotted, label="true"];
+11->12 [style = dotted, label="true"];
+10->3 [style = solid, label="interval"];
+}

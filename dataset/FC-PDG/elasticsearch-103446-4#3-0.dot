@@ -1,0 +1,30 @@
+digraph {
+1 [style = filled, label = "{final MultiMatchQueryBuilder queryBuilder = new MultiMatchQueryBuilder(\"foo bar\",STRING_FIELD_NAME,STRING_FIELD_NAME_2)queryBuilder.type(Type.BOOL_PREFIX)final Query query = queryBuilder.toQuery(createShardContext())assertThat(query,instanceOf())final DisjunctionMaxQuery disMaxQuery = (DisjunctionMaxQuery)queryassertThat(disMaxQuery.getDisjuncts(),hasSize(2))final BooleanQuery firstDisjunct = assertDisjunctionSubQuery(disMaxQuery,,0)assertThat(firstDisjunct.clauses(),hasSize(2))assertThat(assertBooleanSubQuery(firstDisjunct,,0).getTerm(),equalTo(new Term(STRING_FIELD_NAME,\"foo\")))final PrefixQuery secondDisjunct = assertDisjunctionSubQuery(disMaxQuery,,1)assertThat(secondDisjunct.getPrefix(),equalTo(new Term(STRING_FIELD_NAME_2,\"foo bar\")))}@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final BooleanQuery booleanQuery = (BooleanQuery)query@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(assertBooleanSubQuery(booleanQuery,,1).getPrefix(),equalTo(new Term(STRING_FIELD_NAME,\"bar\")))@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testToQueryBooleanPrefixSingleField['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertThat(assertBooleanSubQuery(booleanQuery,,0).getTerm(),equalTo(new Term(STRING_FIELD_NAME,\"foo\")))@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "final MultiMatchQueryBuilder builder = new MultiMatchQueryBuilder(\"foo bar\",STRING_FIELD_NAME)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testToQueryBooleanPrefixMultipleFields['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(query,instanceOf())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testToQueryBooleanPrefixMultipleFields['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "{final MultiMatchQueryBuilder queryBuilder = new MultiMatchQueryBuilder(\"foo bar\",STRING_FIELD_NAME,STRING_FIELD_NAME_2)queryBuilder.type(Type.BOOL_PREFIX)final Query query = queryBuilder.toQuery(createShardContext())assertThat(query,instanceOf())final DisjunctionMaxQuery disMaxQuery = (DisjunctionMaxQuery)queryassertThat(disMaxQuery.getDisjuncts(),hasSize(2))final BooleanQuery firstDisjunct = assertDisjunctionSubQuery(disMaxQuery,,0)assertThat(firstDisjunct.clauses(),hasSize(2))assertThat(assertBooleanSubQuery(firstDisjunct,,0).getTerm(),equalTo(new Term(STRING_FIELD_NAME,\"foo\")))final PrefixQuery secondDisjunct = assertDisjunctionSubQuery(disMaxQuery,,1)assertThat(secondDisjunct.getPrefix(),equalTo(new Term(STRING_FIELD_NAME_2,\"foo bar\")))}@@@18@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "builder.type(Type.BOOL_PREFIX)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final Query query = builder.toQuery(createShardContext())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertThat(booleanQuery.clauses(),hasSize(2))@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->12 [style = bold, label=""];
+11->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+12->10 [style = bold, label=""];
+9->4 [style = solid, label="query"];
+7->4 [style = bold, label=""];
+3->1 [style = bold, label=""];
+5->9 [style = bold, label=""];
+9->7 [style = bold, label=""];
+8->11 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+10->6 [style = bold, label=""];
+1->2 [style = solid, label="disMaxQuery"];
+9->7 [style = solid, label="query"];
+}

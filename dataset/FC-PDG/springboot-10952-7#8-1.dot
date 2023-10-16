@@ -1,0 +1,9 @@
+digraph {
+1 [style = filled, label = "shouldNotDenyNorLogIfMaxUrisIsNotReached['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "shouldNotDenyNorLogIfMaxUrisIsNotReached['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "shouldNotDenyNorLogIfMaxUrisIsNotReached['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "this.contextRunner.withPropertyValues(\"management.metrics.web.client.max-uri-tags=5\").run(null)@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->0 [style = bold, label=""];
+3->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

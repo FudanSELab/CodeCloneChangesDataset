@@ -1,0 +1,32 @@
+digraph {
+0 [style = filled, label = "callbackInvokeAndWhenHasGenericShouldReturnResult['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(result.hasResult()).isTrue()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "given(callbackInstance.handle(\"foo\")).willReturn(123)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "StringBuilderFactory callbackInstance = mock()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "callbackInvokeAndWhenHasGenericShouldReturnResult['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "StringBuilder argument = new StringBuilder(\"foo\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "verify(callbackInstance).handle(argument)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "StringFactory callbackInstance = mock()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "String argument = \"foo\"@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(result.get()).isEqualTo(123)@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "given(callbackInstance.handle(any())).willReturn(123)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "InvocationResult<Integer> result = LambdaSafe.callback(,callbackInstance,argument).invokeAnd(null)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "callbackInvokeAndWhenHasResolvableGenericMatchShouldReturnResult['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+5->8 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+6->5 [style = bold, label=""];
+3->6 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+9->10 [style = bold, label=""];
+2->4 [style = bold, label=""];
+10->12 [style = bold, label=""];
+12->8 [style = bold, label=""];
+11->2 [style = bold, label=""];
+7->3 [style = bold, label=""];
+1->11 [style = bold, label=""];
+12->11 [style = solid, label="argument"];
+6->12 [style = dashed, label="0"];
+}

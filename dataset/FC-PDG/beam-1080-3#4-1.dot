@@ -1,0 +1,28 @@
+digraph {
+5 [style = filled, label = "assertThat(key,Matchers.equalTo(otherKey))@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "Assert.assertThat(key,Matchers.equalTo(otherKey))@@@10@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "objectsNotEqualEncodingsEqualEquals['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assert.assertThat(key,Matchers.not(Matchers.equalTo(otherKey)))@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "StructuralKey<byte((> key = StructuralKey.of(original,ByteArrayCoder.of())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "notEqualEncodingsEqual['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "StructuralKey<byte((> otherKey = StructuralKey.of(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8a40c8,ByteArrayCoder.of())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "objectsNotEqualEncodingsEqualEquals['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "byte(( original = new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8a40ac@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->8 [style = solid, label="key"];
+6->3 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+0->5 [style = solid, label="otherKey"];
+1->5 [style = dashed, label="0"];
+4->0 [style = bold, label=""];
+0->8 [style = solid, label="otherKey"];
+4->5 [style = solid, label="key"];
+3->4 [style = solid, label="original"];
+0->1 [style = solid, label="otherKey"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+7->3 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->1 [style = solid, label="key"];
+0->5 [style = bold, label=""];
+0->8 [style = bold, label=""];
+}

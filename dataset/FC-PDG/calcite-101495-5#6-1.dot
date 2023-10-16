@@ -1,0 +1,16 @@
+digraph {
+4 [style = filled, label = "checkDateRange(f,f.and(f.or(f.eq(f.exMonthD,f.literal(1)),f.eq(f.exMonthD,f.literal(2)),f.eq(f.exMonthD,f.literal(3)),f.eq(f.exMonthD,f.literal(4)),f.eq(f.exMonthD,f.literal(5))),f.or(f.and(f.eq(f.exYearD,f.literal(2000)),f.or(f.eq(f.exMonthD,f.literal(2)),f.eq(f.exMonthD,f.literal(3)),f.eq(f.exMonthD,f.literal(5)))),f.and(f.eq(f.exYearD,f.literal(2001)),f.eq(f.exMonthD,f.literal(1))))),is(\"AND(OR(=(EXTRACT(FLAG(MONTH), $8), 1),\" + \" =(EXTRACT(FLAG(MONTH), $8), 2),\" + \" =(EXTRACT(FLAG(MONTH), $8), 3),\" + \" =(EXTRACT(FLAG(MONTH), $8), 4),\" + \" =(EXTRACT(FLAG(MONTH), $8), 5)),\" + \" OR(AND(AND(>=($8, 2000-01-01), <($8, 2001-01-01)),\" + \" OR(AND(>=($8, 2000-02-01), <($8, 2000-03-01)),\" + \" AND(>=($8, 2000-03-01), <($8, 2000-04-01)),\" + \" AND(>=($8, 2000-05-01), <($8, 2000-06-01)))),\" + \" AND(AND(>=($8, 2001-01-01), <($8, 2002-01-01)),\" + \" AND(>=($8, 2001-01-01), <($8, 2001-02-01)))))\"))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testExtractWithOrCondition2['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "testExtractPartialRewriteForInMonth['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final Fixture2 f = new Fixture2()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "checkDateRange(f,f.and(f.or(f.eq(f.exYearD,f.literal(2000)),f.eq(f.exYearD,f.literal(2001))),f.or(f.and(f.eq(f.exYearD,f.literal(2000)),f.or(f.eq(f.exMonthD,f.literal(2)),f.eq(f.exMonthD,f.literal(3)),f.eq(f.exMonthD,f.literal(5)))),f.and(f.eq(f.exYearD,f.literal(2001)),f.eq(f.exMonthD,f.literal(1))))),is(\"AND(OR(AND(>=($8, 2000-01-01), <($8, 2001-01-01)),\" + \" AND(>=($8, 2001-01-01), <($8, 2002-01-01))),\" + \" OR(AND(AND(>=($8, 2000-01-01), <($8, 2001-01-01)),\" + \" OR(AND(>=($8, 2000-02-01), <($8, 2000-03-01)),\" + \" AND(>=($8, 2000-03-01), <($8, 2000-04-01)),\" + \" AND(>=($8, 2000-05-01), <($8, 2000-06-01)))),\" + \" AND(AND(>=($8, 2001-01-01), <($8, 2002-01-01)),\" + \" AND(>=($8, 2001-01-01), <($8, 2001-02-01)))))\"))@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testExtractWithOrCondition2['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+2->4 [style = bold, label=""];
+2->4 [style = solid, label="f"];
+2->0 [style = solid, label="f"];
+}

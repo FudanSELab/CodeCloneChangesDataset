@@ -1,0 +1,15 @@
+digraph {
+0 [style = filled, label = "build['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return (RestContext)BeanStore.of(beanStore(),resource.get()).addBeans(,this).createBean(getContextClass().orElse())@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "return BeanStore.of(beanStore).addBean(,this).createBean(ic)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "build['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "return (RestContext)BeanStore.of(beanStore(),resource.get()).addBeans(,this).createBean(getType().orElse())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "Class<? extends RestOpContext> ic = (Class<? extends RestOpContext>)getContextClass().orElse(getDefaultImplClass())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "build['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6->4 [style = bold, label=""];
+1->2 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+6->4 [style = solid, label="ic"];
+0->1 [style = bold, label=""];
+}

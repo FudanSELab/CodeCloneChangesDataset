@@ -1,0 +1,36 @@
+digraph {
+7 [style = filled, label = "assertTrue(IOUtils.contentEquals(zis2,s))@@@19@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "IOUtils.copy(is,zos)@@@8@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "ContentStreamBase stream = new ContentStreamBase.FileStream(file)@@@10@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertEquals(file.length(),stream.getSize().intValue())@@@17@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "testURLStreamGZIP['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "File file = new File(createTempDir().toFile(),\"README.gz\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "IOUtils.copy(is,zos)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertTrue(IOUtils.contentEquals(zis2,s))@@@21@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "ContentStreamBase stream = new ContentStreamBase.URLStream(new URL(file.toURI().toASCIIString()))@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testFileStreamGZIP['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "ContentStreamBase stream = new ContentStreamBase.FileStream(file)@@@9@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testFileStreamGZIP['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertTrue(IOUtils.contentEquals(isr,r))@@@18@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(\"application/xml\",stream.getContentType())@@@17@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "assertEquals(file.length(),stream.getSize().intValue())@@@20@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7->13 [style = bold, label=""];
+5->3 [style = bold, label=""];
+4->12 [style = bold, label=""];
+2->10 [style = solid, label="file"];
+10->0 [style = bold, label=""];
+2->5 [style = solid, label="file"];
+1->2 [style = bold, label=""];
+14->2 [style = bold, label=""];
+7->11 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+2->9 [style = bold, label=""];
+9->10 [style = bold, label=""];
+6->7 [style = bold, label=""];
+8->2 [style = bold, label=""];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->6 [style = bold, label=""];
+12->0 [style = bold, label=""];
+3->0 [style = bold, label=""];
+}

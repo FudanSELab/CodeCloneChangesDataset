@@ -1,0 +1,14 @@
+digraph {
+2 [style = filled, label = "int length@@@3@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "clone['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "BytesRef bytes@@@3@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "int offset@@@3@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "return this@@@16@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "decompress['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3->4 [style = dotted, label="true"];
+3->5 [style = dotted, label="true"];
+3->1 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+0->5 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+}

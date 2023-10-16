@@ -1,0 +1,20 @@
+digraph {
+5 [style = filled, label = "singleSourceWithListOfTopicsShouldHaveSingleSubtopology['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "singleSourceWithListOfTopicsShouldHaveSingleSubtopology['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "expectedDescription.addSubtopology(new InternalTopologyBuilder.Subtopology(0,Collections.singleton(expectedSourceNode)))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "singleSourcePatternShouldHaveSingleSubtopology['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(topology.describe().hashCode(),equalTo(expectedDescription.hashCode()))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "final TopologyDescription.Source expectedSourceNode = addSource(\"source\",\"topic1\",\"topic2\",\"topic3\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final TopologyDescription.Source expectedSourceNode = addSource(\"source\",Pattern.compile(\"topic(0-9(\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(topology.describe(),equalTo(expectedDescription))@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->2 [style = bold, label=""];
+7->1 [style = bold, label=""];
+7->1 [style = solid, label="expectedSourceNode"];
+5->0 [style = bold, label=""];
+0->1 [style = solid, label="expectedSourceNode"];
+6->7 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+}

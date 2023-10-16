@@ -1,0 +1,38 @@
+digraph {
+2 [style = filled, label = "RestRequest request = new FakeRestRequest.Builder(xContentRegistry()).withMethod(RestRequest.Method.HEAD).withPath(\"/some_index\").withParams(params).build()@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "handler.prepareRequest(request,mock())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Map<String,String> params = new HashMap<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "handler.prepareRequest(request,mock())@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "testIncludeTypeNamesWarning['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testIncludeTypeNamesWarningExists['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "RestRequest request = new FakeRestRequest.Builder(xContentRegistry()).withMethod(RestRequest.Method.GET).withPath(\"/some_index\").withParams(params).build()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testIncludeTypeNamesWarningExists['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "params.put(INCLUDE_TYPE_NAME_PARAMETER,randomFrom(\"true\",\"false\"))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "RestGetIndicesAction handler = new RestGetIndicesAction(mock())@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "request = new FakeRestRequest.Builder(xContentRegistry()).withMethod(RestRequest.Method.GET).withPath(\"/some_index\").build()@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "RestGetIndicesAction handler = new RestGetIndicesAction()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "RestRequest request = new FakeRestRequest.Builder(xContentRegistry()).withHeaders(Map.of(\"Content-Type\",contentTypeHeader,\"Accept\",contentTypeHeader)).withMethod(RestRequest.Method.HEAD).withPath(\"/some_index\").withParams(params).build()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "assertWarnings(RestGetIndicesAction.TYPES_DEPRECATION_MESSAGE)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+1->8 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+8->6 [style = bold, label=""];
+9->10 [style = bold, label=""];
+12->4 [style = solid, label="request"];
+11->9 [style = bold, label=""];
+12->0 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+7->3 [style = bold, label=""];
+6->4 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+13->3 [style = bold, label=""];
+0->4 [style = bold, label=""];
+1->12 [style = bold, label=""];
+9->10 [style = solid, label="request"];
+1->2 [style = bold, label=""];
+8->4 [style = solid, label="request"];
+4->11 [style = bold, label=""];
+2->4 [style = solid, label="request"];
+}

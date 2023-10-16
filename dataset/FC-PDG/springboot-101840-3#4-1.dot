@@ -1,0 +1,27 @@
+digraph {
+8 [style = filled, label = "customBeanNameGenerator['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "this.context = application.run()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "application.setBeanNameGenerator(beanNameGenerator)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "BeanNameGenerator beanNameGenerator = new DefaultBeanNameGenerator()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Object actualGenerator = this.context.getBean(AnnotationConfigUtils.CONFIGURATION_BEAN_NAME_GENERATOR)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "customBeanNameGenerator['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "application.setWebApplicationType(WebApplicationType.NONE)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(actualGenerator).isSameAs(beanNameGenerator)@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "customBeanNameGeneratorWithNonWebApplication['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "TestSpringApplication application = new TestSpringApplication()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "verify(application.getLoader()).setBeanNameGenerator(beanNameGenerator)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+6->3 [style = bold, label=""];
+1->4 [style = bold, label=""];
+0->10 [style = bold, label=""];
+7->0 [style = bold, label=""];
+1->4 [style = solid, label="beanNameGenerator"];
+5->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+9->0 [style = bold, label=""];
+10->1 [style = bold, label=""];
+1->2 [style = solid, label="beanNameGenerator"];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+1->6 [style = solid, label="beanNameGenerator"];
+}

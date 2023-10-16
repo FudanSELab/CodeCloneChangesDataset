@@ -1,0 +1,20 @@
+digraph {
+2 [style = filled, label = "a04_typedBeanHeaders['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "b04_typedBeanQueries['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "String r = proxy.typedBeanHeaders(TypedBeanImpl.get(),null,new TypedBean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1555bda,AList.of(TypedBeanImpl.get(),null),AList.of(new TypedBean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1555bef,null),AMap.of(\"foo\",TypedBeanImpl.get()),AMap.of(\"foo\",Arrays.asList((TypedBean)TypedBeanImpl.get())),AMap.of(\"foo\",AList.of(new TypedBean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1555c15,null)),AMap.of(1,Arrays.asList((TypedBean)TypedBeanImpl.get())))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "assertEquals(\"OK\",r)@@@22@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "String r = proxy.typedBeanQueries(new TypedBeanImpl().init(),null,new TypedBean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1555c42,AList.of(new TypedBeanImpl().init(),null),AList.of(new TypedBean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1555c59,null),AMap.of(\"foo\",new TypedBeanImpl().init()),AMap.of(\"foo\",Arrays.asList((TypedBean)new TypedBeanImpl().init())),AMap.of(\"foo\",AList.of(new TypedBean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1555c82,null)),AMap.of(1,Arrays.asList((TypedBean)new TypedBeanImpl().init())))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String r = proxy.typedBeanHeaders(new TypedBeanImpl().init(),null,new TypedBean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1555b6c,AList.of(new TypedBeanImpl().init(),null),AList.of(new TypedBean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1555b83,null),AMap.of(\"foo\",new TypedBeanImpl().init()),AMap.of(\"foo\",Arrays.asList((TypedBean)new TypedBeanImpl().init())),AMap.of(\"foo\",AList.of(new TypedBean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1555bac,null)),AMap.of(1,Arrays.asList((TypedBean)new TypedBeanImpl().init())))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "a04_typedBeanHeaders['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->1 [style = solid, label="r"];
+5->1 [style = bold, label=""];
+6->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+0->5 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+4->1 [style = solid, label="r"];
+0->1 [style = solid, label="r"];
+}

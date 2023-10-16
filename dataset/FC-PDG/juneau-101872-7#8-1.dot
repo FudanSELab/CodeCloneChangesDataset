@@ -1,0 +1,33 @@
+digraph {
+6 [style = filled, label = "getSwaggerWithFile['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "SwaggerProvider ip = rc.getSwaggerProvider()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "RestOpContext roc = RestOpContext.create(.getMethod(\"testMethod\"),rc).build()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Object resource@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Object resource@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "return ip.getSwagger(rc,req.getLocale())@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "RestRequest req = rc.createRequest(new RestCall(resource,rc,new MockServletRequest(),new MockServletResponse()).restOpContext(roc))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "RestContext rc = RestContext.create(resource).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "getSwagger['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "RestContext rc = RestContext.create(resource).fileFinder().build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "getSwaggerWithFile['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "RestContext rc = RestContext.create(null,null,null,resource).init(resource).fileFinder().build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0->5 [style = solid, label="roc"];
+6->4 [style = bold, label=""];
+5->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+7->0 [style = bold, label=""];
+11->0 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+4->11 [style = dashed, label="0"];
+9->11 [style = bold, label=""];
+6->3 [style = dotted, label="true"];
+9->10 [style = dotted, label="true"];
+7->2 [style = solid, label="rc"];
+4->7 [style = dashed, label="0"];
+8->3 [style = dotted, label="true"];
+4->2 [style = solid, label="rc"];
+11->2 [style = solid, label="rc"];
+8->7 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

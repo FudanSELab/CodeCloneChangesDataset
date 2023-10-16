@@ -1,0 +1,28 @@
+digraph {
+5 [style = filled, label = "RangeAggregationBuilder aggregationBuilder = new RangeAggregationBuilder(\"range\").field(DATE_FIELD_NAME).addRange(milli1 - 1,milli1 + 1)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testDateFieldMillisecondResolution['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testCase(aggregationBuilder,new MatchAllDocsQuery(),null,null,fieldType)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "DateFieldMapper.DateFieldType fieldType = new DateFieldMapper.DateFieldType(DATE_FIELD_NAME,randomBoolean(),randomBoolean(),true,DateFieldMapper.DEFAULT_DATE_TIME_FORMATTER,Resolution.MILLISECONDS,null,null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "DateFieldMapper.DateFieldType fieldType = new DateFieldMapper.DateFieldType(DATE_FIELD_NAME)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "DateFieldMapper.DateFieldType fieldType = new DateFieldMapper.DateFieldType(DATE_FIELD_NAME,true,false,true,DateFieldMapper.DEFAULT_DATE_TIME_FORMATTER,DateFieldMapper.Resolution.NANOSECONDS,null,Collections.emptyMap())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testDateFieldMillisecondResolution['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "testDateFieldNanosecondResolution['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "long milli2 = ZonedDateTime.of(2016,11,13,16,14,34,0,ZoneOffset.UTC).toInstant().toEpochMilli()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "long milli1 = ZonedDateTime.of(2015,11,13,16,14,34,0,ZoneOffset.UTC).toInstant().toEpochMilli()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+3->5 [style = solid, label="milli1"];
+1->8 [style = dashed, label="0"];
+1->0 [style = solid, label="fieldType"];
+7->0 [style = solid, label="fieldType"];
+5->0 [style = solid, label="aggregationBuilder"];
+1->7 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+5->0 [style = bold, label=""];
+9->8 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+7->3 [style = bold, label=""];
+8->0 [style = solid, label="fieldType"];
+8->3 [style = bold, label=""];
+}

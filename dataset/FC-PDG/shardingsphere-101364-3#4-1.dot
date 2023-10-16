@@ -1,0 +1,37 @@
+digraph {
+1 [style = filled, label = "ListExpression right = new ListExpression(ctx.simpleExpr(0).start.getStartIndex(),ctx.simpleExpr().get(ctx.simpleExpr().size() - 1).stop.getStopIndex())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return result@@@11@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "right.getItems().add((ExpressionSegment)visit(each))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "createBinaryOperationExpressionFromLike['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "createBinaryOperationExpressionFromLike['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ExpressionSegment left = (ExpressionSegment)visit(ctx.bitExpr(0))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "BinaryOperationExpression result = new BinaryOperationExpression(ctx.start.getStartIndex(),ctx.stop.getStopIndex(),left,right,operator,text)@@@10@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "String text = ctx.start.getInputStream().getText(new Interval(ctx.start.getStartIndex(),ctx.stop.getStopIndex()))@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "String operator = null != ctx.NOT()? \"NOT LIKE\": \"LIKE\"@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final PredicateContext ctx@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "return new BinaryOperationExpression(ctx.start.getStartIndex(),ctx.stop.getStopIndex(),left,right,operator,text)@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "createBinaryOperationExpressionFromLike['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+4->9 [style = solid, label="left"];
+11->4 [style = bold, label=""];
+2->5 [style = solid, label="text"];
+1->9 [style = solid, label="right"];
+5->9 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+2->9 [style = bold, label=""];
+7->0 [style = dotted, label="true"];
+4->5 [style = solid, label="left"];
+8->5 [style = solid, label="operator"];
+8->9 [style = solid, label="operator"];
+1->5 [style = solid, label="right"];
+5->3 [style = solid, label="result"];
+1->6 [style = bold, label=""];
+8->2 [style = bold, label=""];
+11->0 [style = dotted, label="true"];
+6->8 [style = bold, label=""];
+10->4 [style = bold, label=""];
+10->0 [style = dotted, label="true"];
+4->1 [style = bold, label=""];
+2->5 [style = bold, label=""];
+2->9 [style = solid, label="text"];
+}

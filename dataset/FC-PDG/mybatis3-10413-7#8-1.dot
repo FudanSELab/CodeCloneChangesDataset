@@ -1,0 +1,33 @@
+digraph {
+1 [style = filled, label = "assertTrue(user instanceof Proxy)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Assertions.assertEquals(\"User2\",user.getName())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Assertions.assertEquals(\"User1\",user.getName())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "shouldGetAUserAndGroups['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "User user = mapper.getUserWithPets_External(2)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "shouldGetAUserAndGroups['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "Assertions.assertEquals(\"John\",user.getPets().get(0).getBreeder().getBreederName())@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "Assertions.assertNull(user.getPets().get(0).getPetName(),\"should not inherit auto-mapping\")@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Assertions.assertEquals(Integer.valueOf(2),user.getId())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "sqlSessionFactory.getConfiguration().setAutoMappingBehavior(AutoMappingBehavior.NONE)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Assertions.assertEquals(1,user.getGroups().size())@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "shouldNotInheritAutoMappingInherited_ExternalNestedResultMap['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->13 [style = bold, label=""];
+5->3 [style = bold, label=""];
+13->10 [style = bold, label=""];
+6->5 [style = bold, label=""];
+3->1 [style = solid, label="user"];
+1->2 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+3->12 [style = dashed, label="0"];
+3->12 [style = bold, label=""];
+9->7 [style = bold, label=""];
+11->3 [style = bold, label=""];
+12->9 [style = bold, label=""];
+8->11 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->13 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+}

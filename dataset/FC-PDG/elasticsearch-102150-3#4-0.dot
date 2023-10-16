@@ -1,0 +1,31 @@
+digraph {
+3 [style = filled, label = "createNode['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Set<DiscoveryNode.Role> roles = new HashSet<>(randomSubsetOf(Sets.newHashSet(DiscoveryNode.Role.values())))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "return new DiscoveryNode(id,id,buildNewFakeTransportAddress(),Collections.emptyMap(),roles,Version.CURRENT)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return new DiscoveryNode(id,id,buildNewFakeTransportAddress(),Collections.emptyMap(),roles,VersionUtils.randomVersionBetween(random(),Version.V_5_6_0,null))@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "DiscoveryNode.Role mustHaveRoles@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "roles.add(mustHaveRole)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "createNode['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final String id = String.format(Locale.ROOT,\"node_%03d\",nodeIdGenerator.incrementAndGet())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "return new DiscoveryNode(id,id,buildNewFakeTransportAddress(),Collections.emptyMap(),roles,VersionUtils.randomVersionBetween(random(),Version.V_6_0_0_alpha1,null))@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "createNode['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9->5 [style = bold, label=""];
+0->1 [style = solid, label="id"];
+6->5 [style = bold, label=""];
+0->8 [style = solid, label="id"];
+3->5 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+6->2 [style = dotted, label="true"];
+5->7 [style = solid, label="roles"];
+5->1 [style = solid, label="roles"];
+1->7 [style = dashed, label="0"];
+5->8 [style = solid, label="roles"];
+0->7 [style = solid, label="id"];
+0->1 [style = bold, label=""];
+9->2 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+5->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->8 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

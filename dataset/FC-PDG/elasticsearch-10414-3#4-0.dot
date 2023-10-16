@@ -1,0 +1,38 @@
+digraph {
+1 [style = filled, label = "assertThat(exception.getHeader(\"processor_tag\").get(0),equalTo(processorTag))@@@10@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "ElasticsearchException exception = expectThrows(,null)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "config.put(\"value\",\"value1\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "SetProcessor.Factory factory = new SetProcessor.Factory(TestTemplateService.instance(true))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Map<String,Object> config = new HashMap<>()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "ElasticsearchException exception = expectThrows(,null)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testInvalidMustacheTemplate['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "String processorTag = randomAlphaOfLength(10)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testInvalidMustacheTemplate['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "assertThat(exception.getMessage(),equalTo(\"java.lang.RuntimeException: could not compile script\"))@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "config.put(\"field\",\"field1\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "KeyValueProcessor.Factory factory = new KeyValueProcessor.Factory()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertThat(exception.getMessage(),equalTo(\"(field_split( required property is missing\"))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "testCreateWithMissingFieldSplit['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertThat(exception.getMetadata(\"es.processor_tag\").get(0),equalTo(processorTag))@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5->3 [style = bold, label=""];
+2->9 [style = solid, label="processorTag"];
+10->3 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+8->6 [style = bold, label=""];
+11->12 [style = bold, label=""];
+4->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+3->13 [style = dashed, label="0"];
+2->1 [style = solid, label="processorTag"];
+3->0 [style = bold, label=""];
+0->7 [style = bold, label=""];
+6->12 [style = dashed, label="0"];
+6->1 [style = bold, label=""];
+7->2 [style = bold, label=""];
+14->13 [style = bold, label=""];
+6->9 [style = bold, label=""];
+8->11 [style = dashed, label="0"];
+2->11 [style = bold, label=""];
+2->8 [style = bold, label=""];
+13->0 [style = bold, label=""];
+}

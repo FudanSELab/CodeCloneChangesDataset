@@ -1,0 +1,27 @@
+digraph {
+9 [style = filled, label = "provider.setManager(moduleManager)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "init['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Mockito.when(telemetryProvider.getService()).thenReturn(new MetricsCreatorNoop())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertFalse(StringUtil.isEmpty(zkAddress))@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "init['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "TelemetryModule telemetryModule = Mockito.spy()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "zkAddress = container.getHost() + \":\" + container.getMappedPort(2181)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "zkAddress = System.getProperty(\"zk.address\")@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "Whitebox.setInternalState(telemetryModule,\"loadedProvider\",telemetryProvider)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "before['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Mockito.when(moduleManager.find(TelemetryModule.NAME)).thenReturn(telemetryModule)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+10->0 [style = bold, label=""];
+3->5 [style = solid, label="zkAddress"];
+3->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+6->0 [style = bold, label=""];
+7->0 [style = bold, label=""];
+1->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+2->1 [style = solid, label="telemetryModule"];
+1->9 [style = bold, label=""];
+0->2 [style = bold, label=""];
+2->4 [style = solid, label="telemetryModule"];
+}

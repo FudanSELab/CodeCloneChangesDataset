@@ -1,0 +1,14 @@
+digraph {
+3 [style = filled, label = "given(tokenValidator.validate(any())).willReturn(Mono.empty())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "this.contextRunner.run(withWebTestClient(null))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "given(securityService.getAccessLevel(any(),eq(\"app-id\"))).willReturn(Mono.just(AccessLevel.RESTRICTED))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "linksToOtherEndpointsWithRestrictedAccess['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "linksToOtherEndpointsAreProvided['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "load(,null)@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "linksToOtherEndpointsAreProvided['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4->3 [style = bold, label=""];
+3->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+5->6 [style = bold, label=""];
+}

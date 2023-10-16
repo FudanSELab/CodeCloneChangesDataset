@@ -1,0 +1,32 @@
+digraph {
+4 [style = filled, label = "assertThat(serde.deserializeParts(null,decomposedLegacyFormat),is(new Change<>(\"new\",null)))@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final byte(( legacyFormat = mergeChangeArraysIntoSingleLegacyFormattedArray(serialized)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "final Change<byte((> serialized = serde.serializeParts(null,new Change<>(null,\"old\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final Change<byte((> serialized = serde.serializeParts(null,new Change<>(\"new\",null))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "shouldRoundTripNewNull['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final Change<byte((> decomposedLegacyFormat = FullChangeSerde.decomposeLegacyFormattedArrayIntoChangeArrays(legacyFormat)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final byte(( legacyFormat = FullChangeSerde.mergeChangeArraysIntoSingleLegacyFormattedArray(serialized)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "shouldRoundTripOldNull['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "assertThat(serde.deserializeParts(null,decomposedLegacyFormat),is(new Change<>(null,\"old\")))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "shouldRoundTripOldNull['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+7->3 [style = bold, label=""];
+6->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+2->8 [style = solid, label="decomposedLegacyFormat"];
+3->2 [style = bold, label=""];
+2->4 [style = solid, label="decomposedLegacyFormat"];
+9->7 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+5->2 [style = solid, label="legacyFormat"];
+0->5 [style = solid, label="serialized"];
+2->4 [style = bold, label=""];
+0->5 [style = bold, label=""];
+2->8 [style = bold, label=""];
+7->3 [style = solid, label="serialized"];
+0->3 [style = solid, label="serialized"];
+3->2 [style = solid, label="legacyFormat"];
+}

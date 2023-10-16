@@ -1,0 +1,26 @@
+digraph {
+6 [style = filled, label = "observeWindow['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final List<String> list@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "observeWindow['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "return new Consumer<Observable<String>>(){@Override public void accept(Observable<String> stringObservable){stringObservable.subscribe(new DefaultObserver<String>(){@Override public void onComplete(){lists.add(new ArrayList<String>(list))list.clear()}@Override public void onError(Throwable e){fail(e.getMessage())}@Override public void onNext(String args){list.add(args)}})}}@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final List<String> list@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "final List<List<String>> lists@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "observeWindow['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final List<List<String>> lists@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final List<String> list@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return new Consumer<Flowable<String>>(){@Override public void accept(Flowable<String> stringFlowable){stringFlowable.subscribe(new DefaultSubscriber<String>(){@Override public void onComplete(){lists.add(new ArrayList<>(list))list.clear()}@Override public void onError(Throwable e){fail(e.getMessage())}@Override public void onNext(String args){list.add(args)}})}}@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->3 [style = solid, label="list"];
+0->3 [style = bold, label=""];
+5->3 [style = bold, label=""];
+9->7 [style = solid, label="list"];
+0->2 [style = dotted, label="true"];
+6->7 [style = bold, label=""];
+6->9 [style = dotted, label="true"];
+2->9 [style = dashed, label="0"];
+6->8 [style = dotted, label="true"];
+3->7 [style = dashed, label="0"];
+1->3 [style = solid, label="list"];
+5->2 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+}

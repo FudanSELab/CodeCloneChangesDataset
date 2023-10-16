@@ -1,0 +1,23 @@
+digraph {
+6 [style = filled, label = "assertEquals(\"(10: Fred+Bill+Eric+Janet(\",s)@@@22@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "String s = Linq4j.asEnumerable(emps).groupBy(EMP_DEPTNO_SELECTOR).select(new Function1<Grouping<Integer,Employee>,String>(){public String apply(Grouping<Integer,Employee> group){return String.format(Locale.ROOT,\"%s: %s\",group.getKey(),stringJoin(\"+\",group.select(new Function1<Employee,String>(){public String apply(Employee element){return element.name}})))}}).toList().toString()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "testGroupByWithKeySelector['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testGroupByWithKeySelector['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "assertThat(s,is(\"(10: Fred+Eric+Janet, 30: Bill(\"))@@@4@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "testGroupByWithKeySelectorAndComparer['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(\"(10: Fred+Eric+Janet, 30: Bill(\",s)@@@14@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "String s = Linq4j.asEnumerable(emps).groupBy(EMP_DEPTNO_SELECTOR,new EqualityComparer<Integer>(){public boolean equal(Integer v1,Integer v2){return true}public int hashCode(Integer integer){return 0}}).select(new Function1<Grouping<Integer,Employee>,String>(){public String apply(Grouping<Integer,Employee> group){return String.format(Locale.ROOT,\"%s: %s\",group.getKey(),stringJoin(\"+\",group.select(new Function1<Employee,String>(){public String apply(Employee element){return element.name}})))}}).toList().toString()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "String s = Linq4j.asEnumerable(emps).groupBy(EMP_DEPTNO_SELECTOR).select(null).toList().toString()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4->3 [style = bold, label=""];
+8->6 [style = solid, label="s"];
+3->5 [style = bold, label=""];
+8->6 [style = bold, label=""];
+2->3 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+3->5 [style = solid, label="s"];
+1->6 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+2->1 [style = solid, label="s"];
+0->2 [style = bold, label=""];
+}

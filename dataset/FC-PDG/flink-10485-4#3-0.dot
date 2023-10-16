@@ -1,0 +1,19 @@
+digraph {
+0 [style = filled, label = "testInsert['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testInsert['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "List<Row> results = Lists.newArrayList(tEnv.sqlQuery(String.format(\"select * from %s.%s.`%s`\",TEST_CATALOG_NAME,DEFAULT_DATABASE,PostgresTablePath.fromFlinkTableName(TABLE1))).execute().collect())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "TableEnvUtil.execInsertSqlAndWaitResult(tEnv,String.format(\"insert into %s select * from `%s`\",TABLE4,TABLE1))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "List<Row> results = Lists.newArrayList(tEnv.sqlQuery(String.format(\"select * from %s\",TABLE4)).execute().collect())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "tEnv.executeSql(String.format(\"insert into %s select * from `%s`\",TABLE4,TABLE1)).await()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "assertEquals(\"(1(\",results.toString())@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testFullPath['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(\"(1(\",results.toString())@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+8->6 [style = bold, label=""];
+3->1 [style = bold, label=""];
+7->8 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

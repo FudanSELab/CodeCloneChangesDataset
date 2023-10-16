@@ -1,0 +1,11 @@
+digraph {
+4 [style = filled, label = "testGetTimestampObject['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "CalciteAssert.that().with(CalciteAssert.Config.JDBC_FOODMART).doWithConnection(new Function<CalciteConnection,Object>(){public Object apply(CalciteConnection conn){try {Statement stmt = conn.createStatement()ResultSet rs = stmt.executeQuery(\"select min(\"date\") mindate from \"foodmart\".\"currency\"\")assertTrue(rs.next())assertEquals(Date.valueOf(\"1997-01-01\"),rs.getDate(1))assertFalse(rs.next())return null}catch (SQLException e) }})@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "OptiqAssert.that().with(OptiqAssert.Config.JDBC_FOODMART).doWithConnection(new Function<OptiqConnection,Object>(){public Object apply(OptiqConnection conn){try {Statement stmt = conn.createStatement()ResultSet rs = stmt.executeQuery(\"select \"hire_date\" from \"foodmart\".\"employee\" where \"employee_id\" = 1\")assertTrue(rs.next())assertEquals(Timestamp.valueOf(\"1994-12-01 00:00:00\"),rs.getTimestamp(1))assertFalse(rs.next())return null}catch (SQLException e) }})@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testGetDate['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testGetDate['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0->2 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+4->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+}

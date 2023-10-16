@@ -1,0 +1,28 @@
+digraph {
+7 [style = filled, label = "testUserDefinedFunctionInstanceCount['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "withUdf().query(sql).returnsUnordered(\"P=110\",\"P=120\",\"P=110\",\"P=110\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final String sql = \"select \"adhoc\".my_det_plus(\"deptno\", 100) as p\" + \"from \"adhoc\".EMPLOYEES\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final int after = c.get()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "withUdf().query(sql).returnsUnordered(\"P=null\",\"P=null\",\"P=null\",\"P=null\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final AtomicInteger c = Smalls.MyDeterministicPlusFunction.INSTANCE_COUNT.get()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final String sql = \"select \"adhoc\".my_det_plus(\"deptno\", 1 + null) as p\" + \"from \"adhoc\".EMPLOYEES where 1 > 0 or nullif(null, 1) is null\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testUserDefinedFunctionInstanceCount['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final int before = c.get()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testUserDefinedFunctionWithNull['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(after,is(before + 1))@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+6->4 [style = bold, label=""];
+10->9 [style = bold, label=""];
+1->6 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+9->1 [style = bold, label=""];
+6->5 [style = solid, label="before"];
+2->9 [style = dashed, label="0"];
+7->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->5 [style = solid, label="after"];
+6->8 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

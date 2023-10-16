@@ -1,0 +1,35 @@
+digraph {
+3 [style = filled, label = "assertEquals(m1,m2)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testSerialization['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testSerialization['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "CategoryMarker m1 = new CategoryMarker(\"A\",new GradientPaint(1.0f,2.0f,Color.WHITE,3.0f,4.0f,Color.YELLOW),new BasicStroke(1.1f))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertTrue(m1 != m2)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertTrue(m1.equals(m2))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "CategoryMarker m2 = (CategoryMarker)TestUtils.serialised(m1)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "CategoryMarker m2 = TestUtils.serialised(m1)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "assertTrue(m1.getClass() == m2.getClass())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "CategoryMarker m2 = (CategoryMarker)m1.clone()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testCloning['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+10->7 [style = solid, label="m2"];
+0->6 [style = solid, label="m1"];
+0->5 [style = solid, label="m1"];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+9->7 [style = bold, label=""];
+10->6 [style = bold, label=""];
+0->3 [style = solid, label="m1"];
+2->10 [style = dashed, label="0"];
+4->0 [style = bold, label=""];
+8->0 [style = bold, label=""];
+10->6 [style = solid, label="m2"];
+2->5 [style = dashed, label="0"];
+5->3 [style = solid, label="m2"];
+0->10 [style = bold, label=""];
+2->3 [style = solid, label="m2"];
+0->2 [style = solid, label="m1"];
+6->9 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

@@ -1,0 +1,29 @@
+digraph {
+9 [style = filled, label = "highlightWithNoteMinimal['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "squigglyWithNoteMinimal['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(Collections.singletonList(expected),importer.importAnnotations(Paths.get(\"src/test/resources/pdfs/minimal-squiggly.pdf\")))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(Collections.singletonList(expected),importer.importAnnotations(Path.of(\"src/test/resources/pdfs/minimal-squiggly.pdf\")))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "squigglyWithNoteMinimal['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "final FileAnnotation expected = new FileAnnotation(\"Linus Dietz\",LocalDateTime.of(2017,3,12,20,32,2),1,\"World\",FileAnnotationType.HIGHLIGHT,Optional.of(expectedLinkedAnnotation))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final FileAnnotation expected = new FileAnnotation(\"lynyus\",LocalDateTime.of(2017,6,1,2,40,25),1,\"ello\",FileAnnotationType.SQUIGGLY,Optional.of(expectedLinkedAnnotation))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final FileAnnotation expectedLinkedAnnotation = new FileAnnotation(\"lynyus\",LocalDateTime.of(2017,6,1,2,40,25),1,\"Squiggly note\",FileAnnotationType.SQUIGGLY,Optional.empty())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final FileAnnotation expectedLinkedAnnotation = new FileAnnotation(\"Linus Dietz\",LocalDateTime.of(2017,3,12,20,32,2),1,\"linked note to highlight\",FileAnnotationType.HIGHLIGHT,Optional.empty())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertEquals(Collections.singletonList(expected),importer.importAnnotations(Paths.get(\"src/test/resources/pdfs/minimal-highlight-with-note.pdf\")))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+2->0 [style = solid, label="expected"];
+5->3 [style = bold, label=""];
+6->8 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+3->2 [style = solid, label="expectedLinkedAnnotation"];
+3->2 [style = bold, label=""];
+9->7 [style = bold, label=""];
+2->4 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+2->4 [style = solid, label="expected"];
+7->6 [style = solid, label="expectedLinkedAnnotation"];
+6->8 [style = solid, label="expected"];
+7->6 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

@@ -1,0 +1,27 @@
+digraph {
+6 [style = filled, label = "project['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final int(( fields@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "project['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "project['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final AtomicBoolean cancelFlag = DataContext.Variable.CANCEL_FLAG.get(root)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return new AbstractEnumerable<Object>(){@Override public Enumerator<Object> enumerator(){return new CsvEnumerator<>(source,cancelFlag,getFieldTypes(root.getTypeFactory()),ImmutableIntList.of(fields))}}@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final DataContext root@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final DataContext root@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final DataContext root@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4->2 [style = solid, label="root"];
+8->7 [style = dotted, label="true"];
+1->2 [style = solid, label="root"];
+5->2 [style = solid, label="root"];
+4->3 [style = solid, label="fields"];
+6->4 [style = dotted, label="true"];
+8->2 [style = bold, label=""];
+7->3 [style = solid, label="fields"];
+0->4 [style = dotted, label="true"];
+8->4 [style = dotted, label="true"];
+2->3 [style = solid, label="cancelFlag"];
+0->1 [style = dotted, label="true"];
+2->3 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+0->2 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

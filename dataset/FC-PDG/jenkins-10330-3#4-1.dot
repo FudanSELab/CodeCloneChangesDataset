@@ -1,0 +1,28 @@
+digraph {
+2 [style = filled, label = "dynamicLoad(pluginShortName + \".hpi\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "r.jenkins.pluginManager.start(Collections.singletonList(r.jenkins.pluginManager.getPlugin(pluginShortName)))@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "requireSystemInInitializer['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "requireSystemDuringStart['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "r.jenkins.setAuthorizationStrategy(new MockAuthorizationStrategy())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String pluginShortName = \"require-system-during-load\"@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "requireSystemDuringStart['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "r.jenkins.setSecurityRealm(r.createDummySecurityRealm())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "String pluginShortName = \"require-system-in-initializer\"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "dynamicLoad(pluginShortName + \".jpi\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+9->5 [style = bold, label=""];
+6->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->0 [style = bold, label=""];
+4->0 [style = solid, label="pluginShortName"];
+4->2 [style = bold, label=""];
+4->2 [style = solid, label="pluginShortName"];
+8->0 [style = solid, label="pluginShortName"];
+2->7 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+3->8 [style = bold, label=""];
+8->7 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+8->7 [style = solid, label="pluginShortName"];
+}

@@ -1,0 +1,24 @@
+digraph {
+0 [style = filled, label = "int maxRowCount@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return new IncrementalIndex.Builder().setIndexSchema(schema).setMaxRowCount(maxRowCount).buildOnheap()@@@4@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final IncrementalIndexSchema schema = new IncrementalIndexSchema.Builder().withMinTimestamp(DateTimes.of(minTimeStamp).getMillis()).withQueryGranularity(Granularities.HOUR).withMetrics(TestIndex.METRIC_AGGS).build()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "newIndex['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "int maxRowCount@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "String minTimeStamp@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "newIndex['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "String minTimeStamp@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "return new OnheapIncrementalIndex.Builder().setIndexSchema(schema).setMaxRowCount(maxRowCount).build()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "newIndex['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+6->2 [style = dotted, label="true"];
+1->7 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+3->7 [style = bold, label=""];
+9->2 [style = dotted, label="true"];
+4->2 [style = dotted, label="true"];
+4->0 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+}

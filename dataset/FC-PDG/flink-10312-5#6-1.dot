@@ -1,0 +1,38 @@
+digraph {
+10 [style = filled, label = "assertTrue(context.getSplitsAssignmentSequence().isEmpty())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "verifyLastReadersAssignments(context,Arrays.asList(READER0,READER1),PRE_EXISTING_TOPICS,1)@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testDiscoverPartitionsTriggersAssignments['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "enumerator.start()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "runOneTimePartitionDiscovery(context)@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "registerReader(context,enumerator,READER1)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertTrue(context.getSplitsAssignmentSequence().isEmpty())@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "registerReader(context,enumerator,READER0)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "verifyLastReadersAssignments(context,Collections.singleton(READER1),PRE_EXISTING_TOPICS,2)@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "verifyLastReadersAssignments(context,Collections.singleton(READER0),PRE_EXISTING_TOPICS,1)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "testReaderRegistrationTriggersAssignments['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testDiscoverPartitionsTriggersAssignments['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "MockSplitEnumeratorContext<KafkaPartitionSplit> context = new MockSplitEnumeratorContext<>(NUM_SUBTASKS)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "runOneTimePartitionDiscovery(context)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+1->2 [style = solid, label="context"];
+0->9 [style = bold, label=""];
+1->9 [style = solid, label="context"];
+1->6 [style = solid, label="context"];
+1->7 [style = solid, label="context"];
+12->0 [style = bold, label=""];
+13->1 [style = bold, label=""];
+2->12 [style = bold, label=""];
+5->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+8->5 [style = bold, label=""];
+1->12 [style = solid, label="context"];
+3->7 [style = bold, label=""];
+11->10 [style = bold, label=""];
+7->6 [style = bold, label=""];
+1->0 [style = solid, label="context"];
+10->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+5->11 [style = bold, label=""];
+1->11 [style = solid, label="context"];
+}

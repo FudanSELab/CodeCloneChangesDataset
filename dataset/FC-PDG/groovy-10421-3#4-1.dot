@@ -1,0 +1,9 @@
+digraph {
+2 [style = filled, label = "getFrom['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "getFrom['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return new From(){public Date getNow(){final Calendar cal = Calendar.getInstance()cal.add(Calendar.YEAR,this.getYears())cal.add(Calendar.MONTH,this.getMonths())cal.add(Calendar.DAY_OF_YEAR,this.getDays())cal.add(Calendar.HOUR_OF_DAY,this.getHours())cal.add(Calendar.MINUTE,this.getMinutes())cal.add(Calendar.SECOND,this.getSeconds())cal.add(Calendar.MILLISECOND,this.getMillis())cal.set(Calendar.HOUR_OF_DAY,0)cal.set(Calendar.MINUTE,0)cal.set(Calendar.SECOND,0)cal.set(Calendar.MILLISECOND,0)return new Date(cal.getTimeInMillis())}}@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "getFrom['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+}

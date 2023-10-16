@@ -1,0 +1,36 @@
+digraph {
+10 [style = filled, label = "formatter.addBody(sb,al,FieldName.EDITOR,DocBookVersion.DOCBOOK_4)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "DocBookAuthorFormatter formatter = new DocBookAuthorFormatter()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "formatter.addBody(sb,al,StandardField.EDITOR.getName(),DocBookVersion.DOCBOOK_5)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "return sb.toString()@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "String fieldText@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "format['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "AuthorList al = AuthorList.parse(fieldText)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "format['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "format['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "formatter.addBody(sb,al,FieldName.EDITOR,DocBookVersion.DOCBOOK_5)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "StringBuilder sb = new StringBuilder(100)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+4->5 [style = dotted, label="true"];
+9->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+6->7 [style = dashed, label="0"];
+0->7 [style = solid, label="sb"];
+0->10 [style = solid, label="sb"];
+3->7 [style = solid, label="al"];
+1->7 [style = bold, label=""];
+5->3 [style = solid, label="fieldText"];
+4->0 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+8->0 [style = bold, label=""];
+1->6 [style = bold, label=""];
+8->5 [style = dotted, label="true"];
+7->2 [style = bold, label=""];
+3->10 [style = solid, label="al"];
+10->2 [style = bold, label=""];
+3->6 [style = solid, label="al"];
+1->10 [style = bold, label=""];
+0->6 [style = solid, label="sb"];
+9->5 [style = dotted, label="true"];
+}

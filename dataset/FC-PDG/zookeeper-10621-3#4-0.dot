@@ -1,0 +1,32 @@
+digraph {
+7 [style = filled, label = "Assert.assertNull(zk.exists(\"/multi\",null))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "LOG.error(\"STACKTRACE: \",e)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.setData(\"/multi\",\"X\".getBytes(),0),Op.setData(\"/multi\",\"Y\".getBytes(),0)))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "Assert.assertArrayEquals(zk.getData(\"/multi\",false,null),\"Y\".getBytes())@@@13@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.delete(\"/multi\",0)))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "Assert.assertNull(zk.exists(\"/multi\",null))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "testCreateDelete['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertNull(zk.exists(\"/multi\",null))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testCreateDelete['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.setData(\"/multi\",\"X\".getBytes(),0),Op.setData(\"/multi\",\"Y\".getBytes(),1)))@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.delete(\"/multi\",0)))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "Assert.fail(\"Should have thrown a KeeperException for invalid version\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "Assert.assertNull(zk.exists(\"/multi\",null))@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "testUpdateConflict['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "KeeperException e@@@8@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+6->8 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+13->9 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+1->5 [style = dashed, label="0"];
+9->11 [style = bold, label=""];
+8->11 [style = bold, label=""];
+11->10 [style = bold, label=""];
+10->14 [style = bold, label=""];
+0->1 [style = bold, label=""];
+12->7 [style = bold, label=""];
+7->6 [style = bold, label=""];
+13->9 [style = dotted, label="true"];
+}

@@ -1,0 +1,23 @@
+digraph {
+7 [style = filled, label = "shouldGetAUser['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "shouldGetAllUsers_Annotated['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "List<User> users = mapper.getAllUsers()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "List<User> users = mapper.getUsers()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "shouldGetAllUsers_Annotated['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "sqlSessionFactory.getConfiguration().addMapper()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Assertions.assertEquals(10,users.size())@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "Assertions.assertEquals(\"Inactive\",users.get(0).getName())@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "AnnotatedMapper mapper = sqlSession.getMapper()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->9 [style = dashed, label="0"];
+7->6 [style = bold, label=""];
+4->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+6->8 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

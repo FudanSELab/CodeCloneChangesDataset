@@ -1,0 +1,32 @@
+digraph {
+4 [style = filled, label = "TestSubscriber<String> ts = new TestSubscriber<String>()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "groupByBackpressure3['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ts.awaitDone(5,TimeUnit.SECONDS)@@@43@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "TestSubscriber<String> ts = new TestSubscriber<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "Observable.range(1,4000).groupBy(IS_EVEN2).flatMap(new Function<GroupedObservable<Boolean,Integer>,Observable<String>>(){@Override public Observable<String> apply(final GroupedObservable<Boolean,Integer> g){return g.doOnComplete(new Action(){@Override public void run(){System.out.println(\"//////////////////// COMPLETED-A\")}}).observeOn(Schedulers.computation()).map(new Function<Integer,String>(){@Override public String apply(Integer l){if (g.getKey()) {if (c++ < 400) {try {Thread.sleep(1)}catch (InterruptedException e) }return l + \" is even.\"}{return l + \" is odd.\"}}}).doOnComplete(new Action(){@Override public void run(){System.out.println(\"//////////////////// COMPLETED-B\")}})}}).doOnEach(new Consumer<Notification<String>>(){@Override public void accept(Notification<String> t1){System.out.println(\"NEXT: \" + t1)}}).subscribe(to)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "groupByBackpressure3['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "TestObserver<String> to = new TestObserver<String>()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "to.assertNoErrors()@@@44@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ts.assertNoErrors()@@@44@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Flowable.range(1,4000).groupBy(IS_EVEN2).flatMap(new Function<GroupedFlowable<Boolean,Integer>,Flowable<String>>(){@Override public Flowable<String> apply(final GroupedFlowable<Boolean,Integer> g){return g.doOnComplete(new Action(){@Override public void run(){System.out.println(\"//////////////////// COMPLETED-A\")}}).observeOn(Schedulers.computation()).map(new Function<Integer,String>(){@Override public String apply(Integer l){if (g.getKey()) {if (c++ < 400) {try {Thread.sleep(1)}catch (InterruptedException e) }return l + \" is even.\"}{return l + \" is odd.\"}}}).doOnComplete(new Action(){@Override public void run(){System.out.println(\"//////////////////// COMPLETED-B\")}})}}).doOnEach(new Consumer<Notification<String>>(){@Override public void accept(Notification<String> t1){System.out.println(\"NEXT: \" + t1)}}).subscribe(ts)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "groupByBackpressure3['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "to.awaitDone(5,TimeUnit.SECONDS)@@@43@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->3 [style = solid, label="ts"];
+6->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+11->8 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+10->9 [style = bold, label=""];
+7->11 [style = bold, label=""];
+6->3 [style = solid, label="ts"];
+5->6 [style = bold, label=""];
+3->1 [style = bold, label=""];
+9->7 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+9->7 [style = solid, label="to"];
+1->11 [style = dashed, label="0"];
+2->8 [style = dashed, label="0"];
+}

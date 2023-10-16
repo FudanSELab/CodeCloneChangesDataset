@@ -1,0 +1,36 @@
+digraph {
+10 [style = filled, label = "assertThatExceptionOfType().isThrownBy(null).withMessageContaining(\"expected:<http://example.com/hello> but was:<http://spring.io/hello>\")@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "server.expect(requestTo(\"http://example.com/hello\")).andRespond(withSuccess())@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "server.verify()@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "boundRestTemplateWhenUrlIncludesDomainShouldNotPrefixRootUri['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "server.expect(requestTo(\"/hello\")).andRespond(withSuccess())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "RestTemplate restTemplate = this.builder.rootUri(\"http://example.com\").build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "RestTemplate restTemplate = this.builder.rootUri(\"https://example.com\").build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "MockRestServiceServer server = RootUriRequestExpectationManager.bindTo(restTemplate)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "restTemplate.getForEntity(\"/hello\",)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "MockRestServiceServer server = MockRestServiceServer.bindTo(restTemplate).build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "RestTemplate restTemplate = new RestTemplateBuilder().rootUri(\"http://example.com\").build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "server.expect(requestTo(\"https://example.com/hello\")).andRespond(withSuccess())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "rootUriShouldApply['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "rootUriShouldApply['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8->0 [style = bold, label=""];
+0->3 [style = bold, label=""];
+9->13 [style = bold, label=""];
+13->10 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+11->12 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+12->9 [style = bold, label=""];
+3->13 [style = dashed, label="0"];
+2->8 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+12->9 [style = solid, label="restTemplate"];
+3->7 [style = dashed, label="0"];
+6->8 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

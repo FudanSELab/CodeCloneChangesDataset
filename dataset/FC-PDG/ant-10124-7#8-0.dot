@@ -1,0 +1,37 @@
+digraph {
+7 [style = filled, label = "ds.setIncludes(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@d463df)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testFullpathDiffersInCaseScanningSensitive['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "ds.scan()@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "ds.scan()@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+16 [style = filled, label = "ds.setIncludes(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@d4640d)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "testFullpathDiffersInCaseScanningInsensitive['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Assume.assumeTrue(loginFailureMessage,loginSuceeded)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+13 [style = filled, label = "ds.setCaseSensitive(false)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "ds.setBasedir(new File(buildRule.getProject().getBaseDir(),\"tmp\"))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "FTP.FTPDirectoryScanner ds = myFTPTask.newScanner(ftp)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "compareFiles(ds,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@d4641f,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@d46423)@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "compareFiles(ds,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@d463ec,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@d463f0)@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Assume.assumeTrue(\"Could not change remote directory\",changeRemoteDir(remoteTmpDir))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assume.assumeTrue(loginFailureMessage,loginSucceeded)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+14 [style = filled, label = "ds.setBasedir(new File(buildRule.getProject().getProperty(\"output\")))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "DirectoryScanner ds = new DirectoryScanner()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testFullpathDiffersInCaseScanningSensitive['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+14->16 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+3->6 [style = bold, label=""];
+16->13 [style = bold, label=""];
+8->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+7->1 [style = bold, label=""];
+15->12 [style = bold, label=""];
+0->5 [style = solid, label="ds"];
+9->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+11->10 [style = bold, label=""];
+13->11 [style = bold, label=""];
+12->10 [style = solid, label="ds"];
+4->7 [style = bold, label=""];
+2->3 [style = bold, label=""];
+12->14 [style = bold, label=""];
+}

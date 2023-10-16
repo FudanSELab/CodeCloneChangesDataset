@@ -1,0 +1,34 @@
+digraph {
+6 [style = filled, label = "assertThat(representation.getString(\"format\"),is(\"int\"))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "whenShortPrimitive['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "whenShortWrapper['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "jsonValueEncoder.appendValueAndFormat(mockObjectAdapter,mockObjectSpec,representation,null,false)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(representation.isIntegralNumber(\"value\"),is(true))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "allowingObjectAdapterToReturn(Short.valueOf((short)12345))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "allowingObjectSpecToReturnSpecIdFor()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "assertThat(representation.getShort(\"value\"),is(Short.valueOf((short)12345)))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "whenShortWrapper['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "allowingLogicalTypeReturnObjectTypeFor()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "allowingObjectSpecToReturnSpecIdFor()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(representation.getString(\"extensions.x-isis-format\"),is(\"short\"))@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "allowingObjectAdapterToReturn((short)12345)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertThat(representation.getShort(\"value\"),is((short)12345))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->11 [style = bold, label=""];
+12->10 [style = bold, label=""];
+7->4 [style = bold, label=""];
+4->11 [style = dashed, label="0"];
+13->3 [style = bold, label=""];
+10->13 [style = bold, label=""];
+3->7 [style = bold, label=""];
+9->8 [style = bold, label=""];
+4->6 [style = bold, label=""];
+0->1 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+11->6 [style = bold, label=""];
+1->13 [style = dashed, label="0"];
+}

@@ -1,0 +1,20 @@
+digraph {
+6 [style = filled, label = "checkSearchQuery(Druids.newSearchQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).intervals(QueryRunnerTestHelper.fullOnIntervalSpec).dimensions(\"does_not_exist\").query(\"a\").build(),expectedHits)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "checkSearchQuery(Druids.newSearchQueryBuilder().dataSource(QueryRunnerTestHelper.DATA_SOURCE).granularity(QueryRunnerTestHelper.ALL_GRAN).intervals(QueryRunnerTestHelper.FULL_ON_INTERVAL_SPEC).query(\"abcd123\").build(),expectedHits)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "testSearchWithEmptyResults['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "testSearchNonExistingDimension['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testSearchWithEmptyResults['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "List<SearchHit> expectedHits = new ArrayList<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "checkSearchQuery(Druids.newSearchQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).intervals(QueryRunnerTestHelper.fullOnIntervalSpec).query(\"abcd123\").build(),expectedHits)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1->6 [style = solid, label="expectedHits"];
+5->1 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+1->2 [style = bold, label=""];
+1->6 [style = bold, label=""];
+3->1 [style = bold, label=""];
+1->4 [style = solid, label="expectedHits"];
+0->1 [style = bold, label=""];
+1->2 [style = solid, label="expectedHits"];
+2->6 [style = dashed, label="0"];
+}

@@ -1,0 +1,33 @@
+digraph {
+8 [style = filled, label = "BiConsumer<String,T> validator@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "Consumer<Map<String,T>> consumer@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "newAffixMapUpdater['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "BiConsumer<String,T> validator@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Logger logger@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "Logger logger@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "newAffixUpdater['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "BiConsumer<String,T> validator@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "return new AbstractScopedSettings.SettingUpdater<Map<String,T>>(){@Override public boolean hasChanged(Settings current,Settings previous){return current.filter(null).equals(previous.filter(null)) == false}@Override public Map<String,T> getValue(Settings current,Settings previous){final Map<String,T> result = new IdentityHashMap<>()Stream.concat(matchStream(current),matchStream(previous)).distinct().forEach(null)return result}@Override public void apply(Map<String,T> value,Settings current,Settings previous){consumer.accept(value)}}@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "BiConsumer<String,T> consumer@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Consumer<Map<String,T>> consumer@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "boolean omitDefaults@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "return new AbstractScopedSettings.SettingUpdater<Map<AbstractScopedSettings.SettingUpdater<T>,T>>(){@Override public boolean hasChanged(Settings current,Settings previous){return Stream.concat(matchStream(current),matchStream(previous)).findAny().isPresent()}@Override public Map<AbstractScopedSettings.SettingUpdater<T>,T> getValue(Settings current,Settings previous){final Map<AbstractScopedSettings.SettingUpdater<T>,T> result = new IdentityHashMap<>()Stream.concat(matchStream(current),matchStream(previous)).distinct().forEach(null)return result}@Override public void apply(Map<AbstractScopedSettings.SettingUpdater<T>,T> value,Settings current,Settings previous){for (Map.Entry<AbstractScopedSettings.SettingUpdater<T>,T> entry : value.entrySet()){entry.getKey().apply(entry.getValue(),current,previous)}}}@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "newAffixMapUpdater['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "Logger logger@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+5->8 [style = dashed, label="0"];
+9->3 [style = bold, label=""];
+4->5 [style = dotted, label="true"];
+4->3 [style = bold, label=""];
+5->14 [style = dashed, label="0"];
+9->7 [style = dotted, label="true"];
+13->14 [style = dotted, label="true"];
+9->6 [style = dotted, label="true"];
+4->1 [style = dotted, label="true"];
+13->12 [style = dotted, label="true"];
+13->10 [style = dotted, label="true"];
+13->11 [style = bold, label=""];
+4->2 [style = dotted, label="true"];
+3->11 [style = dashed, label="0"];
+4->0 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+}

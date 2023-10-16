@@ -1,0 +1,28 @@
+digraph {
+7 [style = filled, label = "xform.configure(Collections.singletonMap(TimestampConverter.TARGET_TYPE_CONFIG,\"Timestamp\"))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "TimestampConverter<SourceRecord> xform = new TimestampConverter.Value<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "xform.configure(Collections.singletonMap(TimestampConverter.TYPE_CONFIG,\"Timestamp\"))@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertEquals(DATE_PLUS_TIME.getTime(),transformed.value())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testSchemalessTimeToTimestamp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "SourceRecord transformed = xform.apply(new SourceRecord(null,null,\"topic\",0,null,TIME.getTime()))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testSchemalessUnixToTimestamp['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "SourceRecord transformed = xform.apply(new SourceRecord(null,null,\"topic\",0,null,DATE_PLUS_TIME_UNIX))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(TIME.getTime(),transformed.value())@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertNull(transformed.valueSchema())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testSchemalessTimeToTimestamp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8->0 [style = bold, label=""];
+4->10 [style = bold, label=""];
+3->0 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+7->5 [style = bold, label=""];
+0->2 [style = bold, label=""];
+6->0 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+2->9 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+9->4 [style = bold, label=""];
+2->5 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

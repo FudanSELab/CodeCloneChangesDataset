@@ -1,0 +1,31 @@
+digraph {
+4 [style = filled, label = "Map<String,Object> attributes = this.errorAttributes.getErrorAttributes(buildServerRequest(request,ex),false)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "notIncludeTrace['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Map<String,Object> attributes = this.errorAttributes.getErrorAttributes(buildServerRequest(request,ex),true,false)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Map<String,Object> attributes = this.errorAttributes.getErrorAttributes(buildServerRequest(request,ex),false,false)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "assertThat(attributes.get(\"trace\").toString()).startsWith(\"java.lang\")@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "RuntimeException ex = new RuntimeException(\"Test\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "notIncludeTrace['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertThat(attributes.get(\"trace\")).isNull()@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "MockServerHttpRequest request = MockServerHttpRequest.get(\"/test\").build()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "includeTrace['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4->5 [style = dashed, label="0"];
+5->3 [style = bold, label=""];
+6->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->8 [style = solid, label="ex"];
+1->2 [style = bold, label=""];
+1->5 [style = solid, label="ex"];
+7->1 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+2->4 [style = solid, label="request"];
+3->9 [style = dashed, label="0"];
+2->8 [style = solid, label="request"];
+2->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+1->4 [style = solid, label="ex"];
+2->5 [style = solid, label="request"];
+2->8 [style = bold, label=""];
+2->5 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

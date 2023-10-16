@@ -1,0 +1,15 @@
+digraph {
+1 [style = filled, label = "FlowableEventStream.getEventStream(\"HTTP-ClusterB\",20).scan(new HashMap<String,String>(),new BiFunction<HashMap<String,String>,Event,HashMap<String,String>>(){@Override public HashMap<String,String> apply(HashMap<String,String> accum,Event perInstanceEvent){accum.put(\"instance\",perInstanceEvent.instanceId)return accum}}).take(10).blockingForEach(new Consumer<HashMap<String,String>>(){@Override public void accept(HashMap<String,String> v){System.out.println(v)}})@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "unsubscribeScan['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ObservableEventStream.getEventStream(\"HTTP-ClusterB\",20).scan(new HashMap<String,String>(),new BiFunction<HashMap<String,String>,Event,HashMap<String,String>>(){@Override public HashMap<String,String> apply(HashMap<String,String> accum,Event perInstanceEvent){accum.put(\"instance\",perInstanceEvent.instanceId)return accum}}).take(10).blockingForEach(new Consumer<HashMap<String,String>>(){@Override public void accept(HashMap<String,String> pv){System.out.println(pv)}})@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "unsubscribeScan['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "unsubscribeScan['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "FlowableEventStream.getEventStream(\"HTTP-ClusterB\",20).scan(new HashMap<>(),new BiFunction<HashMap<String,String>,Event,HashMap<String,String>>(){@Override public HashMap<String,String> apply(HashMap<String,String> accum,Event perInstanceEvent){accum.put(\"instance\",perInstanceEvent.instanceId)return accum}}).take(10).blockingForEach(new Consumer<HashMap<String,String>>(){@Override public void accept(HashMap<String,String> v){System.out.println(v)}})@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "Thread.sleep(200)@@@15@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->4 [style = dashed, label="0"];
+6->4 [style = bold, label=""];
+1->2 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

@@ -1,0 +1,34 @@
+digraph {
+1 [style = filled, label = "Assert.assertEquals(44,td1.estimateBytesInMemory())@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "IncrementalIndex.IncrementalIndexRowResult tndResult = index.toIncrementalIndexRow(toMapRow(time,\"billy\",\"A\",\"joe\",\"B\"))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "testIncrementalIndexRowSizeBasic['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Assert.assertEquals(132,td1.estimateBytesInMemory())@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "IncrementalIndexRow td1 = tndResult.getIncrementalIndexRow()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Assert.assertEquals(50,td1.estimateBytesInMemory())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "IncrementalIndex.IncrementalIndexRowResult tndResult = index.toIncrementalIndexRow(toMapRow(time + 1,\"billy\",\"A\",\"joe\",Arrays.asList(\"A\",\"B\")))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "IncrementalIndex.IncrementalIndexRowResult tndResult = index.toIncrementalIndexRow(toMapRow(time,\"billy\",\"A\",\"joe\",\"B\"))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "testIncrementalIndexRowSizeArr['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "long time = System.currentTimeMillis()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testIncrementalIndexRowSizeBasic['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "IncrementalIndex index = new IncrementalIndex.Builder().setSimpleTestingIndexSchema(new CountAggregatorFactory(\"cnt\")).setMaxRowCount(10000).setMaxBytesInMemory(1000).buildOnheap()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+5->10 [style = bold, label=""];
+5->8 [style = bold, label=""];
+6->4 [style = bold, label=""];
+10->2 [style = bold, label=""];
+5->3 [style = solid, label="time"];
+3->10 [style = dashed, label="0"];
+5->8 [style = solid, label="time"];
+2->7 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+8->2 [style = bold, label=""];
+0->4 [style = bold, label=""];
+5->10 [style = solid, label="time"];
+4->5 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+2->11 [style = bold, label=""];
+9->4 [style = bold, label=""];
+}

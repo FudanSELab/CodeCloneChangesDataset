@@ -1,0 +1,31 @@
+digraph {
+3 [style = filled, label = "Mapper mapper = session.getMapper()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThat(LastEventSavedAppender.event.getMessage().toString()).isEqualTo(\"Unknown column is detected on 'org.apache.ibatis.session.AutoMappingUnknownColumnBehaviorTest$Mapper.selectSimpleAuthor' auto-mapping. Mapping parameters are (columnName=ID,propertyName=id,propertyType=java.util.concurrent.atomic.AtomicInteger(\")@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "sqlSessionFactory.getConfiguration().setAutoMappingUnknownColumnBehavior(AutoMappingUnknownColumnBehavior.NONE)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(author.getUsername()).isEqualTo(\"jim\")@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "none['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(author.getUsername()).isNull()@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(author.getId()).isNull()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "none['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "warningCauseByUnknownPropertyType['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Author author = mapper.selectAuthor(101)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(author.getId()).isEqualTo(101)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "SimpleAuthor author = mapper.selectSimpleAuthor(101)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "sqlSessionFactory.getConfiguration().setAutoMappingUnknownColumnBehavior(AutoMappingUnknownColumnBehavior.WARNING)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+4->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+6->0 [style = bold, label=""];
+9->10 [style = bold, label=""];
+5->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+11->3 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+3->8 [style = bold, label=""];
+8->7 [style = bold, label=""];
+12->11 [style = bold, label=""];
+}

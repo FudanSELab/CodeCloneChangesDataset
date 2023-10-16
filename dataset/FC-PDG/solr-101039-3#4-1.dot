@@ -1,0 +1,36 @@
+digraph {
+13 [style = filled, label = "configureCluster(1).addConfig(CONFIG_NAME,new File(ExternalPaths.SOURCE_HOME,\"solrj/src/test-files/solrj/solr/configsets/spatial/conf\").toPath()).configure()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "up.addFile(getFile(\"solrj/techproducts.xml\"),\"application/xml\")@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "configureCluster(1).addConfig(CONFIG_NAME,new File(ExternalPaths.TECHPRODUCTS_CONFIGSET).toPath()).configure()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "up.setParam(\"collection\",COLLECTION_NAME)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "up.setAction(AbstractUpdateRequest.ACTION.COMMIT,true,true)@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "setupCluster['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ContentStreamUpdateRequest up = new ContentStreamUpdateRequest(\"/update\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "UpdateResponse updateResponse = up.process(cluster.getSolrClient())@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "CollectionAdminRequest.createCollection(COLLECTION_NAME,CONFIG_NAME,1,1).process(cluster.getSolrClient())@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "indexSpatialData()@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "setupCluster['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertEquals(0,updateResponse.getStatus())@@@12@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "solrUrls.add(cluster.getJettySolrRunner(0).getBaseUrl().toString())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final List<String> solrUrls = new ArrayList<>()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "CollectionAdminRequest.createCollection(COLLECTION_NAME,CONFIG_NAME,1,1).setPerReplicaState(SolrCloudTestCase.USE_PER_REPLICA_STATE).process(cluster.getSolrClient())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "setupCluster['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+5->13 [style = dashed, label="0"];
+8->1 [style = bold, label=""];
+13->9 [style = bold, label=""];
+14->13 [style = bold, label=""];
+8->15 [style = bold, label=""];
+9->10 [style = bold, label=""];
+10->8 [style = bold, label=""];
+5->9 [style = bold, label=""];
+6->7 [style = bold, label=""];
+12->5 [style = bold, label=""];
+8->11 [style = dashed, label="0"];
+4->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+11->1 [style = bold, label=""];
+0->5 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

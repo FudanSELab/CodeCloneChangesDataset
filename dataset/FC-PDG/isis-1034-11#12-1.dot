@@ -1,0 +1,9 @@
+digraph {
+1 [style = filled, label = "builder['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "builder['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "return new BuilderScriptWithoutResult(){@Override protected void execute(final ExecutionContext ec){val regularUserRoleName = securityConfig.getRegularUserRoleName()val regularUserRole = applicationRoleRepository.findByName(regularUserRoleName).orElse(null)val username = LdapConstants.SVEN_PRINCIPALApplicationUser svenUser = applicationUserRepository.findByUsername(username).orElse(null)if (svenUser == null) {svenUser = applicationUserRepository.newDelegateUser(username,ApplicationUserStatus.UNLOCKED)applicationRoleRepository.addRoleToUser(regularUserRole,svenUser)}{applicationUserRepository.enable(svenUser)}}}@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "builder['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2->0 [style = bold, label=""];
+3->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

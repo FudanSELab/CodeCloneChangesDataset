@@ -1,0 +1,15 @@
+digraph {
+5 [style = filled, label = "SchemaField f@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "getSingleValueSource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "SortedSetSelector.Type choice@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "SortedSetSelector.Type choice@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "getSingleValueSource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "SortedSetSelector.Type choice@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "getSingleValueSource['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2->0 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+4->1 [style = dotted, label="true"];
+2->1 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+6->1 [style = dotted, label="true"];
+}

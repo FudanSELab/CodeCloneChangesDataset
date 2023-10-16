@@ -1,0 +1,30 @@
+digraph {
+6 [style = filled, label = "InsertStatementContext insertStatementContext = new InsertStatementContext(new PhysicalSchemaMetaData(),Collections.emptyList(),insertStatement)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "InsertStatementContext insertStatementContext = new InsertStatementContext(new SchemaMetaData(),Collections.emptyList(),insertStatement)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertNotUseDefaultColumnsWithSetAssignmentForMySQL['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertNotUseDefaultColumnsWithSetAssignmentForMySQL['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "insertStatement.setTable(new SimpleTableSegment(0,0,new IdentifierValue(\"\")))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertGetValueListCountWithSetAssignmentForMySQL['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertFalse(insertStatementContext.useDefaultColumns())@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(insertStatementContext.getValueListCount(),is(1))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "MySQLInsertStatement insertStatement = new MySQLInsertStatement()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "insertStatement.setSetAssignment(new SetAssignmentSegment(0,0,Collections.singletonList(new AssignmentSegment(0,0,new ColumnSegment(0,0,new IdentifierValue(\"col\")),new LiteralExpressionSegment(0,0,1)))))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "insertStatement.setSetAssignment(new SetAssignmentSegment(0,0,Collections.emptyList()))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->9 [style = bold, label=""];
+6->1 [style = bold, label=""];
+5->8 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+1->9 [style = dashed, label="0"];
+7->5 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+5->3 [style = solid, label="insertStatement"];
+10->5 [style = bold, label=""];
+3->1 [style = bold, label=""];
+5->0 [style = bold, label=""];
+8->2 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->6 [style = bold, label=""];
+5->6 [style = solid, label="insertStatement"];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

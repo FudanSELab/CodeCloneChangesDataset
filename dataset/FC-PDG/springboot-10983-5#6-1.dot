@@ -1,0 +1,11 @@
+digraph {
+4 [style = filled, label = "asyncTaskExecutorWithCustomNonApplicationTaskExecutor['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "asyncTaskExecutorWithNonMatchApplicationTaskExecutorBean['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "this.contextRunner.withUserConfiguration().withConfiguration(AutoConfigurations.of()).run(null)@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "asyncTaskExecutorWithNonMatchApplicationTaskExecutorBean['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "this.contextRunner.withUserConfiguration().withConfiguration(AutoConfigurations.of()).run(null)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->3 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+}

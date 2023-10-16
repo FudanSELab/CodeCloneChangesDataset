@@ -1,0 +1,31 @@
+digraph {
+4 [style = filled, label = "ts.awaitDone(200,TimeUnit.MILLISECONDS)@@@14@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "startEmptyList['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final Object invoked = new Object()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Flowable<Object> f = Flowable.zip(observables,new Function<Object((,Object>(){@Override public Object apply(final Object(( args){assertEquals(\"No argument should have been passed\",0,args.length)return invoked}})@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "f.blockingLast()@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "TestSubscriber<Object> ts = new TestSubscriber<Object>()@@@12@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "f.subscribe(ts)@@@13@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Collection<Flowable<Object>> observables = Collections.emptyList()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ts.assertNoValues()@@@15@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "TestSubscriber<Object> ts = new TestSubscriber<>()@@@12@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "startEmptyListBlocking['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "startEmptyList['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6->0 [style = solid, label="observables"];
+4->3 [style = bold, label=""];
+0->11 [style = bold, label=""];
+9->7 [style = solid, label="ts"];
+0->9 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+6->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+5->6 [style = bold, label=""];
+8->5 [style = bold, label=""];
+10->5 [style = bold, label=""];
+9->7 [style = bold, label=""];
+1->7 [style = solid, label="ts"];
+1->7 [style = bold, label=""];
+0->1 [style = bold, label=""];
+5->0 [style = solid, label="invoked"];
+2->5 [style = bold, label=""];
+}

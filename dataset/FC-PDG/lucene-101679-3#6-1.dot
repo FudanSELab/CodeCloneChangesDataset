@@ -1,0 +1,25 @@
+digraph {
+0 [style = filled, label = "extendedModeAnalyzerNoPunct = new Analyzer(){@Override protected TokenStreamComponents createComponents(String fieldName){Tokenizer tokenizer = new JapaneseTokenizer(newAttributeFactory(),readDict(),true,Mode.EXTENDED)return new TokenStreamComponents(tokenizer,tokenizer)}}@@@33@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "analyzerNoPunct = new Analyzer(){@Override protected TokenStreamComponents createComponents(String fieldName){Tokenizer tokenizer = new JapaneseTokenizer(newAttributeFactory(),readDict(),true,Mode.SEARCH)return new TokenStreamComponents(tokenizer,tokenizer)}}@@@26@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "analyzerNormal = new Analyzer(){@Override protected TokenStreamComponents createComponents(String fieldName){Tokenizer tokenizer = new JapaneseTokenizer(newAttributeFactory(),readDict(),false,Mode.NORMAL)return new TokenStreamComponents(tokenizer,tokenizer)}}@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "analyzer = new Analyzer(){@Override protected TokenStreamComponents createComponents(String fieldName){Tokenizer tokenizer = new JapaneseTokenizer(newAttributeFactory(),null,true,Mode.SEARCH)return new TokenStreamComponents(tokenizer,tokenizer)}}@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "setUp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "setUp['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "setUp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1aa7b4f@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "analyzerNormalNBest = new Analyzer(){@Override protected TokenStreamComponents createComponents(String fieldName){JapaneseTokenizer tokenizer = new JapaneseTokenizer(newAttributeFactory(),readDict(),false,Mode.NORMAL)tokenizer.setNBestCost(2000)return new TokenStreamComponents(tokenizer,tokenizer)}}@@@18@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3->4 [style = solid, label="tokenizer"];
+6->5 [style = solid, label="tokenizer"];
+6->5 [style = bold, label=""];
+5->0 [style = solid, label="tokenizer"];
+1->2 [style = bold, label=""];
+4->5 [style = solid, label="tokenizer"];
+5->0 [style = bold, label=""];
+8->2 [style = bold, label=""];
+4->6 [style = solid, label="tokenizer"];
+4->6 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

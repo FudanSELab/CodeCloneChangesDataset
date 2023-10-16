@@ -1,0 +1,27 @@
+digraph {
+1 [style = filled, label = "addPropertiesToEnvironment(this.context,\"logging.level.org.springframework.boot=OFF\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "parseArgsDisabled['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "this.initializer.initialize(this.context.getEnvironment(),this.context.getClassLoader())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(this.outputCapture.toString()).doesNotContain(\"testatdebug\").doesNotContain(\"testaterror\")@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "this.initializer.setParseArgs(false)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(this.output.toString()).doesNotContain(\"testatdebug\").doesNotContain(\"testaterror\")@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "parseLevelsNone['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "assertThat(this.outputCapture.toString()).doesNotContain(\"testatdebug\")@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "this.logger.debug(\"testatdebug\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "parseLevelsNone['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "addPropertiesToEnvironment(this.context,\"debug\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "this.initializer.initialize(this.context.getEnvironment(),this.context.getClassLoader())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->1 [style = bold, label=""];
+4->2 [style = bold, label=""];
+8->4 [style = bold, label=""];
+9->8 [style = bold, label=""];
+2->10 [style = bold, label=""];
+11->9 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->6 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+0->6 [style = dashed, label="0"];
+}

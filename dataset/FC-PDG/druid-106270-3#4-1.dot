@@ -1,0 +1,29 @@
+digraph {
+4 [style = filled, label = "QuerySegmentSpec spec = JSON_MAPPER.readValue(\"\"2011-10-01/2011-10-10,2011-11-01/2011-11-10\"\",)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "Assert.assertTrue(spec instanceof MultipleSpecificSegmentSpec)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testSerializationLegacyString['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testSerializationSegments['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "QuerySegmentSpec spec = jsonMapper.readValue(\"\"2011-10-01/2011-10-10,2011-11-01/2011-11-10\"\",)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "testSerializationLegacyString['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "Assert.assertEquals(ImmutableList.of(new SegmentDescriptor(Intervals.of(\"2011-07-01/2011-10-10\"),\"1\",0),new SegmentDescriptor(Intervals.of(\"2011-07-01/2011-10-10\"),\"1\",1),new SegmentDescriptor(Intervals.of(\"2011-11-01/2011-11-10\"),\"2\",10)),((MultipleSpecificSegmentSpec)spec).getDescriptors())@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "QuerySegmentSpec spec = jsonMapper.convertValue(ImmutableMap.of(\"type\",\"segments\",\"segments\",ImmutableList.of(ImmutableMap.of(\"itvl\",\"2011-07-01/2011-10-10\",\"ver\",\"1\",\"part\",0),ImmutableMap.of(\"itvl\",\"2011-07-01/2011-10-10\",\"ver\",\"1\",\"part\",1),ImmutableMap.of(\"itvl\",\"2011-11-01/2011-11-10\",\"ver\",\"2\",\"part\",10))),)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "Assert.assertEquals(ImmutableList.of(Intervals.of(\"2011-07-01/2011-10-10\"),Intervals.of(\"2011-11-01/2011-11-10\")),spec.getIntervals())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Assert.assertEquals(ImmutableList.of(Intervals.of(\"2011-10-01/2011-10-10\"),Intervals.of(\"2011-11-01/2011-11-10\")),spec.getIntervals())@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Assert.assertTrue(spec instanceof LegacySegmentSpec)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = solid, label="spec"];
+1->3 [style = bold, label=""];
+1->4 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+10->7 [style = bold, label=""];
+0->1 [style = bold, label=""];
+6->10 [style = bold, label=""];
+4->3 [style = solid, label="spec"];
+2->10 [style = dashed, label="0"];
+9->6 [style = bold, label=""];
+8->9 [style = bold, label=""];
+9->6 [style = solid, label="spec"];
+}

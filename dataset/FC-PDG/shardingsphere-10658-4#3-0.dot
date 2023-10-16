@@ -1,0 +1,38 @@
+digraph {
+13 [style = filled, label = "assertThat(((LimitDecoratorMergedResult)actual).getMergedResult(),instanceOf())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "selectStatement.setGroupBy(new GroupBySegment(0,0,Collections.singletonList(new IndexOrderByItemSegment(0,0,1,OrderDirection.ASC,OrderDirection.DESC))))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertIsNotSameGroupByAndOrderByItemsWhenDifferentGroupByAndOrderBy['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final SelectStatement selectStatement@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "SelectStatementContext selectStatementContext = new SelectStatementContext(buildSelectStatement(new MySQLSelectStatement()),new GroupByContext(Collections.emptyList()),new OrderByContext(Collections.singletonList(new OrderByItem(new IndexOrderByItemSegment(0,0,1,OrderDirection.DESC,OrderDirection.ASC))),false),new ProjectionsContext(0,0,false,Collections.emptyList()),new PaginationContext(new NumberLiteralLimitValueSegment(0,0,1),null,Collections.emptyList()))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "selectStatement.setProjections(new ProjectionsSegment(0,0))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "assertBuildOrderByStreamMergedResultWithMySQLLimit['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "SelectStatementContext selectStatementContext = new SelectStatementContext(null,Collections.emptyList(),selectStatement)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "selectStatement.setOrderBy(new OrderBySegment(0,0,Collections.singletonList(new IndexOrderByItemSegment(0,0,1,OrderDirection.DESC,OrderDirection.DESC))))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertFalse(selectStatementContext.isSameGroupByAndOrderByItems())@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "ShardingDQLResultMerger resultMerger = new ShardingDQLResultMerger(DatabaseTypeRegistry.getActualDatabaseType(\"MySQL\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertIsNotSameGroupByAndOrderByItemsWhenDifferentGroupByAndOrderBy['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "SelectStatementContext selectStatementContext = createSelectStatementContext(selectStatement)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "assertThat(actual,instanceOf())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "MergedResult actual = resultMerger.merge(createQueryResults(),selectStatementContext,buildSchema())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+2->0 [style = dotted, label="true"];
+10->11 [style = solid, label="actual"];
+3->1 [style = bold, label=""];
+9->10 [style = solid, label="selectStatementContext"];
+5->9 [style = dashed, label="0"];
+9->10 [style = bold, label=""];
+12->9 [style = bold, label=""];
+2->4 [style = bold, label=""];
+0->1 [style = solid, label="selectStatement"];
+1->6 [style = bold, label=""];
+3->7 [style = bold, label=""];
+14->12 [style = bold, label=""];
+11->13 [style = bold, label=""];
+7->6 [style = bold, label=""];
+0->7 [style = solid, label="selectStatement"];
+8->0 [style = dotted, label="true"];
+8->4 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

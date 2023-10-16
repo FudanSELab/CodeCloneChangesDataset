@@ -1,0 +1,37 @@
+digraph {
+5 [style = filled, label = "rulesData == null@@@4@@@['1', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "readCompositeRuleConfig['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "compositeRulesData.forEach(null)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Map rulesData = (Map)yamlData.get(\"rules\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Rules rules@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "readRulesConfig['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "rulesData.forEach(null)@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "compositeRulesData == null@@@4@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "rules.setRules(new ArrayList<>())@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "readRulesConfig['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Rules rules@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "Map compositeRulesData = (Map)yamlData.get(\"composite-rules\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+8->10 [style = bold, label=""];
+12->3 [style = dotted, label="true"];
+5->12 [style = dashed, label="0"];
+0->6 [style = bold, label=""];
+12->11 [style = bold, label=""];
+3->11 [style = bold, label=""];
+2->5 [style = solid, label="rulesData"];
+1->4 [style = dotted, label="true"];
+5->3 [style = dotted, label="true"];
+3->0 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+4->9 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+10->12 [style = bold, label=""];
+7->2 [style = bold, label=""];
+7->4 [style = dotted, label="true"];
+1->2 [style = bold, label=""];
+12->3 [style = bold, label=""];
+8->9 [style = dotted, label="true"];
+10->12 [style = solid, label="compositeRulesData"];
+2->5 [style = bold, label=""];
+}

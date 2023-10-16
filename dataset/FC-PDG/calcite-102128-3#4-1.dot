@@ -1,0 +1,37 @@
+digraph {
+4 [style = filled, label = "RelCollation collation = required.getCollation()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "RelTraitSet traits = traitSet.replace(collation)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "JoinRelType joinType@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "RelTraitSet rightTraitSet@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "RelTraitSet required@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "RelTraitSet joinTraitSet@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "passThroughTraits['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return null@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "deriveTraitsForJoin['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "RelTraitSet childTraits@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "int childId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "RelTraitSet required@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "passThroughTraits['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "return Pair.of(traits,ImmutableList.of(traits))@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "collation == null || collation == RelCollations.EMPTY@@@4@@@['1', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+4->0 [style = solid, label="collation"];
+5->3 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+3->6 [style = bold, label=""];
+10->12 [style = dotted, label="true"];
+8->4 [style = bold, label=""];
+0->5 [style = dotted, label="true"];
+4->3 [style = solid, label="collation"];
+1->7 [style = dashed, label="0"];
+10->13 [style = dotted, label="true"];
+10->11 [style = dotted, label="true"];
+10->9 [style = dotted, label="true"];
+2->4 [style = bold, label=""];
+2->1 [style = dotted, label="true"];
+1->14 [style = dashed, label="0"];
+3->6 [style = solid, label="traits"];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+10->14 [style = dotted, label="true"];
+}

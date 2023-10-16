@@ -1,0 +1,22 @@
+digraph {
+2 [style = filled, label = "testEmptyFutureInterval['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Assert.assertEquals(Lists.newArrayList(new Result<>(DateTimes.of(\"2014-08-02\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",2))),new Result<>(DateTimes.of(\"2014-08-02\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",3)))),queryRunner.run(QueryPlus.wrap(query)).toList())@@@11@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "final Query<Result<TimeseriesResultValue>> query = Druids.newTimeseriesQueryBuilder().dataSource(\"dummy\").intervals(\"2014-07-31T-07/2014-08-05T-07\").granularity(new PeriodGranularity(new Period(\"P1D\"),null,DateTimes.inferTzFromString(\"America/Los_Angeles\"))).aggregators(Collections.singletonList(new CountAggregatorFactory(\"count\"))).build()@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Assert.assertEquals(Lists.newArrayList(new Result<>(DateTimes.of(\"2014-08-02\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",2))),new Result<>(DateTimes.of(\"2014-08-02\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",3)))),queryRunner.run(QueryPlus.wrap(query),new HashMap<>()).toList())@@@11@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "testPostProcessWithTimezonesAndDstShift['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "QueryRunner<Result<TimeseriesResultValue>> queryRunner = testOperator.postProcess(new QueryRunner<Result<TimeseriesResultValue>>(){@Override public Sequence<Result<TimeseriesResultValue>> run(QueryPlus<Result<TimeseriesResultValue>> queryPlus,Map<String,Object> responseContext){return Sequences.simple(ImmutableList.of(new Result<>(DateTimes.of(\"2014-01-09T-08\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",2))),new Result<>(DateTimes.of(\"2014-01-11T-08\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",3))),new Result<>(queryPlus.getQuery().getIntervals().get(0).getEnd(),new TimeseriesResultValue(ImmutableMap.of(\"metric\",5)))))}},DateTimes.of(\"2014-08-02T-07\").getMillis())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testEmptyFutureInterval['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "Assert.assertEquals(Lists.newArrayList(new Result<>(DateTimes.of(\"2014-07-31T-07\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",2))),new Result<>(DateTimes.of(\"2014-08-02T-07\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",3))),new Result<>(DateTimes.of(\"2014-08-02T-07\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",5)))),queryRunner.run(QueryPlus.wrap(query),CONTEXT).toList())@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final Query<Result<TimeseriesResultValue>> query = Druids.newTimeseriesQueryBuilder().dataSource(\"dummy\").intervals(\"2014-08-06/2014-08-08\").aggregators(Collections.singletonList(new CountAggregatorFactory(\"count\"))).build()@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+6->1 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+1->0 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+1->7 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

@@ -1,0 +1,19 @@
+digraph {
+2 [style = filled, label = "Mockito.doReturn(GetTablesResponse.builder().tableList(Table.builder().databaseName(\"db1\").name(\"t1\").build(),Table.builder().databaseName(\"db1\").name(\"t2\").build()).build()).when(glue).getTables(Mockito.any())@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "Mockito.doReturn(GetTablesResponse.builder().tableList(Table.builder().databaseName(\"db1\").name(\"t1\").parameters(ImmutableMap.of(BaseMetastoreTableOperations.TABLE_TYPE_PROP,BaseMetastoreTableOperations.ICEBERG_TABLE_TYPE_VALUE)).build(),Table.builder().databaseName(\"db1\").name(\"t2\").parameters(ImmutableMap.of(\"key\",\"val\",BaseMetastoreTableOperations.TABLE_TYPE_PROP,BaseMetastoreTableOperations.ICEBERG_TABLE_TYPE_VALUE)).build(),Table.builder().databaseName(\"db1\").name(\"t3\").parameters(ImmutableMap.of(\"key\",\"val\",BaseMetastoreTableOperations.TABLE_TYPE_PROP,\"wrongVal\")).build(),Table.builder().databaseName(\"db1\").name(\"t4\").parameters(ImmutableMap.of(\"key\",\"val\")).build(),Table.builder().databaseName(\"db1\").name(\"t5\").parameters(null).build()).build()).when(glue).getTables(Mockito.any())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "Assert.assertEquals(\"list self should return empty list\",Lists.newArrayList(),glueCatalog.listNamespaces(Namespace.of(\"db1\")))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "listTables['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "listNamespaces_self['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Mockito.doReturn(GetDatabaseResponse.builder().database(Database.builder().name(\"db1\").build()).build()).when(glue).getDatabase(Mockito.any())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "listTables['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Assert.assertEquals(Lists.newArrayList(TableIdentifier.of(\"db1\",\"t1\"),TableIdentifier.of(\"db1\",\"t2\")),glueCatalog.listTables(Namespace.of(\"db1\")))@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->1 [style = bold, label=""];
+5->1 [style = bold, label=""];
+1->4 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+1->7 [style = bold, label=""];
+4->0 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+}

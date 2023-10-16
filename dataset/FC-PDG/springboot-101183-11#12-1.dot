@@ -1,0 +1,36 @@
+digraph {
+13 [style = filled, label = "parentContextCreationThatIsBuiltThenRun['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertThat(this.context.getParent().getBean().getNonOptionArgs()).contains(\"foo.bar=baz\")@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(this.context.getBean().getNonOptionArgs()).contains(\"foo.bar=baz\")@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(this.context.getBean().getNonOptionArgs()).contains(\"b=bravo\")@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "this.context = application.run(\"foo.bar=baz\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "application.parent()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(this.context.getParent().getBean().getNonOptionArgs()).contains(\"a=alpha\")@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertThat(SpringApplicationShutdownHookInstance.get()).didNotRegisterApplicationContext(this.context)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "parentContextCreationThatIsRunDirectly['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "SpringApplicationBuilder application = new SpringApplicationBuilder().contextFactory(ApplicationContextFactory.ofContextClass())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(((SpyApplicationContext)this.context).getRegisteredShutdownHook()).isFalse()@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "parentContextCreationThatIsRunDirectly['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "verify(((SpyApplicationContext)this.context).getApplicationContext()).setParent(any())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "this.context = application.build(\"a=alpha\").run(\"b=bravo\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->0 [style = bold, label=""];
+3->10 [style = bold, label=""];
+5->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+3->5 [style = bold, label=""];
+11->12 [style = bold, label=""];
+1->8 [style = bold, label=""];
+5->8 [style = solid, label="context"];
+0->11 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+9->7 [style = bold, label=""];
+10->1 [style = bold, label=""];
+0->4 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+13->7 [style = bold, label=""];
+2->11 [style = bold, label=""];
+7->3 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+}

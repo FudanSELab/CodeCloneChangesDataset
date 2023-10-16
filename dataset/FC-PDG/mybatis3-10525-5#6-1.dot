@@ -1,0 +1,31 @@
+digraph {
+12 [style = filled, label = "Assertions.assertNotNull(cars.get(0).getEngine())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "Assertions.assertEquals(4,cars.size())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "List<Car> cars = mapper.getCarsAndDetectAssociationType()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Assertions.assertEquals(\"Opel\",cars.get(1).getType())@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "Assertions.assertNotNull(cars.get(1).getBrakes())@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "Assertions.assertEquals(\"VW\",cars.get(0).getType())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Assertions.assertNull(cars.get(0).getBrakes())@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "shouldGetAllCarsAndDetectAssociationType['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "List<Car> cars = mapper.getCars2()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Assertions.assertEquals(1,cars.size())@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "shouldGetAllCarsNonUnique['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "shouldGetAllCarsNonUnique['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Assertions.assertNull(cars.get(1).getEngine())@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->8 [style = bold, label=""];
+8->6 [style = bold, label=""];
+9->12 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+4->2 [style = bold, label=""];
+12->5 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->10 [style = bold, label=""];
+11->9 [style = bold, label=""];
+7->2 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+6->13 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

@@ -1,0 +1,20 @@
+digraph {
+0 [style = filled, label = "new PostgresqlFirehoseDatabaseConnector(connectorConfig,securityConfig)@@@18@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testIgnoreInvalidPropertyWhenNotEnforcingAllowList['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testIgnoreInvalidPropertyWhenNotEnforcingAllowList['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "new MySQLFirehoseDatabaseConnector(connectorConfig,securityConfig)@@@15@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "MetadataStorageConnectorConfig connectorConfig = new MetadataStorageConnectorConfig(){@Override public String getConnectURI(){return \"jdbc:mysql://localhost:3306/test?user=maytas&password=secret&keyonly\"}}@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "JdbcAccessSecurityConfig securityConfig = new JdbcAccessSecurityConfig(){@Override public Set<String> getAllowedProperties(){return ImmutableSet.of(\"user\",\"nonenone\")}}@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testIgnoreInvalidPropertyWhenNotEnforcingAllowList['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2->0 [style = solid, label="securityConfig"];
+1->6 [style = solid, label="connectorConfig"];
+5->1 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->6 [style = bold, label=""];
+1->0 [style = solid, label="connectorConfig"];
+2->6 [style = solid, label="securityConfig"];
+0->6 [style = dashed, label="0"];
+}

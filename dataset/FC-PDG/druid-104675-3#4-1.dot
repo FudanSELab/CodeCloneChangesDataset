@@ -1,0 +1,19 @@
+digraph {
+2 [style = filled, label = "return asLeaderWithSupervisorManager(new Function<SupervisorManager,Response>(){@Override public Response apply(SupervisorManager manager){Optional<SupervisorReport> spec = manager.getSupervisorStatus(id)if (!spec.isPresent()) {return Response.status(Response.Status.NOT_FOUND).entity(ImmutableMap.of(\"error\",StringUtils.format(\"(%s( does not exist\",id))).build()}return Response.ok(spec.get()).build()}})@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return asLeaderWithSupervisorManager(null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "specGet['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "@PathParam(\"id\") final String id@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "specGetStatus['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "@PathParam(\"id\") final String id@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "specGet['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->2 [style = solid, label="id"];
+4->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+2->3 [style = dashed, label="0"];
+4->1 [style = dotted, label="true"];
+5->2 [style = solid, label="id"];
+6->5 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+6->2 [style = bold, label=""];
+}

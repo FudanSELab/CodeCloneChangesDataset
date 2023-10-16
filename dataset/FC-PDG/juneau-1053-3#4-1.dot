@@ -1,0 +1,15 @@
+digraph {
+2 [style = filled, label = "a06_implicitSwappedPojoHeaders['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(\"OK\",r)@@@16@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "a06_implicitSwappedPojoHeaders['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "String r = proxy.swappedPojoQueries(new SwappedPojo(),new SwappedPojo((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1542454,new AMap<SwappedPojo,SwappedPojo>().append(new SwappedPojo(),new SwappedPojo()),new AMap<SwappedPojo,SwappedPojo((((((>().append(new SwappedPojo(),new SwappedPojo((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@154246c))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String r = proxy.implicitSwappedPojoHeaders(new ImplicitSwappedPojo(),new ImplicitSwappedPojo((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1542422,AMap.of(new ImplicitSwappedPojo(),new ImplicitSwappedPojo()),AMap.of(new ImplicitSwappedPojo(),new ImplicitSwappedPojo((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1542438))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "b05_swappedPojoQueries['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3->0 [style = bold, label=""];
+5->1 [style = solid, label="r"];
+5->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+0->1 [style = solid, label="r"];
+}

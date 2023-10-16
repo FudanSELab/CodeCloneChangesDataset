@@ -1,0 +1,18 @@
+digraph {
+1 [style = filled, label = "badSource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "ts.cancel()@@@16@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "cancel['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertTrue(pp.hasSubscribers())@@@15@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "PublishProcessor<Integer> pp = PublishProcessor.create()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "TestSubscriber<List<Integer>> ts = pp.parallel().collect(new Supplier<List<Integer>>(){@Override public List<Integer> get(){return new ArrayList<Integer>()}},new BiConsumer<List<Integer>,Integer>(){@Override public void accept(List<Integer> a,Integer b){a.add(b)}}).sequential().test()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertFalse(pp.hasSubscribers())@@@17@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "TestHelper.checkBadSourceObservable(new Function<Observable<Integer>,Object>(){@Override public Object apply(Observable<Integer> o){return o.collect(new Supplier<List<Integer>>(){@Override public List<Integer> get(){return new ArrayList<>()}},new BiConsumer<List<Integer>,Integer>(){@Override public void accept(List<Integer> a,Integer b){a.add(b)}}).toObservable()}},false,1,2,Arrays.asList(1))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "badSource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->8 [style = bold, label=""];
+3->6 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+6->7 [style = bold, label=""];
+4->5 [style = bold, label=""];
+}

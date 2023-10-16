@@ -1,0 +1,24 @@
+digraph {
+0 [style = filled, label = "setupWebSession()@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "context.checking(new Expectations(){})@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(webSession.getAuthenticationSession(),is(nullValue()))@@@14@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "delegatesToAuthenticationManagerAndHandlesIfNotAuthenticated['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(webSession.getAuthenticationSession(),is(not(nullValue())))@@@14@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "delegatesToAuthenticationManagerAndHandlesIfNotAuthenticated['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "assertThat(webSession.authenticate(\"jsmith\",\"secret\"),is(true))@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "delegatesToAuthenticationManagerAndCachesAuthSessionIfOk['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(webSession.getAuthentication(),is(nullValue()))@@@14@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "assertThat(webSession.authenticate(\"jsmith\",\"secret\"),is(false))@@@13@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->4 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+2->8 [style = dashed, label="0"];
+2->6 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->9 [style = bold, label=""];
+0->8 [style = bold, label=""];
+}

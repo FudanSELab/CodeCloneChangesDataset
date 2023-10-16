@@ -1,0 +1,33 @@
+digraph {
+5 [style = filled, label = "@Nonnull TypeSerializer<N> namespaceSerializer@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Tuple2<ColumnFamilyHandle,RegisteredKeyValueStateBackendMetaInfo<N,SV>> stateMetaInfo@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "createState['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Tuple2<ColumnFamilyHandle,RegisteredKeyValueStateBackendMetaInfo<N,SV>> stateMetaInfo@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "StateFactory stateFactory = STATE_FACTORIES.get(stateDesc.getClass())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "migrateStateValues['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "migrateStateValues['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "stateFactory == null@@@4@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "String message = String.format(\"State %s is not supported by %s\",stateDesc.getClass(),this.getClass())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "return stateFactory.createState(keySerializer,namespaceSerializer,stateDesc)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "@Nonnull StateDescriptor<S,SV> stateDesc@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "StateDescriptor<S,SV> stateDesc@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "throw new FlinkRuntimeException(message)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9->7 [style = solid, label="stateFactory"];
+8->12 [style = solid, label="message"];
+6->5 [style = dotted, label="true"];
+11->10 [style = solid, label="stateDesc"];
+12->10 [style = bold, label=""];
+2->0 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+6->11 [style = dotted, label="true"];
+6->9 [style = bold, label=""];
+7->8 [style = dotted, label="true"];
+9->7 [style = bold, label=""];
+4->1 [style = dotted, label="true"];
+2->1 [style = dotted, label="true"];
+7->8 [style = bold, label=""];
+5->10 [style = solid, label="namespaceSerializer"];
+7->10 [style = bold, label=""];
+8->12 [style = bold, label=""];
+7->12 [style = dotted, label="true"];
+}

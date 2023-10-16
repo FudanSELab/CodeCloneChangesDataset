@@ -1,0 +1,29 @@
+digraph {
+3 [style = filled, label = "Assert.assertEquals(tuningConfig,fromJson)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final String json = OBJECT_MAPPER.writeValueAsString(tuningConfig)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final UserCompactionTaskQueryTuningConfig tuningConfig = new UserCompactionTaskQueryTuningConfig(1000,10000L,2000L,new SegmentsSplitHintSpec(42L),new IndexSpec(new RoaringBitmapSerdeFactory(false),CompressionStrategy.LZF,CompressionStrategy.UNCOMPRESSED,CompressionFactory.LongEncodingStrategy.LONGS),1,3000L,5)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "final UserCompactionTaskQueryTuningConfig tuningConfig = new UserCompactionTaskQueryTuningConfig(1000,10000L,2000L,new SegmentsSplitHintSpec(new HumanReadableBytes(42L),null),new IndexSpec(new RoaringBitmapSerdeFactory(false),CompressionStrategy.LZF,CompressionStrategy.UNCOMPRESSED,CompressionFactory.LongEncodingStrategy.LONGS),1,3000L,5)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testSerde['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testSerdeUserCompactionTuningConfig['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final UserCompactionTaskQueryTuningConfig fromJson = OBJECT_MAPPER.readValue(json,)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testSerde['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final UserCompactionTaskQueryTuningConfig tuningConfig = new UserCompactionTaskQueryTuningConfig(1000,10000L,2000L,new SegmentsSplitHintSpec(10000L),new IndexSpec(new RoaringBitmapSerdeFactory(false),CompressionStrategy.LZF,CompressionStrategy.UNCOMPRESSED,CompressionFactory.LongEncodingStrategy.LONGS),1,3000L,null)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->7 [style = bold, label=""];
+7->1 [style = solid, label="tuningConfig"];
+6->1 [style = bold, label=""];
+7->3 [style = solid, label="tuningConfig"];
+1->2 [style = bold, label=""];
+7->1 [style = bold, label=""];
+0->1 [style = solid, label="tuningConfig"];
+4->0 [style = bold, label=""];
+5->6 [style = bold, label=""];
+0->3 [style = solid, label="tuningConfig"];
+2->3 [style = solid, label="fromJson"];
+6->3 [style = solid, label="tuningConfig"];
+0->7 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+1->2 [style = solid, label="json"];
+6->1 [style = solid, label="tuningConfig"];
+2->3 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

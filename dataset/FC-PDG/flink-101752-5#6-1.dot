@@ -1,0 +1,32 @@
+digraph {
+12 [style = filled, label = "testClusterShutdownWhenApplicationFails['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final TestingDispatcherGateway.Builder dispatcherBuilder = new TestingDispatcherGateway.Builder().setSubmitFunction(null).setRequestJobStatusFunction(null).setRequestJobResultFunction(null).setClusterShutdownFunction(null)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "final TestingDispatcherGateway.Builder dispatcherBuilder = new TestingDispatcherGateway.Builder().setSubmitFunction(null).setRequestJobStatusFunction(null).setRequestJobResultFunction(null).setClusterShutdownSupplier(null)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final CompletableFuture<ApplicationStatus> externalShutdownFuture = new CompletableFuture<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "assertThat(externalShutdownFuture.get(TIMEOUT_SECONDS,TimeUnit.SECONDS),is(ApplicationStatus.SUCCEEDED))@@@12@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testClusterShutdownWhenApplicationSucceeds['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testClusterShutdownWhenApplicationSucceeds['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final CompletableFuture<Acknowledge> shutdownFuture = bootstrap.runApplicationAndShutdownClusterAsync(dispatcherBuilder.build(),scheduledExecutor)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final CompletableFuture<Boolean> externalShutdownFuture = new CompletableFuture<>()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "shutdownFuture.get(TIMEOUT_SECONDS,TimeUnit.SECONDS)@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ApplicationDispatcherBootstrap bootstrap = createApplicationDispatcherBootstrap(3)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final TestingDispatcherGateway.Builder dispatcherBuilder = new TestingDispatcherGateway.Builder().setSubmitFunction(null).setRequestJobStatusFunction(null).setRequestJobResultFunction(null).setClusterShutdownSupplier(null)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "assertThat(externalShutdownFuture.get(TIMEOUT_SECONDS,TimeUnit.SECONDS),is(true))@@@12@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->11 [style = bold, label=""];
+7->9 [style = bold, label=""];
+5->10 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+6->10 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+12->3 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->1 [style = bold, label=""];
+8->2 [style = bold, label=""];
+9->8 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+1->11 [style = dashed, label="0"];
+11->2 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

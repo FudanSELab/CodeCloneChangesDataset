@@ -1,0 +1,29 @@
+digraph {
+8 [style = filled, label = "ExtensionRegistryLite extensionRegistry@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "return builder.buildPartial()@@@13@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "parsePartialFrom['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "InvalidProtocolBufferException e@@@7@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return new AbstractParser<DynamicMessage>(){@Override public DynamicMessage parsePartialFrom(CodedInputStream input,ExtensionRegistryLite extensionRegistry){Builder builder = newBuilder(type)try {builder.mergeFrom(input,extensionRegistry)}catch (InvalidProtocolBufferException e) catch (IOException e) return builder.buildPartial()}}@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Builder builder = newBuilder()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "getParserForType['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "builder.mergeFrom(input)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "getParserForType['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "CodedInputStream input@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "throw new InvalidProtocolBufferException(e.getMessage()).setUnfinishedMessage(builder.buildPartial())@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "throw e.setUnfinishedMessage(builder.buildPartial())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "IOException e@@@10@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+3->9 [style = bold, label=""];
+4->9 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->7 [style = bold, label=""];
+10->9 [style = bold, label=""];
+2->0 [style = bold, label=""];
+11->10 [style = solid, label="input"];
+12->4 [style = dotted, label="true"];
+1->0 [style = bold, label=""];
+5->11 [style = dotted, label="true"];
+5->8 [style = dotted, label="true"];
+6->3 [style = dotted, label="true"];
+12->4 [style = bold, label=""];
+7->10 [style = bold, label=""];
+}

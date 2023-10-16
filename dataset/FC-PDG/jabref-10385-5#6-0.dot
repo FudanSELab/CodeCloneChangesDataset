@@ -1,0 +1,33 @@
+digraph {
+1 [style = filled, label = "entry.setField(StandardField.AUTHOR,\"asdf\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertFalse(new SearchQuery(\"qwer\",true,true).isMatch(entry))@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "testIsMatch['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "isMatchedForNormalAndFieldBasedSearchMixed['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "entry.setField(StandardField.ABSTRACT,\"text\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertTrue(new SearchQuery(\"author=asdf\",true,true).isMatch(entry))@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertFalse(new SearchQuery(\"BiblatexEntryType\",true,true).isMatch(entry))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "testIsMatch['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "entry.setType(StandardEntryType.Article)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertTrue(new SearchQuery(\"text AND author=asdf\",true,true).isMatch(entry))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertTrue(new SearchQuery(\"asdf\",true,true).isMatch(entry))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "BibEntry entry = new BibEntry()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->3 [style = solid, label="entry"];
+4->3 [style = bold, label=""];
+6->5 [style = solid, label="entry"];
+1->4 [style = bold, label=""];
+3->5 [style = bold, label=""];
+8->6 [style = bold, label=""];
+6->4 [style = solid, label="entry"];
+6->11 [style = solid, label="entry"];
+9->11 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+0->6 [style = bold, label=""];
+1->7 [style = bold, label=""];
+10->6 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->7 [style = solid, label="entry"];
+7->3 [style = bold, label=""];
+1->9 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+}

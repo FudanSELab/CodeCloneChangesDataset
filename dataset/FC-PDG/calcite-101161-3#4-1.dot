@@ -1,0 +1,37 @@
+digraph {
+10 [style = filled, label = "expr(\"overlay('ABCdef' placing cast(null as char(5)) from 1)\").columnType(\"VARCHAR(11)\")@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "wholeExpr(\"trim(123 FROM 'beard')\").withTypeCoercion(false).fails(\"(?s).*Cannot apply 'TRIM' to arguments of type.*\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "wholeExpr(\"trim('a' FROM _UTF16'b')\").fails(\"(?s).*not comparable to each other.*\")@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "expr(\"overlay('ABCdef' placing 'abc' from 1 for 3)\").columnType(\"VARCHAR(9) NOT NULL\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "TODO@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "expr(\"overlay('ABCdef' placing 'abc' from 6 for 3)\").columnType(\"VARCHAR(9) NOT NULL\")@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "expr(\"trim('a' FROM 123)\").columnType(\"VARCHAR NOT NULL\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "wholeExpr(\"trim('a' FROM 123)\").withTypeCoercion(false).fails(\"(?s).*Cannot apply 'TRIM' to arguments of type.*\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "testOverlay['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "wholeExpr(\"overlay('ABCdef' placing 'abc' from '1' for 3)\").withTypeCoercion(false).fails(\"(?s).*OVERLAY\(<STRING> PLACING <STRING> FROM <INTEGER>\).*\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "expr(\"overlay('ABCdef' placing 'abc' from 1 for 3)\").ok()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "sql(\"overlay('ABCdef' placing 'abc' collate latin1$sv from 1 for 3)\").collation(\"ISO-8859-1$sv\",SqlCollation.Coercibility.EXPLICIT)@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "expr(\"trim(123 FROM 'beard')\").columnType(\"VARCHAR(5) NOT NULL\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+16 [style = filled, label = "expr(\"overlay('ABCdef' placing 'abc' from 1)\").ok()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "expr(\"overlay('ABCdef' placing 'abc' from '1' for 3)\").columnType(\"VARCHAR(9) NOT NULL\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testTrimFails['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "testTrimFails['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->1 [style = bold, label=""];
+14->10 [style = bold, label=""];
+4->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+9->12 [style = bold, label=""];
+8->13 [style = dotted, label="true"];
+5->12 [style = dashed, label="0"];
+0->11 [style = dashed, label="0"];
+10->8 [style = bold, label=""];
+5->0 [style = bold, label=""];
+15->16 [style = bold, label=""];
+16->9 [style = bold, label=""];
+11->7 [style = bold, label=""];
+8->13 [style = bold, label=""];
+2->5 [style = bold, label=""];
+12->11 [style = bold, label=""];
+7->14 [style = bold, label=""];
+}

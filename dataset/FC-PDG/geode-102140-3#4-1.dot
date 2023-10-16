@@ -1,0 +1,36 @@
+digraph {
+3 [style = filled, label = "assertThat(tx.getTarget()).isNull()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(tx.isRealDealLocal()).isTrue()@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "TXStateProxyImpl tx = spy(new TXStateProxyImpl(cache,txManager,txId,false,disabledClock()))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "tx.setTarget(member)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(tx.hasRealDeal()).isFalse()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "DistributedMember remoteMember = mock()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertThat(tx.hasRealDeal()).isTrue()@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertThat(tx.isRealDealLocal()).isFalse()@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "tx.setTarget(remoteMember)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "setTargetWillSetTXStateStubIfTargetIsDifferentFromLocalMember['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertThat(tx.getTarget()).isEqualTo(remoteMember)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "setTargetWillSetTargetToItselfAndSetTXStateIfRealDealIsNull['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "TXStateProxyImpl tx = spy(new TXStateProxyImpl(cache,txManager,txId,false))@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "setTargetWillSetTargetToItselfAndSetTXStateIfRealDealIsNull['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "assertThat(tx.getTarget()).isEqualTo(member)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->7 [style = bold, label=""];
+3->9 [style = bold, label=""];
+13->10 [style = bold, label=""];
+6->3 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+14->2 [style = bold, label=""];
+9->10 [style = solid, label="remoteMember"];
+5->0 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+10->12 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->6 [style = bold, label=""];
+9->13 [style = solid, label="remoteMember"];
+0->10 [style = dashed, label="0"];
+7->6 [style = bold, label=""];
+9->13 [style = bold, label=""];
+12->11 [style = bold, label=""];
+}

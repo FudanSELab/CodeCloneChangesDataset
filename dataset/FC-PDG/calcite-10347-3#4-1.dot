@@ -1,0 +1,9 @@
+digraph {
+2 [style = filled, label = "testPushFieldEqualsLiteral['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "testPushFieldEqualsLiteral['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "sql(\"?\").withRel(null).returnsUnordered(\"c=0\").queryContains(druidChecker(\"'queryType':'timeseries'\"))@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testPushFieldEqualsLiteral['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+}

@@ -1,0 +1,33 @@
+digraph {
+2 [style = filled, label = "log.info(\"Creating SslContext for https client using config (%s(\",config)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final Lifecycle lifecycle = new Lifecycle()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "HttpClient client = HttpClientInit.createClient(builder.build(),LifecycleUtils.asMmxLifecycle(lifecycle))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "HttpClient adminClient = new CredentialedHttpClient(new BasicCredentials(\"admin\",\"priest\"),client)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "return adminClient@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final HttpClientConfig.Builder builder = getHttpClientConfigBuilder(intermediateClientSSLContext)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "String keystorePath@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "return new TLSUtils.ClientSSLContextBuilder().setProtocol(config.getProtocol()).setTrustStoreType(config.getTrustStoreType()).setTrustStorePath(config.getTrustStorePath()).setTrustStoreAlgorithm(config.getTrustStoreAlgorithm()).setTrustStorePasswordProvider(config.getTrustStorePasswordProvider()).setKeyStoreType(config.getKeyStoreType()).setKeyStorePath(config.getKeyStorePath()).setKeyStoreAlgorithm(config.getKeyManagerFactoryAlgorithm()).setCertAlias(config.getCertAlias()).setKeyStorePasswordProvider(config.getKeyStorePasswordProvider()).setKeyManagerFactoryPasswordProvider(config.getKeyManagerPasswordProvider()).setValidateHostnames(config.getValidateHostnames()).setCertificateChecker(certificateChecker).build()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "return new TLSUtils.ClientSSLContextBuilder().setProtocol(config.getProtocol()).setTrustStoreType(config.getTrustStoreType()).setTrustStorePath(config.getTrustStorePath()).setTrustStoreAlgorithm(config.getTrustStoreAlgorithm()).setTrustStorePasswordProvider(config.getTrustStorePasswordProvider()).setKeyStoreType(config.getKeyStoreType()).setKeyStorePath(config.getKeyStorePath()).setKeyStoreAlgorithm(config.getKeyManagerFactoryAlgorithm()).setCertAlias(config.getCertAlias()).setKeyStorePasswordProvider(config.getKeyStorePasswordProvider()).setKeyManagerFactoryPasswordProvider(config.getKeyManagerPasswordProvider()).build()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "SSLContext intermediateClientSSLContext = new TLSUtils.ClientSSLContextBuilder().setProtocol(sslClientConfig.getProtocol()).setTrustStoreType(sslClientConfig.getTrustStoreType()).setTrustStorePath(sslClientConfig.getTrustStorePath()).setTrustStoreAlgorithm(sslClientConfig.getTrustStoreAlgorithm()).setTrustStorePasswordProvider(sslClientConfig.getTrustStorePasswordProvider()).setKeyStoreType(sslClientConfig.getKeyStoreType()).setKeyStorePath(keystorePath).setKeyStoreAlgorithm(sslClientConfig.getKeyManagerFactoryAlgorithm()).setCertAlias(certAlias).setKeyStorePasswordProvider(sslClientConfig.getKeyStorePasswordProvider()).setKeyManagerFactoryPasswordProvider(sslClientConfig.getKeyManagerPasswordProvider()).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "String certAlias@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "get['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "get['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "makeCustomHttpClient['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6->8 [style = bold, label=""];
+12->9 [style = solid, label="intermediateClientSSLContext"];
+5->13 [style = dotted, label="true"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+4->2 [style = bold, label=""];
+9->11 [style = bold, label=""];
+5->12 [style = bold, label=""];
+12->9 [style = bold, label=""];
+11->7 [style = solid, label="lifecycle"];
+7->6 [style = solid, label="client"];
+6->8 [style = solid, label="adminClient"];
+5->10 [style = dotted, label="true"];
+11->7 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

@@ -1,0 +1,35 @@
+digraph {
+4 [style = filled, label = "testCreateGenericTable['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertTrue(prop.keySet().stream().allMatch(null))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "testCreateGenericTable['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "Map<String,String> prop = hiveTable.getParameters()@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertEquals(prop.remove(CatalogPropertiesUtil.IS_GENERIC),String.valueOf(\"true\"))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "testCreateHiveTable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "map.put(CatalogConfig.IS_GENERIC,String.valueOf(false))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Table hiveTable = HiveTableUtil.instantiateHiveTable(new ObjectPath(\"test\",\"test\"),new CatalogTableImpl(schema,map,null),HiveTestUtils.createHiveConf())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Table hiveTable = HiveTableUtil.instantiateHiveTable(new ObjectPath(\"test\",\"test\"),new CatalogTableImpl(schema,new FileSystem().path(\"/test_path\").toProperties(),null),HiveTestUtils.createHiveConf())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "assertEquals(prop.remove(CatalogConfig.IS_GENERIC),String.valueOf(false))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Map<String,String> prop = hiveTable.getParameters()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(prop.remove(CatalogConfig.IS_GENERIC),String.valueOf(\"true\"))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "Map<String,String> map = new HashMap<>(new FileSystem().path(\"/test_path\").toProperties())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertTrue(prop.keySet().stream().noneMatch(null))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13->10 [style = bold, label=""];
+6->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+11->8 [style = bold, label=""];
+12->8 [style = solid, label="map"];
+7->5 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+9->12 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+8->2 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+1->7 [style = bold, label=""];
+0->13 [style = dashed, label="0"];
+2->10 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+2->13 [style = bold, label=""];
+12->11 [style = bold, label=""];
+}

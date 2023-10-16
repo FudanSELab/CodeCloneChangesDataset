@@ -1,0 +1,25 @@
+digraph {
+3 [style = filled, label = "RelDataType leastRestrictive = f.typeFactory.leastRestrictive(Lists.newArrayList(f.sqlVarcharNullable,f.sqlAny))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(leastRestrictive.getSqlTypeName(),is(SqlTypeName.NULL))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "RelDataType leastRestrictive = f.typeFactory.leastRestrictive(Lists.newArrayList(f.sqlNull,f.sqlNull))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "SqlTypeFixture f = new SqlTypeFixture()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "assertThat(leastRestrictive.isNullable(),is(true))@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Fixture f = new Fixture()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testLeastRestrictiveWithNull['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testLeastRestrictiveWithNullability['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(leastRestrictive.getSqlTypeName(),is(SqlTypeName.ANY))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testLeastRestrictiveWithNullability['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8->7 [style = bold, label=""];
+5->3 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+7->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+9->2 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->8 [style = bold, label=""];
+}

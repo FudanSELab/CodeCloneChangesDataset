@@ -1,0 +1,27 @@
+digraph {
+7 [style = filled, label = "Set<DataSetIndex> result = new LinkedHashSet<>()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "getActualColumns['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "final Collection<DataNode> dataNodes@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "getActualColumns['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "result.addAll(getActualIndexes(connection,each.getTableName()))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "getActualIndexes['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "return new LinkedList<>(result)@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final Collection<DataNode> dataNodes@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "result.addAll(getActualColumns(connection,each.getTableName()))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Set<DataSetColumn> result = new LinkedHashSet<>()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->7 [style = bold, label=""];
+7->9 [style = bold, label=""];
+9->3 [style = bold, label=""];
+4->3 [style = solid, label="result"];
+1->4 [style = bold, label=""];
+1->0 [style = dotted, label="true"];
+4->2 [style = bold, label=""];
+5->0 [style = dotted, label="true"];
+8->6 [style = dotted, label="true"];
+2->9 [style = dashed, label="0"];
+4->7 [style = dashed, label="0"];
+7->3 [style = solid, label="result"];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

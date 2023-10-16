@@ -1,0 +1,23 @@
+digraph {
+4 [style = filled, label = "utils.getCache().setCopyOnRead(false)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "utils.createIndex(indexName,\"pv.secId\",\"/\" + regionName + \" p, p.positions.values pv\")@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "utils.createLocalRegion(regionName)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "utils.createReplicateRegion(regionName)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testCopyOnReadFalseWithRangeIndexTupleWithReplicatedRegion['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "utils.createIndex(indexName,\"pv.secId\",SEPARATOR + regionName + \" p, p.positions.values pv\")@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "helpExecuteQueriesCopyOnReadFalse(queries,expectedResults,numObjects,objectsAndResultsMultiplier,true,false)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testCopyOnReadFalseWithRangeIndexTupleWithLocalRegion['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testCopyOnReadFalseWithRangeIndexTupleWithLocalRegion['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8->1 [style = bold, label=""];
+4->8 [style = bold, label=""];
+6->4 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

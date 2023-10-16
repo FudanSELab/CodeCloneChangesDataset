@@ -1,0 +1,24 @@
+digraph {
+3 [style = filled, label = "testUpperBoundWithZeroTimestamp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "testUpperBoundWithZeroTimestamp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Bytes lower = sessionKeySchema.lowerRange(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@b77ce6),Long.MAX_VALUE)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(upper,equalTo(Bytes.wrap(SessionKeySchema.toBinary(new Windowed<>(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@b77cce),new SessionWindow(0,0))))))@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testLowerBoundMatchesTrailingZeros['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertThat(lower,equalTo(Bytes.wrap(SessionKeySchema.toBinary(new Windowed<>(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@b77d33),new SessionWindow(0,0))))))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Bytes upper = sessionKeySchema.upperRange(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@b77c86),0)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "final Bytes upper = sessionKeySchema.upperRange(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@b77cb6),0)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "assertThat(\"appending zeros to key should still be in range\",lower.compareTo(Bytes.wrap(SessionKeySchema.toBinary(new Windowed<>(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@b77d02),new SessionWindow(Long.MAX_VALUE,Long.MAX_VALUE))))) < 0)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6->8 [style = bold, label=""];
+5->7 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+4->1 [style = solid, label="upper"];
+2->1 [style = solid, label="upper"];
+2->7 [style = dashed, label="0"];
+7->8 [style = solid, label="lower"];
+3->4 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+7->6 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

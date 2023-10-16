@@ -1,0 +1,37 @@
+digraph {
+0 [style = filled, label = "Assertions.assertEquals(\"Christian\",person.getFirstName())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testWithParamAttributes['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "PersonMapper personMapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testWithComplex3['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Assertions.assertEquals(\"John\",parent.getFirstName())@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Assertions.assertNotNull(parent,\"parent must not be null\")@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Assertions.assertNotNull(person,\"person must not be null\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testWithComplex3['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "Person person = personMapper.getWithComplex3(2l)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "Assertions.assertEquals(\"Smith\",parent.getLastName())@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Person person = personMapper.getWithComplex3(2L)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "Person person = personMapper.getComplexWithParamAttributes(2l)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Person parent = person.getParent()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Assertions.assertEquals(\"Poitras\",person.getLastName())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->3 [style = bold, label=""];
+1->8 [style = bold, label=""];
+8->10 [style = dashed, label="0"];
+12->2 [style = solid, label="person"];
+11->1 [style = bold, label=""];
+8->12 [style = dashed, label="0"];
+8->2 [style = solid, label="person"];
+13->1 [style = bold, label=""];
+0->7 [style = bold, label=""];
+12->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+8->2 [style = bold, label=""];
+6->3 [style = solid, label="parent"];
+5->4 [style = bold, label=""];
+7->6 [style = bold, label=""];
+1->12 [style = bold, label=""];
+10->2 [style = bold, label=""];
+9->1 [style = bold, label=""];
+1->10 [style = bold, label=""];
+10->2 [style = solid, label="person"];
+}

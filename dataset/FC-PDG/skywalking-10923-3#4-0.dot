@@ -1,0 +1,37 @@
+digraph {
+8 [style = filled, label = "GRPCHandlerRegister service = getManager().find(SharingServerModule.NAME).provider().getService()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "service.addHandler(new MeshGRPCHandler(getManager()))@@@6@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "start['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "throw new ModuleStartException(e.getMessage(),e)@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "start['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "start['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "service.addHandler(new MetricServiceGRPCHandler(getManager()))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+16 [style = filled, label = "service.addHandler(new AccessLogServiceGRPCHandler(getManager(),config))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "CoreRegisterLinker.setModuleManager(getManager())@@@11@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "TelemetryDataDispatcher.setCache(cache,getManager())@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "getManager().find(CoreModule.NAME).provider().getService().load(OfficialOALDefine.INSTANCE)@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "GRPCHandlerRegister service = getManager().find(SharingServerModule.NAME).provider().getService()@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "cache.start()@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "TelemetryDataDispatcher.init(getManager())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "MeshDataBufferFileCache cache = new MeshDataBufferFileCache(config,getManager())@@@3@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "IOException e@@@8@@@['1', '0', '0']", fillcolor = red, shape = diamond image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "service.addHandler(new MeshGRPCHandler(getManager()))@@@13@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+5->8 [style = bold, label=""];
+14->8 [style = bold, label=""];
+11->12 [style = bold, label=""];
+6->0 [style = bold, label=""];
+13->9 [style = bold, label=""];
+8->4 [style = bold, label=""];
+8->15 [style = bold, label=""];
+9->10 [style = bold, label=""];
+0->2 [style = solid, label="cache"];
+3->1 [style = bold, label=""];
+15->16 [style = bold, label=""];
+7->2 [style = bold, label=""];
+3->1 [style = dotted, label="true"];
+4->15 [style = dashed, label="0"];
+2->5 [style = bold, label=""];
+0->7 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

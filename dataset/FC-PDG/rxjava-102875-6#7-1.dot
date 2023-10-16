@@ -1,0 +1,28 @@
+digraph {
+2 [style = filled, label = "toMap['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "toMap['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final ConcurrentHashMap<K,Collection<V>> result = new ConcurrentHashMap<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "Observable<GroupedObservable<K,V>> observable@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "flowable.doOnNext(new Consumer<GroupedFlowable<K,V>>(){@Override public void accept(final GroupedFlowable<K,V> f){result.put(f.getKey(),new ConcurrentLinkedQueue<>())f.subscribe(new Consumer<V>(){@Override public void accept(V v){result.get(f.getKey()).add(v)}})}}).blockingSubscribe()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "toMap['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Flowable<GroupedFlowable<K,V>> flowable@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return result@@@16@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final ConcurrentHashMap<K,Collection<V>> result = new ConcurrentHashMap<K,Collection<V>>()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "observable.doOnNext(new Consumer<GroupedObservable<K,V>>(){@Override public void accept(final GroupedObservable<K,V> o){result.put(o.getKey(),new ConcurrentLinkedQueue<V>())o.subscribe(new Consumer<V>(){@Override public void accept(V v){result.get(o.getKey()).add(v)}})}}).blockingSubscribe()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+4->5 [style = dashed, label="0"];
+4->8 [style = bold, label=""];
+5->1 [style = bold, label=""];
+6->5 [style = bold, label=""];
+5->3 [style = solid, label="result"];
+4->1 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+2->0 [style = dotted, label="true"];
+6->0 [style = dotted, label="true"];
+7->4 [style = bold, label=""];
+7->9 [style = dotted, label="true"];
+0->9 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+4->3 [style = solid, label="result"];
+8->3 [style = bold, label=""];
+}

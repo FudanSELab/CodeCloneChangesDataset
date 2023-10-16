@@ -1,0 +1,25 @@
+digraph {
+8 [style = filled, label = "NextSubscriber<Integer> no = new NextSubscriber<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "no.onNext(Notification.createOnNext(1))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "no.onNext(Notification.createOnNext(1))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "nextObserverOnNext['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "no.setWaiting()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "nextObserverOnNext['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "nextObserverOnNext['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "NextObserver<Integer> no = new NextObserver<Integer>()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "NextSubscriber<Integer> no = new NextSubscriber<Integer>()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(1,no.takeNext().getValue().intValue())@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "no.setWaiting()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+5->8 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+8->4 [style = bold, label=""];
+9->10 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+10->4 [style = bold, label=""];
+}

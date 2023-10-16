@@ -1,0 +1,24 @@
+digraph {
+4 [style = filled, label = "ActionEvent evt@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "actionPerformed['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ActionEvent evt@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "actionPerformed['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "final JTextComponent target@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final JTextComponent target@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "doc.render(new Runnable(){@Override public void run(){FoldHierarchy hierarchy = FoldHierarchy.get(target)int dot = target.getCaret().getDot()hierarchy.lock()try {try {int rowStart = javax.swing.text.Utilities.getRowStart(target,dot)int rowEnd = javax.swing.text.Utilities.getRowEnd(target,dot)Fold fold = getLineFold(hierarchy,dot,rowStart,rowEnd)if (fold == null) {return}List allFolds = new ArrayList<Fold>(FoldUtilities.findRecursive(fold))Collections.reverse(allFolds)allFolds.add(0,fold)hierarchy.collapse(allFolds)}catch (BadLocationException ble) }{hierarchy.unlock()}}})@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Document doc = target.getDocument()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "actionPerformed['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4->1 [style = solid, label="target"];
+0->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+7->1 [style = solid, label="target"];
+8->7 [style = dotted, label="true"];
+0->2 [style = dotted, label="true"];
+6->4 [style = dotted, label="true"];
+3->1 [style = bold, label=""];
+5->1 [style = solid, label="target"];
+8->4 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+0->4 [style = dotted, label="true"];
+8->3 [style = bold, label=""];
+}

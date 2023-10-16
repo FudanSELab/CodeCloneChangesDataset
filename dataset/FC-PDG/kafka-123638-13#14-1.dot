@@ -1,0 +1,36 @@
+digraph {
+14 [style = filled, label = "final short producerEpoch@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final long producerId@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "prepareAddOffsetsToTxnResponse['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+15 [style = filled, label = "client.prepareResponse(null,new TxnOffsetCommitResponse(0,txnOffsetCommitResponse))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final Errors error@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "prepareAddOffsetsToTxnResponse['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final String consumerGroupId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "prepareTxnOffsetCommitResponse['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "final long producerId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "client.prepareResponse(null,new AddOffsetsToTxnResponse(new AddOffsetsToTxnResponseData().setErrorCode(error.code())))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final long producerId@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final String consumerGroupId@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "final short producerEpoch@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "final String consumerGroupId@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "Map<TopicPartition,Errors> txnOffsetCommitResponse@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final short producerEpoch@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11->14 [style = dotted, label="true"];
+3->15 [style = dashed, label="0"];
+4->5 [style = dotted, label="true"];
+4->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+5->14 [style = dashed, label="0"];
+11->13 [style = dotted, label="true"];
+6->9 [style = dotted, label="true"];
+4->1 [style = dotted, label="true"];
+6->8 [style = dotted, label="true"];
+11->10 [style = dotted, label="true"];
+4->2 [style = dotted, label="true"];
+11->15 [style = bold, label=""];
+4->0 [style = dotted, label="true"];
+11->12 [style = dotted, label="true"];
+13->15 [style = solid, label="txnOffsetCommitResponse"];
+6->7 [style = dotted, label="true"];
+}

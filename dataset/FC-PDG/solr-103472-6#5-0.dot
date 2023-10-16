@@ -1,0 +1,32 @@
+digraph {
+3 [style = filled, label = "FileUtils.copyFile(new File(SolrTestCaseJ4.TEST_HOME(),\"solr.xml\"),new File(instance.getHomeDir(),\"solr.xml\"))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "JettyConfig jettyConfig = JettyConfig.builder().setContext(\"/solr\").setPort(0).build()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "nodeProperties.setProperty(\"solr.data.dir\",instance.getDataDir())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "JettySolrRunner jetty = new JettySolrRunner(instance.getHomeDir(),nodeProperties,jettyConfig)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "SolrInstance instance@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "createAndStartJetty['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "ReplicationTestHelper.SolrInstance instance@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "createAndStartJetty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "createAndStartJetty['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "Properties nodeProperties = new Properties()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "jetty.start()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "return jetty@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "TestReplicationHandler.SolrInstance instance@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+5->1 [style = solid, label="nodeProperties"];
+8->1 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+10->3 [style = bold, label=""];
+3->5 [style = bold, label=""];
+1->6 [style = bold, label=""];
+8->1 [style = solid, label="jettyConfig"];
+5->0 [style = bold, label=""];
+11->3 [style = bold, label=""];
+10->9 [style = dotted, label="true"];
+1->2 [style = solid, label="jetty"];
+7->3 [style = bold, label=""];
+7->4 [style = dotted, label="true"];
+4->12 [style = dashed, label="0"];
+0->8 [style = bold, label=""];
+11->12 [style = dotted, label="true"];
+6->2 [style = bold, label=""];
+}

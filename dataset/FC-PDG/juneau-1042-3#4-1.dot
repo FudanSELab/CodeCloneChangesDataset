@@ -1,0 +1,16 @@
+digraph {
+1 [style = filled, label = "String r = proxy.beanHeaders(new ABean().init(),null,new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15759db,AList.of(new ABean().init(),null),AList.of(new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15759f2,null),new AMap<String,ABean>().append(\"foo\",new ABean().init()),new AMap<String,List<ABean>>().append(\"foo\",Arrays.asList(new ABean().init())),new AMap<String,List<ABean((((((>>().append(\"foo\",AList.of(new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1575a1c,null)),new AMap<Integer,List<ABean>>().append(1,Arrays.asList(new ABean().init())))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "a03_beanHeaders['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "a03_beanHeaders['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String r = proxy.beanQueries(new ABean().init(),null,new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1575a4a,new AList<ABean>().append(new ABean().init()).append(null),new AList<ABean((((((>().append(new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1575a66).append(null),new AMap<String,ABean>().append(\"foo\",new ABean().init()),new AMap<String,List<ABean>>().append(\"foo\",Arrays.asList(new ABean().init())),new AMap<String,List<ABean((((((>>().append(\"foo\",new AList<ABean((((((>().append(new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1575a93).append(null)),new AMap<Integer,List<ABean>>().append(1,Arrays.asList(new ABean().init())))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "b03_beanQueries['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertEquals(\"OK\",r)@@@22@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->0 [style = solid, label="r"];
+4->0 [style = solid, label="r"];
+1->4 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

@@ -1,0 +1,38 @@
+digraph {
+8 [style = filled, label = "getResultSet['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "List<ResultSet> resultSets = getResultSets()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "executionContext.getSqlStatementContext() instanceof SelectStatementContext || executionContext.getSqlStatementContext().getSqlStatement() instanceof DALStatement@@@6@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "getResultSet['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "MergedResult mergedResult = mergeQuery(getQueryResults(resultSets))@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return currentResultSet@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "getResultSet['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return currentResultSet@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "MergedResult mergedResult = mergeQuery(getQueryResultSets(resultSets))@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "null != currentResultSet@@@3@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "currentResultSet = new ShardingSphereResultSet(resultSets,mergedResult,this,executionContext)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+3->7 [style = dotted, label="true"];
+3->1 [style = bold, label=""];
+2->6 [style = bold, label=""];
+9->5 [style = solid, label="mergedResult"];
+4->5 [style = solid, label="mergedResult"];
+3->4 [style = dotted, label="true"];
+8->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+3->9 [style = dotted, label="true"];
+7->4 [style = solid, label="resultSets"];
+7->9 [style = solid, label="resultSets"];
+10->6 [style = bold, label=""];
+7->9 [style = bold, label=""];
+5->1 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+3->5 [style = dotted, label="true"];
+7->5 [style = solid, label="resultSets"];
+3->7 [style = bold, label=""];
+5->1 [style = solid, label="currentResultSet"];
+9->5 [style = bold, label=""];
+6->0 [style = dotted, label="true"];
+4->5 [style = bold, label=""];
+}

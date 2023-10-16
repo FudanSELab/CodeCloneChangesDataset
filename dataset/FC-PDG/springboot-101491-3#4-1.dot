@@ -1,0 +1,33 @@
+digraph {
+6 [style = filled, label = "throwWhenPidFileIsReadOnly['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "System.setProperty(\"PID_FAIL_ON_WRITE_ERROR\",\"true\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThatIllegalStateException().isThrownBy(null).withMessageContaining(\"Cannot create pid file\")@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "listener.onApplicationEvent(EVENT)@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "throwWhenPidFileIsReadOnlyWithSpring['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "SpringApplicationEvent event = createPreparedEvent(\"spring.pid.fail-on-write-error\",\"true\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "listener.onApplicationEvent(event)@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "file.setReadOnly()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "this.exception.expectMessage(\"Cannot create pid file\")@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ApplicationPidFileWriter listener = new ApplicationPidFileWriter(file)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "this.exception.expect()@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "throwWhenPidFileIsReadOnly['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "File file = this.temporaryFolder.newFile()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->7 [style = solid, label="file"];
+5->8 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+7->5 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+4->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+0->12 [style = dashed, label="0"];
+9->4 [style = bold, label=""];
+3->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+2->10 [style = bold, label=""];
+10->7 [style = bold, label=""];
+2->3 [style = bold, label=""];
+11->4 [style = bold, label=""];
+10->12 [style = solid, label="event"];
+1->12 [style = bold, label=""];
+}

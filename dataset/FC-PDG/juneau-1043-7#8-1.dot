@@ -1,0 +1,20 @@
+digraph {
+3 [style = filled, label = "a03_beanHeaders['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "String r = proxy.beanHeaders(ABean.get(),null,new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1559349,AList.of(ABean.get(),null),AList.of(new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@155935e,null),AMap.of(\"foo\",ABean.get()),AMap.of(\"foo\",Arrays.asList(ABean.get())),AMap.of(\"foo\",AList.of(new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1559382,null)),AMap.of(1,Arrays.asList(ABean.get())))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "a03_beanHeaders['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "String r = proxy.beanFormData(new ABean().init(),null,new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15593ad,AList.of(new ABean().init(),null),AList.of(new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15593c4,null),AMap.of(\"foo\",new ABean().init()),AMap.of(\"foo\",Arrays.asList(new ABean().init())),AMap.of(\"foo\",AList.of(new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15593eb,null)),AMap.of(1,Arrays.asList(new ABean().init())))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "c03_beanFormData['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertEquals(\"OK\",r)@@@22@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "String r = proxy.beanHeaders(new ABean().init(),null,new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15592df,AList.of(new ABean().init(),null),AList.of(new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15592f6,null),AMap.of(\"foo\",new ABean().init()),AMap.of(\"foo\",Arrays.asList(new ABean().init())),AMap.of(\"foo\",AList.of(new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@155931d,null)),AMap.of(1,Arrays.asList(new ABean().init())))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1->0 [style = solid, label="r"];
+4->0 [style = solid, label="r"];
+1->4 [style = dashed, label="0"];
+6->0 [style = solid, label="r"];
+6->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

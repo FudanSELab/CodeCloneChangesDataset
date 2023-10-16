@@ -1,0 +1,34 @@
+digraph {
+13 [style = filled, label = "testNoMaxWatermarkOnImmediateCancel['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "setupSourceOperator(operator,TimeCharacteristic.EventTime,0)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final Thread runner = Thread.currentThread()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "testNoMaxWatermarkOnAsyncCancel['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "{}@@@20@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "operator.cancel()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "new Thread(\"canceler\"){@Override public void run(){try {Thread.sleep(200)}catch (InterruptedException ignored) operator.cancel()}}.start()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testNoMaxWatermarkOnAsyncCancel['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "InterruptedException ignored@@@20@@@['1', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "{}@@@22@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final List<StreamElement> output = new ArrayList<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertTrue(output.isEmpty())@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final StreamSource<String,InfiniteSource<String>> operator = new StreamSource<>(new InfiniteSource<String>())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "operator.run(new Object(),mock(),new CollectorOutput<String>(output))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+9->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+6->8 [style = bold, label=""];
+8->0 [style = bold, label=""];
+4->1 [style = bold, label=""];
+7->0 [style = bold, label=""];
+9->11 [style = bold, label=""];
+10->8 [style = bold, label=""];
+13->8 [style = bold, label=""];
+11->3 [style = bold, label=""];
+12->1 [style = bold, label=""];
+2->4 [style = bold, label=""];
+0->2 [style = solid, label="operator"];
+8->1 [style = solid, label="output"];
+2->12 [style = bold, label=""];
+8->7 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

@@ -1,0 +1,32 @@
+digraph {
+7 [style = filled, label = "assertReachableWithSettings(settings)@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "testAnnotatedParameterOk_annotatedParamSubmittedForm['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testAnnotatedParameterOk_annotatedParamJsonBody['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "settings.setHttpMethod(HttpMethod.POST)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertReachableWithSettings(settings)@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "WebRequest settings = new WebRequest(new URL(j.getURL(),\"testNewRulesOk/annotatedParamJsonBody/\"))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testAnnotatedParameterOk_annotatedParamJsonBody['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "WebRequest settings = new WebRequest(new URL(j.getURL(),\"testNewRulesOk/annotatedParamSubmittedForm/\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "settings.setRequestParameters(Collections.singletonList(new NameValuePair(\"json\",JSONObject.fromObject(new HashMap<String,Object>(){}).toString())))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "settings.setAdditionalHeader(\"Content-Type\",\"application/json\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertReachableWithSettings(settings)@@@12@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "settings.setRequestBody(JSONObject.fromObject(new HashMap<String,Object>(){}).toString())@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "settings.setRequestBody(JSONObject.fromObject(Collections.singletonMap(\"name\",\"Test\")).toString())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+4->10 [style = bold, label=""];
+6->3 [style = bold, label=""];
+3->5 [style = solid, label="settings"];
+12->9 [style = solid, label="settings"];
+1->8 [style = dashed, label="0"];
+10->9 [style = bold, label=""];
+11->12 [style = bold, label=""];
+4->2 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+12->4 [style = bold, label=""];
+3->7 [style = solid, label="settings"];
+3->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+8->7 [style = bold, label=""];
+2->8 [style = bold, label=""];
+}

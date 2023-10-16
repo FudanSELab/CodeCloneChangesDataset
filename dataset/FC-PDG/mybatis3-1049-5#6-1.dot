@@ -1,0 +1,26 @@
+digraph {
+2 [style = filled, label = "assertEquals(expected,boundSql.getSql())@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final String expected = \"SELECT * FROM BLOG WHERE CATEGORY = 'NONE'\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "DynamicSqlSource source = createDynamicSqlSource(new TextSqlNode(\"SELECT * FROM BLOG\"),new ChooseSqlNode(new ArrayList<SqlNode>(){},mixedContents(new TextSqlNode(\"WHERE CATEGORY = 'DEFAULT'\"))))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final String expected = \"SELECT * FROM BLOG WHERE ID = ?\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "shouldConditionallyIncludeWhere['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "BoundSql boundSql = source.getBoundSql(null)@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertEquals(expected,boundSql.getSql())@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "shouldConditionallyChooseSecond['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "BoundSql boundSql = source.getBoundSql(null)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "shouldConditionallyIncludeWhere['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "DynamicSqlSource source = createDynamicSqlSource(new TextSqlNode(\"SELECT * FROM BLOG\"),new IfSqlNode(mixedContents(new TextSqlNode(\"WHERE ID = ?\")),\"true\"))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+4->1 [style = bold, label=""];
+9->7 [style = bold, label=""];
+1->2 [style = solid, label="expected"];
+10->6 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+6->8 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->9 [style = bold, label=""];
+6->7 [style = solid, label="expected"];
+}

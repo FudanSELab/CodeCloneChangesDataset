@@ -1,0 +1,32 @@
+digraph {
+2 [style = filled, label = "checkSearchQuery(Druids.newSearchQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).dimensions(QueryRunnerTestHelper.qualityDimension).filters(filter).intervals(QueryRunnerTestHelper.fullOnIntervalSpec).query(\"a\").build(),expectedHits)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "DimFilter filter = new AndDimFilter(new SelectorDimFilter(QueryRunnerTestHelper.marketDimension,\"total_market\",null),new SelectorDimFilter(QueryRunnerTestHelper.qualityDimension,\"automotive\",null))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "expectedHits.add(new SearchHit(QueryRunnerTestHelper.qualityDimension,\"automotive\",93))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "DimFilter filter = new OrDimFilter(new SelectorDimFilter(QueryRunnerTestHelper.qualityDimension,\"total_market\",null),new SelectorDimFilter(QueryRunnerTestHelper.qualityDimension,\"automotive\",null))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "testSearchWithMultiOrFilter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "expectedHits.add(new SearchHit(QueryRunnerTestHelper.QUALITY_DIMENSION,\"automotive\",93))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "List<SearchHit> expectedHits = new ArrayList<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testSearchWithFilterEmptyResults['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "checkSearchQuery(Druids.newSearchQueryBuilder().dataSource(QueryRunnerTestHelper.DATA_SOURCE).granularity(QueryRunnerTestHelper.ALL_GRAN).dimensions(QueryRunnerTestHelper.QUALITY_DIMENSION).filters(filter).intervals(QueryRunnerTestHelper.FULL_ON_INTERVAL_SPEC).query(\"a\").build(),expectedHits)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "DimFilter filter = new OrDimFilter(new SelectorDimFilter(QueryRunnerTestHelper.QUALITY_DIMENSION,\"total_market\",null),new SelectorDimFilter(QueryRunnerTestHelper.QUALITY_DIMENSION,\"automotive\",null))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "testSearchWithMultiOrFilter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "checkSearchQuery(Druids.newSearchQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).filters(filter).intervals(QueryRunnerTestHelper.fullOnIntervalSpec).query(\"a\").build(),expectedHits)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->0 [style = bold, label=""];
+0->3 [style = bold, label=""];
+0->7 [style = solid, label="expectedHits"];
+5->7 [style = bold, label=""];
+0->9 [style = solid, label="expectedHits"];
+6->5 [style = bold, label=""];
+4->5 [style = dashed, label="0"];
+0->10 [style = bold, label=""];
+10->9 [style = bold, label=""];
+11->0 [style = bold, label=""];
+0->2 [style = solid, label="expectedHits"];
+4->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+3->10 [style = dashed, label="0"];
+2->7 [style = dashed, label="0"];
+0->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+}

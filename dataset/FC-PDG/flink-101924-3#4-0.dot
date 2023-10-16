@@ -1,0 +1,22 @@
+digraph {
+6 [style = filled, label = "return new SimpleUser(generateRandomString(rnd,50),rnd.nextBoolean()? null: rnd.nextInt(),rnd.nextBoolean()? null: generateRandomString(rnd,6),rnd.nextBoolean()? null: rnd.nextLong(),rnd.nextDouble(),null,rnd.nextBoolean(),generateRandomStringList(rnd,20,30),generateRandomBooleanList(rnd,20),rnd.nextBoolean()? null: generateRandomStringList(rnd,20,20),generateRandomColor(rnd),new HashMap<>(),generateRandomFixed16(rnd),generateRandomUnion(rnd),generateRandomAddress(rnd),generateRandomBytes(rnd))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "generateRandomSimpleUser['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Random rnd@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "return new User(generateRandomString(rnd,50),rnd.nextBoolean()? null: rnd.nextInt(),rnd.nextBoolean()? null: generateRandomString(rnd,6),rnd.nextBoolean()? null: rnd.nextLong(),rnd.nextDouble(),null,rnd.nextBoolean(),generateRandomStringList(rnd,20,30),generateRandomBooleanList(rnd,20),rnd.nextBoolean()? null: generateRandomStringList(rnd,20,20),generateRandomColor(rnd),new HashMap<>(),generateRandomFixed16(rnd),generateRandomUnion(rnd),generateRandomAddress(rnd),generateRandomBytes(rnd),LocalDate.parse(\"2014-03-01\"),LocalTime.parse(\"12:12:12\"),123456L,DateTime.parse(\"2014-03-01T12:12:12.321Z\"),123456L,ByteBuffer.wrap(BigDecimal.valueOf(2000,2).unscaledValue().toByteArray()),new Fixed2(BigDecimal.valueOf(2000,2).unscaledValue().toByteArray()))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "generateRandomUser['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "return new User(generateRandomString(rnd,50),rnd.nextBoolean()? null: rnd.nextInt(),rnd.nextBoolean()? null: generateRandomString(rnd,6),rnd.nextBoolean()? null: rnd.nextLong(),rnd.nextDouble(),null,rnd.nextBoolean(),generateRandomStringList(rnd,20,30),generateRandomBooleanList(rnd,20),rnd.nextBoolean()? null: generateRandomStringList(rnd,20,20),generateRandomColor(rnd),new HashMap<>(),generateRandomFixed16(rnd),generateRandomUnion(rnd),generateRandomAddress(rnd),generateRandomBytes(rnd),LocalDate.parse(\"2014-03-01\"),LocalTime.parse(\"12:12:12\"),123456,DateTime.parse(\"2014-03-01T12:12:12.321Z\"),123456L,ByteBuffer.wrap(BigDecimal.valueOf(2000,2).unscaledValue().toByteArray()),new Fixed2(BigDecimal.valueOf(2000,2).unscaledValue().toByteArray()))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "generateRandomUser['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Random rnd@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2->4 [style = dashed, label="0"];
+1->4 [style = solid, label="rnd"];
+0->2 [style = bold, label=""];
+1->2 [style = solid, label="rnd"];
+1->5 [style = dashed, label="0"];
+3->1 [style = dotted, label="true"];
+3->4 [style = bold, label=""];
+5->6 [style = solid, label="rnd"];
+7->6 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+7->5 [style = dotted, label="true"];
+2->6 [style = dashed, label="0"];
+}

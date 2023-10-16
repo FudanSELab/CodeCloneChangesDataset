@@ -1,0 +1,22 @@
+digraph {
+5 [style = filled, label = "ParserResult parserResult = importer.importDatabase(input)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "testImportDatabaseIsYearSetCorrectly['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertEquals(\"2009\",resultList.get(0).getLatexFreeField(FieldName.YEAR).get())@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertEquals(\"The protection of rural lands with the spatial development strategy on the case of Hrastnik commune\",resultList.get(0).getLatexFreeField(FieldName.TITLE).get())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "List<BibEntry> resultList = parserResult.getDatabase().getEntries()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ParserResult parserResult = importer.importDatabase(inputMax)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(\"Gesundheit von Arbeitslosen f鐃緒申鐃緒申鐃緒申rdern!: ein Handbuch f鐃緒申鐃緒申鐃緒申r Wissenschaft und Praxis\",resultList.get(0).getLatexFreeField(FieldName.TITLE).get())@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "testImportDatabaseIsTitleSetCorrectly['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "testImportDatabaseIsTitleSetCorrectly['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->4 [style = dashed, label="0"];
+1->8 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+0->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+0->8 [style = bold, label=""];
+}

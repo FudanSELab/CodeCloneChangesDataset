@@ -1,0 +1,23 @@
+digraph {
+0 [style = filled, label = "options.put(\"key\",\"val\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "loadCustomCatalog_NoArgConstructorNotFound['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "AssertHelpers.assertThrows(\"must implement catalog\",,\"does not implement Catalog\",null)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "String name = \"custom\"@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "loadCustomCatalog_NotImplementCatalog['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "AssertHelpers.assertThrows(\"must have no-arg constructor\",,\"missing no-arg constructor\",null)@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "Configuration hadoopConf = new Configuration()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "AssertHelpers.assertThrows(\"must have no-arg constructor\",,\"NoSuchMethodException: org.apache.iceberg.TestCatalogUtil$TestCatalogBadConstructor.<init>()\",null)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "Map<String,String> options = new HashMap<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "loadCustomCatalog_NoArgConstructorNotFound['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4->9 [style = bold, label=""];
+6->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+8->1 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+4->7 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

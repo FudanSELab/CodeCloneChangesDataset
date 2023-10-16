@@ -1,0 +1,22 @@
+digraph {
+2 [style = filled, label = "return new Enumerator<TSource>(){@Override public TSource current(){return enumerator.current()}@Override public boolean moveNext(){while (enumerator.moveNext()) {if (predicate.apply(enumerator.current())) {return true}}return false}@Override public void reset(){enumerator.reset()}@Override public void close(){enumerator.close()}}@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final Predicate2<TSource,Integer> predicate@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "where['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "where['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "where['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final Predicate1<TSource> predicate@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "return new AbstractEnumerable<TSource>(){public Enumerator<TSource> enumerator(){return new Enumerator<TSource>(){public TSource current(){return enumerator.current()}public boolean moveNext(){while (enumerator.moveNext()) {++nif (predicate.apply(enumerator.current(),n)) {return true}}return false}public void reset(){enumerator.reset()n = -1}public void close(){enumerator.close()}}}}@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final Predicate1<TSource> predicate@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "final Enumerable<TSource> source@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final Enumerator<TSource> enumerator@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1->9 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+3->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+6->9 [style = dotted, label="true"];
+6->8 [style = dotted, label="true"];
+3->1 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+5->1 [style = dotted, label="true"];
+3->0 [style = dotted, label="true"];
+}

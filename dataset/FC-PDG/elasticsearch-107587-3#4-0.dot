@@ -1,0 +1,33 @@
+digraph {
+3 [style = filled, label = "Builder['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "mappings = ImmutableOpenMap.builder(indexTemplateMetaData.mappings)@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "Builder['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "this.name = indexTemplateMetaData.name()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "IndexTemplateMetaData indexTemplateMetaData@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "patterns(indexTemplateMetaData.patterns())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "mappings = ImmutableOpenMap.builder(indexTemplateMetaData.mappings())@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "mappings = indexTemplateMetaData.mappings()@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "version(indexTemplateMetaData.version())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "settings(indexTemplateMetaData.settings())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Builder['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "order(indexTemplateMetaData.order())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "aliases = ImmutableOpenMap.builder(indexTemplateMetaData.aliases())@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->1 [style = bold, label=""];
+5->7 [style = bold, label=""];
+3->4 [style = dotted, label="true"];
+11->5 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+1->12 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+10->5 [style = bold, label=""];
+9->0 [style = bold, label=""];
+10->4 [style = dotted, label="true"];
+11->4 [style = dotted, label="true"];
+12->0 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->6 [style = bold, label=""];
+8->12 [style = bold, label=""];
+6->8 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

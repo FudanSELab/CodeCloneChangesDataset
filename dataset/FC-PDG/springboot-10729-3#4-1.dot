@@ -1,0 +1,38 @@
+digraph {
+12 [style = filled, label = "cloudFoundryPlatformActive['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "cloudFoundryPlatformActive['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertThat(corsConfiguration.getAllowedOrigins()).contains(\"*\")@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "setupContextWithCloudEnabled()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "this.context.refresh()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(corsConfiguration.getAllowedHeaders()).containsAll(Arrays.asList(\"Authorization\",\"X-Cf-App-Instance\",\"Content-Type\"))@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(endpointMapping.getPath()).isEqualTo(\"/cloudfoundryapplication\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "CloudFoundryWebEndpointServletHandlerMapping handlerMapping = getHandlerMapping()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertThat(corsConfiguration.getAllowedMethods()).containsAll(Arrays.asList(HttpMethod.GET.name(),HttpMethod.POST.name()))@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "assertThat(handlerMapping.getEndpointMapping().getPath()).isEqualTo(\"/cloudfoundryapplication\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "CloudFoundryWebFluxEndpointHandlerMapping handlerMapping = getHandlerMapping()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "assertThat(corsConfiguration.getAllowedMethods()).containsAll(Arrays.asList(HttpMethod.GET.name(),HttpMethod.POST.name()))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "assertThat(corsConfiguration.getAllowedOrigins()).contains(\"*\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "cloudFoundryPlatformActive['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "EndpointMapping endpointMapping = (EndpointMapping)ReflectionTestUtils.getField(handlerMapping,\"endpointMapping\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(corsConfiguration.getAllowedHeaders()).containsAll(Arrays.asList(\"Authorization\",\"X-Cf-App-Instance\",\"Content-Type\"))@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+16 [style = filled, label = "CorsConfiguration corsConfiguration = (CorsConfiguration)ReflectionTestUtils.getField(handlerMapping,\"corsConfiguration\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11->16 [style = solid, label="handlerMapping"];
+7->5 [style = solid, label="handlerMapping"];
+8->1 [style = bold, label=""];
+16->15 [style = bold, label=""];
+6->4 [style = bold, label=""];
+4->3 [style = bold, label=""];
+7->4 [style = solid, label="handlerMapping"];
+7->5 [style = bold, label=""];
+0->9 [style = bold, label=""];
+2->0 [style = bold, label=""];
+5->6 [style = bold, label=""];
+15->14 [style = bold, label=""];
+9->7 [style = bold, label=""];
+11->13 [style = bold, label=""];
+3->8 [style = bold, label=""];
+13->16 [style = bold, label=""];
+10->0 [style = bold, label=""];
+14->4 [style = bold, label=""];
+12->11 [style = bold, label=""];
+}

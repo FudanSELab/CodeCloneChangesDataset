@@ -1,0 +1,34 @@
+digraph {
+1 [style = filled, label = "assertThat(applicationFeatureId.getTypeSimpleName(),is(\"Bar\"))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(parentClassId.getNamespace(),is(\"com.mycompany\"))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(applicationFeatureId.getMemberLogicalName(),is(\"foo\"))@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "val applicationFeatureId = ApplicationFeatureId.newMember(\"com.mycompany.Bar\",\"foo\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(applicationFeatureId.getMemberName(),is(\"foo\"))@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "val applicationFeatureId = ApplicationFeatureId.newMember(\"com.mycompany.Bar#foo\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "using_fullyQualifiedName['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "using_fullyQualifiedName['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "givenMember['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertThat(parentClassId.getMemberName(),is(nullValue()))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertThat(parentClassId.getTypeSimpleName(),is(\"Bar\"))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "val parentClassId = applicationFeatureId.getParentTypeFeatureId()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertThat(applicationFeatureId.getSort(),is(ApplicationFeatureSort.MEMBER))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(applicationFeatureId.getNamespace(),is(\"com.mycompany\"))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "assertThat(parentClassId.getSort(),is(ApplicationFeatureSort.TYPE))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3->8 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+1->4 [style = bold, label=""];
+14->12 [style = bold, label=""];
+12->10 [style = bold, label=""];
+1->6 [style = bold, label=""];
+10->11 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+5->14 [style = dashed, label="0"];
+13->8 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+7->3 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->5 [style = bold, label=""];
+8->9 [style = bold, label=""];
+9->14 [style = bold, label=""];
+}

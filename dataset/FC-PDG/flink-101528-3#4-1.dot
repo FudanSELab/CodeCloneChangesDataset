@@ -1,0 +1,37 @@
+digraph {
+1 [style = filled, label = "first@@@6@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "!semaphore.tryAcquire()@@@3@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "first = false@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "processElement1['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "getProcessingTimeService().registerTimer(System.currentTimeMillis() + 100,this)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "StreamRecord<String> element@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "semaphore.release()@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Assert.fail(\"Concurrent invocation of operator functions.\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "getTimerService().registerTimer(System.currentTimeMillis() + 100,this)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "processElement['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "numElements++@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "StreamRecord<String> element@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "processElement['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+10->6 [style = dotted, label="true"];
+0->4 [style = dotted, label="true"];
+11->12 [style = dotted, label="true"];
+5->9 [style = dashed, label="0"];
+3->6 [style = dotted, label="true"];
+9->7 [style = bold, label=""];
+1->9 [style = bold, label=""];
+3->0 [style = bold, label=""];
+6->12 [style = dashed, label="0"];
+1->7 [style = dotted, label="true"];
+11->0 [style = bold, label=""];
+0->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+1->9 [style = dotted, label="true"];
+10->0 [style = bold, label=""];
+5->7 [style = bold, label=""];
+4->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+1->5 [style = dotted, label="true"];
+2->8 [style = bold, label=""];
+}

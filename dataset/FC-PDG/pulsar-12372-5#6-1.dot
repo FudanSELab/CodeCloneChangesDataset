@@ -1,0 +1,25 @@
+digraph {
+6 [style = filled, label = "print(admin.functions().getFunctionStatus(tenant,namespace,functionName))@@@4@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "runCmd['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "String json = JsonFormat.printer().print(isBlank(instanceId)? admin.sink().getSinkStatus(tenant,namespace,sinkName): admin.sink().getSinkStatus(tenant,namespace,sinkName,Integer.parseInt(instanceId)))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "runCmd['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Gson gson = new GsonBuilder().setPrettyPrinting().create()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "String json = JsonFormat.printer().print(isBlank(instanceId)? admin.functions().getFunctionStatus(tenant,namespace,functionName): admin.functions().getFunctionStatus(tenant,namespace,functionName,Integer.parseInt(instanceId)))@@@3@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "print(admin.functions().getFunctionStatus(tenant,namespace,functionName,Integer.parseInt(instanceId)))@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "runCmd['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "isBlank(instanceId)@@@3@@@['0', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "System.out.println(gson.toJson(new JsonParser().parse(json)))@@@5@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->7 [style = bold, label=""];
+7->6 [style = dotted, label="true"];
+7->4 [style = bold, label=""];
+9->0 [style = bold, label=""];
+9->1 [style = solid, label="json"];
+3->9 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+7->4 [style = dotted, label="false"];
+3->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+2->3 [style = bold, label=""];
+8->9 [style = bold, label=""];
+3->1 [style = solid, label="json"];
+}

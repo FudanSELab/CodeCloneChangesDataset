@@ -1,0 +1,51 @@
+digraph {
+7 [style = filled, label = "testContinuedLiteral['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "expr(\"n'lowercase n'\").ok(\"_ISO-8859-1'lowercase n'\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+24 [style = filled, label = "expr(\"N'is it a plane? no it''s superman!'\").ok(\"_ISO-8859-1'is it a plane? no it''s superman!'\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+17 [style = filled, label = "expr(\"'boring string'\").ok(\"'boring string'\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "expr(\"x'01aa''03ff'\").ok(\"X'01AA''03FF'\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "expr(\"'abba''0001'\").ok(\"'abba''0001'\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "expr(\"_latin1'hi'\").ok(\"_LATIN1'hi'\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "linuxify(0( = false@@@17@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+22 [style = filled, label = "expr(\"'three' -- comment' blind'' mice'\").ok(\"'three'' blind'' mice'\")@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+18 [style = filled, label = "expr(\"'foobar'\").ok(\"'foobar'\")@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testStringLiteral['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+23 [style = filled, label = "{linuxify(0( = true}@@@20@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "sql(\"x'01aa'^'vvvv'^\").fails(\"Binary literal string must contain only characters '0' - '9', 'A' - 'F'\")@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "expr(\"'foobar'\").ok(\"'foobar'\")@@@14@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "expr(\"N'yabba''dabba''doo'\").ok(\"_ISO-8859-1'yabba''dabba''doo'\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "boolean(( linuxify = LINUXIFY.get()@@@15@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+16 [style = filled, label = "expr(\"_iso-8859-1'bye'---- this is a comment' bye'\").ok(\"_ISO-8859-1'bye'' bye'\")@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+20 [style = filled, label = "expr(\"_utf8'hi'\").ok(\"_UTF8'hi'\")@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "expr(\"'abba''abba'\").ok(\"'abba''abba'\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+19 [style = filled, label = "expr(\"'foobar'\").ok(\"'foobar'\")@@@18@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+21 [style = filled, label = "expr(\"_iSo-8859-1'bye'\").ok(\"_ISO-8859-1'bye'\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "expr(\"N'bye' ' bye'\").ok(\"_ISO-8859-1'bye'' bye'\")@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testContinuedLiteral['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "expr(\"_iso-8859-1'yabba''dabba''don''t'\").ok(\"_ISO-8859-1'yabba''dabba''don''t'\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "expr(\"'three'' blind'' mice'\").ok(\"'three'' blind'' mice'\")@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10->22 [style = bold, label=""];
+4->3 [style = bold, label=""];
+21->10 [style = bold, label=""];
+2->6 [style = bold, label=""];
+8->14 [style = bold, label=""];
+14->19 [style = bold, label=""];
+6->0 [style = bold, label=""];
+12->16 [style = bold, label=""];
+7->3 [style = bold, label=""];
+20->18 [style = bold, label=""];
+5->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+24->11 [style = bold, label=""];
+0->1 [style = bold, label=""];
+22->12 [style = bold, label=""];
+15->24 [style = bold, label=""];
+19->23 [style = bold, label=""];
+9->15 [style = bold, label=""];
+18->13 [style = bold, label=""];
+11->17 [style = bold, label=""];
+2->11 [style = dashed, label="0"];
+13->8 [style = bold, label=""];
+16->20 [style = bold, label=""];
+17->21 [style = bold, label=""];
+}

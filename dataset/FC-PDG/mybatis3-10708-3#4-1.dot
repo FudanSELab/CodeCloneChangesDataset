@@ -1,0 +1,20 @@
+digraph {
+3 [style = filled, label = "shouldRemoveItemOnDemand['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertNotNull(cache.getObject(0))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "cache.putObject(0,0)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "shouldRemoveItemOnDemand['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "FifoCache cache = new FifoCache(new PerpetualCache(\"default\"))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "shouldRemoveItemOnDemand['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "cache.removeObject(0)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertNull(cache.getObject(0))@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "WeakCache cache = new WeakCache(new PerpetualCache(\"default\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+1->2 [style = bold, label=""];
+7->0 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+8->7 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

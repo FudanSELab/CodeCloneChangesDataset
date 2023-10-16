@@ -1,0 +1,23 @@
+digraph {
+5 [style = filled, label = "testMergeSelectSource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final String sql = \"merge into emps e \" + \"using (select * from tempemps where deptno is null) t \" + \"on e.empno = t.empno \" + \"when matched then update \" + \"set e.name = t.name, e.deptno = t.deptno, e.salary = t.salary * .1 \" + \"when not matched then insert (name, dept, salary) \" + \"values(t.name, 10, t.salary * .15)\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final String expected = \"MERGE INTO `EMPS` AS `E`\" + \"USING (SELECT *\" + \"FROM `TEMPEMPS`\" + \"WHERE (`DEPTNO` IS NULL)) AS `T`\" + \"ON (`E`.`EMPNO` = `T`.`EMPNO`)\" + \"WHEN MATCHED THEN UPDATE SET `E`.`NAME` = `T`.`NAME`\" + \", `E`.`DEPTNO` = `T`.`DEPTNO`\" + \", `E`.`SALARY` = (`T`.`SALARY` * 0.1)\" + \"WHEN NOT MATCHED THEN INSERT (`NAME`, `DEPT`, `SALARY`) \" + \"(VALUES (ROW(`T`.`NAME`, 10, (`T`.`SALARY` * 0.15))))\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testMergeSelectSource2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testMergeSelectSource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final String expected = \"MERGE INTO `EMPS` AS `E`\" + \"USING (SELECT *\" + \"FROM `TEMPEMPS`\" + \"WHERE (`DEPTNO` IS NULL)) AS `T`\" + \"ON (`E`.`EMPNO` = `T`.`EMPNO`)\" + \"WHEN MATCHED THEN UPDATE SET `NAME` = `T`.`NAME`\" + \", `DEPTNO` = `T`.`DEPTNO`\" + \", `SALARY` = (`T`.`SALARY` * 0.1)\" + \"WHEN NOT MATCHED THEN INSERT (`NAME`, `DEPT`, `SALARY`) \" + \"(VALUES (ROW(`T`.`NAME`, 10, (`T`.`SALARY` * 0.15))))\"@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "final String sql = \"merge into emps e \" + \"using (select * from tempemps where deptno is null) t \" + \"on e.empno = t.empno \" + \"when matched then update \" + \"set name = t.name, deptno = t.deptno, salary = t.salary * .1 \" + \"when not matched then insert (name, dept, salary) \" + \"values(t.name, 10, t.salary * .15)\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "sql(sql).ok(expected).node(not(isDdl()))@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final String expected = \"MERGE INTO `EMPS` AS `E`\" + \"USING (SELECT *\" + \"FROM `TEMPEMPS`\" + \"WHERE (`DEPTNO` IS NULL)) AS `T`\" + \"ON (`E`.`EMPNO` = `T`.`EMPNO`)\" + \"WHEN MATCHED THEN UPDATE SET `NAME` = `T`.`NAME`\" + \", `DEPTNO` = `T`.`DEPTNO`\" + \", `SALARY` = (`T`.`SALARY` * 0.1)\" + \"WHEN NOT MATCHED THEN INSERT (`NAME`, `DEPT`, `SALARY`) \" + \"(VALUES (ROW(`T`.`NAME`, 10, (`T`.`SALARY` * 0.15))))\"@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1->3 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+1->4 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+8->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+3->4 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+}

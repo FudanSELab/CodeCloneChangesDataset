@@ -1,0 +1,35 @@
+digraph {
+2 [style = filled, label = "Assert.assertTrue(havingSpec.eval(new MapBasedRow(0,ImmutableMap.of(\"foo\",1L))))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "Assert.assertTrue(havingSpec.eval(ResultRow.of(1L)))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "final DimFilterHavingSpec havingSpec = new DimFilterHavingSpec(new SelectorDimFilter(\"foo\",\"bar\",null),null)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "Assert.assertFalse(havingSpec.eval(new MapBasedRow(0,ImmutableMap.of(\"foo\",\"baz\"))))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testRowSignature['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "final DimFilterHavingSpec havingSpec = new DimFilterHavingSpec(new SelectorDimFilter(\"foo\",\"1\",null),null)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "havingSpec.setRowSignature(ImmutableMap.of(\"foo\",ValueType.LONG))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "havingSpec.setRowSignature(null)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "Assert.assertTrue(havingSpec.eval(new MapBasedRow(0,ImmutableMap.of(\"foo\",\"bar\"))))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testRowSignature['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assert.assertFalse(havingSpec.eval(ResultRow.of(2L)))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "Assert.assertFalse(havingSpec.eval(new MapBasedRow(0,ImmutableMap.of(\"foo\",2L))))@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "testSimple['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "havingSpec.setQuery(GroupByQuery.builder().setDataSource(\"dummy\").setInterval(\"1000/3000\").setGranularity(Granularities.ALL).setDimensions(new DefaultDimensionSpec(\"foo\",\"foo\",ValueType.LONG)).build())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5->8 [style = bold, label=""];
+6->5 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+1->6 [style = bold, label=""];
+7->1 [style = bold, label=""];
+1->0 [style = bold, label=""];
+13->12 [style = bold, label=""];
+9->11 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+10->13 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+11->10 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+2->13 [style = dashed, label="0"];
+0->10 [style = dashed, label="0"];
+4->12 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+}

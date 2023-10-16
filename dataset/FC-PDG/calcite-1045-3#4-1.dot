@@ -1,0 +1,21 @@
+digraph {
+7 [style = filled, label = "assertEquals(\"((Fred, Bill, Eric, Janet, Cedric( work(s) in Marketing(\",s)@@@25@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "String s = Linq4j.asEnumerable(depts).groupJoin(Linq4j.asEnumerable(emps).concat(Linq4j.asEnumerable(badEmps)),DEPT_DEPTNO_SELECTOR,EMP_DEPTNO_SELECTOR,null).toList().toString()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "assertEquals(\"((Fred, Eric, Janet( work(s) in Sales, \" + \"(( work(s) in HR, \" + \"(Bill( work(s) in Marketing(\",s)@@@15@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "assertEquals(\"((Fred, Eric, Janet( work(s) in Sales, \" + \"(( work(s) in HR, \" + \"(Bill( work(s) in Marketing(\",s)@@@17@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testGroupJoin['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "testGroupJoinWithComparer['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String s = Linq4j.asEnumerable(depts).groupJoin(Linq4j.asEnumerable(emps).concat(Linq4j.asEnumerable(badEmps)),DEPT_DEPTNO_SELECTOR,EMP_DEPTNO_SELECTOR,new Function2<Department,Enumerable<Employee>,String>(){public String apply(Department v1,Enumerable<Employee> v2){final StringBuilder buf = new StringBuilder(\"(\")int n = 0for (Employee employee : v2){if (n++ > 0) {buf.append(\", \")}buf.append(employee.name)}return buf.append(\"( work(s) in \").append(v1.name).toString()}},new EqualityComparer<Integer>(){public boolean equal(Integer v1,Integer v2){return true}public int hashCode(Integer integer){return 0}}).toList().toString()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testGroupJoin['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+0->1 [style = solid, label="s"];
+2->0 [style = bold, label=""];
+6->0 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+0->7 [style = solid, label="s"];
+3->4 [style = solid, label="s"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

@@ -1,0 +1,23 @@
+digraph {
+1 [style = filled, label = "testAlphaNumericTopNWithNullPreviousStop['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testNumericDimensionTopNWithNullPreviousStop['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "TestHelper.assertExpectedResults(expectedResults,runner.run(QueryPlus.wrap(query)))@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testAlphaNumericTopNWithNullPreviousStop['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "TopNQuery query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.DATA_SOURCE).granularity(Granularities.ALL).dimension(QueryRunnerTestHelper.MARKET_DIMENSION).metric(new DimensionTopNMetricSpec(null,StringComparators.ALPHANUMERIC)).threshold(2).intervals(QueryRunnerTestHelper.SECOND_ONLY).aggregators(duplicateAggregators(QueryRunnerTestHelper.ROWS_COUNT,new CountAggregatorFactory(\"rows1\"))).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "TopNQuery query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(Granularities.ALL).dimension(QueryRunnerTestHelper.marketDimension).metric(new DimensionTopNMetricSpec(null,StringComparators.ALPHANUMERIC)).threshold(2).intervals(QueryRunnerTestHelper.secondOnly).aggregators(duplicateAggregators(QueryRunnerTestHelper.rowsCount,new CountAggregatorFactory(\"rows1\"))).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "TopNQuery query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(Granularities.ALL).dimension(QueryRunnerTestHelper.marketDimension).metric(new DimensionTopNMetricSpec(null,StringComparators.NUMERIC)).threshold(2).intervals(QueryRunnerTestHelper.secondOnly).aggregators(duplicateAggregators(QueryRunnerTestHelper.rowsCount,new CountAggregatorFactory(\"rows1\"))).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "List<Result<TopNResultValue>> expectedResults = Collections.singletonList(new Result<>(DateTimes.of(\"2011-04-02T00:00:00.000Z\"),new TopNResultValue(withDuplicateResults(Arrays.asList(ImmutableMap.of(\"market\",\"spot\",\"rows\",9L),ImmutableMap.of(\"market\",\"total_market\",\"rows\",2L)),\"rows\",\"rows1\"))))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+4->3 [style = solid, label="query"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->0 [style = bold, label=""];
+2->3 [style = solid, label="query"];
+6->7 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+0->3 [style = solid, label="expectedResults"];
+5->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+7->3 [style = solid, label="query"];
+}

@@ -1,0 +1,30 @@
+digraph {
+9 [style = filled, label = "final List<List<TestRecord<Long,String>>> expectedResult = Arrays.asList(null,null,Collections.singletonList(new TestRecord<>(ANY_UNIQUE_KEY,\"A-null\",null,3L)),null,Collections.singletonList(new TestRecord<>(ANY_UNIQUE_KEY,\"B-a\",null,5L)),null,null,null,Collections.singletonList(new TestRecord<>(ANY_UNIQUE_KEY,\"C-null\",null,9L)),null,null,null,null,null,Collections.singletonList(new TestRecord<>(ANY_UNIQUE_KEY,\"D-d\",null,15L)))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testInner['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "STREAMS_CONFIG.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG,\"topology_driver:0000\")@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "leftStream.leftJoin(rightTable,valueJoiner).to(OUTPUT_TOPIC)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final List<List<TestRecord<Long,String>>> expectedResult = Arrays.asList(null,null,null,null,Collections.singletonList(new TestRecord<>(ANY_UNIQUE_KEY,\"B-a\",null,5L)),null,null,null,null,null,null,null,null,null,Collections.singletonList(new TestRecord<>(ANY_UNIQUE_KEY,\"D-d\",null,15L)))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testInner['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "runTestWithDriver(expectedResult)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "leftStream.join(rightTable,valueJoiner).to(OUTPUT_TOPIC)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testLeft['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "STREAMS_CONFIG.put(StreamsConfig.APPLICATION_ID_CONFIG,appID + \"-left\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "STREAMS_CONFIG.put(StreamsConfig.APPLICATION_ID_CONFIG,appID + \"-inner\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+6->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+7->5 [style = bold, label=""];
+10->2 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+9->10 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->9 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+9->2 [style = solid, label="expectedResult"];
+0->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+8->7 [style = bold, label=""];
+4->2 [style = solid, label="expectedResult"];
+}

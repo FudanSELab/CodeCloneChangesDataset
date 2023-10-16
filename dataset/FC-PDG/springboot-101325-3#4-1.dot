@@ -1,0 +1,32 @@
+digraph {
+9 [style = filled, label = "ConfigurationPropertyName name = ConfigurationPropertyName.of(\"foo(BAR(\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(name.isIndexed(1)).isFalse()@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(name.getElement(1,Form.ORIGINAL)).isEqualTo(\"bar\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "ofNameWithUppercaseInAssociativeElement['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "ofNameWhenDotOnAssociative['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertThat(name.isIndexed(0)).isFalse()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "ofNameWhenDotOnAssociative['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(name.getElement(0,Form.ORIGINAL)).isEqualTo(\"foo\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThat(name.isIndexed(1)).isTrue()@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(name.toString()).isEqualTo(\"foo.bar\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThat(name.getElement(1,Form.ORIGINAL)).isEqualTo(\"BAR\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "ConfigurationPropertyName name = ConfigurationPropertyName.of(\"foo.bar\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(name.toString()).isEqualTo(\"foo(BAR(\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+10->3 [style = bold, label=""];
+4->1 [style = bold, label=""];
+1->6 [style = bold, label=""];
+7->4 [style = bold, label=""];
+9->11 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+12->9 [style = bold, label=""];
+0->4 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+1->11 [style = dashed, label="0"];
+3->8 [style = bold, label=""];
+6->10 [style = bold, label=""];
+11->6 [style = bold, label=""];
+}

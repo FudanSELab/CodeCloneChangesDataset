@@ -1,0 +1,30 @@
+digraph {
+5 [style = filled, label = "Connection conn = session.getConnection()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ScriptRunner runner = new ScriptRunner(conn)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "setUpBeforeClass['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "runner.setLogWriter(null)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Reader reader = Resources.getResourceAsReader(\"org/apache/ibatis/submitted/overwritingproperties/create-schema-mysql.sql\")@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "setUpBeforeClass['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "runner.runScript(reader)@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Reader reader = Resources.getResourceAsReader(\"org/apache/ibatis/submitted/null_associations/create-schema-mysql.sql\")@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(Resources.getResourceAsReader(SQL_MAP_CONFIG))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "setUpBeforeClass['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "session = factory.openSession()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "runner.setErrorLogWriter(null)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+5->7 [style = bold, label=""];
+11->4 [style = bold, label=""];
+0->10 [style = bold, label=""];
+1->6 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->6 [style = solid, label="reader"];
+1->10 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+10->6 [style = bold, label=""];
+5->7 [style = solid, label="conn"];
+10->6 [style = solid, label="reader"];
+9->4 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

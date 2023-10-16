@@ -1,0 +1,11 @@
+digraph {
+0 [style = filled, label = "testMergeJoin['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(EnumerableDefaults.hashJoin(Linq4j.asEnumerable(Arrays.asList(new Emp(10,\"Fred\"),new Emp(20,\"Theodore\"),new Emp(20,\"Sebastian\"),new Emp(30,\"Greg\"))),Linq4j.asEnumerable(Arrays.asList(new Dept(15,\"Marketing\"),new Dept(20,\"Sales\"),new Dept(30,\"Research\"),new Dept(30,\"Development\"))),null,null,null,null,true,true,null).toList().toString(),equalTo(\"(Emp(10, Fred), null,\" + \" Emp(20, Theodore), Dept(20, Sales),\" + \" Emp(20, Sebastian), Dept(20, Sales),\" + \" Emp(30, Greg), null,\" + \" null, Dept(15, Marketing),\" + \" null, Dept(30, Research),\" + \" null, Dept(30, Development)(\"))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(EnumerableDefaults.mergeJoin(Linq4j.asEnumerable(Arrays.asList(new Emp(10,\"Fred\"),new Emp(20,\"Theodore\"),new Emp(20,\"Sebastian\"),new Emp(30,\"Joe\"),new Emp(30,\"Greg\"))),Linq4j.asEnumerable(Arrays.asList(new Dept(15,\"Marketing\"),new Dept(20,\"Sales\"),new Dept(30,\"Research\"),new Dept(30,\"Development\"))),null,null,null,false,false).toList().toString(),equalTo(\"(Emp(20, Theodore), Dept(20, Sales),\" + \" Emp(20, Sebastian), Dept(20, Sales),\" + \" Emp(30, Joe), Dept(30, Research),\" + \" Emp(30, Joe), Dept(30, Development),\" + \" Emp(30, Greg), Dept(30, Research),\" + \" Emp(30, Greg), Dept(30, Development)(\"))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testFullHashJoinWithNonEquiConditions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testMergeJoin['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->3 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+}

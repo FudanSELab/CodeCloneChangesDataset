@@ -1,0 +1,22 @@
+digraph {
+3 [style = filled, label = "List<JoinableClause> joinableClauses = ImmutableList.of(new JoinableClause(FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX,new IndexedTableJoinable(countriesTable),JoinType.LEFT,JoinConditionAnalysis.forExpression(\"0\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX,ExprMacroTable.nil())))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "JoinFilterPreAnalysis preAnalysis = JoinFilterAnalyzer.computeJoinFilterPreAnalysis(joinableClauses,VirtualColumns.EMPTY,filter,true,true,true,QueryContexts.DEFAULT_ENABLE_JOIN_FILTER_REWRITE_MAX_SIZE_KEY)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "JoinTestHelper.verifyCursors(new HashJoinSegmentStorageAdapter(factSegment.asStorageAdapter(),ImmutableList.of(new JoinableClause(FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX,new IndexedTableJoinable(countriesTable),JoinType.LEFT,JoinConditionAnalysis.forExpression(\"0\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX,ExprMacroTable.nil())))).makeCursors(new SelectorDimFilter(\"channel\",\"#de.wikipedia\",null).toFilter(),Intervals.ETERNITY,VirtualColumns.EMPTY,Granularities.ALL,false,null),ImmutableList.of(\"page\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"countryName\"),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@92b784))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "JoinTestHelper.verifyCursors(new HashJoinSegmentStorageAdapter(factSegment.asStorageAdapter(),ImmutableList.of(new JoinableClause(FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX,LookupJoinable.wrap(countryIsoCodeToNameLookup),JoinType.LEFT,JoinConditionAnalysis.forExpression(\"0\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX,ExprMacroTable.nil())))).makeCursors(new SelectorDimFilter(\"channel\",\"#de.wikipedia\",null).toFilter(),Intervals.ETERNITY,VirtualColumns.EMPTY,Granularities.ALL,false,null),ImmutableList.of(\"page\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"v\"),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@92b82c))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "test_makeCursors_factToCountryAlwaysFalse['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "test_makeCursors_factToCountryAlwaysFalseUsingLookup['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Filter filter = new SelectorDimFilter(\"channel\",\"#de.wikipedia\",null).toFilter()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "test_makeCursors_factToCountryAlwaysFalse['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "JoinTestHelper.verifyCursors(new HashJoinSegmentStorageAdapter(factSegment.asStorageAdapter(),joinableClauses,preAnalysis).makeCursors(filter,Intervals.ETERNITY,VirtualColumns.EMPTY,Granularities.ALL,false,null),ImmutableList.of(\"page\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"countryName\"),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@92b7e6))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4->6 [style = solid, label="filter"];
+0->8 [style = dashed, label="0"];
+0->3 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+3->5 [style = solid, label="joinableClauses"];
+5->6 [style = bold, label=""];
+7->8 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->5 [style = solid, label="filter"];
+}

@@ -1,0 +1,31 @@
+digraph {
+5 [style = filled, label = "final TopicPartition topicPartition@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "final String consumerGroupId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "final long producerId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final long producerId@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "final short epoch@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "prepareTxnOffsetCommitResponse['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "addPartitionsRequestMatcher['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Map<TopicPartition,Errors> txnOffsetCommitResponse@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return null@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final TopicPartition topicPartition@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final long producerId@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "client.prepareResponse(null,new TxnOffsetCommitResponse(0,txnOffsetCommitResponse))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "addPartitionsRequestMatcher['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "final short producerEpoch@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2->3 [style = dotted, label="true"];
+13->11 [style = dotted, label="true"];
+9->8 [style = solid, label="txnOffsetCommitResponse"];
+7->6 [style = dotted, label="true"];
+0->8 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+7->0 [style = bold, label=""];
+13->8 [style = bold, label=""];
+13->10 [style = dotted, label="true"];
+13->12 [style = dotted, label="true"];
+2->1 [style = dotted, label="true"];
+7->4 [style = dotted, label="true"];
+7->5 [style = dotted, label="true"];
+2->4 [style = dotted, label="true"];
+13->9 [style = dotted, label="true"];
+}

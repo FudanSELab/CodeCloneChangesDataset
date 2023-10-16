@@ -1,0 +1,15 @@
+digraph {
+0 [style = filled, label = "final DefaultListModel<Object> self@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "iterator['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "iterator['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return new Iterator<Object>(){public boolean hasNext(){return index > -1 && index < self.getSize()}public Object next(){return self.getElementAt(index++)}public void remove(){if (hasNext()) self.removeElementAt(index--)}}@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "iterator['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final MutableComboBoxModel<Object> self@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5->1 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+2->0 [style = dotted, label="true"];
+3->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->4 [style = dotted, label="true"];
+3->0 [style = dotted, label="true"];
+}

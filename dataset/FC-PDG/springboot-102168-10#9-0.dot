@@ -1,0 +1,33 @@
+digraph {
+0 [style = filled, label = "return new RestTemplateBuilder(this.detectRequestFactory,this.rootUri,this.messageConverters,this.requestFactorySupplier,this.uriTemplateHandler,this.errorHandler,this.basicAuthentication,append(this.restTemplateCustomizers,customizers),this.requestFactoryCustomizer,this.interceptors)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "return new RestTemplateBuilder(this.requestFactoryCustomizer,this.detectRequestFactory,this.rootUri,this.messageConverters,this.interceptors,this.requestFactory,this.uriTemplateHandler,this.errorHandler,this.basicAuthentication,this.defaultHeaders,append(this.customizers,customizers),this.requestCustomizers)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "Assert.notNull(restTemplateCustomizers,\"RestTemplateCustomizers must not be null\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "return new RestTemplateBuilder(this.detectRequestFactory,this.rootUri,this.messageConverters,this.requestFactorySupplier,this.uriTemplateHandler,this.errorHandler,this.basicAuthentication,Collections.unmodifiableSet(new LinkedHashSet<RestTemplateCustomizer>(restTemplateCustomizers)),this.requestFactoryCustomizer,this.interceptors)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "additionalCustomizers['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "Collection<? extends RestTemplateCustomizer> restTemplateCustomizers@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Collection<? extends RestTemplateCustomizer> customizers@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "additionalCustomizers['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Assert.notNull(customizers,\"RestTemplateCustomizers must not be null\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Collection<? extends RestTemplateCustomizer> customizers@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "customizers['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7->9 [style = bold, label=""];
+5->6 [style = dotted, label="true"];
+6->2 [style = solid, label="customizers"];
+5->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+10->9 [style = solid, label="restTemplateCustomizers"];
+1->2 [style = solid, label="customizers"];
+6->4 [style = solid, label="customizers"];
+0->4 [style = dashed, label="0"];
+1->10 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+8->10 [style = dotted, label="true"];
+2->7 [style = dashed, label="0"];
+1->0 [style = solid, label="customizers"];
+0->9 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+3->1 [style = dotted, label="true"];
+1->6 [style = dashed, label="0"];
+10->7 [style = solid, label="restTemplateCustomizers"];
+8->7 [style = bold, label=""];
+}

@@ -1,0 +1,30 @@
+digraph {
+9 [style = filled, label = "final CLICommandInvoker.Result result = command.authorizedTo(Computer.CONFIGURE,Jenkins.READ).withStdin(.getResourceAsStream(\"node.xml\")).invokeWithArgs(\"MySlave\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(result.stderr(),containsString(\"ERROR: No such node 'MyAgent'\"))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "getNodeShouldFailIfNodeDoesNotExist['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "final CLICommandInvoker.Result result = command.authorizedTo(Computer.EXTENDED_READ,Jenkins.READ).invokeWithArgs(\"MyAgent\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "updateNodeShouldFailIfNodeDoesNotExist['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(result,hasNoStandardOutput())@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "getNodeShouldFailIfNodeDoesNotExist['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(result,failedWith(3))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(result.stderr(),containsString(\"ERROR: No such node 'MySlave'\"))@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final CLICommandInvoker.Result result = command.authorizedTo(Computer.EXTENDED_READ,Jenkins.READ).invokeWithArgs(\"MySlave\")@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4->5 [style = dashed, label="0"];
+4->1 [style = solid, label="result"];
+6->3 [style = bold, label=""];
+5->3 [style = solid, label="result"];
+4->9 [style = dashed, label="0"];
+7->5 [style = bold, label=""];
+9->1 [style = solid, label="result"];
+4->2 [style = bold, label=""];
+5->6 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+9->3 [style = solid, label="result"];
+0->4 [style = bold, label=""];
+9->2 [style = bold, label=""];
+4->3 [style = solid, label="result"];
+2->3 [style = bold, label=""];
+8->9 [style = bold, label=""];
+5->1 [style = solid, label="result"];
+}

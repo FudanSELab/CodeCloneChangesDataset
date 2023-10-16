@@ -1,0 +1,32 @@
+digraph {
+8 [style = filled, label = "assertFalse(command.isTrackingRepairedStatus())@@@6@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "assertFalse(command.isTrackingRepairedStatus())@@@7@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "dontSetRepairedDataTrackingFlagUnlessHeaderPresent['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "ReadCommand command = command(metadata)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "dontSetRepairedDataTrackingFlagIfHeadersEmpty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "handler.doVerb(MessageIn.create(peer(),command,ImmutableMap.of(),MessagingService.Verb.READ,MessagingService.current_version),messageId())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Map<ParameterType,Object> params = ImmutableMap.of(ParameterType.TRACE_SESSION,UUID.randomUUID())@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "handler.doVerb(Message.builder(READ_REQ,command).from(peer()).withId(messageId()).withParam(ParamType.TRACE_SESSION,UUID.randomUUID()).build())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "assertFalse(command.isTrackingRepairedStatus())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertFalse(command.isTrackingRepairedStatus())@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "SinglePartitionReadCommand command = command(metadata)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "dontSetRepairedDataTrackingFlagUnlessHeaderPresent['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "handler.doVerb(MessageIn.create(peer(),command,params,MessagingService.Verb.READ,MessagingService.current_version),messageId())@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7->9 [style = bold, label=""];
+5->1 [style = bold, label=""];
+11->4 [style = bold, label=""];
+0->5 [style = solid, label="params"];
+4->10 [style = solid, label="command"];
+2->0 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+4->5 [style = solid, label="command"];
+4->2 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+2->10 [style = bold, label=""];
+9->2 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->6 [style = bold, label=""];
+10->12 [style = bold, label=""];
+6->8 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

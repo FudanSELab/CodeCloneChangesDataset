@@ -1,0 +1,36 @@
+digraph {
+5 [style = filled, label = "subscriber.subscribeToShardAndConsumeRecords(startingPosition,null)@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "FanOutShardSubscriber subscriber = new FanOutShardSubscriber(\"consumerArn\",\"shardId\",errorKinesisV2)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "thrown.expect()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "SubscriptionErrorKinesisV2 errorKinesisV2 = FakeKinesisFanOutBehavioursFactory.errorDuringSubscription(error)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testRecoverableErrorThrownToConsumer['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "thrown.expect()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "thrown.expectMessage(\"io.netty.handler.timeout.ReadTimeoutException\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "FanOutShardSubscriber subscriber = new FanOutShardSubscriber(\"consumerArn\",\"shardId\",errorKinesisV2,DEFAULT_SUBSCRIBE_TO_SHARD_TIMEOUT)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "SdkInterruptedException error = new SdkInterruptedException(null)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "software.amazon.awssdk.services.kinesis.model.StartingPosition startingPosition = software.amazon.awssdk.services.kinesis.model.StartingPosition.builder().build()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testRecoverableErrorThrownToConsumer['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "SubscriptionErrorKinesisV2 errorKinesisV2 = FakeKinesisFanOutBehavioursFactory.errorDuringSubscription(ReadTimeoutException.INSTANCE)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testInterruptedErrorThrownToConsumer['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+4->3 [style = bold, label=""];
+7->1 [style = bold, label=""];
+9->12 [style = solid, label="error"];
+2->1 [style = bold, label=""];
+0->7 [style = solid, label="errorKinesisV2"];
+1->5 [style = solid, label="startingPosition"];
+0->2 [style = bold, label=""];
+8->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+0->12 [style = dashed, label="0"];
+2->7 [style = dashed, label="0"];
+0->7 [style = bold, label=""];
+12->2 [style = bold, label=""];
+11->10 [style = bold, label=""];
+12->2 [style = solid, label="errorKinesisV2"];
+10->9 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+9->12 [style = bold, label=""];
+0->2 [style = solid, label="errorKinesisV2"];
+}

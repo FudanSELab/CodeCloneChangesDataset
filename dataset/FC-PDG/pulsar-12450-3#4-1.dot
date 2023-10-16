@@ -1,0 +1,27 @@
+digraph {
+1 [style = filled, label = "Message<byte((> message = persistentTopics.getMessageById(persistentTopic,ledgerId,entryId)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "run['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Message<byte((> message = topics.getMessageById(persistentTopic,ledgerId,entryId)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "System.out.println(ByteBufUtil.prettyHexDump(date))@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "run['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Message<byte((> message = getPersistentTopics().getMessageById(persistentTopic,ledgerId,entryId)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "String persistentTopic = validatePersistentTopic(params)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ByteBuf date = Unpooled.wrappedBuffer(message.getData())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "run['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4->8 [style = solid, label="persistentTopic"];
+1->3 [style = bold, label=""];
+5->3 [style = bold, label=""];
+4->8 [style = bold, label=""];
+6->4 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+4->1 [style = solid, label="persistentTopic"];
+3->2 [style = bold, label=""];
+0->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->2 [style = solid, label="date"];
+4->5 [style = solid, label="persistentTopic"];
+8->3 [style = bold, label=""];
+}

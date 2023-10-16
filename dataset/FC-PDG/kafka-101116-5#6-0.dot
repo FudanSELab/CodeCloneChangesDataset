@@ -1,0 +1,33 @@
+digraph {
+9 [style = filled, label = "assertThat(lower,equalTo(WindowStoreUtils.toBinaryKey(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@c730c7,0,0)))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertThat(upper,equalTo(Bytes.wrap(SessionKeySchema.toBinary(new Windowed<>(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@c7306e),new SessionWindow(Long.MAX_VALUE,Long.MAX_VALUE))))))@@@12@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testUpperBoundWithLargeTimestamps['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "assertThat(upper,equalTo(SessionKeySerde.bytesToBinary(new Windowed<>(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@c72ff7),new SessionWindow(Long.MAX_VALUE,Long.MAX_VALUE)))))@@@12@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "assertThat(\"shorter key with max timestamp should be in range\",upper.compareTo(Bytes.wrap(SessionKeySchema.toBinary(new Windowed<>(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@c7302d),new SessionWindow(Long.MAX_VALUE,Long.MAX_VALUE))))) >= 0)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "assertThat(\"shorter key with max timestamp should be in range\",upper.compareTo(Bytes.wrap(SessionKeySchema.toBinary(new Windowed<>(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@c7304e),new SessionWindow(Long.MAX_VALUE,Long.MAX_VALUE))))) >= 0)@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "testLowerBoundMatchesTrailingZeros['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "Bytes lower = windowKeySchema.lowerRange(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@c73088),Long.MAX_VALUE - 1)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(\"shorter key with max timestamp should be in range\",upper.compareTo(SessionKeySerde.bytesToBinary(new Windowed<>(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@c72fda),new SessionWindow(Long.MAX_VALUE,Long.MAX_VALUE)))) >= 0)@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "Bytes upper = sessionKeySchema.upperRange(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@c73011),Long.MAX_VALUE)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testUpperBoundWithLargeTimestamps['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(\"shorter key with max timestamp should be in range\",upper.compareTo(SessionKeySerde.bytesToBinary(new Windowed<>(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@c72fbc),new SessionWindow(Long.MAX_VALUE,Long.MAX_VALUE)))) >= 0)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "assertThat(\"appending zeros to key should still be in range\",lower.compareTo(WindowStoreUtils.toBinaryKey(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@c7309f,Long.MAX_VALUE - 1,0)) < 0)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->7 [style = bold, label=""];
+0->3 [style = bold, label=""];
+0->1 [style = solid, label="upper"];
+12->10 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+11->9 [style = bold, label=""];
+0->6 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+0->7 [style = solid, label="upper"];
+10->9 [style = solid, label="lower"];
+6->8 [style = bold, label=""];
+4->0 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

@@ -1,0 +1,20 @@
+digraph {
+0 [style = filled, label = "return new SqlBasicAggFunction(getName(),getSqlIdentifier(),kind,getReturnTypeInference(),getOperandTypeInference(),getOperandTypeChecker(),getFunctionType(),requiresOrder(),requiresOver(),requiresGroupOrder(),distinctOptionality,syntax,allowsNullTreatment,allowsSeparator)@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Optionality distinctOptionality@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "boolean allowsSeparator@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "withDistinct['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "return new SqlBasicAggFunction(getName(),getSqlIdentifier(),kind,getReturnTypeInference(),getOperandTypeInference(),getOperandTypeChecker(),getFunctionType(),requiresOrder(),requiresOver(),requiresGroupOrder(),distinctOptionality,syntax,allowsNullTreatment,allowsSeparator,percentile)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "withDistinct['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "withAllowsSeparator['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->6 [style = dotted, label="true"];
+4->3 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+1->2 [style = dotted, label="true"];
+5->0 [style = bold, label=""];
+2->3 [style = solid, label="distinctOptionality"];
+6->0 [style = solid, label="allowsSeparator"];
+2->0 [style = solid, label="distinctOptionality"];
+4->2 [style = dotted, label="true"];
+2->6 [style = dashed, label="0"];
+}

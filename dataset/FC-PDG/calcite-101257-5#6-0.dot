@@ -1,0 +1,24 @@
+digraph {
+2 [style = filled, label = "fail(\"expected error, got \" + root)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testAggregateGroupingWithFilterFails['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testAggregateGroupingWithDistinctFails['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "RelNode root = builder.scan(\"EMP\").aggregate(builder.groupKey(6,7),builder.aggregateCall(SqlStdOperatorTable.GROUPING,true,false,null,\"g\",builder.field(\"DEPTNO\"))).build()@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "final RelBuilder builder = RelBuilder.create(config().build())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "RelNode root = builder.scan(\"EMP\").aggregate(builder.groupKey(6,7),builder.aggregateCall(SqlStdOperatorTable.GROUPING,builder.field(\"DEPTNO\")).distinct(true).as(\"g\")).build()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testAggregateGroupingWithDistinctFails['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "RelNode root = builder.scan(\"EMP\").aggregate(builder.groupKey(6,7),builder.aggregateCall(SqlStdOperatorTable.GROUPING,false,false,builder.literal(true),\"g\",builder.field(\"DEPTNO\"))).build()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->2 [style = solid, label="root"];
+1->4 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+1->2 [style = solid, label="root"];
+6->0 [style = bold, label=""];
+7->2 [style = solid, label="root"];
+4->2 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+0->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

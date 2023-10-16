@@ -1,0 +1,36 @@
+digraph {
+0 [style = filled, label = "assertThat(mappingLookup.fieldTypes().get(\"test\"),instanceOf())@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testRuntimeFieldLeafOverride['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertThat(mappingLookup.getMapper(\"test\"),instanceOf())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(mappingLookup.fieldTypesLookup().get(\"test\"),instanceOf())@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "assertNull(mappingLookup.getMapper(\"test\"))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "testOnlyRuntimeField['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertEquals(1,size(mappingLookup.fieldTypes().filter(null)))@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "assertThat(mappingLookup.fieldTypes().get(\"test\"),instanceOf())@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+15 [style = filled, label = "MappingLookup mappingLookup = createMappingLookup(emptyList(),emptyList(),Collections.singletonList(new TestRuntimeField(\"test\",\"type\")))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "assertEquals(0,size(mappingLookup.fieldMappers()))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "assertEquals(0,mappingLookup.objectMappers().size())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertEquals(1,size(mappingLookup.fieldTypesLookup().filter(null)))@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "MockFieldMapper fieldMapper = new MockFieldMapper(\"test\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "MappingLookup mappingLookup = createMappingLookup(Collections.singletonList(fieldMapper),emptyList(),Collections.singletonList(new TestRuntimeField(\"test\",\"type\")))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testRuntimeFieldLeafOverride['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(1,size(mappingLookup.fieldMappers()))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->7 [style = solid, label="fieldMapper"];
+5->9 [style = dashed, label="0"];
+0->9 [style = bold, label=""];
+5->4 [style = bold, label=""];
+1->6 [style = bold, label=""];
+8->6 [style = bold, label=""];
+14->13 [style = bold, label=""];
+13->12 [style = bold, label=""];
+9->10 [style = bold, label=""];
+6->7 [style = bold, label=""];
+15->14 [style = bold, label=""];
+11->15 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+12->0 [style = bold, label=""];
+7->2 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

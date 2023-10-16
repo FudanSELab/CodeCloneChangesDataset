@@ -1,0 +1,35 @@
+digraph {
+5 [style = filled, label = "shouldCLearTaskTimeout['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "task.maybeInitTaskTimeoutOrThrow(Duration.ofMinutes(5).plus(Duration.ofMillis(1L)).toMillis(),null)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "final Logger log = new LogContext().logger()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "EasyMock.replay(stateManager)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "task.clearTaskTimeout()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "shouldCLearTaskTimeout['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "task = createStatelessTask(createConfig(false,\"0\"),StreamsConfig.METRICS_LATEST)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "task.maybeInitTaskTimeoutOrThrow(0L,null,log)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "task.maybeInitTaskTimeoutOrThrow(Duration.ofMinutes(5).plus(Duration.ofMillis(1L)).toMillis(),null,log)@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "task = createStandbyTask()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "task.clearTaskTimeout(log)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "task.maybeInitTaskTimeoutOrThrow(0L,null)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "shouldCLearTaskTimeout['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3->2 [style = solid, label="log"];
+5->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+3->1 [style = solid, label="log"];
+1->9 [style = dashed, label="0"];
+3->0 [style = solid, label="log"];
+0->6 [style = dashed, label="0"];
+4->12 [style = dashed, label="0"];
+8->4 [style = bold, label=""];
+3->12 [style = bold, label=""];
+6->7 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+11->3 [style = bold, label=""];
+4->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+12->0 [style = bold, label=""];
+2->1 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

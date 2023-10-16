@@ -1,0 +1,25 @@
+digraph {
+8 [style = filled, label = "Map<String,String> m = Splitter.on(\",\").withKeyValueSeparator(\":^&\").split(\"boy:^&tom,girl:^&tina,cat:^&kitty,dog:^&tommy\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ASSERT.that(m).isEqualTo(expected)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ImmutableMap<String,String> expected = ImmutableMap.of(\"boy\",\"tom\",\"girl\",\"tina\",\"cat\",\"kitty\",\"dog\",\"tommy\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testMapSplitter_trimmedBoth['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "assertThat(m).isEqualTo(expected)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "Map<String,String> m = COMMA_SPLITTER.trimResults().withKeyValueSeparator(Splitter.on(':').trimResults()).split(\"boy : tom , girl: tina , cat : kitty , dog: tommy \")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testMapSplitter_multiCharacterSeparator['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "ASSERT.that(asList(m.entrySet())).is(asList(expected.entrySet()))@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testMapSplitter_trimmedBoth['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(asList(m.entrySet())).is(asList(expected.entrySet()))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4->2 [style = solid, label="expected"];
+3->5 [style = dashed, label="0"];
+7->5 [style = bold, label=""];
+6->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+8->4 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+9->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+4->7 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->7 [style = solid, label="expected"];
+}

@@ -1,0 +1,28 @@
+digraph {
+1 [style = filled, label = "chart.createBufferedImage(300,200,null)@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testDrawWithNullMeanVertical['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testDrawWithNullMeanHorizontal['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "JFreeChart chart = new JFreeChart(plot)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "plot.setOrientation(PlotOrientation.HORIZONTAL)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "CategoryPlot plot = new CategoryPlot(dataset,new CategoryAxis(\"Category\"),new NumberAxis(\"Value\"),new StatisticalBarRenderer())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testDrawWithNullMeanVertical['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "dataset.add(null,4.0,\"S1\",\"C2\")@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "dataset.add(1.0,2.0,\"S1\",\"C1\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "dataset.add(null,new Double(4.0),\"S1\",\"C2\")@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "DefaultStatisticalCategoryDataset dataset = new DefaultStatisticalCategoryDataset()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+6->0 [style = solid, label="plot"];
+6->0 [style = bold, label=""];
+8->5 [style = bold, label=""];
+3->7 [style = bold, label=""];
+4->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+6->10 [style = bold, label=""];
+10->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+2->5 [style = bold, label=""];
+5->6 [style = solid, label="dataset"];
+}

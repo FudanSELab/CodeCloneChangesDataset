@@ -1,0 +1,37 @@
+digraph {
+7 [style = filled, label = "WordKeywordGroup groupC = new WordKeywordGroup(\"C\",GroupHierarchyType.INCLUDING,StandardField.KEYWORDS,\"A > B > B1\",true,',',true)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "draggedOnTopOfGroupAddsBeforeIt['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "WordKeywordGroup groupB = new WordKeywordGroup(\"B\",GroupHierarchyType.INCLUDING,StandardField.KEYWORDS,\"A > B\",true,',',true)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "groupCViewModel.draggedOn(groupAViewModel,DroppingMouseLocation.BOTTOM)@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "groupCViewModel.draggedOn(groupBViewModel,DroppingMouseLocation.TOP)@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "GroupNodeViewModel rootViewModel = getViewModelForGroup(new WordKeywordGroup(\"root\",GroupHierarchyType.INCLUDING,StandardField.KEYWORDS,\"A\",true,',',true))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "GroupNodeViewModel groupAViewModel = getViewModelForGroup(rootViewModel.addSubgroup(groupA))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "draggedOnTopOfGroupAddsBeforeIt['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "GroupNodeViewModel groupBViewModel = getViewModelForGroup(rootViewModel.addSubgroup(groupB))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "draggedOnBottomOfGroupAddsAfterIt['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertEquals(Arrays.asList(groupAViewModel,groupCViewModel,groupBViewModel),rootViewModel.getChildren())@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "WordKeywordGroup groupA = new WordKeywordGroup(\"A\",GroupHierarchyType.INCLUDING,StandardField.KEYWORDS,\"A\",true,',',true)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "GroupNodeViewModel groupCViewModel = getViewModelForGroup(rootViewModel.addSubgroup(groupC))@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->4 [style = solid, label="groupC"];
+4->3 [style = bold, label=""];
+12->5 [style = bold, label=""];
+0->6 [style = solid, label="groupA"];
+2->4 [style = bold, label=""];
+1->7 [style = bold, label=""];
+2->3 [style = solid, label="groupBViewModel"];
+6->2 [style = bold, label=""];
+6->11 [style = solid, label="groupAViewModel"];
+10->5 [style = bold, label=""];
+5->0 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->8 [style = bold, label=""];
+6->8 [style = solid, label="groupAViewModel"];
+7->6 [style = bold, label=""];
+9->5 [style = bold, label=""];
+4->8 [style = solid, label="groupCViewModel"];
+11->8 [style = bold, label=""];
+4->11 [style = bold, label=""];
+1->2 [style = solid, label="groupB"];
+2->8 [style = solid, label="groupBViewModel"];
+3->11 [style = dashed, label="0"];
+}

@@ -1,0 +1,33 @@
+digraph {
+2 [style = filled, label = "TableMetaData orderTable = new TableMetaData(Arrays.asList(new ColumnMetaData(\"order_id\",Types.INTEGER,\"INT\",true,true,false),new ColumnMetaData(\"user_id\",Types.INTEGER,\"INT\",false,false,false),new ColumnMetaData(\"status\",Types.VARCHAR,\"VARCHAR\",false,false,false)),Collections.emptyList())@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "tableMetaDataMap.put(\"logicName2\",new TableMetaData(Arrays.asList(new ColumnMetaData(\"item_id\",Types.INTEGER,\"int\",true,false,false),new ColumnMetaData(\"order_id\",Types.INTEGER,\"int\",false,false,false),new ColumnMetaData(\"user_id\",Types.INTEGER,\"int\",false,false,false),new ColumnMetaData(\"status\",Types.VARCHAR,\"varchar\",false,false,false),new ColumnMetaData(\"c_date\",Types.TIMESTAMP,\"timestamp\",false,false,false)),Collections.emptySet()))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "tables.put(\"t_order\",orderTable)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "buildSchema['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "TableMetaData orderTable = new TableMetaData(Arrays.asList(new ColumnMetaData(\"order_id\",Types.INTEGER,true,true,false),new ColumnMetaData(\"user_id\",Types.INTEGER,false,false,false),new ColumnMetaData(\"status\",Types.VARCHAR,false,false,false)),Collections.emptyList())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "Map<String,TableMetaData> tableMetaDataMap = new HashMap<>(3,1)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "tableMetaDataMap.put(\"logicName1\",new TableMetaData(Arrays.asList(new ColumnMetaData(\"order_id\",Types.INTEGER,\"int\",true,false,false),new ColumnMetaData(\"user_id\",Types.INTEGER,\"int\",false,false,false),new ColumnMetaData(\"status\",Types.INTEGER,\"int\",false,false,false)),Collections.emptySet()))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "getShardingSphereSchemaForMySQLSelectWithoutOrderBy['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "tableMetaDataMap.put(\"t_other\",new TableMetaData(Collections.singletonList(new ColumnMetaData(\"order_id\",Types.INTEGER,\"int\",true,false,false)),Collections.emptySet()))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "return new ShardingSphereSchema(tableMetaDataMap)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "getShardingSphereSchemaForMySQLSelectWithoutOrderBy['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "return new ShardingSphereSchema(tables)@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Map<String,TableMetaData> tables = new HashMap<>()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+6->0 [style = bold, label=""];
+9->12 [style = bold, label=""];
+5->1 [style = solid, label="orderTable"];
+7->12 [style = solid, label="tableMetaDataMap"];
+2->1 [style = solid, label="orderTable"];
+0->7 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+8->11 [style = bold, label=""];
+11->9 [style = bold, label=""];
+10->7 [style = bold, label=""];
+0->3 [style = solid, label="tables"];
+2->1 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

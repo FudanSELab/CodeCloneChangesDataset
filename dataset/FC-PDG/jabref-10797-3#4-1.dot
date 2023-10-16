@@ -1,0 +1,37 @@
+digraph {
+2 [style = filled, label = "KeywordList actual = entry.getResolvedKeywords(',',database)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testGetEmptyResolvedKeywords['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "assertEquals(new KeywordList(new Keyword(\"kw\")),actual)@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testGetEmptyResolvedKeywords['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "database.insertEntry(entry)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "entry.setField(FieldName.CROSSREF,\"entry2\")@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "entry2.addKeyword(\"kw\",',')@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "entry.setField(StandardField.CROSSREF,\"entry2\")@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "BibEntry entry2 = new BibEntry()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "BibDatabase database = new BibDatabase()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(new KeywordList(),actual)@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testGetSingleResolvedKeywords['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "entry2.setCiteKey(\"entry2\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "database.insertEntry(entry2)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->3 [style = bold, label=""];
+9->0 [style = bold, label=""];
+7->3 [style = solid, label="entry2"];
+7->10 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->4 [style = bold, label=""];
+10->6 [style = bold, label=""];
+8->13 [style = dashed, label="0"];
+2->13 [style = bold, label=""];
+0->7 [style = bold, label=""];
+0->2 [style = solid, label="database"];
+7->5 [style = bold, label=""];
+11->0 [style = bold, label=""];
+5->6 [style = bold, label=""];
+2->13 [style = solid, label="actual"];
+5->10 [style = dashed, label="0"];
+2->8 [style = solid, label="actual"];
+12->3 [style = bold, label=""];
+2->8 [style = bold, label=""];
+6->12 [style = bold, label=""];
+}

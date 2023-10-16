@@ -1,0 +1,37 @@
+digraph {
+3 [style = filled, label = "DataSet<Integer> ds2 = env.fromElements(1,2)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "DataSet<Tuple2<Tuple3<Integer,Long,String>,Integer>> joinDs = ds1.fullOuterJoin(ds2).where(0).equalTo(\"*\").with(new ProjectBothFunction<Tuple3<Integer,Long,String>,Integer>()).returns(\"Tuple2<java.lang.Object,java.lang.Object>\")@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "DataSet<Tuple2<Tuple3<Integer,Long,String>,Integer>> joinDs = ds1.fullOuterJoin(ds2).where(0).equalTo(\"*\").with(new ProjectBothFunction<Tuple3<Integer,Long,String>,Integer>()).returns(new GenericTypeInfo())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "final ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "DataSet<Tuple2<Tuple3<Integer,Long,String>,Integer>> joinDs = ds1.join(ds2).where(0).equalTo(\"*\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testJoinWithAtomicType1['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "testJoinWithAtomicType1['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "List<Tuple2<Tuple3<Integer,Long,String>,Integer>> result = joinDs.collect()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testJoinWithAtomicType1['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "String expected = \"(1,1,Hi),1\" + \"(2,2,Hello),2\" + \"(3,2,Hello world),null\"@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "compareResultAsTuples(result,expected)@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "DataSet<Tuple3<Integer,Long,String>> ds1 = CollectionDataSets.getSmall3TupleDataSet(env)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "String expected = \"(1,1,Hi),1\" + \"(2,2,Hello),2\"@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->10 [style = bold, label=""];
+10->2 [style = solid, label="expected"];
+5->2 [style = solid, label="result"];
+9->4 [style = bold, label=""];
+1->3 [style = bold, label=""];
+3->11 [style = bold, label=""];
+6->2 [style = solid, label="expected"];
+0->11 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+3->0 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+11->5 [style = bold, label=""];
+5->6 [style = bold, label=""];
+8->5 [style = bold, label=""];
+12->4 [style = bold, label=""];
+3->8 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+10->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+4->1 [style = solid, label="env"];
+0->5 [style = bold, label=""];
+}

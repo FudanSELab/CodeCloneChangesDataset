@@ -1,0 +1,23 @@
+digraph {
+7 [style = filled, label = "final Pod basicPod = new PodBuilder(flinkPod.getPod()).withApiVersion(API_VERSION).editOrNewMetadata().withLabels(kubernetesJobManagerParameters.getLabels()).withAnnotations(kubernetesJobManagerParameters.getAnnotations()).endMetadata().editOrNewSpec().withServiceAccountName(kubernetesJobManagerParameters.getServiceAccount()).withImagePullSecrets(kubernetesJobManagerParameters.getImagePullSecrets()).withNodeSelector(kubernetesJobManagerParameters.getNodeSelector()).withTolerations(kubernetesJobManagerParameters.getTolerations().stream().map(null).collect(Collectors.toList())).endSpec().build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return new FlinkPod.Builder(flinkPod).withPod(basicPod).withMainContainer(basicMainContainer).build()@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "decorateFlinkPod['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final Pod basicPod = new PodBuilder(flinkPod.getPod()).withApiVersion(Constants.API_VERSION).editOrNewMetadata().withName(kubernetesTaskManagerParameters.getPodName()).withLabels(kubernetesTaskManagerParameters.getLabels()).withAnnotations(kubernetesTaskManagerParameters.getAnnotations()).endMetadata().editOrNewSpec().withRestartPolicy(Constants.RESTART_POLICY_OF_NEVER).withImagePullSecrets(kubernetesTaskManagerParameters.getImagePullSecrets()).withNodeSelector(kubernetesTaskManagerParameters.getNodeSelector()).withTolerations(kubernetesTaskManagerParameters.getTolerations().stream().map(null).collect(Collectors.toList())).endSpec().build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "FlinkPod flinkPod@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "decorateFlinkPod['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "decorateFlinkPod['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "final Pod basicPod = new PodBuilder(flinkPod.getPod()).withApiVersion(Constants.API_VERSION).editOrNewMetadata().withName(kubernetesTaskManagerParameters.getPodName()).withLabels(kubernetesTaskManagerParameters.getLabels()).withAnnotations(kubernetesTaskManagerParameters.getAnnotations()).endMetadata().editOrNewSpec().withServiceAccountName(kubernetesTaskManagerParameters.getServiceAccount()).withRestartPolicy(Constants.RESTART_POLICY_OF_NEVER).withImagePullSecrets(kubernetesTaskManagerParameters.getImagePullSecrets()).withNodeSelector(kubernetesTaskManagerParameters.getNodeSelector()).withTolerations(kubernetesTaskManagerParameters.getTolerations().stream().map(null).collect(Collectors.toList())).endSpec().build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "final Container basicMainContainer = decorateMainContainer(flinkPod.getMainContainer())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+8->2 [style = dotted, label="true"];
+3->1 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+4->2 [style = dotted, label="true"];
+7->3 [style = bold, label=""];
+8->7 [style = bold, label=""];
+4->0 [style = bold, label=""];
+5->2 [style = dotted, label="true"];
+}

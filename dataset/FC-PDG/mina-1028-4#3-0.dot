@@ -1,0 +1,35 @@
+digraph {
+10 [style = filled, label = "out.rewind()@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "testEncodedSize['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "testEncodedSize['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "out.position(0)@@@10@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(object,decoder.decode(IoBuffer.wrap(out)))@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(size,out.position())@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ByteBuffer out = ByteBuffer.allocate(size)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testSerialization['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ByteBufferEncoder<T> encoder = getEncoder()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "IoBufferDecoder<T> decoder = getDecoder()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertEquals(object,decoder.decode(IoBuffer.wrap(encoder.encode(object))))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "encoder.writeTo(object,out)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "int size = encoder.getEncodedSize(object)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+3->10 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+0->11 [style = dashed, label="0"];
+6->0 [style = bold, label=""];
+7->1 [style = bold, label=""];
+1->0 [style = bold, label=""];
+0->4 [style = solid, label="size"];
+4->6 [style = solid, label="out"];
+3->2 [style = bold, label=""];
+9->7 [style = bold, label=""];
+0->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->6 [style = bold, label=""];
+10->6 [style = bold, label=""];
+12->7 [style = bold, label=""];
+0->3 [style = solid, label="size"];
+8->7 [style = bold, label=""];
+1->11 [style = bold, label=""];
+4->5 [style = solid, label="out"];
+}

@@ -1,0 +1,31 @@
+digraph {
+1 [style = filled, label = "ByteString byteString = ByteString.copyFrom(testString,UTF_16)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ByteString byteString = ByteString.copyFromUtf8(testString)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testCopyFrom_Utf8['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "byte(( testBytes = testString.getBytes(UTF_16)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testCopyFrom_StringEncoding['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "testCopyFrom_StringEncoding['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertTrue(\"copyFrom string must respect the charset\",isArrayRange(byteString.toByteArray(),testBytes,0,testBytes.length))@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "assertWithMessage(\"copyFrom string must respect the charset\").that(isArrayRange(byteString.toByteArray(),testBytes,0,testBytes.length)).isTrue()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "assertTrue(\"copyFromUtf8 string must respect the charset\",isArrayRange(byteString.toByteArray(),testBytes,0,testBytes.length))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "byte(( testBytes = testString.getBytes(Internal.UTF_8)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "String testString = \"I love unicode ሴ噸 characters\"@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->5 [style = dashed, label="0"];
+4->1 [style = solid, label="testString"];
+6->4 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->3 [style = bold, label=""];
+10->9 [style = bold, label=""];
+8->4 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+3->9 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+7->10 [style = bold, label=""];
+4->7 [style = bold, label=""];
+2->3 [style = solid, label="testBytes"];
+10->9 [style = solid, label="testBytes"];
+2->5 [style = bold, label=""];
+4->7 [style = solid, label="testString"];
+}

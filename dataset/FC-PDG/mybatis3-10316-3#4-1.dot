@@ -1,0 +1,35 @@
+digraph {
+10 [style = filled, label = "String url = postgres.start(EmbeddedPostgres.cachedRuntimeConfig(Paths.get(System.getProperty(\"java.io.tmpdir\"),\"pgembed\")),\"localhost\",SocketUtil.findFreePort(),\"keycolumn\",\"postgres\",\"root\",Collections.emptyList())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "String url = postgres.start(EmbeddedPostgres.cachedRuntimeConfig(Paths.get(System.getProperty(\"java.io.tmpdir\"),\"pgembed\")),\"localhost\",SocketUtil.findFreePort(),\"refcursor\",\"postgres\",\"root\",Collections.emptyList())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "configuration.setEnvironment(environment)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "setUp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "setUp['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "BaseDataTest.runScript(sqlSessionFactory.getConfiguration().getEnvironment().getDataSource(),\"org/apache/ibatis/submitted/keycolumn/CreateDB.sql\")@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "BaseDataTest.runScript(sqlSessionFactory.getConfiguration().getEnvironment().getDataSource(),\"org/apache/ibatis/submitted/refcursor/CreateDB.sql\")@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Environment environment = new Environment(\"development\",new JdbcTransactionFactory(),new UnpooledDataSource(\"org.postgresql.Driver\",url,null))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "setUp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "configuration.addMapper()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Configuration configuration = new Configuration()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "configuration.addMapper()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->12 [style = dashed, label="0"];
+6->3 [style = bold, label=""];
+10->0 [style = solid, label="url"];
+1->6 [style = bold, label=""];
+4->2 [style = bold, label=""];
+10->5 [style = bold, label=""];
+3->12 [style = bold, label=""];
+9->10 [style = bold, label=""];
+5->0 [style = bold, label=""];
+3->7 [style = bold, label=""];
+8->2 [style = bold, label=""];
+11->3 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->0 [style = solid, label="url"];
+0->1 [style = solid, label="environment"];
+5->3 [style = solid, label="configuration"];
+2->10 [style = dashed, label="0"];
+1->11 [style = bold, label=""];
+2->5 [style = bold, label=""];
+6->11 [style = dashed, label="0"];
+}

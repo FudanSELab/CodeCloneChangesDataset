@@ -1,0 +1,29 @@
+digraph {
+10 [style = filled, label = "beanStore.beanCreateMethodFinder().addBean(,v.get()).find(\"createDestroyMethods\").run(null)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "createDestroyMethods['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "BeanStore beanStore@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "Object r = resource.get()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "return v.get()@@@6@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "BeanStore.of(beanStore,r).addBean(,v.get()).beanCreateMethodFinder(,r).find(\"createDestroyMethods\").run(null)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "BeanStore beanStore@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "createDestroyMethods['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "return v.get()@@@5@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "return append(,,,,,,,,,,,,,,)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "addDefault['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Value<MethodList> v = Value.of(getHookMethods(resource,HookEvent.DESTROY))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Supplier<?> resource@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2->1 [style = solid, label="resource"];
+7->2 [style = dotted, label="true"];
+5->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+4->3 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+11->12 [style = bold, label=""];
+1->6 [style = bold, label=""];
+7->1 [style = bold, label=""];
+5->0 [style = dotted, label="true"];
+7->9 [style = dotted, label="true"];
+10->8 [style = bold, label=""];
+1->10 [style = bold, label=""];
+5->2 [style = dotted, label="true"];
+}

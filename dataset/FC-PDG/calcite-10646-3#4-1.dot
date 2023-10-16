@@ -1,0 +1,31 @@
+digraph {
+0 [style = filled, label = "assertThat(da.startState,is(new DeterministicAutomaton.MultiState(new Automaton.State(0),new Automaton.State(2))))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final Pattern pattern = builder.symbol(\"A\").symbol(\"B\").optional().seq().symbol(\"A\").seq().build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final Pattern pattern = builder.symbol(\"A\").repeat(1,2).build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "convertAutomaton4['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertThat(da.getTransitions().size(),is(4))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "convertAutomaton['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "final DeterministicAutomaton da = new DeterministicAutomaton(automaton)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(da.getEndStates().size(),is(1))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final Pattern.PatternBuilder builder = Pattern.builder()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final Automaton automaton = pattern.toAutomaton()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "convertAutomaton['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(da.getEndStates().size(),is(2))@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(da.getTransitions().size(),is(2))@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+3->10 [style = bold, label=""];
+7->10 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+10->2 [style = bold, label=""];
+11->12 [style = bold, label=""];
+4->11 [style = bold, label=""];
+3->7 [style = bold, label=""];
+2->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+0->6 [style = bold, label=""];
+2->4 [style = solid, label="automaton"];
+4->0 [style = bold, label=""];
+8->3 [style = bold, label=""];
+6->12 [style = dashed, label="0"];
+}

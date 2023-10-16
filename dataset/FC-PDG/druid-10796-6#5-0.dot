@@ -1,0 +1,27 @@
+digraph {
+5 [style = filled, label = "queryResource = new QueryResource(new QueryLifecycleFactory(WAREHOUSE,texasRanger,new DefaultGenericQueryMetricsFactory(),new NoopServiceEmitter(),testRequestLogger,new AuthConfig(),AuthTestUtils.TEST_AUTHORIZER_MAPPER),JSON_MAPPER,JSON_MAPPER,scheduler,new AuthConfig(),null,new DefaultGenericQueryMetricsFactory())@@@25@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "queryResource = new QueryResource(new QueryLifecycleFactory(WAREHOUSE,texasRanger,new DefaultGenericQueryMetricsFactory(),new NoopServiceEmitter(),testRequestLogger,new AuthConfig(),AuthTestUtils.TEST_AUTHORIZER_MAPPER),JSON_MAPPER,JSON_MAPPER,scheduler,new AuthConfig(),null,ResponseContextConfig.newConfig(true),DRUID_NODE)@@@25@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "QueryScheduler scheduler@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "createScheduledQueryResource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "QueryScheduler scheduler@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "QuerySegmentWalker texasRanger = new QuerySegmentWalker(){@Override public QueryRunner<T> getQueryRunnerForIntervals(Query<T> query,Iterable<Interval> intervals){return null}@Override public QueryRunner<T> getQueryRunnerForSegments(Query<T> query,Iterable<SegmentDescriptor> specs){return getQueryRunnerForIntervals(null,null)}}@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Collection<CountDownLatch> inScheduler@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "Collection<CountDownLatch> beforeScheduler@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "createScheduledQueryResource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Collection<CountDownLatch> beforeScheduler@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8->7 [style = dotted, label="true"];
+0->5 [style = solid, label="scheduler"];
+1->2 [style = bold, label=""];
+2->5 [style = solid, label="texasRanger"];
+1->0 [style = dotted, label="true"];
+1->4 [style = dotted, label="true"];
+8->9 [style = dotted, label="true"];
+2->6 [style = solid, label="texasRanger"];
+5->6 [style = dashed, label="0"];
+9->6 [style = solid, label="scheduler"];
+8->2 [style = bold, label=""];
+2->6 [style = bold, label=""];
+8->4 [style = dotted, label="true"];
+2->5 [style = bold, label=""];
+1->3 [style = dotted, label="true"];
+}

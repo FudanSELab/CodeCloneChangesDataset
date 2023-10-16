@@ -1,0 +1,31 @@
+digraph {
+0 [style = filled, label = "stopCQ['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final String cqName@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "final String queryStr@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "vm.invoke(null)@@@3@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "stopCQ['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "VM vm@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "vm.invoke(new CacheSerializableRunnable(\"Create CQ :\" + cqName){public void run2(){LogWriterUtils.getLogWriter().info(\"### Create CQ. ###\" + cqName)QueryService cqService = nulltry {cqService = getCache().getQueryService()}catch (Exception cqe) CqAttributesFactory cqf = new CqAttributesFactory()CqListener(( cqListeners = {new CqQueryTestListener(LogWriterUtils.getLogWriter())}cqf.initCqListeners(cqListeners)CqAttributes cqa = cqf.create()CqQuery cq1try {cq1 = cqService.newCq(cqName,queryStr,cqa)assertTrue(\"newCq() state mismatch\",cq1.getState().isStopped())}catch (Exception ex) try {cq1.executeWithInitialResults()try {cq1.executeWithInitialResults()}catch (IllegalStateException e) cq1.close()try {cq1.executeWithInitialResults()}catch (CqClosedException e) fail(\"should have received cqClosedException\")}catch (Exception e) }})@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "vm.invoke(new CacheSerializableRunnable(\"Stop CQ :\" + cqName){public void run2(){LogWriterUtils.getLogWriter().info(\"### Stop CQ. ###\" + cqName)QueryService cqService = nulltry {cqService = getCache().getQueryService()}catch (Exception cqe) CqQuery cq1 = nulltry {cq1 = cqService.getCq(cqName)cq1.stop()}catch (Exception ex) assertTrue(\"Stop CQ state mismatch\",cq1.getState().isStopped())}})@@@3@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final String cqName@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "VM vm@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "executeAndCloseAndExecuteIRMultipleTimes['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "VM vm@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final String cqName@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+0->3 [style = bold, label=""];
+2->3 [style = solid, label="cqName"];
+4->5 [style = dotted, label="true"];
+4->7 [style = dotted, label="true"];
+10->8 [style = dotted, label="true"];
+2->11 [style = dashed, label="0"];
+0->2 [style = dotted, label="true"];
+3->12 [style = dashed, label="0"];
+2->7 [style = dashed, label="0"];
+10->9 [style = dotted, label="true"];
+9->12 [style = solid, label="cqName"];
+10->11 [style = dotted, label="true"];
+4->6 [style = bold, label=""];
+10->12 [style = bold, label=""];
+11->12 [style = solid, label="queryStr"];
+0->1 [style = dotted, label="true"];
+}

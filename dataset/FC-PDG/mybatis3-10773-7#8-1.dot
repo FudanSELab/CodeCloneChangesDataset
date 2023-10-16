@@ -1,0 +1,32 @@
+digraph {
+10 [style = filled, label = "shouldFailCallingAnUnloadedProperty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "HashMap<String,ResultLoaderMap.LoadPair> unloadedProperties = new HashMap<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "HashMap<String,ResultLoaderMap.LoadPair> unloadedProperties = new HashMap<String,ResultLoaderMap.LoadPair>()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "unloadedProperties.put(\"ID\",null)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Author author2 = (Author)((JavassistProxyFactory)proxyFactory).createDeserializationProxy(author,unloadedProperties,new DefaultObjectFactory(),new ArrayList<Class<?>>(),new ArrayList<Object>())@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "HashMap<String,ResultLoaderMap.LoadPair> unloadedProperties = new HashMap<String,ResultLoaderMap.LoadPair>()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "shouldFailCallingAnUnloadedProperty['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Author author2 = (Author)((CglibProxyFactory)proxyFactory).createDeserializationProxy(author,unloadedProperties,new DefaultObjectFactory(),new ArrayList<Class<?>>(),new ArrayList<Object>())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "shouldFailCallingAnUnloadedProperty['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "Author author2 = (Author)((JavassistProxyFactory)proxyFactory).createDeserializationProxy(author,unloadedProperties,new DefaultObjectFactory(),new ArrayList<>(),new ArrayList<>())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "Assertions.assertThrows(,null)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+4->2 [style = bold, label=""];
+2->7 [style = bold, label=""];
+5->6 [style = bold, label=""];
+2->9 [style = bold, label=""];
+8->2 [style = bold, label=""];
+10->8 [style = bold, label=""];
+4->1 [style = solid, label="unloadedProperties"];
+0->4 [style = bold, label=""];
+6->7 [style = solid, label="unloadedProperties"];
+4->6 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+7->3 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+8->9 [style = solid, label="unloadedProperties"];
+6->2 [style = bold, label=""];
+}

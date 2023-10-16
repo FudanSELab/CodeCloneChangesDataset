@@ -1,0 +1,32 @@
+digraph {
+9 [style = filled, label = "Map<String,?> options@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Map<String,?> options@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "Reader input@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "return new MetadataXpp3Reader().read(in,isStrict(options))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "InputStream input@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "read['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "read['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "InputStream input@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Objects.requireNonNull(input,\"input cannot be null\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return new MavenToolchainsXpp3Reader().read(in,isStrict(options))@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "read['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->9 [style = dashed, label="0"];
+10->2 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+1->4 [style = solid, label="options"];
+7->2 [style = solid, label="input"];
+9->8 [style = solid, label="options"];
+1->2 [style = solid, label="input"];
+3->2 [style = bold, label=""];
+10->9 [style = dotted, label="true"];
+2->4 [style = bold, label=""];
+5->4 [style = solid, label="options"];
+3->1 [style = dotted, label="true"];
+0->2 [style = solid, label="input"];
+10->7 [style = dotted, label="true"];
+2->8 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+3->0 [style = dotted, label="true"];
+6->2 [style = bold, label=""];
+6->1 [style = dotted, label="true"];
+}

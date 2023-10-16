@@ -1,0 +1,11 @@
+digraph {
+0 [style = filled, label = "getEncoderDecoder['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return new EncoderDecoder<ComplexNumberJpa>(){@Override public String toEncodedString(ComplexNumberJpa cn){if (cn == null) {return null}val re = Double.doubleToLongBits(cn.getRe())val im = Double.doubleToLongBits(cn.getIm())return String.format(\"%s:%s\",Long.toHexString(re),Long.toHexString(im))}@Override public ComplexNumberJpa fromEncodedString(String str){if (_NullSafe.isEmpty(str)) {return null}val chunks = _Strings.splitThenStream(str,\":\").limit(2).collect(Collectors.toList())if (chunks.size() < 2) {throw new IllegalArgumentException(\"Invalid format \" + str)}val re = Double.longBitsToDouble(Long.parseLong(chunks.get(0),16))val im = Double.longBitsToDouble(Long.parseLong(chunks.get(1),16))return ComplexNumberJpa.of(re,im)}}@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return new EncoderDecoder<ComplexNumberJdo>(){@Override public String toEncodedString(final ComplexNumberJdo cn){if (cn == null) {return null}val re = Double.doubleToLongBits(cn.getRe())val im = Double.doubleToLongBits(cn.getIm())return String.format(\"%s:%s\",Long.toHexString(re),Long.toHexString(im))}@Override public ComplexNumberJdo fromEncodedString(final String str){if (_NullSafe.isEmpty(str)) {return null}val chunks = _Strings.splitThenStream(str,\":\").limit(2).collect(Collectors.toList())if (chunks.size() < 2) {throw new IllegalArgumentException(\"Invalid format \" + str)}val re = Double.longBitsToDouble(Long.parseLong(chunks.get(0),16))val im = Double.longBitsToDouble(Long.parseLong(chunks.get(1),16))return ComplexNumberJdo.of(re,im)}}@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "getEncoderDecoder['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "getEncoderDecoder['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->4 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+}

@@ -1,0 +1,30 @@
+digraph {
+7 [style = filled, label = "GroupByQuery subquery = makeQueryBuilder().setDataSource(QueryRunnerTestHelper.DATA_SOURCE).setQuerySegmentSpec(QueryRunnerTestHelper.EMPTY_INTERVAL).setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\")).setAggregatorSpecs(QueryRunnerTestHelper.ROWS_COUNT,new LongSumAggregatorFactory(\"idx\",\"index\")).setGranularity(QueryRunnerTestHelper.DAY_GRAN).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "testEmptySubqueryWithLimitPushDown['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "GroupByQuery subquery = makeQueryBuilder().setDataSource(QueryRunnerTestHelper.dataSource).setQuerySegmentSpec(QueryRunnerTestHelper.emptyInterval).setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\")).setAggregatorSpecs(QueryRunnerTestHelper.rowsCount,new LongSumAggregatorFactory(\"idx\",\"index\")).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(\"alias\",OrderByColumnSpec.Direction.DESCENDING)),5)).setGranularity(QueryRunnerTestHelper.dayGran).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "GroupByQuery subquery = makeQueryBuilder().setDataSource(QueryRunnerTestHelper.dataSource).setQuerySegmentSpec(QueryRunnerTestHelper.emptyInterval).setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\")).setAggregatorSpecs(QueryRunnerTestHelper.rowsCount,new LongSumAggregatorFactory(\"idx\",\"index\")).setGranularity(QueryRunnerTestHelper.dayGran).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "GroupByQuery query = makeQueryBuilder().setDataSource(subquery).setQuerySegmentSpec(QueryRunnerTestHelper.firstToThird).setAggregatorSpecs(new DoubleMaxAggregatorFactory(\"idx\",\"idx\")).setLimitSpec(new DefaultLimitSpec(null,5)).setGranularity(QueryRunnerTestHelper.dayGran).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testEmptySubquery['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "Assert.assertFalse(results.iterator().hasNext())@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "GroupByQuery query = makeQueryBuilder().setDataSource(subquery).setQuerySegmentSpec(QueryRunnerTestHelper.FIRST_TO_THIRD).setAggregatorSpecs(new DoubleMaxAggregatorFactory(\"idx\",\"idx\")).setGranularity(QueryRunnerTestHelper.DAY_GRAN).build()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "GroupByQuery query = makeQueryBuilder().setDataSource(subquery).setQuerySegmentSpec(QueryRunnerTestHelper.firstToThird).setAggregatorSpecs(new DoubleMaxAggregatorFactory(\"idx\",\"idx\")).setGranularity(QueryRunnerTestHelper.dayGran).build()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "Iterable<ResultRow> results = GroupByQueryRunnerTestHelper.runQuery(factory,runner,query)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testEmptySubquery['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->7 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+6->3 [style = solid, label="query"];
+9->3 [style = solid, label="query"];
+2->3 [style = solid, label="query"];
+10->8 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+2->9 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+7->6 [style = bold, label=""];
+2->3 [style = bold, label=""];
+8->9 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

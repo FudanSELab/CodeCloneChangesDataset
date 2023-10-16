@@ -1,0 +1,35 @@
+digraph {
+0 [style = filled, label = "testSegmentGranularityAndNullQueryGranularity['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testSegmentGranularityAndNullQueryGranularity['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "testQueryGranularityAndSegmentGranularityNonNull['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertIngestionSchema(ingestionSpecs,expectedDimensionsSpec,AGGREGATORS,Collections.singletonList(COMPACTION_INTERVAL),new PeriodGranularity(Period.months(3),null,null),Granularities.NONE,IOConfig.DEFAULT_DROP_EXISTING)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "final List<DimensionsSpec> expectedDimensionsSpec = ImmutableList.of(new DimensionsSpec(getDimensionSchema(new DoubleDimensionSchema(\"string_to_double\"))))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Assert.assertEquals(1,ingestionSpecs.size())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertIngestionSchema(ingestionSpecs,expectedDimensionsSpec,AGGREGATORS,Collections.singletonList(COMPACTION_INTERVAL),new PeriodGranularity(Period.months(3),null,null),new PeriodGranularity(Period.months(3),null,null))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "final List<ParallelIndexIngestionSpec> ingestionSpecs = CompactionTask.createIngestionSchema(toolbox,LockGranularity.TIME_CHUNK,new SegmentProvider(DATA_SOURCE,new CompactionIntervalSpec(COMPACTION_INTERVAL,null)),new PartitionConfigurationManager(TUNING_CONFIG),null,null,new ClientCompactionTaskGranularitySpec(new PeriodGranularity(Period.months(3),null,null),new PeriodGranularity(Period.months(3),null,null)),COORDINATOR_CLIENT,segmentLoaderFactory,RETRY_POLICY_FACTORY)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ingestionSpecs.sort(null)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final List<ParallelIndexIngestionSpec> ingestionSpecs = CompactionTask.createIngestionSchema(toolbox,LockGranularity.TIME_CHUNK,new SegmentProvider(DATA_SOURCE,new CompactionIntervalSpec(COMPACTION_INTERVAL,null)),new PartitionConfigurationManager(TUNING_CONFIG),null,null,new ClientCompactionTaskGranularitySpec(new PeriodGranularity(Period.months(3),null,null),null),COORDINATOR_CLIENT,segmentLoaderFactory,RETRY_POLICY_FACTORY)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "assertIngestionSchema(ingestionSpecs,expectedDimensionsSpec,AGGREGATORS,Collections.singletonList(COMPACTION_INTERVAL),new PeriodGranularity(Period.months(3),null,null),Granularities.NONE)@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "final List<ParallelIndexIngestionSpec> ingestionSpecs = CompactionTask.createIngestionSchema(toolbox,LockGranularity.TIME_CHUNK,new SegmentProvider(DATA_SOURCE,new CompactionIntervalSpec(COMPACTION_INTERVAL,null)),new PartitionConfigurationManager(TUNING_CONFIG),null,null,new ClientCompactionTaskGranularitySpec(new PeriodGranularity(Period.months(3),null,null),null),COORDINATOR_CLIENT,segmentLoaderFactory,RETRY_POLICY_FACTORY,IOConfig.DEFAULT_DROP_EXISTING)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5->9 [style = solid, label="expectedDimensionsSpec"];
+5->7 [style = solid, label="expectedDimensionsSpec"];
+5->2 [style = solid, label="expectedDimensionsSpec"];
+1->3 [style = bold, label=""];
+8->6 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+2->7 [style = dashed, label="0"];
+4->2 [style = solid, label="ingestionSpecs"];
+3->9 [style = bold, label=""];
+5->1 [style = bold, label=""];
+6->5 [style = bold, label=""];
+10->5 [style = bold, label=""];
+3->2 [style = bold, label=""];
+3->7 [style = bold, label=""];
+0->4 [style = bold, label=""];
+11->10 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+6->7 [style = solid, label="ingestionSpecs"];
+4->10 [style = dashed, label="0"];
+10->9 [style = solid, label="ingestionSpecs"];
+4->5 [style = bold, label=""];
+}

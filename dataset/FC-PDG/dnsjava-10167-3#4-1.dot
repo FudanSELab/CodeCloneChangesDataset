@@ -1,0 +1,23 @@
+digraph {
+1 [style = filled, label = "writeCountedString_basic['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "byte(( exp = new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1517bb1@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "writeCountedString_basic['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "byte(( in = new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1517b92@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertArrayEquals(exp,curr)@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(in.length + 1,m_do.current())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "writeCountedString_empty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "m_do.writeCountedString(in)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "byte(( curr = m_do.toByteArray()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->2 [style = solid, label="in"];
+0->3 [style = bold, label=""];
+1->5 [style = bold, label=""];
+3->6 [style = bold, label=""];
+7->5 [style = bold, label=""];
+2->4 [style = solid, label="exp"];
+8->5 [style = bold, label=""];
+5->0 [style = bold, label=""];
+5->0 [style = solid, label="in"];
+6->4 [style = solid, label="curr"];
+2->4 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

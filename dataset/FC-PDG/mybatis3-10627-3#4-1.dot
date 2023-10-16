@@ -1,0 +1,32 @@
+digraph {
+3 [style = filled, label = "shouldAssingKeysToCollection['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "shouldAssingKeysToCollection['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "countries.add(new Country(\"China\",\"CN\"))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "{sqlSession.rollback()}@@@14@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "CountryMapper mapper = sqlSession.getMapper()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "shouldAssingKeysToNamedCollection['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "mapper.insertSet(countries)@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Set<Country> countries = new HashSet<Country>()@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertNotNull(country.getId())@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "mapper.insertNamedSet(countries)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "Set<Country> countries = new HashSet<>()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "countries.add(new Country(\"United Kiongdom\",\"GB\"))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->1 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+9->0 [style = solid, label="countries"];
+7->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+2->7 [style = bold, label=""];
+5->6 [style = bold, label=""];
+10->5 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+9->2 [style = bold, label=""];
+7->10 [style = bold, label=""];
+11->1 [style = bold, label=""];
+4->0 [style = solid, label="countries"];
+4->10 [style = solid, label="countries"];
+1->9 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

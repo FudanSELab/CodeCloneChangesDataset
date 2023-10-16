@@ -1,0 +1,20 @@
+digraph {
+3 [style = filled, label = "return Maps.newHashMap()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "getRunningTasks['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "getRunningTasks['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testTask == null@@@3@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return new HashMap<>()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "return ImmutableMap.of(testTask.getId(),TaskAnnouncement.create(testTask,TaskStatus.running(testTask.getId()),TaskLocation.unknown()))@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "getRunningTasks['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+0->3 [style = dotted, label="true"];
+6->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+5->0 [style = bold, label=""];
+3->4 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+0->4 [style = dotted, label="true"];
+}

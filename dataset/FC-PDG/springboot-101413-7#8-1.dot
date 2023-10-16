@@ -1,0 +1,29 @@
+digraph {
+9 [style = filled, label = "assertThat(result.getItems()).hasSize(5)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertThat(result.getItems()).containsExactly(\"a\",\"b\",\"c\",\"c\",\"d\")@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertThat(result.getItems()).containsExactly(\"a\",\"b\",\"c\",\"c\")@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "bindToListShouldAllowDuplicateValues['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "this.sources.add(source)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "MockConfigurationPropertySource source = new MockConfigurationPropertySource()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "bindToCollectionWithNoDefaultConstructor['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "ExampleCollectionBean result = this.binder.bind(\"foo\",).get()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(result.getItems()).hasSize(4)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "source.put(\"foo.items\",\"a,b,c,c\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "bindToCollectionWithNoDefaultConstructor['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ExampleCustomNoDefaultConstructorBean result = this.binder.bind(\"foo\",).get()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->8 [style = bold, label=""];
+6->1 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+4->6 [style = solid, label="source"];
+7->4 [style = bold, label=""];
+5->6 [style = bold, label=""];
+9->10 [style = bold, label=""];
+0->4 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+2->3 [style = bold, label=""];
+11->4 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

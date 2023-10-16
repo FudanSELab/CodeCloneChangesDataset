@@ -1,0 +1,36 @@
+digraph {
+2 [style = filled, label = "assertEquals(1,message.getInt32ToEnumFieldValueOrThrow(1))@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(0,message.getInt32ToEnumFieldValueOrThrow(0))@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testPutForUnknownEnumValues['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertThat(message.getInt32ToEnumFieldCount()).isEqualTo(3)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "assertThat(message.getInt32ToEnumFieldValueOrThrow(1)).isEqualTo(1)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+14 [style = filled, label = "TestMap message = builder.build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertThat(message.getInt32ToEnumFieldValueOrThrow(2)).isEqualTo(1000)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "TestMap.Builder builder = TestMap.newBuilder().putInt32ToEnumFieldValue(0,0).putInt32ToEnumFieldValue(1,1).putInt32ToEnumFieldValue(2,1000)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testPutForUnknownEnumValues['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "assertEquals(3,message.getInt32ToEnumFieldCount())@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testPutForUnknownEnumValues['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "TestMap message = TestMap.newBuilder().putInt32ToEnumFieldValue(0,0).putInt32ToEnumFieldValue(1,1).putInt32ToEnumFieldValue(2,1000).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(message.getInt32ToEnumFieldValueOrThrow(0)).isEqualTo(0)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "assertEquals(0,message.getInt32ToEnumFieldValueOrThrow(0))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "assertEquals(1000,message.getInt32ToEnumFieldValueOrThrow(2))@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+3->9 [style = bold, label=""];
+14->4 [style = bold, label=""];
+4->2 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+5->7 [style = dashed, label="0"];
+3->11 [style = dashed, label="0"];
+5->12 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+11->14 [style = bold, label=""];
+10->7 [style = bold, label=""];
+13->11 [style = bold, label=""];
+6->10 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+9->6 [style = bold, label=""];
+2->5 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

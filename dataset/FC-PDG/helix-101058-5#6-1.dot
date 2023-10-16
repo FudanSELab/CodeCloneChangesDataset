@@ -1,0 +1,26 @@
+digraph {
+6 [style = filled, label = "System.out.println(\"End test :\" + TestHelper.getTestMethodName())@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "testGetJobContext['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Assert.assertEquals(node.get(\"STATE\").getTextValue(),TaskState.IN_PROGRESS.name())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Assert.assertEquals(node.get(\"mapFields\").get(\"0\").get(\"STATE\").getTextValue(),TaskPartitionState.COMPLETED.name())@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testGetWorkflowContext['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "testGetWorkflowContext['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "String body = get(\"clusters/\" + CLUSTER_NAME + \"/workflows/\" + WORKFLOW_NAME + \"/jobs/\" + JOB_NAME + \"/context\",null,Response.Status.OK.getStatusCode(),true)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "System.out.println(\"Start test :\" + TestHelper.getTestMethodName())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "JsonNode node = OBJECT_MAPPER.readTree(body)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "String body = get(\"clusters/\" + CLUSTER_NAME + \"/workflows/\" + WORKFLOW_NAME + \"/context\",null,Response.Status.OK.getStatusCode(),true)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->4 [style = solid, label="body"];
+4->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+1->0 [style = bold, label=""];
+8->4 [style = bold, label=""];
+9->0 [style = bold, label=""];
+5->0 [style = bold, label=""];
+2->4 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+8->4 [style = solid, label="body"];
+3->7 [style = dashed, label="0"];
+4->7 [style = bold, label=""];
+0->2 [style = bold, label=""];
+0->8 [style = bold, label=""];
+}

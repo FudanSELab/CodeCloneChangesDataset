@@ -1,0 +1,22 @@
+digraph {
+7 [style = filled, label = "final KTable<Windowed<String>,Integer> table = groupedStream.windowedBy(SessionWindows.with(ofMillis(30))).aggregate(new Initializer<Integer>(){@Override public Integer apply(){return 0}},new Aggregator<String,String,Integer>(){@Override public Integer apply(final String aggKey,final String value,final Integer aggregate){return aggregate + 1}},new Merger<String,Integer>(){@Override public Integer apply(final String aggKey,final Integer aggOne,final Integer aggTwo){return aggOne + aggTwo}},Materialized.as(\"session-store\").withValueSerde(Serdes.Integer()))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "final KTable<Windowed<String>,Integer> table = groupedStream.windowedBy(SessionWindows.with(30)).aggregate(new Initializer<Integer>(){@Override public Integer apply(){return 0}},new Aggregator<String,String,Integer>(){@Override public Integer apply(final String aggKey,final String value,final Integer aggregate){return aggregate + 1}},new Merger<String,Integer>(){@Override public Integer apply(final String aggKey,final Integer aggOne,final Integer aggTwo){return aggOne + aggTwo}},Materialized.with(null,Serdes.Integer()))@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final Map<Windowed<String>,Integer> results = new HashMap<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "shouldAggregateSessionWindows['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "table.toStream().foreach(new ForeachAction<Windowed<String>,Integer>(){@Override public void apply(final Windowed<String> key,final Integer value){results.put(key,value)}})@@@20@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "shouldAggregateSessionWindows['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "shouldAggregateSessionWindowsWithInternalStoreName['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "doAggregateSessionWindows(results)@@@26@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(table.queryableStoreName(),\"session-store\")@@@27@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+6->1 [style = bold, label=""];
+5->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+1->7 [style = bold, label=""];
+1->0 [style = solid, label="results"];
+4->0 [style = bold, label=""];
+}

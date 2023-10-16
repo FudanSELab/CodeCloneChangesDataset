@@ -1,0 +1,38 @@
+digraph {
+9 [style = filled, label = "run['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "run['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "return watchers@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "watcher.onStateChanged(liveNodes,collectionState)@@@12@@@['1', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "collectionWatches.compute(collection,null)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "LOG.warn(\"Error on calling watcher\",exception)@@@17@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "LOG.warn(\"Error on calling watcher\",throwable)@@@17@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "removeCollectionStateWatcher(collection,watcher)@@@13@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "final Set<CollectionStateWatcher> watchers = new HashSet<>()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "String collection@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Throwable throwable@@@16@@@['1', '0', '0']", fillcolor = red, shape = diamond image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "Exception exception@@@16@@@['0', '1', '0']", fillcolor = red, shape = diamond image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "getStateWatchers['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "List<CollectionStateWatcher> watchers = new ArrayList<>()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12->10 [style = solid, label="watchers"];
+2->6 [style = bold, label=""];
+1->3 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+11->12 [style = bold, label=""];
+4->2 [style = bold, label=""];
+11->13 [style = dotted, label="true"];
+13->3 [style = solid, label="collection"];
+5->4 [style = dotted, label="true"];
+8->7 [style = bold, label=""];
+6->2 [style = bold, label=""];
+3->10 [style = bold, label=""];
+1->12 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+2->6 [style = dotted, label="true"];
+4->7 [style = dashed, label="0"];
+7->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+5->8 [style = dashed, label="0"];
+12->3 [style = bold, label=""];
+9->1 [style = bold, label=""];
+}

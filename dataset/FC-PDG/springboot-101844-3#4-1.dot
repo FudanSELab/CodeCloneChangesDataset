@@ -1,0 +1,36 @@
+digraph {
+3 [style = filled, label = "Object actualGenerator = this.context.getBean(AnnotationConfigUtils.CONFIGURATION_BEAN_NAME_GENERATOR)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "BeanNameGenerator beanNameGenerator = new DefaultBeanNameGenerator()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "customBeanNameGenerator['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "emptyCommandLinePropertySourceNotAdded['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "application.setEnvironment(environment)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "assertThat(environment.getProperty(\"foo\")).isEqualTo(\"bucket\")@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "this.context = application.run()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "SpringApplication application = new SpringApplication()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "application.setBeanNameGenerator(beanNameGenerator)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "application.setWebApplicationType(WebApplicationType.NONE)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "TestSpringApplication application = new TestSpringApplication()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "customBeanNameGenerator['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(actualGenerator).isSameAs(beanNameGenerator)@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "ConfigurableEnvironment environment = new StandardEnvironment()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "this.context = application.run()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->7 [style = bold, label=""];
+7->12 [style = dashed, label="0"];
+13->10 [style = bold, label=""];
+3->0 [style = bold, label=""];
+12->13 [style = bold, label=""];
+6->5 [style = bold, label=""];
+10->11 [style = solid, label="environment"];
+7->6 [style = bold, label=""];
+9->12 [style = bold, label=""];
+4->2 [style = bold, label=""];
+6->2 [style = solid, label="beanNameGenerator"];
+2->14 [style = bold, label=""];
+1->7 [style = bold, label=""];
+6->5 [style = solid, label="beanNameGenerator"];
+11->2 [style = bold, label=""];
+6->0 [style = solid, label="beanNameGenerator"];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

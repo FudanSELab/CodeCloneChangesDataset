@@ -1,0 +1,34 @@
+digraph {
+8 [style = filled, label = "RelOptPlanner planner@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "RelMetadataQuery mq@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "double dCpu = RelMetadataQuery.getRowCount(getInput()) * program.getExprCount()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "RelOptPlanner planner@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "computeSelfCost['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "double dRows = mq.getRowCount(this)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "double dCpu = mq.getRowCount(getInput()) * program.getExprCount()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "computeSelfCost['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "double dIo = 0@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "double dRows = RelMetadataQuery.getRowCount(this)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "computeSelfCost['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return planner.getCostFactory().makeCost(dRows,dCpu,dIo)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+1->3 [style = solid, label="dIo"];
+6->3 [style = solid, label="dCpu"];
+6->1 [style = bold, label=""];
+10->8 [style = dotted, label="true"];
+11->5 [style = bold, label=""];
+5->2 [style = bold, label=""];
+2->3 [style = solid, label="dCpu"];
+0->9 [style = dashed, label="0"];
+5->3 [style = solid, label="dRows"];
+5->7 [style = dashed, label="0"];
+10->9 [style = dotted, label="true"];
+4->5 [style = bold, label=""];
+10->7 [style = bold, label=""];
+2->1 [style = bold, label=""];
+11->0 [style = dotted, label="true"];
+7->3 [style = solid, label="dRows"];
+7->6 [style = bold, label=""];
+4->0 [style = dotted, label="true"];
+2->6 [style = dashed, label="0"];
+}

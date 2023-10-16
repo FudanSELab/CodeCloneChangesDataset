@@ -1,0 +1,27 @@
+digraph {
+6 [style = filled, label = "return new CloudFoundryInfoEndpointWebExtension(new InfoEndpoint(contributors))@@@4@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "GitProperties properties@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "cloudFoundryInfoEndpointWebExtension['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "ObjectProvider<InfoContributor> infoContributors@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "List<InfoContributor> contributors = infoContributors.orderedStream().map(null).collect(Collectors.toList())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "cloudFoundryInfoEndpointWebExtension['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "cloudFoundryInfoEndpointWebExtension['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "GitProperties properties@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "ObjectProvider<InfoContributor> infoContributors@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "return new CloudFoundryInfoEndpointWebExtension(new InfoEndpoint(contributors))@@@10@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "List<InfoContributor> contributors = infoContributors.orderedStream().map(null).collect(Collectors.toList())@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->7 [style = bold, label=""];
+10->3 [style = dotted, label="true"];
+2->0 [style = solid, label="contributors"];
+10->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+4->3 [style = dotted, label="true"];
+4->2 [style = bold, label=""];
+7->6 [style = solid, label="contributors"];
+2->7 [style = dashed, label="0"];
+8->5 [style = dotted, label="true"];
+4->1 [style = dotted, label="true"];
+10->9 [style = dotted, label="true"];
+8->3 [style = dotted, label="true"];
+7->6 [style = bold, label=""];
+}

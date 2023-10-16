@@ -1,0 +1,24 @@
+digraph {
+4 [style = filled, label = "assertThat(graph.nodes()).containsExactly(3,1,4).inOrder()@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "MutableGraph<Integer> graph = GraphBuilder.directed().nodeOrder(insertion()).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "MutableBasicGraph<Integer> graph = BasicGraphBuilder.directed().nodeOrder(insertion()).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "assertThat(graph.nodeOrder()).isEqualTo(insertion())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "nodeOrder_insertion['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "nodeOrder_insertion['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "nodeOrder_default['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "MutableBasicGraph<Integer> graph = BasicGraphBuilder.directed().build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "addNodes(graph)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->7 [style = bold, label=""];
+6->5 [style = bold, label=""];
+5->2 [style = solid, label="graph"];
+1->2 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+7->2 [style = solid, label="graph"];
+1->7 [style = dashed, label="0"];
+1->2 [style = solid, label="graph"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

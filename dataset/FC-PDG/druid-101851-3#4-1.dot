@@ -1,0 +1,21 @@
+digraph {
+4 [style = filled, label = "testHelper.testExpression(new TimeExtractOperatorConversion().calciteOperator(),ImmutableList.of(testHelper.makeInputRef(\"t\"),testHelper.makeLiteral(\"DAY\"),testHelper.makeLiteral(\"America/Los_Angeles\")),DruidExpression.fromExpression(\"timestamp_extract(\"t\",'DAY','America/Los_Angeles')\"),2L)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "testTimeFormat['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testTimeExtract['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "testExpression(rexBuilder.makeCall(new TimeFormatOperatorConversion().calciteOperator(),inputRef(\"t\"),rexBuilder.makeLiteral(\"yyyy-MM-dd HH:mm:ss\")),DruidExpression.fromExpression(\"timestamp_format(\"t\",'yyyy-MM-dd HH:mm:ss','UTC')\"),\"2000-02-03 04:05:06\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testTimeExtract['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testHelper.testExpression(new TimeExtractOperatorConversion().calciteOperator(),ImmutableList.of(testHelper.makeInputRef(\"t\"),testHelper.makeLiteral(\"QUARTER\")),DruidExpression.fromExpression(\"timestamp_extract(\"t\",'QUARTER','UTC')\"),1L)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "testExpression(rexBuilder.makeCall(new TimeExtractOperatorConversion().calciteOperator(),inputRef(\"t\"),rexBuilder.makeLiteral(\"DAY\"),rexBuilder.makeLiteral(\"America/Los_Angeles\")),DruidExpression.fromExpression(\"timestamp_extract(\"t\",'DAY','America/Los_Angeles')\"),2L)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "testExpression(rexBuilder.makeCall(new TimeFormatOperatorConversion().calciteOperator(),inputRef(\"t\"),rexBuilder.makeLiteral(\"yyyy-MM-dd HH:mm:ss\"),rexBuilder.makeLiteral(\"America/Los_Angeles\")),DruidExpression.fromExpression(\"timestamp_format(\"t\",'yyyy-MM-dd HH:mm:ss','America/Los_Angeles')\"),\"2000-02-02 20:05:06\")@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testExpression(rexBuilder.makeCall(new TimeExtractOperatorConversion().calciteOperator(),inputRef(\"t\"),rexBuilder.makeLiteral(\"QUARTER\")),DruidExpression.fromExpression(\"timestamp_extract(\"t\",'QUARTER','UTC')\"),1L)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2->4 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+8->6 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+6->7 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+2->7 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

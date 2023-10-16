@@ -1,0 +1,33 @@
+digraph {
+11 [style = filled, label = "String problemText@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "verifyWriteRaisesNpe['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Message message@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Message message@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "verifyWriteRaisesUve['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "UnsupportedVersionException e = assertThrows(,null)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "short version@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "verifyWriteRaisesNpe['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "short version@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "assertThrows(,null)@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Message message@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertTrue(\"Expected to get an error message about \" + problemText + \", but got: \" + e.getMessage(),e.getMessage().contains(problemText))@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ObjectSerializationCache cache = new ObjectSerializationCache()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "short version@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+6->1 [style = bold, label=""];
+10->8 [style = dotted, label="true"];
+4->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+13->12 [style = bold, label=""];
+4->3 [style = dotted, label="true"];
+11->12 [style = solid, label="problemText"];
+10->1 [style = bold, label=""];
+10->9 [style = dotted, label="true"];
+10->11 [style = dotted, label="true"];
+3->7 [style = dashed, label="0"];
+2->13 [style = dashed, label="0"];
+1->13 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+4->0 [style = dotted, label="true"];
+6->7 [style = dotted, label="true"];
+}

@@ -1,0 +1,33 @@
+digraph {
+10 [style = filled, label = "listNamesRecursesOverCompositeRegistries['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "composite.add(reg1)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "reg1.counter(\"counter1\").increment()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(endpoint.listNames().getNames()).containsOnly(\"counter1\",\"counter2\")@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "composite.add(reg2)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "SimpleMeterRegistry reg2 = new SimpleMeterRegistry()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "SimpleMeterRegistry reg1 = new SimpleMeterRegistry()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "reg2.counter(\"counter2\").increment()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "MetricsEndpoint endpoint = new MetricsEndpoint(composite)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "listNamesRecursesOverCompositeRegistries['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "CompositeMeterRegistry composite = new CompositeMeterRegistry()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "metricPresentInOneRegistryOfACompositeAndNotAnother['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertThat(endpoint.metric(\"counter1\",Collections.emptyList())).isNotNull()@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertThat(endpoint.metric(\"counter2\",Collections.emptyList())).isNotNull()@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->0 [style = bold, label=""];
+0->3 [style = bold, label=""];
+3->9 [style = bold, label=""];
+5->7 [style = bold, label=""];
+2->11 [style = dashed, label="0"];
+11->12 [style = bold, label=""];
+5->6 [style = solid, label="composite"];
+7->1 [style = bold, label=""];
+1->8 [style = bold, label=""];
+10->5 [style = bold, label=""];
+1->0 [style = solid, label="reg2"];
+7->8 [style = solid, label="reg1"];
+4->5 [style = bold, label=""];
+6->11 [style = bold, label=""];
+9->6 [style = bold, label=""];
+6->2 [style = bold, label=""];
+13->5 [style = bold, label=""];
+}

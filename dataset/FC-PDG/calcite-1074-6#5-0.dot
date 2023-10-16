@@ -1,0 +1,22 @@
+digraph {
+4 [style = filled, label = "String s = Linq4j.asEnumerable(emps).groupBy(EMP_DEPTNO_SELECTOR,EMP_NAME_SELECTOR,null,new EqualityComparer<Integer>(){public boolean equal(Integer v1,Integer v2){return true}public int hashCode(Integer integer){return 0}}).toList().toString()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "testGroupByWithKeySelectorAndResultSelectorAndComparer['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "String s = Linq4j.asEnumerable(emps).groupBy(EMP_DEPTNO_SELECTOR,new Function2<Integer,Enumerable<Employee>,String>(){public String apply(Integer key,Enumerable<Employee> group){return String.format(Locale.ROOT,\"%s: %s\",key,stringJoin(\"+\",group.select(new Function1<Employee,String>(){public String apply(Employee element){return element.name}})))}},new EqualityComparer<Integer>(){public boolean equal(Integer v1,Integer v2){return true}public int hashCode(Integer integer){return 0}}).toList().toString()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "String s = Linq4j.asEnumerable(emps).groupBy(EMP_DEPTNO_SELECTOR,EMP_NAME_SELECTOR,new Function2<Integer,Enumerable<String>,String>(){public String apply(Integer key,Enumerable<String> group){return String.format(Locale.ROOT,\"%s: %s\",key,stringJoin(\"+\",group))}},new EqualityComparer<Integer>(){public boolean equal(Integer v1,Integer v2){return true}public int hashCode(Integer integer){return 0}}).toList().toString()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "assertEquals(\"(10: Fred+Bill+Eric+Janet(\",s)@@@22@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertEquals(\"(10: Fred+Bill+Eric+Janet(\",s)@@@17@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testGroupByWithKeySelectorAndElementSelectorAndResultSelectorAndComparer['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertEquals(\"(10: Fred+Bill+Eric+Janet(\",s)@@@12@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "testGroupByWithKeySelectorAndElementSelectorAndResultSelectorAndComparer['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->4 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+8->6 [style = bold, label=""];
+6->7 [style = solid, label="s"];
+1->0 [style = bold, label=""];
+6->7 [style = bold, label=""];
+4->3 [style = solid, label="s"];
+1->6 [style = dashed, label="0"];
+1->0 [style = solid, label="s"];
+2->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+}

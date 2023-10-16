@@ -1,0 +1,37 @@
+digraph {
+10 [style = filled, label = "with.query(\"select `x`.`DID` from (select deptid as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) X \").returnsUnordered(\"DID=1\",\"DID=2\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "with.query(\"select X.DID2 from (select deptid as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) X (DID2)\").returnsUnordered(\"DID2=1\",\"DID2=2\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "with.query(\"select X.DID2 from (select deptid as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) X (DID2)\").returnsUnordered(\"DID2=1\",\"DID2=2\")@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "with.query(\"select x.DID from (select deptid as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) X \").returnsUnordered(\"DID=1\",\"DID=2\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testUnquotedCaseSensitiveSubQueryMySql['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "with.query(\"select `X`.`DID2` from (select deptid as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) X (DID2)\").returnsUnordered(\"DID2=1\",\"DID2=2\")@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "with.query(\"select `DID` from (select deptid as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) \").returnsUnordered(\"DID=1\",\"DID=2\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final CalciteAssert.AssertThat with = CalciteAssert.that().with(\"lex\",\"MYSQL\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "with.query(\"select `X`.`DID` from (select deptid as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) X \").returnsUnordered(\"DID=1\",\"DID=2\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "with.query(\"select X.DID from (select deptid as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) X \").returnsUnordered(\"DID=1\",\"DID=2\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testUnquotedCaseSensitiveSubQueryMySql['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final CalciteAssert.AssertThat with = CalciteAssert.that().with(CalciteAssert.Config.REGULAR).with(ImmutableMap.of(\"lex\",\"MYSQL\"))@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "with.query(\"select DID from (select deptid as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) \").returnsUnordered(\"DID=1\",\"DID=2\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "with.query(\"select `X`.`DID2` from (select deptid as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) X (DID2)\").returnsUnordered(\"DID2=1\",\"DID2=2\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "testQuotedCaseSensitiveSubQueryMySql['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13->10 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+1->4 [style = bold, label=""];
+4->13 [style = bold, label=""];
+10->9 [style = bold, label=""];
+6->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+6->10 [style = dashed, label="0"];
+0->9 [style = dashed, label="0"];
+2->14 [style = dashed, label="0"];
+12->4 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+3->13 [style = dashed, label="0"];
+14->11 [style = bold, label=""];
+2->5 [style = bold, label=""];
+8->3 [style = bold, label=""];
+9->14 [style = bold, label=""];
+}

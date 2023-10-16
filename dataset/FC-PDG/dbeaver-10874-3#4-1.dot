@@ -1,0 +1,33 @@
+digraph {
+10 [style = filled, label = "cloneStorage['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "cloneStorage['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "throw new IOException(e)@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "cloneStorage['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "IOException e@@@11@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ContentUtils.deleteTempFile(tempFile)@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "return new TemporaryContentStorage(platform,tempFile,charset,true)@@@15@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "File tempFile = ContentUtils.createTempContentFile(monitor,platform,\"copy\" + this.hashCode())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ContentUtils.copyStreams(is,file.length(),os,monitor)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "return new TemporaryContentStorage(platform,tempFile,charset)@@@15@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->0 [style = bold, label=""];
+5->0 [style = solid, label="monitor"];
+6->4 [style = bold, label=""];
+4->8 [style = bold, label=""];
+10->0 [style = bold, label=""];
+9->5 [style = dotted, label="true"];
+3->5 [style = dotted, label="true"];
+1->8 [style = bold, label=""];
+9->0 [style = bold, label=""];
+2->6 [style = dotted, label="true"];
+10->5 [style = dotted, label="true"];
+1->7 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->6 [style = bold, label=""];
+7->8 [style = dashed, label="0"];
+4->7 [style = bold, label=""];
+0->7 [style = solid, label="tempFile"];
+2->4 [style = dotted, label="true"];
+5->1 [style = solid, label="monitor"];
+0->8 [style = solid, label="tempFile"];
+}

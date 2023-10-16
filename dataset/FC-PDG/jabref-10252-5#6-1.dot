@@ -1,0 +1,24 @@
+digraph {
+8 [style = filled, label = "testKeyWords['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "expectedEntry.setField(\"comment\",\"Comment1\" + \"\" + \"Comment2\" + \"\" + \"Comment3\" + \"\" + \"Comment4\" + \"\" + \"Comment5\" + \"\" + \"Comment6\" + \"\" + \"Comment7\" + \"\" + \"Comment8\" + \"\" + \"Comment9\" + \"\" + \"Comment10\" + \"\" + \"Comment11\" + \"\" + \"Comment12\" + \"\" + \"Comment13\" + \"\" + \"Comment14\" + \"\" + \"Comment15\" + \"\" + \"Comment16\")@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(Collections.singletonList(expectedEntry),actualEntries)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "expectedEntry.setField(StandardField.COMMENT,\"Comment1\" + \"\" + \"Comment2\" + \"\" + \"Comment3\" + \"\" + \"Comment4\" + \"\" + \"Comment5\" + \"\" + \"Comment6\" + \"\" + \"Comment7\" + \"\" + \"Comment8\" + \"\" + \"Comment9\" + \"\" + \"Comment10\" + \"\" + \"Comment11\" + \"\" + \"Comment12\" + \"\" + \"Comment13\" + \"\" + \"Comment14\" + \"\" + \"Comment15\" + \"\" + \"Comment16\")@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "testMultiLineComments['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testMultiLineComments['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "List<BibEntry> actualEntries = importer.importDatabase(reader).getDatabase().getEntries()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "expectedEntry.setField(\"keywords\",\"Female, Male\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "BibEntry expectedEntry = new BibEntry()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+4->1 [style = solid, label="expectedEntry"];
+6->1 [style = bold, label=""];
+7->1 [style = bold, label=""];
+3->1 [style = solid, label="actualEntries"];
+4->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+4->7 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+8->3 [style = bold, label=""];
+}

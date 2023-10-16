@@ -1,0 +1,22 @@
+digraph {
+0 [style = filled, label = "List<Span> withLateParent = new ArrayList<>(TRACE)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "lateParentIdInSharedSpan['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "List<Span> lostClientOrphan = new ArrayList<>(TRACE)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertThat(new DependencyLinker().putTrace(lostClientOrphan).link()).containsExactly(DependencyLink.newBuilder().parent(\"web\").child(\"app\").callCount(1L).build(),DependencyLink.newBuilder().parent(\"app\").child(\"db\").callCount(1L).errorCount(1L).build())@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "lostClientOrphan.set(2,TRACE.get(2).toBuilder().parentId(null).build())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "withLateParent.set(2,TRACE.get(2).toBuilder().parentId(null).build())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(new DependencyLinker().putTrace(withLateParent).link()).containsExactly(DependencyLink.newBuilder().parent(\"web\").child(\"app\").callCount(1L).build(),DependencyLink.newBuilder().parent(\"app\").child(\"db\").callCount(1L).errorCount(1L).build())@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "lostChildAndNoParentIdInSharedSpan['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "lostClientOrphan.remove(1)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "lateParentIdInSharedSpan['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->8 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+8->6 [style = bold, label=""];
+5->9 [style = bold, label=""];
+7->8 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

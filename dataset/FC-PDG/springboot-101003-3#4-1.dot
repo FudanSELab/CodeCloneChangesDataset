@@ -1,0 +1,37 @@
+digraph {
+1 [style = filled, label = "throw new CloudFoundryAuthorizationException(Reason.MISSING_AUTHORIZATION,\"Authorization header is missing or invalid\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String authorization = request.getHeaders().getFirst(\"Authorization\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "authorization == null || !authorization.toLowerCase(Locale.ENGLISH).startsWith(bearerPrefix)@@@5@@@['0', '1', '0']", fillcolor = red, shape = diamond image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "getToken['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "HttpServletRequest request@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "return new Token(authorization.substring(bearerPrefix.length()))@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "String bearerPrefix = \"bearer \"@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "getToken['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "ServerHttpRequest request@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "String authorization = request.getHeader(\"Authorization\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "authorization == null || !authorization.toLowerCase().startsWith(bearerPrefix)@@@5@@@['1', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "getToken['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+11->9 [style = dotted, label="true"];
+8->6 [style = bold, label=""];
+4->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+5->0 [style = dotted, label="true"];
+7->0 [style = dotted, label="true"];
+8->1 [style = bold, label=""];
+8->1 [style = dotted, label="true"];
+1->6 [style = bold, label=""];
+11->10 [style = bold, label=""];
+10->3 [style = solid, label="authorization"];
+5->4 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+10->2 [style = bold, label=""];
+4->3 [style = solid, label="authorization"];
+0->9 [style = dashed, label="0"];
+4->10 [style = dashed, label="0"];
+3->1 [style = dotted, label="true"];
+2->8 [style = bold, label=""];
+4->8 [style = solid, label="authorization"];
+}

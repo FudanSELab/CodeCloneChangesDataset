@@ -1,0 +1,19 @@
+digraph {
+6 [style = filled, label = "mapperMultipleParamAndProviderContext['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertEquals(1,mapper.selectByIdAndName(4,\"User4\").size())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "mapperOneParamAndProviderContext['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "mapperOneParamAndProviderContext['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(1,mapper.selectByName(\"User4\").size())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertEquals(0,mapper.selectActiveByName(\"User4\").size())@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertEquals(0,mapper.selectActiveByIdAndName(4,\"User4\").size())@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+5->7 [style = bold, label=""];
+4->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+}

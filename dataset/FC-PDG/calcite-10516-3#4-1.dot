@@ -1,0 +1,32 @@
+digraph {
+6 [style = filled, label = "server.startWithCalcite()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "server.stop()@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Connection connection = DriverManager.getConnection(server.getURL())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "PreparedStatement pS = connection.prepareStatement(\"select * from chinook.track where name = ? or milliseconds > ?\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testParametersShouldWorkWithRaw['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ChinookAvaticaServer server = new ChinookAvaticaServer()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "server.startWithRaw()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "PreparedStatement pS = connection.prepareStatement(\"select * from artist where name = ?\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "ResultSet resultSet = pS.executeQuery()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testSeveralParametersShouldWorkWithCalcite['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "pS.setInt(2,10)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testSeveralParametersShouldWorkWithCalcite['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "pS.setString(1,\"AC/DC\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+0->7 [style = bold, label=""];
+10->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+8->11 [style = bold, label=""];
+9->2 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->6 [style = bold, label=""];
+12->8 [style = bold, label=""];
+2->12 [style = bold, label=""];
+6->8 [style = bold, label=""];
+4->0 [style = bold, label=""];
+11->4 [style = bold, label=""];
+8->3 [style = bold, label=""];
+6->12 [style = dashed, label="0"];
+}

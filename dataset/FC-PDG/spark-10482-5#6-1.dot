@@ -1,0 +1,37 @@
+digraph {
+6 [style = filled, label = "jsql = new SQLContext(jsc)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "List<LabeledPoint> points = generateLogisticInputAsList(1.0,1.0,100,42)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "datasetRDD = jsc.parallelize(points,2)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "dataset.registerTempTable(\"dataset\")@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "jsc = new JavaSparkContext(\"local\",\"JavaLinearRegressionSuite\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "setUp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "setUp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "setUp['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "spark = SparkSession.builder().master(\"local\").appName(\"JavaLogisticRegressionSuite\").getOrCreate()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "jsc = new JavaSparkContext(\"local\",\"JavaLogisticRegressionSuite\")@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "dataset = jsql.createDataFrame(datasetRDD,)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "jsc = new JavaSparkContext(spark.sparkContext())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "dataset = spark.createDataFrame(datasetRDD,)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6->3 [style = bold, label=""];
+3->2 [style = solid, label="points"];
+10->3 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+11->12 [style = bold, label=""];
+9->10 [style = bold, label=""];
+12->6 [style = bold, label=""];
+2->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+8->0 [style = bold, label=""];
+1->6 [style = solid, label="jsc"];
+7->9 [style = bold, label=""];
+1->12 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+1->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+12->6 [style = solid, label="jsc"];
+2->4 [style = solid, label="datasetRDD"];
+2->8 [style = solid, label="datasetRDD"];
+2->8 [style = bold, label=""];
+}

@@ -1,0 +1,30 @@
+digraph {
+1 [style = filled, label = "assertEquals(expected,boundSql.getSql())@@@12@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(expected,boundSql.getSql())@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "shouldConditionallyIncludeWhere['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "DynamicSqlSource source = createDynamicSqlSource(new TextSqlNode(\"SELECT * FROM BLOG\"),new IfSqlNode(mixedContents(new TextSqlNode(\"WHERE ID = ?\")),\"true\"))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "DynamicSqlSource source = createDynamicSqlSource(new TextSqlNode(\"SELECT * FROM BLOG\"),new ChooseSqlNode(new ArrayList<SqlNode>(){},mixedContents(new TextSqlNode(\"WHERE CATEGORY = 'DEFAULT'\"))))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "shouldConditionallyChooseSecond['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "BoundSql boundSql = source.getBoundSql(null)@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "shouldConditionallyChooseSecond['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "final String expected = \"SELECT * FROM BLOG WHERE ID = ?\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "BoundSql boundSql = source.getBoundSql(null)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "DynamicSqlSource source = createDynamicSqlSource(new TextSqlNode(\"SELECT * FROM BLOG\"),new ChooseSqlNode(new ArrayList(){},mixedContents(new TextSqlNode(\"WHERE CATEGORY = 'DEFAULT'\"))))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "final String expected = \"SELECT * FROM BLOG WHERE CATEGORY = 'NONE'\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+3->1 [style = solid, label="expected"];
+4->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+0->6 [style = dashed, label="0"];
+0->7 [style = dashed, label="0"];
+9->8 [style = bold, label=""];
+11->10 [style = bold, label=""];
+10->7 [style = bold, label=""];
+10->8 [style = solid, label="expected"];
+2->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

@@ -1,0 +1,28 @@
+digraph {
+3 [style = filled, label = "client.prepareResponse(consumerMetadataResponse(node,Errors.NONE.code()))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testCommitOffsetUnknownMemberId['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "coordinator.commitOffsetsSync(Collections.singletonMap(tp,new OffsetAndMetadata(100L,\"metadata\")))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "client.prepareResponse(offsetCommitResponse(Collections.singletonMap(tp,Errors.UNKNOWN_MEMBER_ID.code())))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "client.prepareResponse(consumerMetadataResponse(node,Errors.NONE.code()))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testCommitOffsetSyncCoordinatorNotAvailable['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "coordinator.ensureCoordinatorKnown()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "coordinator.commitOffsetsSync(Collections.singletonMap(tp,new OffsetAndMetadata(100L)))@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "client.prepareResponse(offsetCommitResponse(Collections.singletonMap(tp,Errors.NONE.code())))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "coordinator.ensureCoordinatorReady()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "testCommitOffsetSyncCoordinatorNotAvailable['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "client.prepareResponse(offsetCommitResponse(Collections.singletonMap(tp,Errors.GROUP_COORDINATOR_NOT_AVAILABLE.code())))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+10->3 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+9->11 [style = bold, label=""];
+8->5 [style = bold, label=""];
+5->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->4 [style = bold, label=""];
+4->6 [style = bold, label=""];
+3->8 [style = bold, label=""];
+7->3 [style = bold, label=""];
+1->9 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

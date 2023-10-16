@@ -1,0 +1,30 @@
+digraph {
+8 [style = filled, label = "Timer.shutdown()@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "_cleanUpShutdownTcpSlaveAgent['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "tcpSlaveAgentListener != null@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "_cleanUpShutdownTcpSlaveAgent['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "List<Throwable> errors@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "List<Throwable> errors@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "tcpSlaveAgentListener.shutdown()@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "LOGGER.log(FINE,\"Shutting down TCP/IP slave agent listener\")@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "_cleanUpShutdownTimer['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "LOGGER.log(FINE,\"Shutting down TCP/IP agent listener\")@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "LOGGER.log(Level.FINE,\"Shutting down timer\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+0->6 [style = dashed, label="0"];
+3->6 [style = dotted, label="true"];
+10->9 [style = dotted, label="true"];
+4->1 [style = dotted, label="true"];
+7->8 [style = bold, label=""];
+10->7 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+3->2 [style = dotted, label="true"];
+3->0 [style = bold, label=""];
+5->1 [style = dotted, label="true"];
+0->2 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+6->2 [style = bold, label=""];
+}

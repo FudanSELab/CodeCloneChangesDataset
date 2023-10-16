@@ -1,0 +1,31 @@
+digraph {
+6 [style = filled, label = "addObjectDeleteActions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "Map<String,Object> options@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "actions.add(new SQLDatabasePersistAction(ModelMessages.model_jdbc_drop_index,getDropIndexPattern(command.getObject()).replace(PATTERN_ITEM_TABLE,command.getObject().getTable().getFullyQualifiedName(DBPEvaluationContext.DDL)).replace(PATTERN_ITEM_INDEX,command.getObject().getFullyQualifiedName(DBPEvaluationContext.DDL)).replace(PATTERN_ITEM_INDEX_SHORT,DBUtils.getQuotedIdentifier(command.getObject()))))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "List<DBEPersistAction> actions@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "ObjectDeleteCommand command@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "Map<String,Object> options@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "List<DBEPersistAction> actions@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "ObjectDeleteCommand command@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Map<String,Object> options@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "addObjectDeleteActions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "actions.add(new SQLDatabasePersistAction(ModelMessages.model_jdbc_drop_foreign_key,getDropForeignKeyPattern(command.getObject()).replace(PATTERN_ITEM_TABLE,command.getObject().getTable().getFullyQualifiedName(DBPEvaluationContext.DDL)).replace(PATTERN_ITEM_CONSTRAINT,DBUtils.getQuotedIdentifier(command.getObject()))))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "addObjectDeleteActions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "ObjectDeleteCommand command@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3->4 [style = dotted, label="true"];
+6->1 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+1->13 [style = dashed, label="0"];
+11->4 [style = dotted, label="true"];
+3->1 [style = bold, label=""];
+6->9 [style = dotted, label="true"];
+6->8 [style = dotted, label="true"];
+11->10 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+11->13 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+11->12 [style = dotted, label="true"];
+3->0 [style = dotted, label="true"];
+6->7 [style = dotted, label="true"];
+}

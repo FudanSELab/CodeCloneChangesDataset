@@ -1,0 +1,20 @@
+digraph {
+5 [style = filled, label = "sessions.then(null)@@@16@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "rr.addStep(new Statement(){@Override public void evaluate(){User user = User.getById(\"user1\",false)assertNull(user)}})@@@45@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "sessions.then(null)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "legacyToken_regularCase['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "rr.addStep(new Statement(){@Override public void evaluate(){enableLegacyTokenGenerationOnUserCreation()configureSecurity(){JenkinsRule.WebClient wc = rr.j.createWebClient()wc.login(\"user1\")HtmlPage page = wc.goTo(\"user/user1/configure\")String tokenValue = ((HtmlTextInput)page.getDocumentElement().querySelector(\"#apiToken\")).getText()token.set(tokenValue)}}})@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "rr.addStep(new Statement(){@Override public void evaluate(){User user = User.getById(\"user1\",false)assertNull(user)JenkinsRule.WebClient wc = rr.j.createWebClient()wc.getOptions().setThrowExceptionOnFailingStatusCode(false){WebRequest request = new WebRequest(new URL(rr.j.jenkins.getRootUrl() + \"whoAmI/api/xml\"))request.setAdditionalHeader(\"Authorization\",base64(\"user1\",\"invalid-token\"))assertThat(wc.getPage(request).getWebResponse().getStatusCode(),equalTo(401))}{WebRequest request = new WebRequest(new URL(rr.j.jenkins.getRootUrl() + \"whoAmI/api/xml\"))request.setAdditionalHeader(\"Authorization\",base64(\"user-not-valid\",token.get()))assertThat(wc.getPage(request).getWebResponse().getStatusCode(),equalTo(401))}assertNull(User.getById(\"user1\",false))assertNull(User.getById(\"user-not-valid\",false)){WebRequest request = new WebRequest(new URL(rr.j.jenkins.getRootUrl() + \"whoAmI/api/xml\"))request.setAdditionalHeader(\"Authorization\",base64(\"user1\",token.get()))XmlPage xmlPage = wc.getPage(request)assertThat(xmlPage,hasXPath(\"//name\",is(\"user1\")))}}})@@@18@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "legacyToken_regularCase['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "AtomicReference<String> token = new AtomicReference<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "legacyToken_withoutLastGrantedAuthorities['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+6->5 [style = bold, label=""];
+2->7 [style = solid, label="user"];
+2->7 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

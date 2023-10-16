@@ -1,0 +1,23 @@
+digraph {
+1 [style = filled, label = "Schema schema = new Schema(required(0,\"id\",LongType.get()),optional(1,\"list_of_maps\",ListType.ofOptional(2,MapType.ofOptional(3,4,Types.StringType.get(),SUPPORTED_PRIMITIVES))),optional(5,\"map_of_lists\",MapType.ofOptional(6,7,Types.StringType.get(),ListType.ofOptional(8,SUPPORTED_PRIMITIVES))),required(9,\"list_of_lists\",ListType.ofOptional(10,ListType.ofOptional(11,SUPPORTED_PRIMITIVES))),required(12,\"map_of_maps\",MapType.ofOptional(13,14,Types.StringType.get(),MapType.ofOptional(15,16,Types.StringType.get(),SUPPORTED_PRIMITIVES))),required(17,\"list_of_struct_of_nested_types\",ListType.ofOptional(19,StructType.of(Types.NestedField.required(20,\"m1\",MapType.ofOptional(21,22,Types.StringType.get(),SUPPORTED_PRIMITIVES)),Types.NestedField.optional(23,\"l1\",ListType.ofRequired(24,SUPPORTED_PRIMITIVES)),Types.NestedField.required(25,\"l2\",ListType.ofRequired(26,SUPPORTED_PRIMITIVES)),Types.NestedField.optional(27,\"m2\",MapType.ofOptional(28,29,Types.StringType.get(),SUPPORTED_PRIMITIVES))))))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "testMixedTypes['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Schema schema = new Schema(TypeUtil.assignFreshIds(structType,null).asStructType().fields())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "testMixedTypes['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "writeAndValidate(schema)@@@4@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "StructType structType = StructType.of(required(0,\"id\",LongType.get()),optional(1,\"list_of_maps\",ListType.ofOptional(2,MapType.ofOptional(3,4,Types.StringType.get(),SUPPORTED_PRIMITIVES))),optional(5,\"map_of_lists\",MapType.ofOptional(6,7,Types.StringType.get(),ListType.ofOptional(8,SUPPORTED_PRIMITIVES))),required(9,\"list_of_lists\",ListType.ofOptional(10,ListType.ofOptional(11,SUPPORTED_PRIMITIVES))),required(12,\"map_of_maps\",MapType.ofOptional(13,14,Types.StringType.get(),MapType.ofOptional(15,16,Types.StringType.get(),SUPPORTED_PRIMITIVES))),required(17,\"list_of_struct_of_nested_types\",ListType.ofOptional(19,StructType.of(Types.NestedField.required(20,\"m1\",MapType.ofOptional(21,22,Types.StringType.get(),SUPPORTED_PRIMITIVES)),Types.NestedField.optional(23,\"l1\",ListType.ofRequired(24,SUPPORTED_PRIMITIVES)),Types.NestedField.required(25,\"l2\",ListType.ofRequired(26,SUPPORTED_PRIMITIVES)),Types.NestedField.optional(27,\"m2\",MapType.ofOptional(28,29,Types.StringType.get(),SUPPORTED_PRIMITIVES))))))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "writeAndValidate(schema)@@@5@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "testMixedTypes['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "Schema schema = TypeUtil.assignIncreasingFreshIds(new Schema(required(0,\"id\",LongType.get()),optional(1,\"list_of_maps\",ListType.ofOptional(2,MapType.ofOptional(3,4,Types.StringType.get(),SUPPORTED_PRIMITIVES))),optional(5,\"map_of_lists\",MapType.ofOptional(6,7,Types.StringType.get(),ListType.ofOptional(8,SUPPORTED_PRIMITIVES))),required(9,\"list_of_lists\",ListType.ofOptional(10,ListType.ofOptional(11,SUPPORTED_PRIMITIVES))),required(12,\"map_of_maps\",MapType.ofOptional(13,14,Types.StringType.get(),MapType.ofOptional(15,16,Types.StringType.get(),SUPPORTED_PRIMITIVES))),required(17,\"list_of_struct_of_nested_types\",ListType.ofOptional(19,StructType.of(Types.NestedField.required(20,\"m1\",MapType.ofOptional(21,22,Types.StringType.get(),SUPPORTED_PRIMITIVES)),Types.NestedField.optional(23,\"l1\",ListType.ofRequired(24,SUPPORTED_PRIMITIVES)),Types.NestedField.required(25,\"l2\",ListType.ofRequired(26,SUPPORTED_PRIMITIVES)),Types.NestedField.optional(27,\"m2\",MapType.ofOptional(28,29,Types.StringType.get(),SUPPORTED_PRIMITIVES)))))))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->4 [style = dashed, label="0"];
+8->2 [style = solid, label="schema"];
+4->3 [style = bold, label=""];
+6->4 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+8->2 [style = bold, label=""];
+7->8 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->5 [style = solid, label="schema"];
+1->2 [style = solid, label="schema"];
+}

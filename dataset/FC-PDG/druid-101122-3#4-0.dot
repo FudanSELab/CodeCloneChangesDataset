@@ -1,0 +1,21 @@
+digraph {
+3 [style = filled, label = "createSegmentTable['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "createTable(tableName,ImmutableList.of(StringUtils.format(\"CREATE TABLE %1$s (\" + \" id VARCHAR(255) NOT NULL,\" + \" dataSource VARCHAR(255) NOT NULL,\" + \" created_date VARCHAR(255) NOT NULL,\" + \" start VARCHAR(255) NOT NULL,\" + \" %3$send%3$s VARCHAR(255) NOT NULL,\" + \" partitioned BOOLEAN NOT NULL,\" + \" version VARCHAR(255) NOT NULL,\" + \" used BOOLEAN NOT NULL,\" + \" payload %2$s NOT NULL,\" + \" PRIMARY KEY (id)\" + \")\",tableName,getPayloadType(),getQuoteString()),StringUtils.format(\"CREATE INDEX idx_%1$s_datasource ON %1$s(dataSource)\",tableName),StringUtils.format(\"CREATE INDEX idx_%1$s_used ON %1$s(used)\",tableName)))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "createTable(tableName,ImmutableList.of(StringUtils.format(\"CREATE TABLE %1$s (\" + \" id VARCHAR(255) NOT NULL,\" + \" created_date VARCHAR(255) NOT NULL,\" + \" datasource VARCHAR(255) NOT NULL,\" + \" payload %2$s NOT NULL,\" + \" status_payload %2$s NOT NULL,\" + \" active BOOLEAN NOT NULL DEFAULT FALSE,\" + \" PRIMARY KEY (id)\" + \")\",tableName,getPayloadType()),StringUtils.format(\"CREATE INDEX idx_%1$s_active_created_date ON %1$s(active, created_date)\",tableName)))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "createSegmentTable['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "createEntryTable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final String tableName@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final String tableName@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "createTable(tableName,ImmutableList.of(StringUtils.format(\"CREATE TABLE %1$s (\" + \" id VARCHAR(255) NOT NULL,\" + \" dataSource VARCHAR(255) NOT NULL,\" + \" created_date VARCHAR(255) NOT NULL,\" + \" start VARCHAR(255) NOT NULL,\" + \" %3$send%3$s VARCHAR(255) NOT NULL,\" + \" partitioned BOOLEAN NOT NULL,\" + \" version VARCHAR(255) NOT NULL,\" + \" used BOOLEAN NOT NULL,\" + \" payload %2$s NOT NULL,\" + \" PRIMARY KEY (id)\" + \")\",tableName,getPayloadType(),getQuoteString()),StringUtils.format(\"CREATE INDEX idx_%1$s_datasource_end ON %1$s(dataSource, %2$send%2$s)\",tableName,getQuoteString()),StringUtils.format(\"CREATE INDEX idx_%1$s_datasource_sequence ON %1$s(dataSource, sequence_name)\",tableName)))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5->6 [style = dotted, label="true"];
+5->7 [style = bold, label=""];
+1->2 [style = solid, label="tableName"];
+2->4 [style = dashed, label="0"];
+1->4 [style = solid, label="tableName"];
+6->7 [style = solid, label="tableName"];
+0->2 [style = bold, label=""];
+3->1 [style = dotted, label="true"];
+3->4 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+0->1 [style = dotted, label="true"];
+}

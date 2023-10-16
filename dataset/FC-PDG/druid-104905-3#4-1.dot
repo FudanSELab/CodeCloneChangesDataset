@@ -1,0 +1,36 @@
+digraph {
+6 [style = filled, label = "testWithLargeCacheAndSmallFetch['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testWithLargeCacheAndSmallFetch['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertResult(rows)@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final List<Row> rows = new ArrayList<>()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "firehose.hasMore()@@@7@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "rows.add(firehose.nextRow())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertNumRemainingCacheFiles(firehoseTmpDir,2)@@@12@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final TestPrefetchableTextFilesFirehoseFactory factory = TestPrefetchableTextFilesFirehoseFactory.with(TEST_DIR,2048,1024)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertNumRemainingCacheFiles(firehoseTmpDir,1)@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "final File firehoseTmpDir = createFirehoseTmpDir(\"testWithSmallCacheAndLargeFetch\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "testWithSmallCacheAndLargeFetch['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "final TestPrefetchableTextFilesFirehoseFactory factory = TestPrefetchableTextFilesFirehoseFactory.with(TEST_DIR,1024,2048)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final File firehoseTmpDir = createFirehoseTmpDir(\"testWithLargeCacheAndSmallFetch\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+4->10 [style = bold, label=""];
+4->2 [style = solid, label="rows"];
+2->3 [style = bold, label=""];
+5->1 [style = dotted, label="true"];
+11->4 [style = bold, label=""];
+12->11 [style = bold, label=""];
+7->11 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+2->9 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+8->7 [style = bold, label=""];
+4->0 [style = bold, label=""];
+10->9 [style = solid, label="firehoseTmpDir"];
+5->1 [style = bold, label=""];
+5->2 [style = bold, label=""];
+10->5 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+0->3 [style = solid, label="firehoseTmpDir"];
+6->7 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

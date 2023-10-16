@@ -1,0 +1,38 @@
+digraph {
+7 [style = filled, label = "testDSALeadingZeroUndersize['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "DNSKEYRecord dnskey = (DNSKEYRecord)Record.fromString(Name.root,Type.DNSKEY,DClass.IN,3600,\"256 3 3 AJYu3cw2nLqOuyYO5rahJtk0bjjF/KaCzo4Syrom78z3EQ5SbbB4sF7ey80etKII864WF64B81uRpH5t9jQTxeEu0ImbzRMqzVDZkVG9xD7nN1kuF2eEcbJ6nPRO6RpJxRR9samq8kTwWkNNZIaTHS0UJxueNQMLcf1z2heQabMuKTVjDhwgYjVNDaIKbEFuUL55TKRAt3Xr7t5zCMLaujMvqNHOzCFEusXN5mXjJqAj8J0l4B4tbL7M4iIFZeXJDXGCEcsBbNrVAfFnlOO06B6dkB8L\",Name.root)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "RRSIGRecord rrsig = (RRSIGRecord)Record.fromString(Name.root,Type.RRSIG,DClass.IN,3600L,\"TXT 3 0 3600 19700101000003 19700101000000 36714 . ycZeIdBGB7vjlFzd5+ZgV8IxGRLpLierdV1KO4SGIy707hKUXJRc=\",Name.root)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "RRSIGRecord rrsig = (RRSIGRecord)Record.fromString(Name.root,Type.RRSIG,DClass.IN,3600L,\"TXT 3 0 3600 19700101000003 19700101000000 57407 . AIh8Bp0EFNszs3cB0gNatjWy8tBrgUAUe1gTHkVsm1pva1GYWOW/FbA=\",Name.root)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "set.addRR(txt)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "DNSSEC.verify(set,rrsig,dnskey,Instant.ofEpochMilli(60))@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "testDSALeadingZeroUndersize['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "DNSKEYRecord dnskey = (DNSKEYRecord)Record.fromString(Name.root,Type.DNSKEY,DClass.IN,3600,\"256 3 3 AJYu3cw2nLqOuyYO5rahJtk0bjjF/KaCzo4Syrom78z3EQ5SbbB4sF7ey80etKII864WF64B81uRpH5t9jQTxeEu0ImbzRMqzVDZkVG9xD7nN1kuF2eEcbJ6nPRO6RpJxRR9samq8kTwWkNNZIaTHS0UJxueNQMLcf1z2heQabMuKTVjDhwgYjVNDaIKbEFuUL55TKQflphJYUXcb2M3wKNGoXP7NufzhfVaDtiS44waWjC8IN98Ab+SPPfM4+xgTsgzWt8KvzL8hhqSW+4+5zjiQ6UG\",Name.root)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "DNSSEC.verify(set,rrsig,dnskey,new Date(60))@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testDSALeadingZeroOversize['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "RRset<TXTRecord> set = new RRset<>()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "set.addRR(rrsig)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->8 [style = dashed, label="0"];
+9->6 [style = solid, label="rrsig"];
+0->6 [style = bold, label=""];
+2->6 [style = solid, label="dnskey"];
+9->4 [style = bold, label=""];
+5->0 [style = solid, label="rrsig"];
+4->6 [style = solid, label="set"];
+5->9 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+5->8 [style = solid, label="rrsig"];
+11->9 [style = bold, label=""];
+5->6 [style = solid, label="rrsig"];
+4->8 [style = solid, label="set"];
+11->6 [style = solid, label="dnskey"];
+3->2 [style = bold, label=""];
+2->8 [style = solid, label="dnskey"];
+7->2 [style = bold, label=""];
+9->0 [style = solid, label="rrsig"];
+5->4 [style = bold, label=""];
+0->8 [style = bold, label=""];
+2->11 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+2->5 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

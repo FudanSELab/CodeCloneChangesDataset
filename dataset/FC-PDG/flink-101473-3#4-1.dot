@@ -1,0 +1,24 @@
+digraph {
+7 [style = filled, label = "testBoundsCanBeInclusive['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "env.execute()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "env.setParallelism(1)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testBoundsCanBeInclusive['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "DataStream<Tuple2<String,Integer>> streamOne = env.fromElements(Tuple2.of(\"key\",0),Tuple2.of(\"key\",1),Tuple2.of(\"key\",2)).assignTimestampsAndWatermarks(new AscendingTuple2TimestampExtractor())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "streamOne.keyBy(new Tuple2KeyExtractor()).intervalJoin(streamTwo.keyBy(new Tuple2KeyExtractor())).between(Time.milliseconds(0),Time.milliseconds(2)).process(new CombineToStringJoinFunction()).addSink(new ResultSink())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "expectInAnyOrder(\"(key,0):(key,0)\",\"(key,0):(key,1)\",\"(key,0):(key,2)\",\"(key,1):(key,1)\",\"(key,1):(key,2)\",\"(key,2):(key,2)\")@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "DataStream<Tuple2<String,Integer>> streamTwo = env.fromElements(Tuple2.of(\"key\",0),Tuple2.of(\"key\",1),Tuple2.of(\"key\",2)).assignTimestampsAndWatermarks(new AscendingTuple2TimestampExtractor())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testBoundsAreInclusiveByDefault['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+5->2 [style = bold, label=""];
+7->0 [style = bold, label=""];
+1->6 [style = bold, label=""];
+9->0 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+10->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->8 [style = bold, label=""];
+}

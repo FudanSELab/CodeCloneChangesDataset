@@ -1,0 +1,25 @@
+digraph {
+5 [style = filled, label = "ConfigurableEnvironment environment = emptyEnvironment()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "propertyEntry['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "TestPropertyValues.of(\"my.foo=another\").applyToSystemProperties(null)@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "propertyEntryNotFound['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "environment.getPropertySources().addFirst(singleKeyPropertySource(\"test\",\"foo\",\"bar\"))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertThat(sources.keySet()).containsExactly(\"test\")@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "EnvironmentEntryDescriptor descriptor = new EnvironmentEndpoint(environment).environmentEntry(\"does.not.exist\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertPropertySourceEntryDescriptor(sources.get(\"test\"),null,null)@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertThat(descriptor).isNotNull()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertThat(descriptor.getProperty()).isNull()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "Map<String,PropertySourceEntryDescriptor> sources = propertySources(descriptor)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "propertyEntry['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7->3 [style = bold, label=""];
+10->11 [style = solid, label="descriptor"];
+5->6 [style = bold, label=""];
+10->8 [style = bold, label=""];
+9->11 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->10 [style = bold, label=""];
+11->7 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

@@ -1,0 +1,32 @@
+digraph {
+0 [style = filled, label = "return new UITask<GenericPrimaryKey>(){@Override protected GenericPrimaryKey runTask(){EditConstraintPage editPage = new EditConstraintPage(\"Create unique constraint\",primaryKey,new DBSEntityConstraintType((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9d570)if (!editPage.edit()) {return null}primaryKey.setConstraintType(editPage.getConstraintType())primaryKey.setName(editPage.getConstraintName())int colIndex = 1for (DBSEntityAttribute tableColumn : editPage.getSelectedAttributes()){primaryKey.addColumn(new GenericTableConstraintColumn(primaryKey,(GenericTableColumn)tableColumn,colIndex++))}return primaryKey}}.execute()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "return UITask.run(null)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Object table@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "return new UITask<GenericUniqueKey>(){@Override protected GenericUniqueKey runTask(){EditConstraintPage editPage = new EditConstraintPage(\"Create unique constraint\",primaryKey,new DBSEntityConstraintType((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9d5c5)if (!editPage.edit()) {return null}primaryKey.setConstraintType(editPage.getConstraintType())primaryKey.setName(editPage.getConstraintName())int colIndex = 1for (DBSEntityAttribute tableColumn : editPage.getSelectedAttributes()){primaryKey.addColumn(new GenericTableConstraintColumn(primaryKey,(GenericTableColumn)tableColumn,colIndex++))}return primaryKey}}.execute()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "Object table@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "configureObject['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "GenericUniqueKey primaryKey@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "GenericPrimaryKey primaryKey@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "configureObject['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "SQLServerTableUniqueKey primaryKey@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "Object container@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "configureObject['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11->14 [style = dotted, label="true"];
+3->8 [style = dashed, label="0"];
+11->12 [style = bold, label=""];
+4->3 [style = dotted, label="true"];
+11->13 [style = dotted, label="true"];
+3->14 [style = dashed, label="0"];
+9->7 [style = bold, label=""];
+9->6 [style = dotted, label="true"];
+4->1 [style = dotted, label="true"];
+0->7 [style = dashed, label="0"];
+11->10 [style = dotted, label="true"];
+4->2 [style = dotted, label="true"];
+4->0 [style = bold, label=""];
+9->8 [style = dotted, label="true"];
+9->5 [style = dotted, label="true"];
+}

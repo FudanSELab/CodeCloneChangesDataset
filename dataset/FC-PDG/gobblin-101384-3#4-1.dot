@@ -1,0 +1,12 @@
+digraph {
+4 [style = filled, label = "getFileFilter['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "return new PathFilter(){@Override public boolean accept(Path path){return path.getName().endsWith(extension)}}@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "getFileFilter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "final String extension = (this.expectedExtension.startsWith(\".\"))? this.expectedExtension: \".\" + this.expectedExtension@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "getFileFilter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->1 [style = bold, label=""];
+1->2 [style = solid, label="extension"];
+}

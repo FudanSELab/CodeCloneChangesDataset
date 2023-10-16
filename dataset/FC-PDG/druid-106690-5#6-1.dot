@@ -1,0 +1,35 @@
+digraph {
+7 [style = filled, label = "Iterable<ScanResultValue> results = runner.run(QueryPlus.wrap(query)).toList()@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "List<ScanResultValue> expectedResults = toExpected(toEvents(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8f64b4,V_0112_0114),legacy? Lists.newArrayList(getTimestampName(),\"market\",\"index\"): Lists.newArrayList(\"market\",\"index\"),0,3)@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "verify(expectedResults,compactedListToRow(results))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Iterable<ScanResultValue> results = runner.run(QueryPlus.wrap(query),context).toList()@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "List<ScanResultValue> expectedResults = toExpected(toEvents(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8f6522,V_0112_0114),legacy? Lists.newArrayList(getTimestampName(),\"market\",\"index\"): Lists.newArrayList(\"market\",\"index\"),0,3)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testSelectWithDimsAndMets['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "testSelectWithDimsAndMets['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "verify(expectedResults,results)@@@8@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "HashMap<String,Object> context = new HashMap<String,Object>()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "ScanQuery query = newTestQuery().intervals(I_0112_0114).columns(QueryRunnerTestHelper.marketDimension,QueryRunnerTestHelper.indexMetric).resultFormat(ScanQuery.ResultFormat.RESULT_FORMAT_COMPACTED_LIST).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "ScanQuery query = newTestQuery().intervals(I_0112_0114).columns(QueryRunnerTestHelper.marketDimension,QueryRunnerTestHelper.indexMetric).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testSelectWithDimsAndMetsAsCompactedList['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "verify(expectedResults,results)@@@9@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+9->5 [style = bold, label=""];
+5->7 [style = bold, label=""];
+8->6 [style = bold, label=""];
+12->3 [style = bold, label=""];
+2->11 [style = solid, label="results"];
+4->11 [style = solid, label="expectedResults"];
+2->0 [style = solid, label="results"];
+5->12 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+4->11 [style = bold, label=""];
+8->6 [style = solid, label="expectedResults"];
+7->8 [style = bold, label=""];
+7->6 [style = solid, label="results"];
+2->4 [style = bold, label=""];
+10->12 [style = bold, label=""];
+4->0 [style = solid, label="expectedResults"];
+4->0 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+}

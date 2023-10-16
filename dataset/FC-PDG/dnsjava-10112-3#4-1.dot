@@ -1,0 +1,38 @@
+digraph {
+7 [style = filled, label = "Record(( run = lookup.run()@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "wireUpMockResolver(mockResolver,null)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Lookup lookup = new Lookup(\"host.docker.internal\",Type.A)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "lookup.setResolver(mockResolver)@@@9@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "lookup.setResolver(mockResolver)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "lookup.setHostsFileParser(new HostsFileParser(Paths.get(.getResource(\"/hosts_example\").toURI())))@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "assertNotNull(run)@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "Lookup lookup = new Lookup(\"host\",Type.A)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertEquals(1,run.length)@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testLookupFromHosts['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "lookup.setSearchPath(\"docker.internal\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "assertEquals(InetAddress.getByAddress(\"host.docker.internal\",new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1516724),((ARecord)run(0().getAddress())@@@14@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testLookupFromHosts['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testLookupFromHostsWithSearchDomain['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "lookup.setHostsFileParser(new HostsFileParser(Paths.get(.getResource(\"/hosts_windows\").toURI())))@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "wireUpMockResolver(mockResolver,null)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->13 [style = bold, label=""];
+5->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+4->14 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+7->8 [style = solid, label="run"];
+2->9 [style = bold, label=""];
+9->1 [style = bold, label=""];
+1->7 [style = solid, label="run"];
+7->8 [style = bold, label=""];
+11->14 [style = bold, label=""];
+1->7 [style = bold, label=""];
+14->12 [style = bold, label=""];
+15->5 [style = bold, label=""];
+4->0 [style = bold, label=""];
+2->5 [style = bold, label=""];
+8->3 [style = bold, label=""];
+12->15 [style = bold, label=""];
+10->4 [style = bold, label=""];
+}

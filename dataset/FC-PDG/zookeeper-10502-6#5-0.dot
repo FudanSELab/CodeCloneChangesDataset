@@ -1,0 +1,38 @@
+digraph {
+0 [style = filled, label = "final File tmp = new File(tmpdir,\"target.txt.tmp\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testWriterSuccessNE['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertFalse(target.exists(),\"file should not exist\")@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "target.delete()@@@15@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testWriterSuccessNE['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "assertFalse(tmp.exists(),\"tmp file should have been deleted\")@@@14@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "File target = new File(tmpdir,\"target.txt\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "new AtomicFileWritingIdiom(target,new OutputStreamStatement(){@Override public void write(OutputStream os){os.write(\"after\".getBytes(StandardCharsets.US_ASCII))assertTrue(\"implementation of AtomicFileOutputStream has changed, update the test\",tmp.exists())}})@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "testOutputStreamSuccessNE['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertFalse(\"file should not exist\",target.exists())@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertFalse(\"tmp file should have been deleted\",tmp.exists())@@@14@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "target.delete()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(\"after\",getContent(target))@@@14@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "new AtomicFileWritingIdiom(target,new WriterStatement(){@Override public void write(Writer os){os.write(\"after\")assertTrue(tmp.exists(),\"implementation of AtomicFileOutputStream has changed, update the test\")}})@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+1->4 [style = bold, label=""];
+12->5 [style = bold, label=""];
+4->6 [style = bold, label=""];
+9->4 [style = bold, label=""];
+3->11 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+8->13 [style = dashed, label="0"];
+2->13 [style = bold, label=""];
+5->13 [style = solid, label="target"];
+8->1 [style = bold, label=""];
+7->5 [style = bold, label=""];
+10->5 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+8->9 [style = bold, label=""];
+11->8 [style = bold, label=""];
+2->11 [style = dashed, label="0"];
+5->4 [style = solid, label="target"];
+13->4 [style = bold, label=""];
+2->8 [style = bold, label=""];
+5->8 [style = solid, label="target"];
+}

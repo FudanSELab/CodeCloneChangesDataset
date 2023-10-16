@@ -1,0 +1,20 @@
+digraph {
+6 [style = filled, label = "equals['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "equals['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "equals['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return obj == this || obj instanceof MutableCorrelate && correlationId.equals(((MutableCorrelate)obj).correlationId) && requiredColumns.equals(((MutableCorrelate)obj).requiredColumns) && joinType == ((MutableCorrelate)obj).joinType && left.equals(((MutableCorrelate)obj).left) && right.equals(((MutableCorrelate)obj).right)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return obj == this || obj instanceof MutableAggregate && groupSet.equals(((MutableAggregate)obj).groupSet) && aggCalls.equals(((MutableAggregate)obj).aggCalls) && input.equals(((MutableAggregate)obj).input)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "Object obj@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return obj == this || obj instanceof MutableAggregate && groupSet.equals(((MutableAggregate)obj).groupSet) && groupSets.equals(((MutableAggregate)obj).groupSets) && aggCalls.equals(((MutableAggregate)obj).aggCalls) && input.equals(((MutableAggregate)obj).input)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1->4 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+6->2 [style = dotted, label="true"];
+2->4 [style = solid, label="obj"];
+0->2 [style = dotted, label="true"];
+1->5 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+2->1 [style = solid, label="obj"];
+0->1 [style = bold, label=""];
+2->5 [style = solid, label="obj"];
+3->2 [style = dotted, label="true"];
+}

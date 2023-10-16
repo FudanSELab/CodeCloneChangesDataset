@@ -1,0 +1,38 @@
+digraph {
+5 [style = filled, label = "EasyMock.expect(underlyingStore.name()).andStubReturn(\"store-name\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "cache = EasyMock.niceMock()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "setUpCloseTests['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "EasyMock.replay(underlyingStore)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "underlyingStore = EasyMock.createNiceMock()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "underlyingStore.close()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final InternalMockProcessorContext context = new InternalMockProcessorContext(TestUtils.tempDirectory(),null,null,null,cache)@@@10@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "setUpCloseTests['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "EasyMock.expect(underlyingStore.isOpen()).andStubReturn(true)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "cachingStore = new CachingSessionStore(underlyingStore,SEGMENT_INTERVAL)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "setUpCloseTests['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final InternalMockProcessorContext context = new InternalMockProcessorContext<>(TestUtils.tempDirectory(),null,null,null,cache)@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "cachingStore.init((StateStoreContext)context,cachingStore)@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "context.setRecordContext(new ProcessorRecordContext(10,0,0,TOPIC,null))@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11->8 [style = solid, label="context"];
+2->1 [style = bold, label=""];
+7->8 [style = solid, label="context"];
+11->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+6->7 [style = solid, label="cache"];
+7->11 [style = dashed, label="0"];
+3->1 [style = solid, label="underlyingStore"];
+10->3 [style = bold, label=""];
+7->4 [style = bold, label=""];
+1->8 [style = solid, label="cachingStore"];
+12->13 [style = bold, label=""];
+3->5 [style = bold, label=""];
+1->6 [style = bold, label=""];
+13->3 [style = bold, label=""];
+5->0 [style = bold, label=""];
+6->11 [style = solid, label="cache"];
+6->11 [style = bold, label=""];
+9->3 [style = bold, label=""];
+4->8 [style = bold, label=""];
+3->2 [style = solid, label="underlyingStore"];
+6->7 [style = bold, label=""];
+}

@@ -1,0 +1,19 @@
+digraph {
+0 [style = filled, label = "String metricName = this.properties.getWeb().getServer().getRequestsMetricName()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "metricsHttpServerUriTagFilter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "metricsHttpServerUriTagFilter['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "String metricName = this.properties.getWeb().getServer().getRequest().getMetricName()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "MeterFilter filter = new OnlyOnceLoggingDenyMeterFilter(null)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "metricsHttpServerUriTagFilter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "return MeterFilter.maximumAllowableTags(metricName,\"uri\",this.properties.getWeb().getServer().getMaxUriTags(),filter)@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->2 [style = solid, label="filter"];
+0->2 [style = solid, label="metricName"];
+6->0 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+4->2 [style = solid, label="metricName"];
+5->4 [style = bold, label=""];
+}

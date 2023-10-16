@@ -1,0 +1,35 @@
+digraph {
+12 [style = filled, label = "final JDBCPreparedStatement dbStat = session.prepareStatement(\"SELECT \" + \" e.oid,\" + \" a.rolname oname,\" + \" cfg.tbls,\" + \" e.* \" + \"FROM \" + \" pg_catalog.pg_extension e \" + \" join pg_authid a on a.oid = e.extowner\" + \" join pg_namespace n on n.oid =e.extnamespace\" + \" left join (\" + \" select\" + \" ARRAY_AGG(ns.nspname || '.' || cls.relname) tbls, oid_ext\" + \" from\" + \" (\" + \" select\" + \" unnest(e1.extconfig) oid , e1.oid oid_ext\" + \" from\" + \" pg_catalog.pg_extension e1 ) c \" + \" join pg_class cls on cls.oid = c.oid \" + \" join pg_namespace ns on ns.oid = cls.relnamespace\" + \" group by oid_ext \" + \" ) cfg on cfg.oid_ext = e.oid\" + \"WHERE e.extnamespace=?\" + \"ORDER BY e.oid\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "prepareObjectsStatement['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "@NotNull PostgreDatabase owner@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "prepareObjectsStatement['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "@NotNull JDBCSession session@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "@NotNull PostgreSchema owner@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final JDBCPreparedStatement dbStat = session.prepareStatement(\"SELECT \" + \" e.oid,\" + \" a.rolname oname,\" + \" cfg.tbls,\" + \" n.nspname as schema_name,\" + \" e.* \" + \"FROM \" + \" pg_catalog.pg_extension e \" + \" join pg_authid a on a.oid = e.extowner\" + \" join pg_namespace n on n.oid =e.extnamespace\" + \" left join (\" + \" select\" + \" ARRAY_AGG(ns.nspname || '.' || cls.relname) tbls, oid_ext\" + \" from\" + \" (\" + \" select\" + \" unnest(e1.extconfig) oid , e1.oid oid_ext\" + \" from\" + \" pg_catalog.pg_extension e1 ) c \" + \" join pg_class cls on cls.oid = c.oid \" + \" join pg_namespace ns on ns.oid = cls.relnamespace\" + \" group by oid_ext \" + \" ) cfg on cfg.oid_ext = e.oid\" + \"ORDER BY e.oid\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "return dbStat@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final JDBCPreparedStatement dbStat = session.prepareStatement(\"SELECT \" + \" e.oid,\" + \" a.rolname oname,\" + \" cfg.tbls,\" + \" e.* \" + \"FROM \" + \" pg_catalog.pg_extension e \" + \" join pg_authid a on a.oid = e.extowner\" + \" join pg_namespace n on n.oid =e.extnamespace\" + \" left join (\" + \" select\" + \" ARRAY_AGG(ns.nspname || '.' || cls.relname) tbls, oid_ext\" + \" from\" + \" (\" + \" select\" + \" unnest(e1.extconfig) oid , e1.oid oid_ext\" + \" from\" + \" pg_catalog.pg_extension e1 ) c \" + \" join pg_class cls on cls.oid = c.oid \" + \" join pg_namespace ns on ns.oid = cls.relnamespace\" + \" group by oid_ext \" + \" ) cfg on cfg.oid_ext = e.oid\" + \"ORDER BY e.oid\")@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "@NotNull JDBCSession session@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "prepareObjectsStatement['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "return dbStat@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "@NotNull PostgreDatabase owner@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "dbStat.setLong(1,this.getObjectId())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12->11 [style = solid, label="dbStat"];
+5->7 [style = bold, label=""];
+5->6 [style = dotted, label="true"];
+2->12 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+12->10 [style = bold, label=""];
+9->12 [style = bold, label=""];
+1->4 [style = dotted, label="true"];
+1->0 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+4->13 [style = dashed, label="0"];
+2->7 [style = dashed, label="0"];
+2->3 [style = solid, label="dbStat"];
+7->3 [style = solid, label="dbStat"];
+7->3 [style = bold, label=""];
+5->4 [style = dotted, label="true"];
+2->3 [style = bold, label=""];
+10->11 [style = bold, label=""];
+9->13 [style = dotted, label="true"];
+}

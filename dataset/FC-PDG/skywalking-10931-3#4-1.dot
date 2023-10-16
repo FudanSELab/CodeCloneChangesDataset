@@ -1,0 +1,37 @@
+digraph {
+0 [style = filled, label = "testIngress2SidecarMetric['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ServiceMeshMetric.Builder incoming = result.get(0)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "JsonFormat.parser().merge(isr,requestBuilder)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "List<ServiceMeshMetric.Builder> result = this.analysis.analysis(requestBuilder.getIdentifier(),requestBuilder.getHttpLogs().getLogEntry(0),Role.SIDECAR)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assert.assertEquals(\"\",incoming.getSourceServiceName())@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "List<ServiceMeshMetric.Builder> result = this.analysis.analysis(new ArrayList<>(),requestBuilder.getIdentifier(),requestBuilder.getHttpLogs().getLogEntry(0),Role.SIDECAR)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "testSidecar2SidecarClientMetric['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Assert.assertEquals(DetectPoint.server,incoming.getDetectPoint())@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Assert.assertEquals(\"productpage\",incoming.getDestServiceName())@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Assert.assertEquals(1,result.size())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testIngress2SidecarMetric['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "Assert.assertEquals(DetectPoint.client,incoming.getDetectPoint())@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "Assert.assertEquals(\"detail\",incoming.getDestServiceName())@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "Assert.assertEquals(\"productpage\",incoming.getSourceServiceName())@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "StreamAccessLogsMessage.Builder requestBuilder = StreamAccessLogsMessage.newBuilder()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->5 [style = bold, label=""];
+8->1 [style = bold, label=""];
+5->7 [style = bold, label=""];
+12->14 [style = bold, label=""];
+11->5 [style = bold, label=""];
+1->4 [style = bold, label=""];
+10->2 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+7->6 [style = bold, label=""];
+5->7 [style = solid, label="requestBuilder"];
+14->13 [style = bold, label=""];
+8->12 [style = dashed, label="0"];
+3->12 [style = bold, label=""];
+4->13 [style = dashed, label="0"];
+1->14 [style = dashed, label="0"];
+7->10 [style = bold, label=""];
+3->8 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->5 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

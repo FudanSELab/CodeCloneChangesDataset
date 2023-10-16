@@ -1,0 +1,25 @@
+digraph {
+0 [style = filled, label = "expectedDescription.addSubtopology(new InternalTopologyBuilder.Subtopology(0,Collections.singleton(expectedSourceNode)))@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "singleSourceWithListOfTopicsShouldHaveSingleSubtopology['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "expectedDescription.addSubtopology(new SubtopologyDescription(0,Collections.singleton(expectedSourceNode)))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "singleSourceWithListOfTopicsShouldHaveSingleSubtopology['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(topology.describe().hashCode(),equalTo(expectedDescription.hashCode()))@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final TopologyDescription.Source expectedSourceNode = addSource(\"source\",Pattern.compile(\"topic(0-9(\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "singleSourcePatternShouldHaveSingleSubtopology['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(topology.describe(),equalTo(expectedDescription))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final TopologyDescription.Source expectedSourceNode = addSource(\"source\",\"topic1\",\"topic2\",\"topic3\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->6 [style = solid, label="expectedSourceNode"];
+5->3 [style = bold, label=""];
+3->0 [style = solid, label="expectedSourceNode"];
+8->7 [style = bold, label=""];
+6->4 [style = bold, label=""];
+3->6 [style = bold, label=""];
+4->1 [style = bold, label=""];
+7->0 [style = bold, label=""];
+0->4 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+7->0 [style = solid, label="expectedSourceNode"];
+}

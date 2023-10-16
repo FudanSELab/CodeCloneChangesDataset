@@ -1,0 +1,38 @@
+digraph {
+11 [style = filled, label = "accept['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "accept['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "writer.append(resultType).list(\"(\",\", \",\")\",Lists.transform(parameters,new Function<ParameterExpression,String>(){public String apply(ParameterExpression parameter){final String modifiers = Modifier.toString(parameter.modifier)return modifiers + (modifiers.isEmpty()? \"\": \" \") + Types.className(parameter.getType()) + \" \" + parameter.name}})).append(' ').append(body)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "writer.newlineAndIndent()@@@15@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "String modifiers = Modifier.toString(modifier)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "accept['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "writer.append(resultType).append(' ').append(name).list(\"(\",\", \",\")\",Lists.transform(parameters,null)).append(' ').append(body)@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "writer.append(' ')@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "!modifiers.isEmpty()@@@5@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "writer.append(modifiers)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "writer.append(resultType).append(' ').append(name).list(\"(\",\", \",\")\",Lists.transform(parameters,new Function<ParameterExpression,String>(){public String apply(ParameterExpression a0){return a0.declString()}})).append(' ').append(body)@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "ExpressionWriter writer@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "writer.newlineAndIndent()@@@9@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "writer.newlineAndIndent()@@@14@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11->7 [style = dotted, label="true"];
+4->9 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+11->6 [style = bold, label=""];
+3->4 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+5->9 [style = dashed, label="0"];
+8->6 [style = bold, label=""];
+9->10 [style = bold, label=""];
+3->12 [style = bold, label=""];
+3->4 [style = bold, label=""];
+6->2 [style = bold, label=""];
+1->7 [style = dotted, label="true"];
+3->9 [style = bold, label=""];
+12->13 [style = bold, label=""];
+3->5 [style = bold, label=""];
+1->6 [style = bold, label=""];
+5->0 [style = bold, label=""];
+4->12 [style = bold, label=""];
+4->5 [style = bold, label=""];
+6->2 [style = solid, label="modifiers"];
+}

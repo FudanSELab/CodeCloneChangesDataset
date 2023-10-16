@@ -1,0 +1,37 @@
+digraph {
+7 [style = filled, label = "String json = JSON_MAPPER.writeValueAsString(query)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "Query serdeQuery = jsonMapper.readValue(json,)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testQuerySerialization['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Query query = Druids.newTimeseriesQueryBuilder().dataSource(QueryRunnerTestHelper.DATA_SOURCE).granularity(QueryRunnerTestHelper.DAY_GRAN).intervals(QueryRunnerTestHelper.FULL_ON_INTERVAL_SPEC).aggregators(QueryRunnerTestHelper.ROWS_COUNT,QueryRunnerTestHelper.INDEX_DOUBLE_SUM).postAggregators(QueryRunnerTestHelper.ADD_ROWS_INDEX_CONSTANT).descending(descending).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "Query serdeQuery = JSON_MAPPER.readValue(json,)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "String json = jsonMapper.writeValueAsString(query)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testQuerySerialization['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testQuerySerialization['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "Assert.assertEquals(query,serdeQuery)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Query query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).dimension(QueryRunnerTestHelper.marketDimension).metric(QueryRunnerTestHelper.indexMetric).threshold(4).intervals(QueryRunnerTestHelper.fullOnIntervalSpec).aggregators(Lists.newArrayList(Iterables.concat(QueryRunnerTestHelper.commonDoubleAggregators,Lists.newArrayList(new DoubleMaxAggregatorFactory(\"maxIndex\",\"index\"),new DoubleMinAggregatorFactory(\"minIndex\",\"index\"))))).postAggregators(QueryRunnerTestHelper.addRowsIndexConstant).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Query query = Druids.newTimeseriesQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.dayGran).intervals(QueryRunnerTestHelper.fullOnIntervalSpec).aggregators(QueryRunnerTestHelper.rowsCount,QueryRunnerTestHelper.indexDoubleSum).postAggregators(QueryRunnerTestHelper.addRowsIndexConstant).descending(descending).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->4 [style = bold, label=""];
+8->3 [style = solid, label="query"];
+0->3 [style = solid, label="query"];
+1->4 [style = solid, label="json"];
+7->5 [style = solid, label="json"];
+8->7 [style = bold, label=""];
+8->7 [style = solid, label="query"];
+9->3 [style = solid, label="query"];
+7->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+0->1 [style = solid, label="query"];
+5->3 [style = solid, label="serdeQuery"];
+0->1 [style = bold, label=""];
+6->8 [style = bold, label=""];
+4->3 [style = solid, label="serdeQuery"];
+4->5 [style = dashed, label="0"];
+0->8 [style = dashed, label="0"];
+10->9 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+9->1 [style = bold, label=""];
+9->1 [style = solid, label="query"];
+}

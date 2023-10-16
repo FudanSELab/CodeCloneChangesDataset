@@ -1,0 +1,34 @@
+digraph {
+6 [style = filled, label = "ClassLoader originalClassLoader = Thread.currentThread().getContextClassLoader()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThat(result).isEqualTo(\"monoResult\")@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(Thread.currentThread().getContextClassLoader()).isEqualTo(originalClassLoader)@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "invokeWhenMonoResultShouldBlockOnMono['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "TestExposableJmxEndpoint endpoint = new TestExposableJmxEndpoint(new TestJmxOperation(null))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "TestExposableJmxEndpoint endpoint = new TestExposableJmxEndpoint(new TestJmxOperation(null))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "EndpointMBean bean = new EndpointMBean(this.responseMapper,beanClassLoader,endpoint)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Object result = bean.invoke(\"testOperation\",NO_PARAMS,NO_SIGNATURE)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "URLClassLoader beanClassLoader = new URLClassLoader(new URL((((,getClass().getClassLoader())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "EndpointMBean bean = new EndpointMBean(this.responseMapper,null,endpoint)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "Object result = bean.invoke(\"testOperation\",NO_PARAMS,NO_SIGNATURE)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(result).isEqualTo(beanClassLoader)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "invokeShouldInvokeJmxOperationWithBeanClassLoader['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "invokeShouldInvokeJmxOperationWithBeanClassLoader['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+13->10 [style = bold, label=""];
+12->13 [style = bold, label=""];
+6->5 [style = solid, label="originalClassLoader"];
+1->4 [style = bold, label=""];
+8->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+7->1 [style = bold, label=""];
+9->12 [style = bold, label=""];
+3->7 [style = solid, label="beanClassLoader"];
+4->10 [style = dashed, label="0"];
+9->12 [style = solid, label="endpoint"];
+3->7 [style = bold, label=""];
+11->9 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->6 [style = bold, label=""];
+3->4 [style = solid, label="beanClassLoader"];
+0->7 [style = solid, label="endpoint"];
+}

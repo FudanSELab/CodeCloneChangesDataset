@@ -1,0 +1,34 @@
+digraph {
+5 [style = filled, label = "assertThat(result.stderr(),containsString(\"ERROR: No view named never_created inside view Jenkins\"))@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "assertThat(result.stderr(),containsString(\"ERROR: No view named inside view Jenkins\"))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "j.jenkins.setAuthorizationStrategy(new MockAuthorizationStrategy().grant(View.READ,View.DELETE,Jenkins.READ).everywhere().toAuthenticated())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "assertThat(result,failedWith(3))@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(result,hasNoStandardOutput())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final CLICommandInvoker.Result result = command.authorizedTo(View.READ,View.DELETE,Jenkins.READ).invokeWithArgs(\"never_created\")@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "assertThat(result,hasNoStandardOutput())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "deleteViewShouldFailIfViewNameIsSpace['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "final CLICommandInvoker.Result result = command.authorizedTo(View.READ,View.DELETE,Jenkins.READ).invokeWithArgs(\" \")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "deleteViewShouldFailIfViewDoesNotExist['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "deleteViewShouldFailIfViewDoesNotExist['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final CLICommandInvoker.Result result = command.invokeWithArgs(\"never_created\")@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8->0 [style = bold, label=""];
+1->5 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+0->9 [style = bold, label=""];
+2->3 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+10->0 [style = solid, label="result"];
+8->1 [style = solid, label="result"];
+6->7 [style = bold, label=""];
+10->4 [style = solid, label="result"];
+3->0 [style = solid, label="result"];
+7->8 [style = bold, label=""];
+11->10 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+3->4 [style = solid, label="result"];
+8->0 [style = solid, label="result"];
+4->0 [style = bold, label=""];
+10->4 [style = bold, label=""];
+}

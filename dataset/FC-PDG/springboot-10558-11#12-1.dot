@@ -1,0 +1,38 @@
+digraph {
+14 [style = filled, label = "diskSpaceIsDown['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "given(this.fileMock.exists()).willReturn(true)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "diskSpaceIsUp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "assertThat(health.getDetails().get(\"threshold\")).isEqualTo(THRESHOLD.toBytes())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "diskSpaceIsUp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "long freeSpace = THRESHOLD.toBytes() + 10@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(health.getDetails().get(\"exists\")).isEqualTo(true)@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(health.getStatus()).isEqualTo(Status.DOWN)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "long freeSpace = THRESHOLD.toBytes() - 10@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "given(this.fileMock.getUsableSpace()).willReturn(freeSpace)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(health.getDetails().get(\"total\")).isEqualTo(TOTAL_SPACE.toBytes())@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(health.getDetails().get(\"free\")).isEqualTo(freeSpace)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(health.getStatus()).isEqualTo(Status.UP)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Health health = this.healthIndicator.health()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "given(this.fileMock.getTotalSpace()).willReturn(TOTAL_SPACE.toBytes())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+2->6 [style = solid, label="freeSpace"];
+13->5 [style = solid, label="freeSpace"];
+2->5 [style = solid, label="freeSpace"];
+3->12 [style = bold, label=""];
+3->4 [style = bold, label=""];
+12->7 [style = bold, label=""];
+11->2 [style = bold, label=""];
+4->7 [style = bold, label=""];
+1->9 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+6->1 [style = bold, label=""];
+5->0 [style = bold, label=""];
+8->2 [style = bold, label=""];
+2->13 [style = dashed, label="0"];
+7->6 [style = bold, label=""];
+13->5 [style = bold, label=""];
+13->6 [style = solid, label="freeSpace"];
+14->13 [style = bold, label=""];
+2->5 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

@@ -1,0 +1,38 @@
+digraph {
+10 [style = filled, label = "to.assertResult(Collections.emptyList())@@@22@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "bufferExactBoundaryBadSource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Flowable<Integer> pp = new Flowable<Integer>(){@Override protected void subscribeActual(Subscriber<? super Integer> subscriber){subscriber.onSubscribe(new BooleanSubscription())subscriber.onComplete()subscriber.onNext(1)subscriber.onComplete()}}@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Flowable<Integer> b = new Flowable<Integer>(){@Override protected void subscribeActual(Subscriber<? super Integer> subscriber){subscriber.onSubscribe(new BooleanSubscription())ref.set(subscriber)}}@@@13@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "TestSubscriber<List<Integer>> ts = pp.buffer(b).test()@@@20@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "bufferExactBoundaryBadSource['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final AtomicReference<Subscriber<? super Integer>> ref = new AtomicReference<Subscriber<? super Integer>>()@@@12@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "Observable<Integer> b = new Observable<Integer>(){@Override protected void subscribeActual(Observer<? super Integer> observer){observer.onSubscribe(Disposable.empty())ref.set(observer)}}@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "ref.get().onNext(1)@@@21@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "TestObserver<List<Integer>> to = ps.buffer(b).test()@@@20@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ts.assertResult(Collections.emptyList())@@@22@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "Observable<Integer> ps = new Observable<Integer>(){@Override protected void subscribeActual(Observer<? super Integer> observer){observer.onSubscribe(Disposable.empty())observer.onComplete()observer.onNext(1)observer.onComplete()}}@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "final AtomicReference<Observer<? super Integer>> ref = new AtomicReference<Observer<? super Integer>>()@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final AtomicReference<Subscriber<? super Integer>> ref = new AtomicReference<>()@@@12@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "bufferExactBoundaryBadSource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4->10 [style = bold, label=""];
+6->3 [style = bold, label=""];
+6->8 [style = dashed, label="0"];
+0->6 [style = bold, label=""];
+9->4 [style = bold, label=""];
+8->3 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+7->0 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+6->14 [style = dashed, label="0"];
+12->9 [style = bold, label=""];
+3->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+14->12 [style = bold, label=""];
+0->13 [style = dashed, label="0"];
+11->13 [style = bold, label=""];
+5->4 [style = bold, label=""];
+0->8 [style = bold, label=""];
+4->1 [style = bold, label=""];
+13->14 [style = bold, label=""];
+}

@@ -1,0 +1,35 @@
+digraph {
+0 [style = filled, label = "Path testBibtexFile = Paths.get(\"src/test/resources/testbib/bibWithUserComments.bib\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "ParserResult result = new BibtexParser(importFormatPreferences,fileMonitor).parse(Importer.getReader(testBibtexFile,encoding))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "BibDatabaseContext context = new BibDatabaseContext(result.getDatabase(),result.getMetaData(),new Defaults(BibDatabaseMode.BIBTEX))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "when(preferences.getEncoding()).thenReturn(encoding)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertEquals(Files.readString(testBibtexFile,encoding),stringWriter.toString())@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "Path testBibtexFile = Paths.get(\"src/test/resources/testbib/unknownMetaData.bib\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "roundtripWithUserComment['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Charset encoding = StandardCharsets.UTF_8@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(scanner.useDelimiter(\"\A\").next(),stringWriter.toString())@@@11@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "when(preferences.isSaveInOriginalOrder()).thenReturn(true)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "databaseWriter.savePartOfDatabase(context,result.getDatabase().getEntries())@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "roundtripWithUserComment['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "roundtripWithUnknownMetaData['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8->1 [style = bold, label=""];
+4->9 [style = bold, label=""];
+5->8 [style = bold, label=""];
+4->3 [style = bold, label=""];
+7->8 [style = solid, label="encoding"];
+1->2 [style = bold, label=""];
+7->5 [style = bold, label=""];
+6->0 [style = bold, label=""];
+11->12 [style = bold, label=""];
+12->5 [style = solid, label="testBibtexFile"];
+0->12 [style = dashed, label="0"];
+2->4 [style = solid, label="context"];
+2->4 [style = bold, label=""];
+7->9 [style = solid, label="encoding"];
+0->9 [style = solid, label="testBibtexFile"];
+12->7 [style = bold, label=""];
+7->5 [style = solid, label="encoding"];
+10->0 [style = bold, label=""];
+0->7 [style = bold, label=""];
+0->5 [style = solid, label="testBibtexFile"];
+}

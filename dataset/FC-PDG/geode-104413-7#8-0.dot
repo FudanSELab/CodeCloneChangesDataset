@@ -1,0 +1,38 @@
+digraph {
+14 [style = filled, label = "borrowConnectionCreatesAConnectionWhenNoneExist['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "when(connectionFactory.createClientToServerConnection(serverLocation,false)).thenReturn(connection)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "connectionManager.close(false)@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(connectionManager.getConnectionCount()).isEqualTo(1)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "connectionManager.start(backgroundProcessor)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(connectionManager.borrowConnection(timeout)).isInstanceOf()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "connectionManager = createDefaultConnectionManager()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "connectionManager.close(false)@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "when(connectionFactory.createClientToServerConnection(any())).thenReturn(connection)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertThat(connectionManager.borrowConnection(serverLocation,timeout,false)).isInstanceOf()@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "Connection connection = mock()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "borrowConnectionCreatesAConnectionOnSpecifiedServerWhenNoneExist['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "borrowConnectionCreatesAConnectionOnSpecifiedServerWhenNoneExist['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(connectionManager.borrowConnection(serverLocation,false)).isInstanceOf()@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "ServerLocation serverLocation = mock()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+7->11 [style = bold, label=""];
+8->6 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+9->2 [style = bold, label=""];
+7->1 [style = solid, label="connection"];
+10->7 [style = bold, label=""];
+4->7 [style = bold, label=""];
+7->3 [style = bold, label=""];
+14->7 [style = bold, label=""];
+8->9 [style = dashed, label="0"];
+7->11 [style = solid, label="connection"];
+12->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+5->6 [style = bold, label=""];
+8->2 [style = bold, label=""];
+11->13 [style = bold, label=""];
+6->8 [style = bold, label=""];
+13->5 [style = bold, label=""];
+6->9 [style = bold, label=""];
+6->12 [style = bold, label=""];
+}

@@ -1,0 +1,23 @@
+digraph {
+8 [style = filled, label = "searchAndTest['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Set<Class<? extends WithTitleComparable>> subtypes = reflections.getSubTypesOf()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "searchAndTest['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Set<Class<? extends WithReferenceComparable>> subtypes = reflections.getSubTypesOf()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "subtype.isInterface() || subtype.isAnonymousClass() || subtype.isLocalClass() || subtype.isMemberClass()@@@6@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "test(subtype)@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "searchAndTest['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Reflections reflections = new Reflections(packagePrefix)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "subtype = instantiable(subtype)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+5->4 [style = solid, label="subtype"];
+3->0 [style = bold, label=""];
+6->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+7->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->5 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

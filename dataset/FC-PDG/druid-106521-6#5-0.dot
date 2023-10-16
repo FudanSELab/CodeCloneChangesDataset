@@ -1,0 +1,27 @@
+digraph {
+8 [style = filled, label = "expectedException.expect()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "expectedException.expect()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testGroupByLimitPushDownPostAggNotSupported['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "makeQueryBuilder().setDataSource(QueryRunnerTestHelper.dataSource).setGranularity(QueryRunnerTestHelper.allGran).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.marketDimension,\"marketalias\")).setInterval(QueryRunnerTestHelper.fullOnIntervalSpec).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(\"marketalias\",OrderByColumnSpec.Direction.DESCENDING)),2)).setAggregatorSpecs(QueryRunnerTestHelper.rowsCount).overrideContext(ImmutableMap.of(GroupByQueryConfig.CTX_KEY_FORCE_LIMIT_PUSH_DOWN,true)).setHavingSpec(new GreaterThanHavingSpec(\"rows\",10)).build()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "GroupByQueryRunnerTestHelper.runQuery(factory,runner,query)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "GroupByQuery query = new GroupByQuery.Builder().setDataSource(QueryRunnerTestHelper.dataSource).setGranularity(QueryRunnerTestHelper.allGran).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.marketDimension,\"marketalias\")).setInterval(QueryRunnerTestHelper.fullOnIntervalSpec).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(\"constant\",OrderByColumnSpec.Direction.DESCENDING)),2)).setAggregatorSpecs(QueryRunnerTestHelper.rowsCount).setPostAggregatorSpecs(Collections.singletonList(new ConstantPostAggregator(\"constant\",1))).setContext(ImmutableMap.of(GroupByQueryConfig.CTX_KEY_FORCE_LIMIT_PUSH_DOWN,true)).build()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testRejectForceLimitPushDownWithHaving['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "expectedException.expectMessage(\"Cannot force limit push down when a having spec is present.\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testRejectForceLimitPushDownWithHaving['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "GroupByQuery.builder().setDataSource(QueryRunnerTestHelper.dataSource).setGranularity(QueryRunnerTestHelper.allGran).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.marketDimension,\"marketalias\")).setInterval(QueryRunnerTestHelper.fullOnIntervalSpec).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(\"marketalias\",OrderByColumnSpec.Direction.DESCENDING)),2)).setAggregatorSpecs(QueryRunnerTestHelper.rowsCount).setContext(ImmutableMap.of(GroupByQueryConfig.CTX_KEY_FORCE_LIMIT_PUSH_DOWN,true)).setHavingSpec(new GreaterThanHavingSpec(\"rows\",10)).build()@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "expectedException.expectMessage(\"Limit push down when sorting by a post aggregator is not supported.\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->7 [style = bold, label=""];
+6->8 [style = bold, label=""];
+10->9 [style = solid, label="query"];
+3->5 [style = bold, label=""];
+10->9 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+1->10 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+7->10 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+3->7 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

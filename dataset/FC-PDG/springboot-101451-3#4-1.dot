@@ -1,0 +1,33 @@
+digraph {
+8 [style = filled, label = "source.put(\"foo.collection(1(\",\"bar-baz\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "this.sources.add(source)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "source.put(\"foo.collection(0(\",\"foo-bar\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "ExampleCollectionBean bean = this.binder.bind(\"foo\",Bindable.of()).get()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "MockConfigurationPropertySource source = new MockConfigurationPropertySource()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "bindToClassShouldBindToSet['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThat(bean.getCollection()).containsExactly(ExampleEnum.FOO_BAR,ExampleEnum.BAR_BAZ)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "bindToClassShouldBindToSet['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "bindToClassShouldBindToCollection['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "source.put(\"foo.set(0(\",\"foo-bar\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "source.put(\"foo.set(1(\",\"bar-baz\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(bean.getSet()).containsExactly(ExampleEnum.FOO_BAR,ExampleEnum.BAR_BAZ)@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ExampleSetBean bean = this.binder.bind(\"foo\",Bindable.of()).get()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+4->12 [style = bold, label=""];
+2->11 [style = dashed, label="0"];
+4->5 [style = solid, label="source"];
+1->8 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+5->11 [style = bold, label=""];
+7->4 [style = bold, label=""];
+0->12 [style = dashed, label="0"];
+8->5 [style = bold, label=""];
+11->10 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->6 [style = bold, label=""];
+0->1 [style = bold, label=""];
+12->8 [style = bold, label=""];
+9->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+}

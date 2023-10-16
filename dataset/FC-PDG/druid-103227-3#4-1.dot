@@ -1,0 +1,37 @@
+digraph {
+4 [style = filled, label = "EasyMock.replay(INPUT_DATA_CONFIG)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "addExpectedPrefixObjects(PREFIXES.get(0),ImmutableList.of(EXPECTED_URIS.get(0)))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "addExpectedPrefixObjects(PREFIXES.get(1),ImmutableList.of(EXPECTED_URIS.get(1)))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "EasyMock.replay(STORAGE)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testWithPrefixesSplit['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testWithPrefixesSplit['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "Assert.assertEquals(EXPECTED_OBJECTS,splits.map(null).collect(Collectors.toList()))@@@12@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "Stream<InputSplit<List<CloudObjectLocation>>> splits = inputSource.createSplits(new JsonInputFormat(JSONPathSpec.DEFAULT,null),new MaxSizeSplitHintSpec(CONTENT.length * 3L))@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "EasyMock.reset(STORAGE)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testCreateSplitsWithSplitHintSpecRespectingHint['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "Stream<InputSplit<List<CloudObjectLocation>>> splits = inputSource.createSplits(new JsonInputFormat(JSONPathSpec.DEFAULT,null,null),new MaxSizeSplitHintSpec(1L))@@@11@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "EasyMock.reset(INPUT_DATA_CONFIG)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Stream<InputSplit<List<CloudObjectLocation>>> splits = inputSource.createSplits(new JsonInputFormat(JSONPathSpec.DEFAULT,null),new MaxSizeSplitHintSpec(1L))@@@11@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "GoogleCloudStorageInputSource inputSource = new GoogleCloudStorageInputSource(STORAGE,INPUT_DATA_CONFIG,null,PREFIXES,null)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "EasyMock.expect(INPUT_DATA_CONFIG.getMaxListingLength()).andReturn(MAX_LISTING_LENGTH)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "Assert.assertEquals(ImmutableList.of(EXPECTED_URIS.stream().map(null).collect(Collectors.toList())),splits.map(null).collect(Collectors.toList()))@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10->15 [style = dashed, label="0"];
+14->15 [style = bold, label=""];
+0->7 [style = bold, label=""];
+1->2 [style = bold, label=""];
+12->10 [style = bold, label=""];
+11->0 [style = bold, label=""];
+5->6 [style = bold, label=""];
+9->1 [style = bold, label=""];
+5->14 [style = bold, label=""];
+5->12 [style = bold, label=""];
+7->8 [style = bold, label=""];
+6->14 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+6->10 [style = bold, label=""];
+3->0 [style = bold, label=""];
+13->0 [style = bold, label=""];
+8->9 [style = bold, label=""];
+6->12 [style = dashed, label="0"];
+}

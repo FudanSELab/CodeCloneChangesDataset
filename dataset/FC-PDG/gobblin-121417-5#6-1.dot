@@ -1,0 +1,32 @@
+digraph {
+0 [style = filled, label = "return null@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "JsonElement value@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "this.isNullable() && value.isJsonNull()@@@3@@@['1', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return new GenericData.Array<>(arraySchema(),list)@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "convertField['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "list.add(getElementConverter().convert(elem))@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "convertField['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "return new GenericData.Array<>(schema(),list)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "convertField['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "list.add(getElementConverter().convertField(elem))@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "List<Object> list = new ArrayList<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+9->4 [style = dotted, label="true"];
+0->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+6->0 [style = bold, label=""];
+6->0 [style = dotted, label="true"];
+7->6 [style = bold, label=""];
+3->10 [style = solid, label="list"];
+8->5 [style = bold, label=""];
+3->1 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+1->10 [style = bold, label=""];
+2->6 [style = bold, label=""];
+3->8 [style = bold, label=""];
+3->5 [style = solid, label="list"];
+7->4 [style = dotted, label="true"];
+2->4 [style = dotted, label="true"];
+}

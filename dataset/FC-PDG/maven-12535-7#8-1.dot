@@ -1,0 +1,35 @@
+digraph {
+7 [style = filled, label = "read['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "Map<String,?> options@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "InputStream input@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "Reader input@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "read['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Map<String,?> options@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "read['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Map<String,?> options@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "return new MavenToolchainsXpp3Reader().read(in,isStrict(options))@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Validate.notNull(input,\"input cannot be null\")@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "return new MetadataXpp3Reader().read(in,isStrict(options))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Objects.requireNonNull(input,\"input cannot be null\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11->1 [style = bold, label=""];
+4->0 [style = dotted, label="true"];
+8->10 [style = solid, label="options"];
+5->6 [style = solid, label="input"];
+11->9 [style = dotted, label="true"];
+2->10 [style = dashed, label="0"];
+7->5 [style = dotted, label="true"];
+6->2 [style = bold, label=""];
+4->3 [style = dotted, label="true"];
+9->1 [style = solid, label="input"];
+3->9 [style = dashed, label="0"];
+3->1 [style = solid, label="input"];
+3->2 [style = solid, label="options"];
+7->3 [style = dotted, label="true"];
+1->6 [style = dashed, label="0"];
+7->6 [style = bold, label=""];
+11->8 [style = dotted, label="true"];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+0->2 [style = solid, label="options"];
+1->10 [style = bold, label=""];
+}

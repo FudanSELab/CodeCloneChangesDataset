@@ -1,0 +1,33 @@
+digraph {
+3 [style = filled, label = "assertCompileAccepted(\"painless\",\"script\",ScriptType.INLINE,IngestScript.CONTEXT)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertCompileAccepted(\"painless\",\"script\",ScriptType.INLINE,ExecutableScript.UPDATE_CONTEXT)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "buildScriptService(Settings.EMPTY)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertCompileRejected(\"painless\",\"script\",ScriptType.INLINE,SearchScript.AGGS_CONTEXT)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "Settings.Builder builder = Settings.builder()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertCompileAccepted(\"painless\",\"script\",ScriptType.INLINE,SearchScript.AGGS_CONTEXT)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "builder.put(\"script.allowed_contexts\",\"none\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "assertCompileRejected(\"painless\",\"script\",ScriptType.INLINE,SearchScript.CONTEXT)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertCompileAccepted(\"painless\",\"script\",ScriptType.INLINE,UpdateScript.CONTEXT)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testAllowAllScriptContextSettings['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testAllowAllScriptContextSettings['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "buildScriptService(builder.build())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "testAllowNoScriptContextSettings['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertCompileAccepted(\"painless\",\"script\",ScriptType.INLINE,SearchScript.CONTEXT)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+6->5 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+2->7 [style = bold, label=""];
+9->11 [style = bold, label=""];
+13->8 [style = bold, label=""];
+10->13 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+12->9 [style = bold, label=""];
+11->10 [style = bold, label=""];
+4->5 [style = bold, label=""];
+7->3 [style = bold, label=""];
+0->13 [style = dashed, label="0"];
+}

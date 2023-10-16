@@ -1,0 +1,22 @@
+digraph {
+4 [style = filled, label = "assertThat(family).iteratesAs(\"(Marlon)\",\"(Michael)\",\"(Jackie)\",\"(Jemaine)\",\"(Tito)\")@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "testCharacterSplitWithTrim['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Iterable<String> family = COMMA_SPLITTER.trimResults(CharMatcher.anyOf(\"afro\").or(CharMatcher.WHITESPACE)).split(jacksons)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "String jacksons = \"arfo(Marlon)aorf, (Michael)orfa, afro(Jackie)orfa, \" + \"ofar(Jemaine), aff(Tito)\"@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ASSERT.that(family).iteratesAs(\"(Marlon)\",\"(Michael)\",\"(Jackie)\",\"(Jemaine)\",\"(Tito)\")@@@5@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testCharacterSplitWithTrim['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "testStringSplitWithTrim['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Iterable<String> family = Splitter.on(',').trimResults(CharMatcher.anyOf(\"afro\").or(CharMatcher.WHITESPACE)).split(jacksons)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+0->3 [style = solid, label="jacksons"];
+0->6 [style = solid, label="jacksons"];
+7->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+0->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+}

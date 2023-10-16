@@ -1,0 +1,27 @@
+digraph {
+3 [style = filled, label = "sync['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final RetentionLeases retentionLeases@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final RetentionLeases retentionLeases@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "long primaryTerm@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "sync['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "RetentionLeases retentionLeases@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "final ShardId shardId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final ShardId shardId@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "ShardId shardId@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "backgroundSync['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "ActionListener<ReplicationResponse> listener@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "String primaryAllocationId@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "final ActionListener<ReplicationResponse> listener@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8->7 [style = dotted, label="true"];
+2->12 [style = dashed, label="0"];
+8->9 [style = dotted, label="true"];
+8->6 [style = dotted, label="true"];
+8->5 [style = dotted, label="true"];
+2->9 [style = dashed, label="0"];
+3->1 [style = dotted, label="true"];
+8->4 [style = dotted, label="true"];
+11->10 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+11->12 [style = dotted, label="true"];
+3->0 [style = dotted, label="true"];
+}

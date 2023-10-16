@@ -1,0 +1,11 @@
+digraph {
+0 [style = filled, label = "return new BuilderScriptWithResult<JdoInventory>(){@Override protected JdoInventory buildResult(final ExecutionContext ec){val products = new HashSet<JdoProduct>()products.add(JdoBook.of(\"Sample Book\",\"A sample book for testing.\",99.,\"Sample Author\",\"Sample ISBN\",\"Sample Publisher\"))val inventory = JdoInventory.of(\"Sample Inventory\",products)repository.persist(inventory)return inventory}}@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "builder['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return new BuilderScriptWithResult<JpaInventory>(){@Override protected JpaInventory buildResult(ExecutionContext ec){val products = new TreeSet<JpaProduct>()products.add(JpaBook.of(\"Sample Book\",\"A sample book for testing.\",99.,\"Sample Author\",\"Sample ISBN\",\"Sample Publisher\"))val inventory = new JpaInventory(\"Sample Inventory\",products)repository.persist(inventory)return inventory}}@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "builder['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "builder['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2->0 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+4->3 [style = bold, label=""];
+}

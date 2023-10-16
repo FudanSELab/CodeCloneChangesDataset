@@ -1,0 +1,25 @@
+digraph {
+3 [style = filled, label = "Map context@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "getValues['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "final NumericDocValues arr = DocValues.getNumeric(readerContext.reader(),field)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return new IntDocValues(this){@Override public int intVal(int doc){return (int)arr.get(doc)}@Override public String strVal(int doc){Integer intValue = intVal(doc)return intValueToStringValue(intValue)}@Override public boolean exists(int doc){return valid.get(doc)}@Override public ValueSourceScorer getRangeScorer(LeafReaderContext readerContext,String lowerVal,String upperVal,boolean includeLower,boolean includeUpper){Integer lower = stringValueToIntValue(lowerVal)Integer upper = stringValueToIntValue(upperVal)if (lower == null) {lower = Integer.MIN_VALUE}{if (!includeLower && lower < Integer.MAX_VALUE) lower++}if (upper == null) {upper = Integer.MAX_VALUE}{if (!includeUpper && upper > Integer.MIN_VALUE) upper--}final int ll = lowerfinal int uu = upperreturn new ValueSourceScorer(readerContext,this){@Override public boolean matches(int doc){if (!exists(doc)) return falseint val = intVal(doc)return val >= ll && val <= uu}}}@Override public ValueFiller getValueFiller(){return new ValueFiller(){@Override public MutableValue getValue(){return mval}@Override public void fillValue(int doc){mval.value = intVal(doc)mval.exists = valid.get(doc)}}}}@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "getValues['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "LeafReaderContext readerContext@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "getValues['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final Bits valid = DocValues.getDocsWithField(readerContext.reader(),field)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "LeafReaderContext readerContext@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "Map context@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+9->4 [style = dotted, label="true"];
+6->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->3 [style = dotted, label="true"];
+4->5 [style = solid, label="readerContext"];
+9->1 [style = bold, label=""];
+6->4 [style = dotted, label="true"];
+0->1 [style = bold, label=""];
+0->4 [style = dotted, label="true"];
+2->5 [style = bold, label=""];
+9->8 [style = dotted, label="true"];
+6->7 [style = dotted, label="true"];
+}

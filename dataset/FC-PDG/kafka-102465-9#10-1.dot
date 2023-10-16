@@ -1,0 +1,29 @@
+digraph {
+2 [style = filled, label = "stateManager.flush()@@@12@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "shouldThrowProcessorStateExceptionOnFlushIfStoreThrowsAnException['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "shouldThrowProcessorStateExceptionOnCloseIfStoreThrowsAnException['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "stateManager.close(Collections.emptyMap())@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "fail(\"Should throw ProcessorStateException if store flush throws exception\")@@@13@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "stateManager.register(stateStore,stateStore.stateRestoreCallback)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final MockStateStore stateStore = new MockStateStore(storeName,true){@Override public void close(){throw new RuntimeException(\"KABOOM!\")}}@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final ProcessorStateManager stateManager = new ProcessorStateManager(taskId,Collections.singleton(changelogTopicPartition),false,stateDirectory,Collections.singletonMap(storeName,changelogTopic),changelogReader,false,logContext)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "fail(\"Should throw ProcessorStateException if store close throws exception\")@@@13@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "shouldThrowProcessorStateExceptionOnFlushIfStoreThrowsAnException['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final MockKeyValueStore stateStore = new MockKeyValueStore(storeName,true){@Override public void flush(){throw new RuntimeException(\"KABOOM!\")}}@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8->0 [style = bold, label=""];
+0->3 [style = bold, label=""];
+6->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+7->0 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+9->10 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+3->1 [style = solid, label="stateStore"];
+2->4 [style = bold, label=""];
+0->6 [style = bold, label=""];
+6->1 [style = solid, label="stateStore"];
+2->9 [style = dashed, label="0"];
+1->9 [style = bold, label=""];
+}

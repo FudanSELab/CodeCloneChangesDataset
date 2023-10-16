@@ -1,0 +1,25 @@
+digraph {
+8 [style = filled, label = "final TestSubscriber<Integer> ts = new TestSubscriber<Integer>(2L){@Override public void onNext(Integer t){super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@177d2dbtif (t == 2) {cancel()onComplete()}}}@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "syncFusedCancelAfterRequest2['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "syncFusedCancelAfterRequest2['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "syncFusedCancelAfterRequest['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "ts.awaitDone(5,TimeUnit.SECONDS).assertResult(1,2)@@@14@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "Flowable.range(1,3).observeOn(Schedulers.single()).subscribe(ts)@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "ts.awaitDone(5,TimeUnit.SECONDS).assertResult(1,2)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final TestSubscriber<Integer> ts = new TestSubscriber<Integer>(2L)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "final TestSubscriber<Integer> ts = new TestSubscriber<>(2L)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "Flowable.range(1,2).observeOn(Schedulers.single()).subscribe(ts)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->8 [style = bold, label=""];
+1->4 [style = dashed, label="0"];
+1->8 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+8->9 [style = solid, label="ts"];
+4->2 [style = solid, label="ts"];
+9->7 [style = bold, label=""];
+1->2 [style = solid, label="ts"];
+0->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

@@ -1,0 +1,36 @@
+digraph {
+6 [style = filled, label = "BindHandler handler = mock(,Answers.CALLS_REAL_METHODS)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "this.binder.bind(\"foo\",target,handler)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "this.sources.add(new MockConfigurationPropertySource(\"foo.bar\",\"1\",\"line1\"))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "ordered.verify(handler).onSuccess(eq(ConfigurationPropertyName.of(\"foo\")),eq(target),any(),eq(1))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "bindToMapShouldTriggerOnSuccess['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "InOrder ordered = inOrder(handler)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Bindable<Integer> target = Bindable.of()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "bindToMapShouldTriggerOnSuccess['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "bindToValueShouldTriggerOnSuccess['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ordered.verify(handler).onSuccess(eq(ConfigurationPropertyName.of(\"foo\")),eq(target),any(),isA())@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Bindable<Map<String,Integer>> target = STRING_INTEGER_MAP@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "this.sources.add(new MockConfigurationPropertySource(\"foo\",\"1\",\"line1\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ordered.verify(handler).onSuccess(eq(ConfigurationPropertyName.of(\"foo.bar\")),eq(Bindable.of()),any(),eq(1))@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->1 [style = bold, label=""];
+7->12 [style = bold, label=""];
+9->4 [style = bold, label=""];
+11->6 [style = bold, label=""];
+6->7 [style = solid, label="handler"];
+0->4 [style = solid, label="target"];
+6->0 [style = bold, label=""];
+4->7 [style = bold, label=""];
+1->12 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+5->6 [style = bold, label=""];
+8->5 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+6->4 [style = solid, label="handler"];
+9->12 [style = solid, label="target"];
+1->2 [style = bold, label=""];
+6->9 [style = bold, label=""];
+0->2 [style = solid, label="target"];
+9->4 [style = solid, label="target"];
+10->11 [style = bold, label=""];
+}

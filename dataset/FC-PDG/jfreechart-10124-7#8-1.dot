@@ -1,0 +1,36 @@
+digraph {
+7 [style = filled, label = "testSerialization3['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "chart2.createBufferedImage(300,200)@@@13@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testSerialization4['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "plot.addRangeMarker(new ValueMarker(4.0),Layer.FOREGROUND)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "JFreeChart chart2 = TestUtils.serialised(chart)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testSerialization3['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(chart,chart2)@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "XYSeriesCollection dataset = new XYSeriesCollection()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "plot.addDomainMarker(new IntervalMarker(2.0,3.0),Layer.BACKGROUND)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "XYPlot plot = (XYPlot)chart.getPlot()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "plot.addDomainMarker(new ValueMarker(1.0),Layer.FOREGROUND)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "plot.addRangeMarker(new IntervalMarker(5.0,6.0),Layer.BACKGROUND)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "XYSeriesCollection<String> dataset = new XYSeriesCollection<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "JFreeChart chart = ChartFactory.createXYLineChart(\"Test Chart\",\"Domain Axis\",\"Range Axis\",dataset)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->2 [style = solid, label="chart"];
+3->0 [style = solid, label="dataset"];
+1->3 [style = bold, label=""];
+0->4 [style = solid, label="chart"];
+10->2 [style = bold, label=""];
+12->10 [style = bold, label=""];
+6->0 [style = bold, label=""];
+9->12 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+13->8 [style = bold, label=""];
+0->13 [style = bold, label=""];
+11->3 [style = bold, label=""];
+2->4 [style = solid, label="chart2"];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->9 [style = bold, label=""];
+6->0 [style = solid, label="dataset"];
+}

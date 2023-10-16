@@ -1,0 +1,23 @@
+digraph {
+7 [style = filled, label = "shouldTrimSETInsteadOfCOMMAForBothConditions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final String expected = \"SELECT * FROM BLOG\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(expected,boundSql.getSql())@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "shouldTrimNoWhereClause['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "shouldTrimNoWhereClause['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "DynamicSqlSource source = createDynamicSqlSource(new TextSqlNode(\"UPDATE BLOG\"),new SetSqlNode(new Configuration(),mixedContents(new IfSqlNode(mixedContents(new TextSqlNode(\" ID = ?, \")),\"true\"),new IfSqlNode(mixedContents(new TextSqlNode(\" NAME = ?, \")),\"true\"))))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final String expected = \"UPDATE BLOG SET ID = ?, NAME = ?\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "BoundSql boundSql = source.getBoundSql(null)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "DynamicSqlSource source = createDynamicSqlSource(new TextSqlNode(\"SELECT * FROM BLOG\"),new WhereSqlNode(new Configuration(),mixedContents(new IfSqlNode(mixedContents(new TextSqlNode(\" and ID = ? \")),\"false\"),new IfSqlNode(mixedContents(new TextSqlNode(\"OR NAME = ? \")),\"false\"))))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+8->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+7->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+8->4 [style = solid, label="expected"];
+3->4 [style = solid, label="expected"];
+}

@@ -1,0 +1,35 @@
+digraph {
+0 [style = filled, label = "assertEquals(new Double(1.0),item1.getX())@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "testConstructor1['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "assertEquals(Double.valueOf(1.0),item1.getX())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "YIntervalDataItem item1 = new YIntervalDataItem(1.0,2.0,3.0,4.0)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertEquals(2.0,item1.getYValue(),EPSILON)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertEquals(1.0,item1.getX())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "assertEquals(3.0,item1.getXHighValue(),EPSILON)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(4.0,item1.getYValue(),EPSILON)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "assertEquals(3.0,item1.getYLowValue(),EPSILON)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "XIntervalDataItem item1 = new XIntervalDataItem(1.0,2.0,3.0,4.0)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testConstructor1['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertEquals(4.0,item1.getYHighValue(),EPSILON)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testConstructor1['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertEquals(2.0,item1.getXLowValue(),EPSILON)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13->10 [style = bold, label=""];
+5->7 [style = bold, label=""];
+12->13 [style = bold, label=""];
+6->5 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+9->12 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+1->10 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+5->0 [style = bold, label=""];
+11->9 [style = bold, label=""];
+8->11 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+7->2 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+3->13 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

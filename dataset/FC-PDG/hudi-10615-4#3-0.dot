@@ -1,0 +1,29 @@
+digraph {
+1 [style = filled, label = "HoodieWriteConfig config = getConfig(Option.of(HoodieHBaseIndexConfig.DEFAULT_HBASE_INDEX_QPS_ALLOCATOR_CLASS))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(config.getHbaseIndexQPSFraction(),hBaseIndexQPSResourceAllocator.acquireQPSResources(config.getHbaseIndexQPSFraction(),100),0.0f)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testsExplicitDefaultQPSResourceAllocator['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "SparkHoodieHBaseIndex index = new SparkHoodieHBaseIndex(config)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testsExplicitDefaultQPSResourceAllocator['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "HBaseIndexQPSResourceAllocator hBaseIndexQPSResourceAllocator = index.createQPSResourceAllocator(config)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertEquals(hBaseIndexQPSResourceAllocator.getClass().getName(),.getName())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testsDefaultQPSResourceAllocator['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "HoodieWriteConfig config = getConfig(Option.empty())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "HoodieWriteConfig config = getConfig(Option.of(HoodieHBaseIndexConfig.HBASE_INDEX_QPS_ALLOCATOR_CLASS.defaultValue()))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1->2 [style = solid, label="config"];
+5->3 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+7->2 [style = solid, label="config"];
+1->4 [style = solid, label="config"];
+6->7 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+7->4 [style = solid, label="config"];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+9->4 [style = solid, label="config"];
+0->1 [style = bold, label=""];
+7->2 [style = bold, label=""];
+9->2 [style = bold, label=""];
+8->9 [style = bold, label=""];
+9->2 [style = solid, label="config"];
+}

@@ -1,0 +1,36 @@
+digraph {
+9 [style = filled, label = "List<Vector> localTfIdfs = tfIdfs.collect()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "tfIdfMinimumDocumentFrequency['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "JavaRDD<Vector> tfIdfs = idf.fit(termFreqs).transform(termFreqs)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "JavaRDD<Vector> termFreqs = tf.transform(documents)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "termFreqs.collect()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "int indexOfThis = tf.indexOf(\"this\")@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "IDF idf = new IDF()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "tfIdf['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "HashingTF tf = new HashingTF()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "@SuppressWarnings(\"unchecked\") JavaRDD<List<String>> documents = sc.parallelize(Arrays.asList(Arrays.asList(\"this is a sentence\".split(\" \")),Arrays.asList(\"this is another sentence\".split(\" \")),Arrays.asList(\"this is still a sentence\".split(\" \"))),2)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "@SuppressWarnings(\"unchecked\") JavaRDD<ArrayList<String>> documents = sc.parallelize(Lists.newArrayList(Lists.newArrayList(\"this is a sentence\".split(\" \")),Lists.newArrayList(\"this is another sentence\".split(\" \")),Lists.newArrayList(\"this is still a sentence\".split(\" \"))),2)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "tfIdf['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "IDF idf = new IDF(2)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Assert.assertEquals(0.0,v.apply(indexOfThis),1e-15)@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+4->8 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->10 [style = bold, label=""];
+11->0 [style = bold, label=""];
+4->8 [style = solid, label="indexOfThis"];
+6->13 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+3->1 [style = bold, label=""];
+5->0 [style = bold, label=""];
+10->1 [style = bold, label=""];
+1->7 [style = solid, label="termFreqs"];
+12->0 [style = bold, label=""];
+13->7 [style = bold, label=""];
+2->6 [style = bold, label=""];
+3->1 [style = solid, label="documents"];
+9->4 [style = bold, label=""];
+2->13 [style = bold, label=""];
+10->1 [style = solid, label="documents"];
+}

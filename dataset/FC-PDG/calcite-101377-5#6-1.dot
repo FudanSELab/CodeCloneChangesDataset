@@ -1,0 +1,23 @@
+digraph {
+5 [style = filled, label = "statement.executeQuery(sql)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final String sql = \"select \"ID\",\" + \" \"MAPFIELD\", \"NESTEDMAPFIELD\", \"ARRAYFIELD\" \" + \"from \"s\".\"nested\" \" + \"where \"ARRAYFIELD\"('a'( = 200\"@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final Statement statement = connection.createStatement()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testInvalidAccessUseStringForIndexOnArray['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "final String sql = \"select \"ID\", \"MAPFIELD\",\" + \" \"NESTEDMAPFIELD\", \"ARRAYFIELD\" \" + \"from \"s\".\"nested\" \" + \"where CAST(\"ARRAYFIELD\"('a'( AS INTEGER) = 200\"@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "fail(\"This query shouldn't be evaluated properly\")@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Connection connection = setupConnectionWithNestedTable()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testInvalidAccessUseStringForIndexOnArrayWithAnyType['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testInvalidAccessUseStringForIndexOnArray['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+8->5 [style = solid, label="sql"];
+3->2 [style = bold, label=""];
+8->5 [style = bold, label=""];
+0->5 [style = solid, label="sql"];
+7->3 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->8 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

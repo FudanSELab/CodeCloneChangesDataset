@@ -1,0 +1,30 @@
+digraph {
+6 [style = filled, label = "RelOptPlanner planner@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "double dCpu = mq.getRowCount(getInput()) * program.getExprCount()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "computeSelfCost['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "double dIo = 0@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "computeSelfCost['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "RelOptPlanner planner@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "RelMetadataQuery mq@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "double dRows = mq.getRowCount(this)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "computeSelfCost['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "RelMetadataQuery mq@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return planner.getCostFactory().makeCost(dRows,dCpu,dIo)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "RelOptPlanner planner@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9->5 [style = bold, label=""];
+4->6 [style = dotted, label="true"];
+11->5 [style = bold, label=""];
+5->2 [style = bold, label=""];
+6->8 [style = dashed, label="0"];
+9->7 [style = dotted, label="true"];
+2->0 [style = solid, label="dCpu"];
+4->1 [style = dotted, label="true"];
+4->5 [style = bold, label=""];
+11->6 [style = dotted, label="true"];
+11->10 [style = dotted, label="true"];
+5->0 [style = solid, label="dRows"];
+3->0 [style = solid, label="dIo"];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+9->8 [style = dotted, label="true"];
+}

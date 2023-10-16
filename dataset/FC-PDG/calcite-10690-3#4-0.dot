@@ -1,0 +1,34 @@
+digraph {
+2 [style = filled, label = "checkSimplify(expr,simplified).expandedSearch(expanded)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testSimplifyRange3['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "final String expanded = \"AND(>($0, 3), <($0, 10))\"@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testSimplifyRange3['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final String expanded = \"OR(IS NULL($0), AND(>($0, 0), <($0, 12)), >=($0, 15))\"@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final String simplified = \"SEARCH($0, Sarg((3..10)()\"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final RexNode aRef = input(tInt(true),0)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "RexNode expr = and(isNotNull(aRef),gt(aRef,literal(3)),lt(aRef,literal(10)))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final String simplified = \"SEARCH($0, Sarg((0..12), (15..+∞) OR NULL()\"@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "RexNode expr = or(and(lt(literal(0),aRef),le(aRef,literal(10))),isNull(aRef),and(lt(literal(8),aRef),lt(aRef,literal(12))),ge(aRef,literal(15)))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final String simplified = \"SEARCH($0, Sarg((0..12), (15..+∞), null()\"@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "testSimplifyRange7['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+3->9 [style = bold, label=""];
+5->8 [style = dashed, label="0"];
+8->2 [style = solid, label="expanded"];
+6->5 [style = bold, label=""];
+1->4 [style = bold, label=""];
+5->2 [style = bold, label=""];
+7->3 [style = bold, label=""];
+1->6 [style = bold, label=""];
+9->10 [style = bold, label=""];
+10->8 [style = bold, label=""];
+3->1 [style = bold, label=""];
+8->2 [style = bold, label=""];
+11->3 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+3->1 [style = solid, label="aRef"];
+5->2 [style = solid, label="expanded"];
+4->5 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+3->9 [style = solid, label="aRef"];
+}

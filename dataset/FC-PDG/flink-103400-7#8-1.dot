@@ -1,0 +1,33 @@
+digraph {
+3 [style = filled, label = "harness.processElement(1,10)@@@15@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "harness.processBroadcastElement(\"0\",1)@@@13@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "KeyedBroadcastOperatorTestHarness<Integer,Integer,String,Integer> harness = ProcessFunctionTestHarnesses.forKeyedBroadcastProcessFunction(function,null,TypeInformation.of(),stateDescriptor)@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "BroadcastProcessFunction<Integer,String,Integer> function = new BroadcastProcessFunction<Integer,String,Integer>(){@Override public void processElement(Integer value,ReadOnlyContext ctx,Collector<Integer> out){out.collect(value)}@Override public void processBroadcastElement(String value,Context ctx,Collector<Integer> out){out.collect(Integer.parseInt(value))}}@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "harness.processBroadcastElement(\"0\",1)@@@14@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(harness.extractOutputValues(),Arrays.asList(0,1))@@@15@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testHarnessForBroadcastProcessFunction['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "KeyedBroadcastProcessFunction<Integer,Integer,String,Integer> function = new KeyedBroadcastProcessFunction<Integer,Integer,String,Integer>(){@Override public void processElement(Integer value,ReadOnlyContext ctx,Collector<Integer> out){out.collect(value)}@Override public void processBroadcastElement(String value,Context ctx,Collector<Integer> out){out.collect(Integer.parseInt(value))}}@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "testHarnessForKeyedBroadcastProcessFunction['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testHarnessForBroadcastProcessFunction['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "assertThat(harness.extractOutputStreamRecords(),contains(streamRecord(0),StreamRecordMatchers.streamRecord(1)))@@@16@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "BroadcastOperatorTestHarness<Integer,String,Integer> harness = ProcessFunctionTestHarnesses.forBroadcastProcessFunction(function)@@@12@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final MapStateDescriptor<Integer,String> stateDescriptor = new MapStateDescriptor<>(\"keys\",BasicTypeInfo.INT_TYPE_INFO,BasicTypeInfo.STRING_TYPE_INFO)@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->0 [style = bold, label=""];
+0->3 [style = bold, label=""];
+11->8 [style = bold, label=""];
+11->8 [style = solid, label="stateDescriptor"];
+9->8 [style = solid, label="function"];
+5->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+3->10 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+3->10 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+9->11 [style = bold, label=""];
+12->9 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+0->6 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->4 [style = solid, label="function"];
+}

@@ -1,0 +1,23 @@
+digraph {
+0 [style = filled, label = "testOverlapV1LargeIsAfter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "add(\"2011-01-01/2011-01-05\",\"2\",2)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertValues(Arrays.asList(createExpected(\"2011-01-01/2011-01-05\",\"2\",2),createExpected(\"2011-01-05/2011-01-13\",\"1\",1),createExpected(\"2011-01-13/2011-01-17\",\"2\",3),createExpected(\"2011-01-17/2011-01-20\",\"1\",1)),timeline.lookup(Intervals.of(\"2011-01-01/2011-01-20\")))@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testOverlapV1LargeIsAfter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "add(\"2011-01-01/2011-01-05\",\"2\",2)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "add(\"2011-01-13/2011-01-17\",\"2\",3)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "add(\"2011-01-03/2011-01-20\",\"1\",1)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "add(\"2011-01-03/2011-01-20\",\"1\",1)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "timeline = makeStringIntegerTimeline()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testOverlapV1SecondLargeIsAfter['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+6->1 [style = bold, label=""];
+5->7 [style = bold, label=""];
+5->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+8->4 [style = bold, label=""];
+0->4 [style = bold, label=""];
+9->2 [style = bold, label=""];
+4->5 [style = bold, label=""];
+}

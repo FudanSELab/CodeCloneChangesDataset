@@ -1,0 +1,34 @@
+digraph {
+5 [style = filled, label = "assertNotNull(a,\"toCharArray() result is null\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testToCharArray['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertTrue(Arrays.equals(\"junit\".toCharArray(),a),\"toCharArray() result does not match\")@@@11@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final TextStringBuilder sb = new TextStringBuilder()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertEquals(5,a.length,\"toCharArray() result incorrect length\")@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(0,sb.toCharArray().length)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "char(( a = sb.toCharArray()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertArrayEquals(\"junit\".toCharArray(),a,\"toCharArray() result does not match\")@@@11@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "final StrBuilder sb = new StrBuilder()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "a = sb.toCharArray()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testToCharArray['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "testToCharArray['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(0,a.length,\"toCharArray() result is too large\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "sb.append(\"junit\")@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->10 [style = solid, label="a"];
+8->5 [style = solid, label="a"];
+4->8 [style = bold, label=""];
+7->10 [style = dashed, label="0"];
+1->12 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+13->12 [style = bold, label=""];
+2->9 [style = bold, label=""];
+9->10 [style = bold, label=""];
+8->5 [style = bold, label=""];
+5->0 [style = bold, label=""];
+9->7 [style = bold, label=""];
+3->1 [style = bold, label=""];
+12->4 [style = bold, label=""];
+0->6 [style = bold, label=""];
+11->1 [style = bold, label=""];
+6->2 [style = bold, label=""];
+2->7 [style = solid, label="a"];
+}

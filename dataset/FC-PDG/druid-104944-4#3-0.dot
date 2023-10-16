@@ -1,0 +1,38 @@
+digraph {
+12 [style = filled, label = "assertExpr(\"map((c)  c + z, c)\",new Double((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ae8d9b)@@@18@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+17 [style = filled, label = "testMap['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+16 [style = filled, label = "assertExpr(\"map(()  1, (1, 2, 3, 4, 5()\",new Long((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ae8dbd)@@@27@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertExpr(\"fold((a, acc)  concat(a, acc), a, '')\",\"foobarbazbarfoo\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertExpr(\"fold((b, acc)  b * acc, map((b)  b * 2, filter(b  b > 3, b)), 1)\",80L)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertExpr(\"map((x)  concat(x, 'foo'), ('foo', 'bar', 'baz', 'foobar'()\",new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ae8d63)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertExpr(\"fold((a, acc)  array_append(acc, a), a, (()\",new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ae8d48)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertExpr(\"fold((a, acc)  array_append(acc, a), b, cast(((, 'LONG_ARRAY'))\",new Long((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ae8d29)@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "assertExpr(\"map((x)  x + 1, b)\",new Long((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ae8d85)@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertExpr(\"map((x)  x + 1, (1, 2, 3, 4, 5()\",new Long((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ae8d79)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "assertExpr(\"map((x)  x + 1, map((x)  x + 1, b))\",new Long((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ae8db1)@@@24@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "assertExpr(\"map((x)  x + 1, map((x)  x + 1, (1, 2, 3, 4, 5())\",new Long((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ae8da5)@@@21@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "assertExpr(\"map((c)  c + z, (3.1, 4.2, 5.3()\",new Double((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ae8d91)@@@15@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertExpr(\"fold((x, y)  x + y, (1, 1, 1, 1, 1(, 0)\",5L)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertExpr(\"map((x)  concat(x, 'foo'), a)\",new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ae8d6e)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertExpr(\"fold((a, acc)  array_append(acc, a), b, <LONG>(()\",new Long((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ae8d53)@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "testFold['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testFold['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->3 [style = bold, label=""];
+17->8 [style = bold, label=""];
+6->3 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+10->9 [style = bold, label=""];
+15->13 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+8->11 [style = bold, label=""];
+2->4 [style = bold, label=""];
+11->10 [style = bold, label=""];
+12->15 [style = bold, label=""];
+13->16 [style = bold, label=""];
+14->12 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+0->7 [style = bold, label=""];
+9->14 [style = bold, label=""];
+}

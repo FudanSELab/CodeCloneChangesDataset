@@ -1,0 +1,20 @@
+digraph {
+7 [style = filled, label = "delete['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return maybeMeasureLatency(null,time,getSensor)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return maybeMeasureLatency(null,time,deleteSensor)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "get['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final K key@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final K key@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "get['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "Objects.requireNonNull(key,\"key cannot be null\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4->3 [style = bold, label=""];
+7->6 [style = dotted, label="true"];
+7->5 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->2 [style = dotted, label="true"];
+2->3 [style = solid, label="key"];
+0->5 [style = dashed, label="0"];
+4->2 [style = dotted, label="true"];
+3->0 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

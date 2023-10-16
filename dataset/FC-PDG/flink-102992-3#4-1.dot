@@ -1,0 +1,23 @@
+digraph {
+0 [style = filled, label = "env.getStreamGraph().getJobGraph()@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "env.addSource(new NoOpSourceFunction()).map(new NoOpMapFunction()).uid(\"map\").addSink(new DiscardingSink<>())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "env.addSource(new NoOpSourceFunction()).map(new NoOpMapFunction()).uid(\"map\").addSink(new NoOpSinkFunction())@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "env.setParallelism(4)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "env.addSource(new NoOpSourceFunction()).uid(\"source\").map(new NoOpMapFunction()).addSink(new NoOpSinkFunction())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testManualHashAssignmentForIntermediateNodeInChain['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testManualHashAssignmentForIntermediateNodeInChain['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "StreamExecutionEnvironment env = StreamExecutionEnvironment.createLocalEnvironment()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testManualHashAssignmentForStartNodeInInChain['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+4->5 [style = dashed, label="0"];
+8->1 [style = bold, label=""];
+6->1 [style = bold, label=""];
+3->5 [style = bold, label=""];
+7->0 [style = bold, label=""];
+5->0 [style = bold, label=""];
+3->7 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

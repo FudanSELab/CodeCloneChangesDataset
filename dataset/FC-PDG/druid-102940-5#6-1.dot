@@ -1,0 +1,37 @@
+digraph {
+2 [style = filled, label = "S3DataSegmentMover mover = new S3DataSegmentMover(mockS3Client,new S3DataSegmentPusherConfig())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "DataSegment movedSegment = mover.move(sourceSegment,ImmutableMap.of(\"baseKey\",\"targetBaseKey\",\"bucket\",\"archive\"))@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "mockS3Client.putObject(\"archive\",\"targetBaseKey/test/2013-01-01T00:00:00.000Z_2013-01-02T00:00:00.000Z/1/0/index.zip\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Assert.assertEquals(\"targetBaseKey/test/2013-01-01T00:00:00.000Z_2013-01-02T00:00:00.000Z/1/0/index.zip\",MapUtils.getString(targetLoadSpec,\"key\"))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testMove['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "Map<String,Object> targetLoadSpec = movedSegment.getLoadSpec()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assert.assertEquals(\"archive\",MapUtils.getString(targetLoadSpec,\"bucket\"))@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "Assert.assertFalse(mockS3Client.didMove())@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Assert.assertTrue(mockS3Client.didMove())@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "DataSegment movedSegment = mover.move(SOURCE_SEGMENT,ImmutableMap.of(\"baseKey\",\"targetBaseKey\",\"bucket\",\"archive\"))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "MockAmazonS3Client mockS3Client = new MockAmazonS3Client()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testMoveNoop['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "mockS3Client.putObject(\"main\",\"baseKey/test/2013-01-01T00:00:00.000Z_2013-01-02T00:00:00.000Z/1/0/index.zip\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testMove['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+5->8 [style = solid, label="targetLoadSpec"];
+1->2 [style = solid, label="mockS3Client"];
+0->11 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+12->1 [style = bold, label=""];
+5->7 [style = solid, label="targetLoadSpec"];
+6->1 [style = bold, label=""];
+3->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+0->10 [style = bold, label=""];
+10->5 [style = bold, label=""];
+11->3 [style = bold, label=""];
+5->7 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+8->4 [style = bold, label=""];
+9->1 [style = bold, label=""];
+4->13 [style = dashed, label="0"];
+2->11 [style = bold, label=""];
+8->13 [style = bold, label=""];
+}

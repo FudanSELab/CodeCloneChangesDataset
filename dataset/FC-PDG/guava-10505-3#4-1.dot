@@ -1,0 +1,30 @@
+digraph {
+12 [style = filled, label = "removeEdge_existingEdge['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "putEdge(N1,N2)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(graphAsMutableGraph.removeEdge(N1,N2)).isTrue()@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "assertThat(graph.predecessors(N2)).containsExactly(N1)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(graph.successors(N1)).isEmpty()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assume().that(graphIsMutable()).isTrue()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "removeEdge_existingEdge['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "assertThat(graph.successors(N1)).containsExactly(N2)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(graph.removeEdge(N1,N2)).isTrue()@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(graphAsMutableGraph.removeEdge(N1,N2)).isFalse()@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "removeEdge_existingEdge['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(graph.predecessors(N2)).isEmpty()@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(graph.removeEdge(N1,N2)).isFalse()@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+6->1 [style = bold, label=""];
+8->10 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+7->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+5->11 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+11->9 [style = bold, label=""];
+4->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+12->0 [style = bold, label=""];
+10->0 [style = bold, label=""];
+9->6 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

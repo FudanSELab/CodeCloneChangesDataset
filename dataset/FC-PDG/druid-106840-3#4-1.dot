@@ -1,0 +1,22 @@
+digraph {
+2 [style = filled, label = "List<SearchHit> expectedHits = Lists.newLinkedList()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testSearchWithSingleFilter2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "checkSearchQuery(Druids.newSearchQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).dimensions(\"market\").intervals(QueryRunnerTestHelper.fullOnInterval).query(\"a\").build(),expectedHits)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "checkSearchQuery(Druids.newSearchQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).filters(QueryRunnerTestHelper.marketDimension,\"total_market\").intervals(QueryRunnerTestHelper.fullOnInterval).dimensions(QueryRunnerTestHelper.marketDimension).query(\"a\").build(),expectedHits)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "expectedHits.add(new SearchHit(QueryRunnerTestHelper.marketDimension,\"total_market\",186))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testSearchWithDimensionProvider['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "testSearchWithDimensionProvider['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "List<SearchHit> expectedHits = new ArrayList<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1->3 [style = bold, label=""];
+2->3 [style = solid, label="expectedHits"];
+5->1 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+3->6 [style = dashed, label="0"];
+1->6 [style = bold, label=""];
+5->3 [style = solid, label="expectedHits"];
+2->6 [style = solid, label="expectedHits"];
+4->5 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

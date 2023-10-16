@@ -1,0 +1,22 @@
+digraph {
+4 [style = filled, label = "processor.checkAndClearProcessResult(EMPTY)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "pushToStream(4,\"X\",true)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "shouldJoinOnlyIfMatchFoundOnStreamUpdates['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "processor.checkAndClearProcessResult(new KeyValueTimestamp<>(0,\"X0,FKey0+Y0\",0),new KeyValueTimestamp<>(1,\"X1,FKey1+Y1\",1))@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "shouldJoinOnlyIfMatchFoundOnStreamUpdates['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "shouldJoinRegardlessIfMatchFoundOnStreamUpdates['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "pushToStream(4,\"X\",true,false)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "processor.checkAndClearProcessResult(new KeyValueTimestamp<>(0,\"X0,FKey0+Y0\",0),new KeyValueTimestamp<>(1,\"X1,FKey1+Y1\",1),new KeyValueTimestamp<>(2,\"X2,FKey2+null\",2),new KeyValueTimestamp<>(3,\"X3,FKey3+null\",3))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "pushToGlobalTable(2,\"Y\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+5->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+8->2 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+4->0 [style = bold, label=""];
+0->7 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

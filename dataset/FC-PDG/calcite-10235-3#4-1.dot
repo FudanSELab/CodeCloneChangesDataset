@@ -1,0 +1,31 @@
+digraph {
+7 [style = filled, label = "testInsertCastedValueOfCompositeUdt['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(b,is(false))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(x,is(1))@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "boolean b = s.execute(\"create type mytype as (i int, j int)\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testDropType['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "b = s.execute(\"create table w (i int not null, j mytype)\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(b,is(false))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "b = s.execute(\"drop type mytype1\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testDropType['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "int x = s.executeUpdate(\"insert into w \" + \"values (1, cast((select j from w limit 1) as mytype))\")@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "boolean b = s.execute(\"create type mytype1 as BIGINT\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->9 [style = bold, label=""];
+0->3 [style = bold, label=""];
+5->3 [style = bold, label=""];
+8->9 [style = solid, label="x"];
+1->4 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+1->6 [style = bold, label=""];
+4->2 [style = bold, label=""];
+10->1 [style = solid, label="b"];
+3->1 [style = bold, label=""];
+10->1 [style = bold, label=""];
+4->2 [style = solid, label="b"];
+6->2 [style = solid, label="b"];
+7->10 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+2->8 [style = bold, label=""];
+3->1 [style = solid, label="b"];
+6->2 [style = bold, label=""];
+}

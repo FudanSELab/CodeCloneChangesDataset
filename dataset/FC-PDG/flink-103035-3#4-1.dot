@@ -1,0 +1,29 @@
+digraph {
+8 [style = filled, label = "testUnboundedDetection['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "testUnboundedDetection['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final StreamGraph graph = generateStreamGraph(RuntimeExecutionMode.AUTOMATIC,unbounded)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(Boundedness.CONTINUOUS_UNBOUNDED,unbounded.getBoundedness())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testMixedDetection['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertEquals(Boundedness.BOUNDED,bounded.getBoundedness())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertTrue(graph.isAllVerticesInSameSlotSharingGroupByDefault())@@@10@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertEquals(ScheduleMode.EAGER,graph.getScheduleMode())@@@9@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(GlobalDataExchangeMode.ALL_EDGES_PIPELINED,graph.getGlobalDataExchangeMode())@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final SourceTransformation<Integer> unbounded = getSourceTransformation(\"Unbounded Source\",Boundedness.CONTINUOUS_UNBOUNDED)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final SourceTransformation<Integer> bounded = getSourceTransformation(\"Bounded Source\",Boundedness.BOUNDED)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertThat(graph,hasProperties(GlobalDataExchangeMode.ALL_EDGES_PIPELINED,ScheduleMode.EAGER,true))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0->3 [style = bold, label=""];
+3->4 [style = solid, label="unbounded"];
+10->3 [style = bold, label=""];
+1->4 [style = bold, label=""];
+3->1 [style = bold, label=""];
+11->9 [style = bold, label=""];
+4->6 [style = bold, label=""];
+6->7 [style = dashed, label="0"];
+4->7 [style = solid, label="graph"];
+4->7 [style = bold, label=""];
+9->4 [style = bold, label=""];
+1->11 [style = bold, label=""];
+2->5 [style = bold, label=""];
+8->3 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

@@ -1,0 +1,31 @@
+digraph {
+2 [style = filled, label = "ZoneScope scope@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "String provider@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "List<ImageStoreVO> stores = dataStoreDao.findByProvider(provider)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "listImageStoresByScope['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "List<DataStore> imageStores = new ArrayList<DataStore>()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "List<ImageStoreVO> stores = dataStoreDao.findByZone(scope,null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "listImageStoreByProvider['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "List<ImageStoreVO> stores = dataStoreDao.findByScope(scope)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "return imageStores@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "listImageStoresByScope['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "imageStores.add(getImageStore(store.getId()))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->2 [style = dotted, label="true"];
+4->3 [style = bold, label=""];
+6->4 [style = bold, label=""];
+8->10 [style = bold, label=""];
+4->1 [style = solid, label="imageStores"];
+8->9 [style = dotted, label="true"];
+0->6 [style = dashed, label="0"];
+9->10 [style = solid, label="provider"];
+2->0 [style = solid, label="scope"];
+3->1 [style = bold, label=""];
+5->0 [style = bold, label=""];
+0->4 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+0->10 [style = dashed, label="0"];
+5->2 [style = dotted, label="true"];
+7->6 [style = bold, label=""];
+2->6 [style = solid, label="scope"];
+10->4 [style = bold, label=""];
+}

@@ -1,0 +1,21 @@
+digraph {
+0 [style = filled, label = "final String sql = \"select *\" + \" from t match_recognize\" + \" (\" + \" pattern ( A B C | A C B | B A C | B C A | C A B | C B A)\" + \" define\" + \" A as A.price > PREV(A.price),\" + \" B as B.price < prev(B.price),\" + \" C as C.price > prev(C.price)\" + \" ) mr\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testMatchRecognize10['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "testMatchRecognize10['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final String sql = \"select *\" + \" from t match_recognize\" + \" (\" + \" pattern (strt down+ up+)\" + \" subset stdn = (strt, down)\" + \" define\" + \" down as down.price < PREV(down.price),\" + \" up as up.price > prev(up.price)\" + \" ) mr\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final String expected = \"SELECT *\" + \"FROM `T` MATCH_RECOGNIZE(\" + \"PATTERN ((((((((`A` `B`) `C`) | ((`A` `C`) `B`)) | ((`B` `A`) `C`)) \" + \"| ((`B` `C`) `A`)) | ((`C` `A`) `B`)) | ((`C` `B`) `A`)))\" + \"DEFINE \" + \"`A` AS (`A`.`PRICE` > PREV(`A`.`PRICE`, 1)), \" + \"`B` AS (`B`.`PRICE` < PREV(`B`.`PRICE`, 1)), \" + \"`C` AS (`C`.`PRICE` > PREV(`C`.`PRICE`, 1))\" + \") AS `MR`\"@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final String expected = \"SELECT *\" + \"FROM `T` MATCH_RECOGNIZE(\" + \"PATTERN (((`STRT` (`DOWN` +)) (`UP` +)))\" + \"SUBSET (`STDN` = (`STRT`, `DOWN`))\" + \"DEFINE \" + \"`DOWN` AS (`DOWN`.`PRICE` < PREV(`DOWN`.`PRICE`, 1)), \" + \"`UP` AS (`UP`.`PRICE` > PREV(`UP`.`PRICE`, 1))\" + \") AS `MR`\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "sql(sql).ok(expected)@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testMatchRecognizeSubset1['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+3->2 [style = solid, label="expected"];
+5->7 [style = bold, label=""];
+6->2 [style = solid, label="expected"];
+3->6 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+7->6 [style = bold, label=""];
+4->0 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

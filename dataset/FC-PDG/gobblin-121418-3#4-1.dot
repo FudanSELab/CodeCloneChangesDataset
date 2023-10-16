@@ -1,0 +1,22 @@
+digraph {
+2 [style = filled, label = "JsonElement value@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "map.put(entry.getKey(),getElementConverter().convert(entry.getValue()))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "return map@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "convertField['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Map<String,Object> map = new HashMap<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "convertField['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "convertField['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "map.put(entry.getKey(),getElementConverter().convertField(entry.getValue()))@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+4->5 [style = dashed, label="0"];
+6->3 [style = bold, label=""];
+7->2 [style = dotted, label="true"];
+3->5 [style = bold, label=""];
+6->2 [style = dotted, label="true"];
+3->0 [style = solid, label="map"];
+1->2 [style = dotted, label="true"];
+5->0 [style = bold, label=""];
+3->4 [style = bold, label=""];
+7->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

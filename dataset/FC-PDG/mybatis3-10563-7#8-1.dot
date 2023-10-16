@@ -1,0 +1,24 @@
+digraph {
+6 [style = filled, label = "testAncestor['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "testAncestorAfterQueryingParents['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Assertions.assertNotNull(person,\"Persons must not be null\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Person expectedAncestor = personMapper.selectById(1)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Assertions.assertNotNull(person.getParent(),\"Parent must not be null\")@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Assertions.assertEquals(expectedAncestor,person.getAncestor(),\"Ancestor must be John Smith sr.\")@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Person person = personMapper.selectById(3)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Assertions.assertNotNull(person.getParent().getParent(),\"Grandparent must not be null\")@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "PersonMapper personMapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testAncestor['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+2->1 [style = solid, label="person"];
+6->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->9 [style = bold, label=""];
+7->5 [style = bold, label=""];
+9->7 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->5 [style = solid, label="expectedAncestor"];
+3->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

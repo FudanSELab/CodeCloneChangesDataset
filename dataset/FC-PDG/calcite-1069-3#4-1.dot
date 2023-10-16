@@ -1,0 +1,18 @@
+digraph {
+6 [style = filled, label = "assertEquals(\"(10: Fred+Bill+Eric+Janet(\",s)@@@22@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testGroupByWithKeySelector['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "String s = Linq4j.asEnumerable(emps).groupBy(EMP_DEPTNO_SELECTOR).select(new Function1<Grouping<Integer,Employee>,String>(){public String apply(Grouping<Integer,Employee> group){return String.format(Locale.ROOT,\"%s: %s\",group.getKey(),stringJoin(\"+\",group.select(new Function1<Employee,String>(){public String apply(Employee element){return element.name}})))}}).toList().toString()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testGroupByWithKeySelector['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "testGroupByWithKeySelectorAndComparer['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "String s = Linq4j.asEnumerable(emps).groupBy(EMP_DEPTNO_SELECTOR,new EqualityComparer<Integer>(){public boolean equal(Integer v1,Integer v2){return true}public int hashCode(Integer integer){return 0}}).select(new Function1<Grouping<Integer,Employee>,String>(){public String apply(Grouping<Integer,Employee> group){return String.format(\"%s: %s\",group.getKey(),stringJoin(\"+\",group.select(new Function1<Employee,String>(){public String apply(Employee element){return element.name}})))}}).toList().toString()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(\"(10: Fred+Eric+Janet, 30: Bill(\",s)@@@14@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->6 [style = solid, label="s"];
+2->4 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+4->6 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+2->1 [style = solid, label="s"];
+2->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

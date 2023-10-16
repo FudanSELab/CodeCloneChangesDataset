@@ -1,0 +1,26 @@
+digraph {
+9 [style = filled, label = "assertNull(zk.exists(\"/multi\",null))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "{}@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testCreateDelete['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testCreateDelete['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "fail(\"/multi should have been deleted so setData should have failed\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "boolean useAsync@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "assertNull(zk.exists(\"/multi\",null))@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.delete(\"/multi\",0)))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "KeeperException e@@@7@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.delete(\"/multi\",0),Op.setData(\"/multi\",\"Y\".getBytes(),0)))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "multi(zk,Arrays.asList(Op.create(\"/multi\",new byte((((,Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT),Op.delete(\"/multi\",0)),useAsync)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "testDeleteUpdateConflict['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7->9 [style = bold, label=""];
+1->4 [style = dashed, label="0"];
+3->4 [style = solid, label="useAsync"];
+1->0 [style = bold, label=""];
+5->3 [style = dotted, label="true"];
+11->9 [style = bold, label=""];
+8->11 [style = bold, label=""];
+10->7 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->10 [style = bold, label=""];
+5->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

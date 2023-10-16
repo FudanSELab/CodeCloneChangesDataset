@@ -1,0 +1,24 @@
+digraph {
+3 [style = filled, label = "mappedStatementBuilder.timeout(10)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "verify(statement).setQueryTimeout(5)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "verify(statement).setQueryTimeout(10)@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "BaseStatementHandler handler = new SimpleStatementHandler(null,mappedStatementBuilder.build(),null,null,null,null)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "specifyMappedStatementTimeoutOnly['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "handler.setStatementTimeout(statement,null)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "specifyMappedStatementTimeoutOnly['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "specifyQueryTimeoutZeroAndTransactionTimeout['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "doReturn(0).when(configuration).getDefaultStatementTimeout()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "handler.setStatementTimeout(statement,5)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+0->3 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+2->7 [style = bold, label=""];
+3->2 [style = bold, label=""];
+7->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+9->6 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

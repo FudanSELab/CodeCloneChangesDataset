@@ -1,0 +1,31 @@
+digraph {
+7 [style = filled, label = "String tmpdir = getProject().getProperty(\"output\").replace(File.separatorChar,'/')@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "ds.scan()@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testAbsolute3['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "compareFiles(ds,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ce2963,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ce296e)@@@13@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "ds.setExcludes(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ce2956)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testAbsolute1['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "getProject().executeTarget(\"extended-setup\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testAbsolute1['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "ds.setIncludes(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ce294b)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "DirectoryScanner ds = new DirectoryScanner()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String tmpdir = getProject().getBaseDir().getAbsolutePath().replace(File.separatorChar,'/') + \"/tmp\"@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+0->3 [style = bold, label=""];
+4->1 [style = solid, label="tmpdir"];
+6->1 [style = bold, label=""];
+5->10 [style = bold, label=""];
+4->5 [style = solid, label="tmpdir"];
+7->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+3->1 [style = solid, label="ds"];
+5->6 [style = bold, label=""];
+9->0 [style = bold, label=""];
+7->5 [style = solid, label="tmpdir"];
+3->7 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+3->4 [style = bold, label=""];
+10->6 [style = bold, label=""];
+7->1 [style = solid, label="tmpdir"];
+}

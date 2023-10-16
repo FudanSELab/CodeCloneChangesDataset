@@ -1,0 +1,38 @@
+digraph {
+11 [style = filled, label = "ReducerStream stream@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "Assert.assertEquals(\"reduce\",explanation.getFunctionName())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "Assert.assertEquals(1,((StreamExplanation)explanation).getChildren().size())@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Assert.assertEquals(2,((StreamExplanation)explanation).getChildren().size())@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "Assert.assertEquals(2,((StreamExplanation)explanation).getChildren().size())@@@7@@@['1', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "MergeStream stream@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "testMergeStream['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "Assert.assertEquals(\"merge\",explanation.getFunctionName())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "Assert.assertEquals(.getName(),explanation.getImplementingClass())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "stream = new MergeStream(StreamExpressionParser.parse(\"merge(\" + \"search(collection1, q=\"id:(0 3 4)\", fl=\"id,a_s,a_i,a_f\", sort=\"a_f asc, a_s asc\"),\" + \"search(collection1, q=\"id:(1 2)\", fl=\"id,a_s,a_i,a_f\", sort=\"a_f asc, a_s asc\"),\" + \"on=\"a_f asc, a_s asc\")\"),factory)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "String expressionString@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "testReducerStream['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Explanation explanation = stream.toExplanation(factory)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Explanation explanation = stream.toExplanation(factory)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "testMergeStream['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "stream = new ReducerStream(StreamExpressionParser.parse(\"reduce(\" + \"search(collection1, q=*:*, fl=\"id,a_s,a_i,a_f\", sort=\"a_s desc, a_f asc\"),\" + \"by=\"a_s\", group(sort=\"a_i desc\", n=\"5\"))\"),factory)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->7 [style = bold, label=""];
+12->13 [style = bold, label=""];
+6->5 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+3->2 [style = dashed, label="0"];
+7->6 [style = bold, label=""];
+13->9 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+15->11 [style = bold, label=""];
+5->12 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+10->14 [style = bold, label=""];
+4->6 [style = bold, label=""];
+11->10 [style = bold, label=""];
+0->1 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+2->13 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+14->5 [style = bold, label=""];
+}

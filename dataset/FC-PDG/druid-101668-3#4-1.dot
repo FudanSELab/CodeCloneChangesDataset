@@ -1,0 +1,23 @@
+digraph {
+6 [style = filled, label = "!isRewriteJoinToFilter(queryContext)@@@3@@@['0', '1', '0']", fillcolor = red, shape = diamond image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "cannotVectorize()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testQuery(\"(SELECT SUM(cnt) FROM foo UNION ALL SELECT COUNT(*) FROM foo INNER JOIN lookup.lookyloo ON foo.dim1 = lookyloo.k) \",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).aggregators(aggregators(new LongSumAggregatorFactory(\"a0\",\"cnt\"))).context(TIMESERIES_CONTEXT_DEFAULT).build(),Druids.newTimeseriesQueryBuilder().dataSource(join(new TableDataSource(CalciteTests.DATASOURCE1),new LookupDataSource(\"lookyloo\"),\"j0.\",equalsCondition(DruidExpression.fromColumn(\"dim1\"),DruidExpression.fromColumn(\"j0.k\")),JoinType.INNER)).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@921a1f,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@921a23))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testQuery(\"(SELECT COUNT(*) FROM foo INNER JOIN lookup.lookyloo ON foo.dim1 = lookyloo.k) UNION ALL SELECT SUM(cnt) FROM foo\",queryContext,ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(join(new TableDataSource(CalciteTests.DATASOURCE1),new LookupDataSource(\"lookyloo\"),\"j0.\",equalsCondition(DruidExpression.fromColumn(\"dim1\"),DruidExpression.fromColumn(\"j0.k\")),JoinType.INNER)).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build().withOverriddenContext(queryContext),Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).aggregators(aggregators(new LongSumAggregatorFactory(\"a0\",\"cnt\"))).context(TIMESERIES_CONTEXT_DEFAULT).build().withOverriddenContext(queryContext)),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9219af,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9219b3))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "testUnionAllTwoQueriesRightQueryIsJoin['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Map<String,Object> queryContext@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testUnionAllTwoQueriesLeftQueryIsJoin['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "cannotVectorize()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testUnionAllTwoQueriesLeftQueryIsJoin['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+4->5 [style = dotted, label="true"];
+0->8 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+6->0 [style = bold, label=""];
+6->0 [style = dotted, label="true"];
+5->3 [style = solid, label="queryContext"];
+4->6 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->8 [style = bold, label=""];
+}

@@ -1,0 +1,38 @@
+digraph {
+12 [style = filled, label = "String startLocatorCommand = String.join(\" \",\"start server\",\"--name=\" + serverName,\"--dir=\" + workingDir,\"--disable-default-server\",\"--locators=\"\"\",\"--J=-Dlog4j.configurationFile=\" + configWithGeodePluginsFile.toAbsolutePath())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "serverLauncherUsesConfigFileInClasspathWithGeodePlugins['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "copy(configWithGeodePluginsFile,temporaryFolder.getRoot().toPath().resolve(\"log4j2.xml\"))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "String startServerCommand = String.join(\" \",\"start server\",\"--name=\" + serverName,\"--dir=\" + workingDir,\"--disable-default-server\",\"--classpath\",classpath)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "gfshRule.execute(startLocatorCommand)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "gfshRule.execute(startServerCommand)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "copy(configWithGeodePluginsFile,workingDir.resolve(\"log4j2.xml\"))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "gfshRule.execute(startLocatorCommand)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "await().untilAsserted(null)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "String classpath = workingDir.toFile().getAbsolutePath()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "await().untilAsserted(null)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String startLocatorCommand = String.join(\" \",\"start server\",\"--name=\" + serverName,\"--dir=\" + workingDir,\"--disable-default-server\",\"--locators=\"\"\",\"--classpath\",classpath)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "serverLauncherUsesConfigFileInClasspathWithGeodePlugins['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "serverLauncherUsesSpecifiedConfigFileWithGeodePlugins['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+9->2 [style = bold, label=""];
+11->12 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->7 [style = bold, label=""];
+7->9 [style = solid, label="startServerCommand"];
+12->10 [style = solid, label="startLocatorCommand"];
+7->9 [style = bold, label=""];
+8->1 [style = bold, label=""];
+5->1 [style = bold, label=""];
+12->10 [style = bold, label=""];
+3->2 [style = bold, label=""];
+10->13 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+6->8 [style = bold, label=""];
+1->7 [style = solid, label="classpath"];
+5->8 [style = dashed, label="0"];
+1->0 [style = solid, label="classpath"];
+0->7 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+0->3 [style = solid, label="startLocatorCommand"];
+}

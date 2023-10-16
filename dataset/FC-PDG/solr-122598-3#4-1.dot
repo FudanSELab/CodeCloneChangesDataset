@@ -1,0 +1,25 @@
+digraph {
+7 [style = filled, label = "deleteNonSnapshotIndexFiles['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "deleteSnapshotIndexFiles['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "final long gen@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final long gen@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "onCommit['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "Collection<SnapshotMetaData> snapshots@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "List<? extends IndexCommit> commits@@@14@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "List<? extends IndexCommit> commits@@@16@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "onCommit['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "deleteSnapshotIndexFiles['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "onCommit['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->6 [style = dotted, label="true"];
+0->3 [style = dotted, label="true"];
+0->2 [style = dotted, label="true"];
+7->10 [style = dotted, label="true"];
+7->9 [style = dotted, label="true"];
+1->2 [style = dotted, label="true"];
+8->10 [style = dotted, label="true"];
+7->8 [style = dotted, label="true"];
+4->2 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+5->2 [style = dotted, label="true"];
+}

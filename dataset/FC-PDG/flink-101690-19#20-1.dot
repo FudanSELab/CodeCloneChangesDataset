@@ -1,0 +1,36 @@
+digraph {
+1 [style = filled, label = "File exampleJarLocation = getTestJarPath(\"BatchWordCount.jar\")@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "LOG.info(\"Finished perJobYarnCluster()\")@@@14@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final long networkBuffersMB = NetworkEnvironmentConfiguration.calculateNetworkBufferMemory((taskManagerMemoryMB - ResourceManagerOptions.CONTAINERIZED_HEAP_CUTOFF_MIN.defaultValue()) << 20,new Configuration()) >> 20@@@7@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "addTestAppender(,Level.INFO)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "perJobYarnClusterOffHeap['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "runWithArgs(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1ae30df,\"Program execution finished\",new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1ae30ff,RunTypes.CLI_FRONTEND,0,true)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "LOG.info(\"Starting perJobYarnCluster()\")@@@3@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "perJobYarnClusterOffHeap['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "perJobYarnClusterWithParallelism['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "LOG.info(\"Finished perJobYarnClusterWithParallelism()\")@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final long taskManagerMemoryMB = 1024@@@6@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final long offHeapMemory = taskManagerMemoryMB - ResourceManagerOptions.CONTAINERIZED_HEAP_CUTOFF_MIN.defaultValue() - networkBuffersMB - 100@@@8@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "runTest(null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "LOG.info(\"Starting perJobYarnClusterWithParallelism()\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7->13 [style = bold, label=""];
+6->7 [style = solid, label="taskManagerMemoryMB"];
+6->4 [style = solid, label="taskManagerMemoryMB"];
+2->12 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+12->3 [style = bold, label=""];
+1->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+11->12 [style = bold, label=""];
+4->7 [style = solid, label="offHeapMemory"];
+9->10 [style = bold, label=""];
+6->0 [style = solid, label="taskManagerMemoryMB"];
+3->1 [style = bold, label=""];
+7->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+1->7 [style = bold, label=""];
+0->4 [style = solid, label="networkBuffersMB"];
+4->7 [style = bold, label=""];
+2->3 [style = bold, label=""];
+8->13 [style = dashed, label="0"];
+}

@@ -1,0 +1,35 @@
+digraph {
+3 [style = filled, label = "testTableFunctionScan['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final RelBuilder builder = RelBuilder.create(config().build())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final SqlOperator rampFunction = new MockSqlOperatorTable.RampFunction()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "fail(\"expected error, got \" + node)@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final SqlOperator dedupFunction = new MockSqlOperatorTable.DedupFunction()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "RelNode root = builder.scan(\"EMP\").scan(\"DEPT\").functionScan(dedupFunction,2,builder.cursor(2,0),builder.cursor(2,1)).build()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testTableFunctionScan['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "final String expected = \"LogicalTableFunctionScan(invocation=(RAMP(3)(, \" + \"rowType=(RecordType(INTEGER I)()\"@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "RelNode node = builder.build()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testTableFunctionScanZeroInputs['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(root,hasTree(expected))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final String expected = \"LogicalTableFunctionScan(\" + \"invocation=(DEDUP(CURSOR($0), CURSOR($1))(, \" + \"rowType=(RecordType(VARCHAR(1024) NAME)()\" + \" LogicalTableScan(table=((scott, EMP(()\" + \" LogicalTableScan(table=((scott, DEPT(()\"@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "RelNode root = builder.functionScan(rampFunction,0,builder.literal(3)).build()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->1 [style = solid, label="node"];
+7->9 [style = bold, label=""];
+6->5 [style = solid, label="expected"];
+6->5 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+7->0 [style = bold, label=""];
+11->5 [style = solid, label="root"];
+0->9 [style = dashed, label="0"];
+10->5 [style = bold, label=""];
+9->11 [style = bold, label=""];
+3->7 [style = bold, label=""];
+2->5 [style = solid, label="root"];
+11->10 [style = bold, label=""];
+2->6 [style = bold, label=""];
+12->7 [style = bold, label=""];
+5->4 [style = bold, label=""];
+8->7 [style = bold, label=""];
+0->2 [style = bold, label=""];
+10->5 [style = solid, label="expected"];
+}

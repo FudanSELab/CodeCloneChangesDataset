@@ -1,0 +1,38 @@
+digraph {
+3 [style = filled, label = "top.getAggregation().getKind() == bottom.getAggregation().getKind()@@@3@@@['1', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "merge['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "merge['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "return null@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "return AggregateCall.create(bottom.getAggregation(),bottom.isDistinct(),bottom.isApproximate(),false,bottom.getArgList(),bottom.filterArg,bottom.getCollation(),bottom.getType(),top.getName())@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return null@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "merge['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "return AggregateCall.create(bottom.getAggregation(),bottom.isDistinct(),bottom.isApproximate(),false,bottom.getArgList(),bottom.filterArg,bottom.getCollation(),bottom.getType(),top.getName())@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "SqlKind topKind = top.getAggregation().getKind()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "AggregateCall top@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "AggregateCall bottom@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "AggregateCall bottom@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "AggregateCall top@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "topKind == bottom.getAggregation().getKind() && (topKind == SqlKind.SUM || topKind == SqlKind.SUM0)@@@4@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "AggregateCall top@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+4->3 [style = bold, label=""];
+7->6 [style = dotted, label="true"];
+12->11 [style = dotted, label="false"];
+9->12 [style = solid, label="topKind"];
+4->1 [style = dotted, label="true"];
+4->0 [style = dotted, label="true"];
+12->11 [style = bold, label=""];
+13->10 [style = dotted, label="true"];
+7->3 [style = bold, label=""];
+12->14 [style = dotted, label="true"];
+13->1 [style = dotted, label="true"];
+3->5 [style = bold, label=""];
+3->2 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+12->14 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+9->12 [style = bold, label=""];
+13->9 [style = bold, label=""];
+3->5 [style = dotted, label="false"];
+7->8 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+}

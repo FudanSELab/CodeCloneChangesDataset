@@ -1,0 +1,26 @@
+digraph {
+2 [style = filled, label = "Injector injector = Initialization.makeInjectorWithModules(GuiceInjectors.makeStartupInjector(),ImmutableList.of(new Module(){@Override public void configure(Binder binder){JsonConfigProvider.bindInstance(binder,Key.get(,),new DruidNode(\"test-inject\",null,false,null,null,true,false))}}))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testInjection['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Assert.assertNull(monitor.cache)@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "CacheMonitor monitor = injector.getInstance()@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assert.assertEquals(,manager.getClass())@@@13@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final Injector injector = Initialization.makeInjectorWithModules(GuiceInjectors.makeStartupInjector(),ImmutableList.of(new Module(){@Override public void configure(Binder binder){JsonConfigProvider.bindInstance(binder,Key.get(,),new DruidNode(\"test-inject\",null,null,null,true,false))}}))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "properties.clear()@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "properties.put(NamespaceExtractionModule.TYPE_PREFIX,\"onHeap\")@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final Properties properties = injector.getInstance()@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testOptionalInject['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "final NamespaceExtractionCacheManager manager = injector.getInstance()@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testOptionalInject['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7->9 [style = bold, label=""];
+1->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+9->11 [style = bold, label=""];
+6->7 [style = bold, label=""];
+10->8 [style = bold, label=""];
+5->6 [style = bold, label=""];
+11->10 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

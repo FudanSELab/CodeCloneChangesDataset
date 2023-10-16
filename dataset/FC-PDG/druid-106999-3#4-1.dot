@@ -1,0 +1,24 @@
+digraph {
+6 [style = filled, label = "final JavaScriptAggregatorFactory factory = new JavaScriptAggregatorFactory(\"foo\",ImmutableList.of(\"foo\"),SCRIPT_DOUBLE_SUM.get(\"fnAggregate\"),SCRIPT_DOUBLE_SUM.get(\"fnReset\"),SCRIPT_DOUBLE_SUM.get(\"fnCombine\"),new JavaScriptConfig(false))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "testJavaScriptDisabledFactorizeBuffered['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Assert.assertTrue(false)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testJavaScriptDisabledFactorize['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "final JavaScriptAggregatorFactory factory = new JavaScriptAggregatorFactory(\"foo\",ImmutableList.of(\"foo\"),scriptDoubleSum.get(\"fnAggregate\"),scriptDoubleSum.get(\"fnReset\"),scriptDoubleSum.get(\"fnCombine\"),new JavaScriptConfig(false))@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testJavaScriptDisabledFactorize['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "expectedException.expect()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "factory.factorizeBuffered(DUMMY_COLUMN_SELECTOR_FACTORY)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "expectedException.expectMessage(\"JavaScript is disabled\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "factory.factorize(DUMMY_COLUMN_SELECTOR_FACTORY)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+6->4 [style = bold, label=""];
+1->2 [style = bold, label=""];
+9->0 [style = bold, label=""];
+5->9 [style = bold, label=""];
+8->2 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

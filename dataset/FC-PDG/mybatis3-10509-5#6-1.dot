@@ -1,0 +1,32 @@
+digraph {
+5 [style = filled, label = "int rows = mapper.insertTable2WithSelectKeyWithKeyMap(name)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(1,rows)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testAnnotatedInsertTable3['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(22,name.getNameId())@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "int rows = mapper.insertTable3(name)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "AnnotatedMapper mapper = sqlSession.getMapper()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testAnnotatedInsertTable2WithSelectKeyWithKeyMap['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertEquals(33,name.getNameId())@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Name name = new Name()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testAnnotatedInsertTable2WithSelectKeyWithKeyMap['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "assertEquals(\"barney_fred\",name.getGeneratedName())@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "name.setName(\"barney\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->11 [style = bold, label=""];
+5->3 [style = bold, label=""];
+4->10 [style = bold, label=""];
+10->3 [style = bold, label=""];
+7->0 [style = bold, label=""];
+1->6 [style = bold, label=""];
+2->7 [style = bold, label=""];
+3->1 [style = bold, label=""];
+9->7 [style = bold, label=""];
+10->3 [style = solid, label="rows"];
+0->4 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+7->5 [style = solid, label="name"];
+1->11 [style = dashed, label="0"];
+8->7 [style = bold, label=""];
+7->10 [style = solid, label="name"];
+5->3 [style = solid, label="rows"];
+}

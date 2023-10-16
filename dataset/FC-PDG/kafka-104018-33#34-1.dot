@@ -1,0 +1,36 @@
+digraph {
+4 [style = filled, label = "client.prepareResponse(syncGroupResponse(Collections.emptyList(),Errors.UNKNOWN_SERVER_ERROR))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "client.prepareResponse(null,joinGroupFollowerResponse(2,consumerId,\"leader\",Errors.NONE))@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "testIllegalGenerationOnSyncGroup['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final String consumerId = \"consumer\"@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testUnexpectedErrorOnSyncGroup['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "client.prepareResponse(syncGroupResponse(Collections.emptyList(),Errors.ILLEGAL_GENERATION))@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "coordinator.joinGroupIfNeeded(time.timer(Long.MAX_VALUE))@@@15@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "coordinator.ensureCoordinatorReady(time.timer(Long.MAX_VALUE))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "client.prepareResponse(joinGroupFollowerResponse(1,consumerId,\"leader\",Errors.NONE))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "client.prepareResponse(groupCoordinatorResponse(node,Errors.NONE))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "client.prepareResponse(syncGroupResponse(singletonList(t1p),Errors.NONE))@@@14@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testUnexpectedErrorOnSyncGroup['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertEquals(singleton(t1p),subscriptions.assignedPartitions())@@@17@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "assertFalse(coordinator.rejoinNeededOrPending())@@@16@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "subscriptions.subscribe(singleton(topic1),rebalanceListener)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "coordinator.joinGroupIfNeeded(time.timer(Long.MAX_VALUE))@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+5->3 [style = bold, label=""];
+3->10 [style = bold, label=""];
+6->14 [style = solid, label="consumerId"];
+15->13 [style = bold, label=""];
+6->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+1->6 [style = bold, label=""];
+13->9 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+10->14 [style = bold, label=""];
+14->11 [style = bold, label=""];
+3->4 [style = bold, label=""];
+12->6 [style = bold, label=""];
+4->7 [style = bold, label=""];
+11->15 [style = bold, label=""];
+2->5 [style = bold, label=""];
+6->3 [style = solid, label="consumerId"];
+}

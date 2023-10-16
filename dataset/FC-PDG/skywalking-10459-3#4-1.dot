@@ -1,0 +1,36 @@
+digraph {
+1 [style = filled, label = "ServiceRelation source@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "metrics.setComponentId(source.getComponentId())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "ServiceRelationClientSideMetrics metrics = new ServiceRelationClientSideMetrics()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "metrics.buildEntityId()@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "metrics.setSourceServiceId(source.getSourceServiceId())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "metrics.setEntityId(source.getEntityId())@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "serverSide['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "serverSide['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "metrics.setTimeBucket(source.getTimeBucket())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "clientSide['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "ServiceRelation source@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "ServiceRelationServerSideMetrics metrics = new ServiceRelationServerSideMetrics()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "metrics.setDestServiceId(source.getDestServiceId())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "MetricsStreamProcessor.getInstance().in(metrics)@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->2 [style = solid, label="metrics"];
+5->3 [style = bold, label=""];
+11->5 [style = bold, label=""];
+12->13 [style = dotted, label="true"];
+10->1 [style = dotted, label="true"];
+6->9 [style = bold, label=""];
+6->7 [style = bold, label=""];
+8->5 [style = bold, label=""];
+10->8 [style = bold, label=""];
+8->11 [style = dashed, label="0"];
+4->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+9->2 [style = bold, label=""];
+11->2 [style = solid, label="metrics"];
+0->1 [style = dotted, label="true"];
+7->9 [style = dashed, label="0"];
+0->8 [style = bold, label=""];
+12->11 [style = bold, label=""];
+1->13 [style = dashed, label="0"];
+}

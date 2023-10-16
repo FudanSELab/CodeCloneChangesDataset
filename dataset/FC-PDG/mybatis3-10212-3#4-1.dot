@@ -1,0 +1,33 @@
+digraph {
+8 [style = filled, label = "assertEquals((Integer)1,person.getId())@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "Person person = personMapper.select(1)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "MultipleReverseIncludePersonMapper personMapper = sqlSession.getMapper()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "SqlSession sqlSession = sqlSessionFactory.openSession()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "SqlSessionFactory sqlSessionFactory@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "SqlSessionFactory sqlSessionFactory@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertEquals(1,person.getId())@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(\"John\",person.getName())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "MultipleIncludePersonMapper personMapper = sqlSession.getMapper()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testMultipleIncludes['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "{sqlSession.close()}@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testMultipleIncludes['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testMultipleReverseIncludes['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+6->11 [style = dashed, label="0"];
+0->8 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+3->5 [style = bold, label=""];
+7->0 [style = bold, label=""];
+9->1 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+1->10 [style = bold, label=""];
+12->1 [style = bold, label=""];
+10->7 [style = bold, label=""];
+2->6 [style = dotted, label="true"];
+2->1 [style = bold, label=""];
+9->6 [style = dotted, label="true"];
+4->7 [style = bold, label=""];
+8->3 [style = bold, label=""];
+12->11 [style = dotted, label="true"];
+}

@@ -1,0 +1,38 @@
+digraph {
+13 [style = filled, label = "Assert.assertEquals(\"testCluster:testDb\",stmt.getTblPattern().getQuolifiedDb())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "List<AccessPrivilege> privileges = Lists.newArrayList(AccessPrivilege.ALL)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testUserFail['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "stmt = new GrantStmt(new UserIdentity(\"testUser\",\"%\"),null,new TablePattern(\"testDb\",\"*\"),privileges)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Assert.fail(\"No exception throws.\")@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "stmt.analyze(analyzer)@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "privileges = Lists.newArrayList(AccessPrivilege.READ_ONLY,AccessPrivilege.ALL)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "stmt = new GrantStmt(new UserIdentity(\"testUser\",\"%\"),null,new TablePattern(\"testDb\",\"*\"),privileges)@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "stmt.analyze(analyzer)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Assert.fail(\"No exeception throws.\")@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "testNormal['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "Assert.assertEquals(\"testCluster:testUser\",stmt.getUserIdent().getQualifiedUser())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "GrantStmt stmt@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testUserFail['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "stmt = new GrantStmt(new UserIdentity(\"\",\"%\"),null,new TablePattern(\"testDb\",\"*\"),privileges)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+7->1 [style = bold, label=""];
+5->0 [style = solid, label="privileges"];
+2->1 [style = bold, label=""];
+3->14 [style = bold, label=""];
+3->6 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+4->6 [style = dashed, label="0"];
+12->9 [style = bold, label=""];
+9->8 [style = bold, label=""];
+3->4 [style = bold, label=""];
+13->12 [style = bold, label=""];
+5->0 [style = bold, label=""];
+11->3 [style = bold, label=""];
+5->11 [style = solid, label="privileges"];
+12->9 [style = solid, label="privileges"];
+4->14 [style = dashed, label="0"];
+5->11 [style = bold, label=""];
+14->13 [style = bold, label=""];
+10->1 [style = bold, label=""];
+}

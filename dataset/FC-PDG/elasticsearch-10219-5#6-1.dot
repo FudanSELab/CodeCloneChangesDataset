@@ -1,0 +1,37 @@
+digraph {
+2 [style = filled, label = "return new ArraySourceValueFetcher(name(),context){@Override protected List<?> parseSourceValue(Object value){if (value instanceof List) {return (List<?>)value}{return List.of(value)}}}@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "valueFetcher['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "format != null@@@3@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "SearchExecutionContext context@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "QueryShardContext context@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "QueryShardContext context@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "valueFetcher['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "return new SourceValueFetcher(name(),context){@Override @SuppressWarnings(\"unchecked\") protected Object parseSourceValue(Object value){Map<String,Double> metrics = (Map<String,Double>)valuereturn metrics.get(defaultMetric.name())}}@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "valueFetcher['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "throw new IllegalArgumentException(\"Field (\" + name() + \"( of type (\" + typeName() + \"( doesn't support formats.\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "String format@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "String format@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+0->9 [style = bold, label=""];
+5->9 [style = solid, label="context"];
+5->0 [style = solid, label="format"];
+11->10 [style = dotted, label="true"];
+0->2 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+11->5 [style = dotted, label="true"];
+1->4 [style = dotted, label="true"];
+1->0 [style = bold, label=""];
+7->0 [style = solid, label="format"];
+8->0 [style = bold, label=""];
+3->9 [style = bold, label=""];
+11->0 [style = bold, label=""];
+6->2 [style = solid, label="context"];
+8->6 [style = dotted, label="true"];
+3->2 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+4->2 [style = solid, label="context"];
+0->3 [style = dotted, label="true"];
+5->7 [style = dashed, label="0"];
+1->5 [style = dotted, label="true"];
+10->0 [style = solid, label="format"];
+}

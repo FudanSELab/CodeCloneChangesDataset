@@ -1,0 +1,33 @@
+digraph {
+4 [style = filled, label = "return emitter@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "ContentEncoding encoding@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "sizeBasedEmitterWithContentEncoding['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "int size@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "HttpEmitterConfig config = new HttpEmitterConfig.Builder(TARGET_URL).setFlushMillis(Long.MAX_VALUE).setFlushCount(size).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "HttpPostEmitter emitter = new HttpPostEmitter(config,httpClient,JSON_MAPPER)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "emitter.start()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "sizeBasedEmitter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "HttpEmitterConfig config = new HttpEmitterConfig.Builder(TARGET_URL).setFlushMillis(Long.MAX_VALUE).setFlushCount(size).setContentEncoding(encoding).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "int size@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "HttpEmitterConfig config = new HttpEmitterConfig.Builder(TARGET_URL).setFlushMillis(Long.MAX_VALUE).setFlushTimeout(TimeUnit.MILLISECONDS.convert(10,TimeUnit.SECONDS)).setFlushCount(size).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "sizeBasedEmitter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+7->3 [style = solid, label="config"];
+1->10 [style = dashed, label="0"];
+9->11 [style = bold, label=""];
+5->3 [style = solid, label="config"];
+6->7 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+11->3 [style = bold, label=""];
+0->4 [style = bold, label=""];
+3->4 [style = solid, label="emitter"];
+2->1 [style = dotted, label="true"];
+11->3 [style = solid, label="config"];
+9->10 [style = dotted, label="true"];
+5->11 [style = dashed, label="0"];
+7->3 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->5 [style = bold, label=""];
+9->8 [style = dotted, label="true"];
+6->1 [style = dotted, label="true"];
+}

@@ -1,0 +1,34 @@
+digraph {
+7 [style = filled, label = "testFullOnTopNNumericStringColumnWithDecoration['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "List<Result<TopNResultValue>> expectedResults = Collections.singletonList(new Result<TopNResultValue>(DateTimes.of(\"2011-01-12T00:00:00.000Z\"),new TopNResultValue(Arrays.asList(ImmutableMap.builder().put(\"ql_alias\",1400L).put(QueryRunnerTestHelper.indexMetric,217725.41940800005D).put(\"rows\",279L).put(\"addRowsIndexConstant\",218005.41940800005D).put(\"uniques\",QueryRunnerTestHelper.UNIQUES_1).put(\"maxIndex\",1870.061029D).put(\"minIndex\",91.270553D).build(),ImmutableMap.builder().put(\"ql_alias\",1600L).put(QueryRunnerTestHelper.indexMetric,210865.67977600006D).put(\"rows\",279L).put(\"addRowsIndexConstant\",211145.67977600006D).put(\"uniques\",QueryRunnerTestHelper.UNIQUES_1).put(\"maxIndex\",1862.737933D).put(\"minIndex\",99.284525D).build(),ImmutableMap.builder().put(\"ql_alias\",1200L).put(QueryRunnerTestHelper.indexMetric,12086.472791D).put(\"rows\",93L).put(\"addRowsIndexConstant\",12180.472791D).put(\"uniques\",QueryRunnerTestHelper.UNIQUES_1).put(\"maxIndex\",193.787574D).put(\"minIndex\",84.710523D).build()))))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "List<Result<TopNResultValue>> expectedResults = Collections.singletonList(new Result<TopNResultValue>(DateTimes.of(\"2011-01-12T00:00:00.000Z\"),new TopNResultValue(Arrays.asList(ImmutableMap.builder().put(\"qns_alias\",140000L).put(QueryRunnerTestHelper.indexMetric,217725.41940800005D).put(\"rows\",279L).put(\"addRowsIndexConstant\",218005.41940800005D).put(\"uniques\",QueryRunnerTestHelper.UNIQUES_1).put(\"maxIndex\",1870.061029D).put(\"minIndex\",91.270553D).build(),ImmutableMap.builder().put(\"qns_alias\",160000L).put(QueryRunnerTestHelper.indexMetric,210865.67977600006D).put(\"rows\",279L).put(\"addRowsIndexConstant\",211145.67977600006D).put(\"uniques\",QueryRunnerTestHelper.UNIQUES_1).put(\"maxIndex\",1862.737933D).put(\"minIndex\",99.284525D).build(),ImmutableMap.builder().put(\"qns_alias\",120000L).put(QueryRunnerTestHelper.indexMetric,12086.472791D).put(\"rows\",93L).put(\"addRowsIndexConstant\",12180.472791D).put(\"uniques\",QueryRunnerTestHelper.UNIQUES_1).put(\"maxIndex\",193.787574D).put(\"minIndex\",84.710523D).build()))))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "testFullOnTopNDecorationOnNumeric['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "List<Result<TopNResultValue>> expectedResults = Collections.singletonList(new Result<>(DateTimes.of(\"2011-01-12T00:00:00.000Z\"),new TopNResultValue(Arrays.asList(ImmutableMap.builder().put(\"qns_alias\",140000L).put(QueryRunnerTestHelper.indexMetric,217725.41940800005D).put(\"rows\",279L).put(\"addRowsIndexConstant\",218005.41940800005D).put(\"uniques\",QueryRunnerTestHelper.UNIQUES_1).put(\"maxIndex\",1870.061029D).put(\"minIndex\",91.270553D).build(),ImmutableMap.builder().put(\"qns_alias\",160000L).put(QueryRunnerTestHelper.indexMetric,210865.67977600006D).put(\"rows\",279L).put(\"addRowsIndexConstant\",211145.67977600006D).put(\"uniques\",QueryRunnerTestHelper.UNIQUES_1).put(\"maxIndex\",1862.737933D).put(\"minIndex\",99.284525D).build(),ImmutableMap.builder().put(\"qns_alias\",120000L).put(QueryRunnerTestHelper.indexMetric,12086.472791D).put(\"rows\",93L).put(\"addRowsIndexConstant\",12180.472791D).put(\"uniques\",QueryRunnerTestHelper.UNIQUES_1).put(\"maxIndex\",193.787574D).put(\"minIndex\",84.710523D).build()))))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "ListFilteredDimensionSpec filteredSpec = new ListFilteredDimensionSpec(new DefaultDimensionSpec(\"qualityNumericString\",\"qns_alias\",ValueType.LONG),Sets.newHashSet(\"120000\",\"140000\",\"160000\"),true)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "ListFilteredDimensionSpec filteredSpec = new ListFilteredDimensionSpec(new DefaultDimensionSpec(\"qualityLong\",\"ql_alias\",ValueType.LONG),Sets.newHashSet(\"1200\",\"1400\",\"1600\"),true)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "TopNQuery query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).dimension(filteredSpec).metric(\"maxIndex\").threshold(4).intervals(QueryRunnerTestHelper.fullOnIntervalSpec).aggregators(Lists.newArrayList(Iterables.concat(commonAggregators,Lists.newArrayList(new DoubleMaxAggregatorFactory(\"maxIndex\",\"index\"),new DoubleMinAggregatorFactory(\"minIndex\",\"index\"))))).postAggregators(Collections.singletonList(QueryRunnerTestHelper.addRowsIndexConstant)).build()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "TopNQuery query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).dimension(filteredSpec).metric(\"maxIndex\").threshold(4).intervals(QueryRunnerTestHelper.fullOnIntervalSpec).aggregators(Lists.newArrayList(Iterables.concat(commonAggregators,Lists.newArrayList(new DoubleMaxAggregatorFactory(\"maxIndex\",\"index\"),new DoubleMinAggregatorFactory(\"minIndex\",\"index\"))))).postAggregators(QueryRunnerTestHelper.addRowsIndexConstant).build()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "assertExpectedResults(expectedResults,query)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testFullOnTopNNumericStringColumnWithDecoration['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+8->4 [style = solid, label="expectedResults"];
+1->4 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+2->4 [style = solid, label="query"];
+3->6 [style = bold, label=""];
+9->10 [style = bold, label=""];
+7->3 [style = bold, label=""];
+6->4 [style = solid, label="query"];
+6->5 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+5->4 [style = solid, label="expectedResults"];
+1->8 [style = dashed, label="0"];
+10->2 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+8->4 [style = bold, label=""];
+1->4 [style = solid, label="expectedResults"];
+2->8 [style = bold, label=""];
+}

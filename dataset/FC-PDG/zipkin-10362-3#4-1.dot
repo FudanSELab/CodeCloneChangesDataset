@@ -1,0 +1,15 @@
+digraph {
+5 [style = filled, label = "assertThat(CassandraUtil.annotationKeys(QueryRequest.newBuilder().endTs(System.currentTimeMillis()).limit(10).lookback(86400000L).serviceName(\"service\").parseAnnotationQuery(\"error and error\").build())).containsExactly(\"error\")@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(CassandraUtil.annotationKeys(request)).containsExactly(\"error\",\"http.method=GET\")@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "QueryRequest request = QueryRequest.newBuilder().endTs(System.currentTimeMillis()).limit(10).lookback(86400000L).serviceName(\"service\").parseAnnotationQuery(\"error and http.method=GET\").build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "annotationKeys['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "annotationKeys_dedupes['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertThat(CassandraUtil.annotationKeys(QueryRequest.newBuilder().endTs(System.currentTimeMillis()).limit(10).lookback(86400000L).serviceName(\"service\").parseAnnotationQuery(\"error and http.method=GET\").build())).containsExactly(\"error\",\"http.method=GET\")@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "annotationKeys['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4->3 [style = bold, label=""];
+6->5 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+}

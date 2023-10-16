@@ -1,0 +1,34 @@
+digraph {
+1 [style = filled, label = "assertThat(template.version()).isEqualTo(7.0f)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(template.autocomplete()).withFailMessage(\"Starting at v7.x, we delimit index and type with hyphen\").contains(\"\"index_patterns\": \"zipkin-autocomplete-*\"\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(template.autocomplete()).withFailMessage(\"7.x does not support the key index.mapper.dynamic\").doesNotContain(\"\"index.mapper.dynamic\": false\")@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "IndexTemplates template = new VersionSpecificTemplates(storage).get(storage.http())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(template.autocomplete()).doesNotContain(\"\"index.mapper.dynamic\": false\")@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "assertThat(template.autocomplete()).withFailMessage(\"Until v7.x, we delimited index and type with a colon\").contains(\"\"template\": \"zipkin:autocomplete-*\"\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertThat(template.version()).isEqualTo(5.0f)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "version7['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "assertThat(template.autocomplete()).withFailMessage(\"In v5.x, the index_patterns field was named template\").contains(\"\"template\":\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "version7['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "version5['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "es.enqueue(VERSION_RESPONSE_5)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertThat(template.autocomplete()).contains(\"\"index.mapper.dynamic\": false\")@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "es.enqueue(VERSION_RESPONSE_7)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+3->9 [style = bold, label=""];
+2->11 [style = dashed, label="0"];
+1->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->5 [style = bold, label=""];
+12->3 [style = bold, label=""];
+13->12 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+9->11 [style = bold, label=""];
+10->8 [style = bold, label=""];
+3->1 [style = bold, label=""];
+11->10 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->6 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+0->6 [style = dashed, label="0"];
+}

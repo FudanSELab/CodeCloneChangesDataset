@@ -1,0 +1,18 @@
+digraph {
+6 [style = filled, label = "annotationNamedErrorIsntError['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "List<Span> trace = asList(Span.newBuilder().traceId(\"10\").id(\"10\").timestamp((TODAY + 50) * 1000).kind(Kind.CLIENT).localEndpoint(FRONTEND).build(),Span.newBuilder().traceId(\"10\").id(\"10\").shared(true).timestamp((TODAY + 100) * 1000).kind(Kind.SERVER).localEndpoint(BACKEND).build())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(store().getDependencies(TRACE_ENDTS,TRACE_DURATION).execute()).containsOnly(DependencyLink.newBuilder().parent(\"frontend\").child(\"backend\").callCount(1).build())@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "oneway['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "oneway['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "List<Span> trace = asList(Span.newBuilder().traceId(\"10\").id(\"10\").timestamp((TODAY + 50) * 1000).kind(Kind.CLIENT).localEndpoint(FRONTEND).build(),Span.newBuilder().traceId(\"10\").id(\"10\").shared(true).timestamp((TODAY + 100) * 1000).kind(Kind.SERVER).localEndpoint(BACKEND).addAnnotation((TODAY + 72) * 1000,\"error\").build())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "processDependencies(trace)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->1 [style = bold, label=""];
+6->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->1 [style = solid, label="trace"];
+5->1 [style = solid, label="trace"];
+}

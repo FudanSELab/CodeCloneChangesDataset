@@ -1,0 +1,38 @@
+digraph {
+15 [style = filled, label = "ContextCustomizer customizer2 = this.factory.createContextCustomizer(,null)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "ContextCustomizer customizer1 = this.factory.createContextCustomizer(,null)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "hashCodeAndEquals['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "assertThat(customizer1.hashCode()).isEqualTo(customizer2.hashCode())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "contextCustomizerEqualsAndHashCode['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "ContextCustomizer customizer2 = this.factory.createContextCustomizer(,null)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "hashCodeAndEquals['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(customizer1.hashCode()).isEqualTo(customizer1.hashCode())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "ContextCustomizer customizer1 = this.factory.createContextCustomizer(,null)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(customizer1).isEqualTo(customizer1).isEqualTo(customizer2).isNotEqualTo(customizer3)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(customizer1.hashCode()).isEqualTo(customizer2.hashCode())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "ContextCustomizer customizer3 = this.factory.createContextCustomizer(,null)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "ContextCustomizer customizer4 = this.factory.createContextCustomizer(,null)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ContextCustomizer customizer3 = this.factory.createContextCustomizer(,null)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(customizer3).isEqualTo(customizer4)@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertThat(customizer1).isEqualTo(customizer1).isEqualTo(customizer2).isNotEqualTo(customizer3)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+0->15 [style = dashed, label="0"];
+2->11 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+13->9 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+15->11 [style = bold, label=""];
+9->10 [style = bold, label=""];
+10->8 [style = bold, label=""];
+11->13 [style = bold, label=""];
+2->1 [style = solid, label="customizer3"];
+13->7 [style = solid, label="customizer4"];
+2->4 [style = bold, label=""];
+14->12 [style = bold, label=""];
+3->0 [style = bold, label=""];
+8->7 [style = bold, label=""];
+11->8 [style = solid, label="customizer3"];
+0->2 [style = bold, label=""];
+12->15 [style = bold, label=""];
+}

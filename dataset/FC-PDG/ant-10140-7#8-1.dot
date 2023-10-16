@@ -1,0 +1,20 @@
+digraph {
+1 [style = filled, label = "ds.setIncludes(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@cff352)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ds.scan()@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ds.setBasedir(new File(buildRule.getProject().getProperty(\"output\")))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testExcludeHasPrecedence['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ds.setExcludes(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@cff35b)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testAlternateIncludeExclude['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testExcludeHasPrecedence['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "DirectoryScanner ds = new DirectoryScanner()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "compareFiles(ds,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@cff367,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@cff36a)@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+8->6 [style = bold, label=""];
+3->1 [style = bold, label=""];
+6->5 [style = solid, label="ds"];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->6 [style = bold, label=""];
+7->3 [style = bold, label=""];
+}

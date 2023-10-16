@@ -1,0 +1,37 @@
+digraph {
+12 [style = filled, label = "ObjectDeleteCommand command@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "List<DBEPersistAction> actions@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "addObjectDeleteActions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "actions.add(new SQLDatabasePersistAction(ModelMessages.model_jdbc_drop_constraint,getDropConstraintPattern(command.getObject()).replace(PATTERN_ITEM_TABLE,command.getObject().getTable().getFullyQualifiedName(DBPEvaluationContext.DDL)).replace(PATTERN_ITEM_CONSTRAINT,DBUtils.getQuotedIdentifier(command.getObject()))))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+16 [style = filled, label = "addObjectDeleteActions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "ObjectDeleteCommand command@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "ObjectDeleteCommand command@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "addObjectDeleteActions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "DBCExecutionContext executionContext@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Map<String,Object> options@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Map<String,Object> options@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "List<DBEPersistAction> actions@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "actions.add(new SQLDatabasePersistAction(ModelMessages.model_jdbc_drop_index,getDropIndexPattern(command.getObject()).replace(PATTERN_ITEM_TABLE,command.getObject().getTable().getFullyQualifiedName(DBPEvaluationContext.DDL)).replace(PATTERN_ITEM_INDEX,command.getObject().getFullyQualifiedName(DBPEvaluationContext.DDL)).replace(PATTERN_ITEM_INDEX_SHORT,DBUtils.getQuotedIdentifier(command.getObject()))))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "Map<String,Object> options@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11->7 [style = dotted, label="true"];
+5->3 [style = bold, label=""];
+16->15 [style = bold, label=""];
+3->15 [style = dashed, label="0"];
+11->8 [style = dotted, label="true"];
+11->9 [style = dotted, label="true"];
+16->12 [style = dotted, label="true"];
+5->0 [style = dotted, label="true"];
+4->10 [style = dashed, label="0"];
+16->13 [style = dotted, label="true"];
+16->4 [style = dotted, label="true"];
+11->3 [style = bold, label=""];
+11->6 [style = dotted, label="true"];
+11->10 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+16->14 [style = dotted, label="true"];
+5->1 [style = dotted, label="true"];
+5->2 [style = dotted, label="true"];
+}

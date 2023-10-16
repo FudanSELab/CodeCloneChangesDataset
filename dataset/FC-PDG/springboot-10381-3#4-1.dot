@@ -1,0 +1,33 @@
+digraph {
+9 [style = filled, label = "neo4jIsUpWithoutDatabaseName['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Health health = new Neo4jHealthIndicator(driver).health()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(health.getDetails()).containsEntry(\"edition\",\"some edition\")@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "neo4jIsUpWithoutDatabaseName['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(health.getStatus()).isEqualTo(Status.UP)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "ResultSummary resultSummary = ResultSummaryMock.createResultSummary(\"My Home\",null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "Driver driver = mockDriver(resultSummary,\"some edition\")@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ResultSummary resultSummary = ResultSummaryMock.createResultSummary(\"4711\",\"My Home\",null)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "neo4jIsUpWithEmptyDatabaseName['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(health.getDetails()).containsEntry(\"server\",\"4711@My Home\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(health.getDetails()).doesNotContainKey(\"database\")@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Driver driver = mockDriver(resultSummary,\"4711\",\"some edition\")@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "ResultSummary resultSummary = ResultSummaryMock.createResultSummary(\"4711\",\"My Home\",\"\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->7 [style = bold, label=""];
+8->10 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+8->10 [style = solid, label="resultSummary"];
+11->12 [style = bold, label=""];
+1->12 [style = dashed, label="0"];
+12->4 [style = solid, label="resultSummary"];
+4->10 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+12->4 [style = bold, label=""];
+9->8 [style = bold, label=""];
+1->4 [style = solid, label="resultSummary"];
+0->6 [style = bold, label=""];
+10->0 [style = bold, label=""];
+4->0 [style = bold, label=""];
+2->5 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

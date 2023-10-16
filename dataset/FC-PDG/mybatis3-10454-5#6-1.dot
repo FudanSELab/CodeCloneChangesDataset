@@ -1,0 +1,19 @@
+digraph {
+4 [style = filled, label = "wrongJavaType['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Configuration configuration = sqlSessionFactory.getConfiguration()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "missingRequiredJavaType['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "then(caughtException()).isInstanceOf().hasMessageContaining(\"'org.apache.ibatis.submitted.named_constructor_args.InvalidNamedConstructorArgsTest$ConstructorMissingRequiresJavaType.select-void'\").hasMessageContaining(\"'org.apache.ibatis.submitted.named_constructor_args.User'\").hasMessageContaining(\"(id(\")@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "wrongJavaType['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "when(configuration).addMapper()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "then(caughtException()).isInstanceOf().hasMessageContaining(\"'org.apache.ibatis.submitted.named_constructor_args.InvalidNamedConstructorArgsTest$ConstructorWithWrongJavaType.select-void'\").hasMessageContaining(\"'org.apache.ibatis.submitted.named_constructor_args.User'\").hasMessageContaining(\"(id(\")@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "when(configuration).addMapper()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+4->1 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+1->6 [style = bold, label=""];
+6->7 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+}

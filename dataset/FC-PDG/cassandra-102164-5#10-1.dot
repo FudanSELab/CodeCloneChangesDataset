@@ -1,0 +1,30 @@
+digraph {
+5 [style = filled, label = "int gcBefore = Keyspace.open(desc.keyspace).getColumnFamilyStore(desc.columnFamily).gcBefore(System.currentTimeMillis())@@@3@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return Futures.allAsList(tasks)@@@11@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "sendValidationRequest['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Collection<InetAddress> endpoints@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ValidationTask task = new ValidationTask(desc,endpoint,gcBefore)@@@6@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Throwable t@@@33@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "onFailure['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "session.waitForValidation(Pair.create(desc,endpoint),task)@@@8@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "taskExecutor.execute(task)@@@9@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "tasks.add(task)@@@7@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "sendValidationRequest['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "List<ListenableFuture<TreeResponse>> tasks = new ArrayList<>(endpoints.size())@@@4@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->6 [style = solid, label="tasks"];
+4->1 [style = bold, label=""];
+5->1 [style = solid, label="gcBefore"];
+7->1 [style = bold, label=""];
+1->8 [style = bold, label=""];
+2->0 [style = dotted, label="true"];
+1->7 [style = solid, label="task"];
+9->0 [style = dotted, label="true"];
+3->7 [style = bold, label=""];
+1->3 [style = solid, label="task"];
+11->10 [style = dotted, label="true"];
+5->4 [style = bold, label=""];
+7->6 [style = bold, label=""];
+2->5 [style = bold, label=""];
+8->3 [style = bold, label=""];
+1->8 [style = solid, label="task"];
+}

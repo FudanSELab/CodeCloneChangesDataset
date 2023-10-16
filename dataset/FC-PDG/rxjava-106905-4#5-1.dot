@@ -1,0 +1,22 @@
+digraph {
+3 [style = filled, label = "PublishSubject<Integer> ps = PublishSubject.create()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "bufferSkipSupplierCrash2['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ps.onNext(1)@@@15@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "to.assertFailure(,Arrays.asList(1))@@@18@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "TestScheduler scheduler = new TestScheduler()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "ps.onNext(2)@@@17@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "scheduler.advanceTimeBy(1,TimeUnit.MILLISECONDS)@@@16@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "bufferSkipSupplierCrash2['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "bufferTimedExactSupplierCrash['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "TestObserver<List<Integer>> to = ps.buffer(1,TimeUnit.MILLISECONDS,scheduler,1,new Supplier<List<Integer>>(){@Override public List<Integer> get(){if (++calls == 2) {throw new TestException()}return new ArrayList<Integer>()}},true).test()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Flowable.range(1,2).buffer(1,2,new Supplier<List<Integer>>(){@Override public List<Integer> get(){if (++calls == 1) {throw new TestException()}return new ArrayList<>()}}).test().assertFailure()@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->10 [style = bold, label=""];
+10->3 [style = bold, label=""];
+6->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+4->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

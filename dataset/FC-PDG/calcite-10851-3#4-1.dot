@@ -1,0 +1,37 @@
+digraph {
+4 [style = filled, label = "sql(\"select a from foo offset 1 row fetch next 3 rows only\").ok(\"SELECT `A`\" + \"FROM `FOO`\" + \"OFFSET 1 ROWS\" + \"FETCH NEXT 3 ROWS ONLY\")@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "sql(\"select a from foo order by b, c offset 1 row fetch first 2 row only\").ok(\"SELECT `A`\" + \"FROM `FOO`\" + \"ORDER BY `B`, `C`\" + \"OFFSET 1 ROWS\" + \"FETCH NEXT 2 ROWS ONLY\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testOrderOffsetFetch['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "sql(\"select a from foo order by b, c offset 1\").ok(\"SELECT `A`\" + \"FROM `FOO`\" + \"ORDER BY `B`, `C`\" + \"OFFSET 1 ROWS\")@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "sql(\"select a from foo fetch next 4 rows only\").ok(\"SELECT `A`\" + \"FROM `FOO`\" + \"FETCH NEXT 4 ROWS ONLY\")@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "sql(\"select a from foo order by b, c offset 1 rows fetch next 3 rows only\").ok(\"SELECT `A`\" + \"FROM `FOO`\" + \"ORDER BY `B`, `C`\" + \"OFFSET 1 ROWS\" + \"FETCH NEXT 3 ROWS ONLY\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "testLimit['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "sql(\"select a from foo offset ? row fetch next ? rows only\").ok(\"SELECT `A`\" + \"FROM `FOO`\" + \"OFFSET ? ROWS\" + \"FETCH NEXT ? ROWS ONLY\")@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "sql(\"select a from foo offset 1 fetch next 3 ^only^\").fails(\"(?s).*Encountered \"only\" at .*\")@@@12@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "sql(\"select a from foo order by b, c offset 1 rows fetch first 2 rows only\").ok(\"SELECT `A`\" + \"FROM `FOO`\" + \"ORDER BY `B`, `C`\" + \"OFFSET 1 ROWS\" + \"FETCH NEXT 2 ROWS ONLY\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "sql(\"select a from foo order by b, c limit 2\").ok(\"SELECT `A`\" + \"FROM `FOO`\" + \"ORDER BY `B`, `C`\" + \"FETCH NEXT 2 ROWS ONLY\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "sql(\"select a from foo offset 1 row\").ok(\"SELECT `A`\" + \"FROM `FOO`\" + \"OFFSET 1 ROWS\")@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testOrderOffsetFetch['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+16 [style = filled, label = "sql(\"select a from foo order by b, c limit 2 offset 1\").ok(\"SELECT `A`\" + \"FROM `FOO`\" + \"ORDER BY `B`, `C`\" + \"OFFSET 1 ROWS\" + \"FETCH NEXT 2 ROWS ONLY\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "sql(\"select a from foo order by b, c offset 1 fetch next 3 rows only\").ok(\"SELECT `A`\" + \"FROM `FOO`\" + \"ORDER BY `B`, `C`\" + \"OFFSET 1 ROWS\" + \"FETCH NEXT 3 ROWS ONLY\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "sql(\"select a from foo fetch next 3 rows only ^offset^ 1\").fails(\"(?s).*Encountered \"offset\" at .*\")@@@13@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "sql(\"select a from foo order by b, c fetch next 3 rows only\").ok(\"SELECT `A`\" + \"FROM `FOO`\" + \"ORDER BY `B`, `C`\" + \"FETCH NEXT 3 ROWS ONLY\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+16->14 [style = bold, label=""];
+5->8 [style = bold, label=""];
+10->3 [style = bold, label=""];
+4->1 [style = bold, label=""];
+7->0 [style = bold, label=""];
+8->16 [style = dashed, label="0"];
+14->13 [style = bold, label=""];
+2->9 [style = bold, label=""];
+6->13 [style = dashed, label="0"];
+9->7 [style = bold, label=""];
+1->10 [style = bold, label=""];
+8->11 [style = bold, label=""];
+0->4 [style = bold, label=""];
+12->8 [style = bold, label=""];
+15->16 [style = bold, label=""];
+11->14 [style = dashed, label="0"];
+11->6 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

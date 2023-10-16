@@ -1,0 +1,29 @@
+digraph {
+0 [style = filled, label = "FederatingManager federatingManager = new FederatingManager(repo,system,service,cache,statisticsFactory,statisticsClock,new MBeanProxyFactory(jmxAdapter,service),new MemberMessenger(jmxAdapter,system),LoggingExecutors.newFixedThreadPool(\"FederatingManager\",true,Runtime.getRuntime().availableProcessors()))@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "addMemberArtifactsCreatesNotificationRegion['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "federatingManager.startManager()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "FederatingManager federatingManager = new FederatingManager(repo,system,service,cache,statisticsFactory,statisticsClock,proxyFactory,messenger,executorService)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "InternalRegionArguments internalRegionArguments = captor.getValue()@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "federatingManager.addMemberArtifacts(member(3,60))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "addMemberArtifactsCreatesNotificationRegionWithHasOwnStats['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertThat(internalRegionArguments.getCachePerfStatsHolder().hasOwnStats()).isTrue()@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "federatingManager.addMemberArtifacts(member(4,80))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "ArgumentCaptor<InternalRegionArguments> captor = ArgumentCaptor.forClass()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "verify(cacheForClientAccess).createInternalRegion(eq(\"_notificationRegion_null<v3>60\"),any(),any())@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "addMemberArtifactsCreatesNotificationRegion['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "verify(cacheForClientAccess).createInternalRegion(eq(\"_notificationRegion_null<v4>80\"),any(),captor.capture())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6->1 [style = bold, label=""];
+10->0 [style = bold, label=""];
+1->2 [style = bold, label=""];
+11->12 [style = bold, label=""];
+7->11 [style = bold, label=""];
+5->6 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+12->9 [style = bold, label=""];
+9->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+1->7 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

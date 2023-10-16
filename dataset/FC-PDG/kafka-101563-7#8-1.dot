@@ -1,0 +1,22 @@
+digraph {
+5 [style = filled, label = "groupedStream.windowedBy(TimeWindows.of(ofMillis(500L))).count(Materialized.as(\"aggregate-by-key-windowed\")).toStream().foreach(new ForeachAction<Windowed<String>,Long>(){@Override public void apply(final Windowed<String> key,final Long value){results.add(KeyValue.pair(key,value))}})@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "shouldCountWindowedWithInternalStoreName['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "shouldCountWindowed['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "groupedStream.windowedBy(TimeWindows.of(500L)).count().toStream().foreach(new ForeachAction<Windowed<String>,Long>(){@Override public void apply(final Windowed<String> key,final Long value){results.add(KeyValue.pair(key,value))}})@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final List<KeyValue<Windowed<String>,Long>> results = new ArrayList<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "doCountWindowed(results)@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "shouldCountWindowed['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "groupedStream.windowedBy(TimeWindows.of(500L)).count(Materialized.as(\"aggregate-by-key-windowed\")).toStream().foreach(new ForeachAction<Windowed<String>,Long>(){@Override public void apply(final Windowed<String> key,final Long value){results.add(KeyValue.pair(key,value))}})@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1->3 [style = bold, label=""];
+1->5 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+6->1 [style = bold, label=""];
+4->1 [style = bold, label=""];
+7->0 [style = bold, label=""];
+5->0 [style = bold, label=""];
+1->0 [style = solid, label="results"];
+1->7 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+}

@@ -1,0 +1,25 @@
+digraph {
+0 [style = filled, label = "UnassignedInfo unassignedInfo@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "IndexMetaData indexMetaData@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "initializeEmpty['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "SnapshotRecoverySource recoverySource@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "initializeEmpty['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "IndexMetadata indexMetadata@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "UnassignedInfo unassignedInfo@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "boolean asNew@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "UnassignedInfo unassignedInfo@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "IntSet ignoreShards@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "initializeAsRestore['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "IndexMetaData indexMetaData@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+6->10 [style = dotted, label="true"];
+3->4 [style = dotted, label="true"];
+2->11 [style = dashed, label="0"];
+2->5 [style = dashed, label="0"];
+1->0 [style = dotted, label="true"];
+3->5 [style = dotted, label="true"];
+6->11 [style = dotted, label="true"];
+1->2 [style = dotted, label="true"];
+6->9 [style = dotted, label="true"];
+6->8 [style = dotted, label="true"];
+6->7 [style = dotted, label="true"];
+}

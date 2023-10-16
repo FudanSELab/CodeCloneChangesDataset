@@ -1,0 +1,16 @@
+digraph {
+6 [style = filled, label = "onStartupWhenHasInitParametersShouldRegisterInitParameters['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "ExposableServletEndpoint endpoint = mockEndpoint(new EndpointServlet().withInitParameter(\"a\",\"b\"))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "onStartupWhenHasInitParametersShouldRegisterInitParameters['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "onStartupWhenHasInitParametersShouldRegisterInitParameters['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "ServletEndpointRegistrar registrar = new ServletEndpointRegistrar(\"/actuator\",Collections.singleton(endpoint))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "verify(this.dynamic).setInitParameters(Collections.singletonMap(\"a\",\"b\"))@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "registrar.onStartup(this.servletContext)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+3->4 [style = solid, label="endpoint"];
+}

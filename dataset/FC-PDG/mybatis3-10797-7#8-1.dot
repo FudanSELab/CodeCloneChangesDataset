@@ -1,0 +1,29 @@
+digraph {
+6 [style = filled, label = "shouldFindPostsWithAuthorAndBlogIdUsingDynamicSql['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "List<Post> posts = session.selectList(\"domain.blog.mappers.PostMapper.findPost\",new HashMap<String,Object>(){})@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(1,posts.get(0).getId())@@@16@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "shouldFindPostsWithAuthorAndBlogIdUsingDynamicSql['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "{session.close()}@@@19@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "SqlSession session = sqlMapper.openSession()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "shouldFindOddPostsInList['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "List<Post> posts = session.selectList(\"domain.blog.mappers.PostMapper.selectOddPostsIn\",new ArrayList<Integer>(){})@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertEquals(2,posts.size())@@@15@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "{session.close()}@@@21@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "List<Post> posts = session.selectList(\"org.apache.ibatis.domain.blog.mappers.PostMapper.findPost\",new HashMap<String,Object>(){})@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "assertEquals(3,posts.get(1).getId())@@@17@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+3->10 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+6->0 [style = bold, label=""];
+7->11 [style = bold, label=""];
+9->0 [style = bold, label=""];
+10->8 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+11->3 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

@@ -1,0 +1,21 @@
+digraph {
+1 [style = filled, label = "getPropertyByPath['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "@PathParam(\"path\") String path@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "@PathParam(\"path\") String path@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "@PathParam(\"clusterId\") String clusterId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "getPropertyByPath['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "putPropertyByPath['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "String content@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "@PathParam(\"clusterId\") String clusterId@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "@QueryParam(\"isZNRecord\") @DefaultValue(\"true\") String isZNRecord@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "@PathParam(\"path\") String path@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1->0 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+9->7 [style = dotted, label="true"];
+1->2 [style = dotted, label="true"];
+9->6 [style = dotted, label="true"];
+2->8 [style = dashed, label="0"];
+4->2 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+9->5 [style = dotted, label="true"];
+}

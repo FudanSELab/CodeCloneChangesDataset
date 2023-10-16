@@ -1,0 +1,32 @@
+digraph {
+8 [style = filled, label = "initStoreSerde['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final StateStoreContext context@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "initStoreSerde['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "initStoreSerde['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final String storeName = name()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "serdes = new StateSerdes<>(changelogTopic != null? changelogTopic: ProcessorStateManager.storeChangelogTopic(context.applicationId(),storeName,taskId.topologyName()),WrappingNullableUtils.prepareKeySerde(keySerde,new SerdeGetter(context)),WrappingNullableUtils.prepareValueSerde(valueSerde,new SerdeGetter(context)))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "serdes = new StateSerdes<>(changelogTopic != null? changelogTopic: ProcessorStateManager.storeChangelogTopic(context.applicationId(),storeName,taskId.namedTopology()),WrappingNullableUtils.prepareKeySerde(keySerde,new SerdeGetter(context)),WrappingNullableUtils.prepareValueSerde(valueSerde,new SerdeGetter(context)))@@@5@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final String changelogTopic = ProcessorContextUtils.changelogFor(context,storeName)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final ProcessorContext context@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2->3 [style = dotted, label="true"];
+0->4 [style = solid, label="storeName"];
+4->6 [style = bold, label=""];
+7->4 [style = solid, label="context"];
+3->7 [style = dashed, label="0"];
+3->1 [style = solid, label="context"];
+4->1 [style = solid, label="changelogTopic"];
+3->4 [style = solid, label="context"];
+4->6 [style = solid, label="changelogTopic"];
+8->7 [style = dotted, label="true"];
+5->3 [style = dotted, label="true"];
+8->0 [style = bold, label=""];
+2->0 [style = bold, label=""];
+5->0 [style = bold, label=""];
+0->4 [style = bold, label=""];
+3->6 [style = solid, label="context"];
+0->6 [style = solid, label="storeName"];
+1->6 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+7->1 [style = solid, label="context"];
+0->1 [style = solid, label="storeName"];
+}

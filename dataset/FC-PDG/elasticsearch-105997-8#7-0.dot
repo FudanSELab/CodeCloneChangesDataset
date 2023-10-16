@@ -1,0 +1,36 @@
+digraph {
+13 [style = filled, label = "assertThat(ex.getMessage(),containsString(\"index template (test-template(\"))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final Metadata metadata = Metadata.builder().put(createMetadata(randomAlphaOfLengthBetween(5,7)),false).put(template).build()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final IndexTemplateMetadata template = IndexTemplateMetadata.builder(\"test-template\").patterns(Arrays.asList(\"foo-*\",\"bar-*\")).putAlias(AliasMetadata.builder(\"foo-write\")).putAlias(AliasMetadata.builder(\"bar-write\").writeIndex(randomBoolean())).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "MetadataRolloverService.checkNoDuplicatedAliasInIndexTemplate(metadata,indexName,aliasName,Boolean.TRUE)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final IndexTemplateMetadata template = IndexTemplateMetadata.builder(\"test-template\").patterns(Collections.singletonList(\"*\")).putAlias(AliasMetadata.builder(\"foo-write\")).putAlias(AliasMetadata.builder(\"bar-write\").writeIndex(randomBoolean())).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testHiddenAffectsResolvedTemplates['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "String aliasName = randomFrom(\"foo-write\",\"bar-write\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "String indexName = randomFrom(\"foo-123\",\"bar-xyz\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testRejectDuplicateAlias['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(ex.getMessage(),containsString(\"index template (test-template(\"))@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final IllegalArgumentException ex = expectThrows(,null)@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "testHiddenAffectsResolvedTemplates['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "final IllegalArgumentException ex = expectThrows(,null)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final IllegalArgumentException ex = expectThrows(,null)@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7->12 [style = dashed, label="0"];
+5->3 [style = bold, label=""];
+5->7 [style = solid, label="metadata"];
+12->13 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+3->6 [style = bold, label=""];
+1->4 [style = bold, label=""];
+11->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+3->7 [style = solid, label="indexName"];
+7->1 [style = bold, label=""];
+8->4 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+9->0 [style = bold, label=""];
+6->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+6->7 [style = solid, label="aliasName"];
+0->5 [style = bold, label=""];
+10->11 [style = bold, label=""];
+6->12 [style = bold, label=""];
+}

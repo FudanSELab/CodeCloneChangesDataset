@@ -1,0 +1,16 @@
+digraph {
+6 [style = filled, label = "shouldNotOverwriteCollectionOnNestedQuery['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "shouldNotOverwriteCollectionOnNestedResultMap['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "List<Author> authors = session.selectList(\"getAllAuthors\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(4,authors.get(0).getPosts().size())@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(1,authors.size())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "shouldNotOverwriteCollectionOnNestedResultMap['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "List<Author> authors = session.selectList(\"getAllAuthorsNestedQuery\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+6->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+2->1 [style = bold, label=""];
+}

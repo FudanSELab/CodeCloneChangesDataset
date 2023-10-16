@@ -1,0 +1,38 @@
+digraph {
+1 [style = filled, label = "final KeyValueStore<String,String> reduced = (KeyValueStore<String,String>)driver.allStateStores().get(\"reduce\")@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "assertThat(reduced.get(\"3\"),equalTo(\"E+F\"))@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(reduced.get(\"2\"),equalTo(\"B\"))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "assertThat(aggregate.get(\"3\"),equalTo(\"0+E+F\"))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "shouldReduceAndMaterializeResults['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(aggregate.get(\"1\"),equalTo(\"0+A+C+D\"))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "final KeyValueStore<String,String> aggregate = (KeyValueStore<String,String>)driver.allStateStores().get(\"aggregate\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertThat(aggregate.get(\"2\"),equalTo(\"0+B\"))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "shouldAggregateAndMaterializeResults['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "groupedStream.aggregate(MockInitializer.STRING_INIT,MockAggregator.TOSTRING_ADDER,Materialized.as(\"aggregate\").withKeySerde(Serdes.String()).withValueSerde(Serdes.String()))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "shouldReduceAndMaterializeResults['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "final KeyValueStore<String,String> reduced = driver.getKeyValueStore(\"reduce\")@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "processData()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "groupedStream.reduce(MockReducer.STRING_ADDER,Materialized.as(\"reduce\").withKeySerde(Serdes.String()).withValueSerde(Serdes.String()))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(reduced.get(\"1\"),equalTo(\"A+C+D\"))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+0->6 [style = bold, label=""];
+11->12 [style = bold, label=""];
+6->14 [style = dashed, label="0"];
+12->9 [style = bold, label=""];
+3->13 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+7->3 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+8->2 [style = bold, label=""];
+10->13 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+9->14 [style = bold, label=""];
+4->8 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+4->11 [style = bold, label=""];
+13->4 [style = bold, label=""];
+}

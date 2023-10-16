@@ -1,0 +1,20 @@
+digraph {
+2 [style = filled, label = "List<SearchHit> expectedHits = Lists.newLinkedList()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "List<SearchHit> expectedHits = new ArrayList<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "testSearchWithEmptyResults['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testSearchNonExistingDimension['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testSearchWithEmptyResults['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "checkSearchQuery(Druids.newSearchQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).intervals(QueryRunnerTestHelper.fullOnInterval).query(\"abcd123\").build(),expectedHits)@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "checkSearchQuery(Druids.newSearchQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).intervals(QueryRunnerTestHelper.fullOnInterval).dimensions(\"does_not_exist\").query(\"a\").build(),expectedHits)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->3 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+3->0 [style = solid, label="expectedHits"];
+2->3 [style = dashed, label="0"];
+2->0 [style = solid, label="expectedHits"];
+2->6 [style = solid, label="expectedHits"];
+2->6 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

@@ -1,0 +1,30 @@
+digraph {
+5 [style = filled, label = "testNestedSortRewrites['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "GeoDistanceSortBuilder sortBuilder = new GeoDistanceSortBuilder(\"fieldName\",0.0,0.0)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "GeoDistanceSortBuilder rewritten = sortBuilder.rewrite(createMockSearchExecutionContext())@@@11@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "ScriptSortBuilder rewritten = sortBuilder.rewrite(createMockSearchExecutionContext())@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testNestedRewrites['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "ScriptSortBuilder sortBuilder = new ScriptSortBuilder(mockScript(\"something\"),ScriptSortType.STRING)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "RangeQueryBuilder rangeQuery = new RangeQueryBuilder(\"fieldName\"){@Override public QueryBuilder doRewrite(QueryRewriteContext queryRewriteContext){return new MatchNoneQueryBuilder()}}@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "GeoDistanceSortBuilder rewritten = (GeoDistanceSortBuilder)sortBuilder.rewrite(createMockSearchExecutionContext())@@@11@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "sortBuilder.setNestedSort(new NestedSortBuilder(\"path\").setFilter(rangeQuery))@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertNotSame(rangeQuery,rewritten.getNestedSort().getFilter())@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testNestedSortRewrites['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4->9 [style = bold, label=""];
+6->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+7->0 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+2->1 [style = solid, label="rangeQuery"];
+9->1 [style = bold, label=""];
+5->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+8->2 [style = bold, label=""];
+10->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+4->6 [style = bold, label=""];
+2->4 [style = solid, label="rangeQuery"];
+3->9 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+}

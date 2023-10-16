@@ -1,0 +1,22 @@
+digraph {
+0 [style = filled, label = "final MySQLStatementParser.SetAssignmentsClauseContext ctx@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "Collection<AssignmentSegment> assignments = new LinkedList<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assignments.add((AssignmentSegment)visit(each))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final SetAssignmentsClauseContext ctx@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "visitSetAssignmentsClause['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final SetAssignmentsClauseContext ctx@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "visitSetAssignmentsClause['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "visitSetAssignmentsClause['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return new SetAssignmentSegment(ctx.getStart().getStartIndex(),ctx.getStop().getStopIndex(),assignments)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->6 [style = dotted, label="true"];
+0->8 [style = dashed, label="0"];
+4->1 [style = solid, label="assignments"];
+4->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+7->8 [style = dotted, label="true"];
+3->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+3->0 [style = dotted, label="true"];
+}

@@ -1,0 +1,31 @@
+digraph {
+2 [style = filled, label = "assertEquals(numberOfProcessCalls,inputProcessor.currentNumProcessCalls)@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "task.invoke()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "executor.submit(null,\"This task will submit another task to execute after processing input once.\")@@@16@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final RunnableWithException completeFutureTask = null@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "final Runnable completeFutureTask = null@@@10@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "testProcessWithAvailableOutput['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final AvailabilityTestInputProcessor inputProcessor = new AvailabilityTestInputProcessor(numberOfProcessCalls)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final AvailabilityTestStreamTask task = new AvailabilityTestStreamTask<>(environment,inputProcessor)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testProcessWithUnAvailableOutput['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final MailboxExecutor executor = task.mailboxProcessor.getMainMailboxExecutor()@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testProcessWithUnAvailableOutput['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "final int numberOfProcessCalls = 10@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->1 [style = bold, label=""];
+9->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->5 [style = bold, label=""];
+1->6 [style = bold, label=""];
+8->10 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+3->5 [style = solid, label="numberOfProcessCalls"];
+7->8 [style = bold, label=""];
+5->0 [style = solid, label="inputProcessor"];
+7->10 [style = bold, label=""];
+10->1 [style = bold, label=""];
+0->6 [style = bold, label=""];
+11->3 [style = bold, label=""];
+3->2 [style = solid, label="numberOfProcessCalls"];
+0->7 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

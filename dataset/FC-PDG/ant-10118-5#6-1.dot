@@ -1,0 +1,25 @@
+digraph {
+1 [style = filled, label = "ds.scan()@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "compareFiles(ds,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ce8139,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ce813d)@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "test1['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "ds.setBasedir(new File(buildRule.getProject().getBaseDir(),\"tmp\"))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ds.setIncludes(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ce812c)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Assume.assumeTrue(loginFailureMessage,loginSuceeded)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "FTP.FTPDirectoryScanner ds = myFTPTask.newScanner(ftp)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Assume.assumeTrue(\"Could not change remote directory\",changeRemoteDir(remoteTmpDir))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assume.assumeTrue(loginFailureMessage,loginSucceeded)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "test1['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testFullpathDiffersInCaseScanningSensitive['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8->7 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+10->3 [style = bold, label=""];
+4->1 [style = bold, label=""];
+7->5 [style = bold, label=""];
+1->6 [style = bold, label=""];
+5->6 [style = solid, label="ds"];
+5->0 [style = bold, label=""];
+3->7 [style = bold, label=""];
+9->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

@@ -1,0 +1,26 @@
+digraph {
+2 [style = filled, label = "Join initialJoin = new Join(createNode(randomAlphaOfLength(10)),createNode(randomAlphaOfLength(10)),randomNonNegativeLong(),randomNonNegativeLong(),randomNonNegativeLong())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "EqualsHashCodeTestUtils.checkEqualsAndHashCode(initialJoinRequest,(CopyFunction<JoinRequest>)null,null)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testJoinRequestEqualsHashCodeSerialization['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "testJoinRequestEqualsHashCodeSerialization['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "JoinRequest initialJoinRequest = new JoinRequest(initialJoin.getSourceNode(),randomNonNegativeLong(),randomBoolean()? Optional.empty(): Optional.of(initialJoin))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "EqualsHashCodeTestUtils.checkEqualsAndHashCode(initialPreVoteRequest,(CopyFunction<PreVoteRequest>)null,null)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testPreVoteRequestEqualsHashCodeSerialization['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "PreVoteRequest initialPreVoteRequest = new PreVoteRequest(createNode(randomAlphaOfLength(10)),randomNonNegativeLong())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "JoinRequest initialJoinRequest = new JoinRequest(initialJoin.getSourceNode(),randomBoolean()? Optional.empty(): Optional.of(initialJoin))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1->3 [style = bold, label=""];
+5->3 [style = bold, label=""];
+1->3 [style = solid, label="initialJoinRequest"];
+2->5 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->6 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->3 [style = solid, label="initialJoinRequest"];
+2->1 [style = solid, label="initialJoin"];
+2->5 [style = solid, label="initialJoin"];
+6->7 [style = solid, label="initialPreVoteRequest"];
+2->6 [style = dashed, label="0"];
+}

@@ -1,0 +1,33 @@
+digraph {
+4 [style = filled, label = "additionalInterceptors['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "Collection<? extends ClientHttpRequestInterceptor> interceptors@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "Assert.notNull(messageConverters,\"MessageConverters must not be null\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "messageConverters['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Assert.notNull(interceptors,\"interceptors must not be null\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Collection<? extends ClientHttpRequestInterceptor> interceptors@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "return new RestTemplateBuilder(this.requestFactoryCustomizer,this.detectRequestFactory,this.rootUri,this.messageConverters,append(this.interceptors,interceptors),this.requestFactory,this.uriTemplateHandler,this.errorHandler,this.basicAuthentication,this.defaultHeaders,this.customizers,this.requestCustomizers)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "return new RestTemplateBuilder(this.detectRequestFactory,this.rootUri,Collections.unmodifiableSet(new LinkedHashSet<HttpMessageConverter<?>>(messageConverters)),this.requestFactorySupplier,this.uriTemplateHandler,this.errorHandler,this.basicAuthentication,this.restTemplateCustomizers,this.requestFactoryCustomizer,this.interceptors)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return new RestTemplateBuilder(this.detectRequestFactory,this.rootUri,this.messageConverters,this.requestFactorySupplier,this.uriTemplateHandler,this.errorHandler,this.basicAuthentication,this.restTemplateCustomizers,this.requestFactoryCustomizer,append(this.interceptors,interceptors))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "Collection<? extends HttpMessageConverter<?>> messageConverters@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "additionalInterceptors['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7->8 [style = solid, label="messageConverters"];
+3->5 [style = dashed, label="0"];
+4->5 [style = dotted, label="true"];
+3->2 [style = solid, label="interceptors"];
+8->10 [style = bold, label=""];
+0->3 [style = dotted, label="true"];
+4->2 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+9->7 [style = dotted, label="true"];
+3->1 [style = solid, label="interceptors"];
+9->8 [style = bold, label=""];
+5->6 [style = solid, label="interceptors"];
+1->6 [style = dashed, label="0"];
+2->6 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->2 [style = solid, label="interceptors"];
+3->7 [style = dashed, label="0"];
+7->10 [style = solid, label="messageConverters"];
+2->8 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+}

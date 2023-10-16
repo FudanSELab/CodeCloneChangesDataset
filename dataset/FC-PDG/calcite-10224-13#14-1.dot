@@ -1,0 +1,38 @@
+digraph {
+7 [style = filled, label = "scan['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "final AtomicBoolean cancelFlag = DataContext.Variable.CANCEL_FLAG.get(root)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "DataContext root@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final List<Integer> fields = ImmutableIntList.identity(fieldTypes.size())@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "return new AbstractEnumerable<Object((>(){@Override public Enumerator<Object((> enumerator(){return new CsvEnumerator<>(source,cancelFlag,false,null,CsvEnumerator.arrayConverter(fieldTypes,fields,false))}}@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "JavaTypeFactory typeFactory = requireNonNull(root.getTypeFactory(),\"root.getTypeFactory\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "return new AbstractEnumerable<Object((>(){@Override public Enumerator<Object((> enumerator(){return new CsvEnumerator<>(source,cancelFlag,true,null,CsvEnumerator.arrayConverter(fieldTypes,fields,true))}}@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "final List<CsvFieldType> fieldTypes = getFieldTypes(root.getTypeFactory())@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "scan['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final List<CsvFieldType> fieldTypes = getFieldTypes(typeFactory)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "scan['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "DataContext root@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+5->3 [style = bold, label=""];
+3->1 [style = bold, label=""];
+1->10 [style = solid, label="fields"];
+4->0 [style = dotted, label="true"];
+0->1 [style = solid, label="root"];
+7->9 [style = dotted, label="true"];
+2->10 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+3->2 [style = solid, label="fields"];
+8->1 [style = bold, label=""];
+11->5 [style = bold, label=""];
+5->6 [style = dashed, label="0"];
+2->10 [style = solid, label="cancelFlag"];
+5->2 [style = solid, label="fieldTypes"];
+1->2 [style = solid, label="cancelFlag"];
+11->0 [style = dotted, label="true"];
+7->6 [style = bold, label=""];
+6->8 [style = bold, label=""];
+9->2 [style = solid, label="root"];
+1->2 [style = bold, label=""];
+8->10 [style = solid, label="fieldTypes"];
+0->9 [style = dashed, label="0"];
+6->8 [style = solid, label="typeFactory"];
+4->5 [style = bold, label=""];
+}

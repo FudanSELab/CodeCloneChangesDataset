@@ -1,0 +1,35 @@
+digraph {
+2 [style = filled, label = "assertEquals(params.protectedField,bean.protectedField)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(params.getPrivateProperty(),bean.properties.get(\"privateProperty\"))@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Bean bean = mapper.resultAutoMapping(params)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertEquals(params.privateField,bean.privateField)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertEquals(params.publicField,bean.publicField)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "parameterMappingAndResultAutoMapping['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "Bean bean = mapper.resultMapping(params)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(params.getPublicProperty(),bean.properties.get(\"publicProperty\"))@@@14@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertEquals(params.getProtectedProperty(),bean.properties.get(\"protectedProperty\"))@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertEquals(params.packagePrivateField,bean.packagePrivateField)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "parameterMappingAndResultMapping['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "parameterMappingAndResultAutoMapping['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(params.getPackagePrivateProperty(),bean.properties.get(\"packagePrivateProperty\"))@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Params params = new Params()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+3->9 [style = bold, label=""];
+5->13 [style = dashed, label="0"];
+10->2 [style = bold, label=""];
+5->11 [style = bold, label=""];
+6->0 [style = bold, label=""];
+1->5 [style = solid, label="params"];
+2->7 [style = bold, label=""];
+14->0 [style = bold, label=""];
+7->8 [style = bold, label=""];
+11->10 [style = bold, label=""];
+12->0 [style = bold, label=""];
+0->1 [style = bold, label=""];
+1->13 [style = bold, label=""];
+13->11 [style = bold, label=""];
+9->4 [style = bold, label=""];
+8->3 [style = bold, label=""];
+1->13 [style = solid, label="params"];
+}

@@ -1,0 +1,11 @@
+digraph {
+0 [style = filled, label = "simpleInnerBatchJoinTestSQL['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "innerBatchJoinAndTestSQL['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "simpleInnerBatchJoinTestSQL['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "tester(false,new JdbcTest.HrSchemaBig()).query(\"select count(e.name) from emps e join depts d on d.deptno = e.empid and d.deptno = e.deptno\").withHook(Hook.PLANNER,(Consumer<RelOptPlanner>)null).returnsUnordered(\"EXPR$0=1\")@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "tester(false,new JdbcTest.HrSchema()).query(\"select e.name from emps e join depts d on d.deptno = e.deptno\").withHook(Hook.PLANNER,(Consumer<RelOptPlanner>)null).returnsUnordered(\"name=Bill\",\"name=Sebastian\",\"name=Theodore\")@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->4 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+}

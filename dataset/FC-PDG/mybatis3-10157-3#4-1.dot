@@ -1,0 +1,34 @@
+digraph {
+5 [style = filled, label = "assertNotNull(test)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "SqlSession sqlSession = sqlSessionFactory.openSession()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "FatherMapper fatherMapper = sqlSession.getMapper()@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "testNotNullColumnWithChildrenNoFid['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertNotNull(test.getChildren())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(2,test.getChildren().size())@@@9@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "{sqlSession.close()}@@@11@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testNotNullColumnWithChildrenNoFid['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "testNotNullColumnWithoutChildrenNoFid['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertNotNull(test)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "FatherMapper fatherMapper = sqlSession.getMapper()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Father test = fatherMapper.selectByIdNoFid(2)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertTrue(test.getChildren().isEmpty())@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2->5 [style = solid, label="test"];
+1->2 [style = bold, label=""];
+6->0 [style = bold, label=""];
+10->6 [style = solid, label="test"];
+5->6 [style = bold, label=""];
+5->6 [style = solid, label="test"];
+3->1 [style = bold, label=""];
+8->2 [style = bold, label=""];
+9->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+2->10 [style = bold, label=""];
+11->1 [style = bold, label=""];
+10->6 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+12->7 [style = bold, label=""];
+4->7 [style = bold, label=""];
+0->12 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+2->5 [style = bold, label=""];
+}

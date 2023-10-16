@@ -1,0 +1,12 @@
+digraph {
+0 [style = filled, label = "new EqualsTester(Predicates.and(TRUE,NEVER_REACHED)).addEqualObject(Predicates.and(TRUE,NEVER_REACHED)).addNotEqualObject(Predicates.and(NEVER_REACHED,TRUE)).addNotEqualObject(Predicates.and(TRUE)).addNotEqualObject(Predicates.or(TRUE,NEVER_REACHED)).testEquals()@@@3@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testAnd_equalityBinary['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "testAnd_equalityBinary['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testAnd_equalityTernary['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "new EqualsTester(Predicates.and(TRUE,isOdd(),NEVER_REACHED)).addEqualObject(Predicates.and(TRUE,isOdd(),NEVER_REACHED)).addNotEqualObject(Predicates.and(isOdd(),NEVER_REACHED,TRUE)).addNotEqualObject(Predicates.and(TRUE)).addNotEqualObject(Predicates.or(TRUE,isOdd(),NEVER_REACHED)).testEquals()@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "new EqualsTester().addEqualityGroup(Predicates.and(TRUE,NEVER_REACHED),Predicates.and(TRUE,NEVER_REACHED)).addEqualityGroup(Predicates.and(NEVER_REACHED,TRUE)).addEqualityGroup(Predicates.and(TRUE)).addEqualityGroup(Predicates.or(TRUE,NEVER_REACHED)).testEquals()@@@3@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+0->4 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

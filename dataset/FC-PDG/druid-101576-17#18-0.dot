@@ -1,0 +1,13 @@
+digraph {
+4 [style = filled, label = "testQuery(PLANNER_CONFIG_DEFAULT_NO_COMPLEX_SERDE,QUERY_CONTEXT_DEFAULT,\"SELECT * FROM druid.foo ORDER BY __time\",CalciteTests.REGULAR_USER_AUTH_RESULT,ImmutableList.of(newScanQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).columns(ImmutableList.of(\"__time\",\"cnt\",\"dim1\",\"dim2\",\"dim3\",\"m1\",\"m2\",\"unique_dim1\")).limit(Long.MAX_VALUE).order(ScanQuery.Order.ASCENDING).resultFormat(ScanQuery.ResultFormat.RESULT_FORMAT_COMPACTED_LIST).context(QUERY_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9787ce,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9787db,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9787e8,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9787f5,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@978802,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@97880f))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "String hyperLogLogCollectorClassName = HLLC_STRING@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "testSelectStar['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testQuery(PLANNER_CONFIG_DEFAULT_NO_COMPLEX_SERDE,QUERY_CONTEXT_DEFAULT,\"SELECT * FROM druid.foo\",CalciteTests.REGULAR_USER_AUTH_RESULT,ImmutableList.of(newScanQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).columns(\"__time\",\"cnt\",\"dim1\",\"dim2\",\"dim3\",\"m1\",\"m2\",\"unique_dim1\").resultFormat(ScanQuery.ResultFormat.RESULT_FORMAT_COMPACTED_LIST).context(QUERY_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@97873a,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@978747,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@978754,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@978761,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@97876e,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@97877b))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testSelectStarWithoutLimitTimeAscending['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testSelectStar['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+2->1 [style = solid, label="hyperLogLogCollectorClassName"];
+}

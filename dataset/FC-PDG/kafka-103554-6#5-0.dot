@@ -1,0 +1,37 @@
+digraph {
+4 [style = filled, label = "short version@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Message message@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "UnsupportedVersionException e = assertThrows(,null)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertTrue(e.getMessage().contains(problemText),\"Expected to get an error message about \" + problemText + \", but got: \" + e.getMessage())@@@11@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "assertThrows(,null)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "ObjectSerializationCache cache = new ObjectSerializationCache()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "String problemText@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "Message message@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "short version@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "verifyWriteRaisesUve['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "verifyWriteRaisesNpe['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Message message@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "assertTrue(\"Expected to get an error message about \" + problemText + \", but got: \" + e.getMessage(),e.getMessage().contains(problemText))@@@11@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "verifyWriteRaisesUve['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "String problemText@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+14->3 [style = bold, label=""];
+14->11 [style = dotted, label="true"];
+5->8 [style = bold, label=""];
+10->3 [style = bold, label=""];
+3->5 [style = bold, label=""];
+2->6 [style = solid, label="problemText"];
+1->0 [style = dotted, label="true"];
+1->4 [style = dotted, label="true"];
+6->8 [style = dashed, label="0"];
+10->4 [style = dotted, label="true"];
+5->6 [style = bold, label=""];
+3->12 [style = bold, label=""];
+1->2 [style = dotted, label="true"];
+4->13 [style = dashed, label="0"];
+10->9 [style = dotted, label="true"];
+5->12 [style = dashed, label="0"];
+10->7 [style = dotted, label="true"];
+14->13 [style = dotted, label="true"];
+9->8 [style = solid, label="problemText"];
+}

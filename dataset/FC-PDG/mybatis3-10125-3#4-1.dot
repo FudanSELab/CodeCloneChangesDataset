@@ -1,0 +1,23 @@
+digraph {
+2 [style = filled, label = "final String MAPPER_CONFIG = \"<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\" + \"<!DOCTYPE configuration PUBLIC \"-//mybatis.org//DTD Config 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-config.dtd\">\" + \"<configuration>\" + \" <typeAliases>\" + \" <typeAlias type=\"a.b.c.Foo\"/>\" + \" </typeAliases>\" + \"</configuration>\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "XMLConfigBuilder builder = new XMLConfigBuilder(new StringReader(MAPPER_CONFIG))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "unknownJavaTypeOnTypeHandler['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "then(caughtException()).isInstanceOf().hasMessageContaining(\"Error registering typeAlias for 'null'. Cause: \")@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "unknownJavaTypeOnTypeHandler['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "then(caughtException()).isInstanceOf().hasMessageContaining(\"The properties element cannot specify both a URL and a resource based property file reference. Please specify one or the other.\")@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "propertiesSpecifyResourceAndUrlAtSameTime['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "when(builder).parse()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final String MAPPER_CONFIG = \"<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\" + \"<!DOCTYPE configuration PUBLIC \"-//mybatis.org//DTD Config 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-config.dtd\">\" + \"<configuration>\" + \" <properties resource=\"a/b/c/foo.properties\" url=\"file:./a/b/c/jdbc.properties\"/>\" + \"</configuration>\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+0->2 [style = bold, label=""];
+7->8 [style = bold, label=""];
+4->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+1->6 [style = dashed, label="0"];
+2->3 [style = solid, label="MAPPER_CONFIG"];
+2->3 [style = bold, label=""];
+8->3 [style = solid, label="MAPPER_CONFIG"];
+8->3 [style = bold, label=""];
+}

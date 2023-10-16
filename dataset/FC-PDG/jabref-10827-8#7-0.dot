@@ -1,0 +1,38 @@
+digraph {
+7 [style = filled, label = "BibEntry entry = new BibEntry()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "addAndRemoveEntry['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "database.removeEntry(entry)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(1,database.getNumberOfKeyOccurrences(\"\"))@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "entry.setCiteKey(\"\")@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertEquals(1,database.getNumberOfCitationKeyOccurrences(\"\"))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "entry.setCitationKey(\"\")@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "database.insertEntry(entry)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "removeEmptyCiteKey['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertEquals(0,database.getNumberOfKeyOccurrences(\"\"))@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "removeEmptyCiteKey['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "assertEquals(0,database.getNumberOfCitationKeyOccurrences(\"\"))@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "entry.setCiteKey(\"\")@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "entry.setCitationKey(\"\")@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1->5 [style = bold, label=""];
+0->9 [style = bold, label=""];
+0->6 [style = bold, label=""];
+7->12 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+7->1 [style = solid, label="entry"];
+9->8 [style = bold, label=""];
+12->0 [style = bold, label=""];
+10->7 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+4->7 [style = bold, label=""];
+7->3 [style = bold, label=""];
+3->0 [style = bold, label=""];
+1->11 [style = bold, label=""];
+6->2 [style = bold, label=""];
+8->1 [style = bold, label=""];
+6->1 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+7->0 [style = solid, label="entry"];
+5->11 [style = dashed, label="0"];
+13->7 [style = bold, label=""];
+}

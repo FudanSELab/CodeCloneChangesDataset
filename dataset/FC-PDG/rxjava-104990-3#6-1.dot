@@ -1,0 +1,10 @@
+digraph {
+3 [style = filled, label = "ParallelFlowableTest.checkSubscriberCount(Flowable.range(1,5).parallel().collect(new Supplier<List<Integer>>(){@Override public List<Integer> get(){return new ArrayList<Integer>()}},new BiConsumer<List<Integer>,Integer>(){@Override public void accept(List<Integer> a,Integer b){a.add(b)}}))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "subscriberCount['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "badSource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "badSource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "TestHelper.checkBadSourceObservable(new Function<Observable<Integer>,Object>(){@Override public Object apply(Observable<Integer> o){return o.collect(new Supplier<List<Integer>>(){@Override public List<Integer> get(){return new ArrayList<>()}},new BiConsumer<List<Integer>,Integer>(){@Override public void accept(List<Integer> a,Integer b){a.add(b)}}).toObservable()}},false,1,2,Arrays.asList(1))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->3 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+}

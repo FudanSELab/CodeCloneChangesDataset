@@ -1,0 +1,29 @@
+digraph {
+3 [style = filled, label = "HashMap<String,Object> context = new HashMap<String,Object>()@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "SearchQuery query = makeFilteredSearchQuery()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "QueryRunner runner = TestQueryRunners.makeSearchQueryRunner(segment2)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testSearchWithOverlap['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testFilteredSearch2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "TestHelper.assertExpectedResults(expectedResults,runner.run(QueryPlus.wrap(query)))@@@6@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "List<Result<SearchResultValue>> expectedResults = Collections.singletonList(new Result<SearchResultValue>(DateTimes.of(\"2011-01-12T00:00:00.000Z\"),new SearchResultValue(Arrays.asList(new SearchHit(placementishDimension,\"a\"),new SearchHit(placementDimension,\"mezzanine\"),new SearchHit(marketDimension,\"total_market\")))))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "TestHelper.assertExpectedResults(expectedResults,runner.run(QueryPlus.wrap(query),context))@@@7@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testSearchWithOverlap['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "SearchQuery query = makeSearchQuery()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->9 [style = dashed, label="0"];
+5->1 [style = solid, label="expectedResults"];
+7->5 [style = bold, label=""];
+4->6 [style = solid, label="query"];
+9->1 [style = solid, label="query"];
+4->2 [style = bold, label=""];
+8->5 [style = bold, label=""];
+3->1 [style = bold, label=""];
+5->9 [style = bold, label=""];
+9->2 [style = bold, label=""];
+2->6 [style = bold, label=""];
+3->1 [style = solid, label="context"];
+5->6 [style = solid, label="expectedResults"];
+4->1 [style = solid, label="query"];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

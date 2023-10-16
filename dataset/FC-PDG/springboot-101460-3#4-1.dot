@@ -1,0 +1,28 @@
+digraph {
+1 [style = filled, label = "loadWhenUsingSystemPropertiesShouldBindToMap['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(bean.getMap()).containsOnlyKeys(\"foo\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "this.context.getEnvironment().getPropertySources().addLast(new SystemEnvironmentPropertySource(StandardEnvironment.SYSTEM_ENVIRONMENT_PROPERTY_SOURCE_NAME,Collections.singletonMap(\"com.example.bar\",\"baz\")))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "load()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "WithComplexMapProperties bean = this.context.getBean()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "loadWhenUsingSystemPropertiesShouldBindToMap['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "load()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "SimplePrefixedProperties bean = this.context.getBean()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertThat(bean.getBar()).isEqualTo(\"baz\")@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertThat(bean.getMap().get(\"foo\")).containsOnly(entry(\"bar\",\"baz\"))@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "this.context.getEnvironment().getPropertySources().addLast(new SystemEnvironmentPropertySource(StandardEnvironment.SYSTEM_ENVIRONMENT_PROPERTY_SOURCE_NAME,Collections.singletonMap(\"TEST_MAP_FOO_BAR\",\"baz\")))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "loadWhenDotsInSystemEnvironmentPropertiesShouldBind['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7->9 [style = bold, label=""];
+4->3 [style = bold, label=""];
+6->4 [style = bold, label=""];
+1->4 [style = bold, label=""];
+4->11 [style = dashed, label="0"];
+9->10 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+8->11 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+2->9 [style = dashed, label="0"];
+11->7 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

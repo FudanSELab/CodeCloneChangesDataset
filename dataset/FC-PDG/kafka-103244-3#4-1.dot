@@ -1,0 +1,37 @@
+digraph {
+10 [style = filled, label = "String subject = \" \"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "new OAuthBearerUnsecuredJws(validCompactSerialization,\"sub\",\"scope\")@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "String validCompactSerialization = compactSerialization(subject,issuedAt,expirationTime,scope)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "String subject = null@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "missingPrincipal['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "blankPrincipalName['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "long expirationTime = issuedAt + 60 * 60@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "List<String> scope = Arrays.asList(\"scopeValue1\",\"scopeValue2\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThrows(,null)@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "missingPrincipal['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "long issuedAt = 100@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Long expirationTime = null@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->9 [style = bold, label=""];
+0->3 [style = solid, label="subject"];
+4->6 [style = bold, label=""];
+3->2 [style = solid, label="validCompactSerialization"];
+6->9 [style = dashed, label="0"];
+1->3 [style = bold, label=""];
+7->0 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+0->10 [style = dashed, label="0"];
+9->3 [style = solid, label="expirationTime"];
+6->1 [style = bold, label=""];
+4->3 [style = solid, label="issuedAt"];
+3->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+0->4 [style = bold, label=""];
+11->10 [style = bold, label=""];
+3->8 [style = bold, label=""];
+10->3 [style = solid, label="subject"];
+10->4 [style = bold, label=""];
+1->3 [style = solid, label="scope"];
+9->1 [style = bold, label=""];
+6->3 [style = solid, label="expirationTime"];
+4->9 [style = solid, label="issuedAt"];
+}

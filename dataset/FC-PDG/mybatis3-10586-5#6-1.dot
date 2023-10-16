@@ -1,0 +1,36 @@
+digraph {
+1 [style = filled, label = "parameter.setAddend1(2)@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertEquals((Integer)5,parameter.getSum())@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testAdderAsSelectDoubleCall1['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "spMapper.adderAsSelect(parameter)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "parameter.setAddend2(3)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Parameter parameter = new Parameter()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "testAdderAsSelectAnnotated['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "parameter = new Parameter()@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "parameter.setAddend2(3)@@@12@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "spMapper.adderAsSelect(parameter)@@@13@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testAdderAsSelectDoubleCall1['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "spMapper.adderAsSelectAnnotated(parameter)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertEquals((Integer)5,parameter.getSum())@@@14@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "SPMapper spMapper = sqlSession.getMapper()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "parameter.setAddend1(2)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+14->3 [style = bold, label=""];
+0->13 [style = dashed, label="0"];
+3->6 [style = bold, label=""];
+11->5 [style = bold, label=""];
+0->9 [style = bold, label=""];
+4->1 [style = bold, label=""];
+12->3 [style = bold, label=""];
+10->11 [style = bold, label=""];
+13->9 [style = bold, label=""];
+8->13 [style = bold, label=""];
+1->10 [style = bold, label=""];
+4->11 [style = solid, label="parameter"];
+7->3 [style = bold, label=""];
+3->0 [style = solid, label="parameter"];
+9->4 [style = bold, label=""];
+2->8 [style = bold, label=""];
+3->13 [style = solid, label="parameter"];
+6->2 [style = bold, label=""];
+}

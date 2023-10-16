@@ -1,0 +1,19 @@
+digraph {
+7 [style = filled, label = "testNullBaseDataSource['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "expectedException.expect(CoreMatchers.instanceOf())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "expectedException.expectMessage(\"baseDataSource cannot be null or empty. Please provide a baseDataSource.\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testEmptyBaseDataSource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "MaterializedViewSupervisorSpec materializedViewSupervisorSpec = new MaterializedViewSupervisorSpec(null,new DimensionsSpec(Lists.newArrayList(new StringDimensionSchema(\"isUnpatrolled\"),new StringDimensionSchema(\"metroCode\"),new StringDimensionSchema(\"namespace\"),new StringDimensionSchema(\"page\"),new StringDimensionSchema(\"regionIsoCode\"),new StringDimensionSchema(\"regionName\"),new StringDimensionSchema(\"user\")),null,null),new AggregatorFactory((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9332d0,HadoopTuningConfig.makeDefaultTuningConfig(),null,null,null,null,null,false,objectMapper,null,null,null,null,null,new MaterializedViewTaskConfig(),createMock(),new NoopChatHandlerProvider(),new SupervisorStateManagerConfig())@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "MaterializedViewSupervisorSpec materializedViewSupervisorSpec = new MaterializedViewSupervisorSpec(\"\",new DimensionsSpec(Lists.newArrayList(new StringDimensionSchema(\"isUnpatrolled\"),new StringDimensionSchema(\"metroCode\"),new StringDimensionSchema(\"namespace\"),new StringDimensionSchema(\"page\"),new StringDimensionSchema(\"regionIsoCode\"),new StringDimensionSchema(\"regionName\"),new StringDimensionSchema(\"user\")),null,null),new AggregatorFactory((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@933226,HadoopTuningConfig.makeDefaultTuningConfig(),null,null,null,null,null,false,objectMapper,null,null,null,null,null,new MaterializedViewTaskConfig(),createMock(),new NoopChatHandlerProvider(),new SupervisorStateManagerConfig())@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "testEmptyBaseDataSource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "new MaterializedViewSupervisorSpec(\"\",new DimensionsSpec(Lists.newArrayList(new StringDimensionSchema(\"isUnpatrolled\"),new StringDimensionSchema(\"metroCode\"),new StringDimensionSchema(\"namespace\"),new StringDimensionSchema(\"page\"),new StringDimensionSchema(\"regionIsoCode\"),new StringDimensionSchema(\"regionName\"),new StringDimensionSchema(\"user\")),null,null),new AggregatorFactory((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@933279,HadoopTuningConfig.makeDefaultTuningConfig(),null,null,null,null,null,false,objectMapper,null,null,null,null,null,new MaterializedViewTaskConfig(),EasyMock.createMock(),new NoopChatHandlerProvider(),new SupervisorStateManagerConfig())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+3->5 [style = bold, label=""];
+7->1 [style = bold, label=""];
+3->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

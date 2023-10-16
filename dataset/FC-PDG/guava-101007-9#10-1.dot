@@ -1,0 +1,33 @@
+digraph {
+8 [style = filled, label = "MutableNetwork<String,String> mutableNetwork = NetworkBuilder.directed().allowsSelfLoops(true).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "assertThat(network.edgesConnecting(\"B\",\"A\")).containsExactly(\"AB\")@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "mutableNetwork.addEdge(\"A\",\"A\",\"AA\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "edgesConnecting_directed['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "mutableNetwork.addEdge(\"A\",\"B\",\"AB\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "MutableNetwork<String,String> mutableNetwork = NetworkBuilder.directed().build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "assertThat(network.edgesConnecting(\"B\",\"A\")).isEmpty()@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Network<String,String> network = ImmutableNetwork.copyOf(mutableNetwork)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(network.edgesConnecting(\"A\",\"A\")).containsExactly(\"AA\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "edgesConnecting_directed['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "MutableNetwork<String,String> mutableNetwork = NetworkBuilder.undirected().build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "edgesConnecting_undirected['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(network.edgesConnecting(\"A\",\"B\")).containsExactly(\"AB\")@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->12 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+1->12 [style = dashed, label="0"];
+3->6 [style = bold, label=""];
+7->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+8->6 [style = bold, label=""];
+3->5 [style = solid, label="mutableNetwork"];
+11->5 [style = solid, label="mutableNetwork"];
+6->7 [style = bold, label=""];
+5->0 [style = bold, label=""];
+9->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+8->5 [style = solid, label="mutableNetwork"];
+3->11 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+11->6 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

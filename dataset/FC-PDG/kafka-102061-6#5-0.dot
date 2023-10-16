@@ -1,0 +1,35 @@
+digraph {
+13 [style = filled, label = "assertThat(punctuatedAt,equalTo(5L))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "task = createStatelessTask(createConfig(false),StreamsConfig.METRICS_LATEST)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "shouldSetProcessorNodeOnContextBackToNullAfterSuccessfulPunctuate['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "task.initializeStateStores()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "shouldCallPunctuateOnPassedInProcessorNode['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertThat(((InternalProcessorContext)task.context()).currentNode(),nullValue())@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "task.initializeTopology()@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(punctuatedAt,equalTo(10L))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(((ProcessorContextImpl)task.context()).currentNode(),nullValue())@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "task.initializeIfNeeded()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "task.punctuate(processorStreamTime,5,PunctuationType.STREAM_TIME,punctuator)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "task.punctuate(processorStreamTime,10,PunctuationType.STREAM_TIME,punctuator)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "task = createStatelessTask(createConfig(false,\"100\"),StreamsConfig.METRICS_LATEST)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "task.completeRestoration()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "shouldSetProcessorNodeOnContextBackToNullAfterSuccessfulPunctuate['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6->8 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+4->9 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+7->0 [style = bold, label=""];
+0->10 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+0->13 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+9->7 [style = bold, label=""];
+11->3 [style = bold, label=""];
+3->4 [style = bold, label=""];
+13->14 [style = bold, label=""];
+14->12 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->5 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

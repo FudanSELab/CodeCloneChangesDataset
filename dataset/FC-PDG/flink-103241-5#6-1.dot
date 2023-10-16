@@ -1,0 +1,34 @@
+digraph {
+7 [style = filled, label = "ExecutionConfig config = new ExecutionConfig()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "doAnswer(new Answer<MapState<Integer,String>>(){@Override public MapState<Integer,String> answer(InvocationOnMock invocationOnMock){MapStateDescriptor<Integer,String> descr = (MapStateDescriptor<Integer,String>)invocationOnMock.getArguments()(2(AbstractKeyedStateBackend<Integer> backend = new MemoryStateBackend().createKeyedStateBackend(new DummyEnvironment(\"test_task\",1,0),new JobID(),\"test_op\",IntSerializer.INSTANCE,1,new KeyGroupRange(0,0),new KvStateRegistry().createTaskRegistry(new JobID(),new JobVertexID()))backend.setCurrentKey(0)return backend.getPartitionedState(VoidNamespace.INSTANCE,VoidNamespaceSerializer.INSTANCE,descr)}}).when(keyedStateBackend).getPartitionedState(Matchers.any(),any(),any())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "createMapPlainMockOp['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "AbstractStreamOperator<?> operatorMock = mock()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "doAnswer(new Answer<ListState<String>>(){@Override public ListState<String> answer(InvocationOnMock invocationOnMock){ListStateDescriptor<String> descr = (ListStateDescriptor<String>)invocationOnMock.getArguments()(2(AbstractKeyedStateBackend<Integer> backend = new MemoryStateBackend().createKeyedStateBackend(new DummyEnvironment(\"test_task\",1,0),new JobID(),\"test_op\",IntSerializer.INSTANCE,1,new KeyGroupRange(0,0),new KvStateRegistry().createTaskRegistry(new JobID(),new JobVertexID()),TtlTimeProvider.DEFAULT,new UnregisteredMetricsGroup(),Collections.emptyList(),new CloseableRegistry())backend.setCurrentKey(0)return backend.getPartitionedState(VoidNamespace.INSTANCE,VoidNamespaceSerializer.INSTANCE,descr)}}).when(keyedStateBackend).getPartitionedState(Matchers.any(),any(),any())@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "createListPlainMockOp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "createListPlainMockOp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "when(operatorMock.getOperatorID()).thenReturn(new OperatorID())@@@18@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "KeyedStateBackend keyedStateBackend = mock()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return operatorMock@@@19@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "when(operatorMock.getKeyedStateStore()).thenReturn(keyedStateStore)@@@17@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "DefaultKeyedStateStore keyedStateStore = new DefaultKeyedStateStore(keyedStateBackend,config)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "when(operatorMock.getExecutionConfig()).thenReturn(config)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->1 [style = solid, label="operatorMock"];
+9->3 [style = bold, label=""];
+4->8 [style = bold, label=""];
+8->1 [style = bold, label=""];
+0->9 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->0 [style = solid, label="config"];
+7->9 [style = solid, label="config"];
+5->6 [style = bold, label=""];
+6->7 [style = bold, label=""];
+9->11 [style = bold, label=""];
+0->4 [style = solid, label="keyedStateStore"];
+12->6 [style = bold, label=""];
+7->2 [style = bold, label=""];
+3->4 [style = bold, label=""];
+10->6 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+11->4 [style = bold, label=""];
+2->0 [style = solid, label="keyedStateBackend"];
+}

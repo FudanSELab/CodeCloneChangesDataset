@@ -1,0 +1,27 @@
+digraph {
+3 [style = filled, label = "invokeListeners['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Object(( fullValue@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "CqEventImpl cqEvent@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "String cqName@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "String cqName@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "CqEventImpl cqEvent@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "ClientCQImpl cQuery@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "boolean connected@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Object(( fullValue@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "invokeCqConnectedListeners['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "invokeListeners['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "ClientCQImpl cQuery@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "String cqName@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5->6 [style = dotted, label="true"];
+3->4 [style = dotted, label="true"];
+9->12 [style = dotted, label="true"];
+4->12 [style = dashed, label="0"];
+5->8 [style = dotted, label="true"];
+9->10 [style = dotted, label="true"];
+5->7 [style = dotted, label="true"];
+3->1 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+9->11 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+3->0 [style = dotted, label="true"];
+}

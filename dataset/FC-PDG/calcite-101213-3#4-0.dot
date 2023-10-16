@@ -1,0 +1,26 @@
+digraph {
+0 [style = filled, label = "winSql(\"select *\" + \" from emp\" + \" where ^sum(sal) over (partition by deptno\" + \" order by empno\" + \" rows 3 preceding)^ > 10\").fails(\"Windowed aggregate expression is illegal in WHERE clause\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "winSql(\"select *\" + \" from emp\" + \" join dept on emp.deptno = dept.deptno\" + \" and ^sum(sal) over (partition by emp.deptno\" + \" order by empno\" + \" rows 3 preceding)^ = dept.deptno + 40\" + \"order by deptno\").fails(\"Windowed aggregate expression is illegal in ON clause\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "sql(\"select stream\" + \" hop_start(rowtime, interval '1' hour, interval '3' hour,\" + \" time '12:34:56') as rowtime,\" + \" count(*) as c\" + \"from orders\" + \"group by hop(rowtime, interval '1' hour, interval '3' hour,\" + \" time '12:34:56')\").ok()@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "winExp(\"sum(sal)\").ok()@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testWindowFunctions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "winSql(\"select sal from emp order by sum(sal) over (partition by deptno order by deptno)\").ok()@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "testStreamHop['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "sql(\"select stream\" + \" hop_start(rowtime, interval '1' hour, interval '3' hour) as rowtime,\" + \" count(*) as c\" + \"from orders\" + \"group by hop(rowtime, interval '1' hour, interval '3' hour)\").ok()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "winSql(\"select sal from emp\" + \"order by sum(sal) over (partition by deptno order by deptno)\").ok()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "winSql(\"select *\" + \" from emp\" + \" group by ename, ^sum(sal) over (partition by deptno\" + \" order by empno\" + \" rows 3 preceding)^ + 10\" + \"order by deptno\").fails(\"Windowed aggregate expression is illegal in GROUP BY clause\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testWindowFunctions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "sql(\"select stream\" + \" ^hop_start(rowtime, interval '1' hour, interval '2' hour)^,\" + \" count(*) as c\" + \"from orders\" + \"group by hop(rowtime, interval '1' hour, interval '3' hour)\").fails(\"Call to auxiliary group function 'HOP_START' must have \" + \"matching call to group function 'HOP' in GROUP BY clause\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+8->10 [style = bold, label=""];
+5->2 [style = bold, label=""];
+6->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+9->8 [style = bold, label=""];
+11->9 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+4->7 [style = bold, label=""];
+}

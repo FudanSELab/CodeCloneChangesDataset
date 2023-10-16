@@ -1,0 +1,32 @@
+digraph {
+4 [style = filled, label = "node.start()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Settings settings = Settings.builder().put(ClusterName.CLUSTER_NAME_SETTING.getKey(),InternalTestCluster.clusterName(\"single-node-cluster\",random().nextLong())).put(Environment.PATH_HOME_SETTING.getKey(),tempDir).put(Environment.PATH_REPO_SETTING.getKey(),tempDir.resolve(\"repo\")).put(Environment.PATH_SHARED_DATA_SETTING.getKey(),createTempDir().getParent()).put(Node.NODE_NAME_SETTING.getKey(),nodeName).put(ScriptService.SCRIPT_MAX_COMPILATIONS_RATE.getKey(),\"1000/1m\").put(EsExecutors.PROCESSORS_SETTING.getKey(),1).put(\"transport.type\",getTestTransportType()).put(Node.NODE_DATA_SETTING.getKey(),true).put(NodeEnvironment.NODE_ID_SEED_SETTING.getKey(),random().nextLong()).put(DiskThresholdSettings.CLUSTER_ROUTING_ALLOCATION_LOW_DISK_WATERMARK_SETTING.getKey(),\"1b\").put(DiskThresholdSettings.CLUSTER_ROUTING_ALLOCATION_HIGH_DISK_WATERMARK_SETTING.getKey(),\"1b\").put(DiskThresholdSettings.CLUSTER_ROUTING_ALLOCATION_DISK_FLOOD_STAGE_WATERMARK_SETTING.getKey(),\"1b\").put(HierarchyCircuitBreakerService.USE_REAL_MEMORY_USAGE_SETTING.getKey(),false).putList(DISCOVERY_SEED_HOSTS_SETTING.getKey()).putList(INITIAL_MASTER_NODES_SETTING.getKey(),nodeName).build()@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "Node node = new MockNode(settings,Arrays.asList(,),true)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "return node@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final Path tempDir = createTempDir()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Node node = new MockNode(settings,Arrays.asList(,,),true)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "String nodeName = \"node_s_0\"@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "startNode['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "baseSettings['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "return Settings.builder().put(ClusterName.CLUSTER_NAME_SETTING.getKey(),InternalTestCluster.clusterName(\"single-node-cluster\",randomLong())).put(Environment.PATH_HOME_SETTING.getKey(),tempDir).put(NetworkModule.TRANSPORT_TYPE_KEY,getTestTransportType()).put(Node.NODE_DATA_SETTING.getKey(),true)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "startNode['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Settings settings = Settings.builder().put(ClusterName.CLUSTER_NAME_SETTING.getKey(),InternalTestCluster.clusterName(\"single-node-cluster\",random().nextLong())).put(Environment.PATH_HOME_SETTING.getKey(),tempDir).put(Environment.PATH_REPO_SETTING.getKey(),tempDir.resolve(\"repo\")).put(Environment.PATH_SHARED_DATA_SETTING.getKey(),createTempDir().getParent()).put(Node.NODE_NAME_SETTING.getKey(),nodeName).put(ScriptService.SCRIPT_MAX_COMPILATIONS_RATE.getKey(),\"1000/1m\").put(EsExecutors.PROCESSORS_SETTING.getKey(),1).put(\"transport.type\",getTestTransportType()).put(Node.NODE_DATA_SETTING.getKey(),true).put(NodeEnvironment.NODE_ID_SEED_SETTING.getKey(),random().nextLong()).put(DiskThresholdSettings.CLUSTER_ROUTING_ALLOCATION_LOW_DISK_WATERMARK_SETTING.getKey(),\"1b\").put(DiskThresholdSettings.CLUSTER_ROUTING_ALLOCATION_HIGH_DISK_WATERMARK_SETTING.getKey(),\"1b\").put(DiskThresholdSettings.CLUSTER_ROUTING_ALLOCATION_DISK_FLOOD_STAGE_WATERMARK_SETTING.getKey(),\"1b\").put(HierarchyCircuitBreakerService.USE_REAL_MEMORY_USAGE_SETTING.getKey(),false).putList(DISCOVERY_SEED_HOSTS_SETTING.getKey()).putList(INITIAL_MASTER_NODES_SETTING.getKey(),nodeName).put(IndicesQueryCache.INDICES_QUERIES_CACHE_ALL_SEGMENTS_SETTING.getKey(),true).build()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+9->5 [style = bold, label=""];
+5->10 [style = bold, label=""];
+6->4 [style = bold, label=""];
+11->5 [style = bold, label=""];
+6->8 [style = dashed, label="0"];
+8->0 [style = solid, label="node"];
+8->4 [style = bold, label=""];
+6->0 [style = solid, label="node"];
+2->6 [style = solid, label="settings"];
+3->2 [style = bold, label=""];
+7->8 [style = solid, label="settings"];
+3->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+2->6 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

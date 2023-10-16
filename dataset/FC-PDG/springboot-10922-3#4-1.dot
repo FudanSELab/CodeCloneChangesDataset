@@ -1,0 +1,9 @@
+digraph {
+0 [style = filled, label = "new ReactiveWebApplicationContextRunner(null).withConfiguration(AutoConfigurations.of(,)).withUserConfiguration(,).run(null)@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "autoConfiguresThreadPoolMetricsWithEmbeddedReactiveJetty['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "autoConfiguresThreadPoolMetricsWithEmbeddedReactiveJetty['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "autoConfiguresConnectionMetricsWithEmbeddedReactiveJetty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2->0 [style = bold, label=""];
+3->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

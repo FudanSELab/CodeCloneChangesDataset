@@ -1,0 +1,22 @@
+digraph {
+2 [style = filled, label = "getCorsConfiguration['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "getCorsConfiguration['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "corsConfiguration.addAllowedOrigin(CorsConfiguration.ALL)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "corsConfiguration.setAllowedMethods(Arrays.asList(HttpMethod.GET.name(),HttpMethod.POST.name()))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "getCorsConfiguration['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "corsConfiguration.setAllowedHeaders(Arrays.asList(\"Authorization\",\"X-Cf-App-Instance\",\"Content-Type\"))@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "corsConfiguration.setAllowedHeaders(Arrays.asList(HttpHeaders.AUTHORIZATION,\"X-Cf-App-Instance\",HttpHeaders.CONTENT_TYPE))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "return corsConfiguration@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "CorsConfiguration corsConfiguration = new CorsConfiguration()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->4 [style = bold, label=""];
+7->4 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+3->4 [style = solid, label="corsConfiguration"];
+1->7 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

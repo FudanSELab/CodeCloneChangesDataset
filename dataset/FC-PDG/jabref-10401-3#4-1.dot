@@ -1,0 +1,24 @@
+digraph {
+5 [style = filled, label = "localLoader.addNewProtectedTermsList(\"My new list\",tempDir.toFile().getAbsolutePath())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "ProtectedTermsList newList = localLoader.addNewProtectedTermsList(\"My new list\",temporaryFolder.newFile().getAbsolutePath())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "ProtectedTermsLoader localLoader = new ProtectedTermsLoader(new ProtectedTermsPreferences(Collections.emptyList(),Collections.emptyList(),ProtectedTermsLoader.getInternalLists(),Collections.emptyList()))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testAddNewTermListAddsList['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "localLoader.addNewProtectedTermsList(\"My new list\",temporaryFolder.newFile().getAbsolutePath())@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "@TempDirectory.TempDir Path tempDir@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "testAddNewTermListAddsList['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertEquals(ProtectedTermsLoader.getInternalLists().size() + 1,localLoader.getProtectedTermsLists().size())@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(\"My new list\",newList.getDescription())@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testAddNewTermListSetsCorrectDescription['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+6->4 [style = dotted, label="true"];
+3->1 [style = bold, label=""];
+3->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+}

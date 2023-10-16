@@ -1,0 +1,26 @@
+digraph {
+6 [style = filled, label = "testSerializeExtensionsLite['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "TestAllExtensionsLite message = TestUtilLite.getAllLiteExtensionsSet()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testSerializeExtensionsLite['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(rawBytes.size(),message.getSerializedSize())@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(message.getSerializedSize()).isEqualTo(rawBytes.size())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "TestAllTypes message2 = TestAllTypes.parseFrom(rawBytes)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "TestAllExtensions message = TestUtil.getAllExtensionsSet()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testSerializeExtensions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "TestUtil.assertAllFieldsSet(message2)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "ByteString rawBytes = message.toByteString()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->9 [style = bold, label=""];
+0->3 [style = bold, label=""];
+6->4 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+7->1 [style = bold, label=""];
+9->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->1 [style = solid, label="rawBytes"];
+3->7 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->7 [style = bold, label=""];
+1->2 [style = solid, label="message2"];
+}

@@ -1,0 +1,35 @@
+digraph {
+11 [style = filled, label = "assertErrorHandlingMetricValue(\"total-errors-logged\",0.0)@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "logReporter.metrics(errorHandlingMetrics)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertErrorHandlingMetricValue(\"total-errors-logged\",1.0)@@@9@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testLogOnEnabledLogReporter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "logReporter.metrics(errorHandlingMetrics)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "context.error(new RuntimeException())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "LogReporter logReporter = new LogReporter(TASK_ID,config(singletonMap(ConnectorConfig.ERRORS_LOG_ENABLE_CONFIG,\"true\")))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "logReporter.report(context)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "logReporter.configure(config(LogReporter.LOG_ENABLE,\"true\"))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "ProcessingContext context = processingContext()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testLogOnDisabledLogReporter['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testLogOnEnabledLogReporter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "logReporter.configure(config)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "LogReporter logReporter = new LogReporter(TASK_ID)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->5 [style = solid, label="context"];
+6->4 [style = bold, label=""];
+8->10 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+1->6 [style = bold, label=""];
+7->1 [style = bold, label=""];
+6->13 [style = dashed, label="0"];
+9->8 [style = bold, label=""];
+12->1 [style = bold, label=""];
+0->2 [style = solid, label="context"];
+1->13 [style = bold, label=""];
+2->11 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+13->4 [style = bold, label=""];
+10->4 [style = bold, label=""];
+}

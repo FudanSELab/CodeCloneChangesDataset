@@ -1,0 +1,26 @@
+digraph {
+2 [style = filled, label = "return RxJavaPlugins.onAssembly(new ParallelPeek<T>(this,Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.EMPTY_ACTION,onAfterTerminate,Functions.emptyConsumer(),Functions.EMPTY_LONG_CONSUMER,Functions.EMPTY_ACTION))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "return RxJavaPlugins.onAssembly(new MaybePeek<>(this,Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.emptyConsumer(),Objects.requireNonNull(onComplete,\"onComplete is null\"),Functions.EMPTY_ACTION,Functions.EMPTY_ACTION))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "@NonNull Action onComplete@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "return RxJavaPlugins.onAssembly(new ParallelPeek<>(this,Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.emptyConsumer(),Functions.EMPTY_ACTION,onAfterTerminate,Functions.emptyConsumer(),Functions.EMPTY_LONG_CONSUMER,Functions.EMPTY_ACTION))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "doOnComplete['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "doAfterTerminated['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Objects.requireNonNull(onAfterTerminate,\"onAfterTerminate is null\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "doAfterTerminated['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "@NonNull Action onAfterTerminate@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1->2 [style = solid, label="onAfterTerminate"];
+2->4 [style = dashed, label="0"];
+6->7 [style = solid, label="onComplete"];
+8->6 [style = dotted, label="true"];
+5->0 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+1->4 [style = solid, label="onAfterTerminate"];
+3->1 [style = dotted, label="true"];
+1->6 [style = dashed, label="0"];
+1->0 [style = solid, label="onAfterTerminate"];
+3->0 [style = bold, label=""];
+8->7 [style = bold, label=""];
+5->1 [style = dotted, label="true"];
+0->2 [style = bold, label=""];
+}

@@ -1,0 +1,9 @@
+digraph {
+3 [style = filled, label = "createRouteBuilder['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return new RouteBuilder(){public void configure(){from(\"netty4:tcp://127.0.0.1:\" + getPort() + \"?sync=true&encoder=#hl7encoder&decoder=#hl7decoder\").process(new Processor(){public void process(Exchange exchange){assertEquals(70010,exchange.getIn().getBody().length)MDM_T02 input = (MDM_T02)exchange.getIn().getBody()assertEquals(\"2.5\",input.getVersion())MSH msh = input.getMSH()assertEquals(\"20071129144629\",msh.getDateTimeOfMessage().getTime().getValue())exchange.getOut().setBody(\"some response\")}}).to(\"mock:result\")}}@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "createRouteBuilder['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "createRouteBuilder['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->0 [style = bold, label=""];
+3->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

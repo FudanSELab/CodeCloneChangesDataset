@@ -1,0 +1,11 @@
+digraph {
+4 [style = filled, label = "testTransformValues['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "checkAnswer(mapDf.select(transform_values(col(\"x\"),null)),toRows(mapAsScalaMap(new HashMap<Integer,Integer>(){}),null))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testTransformKeys['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "checkAnswer(mapDf.select(transform_keys(col(\"x\"),null)),toRows(mapAsScalaMap(new HashMap<Integer,Integer>(){}),null))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testTransformKeys['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->0 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+4->3 [style = bold, label=""];
+}

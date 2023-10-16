@@ -1,0 +1,30 @@
+digraph {
+6 [style = filled, label = "final CalciteAssert.AssertThat with = CalciteAssert.that().with(\"lex\",\"MYSQL\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final CalciteAssert.AssertThat with = CalciteAssert.that().with(Lex.ORACLE)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "with.query(\"select `DID` from (select deptid as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) \").returnsUnordered(\"DID=1\",\"DID=2\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "with.query(\"select `X`.`DID2` from (select deptid as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) X (DID2)\").returnsUnordered(\"DID2=1\",\"DID2=2\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "with.query(\"select `X`.`DID2` from (select deptid as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) X (DID2)\").returnsUnordered(\"DID2=1\",\"DID2=2\")@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final CalciteAssert.AssertThat with = CalciteAssert.that().with(\"lex\",\"ORACLE\")@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "with.query(\"select DID from (select DEPTID as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) \").returnsUnordered(\"DID=1\",\"DID=2\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testCaseSensitiveSubQueryOracle['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "with.query(\"select `X`.`DID` from (select deptid as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) X \").returnsUnordered(\"DID=1\",\"DID=2\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "with.query(\"select `x`.`DID` from (select deptid as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) X \").returnsUnordered(\"DID=1\",\"DID=2\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "with.query(\"select x.DID from (select DEPTID as did FROM  \" + \" ( values (1), (2) ) as T1(deptid) ) X\").returnsUnordered(\"DID=1\",\"DID=2\")@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testCaseSensitiveSubQueryOracle['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testQuotedCaseSensitiveSubQueryMySql['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11->8 [style = bold, label=""];
+4->1 [style = bold, label=""];
+10->9 [style = bold, label=""];
+7->11 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+0->9 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+9->7 [style = bold, label=""];
+12->6 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->10 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+2->6 [style = dashed, label="0"];
+}

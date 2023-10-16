@@ -1,0 +1,22 @@
+digraph {
+5 [style = filled, label = "HepProgram program = new HepProgramBuilder().addRuleInstance(CoreRules.PROJECT_SET_OP_TRANSPOSE).addRuleInstance(CoreRules.PROJECT_REMOVE).addRuleInstance(CoreRules.MINUS_MERGE).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "final String sql = \"select * from (\" + \"select * from (\" + \" select name, deptno from dept\" + \" union all\" + \" select name, deptno from\" + \" (\" + \" select name, deptno, count(1) from dept group by name, deptno\" + \" union all\" + \" select name, deptno, count(1) from dept group by name, deptno\" + \" ) subq\" + \") a\" + \"union all\" + \"select name, deptno from dept\" + \") aa\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "HepProgram program = new HepProgramBuilder().addRuleInstance(ProjectSetOpTransposeRule.INSTANCE).addRuleInstance(ProjectRemoveRule.INSTANCE).addRuleInstance(UnionMergeRule.MINUS_INSTANCE).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "testUnionMergeRule['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testMinusMergeRule['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final String sql = \"select * from (\" + \"select * from (\" + \" select name, deptno from\" + \" (\" + \" select name, deptno, count(1) from dept group by name, deptno\" + \" except all\" + \" select name, deptno, 1 from dept\" + \" ) subq\" + \" except all\" + \" select name, deptno from\" + \" (\" + \" select name, deptno, 1 from dept\" + \" except all\" + \" select name, deptno, count(1) from dept group by name, deptno\" + \" ) subq2\" + \") a\" + \"except all\" + \"select name, deptno from dept\" + \") aa\"@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testMinusMergeRule['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "HepProgram program = new HepProgramBuilder().addRuleInstance(ProjectSetOpTransposeRule.INSTANCE).addRuleInstance(ProjectRemoveRule.INSTANCE).addRuleInstance(UnionMergeRule.INSTANCE).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "sql(sql).with(program).check()@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+8->6 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+7->8 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

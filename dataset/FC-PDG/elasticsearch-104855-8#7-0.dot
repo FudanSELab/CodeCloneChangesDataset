@@ -1,0 +1,28 @@
+digraph {
+5 [style = filled, label = "RangeAggregationBuilder aggregationBuilder = new RangeAggregationBuilder(\"range\").field(DATE_FIELD_NAME).addRange(milli1 - 1,milli1 + 1)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testCase(aggregationBuilder,new MatchAllDocsQuery(),null,null,fieldType)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "DateFieldMapper.DateFieldType fieldType = new DateFieldMapper.DateFieldType(DATE_FIELD_NAME)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "DateFieldMapper.DateFieldType fieldType = new DateFieldMapper.DateFieldType(DATE_FIELD_NAME,true,false,true,DateFieldMapper.DEFAULT_DATE_TIME_FORMATTER,DateFieldMapper.Resolution.NANOSECONDS,Collections.emptyMap())@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "testDateFieldNanosecondResolution['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "DateFieldMapper.DateFieldType fieldType = new DateFieldMapper.DateFieldType(DATE_FIELD_NAME,true,false,true,DateFieldMapper.DEFAULT_DATE_TIME_FORMATTER,DateFieldMapper.Resolution.NANOSECONDS,null,Collections.emptyMap())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "long milli1 = ZonedDateTime.of(2015,11,13,16,14,34,0,ZoneOffset.UTC).toInstant().toEpochMilli()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testDateFieldNanosecondResolution['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "long milli2 = ZonedDateTime.of(2016,11,13,16,14,34,0,ZoneOffset.UTC).toInstant().toEpochMilli()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testDateFieldMillisecondResolution['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+6->2 [style = solid, label="fieldType"];
+9->2 [style = solid, label="fieldType"];
+4->9 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+6->0 [style = bold, label=""];
+9->0 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+5->2 [style = solid, label="aggregationBuilder"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+4->2 [style = solid, label="fieldType"];
+0->5 [style = solid, label="milli1"];
+7->6 [style = bold, label=""];
+4->0 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

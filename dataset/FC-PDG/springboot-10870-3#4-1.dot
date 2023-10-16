@@ -1,0 +1,9 @@
+digraph {
+3 [style = filled, label = "autoTimeRequestsCanBeConfigured['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "autoTimeRequestsCanBeConfigured['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "autoTimeRequestsCanBeConfigured['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "this.contextRunner.withPropertyValues(\"management.metrics.web.client.request.autotime.enabled=true\",\"management.metrics.web.client.request.autotime.percentiles=0.5,0.7\",\"management.metrics.web.client.request.autotime.percentiles-histogram=true\").run(null)@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->0 [style = bold, label=""];
+3->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

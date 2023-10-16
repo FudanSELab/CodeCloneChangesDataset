@@ -1,0 +1,23 @@
+digraph {
+4 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "List<Map<String,Object>> oneColumns = mapper.getNameOnlyMapped()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "shouldCallNullOnMapForSingleColumn['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "Assert.assertNull(oneColumns.get(1))@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "shouldCallNullOnMapForSingleColumn['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "SqlSession sqlSession = sqlSessionFactory.openSession()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Assert.assertNull(oneColumns.get(1))@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "{sqlSession.close()}@@@9@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "shouldCallNullOnMapForSingleColumnWithResultMap['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8->0 [style = bold, label=""];
+5->3 [style = bold, label=""];
+4->9 [style = bold, label=""];
+9->3 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+3->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+0->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+}

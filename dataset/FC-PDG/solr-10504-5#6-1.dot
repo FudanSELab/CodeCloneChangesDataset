@@ -1,0 +1,29 @@
+digraph {
+0 [style = filled, label = "queryWithPreferReplicaTypes['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "CloudSolrClient cloudClient@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "queryWithPreferReplicaTypes['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "queryWithPreferReplicaTypes['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "CloudHttp2SolrClient cloudClient@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "boolean preferLocalShards@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "String collectionName@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "CloudSolrClient cloudClient@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "String preferReplicaTypes@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "boolean preferLocalShards@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "String preferReplicaTypes@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "String preferReplicaTypes@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "String collectionName@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "boolean preferLocalShards@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12->13 [style = dotted, label="true"];
+0->3 [style = dotted, label="true"];
+0->2 [style = dotted, label="true"];
+6->4 [style = dotted, label="true"];
+12->10 [style = dotted, label="true"];
+4->13 [style = dashed, label="0"];
+6->8 [style = dotted, label="true"];
+0->4 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+12->9 [style = dotted, label="true"];
+12->11 [style = dotted, label="true"];
+6->7 [style = dotted, label="true"];
+}

@@ -1,0 +1,32 @@
+digraph {
+1 [style = filled, label = "DynamicTableSink sink = createTableSink(schema,options)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(2,(long)provider.getParallelism().get())@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "TableSchema schema = TableSchema.builder().field(ROWKEY,STRING()).build()@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "HBaseDynamicTableSink hbaseSink = (HBaseDynamicTableSink)sink@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "ResolvedSchema schema = ResolvedSchema.of(Column.physical(ROWKEY,STRING()))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "Map<String,String> options = getAllOptions()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testParallelismOptions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "SinkFunctionProvider provider = (SinkFunctionProvider)hbaseSink.getSinkRuntimeProvider(new SinkRuntimeProviderContext(false))@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "options.put(\"sink.parallelism\",\"2\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testParallelismOptions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testParallelismOptions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertTrue(sink instanceof HBaseDynamicTableSink)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+4->8 [style = bold, label=""];
+6->1 [style = bold, label=""];
+3->6 [style = bold, label=""];
+1->4 [style = bold, label=""];
+7->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+3->10 [style = bold, label=""];
+11->5 [style = bold, label=""];
+1->4 [style = solid, label="sink"];
+10->1 [style = solid, label="schema"];
+8->2 [style = bold, label=""];
+10->1 [style = bold, label=""];
+1->8 [style = solid, label="sink"];
+5->1 [style = solid, label="options"];
+6->10 [style = dashed, label="0"];
+6->1 [style = solid, label="schema"];
+}

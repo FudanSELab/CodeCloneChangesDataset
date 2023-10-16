@@ -1,0 +1,31 @@
+digraph {
+11 [style = filled, label = "props.put(KeyGeneratorOptions.RECORDKEY_FIELD.key(),\"_row_key\")@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "props = new TypedProperties()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "init['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "props.put(KeyGeneratorOptions.HIVE_STYLE_PARTITIONING_OPT_KEY.key(),\"true\")@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "props.put(KeyGeneratorOptions.RECORDKEY_FIELD_OPT_KEY.key(),\"_row_key\")@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "props.put(KeyGeneratorOptions.HIVE_STYLE_PARTITIONING.key(),\"true\")@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "init['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "props.put(\"hoodie.deltastreamer.keygen.timebased.output.dateformat\",\"yyyyMMdd\")@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "props.put(\"hoodie.deltastreamer.keygen.timebased.timestamp.type\",\"DATE_STRING\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "props.put(KeyGeneratorOptions.PARTITIONPATH_FIELD_OPT_KEY.key(),\"timestamp\")@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "props.put(KeyGeneratorOptions.PARTITIONPATH_FIELD.key(),\"timestamp\")@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "props.put(\"hoodie.deltastreamer.keygen.timebased.input.dateformat\",\"yyyy-MM-dd\")@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "init['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+5->7 [style = bold, label=""];
+6->4 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+3->10 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+4->11 [style = bold, label=""];
+10->8 [style = bold, label=""];
+12->4 [style = bold, label=""];
+11->10 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+9->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

@@ -1,0 +1,25 @@
+digraph {
+5 [style = filled, label = "testDependencyOrderWithPluginManagement['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(\"c\",pom.getValue(\"dependencies(2(/artifactId\"))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "PomTestWrapper pom = buildPom(\"profile-injected-dependencies\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertEquals(\"a\",pom.getValue(\"dependencies(1(/artifactId\"))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "PomTestWrapper pom = buildPom(\"dependency-order/w-plugin-mngt\")@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(\"d\",pom.getValue(\"dependencies(4(/artifactId\"))@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testDependencyOrderWithPluginManagement['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "assertEquals(\"b\",pom.getValue(\"dependencies(3(/artifactId\"))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertEquals(4,((List<?>)pom.getValue(\"dependencies\")).size())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "PomTestWrapper pom = buildPom(\"dependency-order/w-plugin-mgmt\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "testProfileInjectedDependencies['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8->7 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+10->9 [style = bold, label=""];
+5->4 [style = bold, label=""];
+1->6 [style = bold, label=""];
+4->2 [style = bold, label=""];
+9->2 [style = bold, label=""];
+7->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

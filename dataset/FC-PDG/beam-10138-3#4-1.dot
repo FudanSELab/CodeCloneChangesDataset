@@ -1,0 +1,35 @@
+digraph {
+8 [style = filled, label = "checkArgument(SUPPORTED_MATERIALIZATIONS.contains(view.getViewFn().getMaterialization().getUrn()),\"This handler is only capable of dealing with %s materializations \" + \"but was asked to handle %s for PCollectionView with tag %s.\",SUPPORTED_MATERIALIZATIONS,view.getViewFn().getMaterialization().getUrn(),view.getTagInternal().getId())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "Map<PCollectionView<?>,WindowingStrategy<?,?>> indexByView@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "Map<PCollectionView<?>,WindowingStrategy<?,?>> indexByView@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "SparkSideInputReader['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "checkArgument(Materializations.MULTIMAP_MATERIALIZATION_URN.equals(view.getViewFn().getMaterialization().getUrn()),\"This handler is only capable of dealing with %s materializations \" + \"but was asked to handle %s for PCollectionView with tag %s.\",Materializations.MULTIMAP_MATERIALIZATION_URN,view.getViewFn().getMaterialization().getUrn(),view.getTagInternal().getId())@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "SparkSideInputReader['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "sideInputs = new HashMap<>()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "SideInputBroadcast broadcastStateData@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "this.broadcastStateData = broadcastStateData@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "FlinkSideInputReader['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "this.runtimeContext = runtimeContext@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "sideInputs.put(entry.getKey().getTagInternal(),entry.getValue())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "RuntimeContext runtimeContext@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "SideInputBroadcast broadcastStateData@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4->1 [style = solid, label="broadcastStateData"];
+6->1 [style = bold, label=""];
+3->4 [style = dotted, label="true"];
+12->2 [style = bold, label=""];
+10->11 [style = solid, label="runtimeContext"];
+12->13 [style = dotted, label="true"];
+5->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+8->5 [style = bold, label=""];
+0->1 [style = solid, label="broadcastStateData"];
+7->8 [style = bold, label=""];
+7->9 [style = dotted, label="true"];
+12->10 [style = dotted, label="true"];
+2->8 [style = dashed, label="0"];
+4->13 [style = dashed, label="0"];
+6->11 [style = bold, label=""];
+7->4 [style = dotted, label="true"];
+2->5 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+}

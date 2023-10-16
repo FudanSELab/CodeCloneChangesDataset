@@ -1,0 +1,25 @@
+digraph {
+3 [style = filled, label = "Assertions.assertEquals(\"John\",user.getPets().get(0).getBreeder().getBreederName())@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "shouldIgnorePartialAutoMappingBehavior_InlineNestedResultMap['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "shouldIgnorePartialAutoMappingBehavior_ExternalNestedResultMap['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Assertions.assertEquals(Integer.valueOf(2),user.getId())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Assertions.assertEquals(\"User2\",user.getName())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "User user = mapper.getUserWithPets_External(2)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "User user = mapper.getUserWithPets_Inline(2)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "sqlSessionFactory.getConfiguration().setAutoMappingBehavior(AutoMappingBehavior.PARTIAL)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "shouldIgnorePartialAutoMappingBehavior_InlineNestedResultMap['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "Assertions.assertNull(user.getPets().get(0).getPetName(),\"should not inherit auto-mapping\")@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->1 [style = bold, label=""];
+5->7 [style = bold, label=""];
+6->1 [style = bold, label=""];
+0->10 [style = bold, label=""];
+1->0 [style = bold, label=""];
+9->1 [style = bold, label=""];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+7->3 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+10->4 [style = bold, label=""];
+}

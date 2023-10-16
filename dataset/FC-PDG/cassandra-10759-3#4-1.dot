@@ -1,0 +1,35 @@
+digraph {
+9 [style = filled, label = "SSTableStats stats = antiCompactRanges(store,atEndpoint(NO_RANGES,range(0,4)))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertOnDiskState(store,2)@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "assertEquals(stats.transKeys,0)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "antiCompactOneFull['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "SSTableStats stats = antiCompactRanges(store,atEndpoint(range(0,4),NO_RANGES))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(stats.pendingKeys,4)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ColumnFamilyStore store = prepareColumnFamilyStore()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "antiCompactOneFull['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "antiCompactOneTransOnly['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertEquals(2,stats.numLiveSSTables)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertEquals(stats.unrepairedKeys,6)@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertEquals(stats.pendingKeys,0)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertEquals(stats.transKeys,4)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+3->9 [style = bold, label=""];
+4->10 [style = bold, label=""];
+6->1 [style = bold, label=""];
+3->0 [style = solid, label="store"];
+3->8 [style = solid, label="store"];
+3->9 [style = solid, label="store"];
+5->8 [style = bold, label=""];
+1->12 [style = dashed, label="0"];
+0->9 [style = dashed, label="0"];
+12->5 [style = bold, label=""];
+9->4 [style = bold, label=""];
+11->3 [style = bold, label=""];
+0->4 [style = bold, label=""];
+4->6 [style = bold, label=""];
+10->12 [style = bold, label=""];
+7->3 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+}

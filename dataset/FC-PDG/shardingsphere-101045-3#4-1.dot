@@ -1,0 +1,31 @@
+digraph {
+0 [style = filled, label = "{connection.getTransactionStatus().setInTransaction(false)}@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "localTransactionManager.commit()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "localTransactionManager.rollback()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "shardingTransactionManager.commit()@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "commit['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "rollback['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "shardingTransactionManager.rollback()@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "connection.getTransactionStatus().isInTransaction()@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "commit['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "TransactionType.LOCAL == transactionType || null == shardingTransactionManager@@@5@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+4->9 [style = bold, label=""];
+4->3 [style = dotted, label="false"];
+4->9 [style = dotted, label="false"];
+4->7 [style = dotted, label="true"];
+4->3 [style = bold, label=""];
+4->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+3->0 [style = bold, label=""];
+6->5 [style = bold, label=""];
+1->0 [style = bold, label=""];
+7->0 [style = bold, label=""];
+9->0 [style = bold, label=""];
+8->5 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+3->9 [style = dashed, label="0"];
+4->1 [style = dotted, label="true"];
+4->7 [style = bold, label=""];
+5->4 [style = dotted, label="true"];
+2->5 [style = bold, label=""];
+}

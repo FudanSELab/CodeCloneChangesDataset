@@ -1,0 +1,34 @@
+digraph {
+1 [style = filled, label = "Assert.assertEquals(1,cars.size())@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "shouldGetAllCarsAndDetectAssociationType['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "shouldGetAllCarsNonUnique['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "Assert.assertEquals(\"VW\",cars.get(0).getType())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "Assert.assertEquals(4,cars.size())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Assert.assertNotNull(cars.get(0).getEngine())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "Assert.assertNull(cars.get(0).getBrakes())@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "shouldGetAllCarsNonUnique['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Assert.assertEquals(\"Opel\",cars.get(1).getType())@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "List<Car> cars = mapper.getCars2()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "List<Car> cars = mapper.getCarsAndDetectAssociationType()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Assertions.assertEquals(1,cars.size())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+14 [style = filled, label = "Assert.assertNotNull(cars.get(1).getBrakes())@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "Assert.assertNull(cars.get(1).getEngine())@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+1->4 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+1->10 [style = dashed, label="0"];
+9->0 [style = bold, label=""];
+5->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+7->8 [style = bold, label=""];
+0->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+10->7 [style = bold, label=""];
+13->14 [style = bold, label=""];
+6->10 [style = bold, label=""];
+11->13 [style = bold, label=""];
+12->11 [style = bold, label=""];
+8->12 [style = bold, label=""];
+}

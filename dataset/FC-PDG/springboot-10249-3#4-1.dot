@@ -1,0 +1,26 @@
+digraph {
+6 [style = filled, label = "ResponseEntity<String> entity = new TestRestTemplate().withBasicAuth(\"user\",\"password\").getForEntity(\"http://localhost:\" + this.managementPort + \"/actuator/health\",)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "ResponseEntity<String> entity = this.restTemplate.withBasicAuth(\"user\",getPassword()).getForEntity(\"/admin/health\",)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testHealth['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "assertThat(entity.getBody()).contains(\"\"hello\":\"world\"\")@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(entity.getBody()).contains(\"\"counter\":42\")@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testHealth['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ResponseEntity<String> entity = new TestRestTemplate().withBasicAuth(\"user\",getPassword()).getForEntity(\"http://localhost:\" + this.managementPort + \"/actuator/health\",)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "assertThat(entity.getBody()).contains(\"\"status\":\"UP\"\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testCustomContextPath['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(entity.getBody()).contains(\"\"example\"\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+8->4 [style = bold, label=""];
+10->8 [style = bold, label=""];
+5->9 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->4 [style = bold, label=""];
+7->6 [style = bold, label=""];
+}

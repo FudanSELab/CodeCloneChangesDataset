@@ -1,0 +1,13 @@
+digraph {
+1 [style = filled, label = "testQuery(\"SELECT dim1 FROM numfoo WHERE f1 = 0.1 LIMIT 1\",ImmutableList.of(newScanQueryBuilder().dataSource(CalciteTests.DATASOURCE3).intervals(querySegmentSpec(Filtration.eternity())).columns(\"dim1\").filters(selector(\"f1\",\"0.1\",null)).resultFormat(ScanQuery.RESULT_FORMAT_COMPACTED_LIST).limit(1).context(QUERY_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8d706a))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "testFilterFloatDimension['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testFilterLongDimension['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testQuery(\"SELECT dim1 FROM numfoo WHERE f1 = 0.1 LIMIT 1\",ImmutableList.of(newScanQueryBuilder().dataSource(CalciteTests.DATASOURCE3).intervals(querySegmentSpec(Filtration.eternity())).columns(\"dim1\").filters(selector(\"f1\",\"0.1\",null)).resultFormat(ScanQuery.ResultFormat.RESULT_FORMAT_COMPACTED_LIST).limit(1).context(QUERY_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8d70a3))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testQuery(\"SELECT dim1 FROM numfoo WHERE l1 = 7 LIMIT 1\",ImmutableList.of(newScanQueryBuilder().dataSource(CalciteTests.DATASOURCE3).intervals(querySegmentSpec(Filtration.eternity())).columns(\"dim1\").filters(selector(\"l1\",\"7\",null)).resultFormat(ScanQuery.RESULT_FORMAT_COMPACTED_LIST).limit(1).context(QUERY_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8d70da))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testFilterFloatDimension['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->4 [style = dashed, label="0"];
+1->2 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+}

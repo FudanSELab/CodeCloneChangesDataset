@@ -1,0 +1,29 @@
+digraph {
+5 [style = filled, label = "swappedPojoHeaders['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "@Header(n=\"d\",cf=\"uon\") Map<SwappedPojo,SwappedPojo((((((> d@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "swappedPojoHeaders['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "@Header(n=\"c\",cf=\"uon\") Map<SwappedPojo,SwappedPojo> c@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertObject['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "@Query(n=\"c\",cf=\"uon\") Map<SwappedPojo,SwappedPojo> c@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "@Header(n=\"b\",cf=\"uon\") SwappedPojo(((((( b@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertObject['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "assertObject['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "@Header(n=\"b\",cf=\"uon\") SwappedPojo(((((( b@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "@Header(n=\"d\",cf=\"uon\") Map<SwappedPojo,SwappedPojo((((((> d@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "@Query(n=\"b\",cf=\"uon\") SwappedPojo(((((( b@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "@Header(n=\"c\",cf=\"uon\") Map<SwappedPojo,SwappedPojo> c@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "@Query(n=\"d\",cf=\"uon\") Map<SwappedPojo,SwappedPojo((((((> d@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "swappedPojoQueries['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->6 [style = dotted, label="true"];
+5->9 [style = dotted, label="true"];
+0->3 [style = dotted, label="true"];
+0->2 [style = dotted, label="true"];
+11->13 [style = dotted, label="true"];
+5->8 [style = dotted, label="true"];
+5->7 [style = dotted, label="true"];
+0->4 [style = dotted, label="true"];
+11->10 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+11->12 [style = dotted, label="true"];
+11->14 [style = dotted, label="true"];
+}

@@ -1,0 +1,32 @@
+digraph {
+3 [style = filled, label = "testResourceLimitExceededOnBroker['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "expectedException.expectCause(CoreMatchers.instanceOf())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "expectedException.expect()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testNotEnoughMergeBuffersOnQueryable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "GroupByQueryRunnerTestHelper.runQuery(factory,runner,query)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "final GroupByQuery query = GroupByQuery.builder().setDataSource(new QueryDataSource(GroupByQuery.builder().setDataSource(QueryRunnerTestHelper.dataSource).setInterval(QueryRunnerTestHelper.firstToThird).setGranularity(Granularities.ALL).setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\")).setAggregatorSpecs(Collections.singletonList(QueryRunnerTestHelper.rowsCount)).build())).setGranularity(Granularities.ALL).setInterval(QueryRunnerTestHelper.firstToThird).setAggregatorSpecs(new LongSumAggregatorFactory(\"rows\",\"rows\")).setContext(ImmutableMap.of(QueryContexts.TIMEOUT_KEY,500)).build()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "expectedException.expectMessage(\"Cannot acquire enough merge buffers\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "GroupByQueryRunnerTestHelper.runQuery(factory,runner,query)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "GroupByQueryRunnerTestHelper.runQuery(FACTORY,runner,query)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testResourceLimitExceededOnBroker['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "final GroupByQuery query = GroupByQuery.builder().setDataSource(new QueryDataSource(GroupByQuery.builder().setDataSource(GroupByQuery.builder().setDataSource(QueryRunnerTestHelper.dataSource).setInterval(QueryRunnerTestHelper.firstToThird).setGranularity(Granularities.ALL).setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\"),new DefaultDimensionSpec(\"market\",null)).setAggregatorSpecs(Collections.singletonList(QueryRunnerTestHelper.rowsCount)).build()).setInterval(QueryRunnerTestHelper.firstToThird).setGranularity(Granularities.ALL).setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\")).setAggregatorSpecs(Collections.singletonList(QueryRunnerTestHelper.rowsCount)).build())).setGranularity(Granularities.ALL).setInterval(QueryRunnerTestHelper.firstToThird).setAggregatorSpecs(new LongSumAggregatorFactory(\"rows\",\"rows\")).setContext(ImmutableMap.of(QueryContexts.TIMEOUT_KEY,500)).build()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "expectedException.expect()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final GroupByQuery query = GroupByQuery.builder().setDataSource(new QueryDataSource(GroupByQuery.builder().setDataSource(GroupByQuery.builder().setDataSource(QueryRunnerTestHelper.DATA_SOURCE).setInterval(QueryRunnerTestHelper.FIRST_TO_THIRD).setGranularity(Granularities.ALL).setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\"),new DefaultDimensionSpec(\"market\",null)).setAggregatorSpecs(Collections.singletonList(QueryRunnerTestHelper.ROWS_COUNT)).build()).setInterval(QueryRunnerTestHelper.FIRST_TO_THIRD).setGranularity(Granularities.ALL).setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\")).setAggregatorSpecs(Collections.singletonList(QueryRunnerTestHelper.ROWS_COUNT)).build())).setGranularity(Granularities.ALL).setInterval(QueryRunnerTestHelper.FIRST_TO_THIRD).setAggregatorSpecs(new LongSumAggregatorFactory(\"rows\",\"rows\")).setContext(ImmutableMap.of(QueryContexts.TIMEOUT_KEY,500)).build()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2->4 [style = dashed, label="0"];
+11->9 [style = solid, label="query"];
+12->10 [style = bold, label=""];
+4->6 [style = solid, label="query"];
+2->1 [style = solid, label="query"];
+5->0 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+11->9 [style = bold, label=""];
+0->4 [style = bold, label=""];
+4->6 [style = bold, label=""];
+7->12 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+8->7 [style = bold, label=""];
+0->2 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

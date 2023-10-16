@@ -1,0 +1,38 @@
+digraph {
+3 [style = filled, label = "this.resourceFactory != null@@@3@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "createWebSocketTransport['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "HttpServer httpServer = HttpServer.create().tcpConfiguration(null)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "createTcpTransport['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "TcpServer tcpServer = TcpServer.create().runOn(this.resourceFactory.getLoopResources()).addressSupplier(null)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "return TcpServerTransport.create(tcpServer)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "return WebsocketServerTransport.create(httpServer)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "createWebSocketTransport['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "return TcpServerTransport.create(getListenAddress())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return WebsocketServerTransport.create(getListenAddress())@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "HttpServer httpServer = HttpServer.create().tcpConfiguration(null)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5->3 [style = bold, label=""];
+1->3 [style = bold, label=""];
+3->4 [style = dotted, label="true"];
+3->6 [style = bold, label=""];
+4->2 [style = bold, label=""];
+3->9 [style = dotted, label="true"];
+9->10 [style = bold, label=""];
+3->6 [style = dotted, label="true"];
+4->2 [style = solid, label="httpServer"];
+4->6 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+7->3 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+3->10 [style = bold, label=""];
+2->0 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+3->8 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+8->9 [style = bold, label=""];
+8->9 [style = solid, label="tcpServer"];
+3->8 [style = dotted, label="true"];
+6->2 [style = solid, label="httpServer"];
+3->2 [style = dotted, label="true"];
+}

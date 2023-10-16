@@ -1,0 +1,37 @@
+digraph {
+3 [style = filled, label = "allowingObjectSpecToReturnSpecIdFor()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+14 [style = filled, label = "assertThat(representation.getShort(\"value\"),is(Short.valueOf((short)12345)))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "allowingObjectAdapterToReturn(Short.valueOf((short)12345))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertThat(representation.getString(\"extensions.x-isis-format\"),is(\"short\"))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "whenShortWrapper['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertThat(representation.getString(\"format\"),is(\"int\"))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "whenByteWrapper['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "whenByteWrapper['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "jsonValueEncoder.appendValueAndFormat(mockObjectAdapter,mockObjectSpec,representation,null,false)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(representation.getByte(\"value\"),is(Byte.valueOf((byte)123)))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "allowingObjectSpecToReturnSpecIdFor()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "allowingLogicalTypeReturnObjectTypeFor()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "assertThat(representation.getString(\"extensions.x-isis-format\"),is(\"byte\"))@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(representation.isIntegralNumber(\"value\"),is(true))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "allowingObjectAdapterToReturn(Byte.valueOf((byte)123))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->14 [style = bold, label=""];
+5->3 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+6->4 [style = bold, label=""];
+4->14 [style = dashed, label="0"];
+7->0 [style = bold, label=""];
+1->6 [style = bold, label=""];
+12->10 [style = bold, label=""];
+7->11 [style = bold, label=""];
+13->12 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+8->2 [style = bold, label=""];
+10->1 [style = bold, label=""];
+9->8 [style = bold, label=""];
+2->1 [style = bold, label=""];
+4->7 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+14->7 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+}

@@ -1,0 +1,34 @@
+digraph {
+9 [style = filled, label = "setupSqlSessionFactory['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "DataSource dataSource = BaseDataTest.createUnpooledDataSource(\"org/apache/ibatis/type/jdbc.properties\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "BaseDataTest.runScript(dataSource,\"org/apache/ibatis/type/BlobInputStreamTypeHandlerTest.sql\")@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "setupSqlSessionFactory['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "BaseDataTest.runScript(sqlSessionFactory.getConfiguration().getEnvironment().getDataSource(),\"org/apache/ibatis/type/BlobInputStreamTypeHandlerTest.sql\")@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration)@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "BaseDataTest.runScript(dataSource,\"org/apache/ibatis/type/ClobReaderTypeHandlerTest.sql\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Configuration configuration = new Configuration(environment)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "setupSqlSessionFactory['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Environment environment = new Environment(\"Production\",transactionFactory,dataSource)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "configuration.addMapper()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "TransactionFactory transactionFactory = new JdbcTransactionFactory()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->11 [style = bold, label=""];
+9->3 [style = bold, label=""];
+3->11 [style = solid, label="dataSource"];
+3->0 [style = bold, label=""];
+5->7 [style = bold, label=""];
+4->3 [style = bold, label=""];
+7->2 [style = solid, label="environment"];
+2->6 [style = solid, label="configuration"];
+3->0 [style = solid, label="dataSource"];
+1->6 [style = bold, label=""];
+3->5 [style = bold, label=""];
+11->5 [style = bold, label=""];
+10->3 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+3->7 [style = solid, label="dataSource"];
+7->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->7 [style = solid, label="transactionFactory"];
+6->8 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

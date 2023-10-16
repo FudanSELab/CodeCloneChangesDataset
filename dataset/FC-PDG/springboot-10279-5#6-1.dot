@@ -1,0 +1,14 @@
+digraph {
+2 [style = filled, label = "ApplicationContextRunner contextRunner = new ApplicationContextRunner().withUserConfiguration().withPropertyValues(\"other.name:foo\",\"first.name:bar\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "ApplicationContextRunner contextRunner = new ApplicationContextRunner().withUserConfiguration().withPropertyValues(\"other.name:foo\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testNaming['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "contextRunner.run(null)@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "prefixFromBeanMethodConfigurationPropertiesCanOverridePrefixOnClass['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testNaming['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2->5 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+4->5 [style = bold, label=""];
+}

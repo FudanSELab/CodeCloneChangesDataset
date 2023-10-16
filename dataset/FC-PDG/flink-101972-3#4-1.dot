@@ -1,0 +1,37 @@
+digraph {
+1 [style = filled, label = "final RowDataToAvroConverter elementConverter = createConverter(arrayType.getElementType())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return null@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "LogicalType valueType = extractValueTypeToAvroMap(type)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "createMapConverter['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "final RowDataToAvroConverter valueConverter = createConverter(valueType)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "return new RowDataToAvroConverter(){@Override public Object convert(Schema schema,Object object){final Schema elementSchema = schema.getElementType()ArrayData arrayData = (ArrayData)objectList<Object> list = new ArrayList<>()for (int i = 0 i < arrayData.size() ++i){list.add(elementConverter.convert(elementSchema,elementGetter.getElementOrNull(arrayData,i)))}return list}}@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "final ArrayData.ElementGetter valueGetter = ArrayData.createElementGetter(valueType)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "createArrayConverter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "LogicalType type@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "LogicalType elementType = arrayType.getElementType()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "ArrayType arrayType@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final ArrayData.ElementGetter elementGetter = ArrayData.createElementGetter(elementType)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "createArrayConverter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3->6 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+1->3 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+4->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+5->0 [style = dotted, label="true"];
+7->0 [style = dotted, label="true"];
+9->8 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+4->2 [style = solid, label="elementType"];
+1->12 [style = dashed, label="0"];
+4->9 [style = dashed, label="0"];
+1->6 [style = bold, label=""];
+9->8 [style = solid, label="valueType"];
+10->11 [style = dotted, label="true"];
+5->4 [style = bold, label=""];
+9->12 [style = solid, label="valueType"];
+10->9 [style = bold, label=""];
+12->3 [style = bold, label=""];
+8->12 [style = bold, label=""];
+11->9 [style = solid, label="type"];
+}

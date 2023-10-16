@@ -1,0 +1,11 @@
+digraph {
+3 [style = filled, label = "testSubstring['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "testBinarySubstring['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testSubstring['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "check(null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "check(new Action(){public void check(RexBuilder rexBuilder,RexExecutorImpl executor){final List<RexNode> reducedValues = new ArrayList<>()final RexLiteral binaryHello = rexBuilder.makeBinaryLiteral(new ByteString(\"Hello world!\".getBytes(UTF_8)))final RexNode plus = rexBuilder.makeCall(SqlStdOperatorTable.PLUS,rexBuilder.makeExactLiteral(BigDecimal.ONE),rexBuilder.makeExactLiteral(BigDecimal.ONE))RexLiteral four = rexBuilder.makeExactLiteral(BigDecimal.valueOf(4))final RexNode substring = rexBuilder.makeCall(SqlStdOperatorTable.SUBSTRING,binaryHello,plus,four)executor.reduce(rexBuilder,ImmutableList.of(substring,plus),reducedValues)assertThat(reducedValues.size(),equalTo(2))assertThat(reducedValues.get(0),instanceOf())assertThat(((RexLiteral)reducedValues.get(0)).getValue2().toString(),equalTo((Object)\"656c6c6f\"))assertThat(reducedValues.get(1),instanceOf())assertThat(((RexLiteral)reducedValues.get(1)).getValue2(),equalTo((Object)2L))}})@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->2 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+4->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+}

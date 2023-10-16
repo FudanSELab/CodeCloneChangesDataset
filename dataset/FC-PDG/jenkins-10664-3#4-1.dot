@@ -1,0 +1,21 @@
+digraph {
+8 [style = filled, label = "AtomicReference<String> seedRef = new AtomicReference<>()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "initialSeedIsSaved['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "initialSeedIsSaved['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "sessions.then(null)@@@12@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "sessions.then(null)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "AtomicReference<String> initialSeedRef = new AtomicReference<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "rr.addStep(new Statement(){@Override public void evaluate(){User alice = User.getById(\"alice\",false)assertNotNull(alice)String currentSeed = alice.getProperty().getSeed()assertEquals(currentSeed,seedRef.get())}})@@@18@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "renewSeedSavesTheChange['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "rr.addStep(new Statement(){@Override public void evaluate(){rr.j.jenkins.setCrumbIssuer(null)rr.j.jenkins.save()User alice = User.getById(\"alice\",true)alice.save()initialSeedRef.set(alice.getProperty().getSeed())requestRenewSeedForUser(alice)seedRef.set(alice.getProperty().getSeed())assertNotEquals(initialSeedRef.get(),seedRef.get())}})@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->1 [style = bold, label=""];
+3->1 [style = solid, label="alice"];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->8 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->3 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

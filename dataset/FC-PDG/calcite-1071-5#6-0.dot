@@ -1,0 +1,22 @@
+digraph {
+0 [style = filled, label = "testGroupByWithKeySelectorAndResultSelector['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "String s = Linq4j.asEnumerable(emps).groupBy(EMP_DEPTNO_SELECTOR,new Function2<Integer,Enumerable<Employee>,String>(){public String apply(Integer key,Enumerable<Employee> group){return String.format(Locale.ROOT,\"%s: %s\",key,stringJoin(\"+\",group.select(new Function1<Employee,String>(){public String apply(Employee element){return element.name}})))}}).toList().toString()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(\"(10: Fred+Eric+Janet, 30: Bill(\",s)@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testGroupByWithKeySelectorAndResultSelector['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "String s = Linq4j.asEnumerable(emps).groupBy(EMP_DEPTNO_SELECTOR,EMP_NAME_SELECTOR,new Function2<Integer,Enumerable<String>,String>(){public String apply(Integer key,Enumerable<String> group){return String.format(Locale.ROOT,\"%s: %s\",key,stringJoin(\"+\",group))}}).toList().toString()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "String s = Linq4j.asEnumerable(emps).groupBy(EMP_DEPTNO_SELECTOR,null).toList().toString()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "assertEquals(\"(10: Fred+Eric+Janet, 30: Bill(\",s)@@@14@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testGroupByWithKeySelectorAndElementSelectorAndResultSelector['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertEquals(\"(10: Fred+Eric+Janet, 30: Bill(\",s)@@@4@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+5->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+7->6 [style = bold, label=""];
+1->3 [style = dashed, label="0"];
+6->8 [style = solid, label="s"];
+3->4 [style = solid, label="s"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+6->8 [style = bold, label=""];
+1->2 [style = solid, label="s"];
+}

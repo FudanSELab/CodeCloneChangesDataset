@@ -1,0 +1,37 @@
+digraph {
+9 [style = filled, label = "dialogService.showErrorDialogAndWait(Localization.lang(\"Error pushing entries\"),Localization.lang(\"Could not connect to a running gnuserv process. Make sure that \" + \"Emacs or XEmacs is running, and that the server has been started \" + \"(by running the command 'server-start'/'gnuserv-start').\"))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@3fb2bepanel@@@10@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "operationCompleted['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "BasePanel panel@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "dialogService.showErrorDialogAndWait(Localization.lang(\"Error pushing entries\"),Localization.lang(\"Could not run the gnuclient/emacsclient program. Make sure you have \" + \"the emacsclient/gnuclient program installed and available in the PATH.\"))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "couldNotConnect@@@3@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "dialogService.showErrorDialogAndWait(Localization.lang(\"Error pushing entries\"),Localization.lang(\"Could not connect to Vim server. Make sure that Vim is running with correct server name.\"))@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@3fb28f@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "dialogService.showErrorDialogAndWait(Localization.lang(\"Error pushing entries\"),Localization.lang(\"Could not run the 'vim' program.\"))@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "operationCompleted['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "couldNotCall@@@6@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "operationCompleted['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->10 [style = dotted, label="true"];
+1->8 [style = bold, label=""];
+11->6 [style = bold, label=""];
+1->3 [style = bold, label=""];
+5->0 [style = dotted, label="true"];
+2->8 [style = dashed, label="0"];
+1->2 [style = dotted, label="false"];
+1->3 [style = dotted, label="true"];
+0->2 [style = solid, label="panel"];
+6->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+1->8 [style = dotted, label="false"];
+5->6 [style = bold, label=""];
+6->4 [style = dotted, label="true"];
+6->9 [style = dotted, label="true"];
+11->0 [style = dotted, label="true"];
+7->6 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+6->9 [style = bold, label=""];
+1->10 [style = bold, label=""];
+6->1 [style = dotted, label="false"];
+}

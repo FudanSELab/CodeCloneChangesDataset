@@ -1,0 +1,18 @@
+digraph {
+2 [style = filled, label = "HepProgram program = new HepProgramBuilder().addRuleInstance(FilterProjectTransposeRule.INSTANCE).addRuleInstance(FilterSetOpTransposeRule.INSTANCE).addRuleInstance(FilterToCalcRule.INSTANCE).addRuleInstance(ProjectToCalcRule.INSTANCE).addRuleInstance(CalcMergeRule.INSTANCE).addRuleInstance(ReduceExpressionsRule.CALC_INSTANCE).addRuleInstance(PruneEmptyRules.UNION_INSTANCE).addRuleInstance(ProjectToCalcRule.INSTANCE).addRuleInstance(CalcMergeRule.INSTANCE).addRuleInstance(ReduceExpressionsRule.CALC_INSTANCE).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testReduceConstantsCalc['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "sql(sql).with(program).check()@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "HepProgram program = new HepProgramBuilder().addRuleInstance(new CoerceInputsRule(,false,RelFactories.LOGICAL_BUILDER)).addRuleInstance(ProjectToCalcRule.INSTANCE).addRuleInstance(CalcMergeRule.INSTANCE).addRuleInstance(ReduceExpressionsRule.CALC_INSTANCE).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final String sql = \"insert into sales.dept(deptno, name)\" + \"select empno, cast(job as varchar(128)) from sales.empnullables\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testReduceCastsNullable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final String sql = \"select * from (\" + \" select upper(substring(x FROM 1 FOR 2) || substring(x FROM 3)) as u,\" + \" substring(x FROM 1 FOR 1) as s\" + \" from (\" + \" select 'table' as x from (values (true))\" + \" union\" + \" select 'view' from (values (true))\" + \" union\" + \" select 'foreign table' from (values (true))\" + \" )\" + \") where u = 'TABLE'\"@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testReduceConstantsCalc['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->0 [style = bold, label=""];
+7->1 [style = bold, label=""];
+4->2 [style = bold, label=""];
+5->6 [style = bold, label=""];
+6->7 [style = bold, label=""];
+3->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

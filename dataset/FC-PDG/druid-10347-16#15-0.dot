@@ -1,0 +1,37 @@
+digraph {
+7 [style = filled, label = "Assert.assertEquals(config.getSkipOffsetFromLatest(),fromJson.getSkipOffsetFromLatest())@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Assert.assertEquals(config.getInputSegmentSizeBytes(),fromJson.getInputSegmentSizeBytes())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final DataSourceCompactionConfig config = new DataSourceCompactionConfig(\"dataSource\",null,500L,null,new Period(3600),new UserCompactTuningConfig(null,null,10000L,null,null,null,null,null),ImmutableMap.of(\"key\",\"val\"))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+14 [style = filled, label = "testSerdeBasic['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Assert.assertEquals(config.getTaskContext(),fromJson.getTaskContext())@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Assert.assertEquals(25,fromJson.getTaskPriority())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final DataSourceCompactionConfig config = new DataSourceCompactionConfig(\"dataSource\",null,500L,null,new Period(3600),new UserCompactionTaskQueryTuningConfig(null,null,10000L,null,null,null,null,null),ImmutableMap.of(\"key\",\"val\"))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "Assert.assertEquals(config.getDataSource(),fromJson.getDataSource())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "final DataSourceCompactionConfig config = new DataSourceCompactionConfig(\"dataSource\",null,500L,null,new Period(3600),null,ImmutableMap.of(\"key\",\"val\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final DataSourceCompactionConfig fromJson = OBJECT_MAPPER.readValue(json,)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Assert.assertEquals(config.getMaxRowsPerSegment(),fromJson.getMaxRowsPerSegment())@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final String json = OBJECT_MAPPER.writeValueAsString(config)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testSerdeWithMaxTotalRows['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Assert.assertEquals(config.getTuningConfig(),fromJson.getTuningConfig())@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testSerdeWithMaxTotalRows['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9->3 [style = bold, label=""];
+4->10 [style = bold, label=""];
+5->7 [style = bold, label=""];
+2->11 [style = dashed, label="0"];
+2->9 [style = solid, label="config"];
+7->1 [style = bold, label=""];
+8->4 [style = bold, label=""];
+2->9 [style = bold, label=""];
+10->5 [style = bold, label=""];
+1->6 [style = bold, label=""];
+13->9 [style = solid, label="config"];
+13->9 [style = bold, label=""];
+11->9 [style = solid, label="config"];
+9->3 [style = solid, label="json"];
+11->9 [style = bold, label=""];
+14->13 [style = bold, label=""];
+2->13 [style = dashed, label="0"];
+3->8 [style = bold, label=""];
+0->2 [style = bold, label=""];
+12->11 [style = bold, label=""];
+}

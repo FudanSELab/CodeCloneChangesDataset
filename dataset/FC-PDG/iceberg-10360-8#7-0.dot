@@ -1,0 +1,37 @@
+digraph {
+0 [style = filled, label = "startMetastoreAndSpark['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "SparkTestBase.spark = SparkSession.builder().master(\"local(2(\").config(\"spark.testing\",\"true\").config(SQLConf.PARTITION_OVERWRITE_MODE().key(),\"dynamic\").config(\"spark.sql.extensions\",.getName()).config(\"spark.hadoop.\" + METASTOREURIS.varname,hiveConf.get(METASTOREURIS.varname)).config(\"spark.sql.shuffle.partitions\",\"4\").enableHiveSupport().getOrCreate()@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+13 [style = filled, label = "HiveConf hiveConf = metastore.hiveConf()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "metastore.start()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "SparkTestBase.spark = SparkSession.builder().master(\"local(2(\").config(\"spark.testing\",\"true\").config(SQLConf.PARTITION_OVERWRITE_MODE().key(),\"dynamic\").config(\"spark.sql.extensions\",.getName()).config(\"spark.hadoop.\" + METASTOREURIS.varname,hiveConf.get(METASTOREURIS.varname)).config(\"spark.sql.shuffle.partitions\",\"4\").config(\"spark.sql.hive.metastorePartitionPruningFallbackOnException\",\"true\").enableHiveSupport().getOrCreate()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "startMetastoreAndSpark['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "catalog.createNamespace(Namespace.of(\"default\"))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "metastore = new TestHiveMetastore()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "SparkTestBase.catalog = (HiveCatalog)CatalogUtil.loadCatalog(.getName(),\"hive\",ImmutableMap.of(),hiveConf)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "SparkTestBase.hiveConf = metastore.hiveConf()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "catalog = (HiveCatalog)CatalogUtil.loadCatalog(.getName(),\"hive\",ImmutableMap.of(),hiveConf)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "spark = SparkSession.builder().master(\"local(2(\").config(SQLConf.PARTITION_OVERWRITE_MODE().key(),\"dynamic\").config(\"spark.hadoop.\" + METASTOREURIS.varname,hiveConf.get(METASTOREURIS.varname)).enableHiveSupport().getOrCreate()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "startMetastoreAndSpark['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "SparkTestBase.metastore = new TestHiveMetastore()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->13 [style = dashed, label="0"];
+13->10 [style = bold, label=""];
+1->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+12->9 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+3->5 [style = bold, label=""];
+5->4 [style = solid, label="hiveConf"];
+5->6 [style = bold, label=""];
+11->3 [style = bold, label=""];
+10->12 [style = bold, label=""];
+7->2 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+3->13 [style = bold, label=""];
+13->12 [style = solid, label="hiveConf"];
+2->11 [style = dashed, label="0"];
+8->11 [style = bold, label=""];
+}

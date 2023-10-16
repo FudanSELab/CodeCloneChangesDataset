@@ -1,0 +1,27 @@
+digraph {
+6 [style = filled, label = "return new ConfigurableCleanableDataset<>(this.fs,datasetProps,path,this.client.getConfig(this.props.getProperty(ConfigurationKeys.CONFIG_MANAGEMENT_STORE_URI) + path),LoggerFactory.getLogger())@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "datasetAtPath['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "datasetAtPath['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "return new CleanableIcebergDataset<>(this.fs,this.props,path,this.client.getConfig(this.props.getProperty(ConfigurationKeys.CONFIG_MANAGEMENT_STORE_URI) + ICEBERG_CONFIG_PREFIX + path.toString()),LoggerFactory.getLogger())@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "datasetProps.putAll(this.props)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "return new ConfigurableCleanableDataset<>(this.fs,this.props,path,this.client.getConfig(this.props.getProperty(ConfigurationKeys.CONFIG_MANAGEMENT_STORE_URI) + path.toString()),LoggerFactory.getLogger())@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "Path path@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "datasetAtPath['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "datasetProps.setProperty(FsCleanableHelper.RETENTION_DATASET_ROOT,path.toString())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "Properties datasetProps = new Properties()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5->3 [style = bold, label=""];
+3->6 [style = solid, label="datasetProps"];
+1->6 [style = solid, label="path"];
+0->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+3->7 [style = bold, label=""];
+9->8 [style = bold, label=""];
+1->8 [style = solid, label="path"];
+4->6 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+1->2 [style = solid, label="path"];
+5->1 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+9->1 [style = dotted, label="true"];
+2->6 [style = dashed, label="0"];
+}

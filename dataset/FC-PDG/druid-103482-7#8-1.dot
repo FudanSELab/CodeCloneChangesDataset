@@ -1,0 +1,32 @@
+digraph {
+11 [style = filled, label = "testDefaultCompressionForTDigestGenerateSketchAgg['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Assert.assertEquals(expectedResults.size(),results.size())@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+13 [style = filled, label = "Assert.assertEquals(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(new MultipleIntervalSegmentSpec(ImmutableList.of(Filtration.eternity()))).granularity(Granularities.ALL).aggregators(ImmutableList.of(new TDigestSketchAggregatorFactory(\"a0:agg\",\"m1\",TDigestSketchAggregatorFactory.DEFAULT_COMPRESSION))).context(TIMESERIES_CONTEXT_DEFAULT).build(),Iterables.getOnlyElement(queryLogHook.getRecordedQueries()))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Assert.assertEquals(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(new MultipleIntervalSegmentSpec(ImmutableList.of(Filtration.eternity()))).granularity(Granularities.ALL).aggregators(ImmutableList.of(new TDigestSketchAggregatorFactory(\"a0:agg\",\"m1\",200))).context(TIMESERIES_CONTEXT_DEFAULT).build(),Iterables.getOnlyElement(queryLogHook.getRecordedQueries()))@@@10@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "final List<Object((> results = sqlLifecycle.runSimple(sql,TIMESERIES_CONTEXT_DEFAULT,DEFAULT_PARAMETERS,AUTH_RESULT).toList()@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "SqlLifecycle sqlLifecycle = getSqlLifecycle()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testComputingSketchOnNumericValues['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "final String sql = \"SELECT\" + \"TDIGEST_GENERATE_SKETCH(m1)\" + \"FROM foo\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final String sql = \"SELECT\" + \"TDIGEST_GENERATE_SKETCH(m1, 200)\" + \"FROM foo\"@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "cannotVectorize()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "sqlLifecycle.runSimple(sql,TIMESERIES_CONTEXT_DEFAULT,DEFAULT_PARAMETERS,AUTH_RESULT).toList()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final List<String((> expectedResults = ImmutableList.of(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8f1b8e)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "testComputingSketchOnNumericValues['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testQuery(\"SELECT\" + \"TDIGEST_GENERATE_SKETCH(m1, 200)\" + \"FROM foo\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(new MultipleIntervalSegmentSpec(ImmutableList.of(Filtration.eternity()))).granularity(Granularities.ALL).aggregators(ImmutableList.of(new TDigestSketchAggregatorFactory(\"a0:agg\",\"m1\",200))).context(QUERY_CONTEXT_DEFAULT).build()),ImmutableList.of(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8f1c07))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1->5 [style = bold, label=""];
+4->12 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+12->10 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+10->13 [style = bold, label=""];
+9->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+11->4 [style = bold, label=""];
+1->13 [style = dashed, label="0"];
+}

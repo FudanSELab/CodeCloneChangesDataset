@@ -1,0 +1,21 @@
+digraph {
+6 [style = filled, label = "shouldThrowExceptionIfTryingToAddStatementWithSameNameInAnnotation['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "config.addMappedStatement(ms)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "MappedStatement ms = new MappedStatement.Builder(config,\"org.apache.ibatis.domain.blog.mappers.AuthorMapper.selectAuthor2\",Mockito.mock(),SqlCommandType.SELECT).resource(\"org/mybatis/TestMapper.xml\").build()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "MappedStatement ms = new MappedStatement.Builder(config,\"org.apache.ibatis.domain.blog.mappers.BlogMapper.selectBlogWithPostsUsingSubSelect\",Mockito.mock(),SqlCommandType.SELECT).resource(\"org/mybatis/TestMapper.xml\").build()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Configuration config = sqlMapper.getConfiguration()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "fail(\"Expected exception to be thrown due to statement that already exists.\")@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "shouldThrowExceptionIfTryingToAddStatementWithSameNameInXml['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "shouldThrowExceptionIfTryingToAddStatementWithSameNameInXml['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+0->3 [style = solid, label="ms"];
+7->3 [style = solid, label="ms"];
+5->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+2->7 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+7->3 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

@@ -1,0 +1,27 @@
+digraph {
+5 [style = filled, label = "project['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final int(( fields@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final DataContext root@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final int(( fields@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final DataContext root@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return new AbstractEnumerable<Object>(){@Override public Enumerator<Object> enumerator(){JavaTypeFactory typeFactory = requireNonNull(root.getTypeFactory(),\"root.getTypeFactory\")return new CsvEnumerator<>(source,cancelFlag,getFieldTypes(typeFactory),ImmutableIntList.of(fields))}}@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final AtomicBoolean cancelFlag = DataContext.Variable.CANCEL_FLAG.get(root)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "project['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "project['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4->2 [style = solid, label="root"];
+5->6 [style = dotted, label="true"];
+6->2 [style = solid, label="root"];
+8->7 [style = dotted, label="true"];
+5->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->3 [style = solid, label="fields"];
+1->0 [style = dotted, label="true"];
+4->3 [style = solid, label="fields"];
+1->4 [style = dotted, label="true"];
+8->2 [style = bold, label=""];
+7->3 [style = solid, label="fields"];
+8->4 [style = dotted, label="true"];
+2->3 [style = solid, label="cancelFlag"];
+5->4 [style = dotted, label="true"];
+2->3 [style = bold, label=""];
+}

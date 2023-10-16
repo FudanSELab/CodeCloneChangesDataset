@@ -1,0 +1,32 @@
+digraph {
+9 [style = filled, label = "sql(\"SELECT DISTINCT deptno from emp\" + \"ORDER BY deptno, ^sum(empno)^\").fails(\"Aggregate expression is illegal in ORDER BY clause of non-aggregating SELECT\")@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testOrderGroupDistinct['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "sql(\"SELECT DISTINCT deptno, sum(empno) from emp\" + \"GROUP BY deptno ORDER BY deptno, sum(empno)\").ok()@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "sql(\"select stream productId, count(*) as c\" + \"from orders\" + \"^group by productId^\" + \"having count(*) > 5\").fails(STR_AGG_REQUIRES_MONO)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "sql(\"select distinct count(empno) from emp\" + \"group by empno\" + \"order by count(empno) desc\").ok()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "sql(\"select stream floor(rowtime to hour) as rowtime, productId,\" + \" count(*) as c\" + \"from orders\" + \"group by floor(rowtime to hour), productId\" + \"having false\").ok()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "sql(\"select distinct count(empno) from emp\" + \"group by empno\" + \"order by 1\").ok()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testOrderGroupDistinct['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testStreamHaving['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "sql(\"select distinct count(empno) AS countEMPNO from emp\" + \"group by empno\" + \"order by 1\").ok()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "sql(\"select distinct count(empno) from emp\" + \"group by empno\" + \"order by count(empno)\").ok()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "sql(\"SELECT DISTINCT deptno from emp\" + \"GROUP BY deptno ORDER BY deptno, ^sum(empno)^\").fails(\"Expression 'SUM\(`EMPNO`\)' is not in the select clause\")@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "sql(\"select stream rowtime, productId, count(*) as c\" + \"from orders\" + \"group by productId, rowtime\" + \"having count(*) > 5\").ok()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "sql(\"select distinct count(empno) AS countEMPNO from emp\" + \"group by empno\" + \"order by count(empno)\").ok()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "sql(\"SELECT DISTINCT deptno, min(empno) from emp\" + \"GROUP BY deptno ORDER BY deptno, ^sum(empno)^\").fails(\"Expression 'SUM\(`EMPNO`\)' is not in the select clause\")@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "sql(\"select stream 1\" + \"from orders\" + \"having ^count(*) > 3^\").fails(STR_AGG_REQUIRES_MONO)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9->5 [style = bold, label=""];
+6->1 [style = bold, label=""];
+7->3 [style = bold, label=""];
+1->4 [style = bold, label=""];
+5->0 [style = bold, label=""];
+10->1 [style = bold, label=""];
+15->14 [style = bold, label=""];
+14->11 [style = bold, label=""];
+3->8 [style = bold, label=""];
+4->7 [style = bold, label=""];
+11->13 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->9 [style = bold, label=""];
+12->15 [style = bold, label=""];
+}

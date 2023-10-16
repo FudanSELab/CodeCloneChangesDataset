@@ -1,0 +1,29 @@
+digraph {
+7 [style = filled, label = "assertThatThrownBy(null).isInstanceOf()@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "context.refresh()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "thrown.expect()@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "TestPropertyValues.of(\"zipkin.collector.kafka.bootstrap-servers:localhost:9092\").applyTo(context)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "context.register(,,)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "doesNotProvidesCollectorComponent_whenUrlSetAndDisabled['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "context.getBean()@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "providesCollectorComponent_whenBootstrapServersSet['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "TestPropertyValues.of(\"zipkin.collector.activemq.url:tcp://localhost:61616\").applyTo(context)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(context.getBean()).isNotNull()@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "doesNotProvidesCollectorComponent_whenUrlSetAndDisabled['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "context.register(,,)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "TestPropertyValues.of(\"zipkin.collector.activemq.enabled:false\").applyTo(context)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+10->0 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+12->10 [style = bold, label=""];
+6->0 [style = bold, label=""];
+9->12 [style = bold, label=""];
+3->2 [style = bold, label=""];
+8->5 [style = bold, label=""];
+11->9 [style = bold, label=""];
+4->6 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

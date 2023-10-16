@@ -1,0 +1,36 @@
+digraph {
+5 [style = filled, label = "assertIngestionSchema(ingestionSpecs,expectedDimensionsSpec,AGGREGATORS,SEGMENT_INTERVALS,tuningConfig,Granularities.MONTH,Granularities.NONE,IOConfig.DEFAULT_DROP_EXISTING)@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final List<ParallelIndexIngestionSpec> ingestionSpecs = CompactionTask.createIngestionSchema(toolbox,LockGranularity.TIME_CHUNK,new SegmentProvider(DATA_SOURCE,SpecificSegmentsSpec.fromSegments(SEGMENTS)),new PartitionConfigurationManager(TUNING_CONFIG),null,null,null,COORDINATOR_CLIENT,segmentLoaderFactory,RETRY_POLICY_FACTORY,IOConfig.DEFAULT_DROP_EXISTING)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertIngestionSchema(ingestionSpecs,expectedDimensionsSpec,AGGREGATORS,SEGMENT_INTERVALS,Granularities.MONTH,Granularities.NONE,IOConfig.DEFAULT_DROP_EXISTING)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testCreateIngestionSchemaWithTargetPartitionSize['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final CompactionTask.CompactionTuningConfig tuningConfig = new CompactionTask.CompactionTuningConfig(100000,null,null,500000,1000000L,null,null,null,null,null,new IndexSpec(new RoaringBitmapSerdeFactory(true),CompressionStrategy.LZ4,CompressionStrategy.LZF,LongEncodingStrategy.LONGS),null,null,true,false,null,null,null,10,null,null,null,null,null,null,null,null,null,null,null)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Assert.assertEquals(6,ingestionSpecs.size())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "ingestionSpecs.sort(null)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testCreateIngestionSchemaWithTargetPartitionSize['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "final List<ParallelIndexIngestionSpec> ingestionSpecs = CompactionTask.createIngestionSchema(toolbox,LockGranularity.TIME_CHUNK,new SegmentProvider(DATA_SOURCE,new CompactionIntervalSpec(COMPACTION_INTERVAL,null)),new PartitionConfigurationManager(tuningConfig),null,null,null,COORDINATOR_CLIENT,segmentCacheManagerFactory,RETRY_POLICY_FACTORY,IOConfig.DEFAULT_DROP_EXISTING)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "final List<ParallelIndexIngestionSpec> ingestionSpecs = CompactionTask.createIngestionSchema(toolbox,LockGranularity.TIME_CHUNK,new SegmentProvider(DATA_SOURCE,new CompactionIntervalSpec(COMPACTION_INTERVAL,null)),new PartitionConfigurationManager(tuningConfig),null,null,null,COORDINATOR_CLIENT,segmentLoaderFactory,RETRY_POLICY_FACTORY,IOConfig.DEFAULT_DROP_EXISTING)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "final List<DimensionsSpec> expectedDimensionsSpec = getExpectedDimensionsSpecForAutoGeneration()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testCreateIngestionSchemaWithCustomSegments['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6->8 [style = solid, label="tuningConfig"];
+9->11 [style = bold, label=""];
+5->3 [style = dashed, label="0"];
+2->6 [style = bold, label=""];
+1->3 [style = bold, label=""];
+6->5 [style = solid, label="tuningConfig"];
+4->5 [style = solid, label="ingestionSpecs"];
+8->5 [style = solid, label="ingestionSpecs"];
+4->0 [style = bold, label=""];
+8->0 [style = bold, label=""];
+9->3 [style = solid, label="ingestionSpecs"];
+6->4 [style = bold, label=""];
+3->5 [style = bold, label=""];
+11->0 [style = bold, label=""];
+0->1 [style = bold, label=""];
+6->8 [style = bold, label=""];
+7->6 [style = bold, label=""];
+11->3 [style = solid, label="expectedDimensionsSpec"];
+4->8 [style = dashed, label="0"];
+10->9 [style = bold, label=""];
+6->4 [style = solid, label="tuningConfig"];
+0->5 [style = solid, label="expectedDimensionsSpec"];
+}

@@ -1,0 +1,28 @@
+digraph {
+5 [style = filled, label = "observable.doOnNext(new Consumer<GroupedObservable<K,V>>(){@Override public void accept(final GroupedObservable<K,V> o){result.put(o.getKey(),new ConcurrentLinkedQueue<V>())o.subscribe(new Consumer<V>(){@Override public void accept(V v){result.get(o.getKey()).add(v)}})}}).blockingSubscribe()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "toMap['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "flowable.blockingForEach(new Consumer<GroupedFlowable<K,V>>(){@Override public void accept(final GroupedFlowable<K,V> f){result.put(f.getKey(),new ConcurrentLinkedQueue<V>())f.subscribe(new Consumer<V>(){@Override public void accept(V v){result.get(f.getKey()).add(v)}})}})@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "Flowable<GroupedFlowable<K,V>> flowable@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "observable.blockingForEach(new Consumer<GroupedObservable<K,V>>(){@Override public void accept(final GroupedObservable<K,V> o){result.put(o.getKey(),new ConcurrentLinkedQueue<V>())o.subscribe(new Consumer<V>(){@Override public void accept(V v){result.get(o.getKey()).add(v)}})}})@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "final ConcurrentHashMap<K,Collection<V>> result = new ConcurrentHashMap<K,Collection<V>>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "toMap['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "return result@@@16@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Observable<GroupedObservable<K,V>> observable@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "toMap['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8->0 [style = bold, label=""];
+3->4 [style = dotted, label="true"];
+4->9 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+6->0 [style = bold, label=""];
+8->9 [style = dotted, label="true"];
+1->5 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+6->4 [style = dotted, label="true"];
+7->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+0->7 [style = bold, label=""];
+0->2 [style = solid, label="result"];
+}

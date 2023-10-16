@@ -1,0 +1,16 @@
+digraph {
+3 [style = filled, label = "b03_beanQueries['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "String r = proxy.beanFormData(new ABean().init(),null,new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@158f3d8,new AList<ABean>().append(new ABean().init()).append(null),new AList<ABean((((((>().append(new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@158f3f4).append(null),new AMap<String,ABean>().append(\"foo\",new ABean().init()),new AMap<String,List<ABean>>().append(\"foo\",Arrays.asList(new ABean().init())),new AMap<String,List<ABean((((((>>().append(\"foo\",new AList<ABean((((((>().append(new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@158f421).append(null)),new AMap<Integer,List<ABean>>().append(1,Arrays.asList(new ABean().init())))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(\"OK\",r)@@@22@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "c03_beanFormData['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String r = proxy.beanQueries(new ABean().init(),null,new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@158f369,AList.of(new ABean().init(),null),AList.of(new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@158f380,null),new AMap<String,ABean>().append(\"foo\",new ABean().init()),new AMap<String,List<ABean>>().append(\"foo\",Arrays.asList(new ABean().init())),new AMap<String,List<ABean((((((>>().append(\"foo\",AList.of(new ABean((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@158f3aa,null)),new AMap<Integer,List<ABean>>().append(1,Arrays.asList(new ABean().init())))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "b03_beanQueries['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3->0 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+5->4 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+4->1 [style = solid, label="r"];
+0->1 [style = solid, label="r"];
+}

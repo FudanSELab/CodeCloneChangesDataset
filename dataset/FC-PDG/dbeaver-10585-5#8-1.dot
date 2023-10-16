@@ -1,0 +1,28 @@
+digraph {
+5 [style = filled, label = "menu.add(new Action(\"Copy All\"){@Override public void run(){StringBuilder text = new StringBuilder()int columnCount = table.getColumnCount()for (TableItem item : table.getSelection()){if (text.length() > 0) text.append(\"\")for (int i = 0 i < columnCount i++){if (i > 0) text.append(\"\")text.append(item.getText(i))}}if (text.length() == 0) {return}UIUtils.setClipboardContents(table.getDisplay(),TextTransfer.getInstance(),text.toString())}})@@@19@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "final Tree tree@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final Table table@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "IContributionManager menu@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "fillDefaultTreeContextMenu['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "fillDefaultTableContextMenu['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "fillDefaultTableContextMenu['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "menu.add(new Action(\"Copy \" + table.getColumn(0).getText()){@Override public void run(){StringBuilder text = new StringBuilder()for (TableItem item : table.getSelection()){if (text.length() > 0) text.append(\"\")text.append(item.getText(0))}if (text.length() == 0) {return}UIUtils.setClipboardContents(table.getDisplay(),TextTransfer.getInstance(),text.toString())}})@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "table.getColumnCount() > 1@@@3@@@['0', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "IContributionManager menu@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "menu.add(new Action(\"Copy selection\"){@Override public void run(){StringBuilder text = new StringBuilder()int columnCount = tree.getColumnCount()for (TreeItem item : tree.getSelection()){if (text.length() > 0) text.append(\"\")for (int i = 0 i < columnCount i++){if (i > 0) text.append(\"\")text.append(item.getText(i))}}if (text.length() == 0) {return}UIUtils.setClipboardContents(tree.getDisplay(),TextTransfer.getInstance(),text.toString())}})@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final Table table@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2->3 [style = dotted, label="true"];
+8->7 [style = bold, label=""];
+6->8 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+7->5 [style = bold, label=""];
+2->0 [style = dotted, label="true"];
+6->4 [style = dotted, label="true"];
+6->3 [style = dotted, label="true"];
+8->5 [style = bold, label=""];
+9->10 [style = dotted, label="true"];
+9->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+9->11 [style = dotted, label="true"];
+}

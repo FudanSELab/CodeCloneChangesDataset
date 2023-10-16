@@ -1,0 +1,30 @@
+digraph {
+5 [style = filled, label = "test_isScanOrMapping_filter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "Assert.assertFalse(DruidRels.isScanOrMapping(rel,true))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "test_isScanOrMapping_filter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final DruidRel<?> rel = mockDruidRel(,PartialDruidQuery.Stage.WHERE_FILTER,null,mockFilter())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final DruidRel<?> rel = mockDruidRel(,PartialDruidQuery.Stage.WHERE_FILTER,null,mockFilter())@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "Assert.assertFalse(DruidRels.isScanOrMapping(rel,false))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "EasyMock.verify(rel,rel.getPartialDruidQuery())@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final DruidRel<?> rel = mockDruidRel(,PartialDruidQuery.Stage.WHERE_FILTER,null,null,mockFilter())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "test_isScanOrMapping_filterJoin['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8->7 [style = bold, label=""];
+0->2 [style = solid, label="rel"];
+0->1 [style = solid, label="rel"];
+7->1 [style = solid, label="rel"];
+7->4 [style = solid, label="rel"];
+1->4 [style = bold, label=""];
+6->2 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+6->4 [style = solid, label="rel"];
+5->6 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+7->2 [style = solid, label="rel"];
+7->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->4 [style = solid, label="rel"];
+0->2 [style = bold, label=""];
+6->1 [style = solid, label="rel"];
+6->2 [style = solid, label="rel"];
+}

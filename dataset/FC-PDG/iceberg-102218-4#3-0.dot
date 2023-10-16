@@ -1,0 +1,32 @@
+digraph {
+2 [style = filled, label = "return set@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "String columns@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "reader.forEach(null)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Table table@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "String columns@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "actualRowSet['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "actualRowSet['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "table.refresh()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "String columns@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "actualRowSet['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "StructLikeSet set = StructLikeSet.create(table.schema().asStruct())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Long snapshotId@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "long snapshotId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Table table@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+1->5 [style = bold, label=""];
+4->6 [style = dotted, label="true"];
+13->11 [style = dotted, label="true"];
+5->2 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+7->0 [style = bold, label=""];
+4->3 [style = dotted, label="true"];
+7->10 [style = dotted, label="true"];
+7->9 [style = dotted, label="true"];
+1->2 [style = solid, label="set"];
+7->8 [style = dotted, label="true"];
+13->12 [style = dotted, label="true"];
+0->1 [style = bold, label=""];
+4->0 [style = bold, label=""];
+13->0 [style = bold, label=""];
+6->12 [style = dashed, label="0"];
+}

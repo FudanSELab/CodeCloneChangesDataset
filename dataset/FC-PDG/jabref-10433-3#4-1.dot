@@ -1,0 +1,32 @@
+digraph {
+10 [style = filled, label = "preferences = new CitationKeyPatternPreferences(false,false,false,CitationKeyPatternPreferences.KeySuffix.SECOND_WITH_B,\"\",\"\",DEFAULT_UNWANTED_CHARACTERS,pattern,',')@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "generateDefaultKeyAlreadyExistsDuplicatesStartAtB['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "CitationKeyGenerator keyGenerator = new CitationKeyGenerator(bibtexKeyPattern,database,preferences)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "entry2.setField(StandardField.AUTHOR,\"John Doe\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "generateDefaultKeyAlreadyExistsDuplicatesStartAtA['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "keyGenerator.generateAndSetKey(entry)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "CitationKeyGenerator keyGenerator = new CitationKeyGenerator(bibtexKeyPattern,database,preferences)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertEquals(Optional.of(\"Doe2016b\"),entry2.getCiteKeyOptional())@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "keyGenerator.generateAndSetKey(entry2)@@@9@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "generateDefaultKeyAlreadyExistsDuplicatesStartAtA['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "assertEquals(Optional.of(\"Doe2016a\"),entry2.getCitationKey())@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "BibEntry entry2 = new BibEntry()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "entry2.setField(StandardField.YEAR,\"2016\")@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+4->9 [style = bold, label=""];
+6->11 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+12->10 [style = bold, label=""];
+3->6 [style = solid, label="entry2"];
+10->5 [style = bold, label=""];
+3->1 [style = bold, label=""];
+5->0 [style = bold, label=""];
+8->2 [style = bold, label=""];
+0->4 [style = solid, label="entry2"];
+4->6 [style = bold, label=""];
+7->2 [style = bold, label=""];
+6->11 [style = bold, label=""];
+2->5 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+10->5 [style = solid, label="preferences"];
+}

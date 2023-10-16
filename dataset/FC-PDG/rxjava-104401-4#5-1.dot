@@ -1,0 +1,31 @@
+digraph {
+10 [style = filled, label = "Observable.error(ex).ignoreElements().toObservable().subscribe(to)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "errorReceived['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "errorReceived['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "to.assertError()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "errorReceivedObservable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "to.assertTerminated()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "to.assertErrorMessage(\"boo\")@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Flowable.error(ex).ignoreElements().subscribe(to)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "TestObserverEx<Object> to = new TestObserverEx<Object>()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "TestObserverEx<Object> to = new TestObserverEx<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "TestException ex = new TestException(\"boo\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "to.assertNoValues()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+5->10 [style = bold, label=""];
+6->5 [style = bold, label=""];
+10->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->6 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+6->10 [style = solid, label="to"];
+3->2 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+6->3 [style = solid, label="to"];
+4->7 [style = bold, label=""];
+11->6 [style = bold, label=""];
+8->9 [style = bold, label=""];
+9->3 [style = solid, label="to"];
+}

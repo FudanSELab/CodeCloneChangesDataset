@@ -1,0 +1,9 @@
+digraph {
+3 [style = filled, label = "breadthFirst['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return new Iterator(){public boolean hasNext(){return this.next != null}public Object next(){try {return this.next}{this.next = getNextByBreadth()}}public void remove(){throw new UnsupportedOperationException()}private GPathResult getNextByBreadth(){List children = new ArrayList()while (this.iter.hasNext() || !children.isEmpty()) {if (this.iter.hasNext()) {final GPathResult node = (GPathResult)this.iter.next()this.list.add(node)this.list.add(this.iter)children.add(node.children())}{List nextLevel = new ArrayList()for (Object child : children){GPathResult next = (GPathResult)childfor (Object o : next){nextLevel.add(o)}}this.iter = nextLevel.iterator()children = new ArrayList()}}if (this.list.isEmpty()) {return null}{GPathResult result = (GPathResult)this.list.get(0)this.list.remove(0)this.iter = (Iterator)this.list.get(0)this.list.remove(0)return result}}}@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "depthFirst['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "depthFirst['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+}

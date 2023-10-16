@@ -1,0 +1,24 @@
+digraph {
+7 [style = filled, label = "assertThat(message.hasFooInt()).isFalse()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "TestOneofBackwardsCompatible source = TestOneofBackwardsCompatible.newBuilder().setFooInt(100).setFooString(\"101\").build()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testOneofOnlyLastSet['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testOneofOnlyLastSet['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testOneofOnlyLastSet['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertFalse(message.hasFooInt())@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "ByteString rawBytes = source.toByteString()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThat(message.hasFooString()).isTrue()@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "assertTrue(message.hasFooString())@@@7@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "TestOneof2 message = TestOneof2.parseFrom(rawBytes)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->5 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+2->7 [style = bold, label=""];
+3->1 [style = bold, label=""];
+5->0 [style = bold, label=""];
+7->8 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+0->2 [style = solid, label="rawBytes"];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

@@ -1,0 +1,18 @@
+digraph {
+3 [style = filled, label = "Map<String,String> configMap = new HashMap<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "getManagerConfig['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "getManagerConfig['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "configMap.put(GobblinClusterConfigurationKeys.MANAGER_CLUSTER_NAME_KEY,\"ManagerCluster\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "getManagerConfig['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "Config config = ConfigFactory.parseMap(configMap)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "configMap.put(GobblinClusterConfigurationKeys.DEDICATED_MANAGER_CLUSTER_ENABLED,\"true\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return config.withFallback(super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@19bd674).resolve()@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+7->3 [style = bold, label=""];
+3->0 [style = bold, label=""];
+3->2 [style = solid, label="configMap"];
+2->5 [style = bold, label=""];
+}

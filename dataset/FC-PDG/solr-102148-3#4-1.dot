@@ -1,0 +1,25 @@
+digraph {
+5 [style = filled, label = "processStats['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "int docCount@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "DocSet docs@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "Query bucketQ@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "processStats['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "processStats['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "SimpleOrderedMap<Object> bucket@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "DocSet docs@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "SimpleOrderedMap<Object> bucket@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "int docCount@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "DocSet docs@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "int docCount@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2->3 [style = dotted, label="true"];
+5->6 [style = dotted, label="true"];
+3->8 [style = dashed, label="0"];
+11->9 [style = dotted, label="true"];
+2->0 [style = dotted, label="true"];
+5->8 [style = dotted, label="true"];
+11->3 [style = dotted, label="true"];
+2->1 [style = dotted, label="true"];
+5->7 [style = dotted, label="true"];
+11->10 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+}

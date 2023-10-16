@@ -1,0 +1,31 @@
+digraph {
+7 [style = filled, label = "verifier.verify()@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "Keyspace keyspace = Keyspace.open(KEYSPACE)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ColumnFamilyStore cfs = keyspace.getColumnFamilyStore(COUNTER_CF3)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "verifier.verify(true)@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "ColumnFamilyStore cfs = keyspace.getColumnFamilyStore(COUNTER_CF2)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testVerifyCounterCorrectUncompressed['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "verifier.verify(false)@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "fillCounterCF(cfs,2)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "SSTableReader sstable = cfs.getLiveSSTables().iterator().next()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testExtendedVerifyCounterCorrect['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testVerifyCounterCorrectUncompressed['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "CompactionManager.instance.disableAutoCompaction()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+3->9 [style = bold, label=""];
+6->4 [style = bold, label=""];
+3->6 [style = bold, label=""];
+11->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+6->4 [style = solid, label="cfs"];
+2->10 [style = dashed, label="0"];
+9->4 [style = solid, label="cfs"];
+8->5 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+1->10 [style = bold, label=""];
+1->7 [style = bold, label=""];
+9->4 [style = bold, label=""];
+0->5 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+}

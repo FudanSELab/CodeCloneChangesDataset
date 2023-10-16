@@ -1,0 +1,26 @@
+digraph {
+4 [style = filled, label = "buildApplicationMasterCommand['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "String helixInstanceName@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "return new StringBuilder().append(ApplicationConstants.Environment.JAVA_HOME.$()).append(\"/bin/java\").append(\" -Xmx\").append((int)(container.getResource().getMemory() * this.jvmMemoryXmxRatio) - this.jvmMemoryOverheadMbs).append(\"M\").append(\" \").append(JvmUtils.formatJvmArguments(this.containerJvmArgs)).append(\" \").append(.getName()).append(\" --\").append(GobblinClusterConfigurationKeys.APPLICATION_NAME_OPTION_NAME).append(\" \").append(this.applicationName).append(\" --\").append(GobblinClusterConfigurationKeys.HELIX_INSTANCE_NAME_OPTION_NAME).append(\" \").append(helixInstanceName).append(\" 1>\").append(ApplicationConstants.LOG_DIR_EXPANSION_VAR).append(File.separator).append(containerProcessName).append(\".\").append(ApplicationConstants.STDOUT).append(\" 2>\").append(ApplicationConstants.LOG_DIR_EXPANSION_VAR).append(File.separator).append(containerProcessName).append(\".\").append(ApplicationConstants.STDERR).toString()@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "buildApplicationMasterCommand['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "buildContainerCommand['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "Container container@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "int memoryMbs@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return new StringBuilder().append(ApplicationConstants.Environment.JAVA_HOME.$()).append(\"/bin/java\").append(\" -Xmx\").append((int)(memoryMbs * this.jvmMemoryXmxRatio) - this.jvmMemoryOverheadMbs).append(\"M\").append(\" \").append(JvmUtils.formatJvmArguments(this.appMasterJvmArgs)).append(\" \").append(.getName()).append(\" --\").append(GobblinClusterConfigurationKeys.APPLICATION_NAME_OPTION_NAME).append(\" \").append(this.applicationName).append(\" 1>\").append(ApplicationConstants.LOG_DIR_EXPANSION_VAR).append(File.separator).append(appMasterClassName).append(\".\").append(ApplicationConstants.STDOUT).append(\" 2>\").append(ApplicationConstants.LOG_DIR_EXPANSION_VAR).append(File.separator).append(appMasterClassName).append(\".\").append(ApplicationConstants.STDERR).toString()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "String appMasterClassName = .getSimpleName()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "String containerProcessName = .getSimpleName()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "return new StringBuilder().append(ApplicationConstants.Environment.JAVA_HOME.$()).append(\"/bin/java\").append(\" -Xmx\").append((int)(memoryMbs * this.jvmMemoryXmxRatio) - this.jvmMemoryOverheadMbs).append(\"M\").append(\" -D\").append(GobblinYarnConfigurationKeys.GOBBLIN_YARN_CONTAINER_LOG_DIR_NAME).append(\"=\").append(ApplicationConstants.LOG_DIR_EXPANSION_VAR).append(\" -D\").append(GobblinYarnConfigurationKeys.GOBBLIN_YARN_CONTAINER_LOG_FILE_NAME).append(\"=\").append(appMasterClassName).append(\".\").append(ApplicationConstants.STDOUT).append(\" \").append(JvmUtils.formatJvmArguments(this.appMasterJvmArgs)).append(\" \").append(.getName()).append(\" --\").append(GobblinClusterConfigurationKeys.APPLICATION_NAME_OPTION_NAME).append(\" \").append(this.applicationName).append(\" 1>\").append(ApplicationConstants.LOG_DIR_EXPANSION_VAR).append(File.separator).append(appMasterClassName).append(\".\").append(ApplicationConstants.STDOUT).append(\" 2>\").append(ApplicationConstants.LOG_DIR_EXPANSION_VAR).append(File.separator).append(appMasterClassName).append(\".\").append(ApplicationConstants.STDERR).toString()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1->3 [style = bold, label=""];
+1->5 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+8->7 [style = dotted, label="true"];
+4->1 [style = bold, label=""];
+8->6 [style = bold, label=""];
+2->0 [style = dotted, label="true"];
+8->9 [style = dotted, label="true"];
+0->9 [style = dashed, label="0"];
+1->6 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+6->10 [style = bold, label=""];
+4->0 [style = dotted, label="true"];
+}

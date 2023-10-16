@@ -1,0 +1,24 @@
+digraph {
+4 [style = filled, label = "final ArrayList<String> results = new ArrayList<String>()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "System.out.println(\"Results: \" + results)@@@35@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(4,results.size())@@@36@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final ArrayList<String> results = new ArrayList<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "Flowable.unsafeCreate(new Publisher<Integer>(){@Override public void subscribe(Subscriber<? super Integer> sub){sub.onSubscribe(new BooleanSubscription())sub.onNext(1)sub.onNext(2)sub.onNext(1)sub.onNext(2)sub.onComplete()}}).groupBy(new Function<Integer,Integer>(){@Override public Integer apply(Integer t){return t}}).flatMap(new Function<GroupedFlowable<Integer,Integer>,Flowable<String>>(){@Override public Flowable<String> apply(final GroupedFlowable<Integer,Integer> group){return group.observeOn(Schedulers.newThread()).delay(400,TimeUnit.MILLISECONDS).map(new Function<Integer,String>(){@Override public String apply(Integer t1){return \"first groups: \" + t1}})}}).blockingForEach(new Consumer<String>(){@Override public void accept(String s){results.add(s)}})@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "groupsWithNestedObserveOn['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "groupsWithNestedObserveOn['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "groupsWithNestedObserveOn['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Observable.unsafeCreate(new ObservableSource<Integer>(){@Override public void subscribe(Observer<? super Integer> sub){sub.onSubscribe(Disposable.empty())sub.onNext(1)sub.onNext(2)sub.onNext(1)sub.onNext(2)sub.onComplete()}}).groupBy(new Function<Integer,Integer>(){@Override public Integer apply(Integer t){return t}}).flatMap(new Function<GroupedObservable<Integer,Integer>,Observable<String>>(){@Override public Observable<String> apply(final GroupedObservable<Integer,Integer> group){return group.observeOn(Schedulers.newThread()).delay(400,TimeUnit.MILLISECONDS).map(new Function<Integer,String>(){@Override public String apply(Integer t1){return \"first groups: \" + t1}})}}).blockingForEach(new Consumer<String>(){@Override public void accept(String s){results.add(s)}})@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->2 [style = solid, label="results"];
+4->8 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+6->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+5->6 [style = bold, label=""];
+8->2 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+6->2 [style = solid, label="results"];
+}

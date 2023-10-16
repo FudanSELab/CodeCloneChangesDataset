@@ -1,0 +1,35 @@
+digraph {
+6 [style = filled, label = "testTableB6['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final PrintWriter out = CalcitePrepareImpl.DEBUG? Util.printWriter(System.out): new PrintWriter(new StringWriter())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "final PrintStream out = CalcitePrepareImpl.DEBUG? System.out: new PrintStream(new ByteArrayOutputStream())@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "testTableB6['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "out.println()@@@12@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "SqlType(( columns = {SqlType.TINYINT,SqlType.SMALLINT,SqlType.INTEGER,SqlType.BIGINT,SqlType.REAL,SqlType.FLOAT,SqlType.DOUBLE,SqlType.DECIMAL,SqlType.NUMERIC,SqlType.BIT,SqlType.BOOLEAN,SqlType.CHAR,SqlType.VARCHAR,SqlType.LONGVARCHAR,SqlType.BINARY,SqlType.VARBINARY,SqlType.LONGVARBINARY,SqlType.DATE,SqlType.TIME,SqlType.TIMESTAMP,SqlType.ARRAY,SqlType.BLOB,SqlType.CLOB,SqlType.STRUCT,SqlType.REF,SqlType.DATALINK,SqlType.JAVA_OBJECT,SqlType.ROWID,SqlType.NCHAR,SqlType.NVARCHAR,SqlType.LONGNVARCHAR,SqlType.NCLOB,SqlType.SQLXML}@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "out.print(SqlType.canSet(row,column)? \"x \": \". \")@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "out.println()@@@15@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final String s = row == ? row.getName(): row.getSimpleName()@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "out.print(pad(s))@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "Class(( rows = {,,,,,,,,,,,,,,,,,,,,,,,,,}@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "out.print(SqlType.canGet(row,column)? \"x \": \". \")@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "out.print(pad(row.methodName))@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testTableB5['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+5->8 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+7->3 [style = bold, label=""];
+3->5 [style = bold, label=""];
+4->2 [style = bold, label=""];
+13->8 [style = bold, label=""];
+4->11 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+11->9 [style = bold, label=""];
+0->4 [style = bold, label=""];
+12->9 [style = bold, label=""];
+9->13 [style = solid, label="s"];
+8->12 [style = bold, label=""];
+4->7 [style = bold, label=""];
+2->3 [style = bold, label=""];
+9->13 [style = bold, label=""];
+10->4 [style = bold, label=""];
+}

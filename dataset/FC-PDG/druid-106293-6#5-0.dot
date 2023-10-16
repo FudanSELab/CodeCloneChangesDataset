@@ -1,0 +1,30 @@
+digraph {
+12 [style = filled, label = "testPostProcess['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "TimewarpOperator<Result<TimeBoundaryResultValue>> timeBoundaryOperator = new TimewarpOperator<>(new Interval(DateTimes.of(\"2014-01-01\"),DateTimes.of(\"2014-01-15\")),new Period(\"P1W\"),DateTimes.of(\"2014-01-06\"))@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "final Query<Result<TimeBoundaryResultValue>> timeBoundaryQuery = Druids.newTimeBoundaryQueryBuilder().dataSource(\"dummy\").build()@@@18@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "QueryRunner<Result<TimeseriesResultValue>> queryRunner = testOperator.postProcess(new QueryRunner<Result<TimeseriesResultValue>>(){@Override public Sequence<Result<TimeseriesResultValue>> run(QueryPlus<Result<TimeseriesResultValue>> queryPlus,Map<String,Object> responseContext){return Sequences.simple(ImmutableList.of(new Result<>(DateTimes.of(\"2014-01-09\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",2))),new Result<>(DateTimes.of(\"2014-01-11\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",3))),new Result<>(queryPlus.getQuery().getIntervals().get(0).getEnd(),new TimeseriesResultValue(ImmutableMap.of(\"metric\",5)))))}},DateTimes.of(\"2014-08-02\").getMillis())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final Query<Result<TimeseriesResultValue>> query = Druids.newTimeseriesQueryBuilder().dataSource(\"dummy\").intervals(\"2014-07-31/2014-08-05\").aggregators(Collections.singletonList(new CountAggregatorFactory(\"count\"))).build()@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Assert.assertEquals(Lists.newArrayList(new Result<>(DateTimes.of(\"2014-08-02\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",2))),new Result<>(DateTimes.of(\"2014-08-02\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",3)))),queryRunner.run(QueryPlus.wrap(query)).toList())@@@11@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "final Query<Result<TimeseriesResultValue>> query = Druids.newTimeseriesQueryBuilder().dataSource(\"dummy\").intervals(\"2014-08-06/2014-08-08\").aggregators(Collections.singletonList(new CountAggregatorFactory(\"count\"))).build()@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Assert.assertEquals(Collections.singletonList(new Result<>(DateTimes.of(\"2014-08-02\"),new TimeBoundaryResultValue(ImmutableMap.of(\"maxTime\",DateTimes.of(\"2014-08-02\"))))),timeBoundaryRunner.run(QueryPlus.wrap(timeBoundaryQuery),CONTEXT).toList())@@@19@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testEmptyFutureInterval['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Assert.assertEquals(Lists.newArrayList(new Result<>(DateTimes.of(\"2014-08-02\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",2))),new Result<>(DateTimes.of(\"2014-08-02\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",3)))),queryRunner.run(QueryPlus.wrap(query),new HashMap<>()).toList())@@@11@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "Assert.assertEquals(Lists.newArrayList(new Result<>(DateTimes.of(\"2014-07-31\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",2))),new Result<>(DateTimes.of(\"2014-08-02\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",3))),new Result<>(DateTimes.of(\"2014-08-02\"),new TimeseriesResultValue(ImmutableMap.of(\"metric\",5)))),queryRunner.run(QueryPlus.wrap(query),CONTEXT).toList())@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "QueryRunner<Result<TimeBoundaryResultValue>> timeBoundaryRunner = timeBoundaryOperator.postProcess(new QueryRunner<Result<TimeBoundaryResultValue>>(){@Override public Sequence<Result<TimeBoundaryResultValue>> run(QueryPlus<Result<TimeBoundaryResultValue>> queryPlus,Map<String,Object> responseContext){return Sequences.simple(ImmutableList.of(new Result<>(DateTimes.of(\"2014-01-12\"),new TimeBoundaryResultValue(ImmutableMap.of(\"maxTime\",DateTimes.of(\"2014-01-12\"))))))}},DateTimes.of(\"2014-08-02\").getMillis())@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testEmptyFutureInterval['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6->8 [style = bold, label=""];
+12->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+7->6 [style = bold, label=""];
+4->2 [style = bold, label=""];
+2->7 [style = bold, label=""];
+9->11 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+11->10 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+8->9 [style = bold, label=""];
+}

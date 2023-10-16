@@ -1,0 +1,38 @@
+digraph {
+11 [style = filled, label = "shouldFlushAllItemsOnDemand['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "shouldFlushAllItemsOnDemand['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "shouldFlushAllItemsOnDemand['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "int i = 0@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "cache.clear()@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertNull(cache.getObject(4))@@@13@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "Cache cache = new LruCache(new PerpetualCache(\"default\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertNotNull(cache.getObject(0))@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "i < 5@@@5@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "cache.putObject(i,i)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertNotNull(cache.getObject(4))@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Cache cache = new SoftCache(new PerpetualCache(\"default\"))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertNull(cache.getObject(0))@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "i++@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->0 [style = solid, label="i"];
+0->3 [style = bold, label=""];
+4->9 [style = bold, label=""];
+7->1 [style = bold, label=""];
+9->0 [style = bold, label=""];
+11->4 [style = bold, label=""];
+3->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+12->9 [style = bold, label=""];
+0->6 [style = dotted, label="true"];
+4->12 [style = dashed, label="0"];
+6->0 [style = solid, label="i"];
+5->2 [style = bold, label=""];
+13->12 [style = bold, label=""];
+9->6 [style = solid, label="i"];
+0->3 [style = dotted, label="true"];
+2->7 [style = bold, label=""];
+8->4 [style = bold, label=""];
+1->10 [style = bold, label=""];
+6->3 [style = solid, label="i"];
+9->3 [style = solid, label="i"];
+0->5 [style = bold, label=""];
+}

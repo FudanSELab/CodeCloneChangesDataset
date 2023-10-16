@@ -1,0 +1,26 @@
+digraph {
+7 [style = filled, label = "Function target = new RowFunc()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "{ValueEval(( args = {EvalFactory.createAreaEval(\"E2:H12\",new ValueEval(((()}double actual = NumericFunctionInvoker.invoke(target,args)assertEquals(2,actual,0D)}@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "{ValueEval(( args = {EvalFactory.createRefEval(\"C5\")}double actual = NumericFunctionInvoker.invoke(target,args)assertEquals(5,actual,0D)}@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testCol['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Function target = new Column()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "Function target = null@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "testRow['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testCol['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+7->2 [style = solid, label="target"];
+7->3 [style = solid, label="target"];
+4->2 [style = solid, label="target"];
+0->4 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+3->2 [style = solid, label="actual"];
+3->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+4->3 [style = solid, label="target"];
+0->7 [style = dashed, label="0"];
+0->3 [style = solid, label="target"];
+0->2 [style = solid, label="target"];
+7->3 [style = bold, label=""];
+5->4 [style = bold, label=""];
+}

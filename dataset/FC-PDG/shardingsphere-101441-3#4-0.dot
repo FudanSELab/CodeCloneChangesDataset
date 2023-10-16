@@ -1,0 +1,34 @@
+digraph {
+3 [style = filled, label = "Collection<OrderByItemSegment> items = new LinkedList<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "items.add((OrderByItemSegment)visit(each))@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "return new OrderBySegment(ctx.getStart().getStartIndex(),ctx.getStop().getStopIndex(),items)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final GroupByClauseContext ctx@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "visitGroupByClause['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "return result@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "final OrderByClauseContext ctx@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "visitOrderByClause['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "items.addAll(generateOrderByItemsFromGroupByItem(each))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "visitGroupByClause['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return new GroupBySegment(ctx.getStart().getStartIndex(),ctx.getStop().getStopIndex(),items)@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "GroupBySegment result = new GroupBySegment(ctx.getStart().getStartIndex(),ctx.getStop().getStopIndex(),items)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0->3 [style = bold, label=""];
+5->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+7->8 [style = solid, label="result"];
+1->10 [style = dashed, label="0"];
+4->11 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+3->2 [style = bold, label=""];
+3->7 [style = solid, label="items"];
+7->8 [style = bold, label=""];
+3->11 [style = solid, label="items"];
+2->4 [style = bold, label=""];
+9->10 [style = dotted, label="true"];
+3->4 [style = solid, label="items"];
+2->11 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+5->1 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+2->6 [style = dashed, label="0"];
+}

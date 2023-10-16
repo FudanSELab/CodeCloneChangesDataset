@@ -6,34 +6,38 @@ The dataset is evolving! Please direct your comments and suggestions to Yijian (
 
 ## 1. Content Structure
 ```
-├── basic_info.csv
-├── consistent.csv
-├── inconsistent.csv
-├── json
-│   ├── project1
-│   └── project2
-│   └── ...
-└── web
-    ├── CloneCoChange.html
-    ├── js
-    │   ├── d3.v3.js
-    │   ├── jquery-3.3.1.js
-    │   └── main.js
-    ├── ...
-    └── res
+├── dataset
+    ├── cloneGenealogy
+		├── basic_info.csv
+		├── consistent.csv
+		├── inconsistent.csv
+		├── res
+			├── project1
+			├── project2
+			└── ...
+		└── ...
+    └── FC-PDG
+    └── ...
+├── saveModels
+├── src
+	├── gcn.py
+	└── run.sh
+└── README.md
 ```
 
 ## 2. Basic Information
 
-​		The resource in this dataset contains 24,672 piars of matched changes and 38,041 non-matched changes.
+​		The resource in this dataset contains 22,009 **clone genealogies**, 24,672 pairs of matched changes and 26,233 non-matched changes.
+
+​		`cloneGenealogy` folder contains a web-based tool which can be used to show the source code changes in a clone pair genealogy.
 
 ​		The dataset was collected from 51 popular open-source Java projects. `basic_info.csv` details the information of these projects.
 
 ​		`consistent.csv`and `inconsistent.csv` contains matched change pairs and non-matched change pairs seperately.
 
-​		`json` folder contains the resource files of each project.
+​		`res` folder contains the **clone genealogies** extracted from each project.
 
-​		`web` folder contains a web-based tool which can be used to show the source code changes in a clone pair genealogy.
+​		`FC-PDG` folder contains the FC-PDGs extracted from the the above-mentioned **clone genealogies**.
 
 ### 2.1 Matched and non-matched changes
 ​		File ```consistent.csv```(or ```inconsistent.csv```) contains all the matched(or non-matched) changes. The meaning of the headers lists as below:
@@ -55,3 +59,24 @@ The dataset is evolving! Please direct your comments and suggestions to Yijian (
 ​		The picture above shows a clone genealogy of clone pair 10585. Each column presents an evolution timeline of one clone instance, each row presents the source code of  two clone instance in the same revision. 
 
 ​		As shown in the figure, the ids of the matched change pair were marked by blue circle, meaning that these two codes did the same change.
+
+## 3 Train Model
+
+### 3.1 Installation
+
+Requires Python 3.9+, Cuda 11.6+
+
+Tested in conda with Python 3.9.15 and Pytorch 1.13.1
+
+```sh
+cd src
+conda env create -f environment.yml
+pip install -r requirements.txt
+```
+
+### 3.2 Train
+
+```sh
+sh run.sh
+```
+

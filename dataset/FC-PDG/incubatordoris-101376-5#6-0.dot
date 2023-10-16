@@ -1,0 +1,25 @@
+digraph {
+3 [style = filled, label = "olapTable.writeLock()@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "{olapTable.writeUnlock()}@@@9@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "ReplicaPersistInfo info@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "ReplicaPersistInfo info@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "Database db = this.getDbOrMetaException(info.getDbId())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "OlapTable olapTable = db.getTableOrMetaException(info.getTableId(),TableType.OLAP)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "ReplicaPersistInfo info@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "replayAddReplica['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "replayAddReplica['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "replayDeleteReplica['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "unprotectAddReplica(olapTable,info)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5->7 [style = bold, label=""];
+6->4 [style = bold, label=""];
+3->6 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+1->0 [style = dotted, label="true"];
+0->10 [style = dashed, label="0"];
+8->6 [style = solid, label="info"];
+9->10 [style = dotted, label="true"];
+7->3 [style = bold, label=""];
+2->8 [style = dotted, label="true"];
+2->5 [style = bold, label=""];
+7->6 [style = solid, label="olapTable"];
+}

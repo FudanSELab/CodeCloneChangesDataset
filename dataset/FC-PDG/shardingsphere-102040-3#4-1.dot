@@ -1,0 +1,31 @@
+digraph {
+4 [style = filled, label = "assertThat(decodedEvents.size(),is(0))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertDecodeRotateEvent['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "assertDecodeTableMapEvent['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(binlogContext.getFileName(),is(\"\"))@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "binlogEventPacketDecoder.decode(null,byteBuf,decodedEvents)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "List<Object> decodedEvents = new LinkedList<>()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "when(byteBuf.readUnsignedByte()).thenReturn((short)0,(short)0,(short)MySQLBinlogEventType.ROTATE_EVENT.getValue())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "when(byteBuf.readUnsignedByte()).thenReturn((short)0,(short)0,(short)MySQLBinlogEventType.TABLE_MAP_EVENT.getValue(),(short)0)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertDecodeRotateEvent['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "List<Object> decodedEvents = new ArrayList<>()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThat(binlogContext.getTableMap().size(),is(1))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertThat(binlogContext.getTableMap().get(0L),instanceOf())@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->8 [style = dashed, label="0"];
+6->1 [style = bold, label=""];
+4->8 [style = bold, label=""];
+1->4 [style = bold, label=""];
+0->1 [style = solid, label="decodedEvents"];
+2->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+11->10 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->6 [style = bold, label=""];
+7->2 [style = bold, label=""];
+6->1 [style = solid, label="decodedEvents"];
+10->0 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+0->6 [style = dashed, label="0"];
+8->9 [style = bold, label=""];
+}

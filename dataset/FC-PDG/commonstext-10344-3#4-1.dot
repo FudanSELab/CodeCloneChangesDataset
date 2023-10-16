@@ -1,0 +1,38 @@
+digraph {
+2 [style = filled, label = "sb.clear()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(sb.toString()).isEqualTo(\"\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "sb.clear()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final TextStringBuilder sb = new TextStringBuilder()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "sb.appendAll((Iterator<?>)null)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "sb.appendAll(Collections.EMPTY_LIST)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testAppendAll_Collection['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "sb.appendAll(Arrays.asList(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1510145).iterator())@@@10@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "sb.appendAll(Arrays.asList(\"foo\",\"bar\",\"baz\"))@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+15 [style = filled, label = "testAppendAll_Iterator['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(sb.toString()).isEqualTo(\"foobarbaz\")@@@13@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testAppendAll_Collection['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "assertThat(sb.toString()).isEqualTo(\"foobarbaz\")@@@11@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "assertThat(sb.toString()).isEqualTo(\"\")@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "sb.appendAll((Collection<?>)null)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "sb.appendAll(Collections.EMPTY_LIST.iterator())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->12 [style = dashed, label="0"];
+13->9 [style = bold, label=""];
+6->13 [style = dashed, label="0"];
+6->9 [style = bold, label=""];
+8->5 [style = bold, label=""];
+0->13 [style = bold, label=""];
+15->7 [style = bold, label=""];
+3->14 [style = dashed, label="0"];
+0->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+9->2 [style = bold, label=""];
+1->7 [style = bold, label=""];
+2->8 [style = bold, label=""];
+7->3 [style = bold, label=""];
+2->12 [style = bold, label=""];
+10->7 [style = bold, label=""];
+4->0 [style = bold, label=""];
+14->4 [style = bold, label=""];
+12->11 [style = bold, label=""];
+7->14 [style = bold, label=""];
+}

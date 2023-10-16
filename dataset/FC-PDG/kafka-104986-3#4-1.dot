@@ -1,0 +1,35 @@
+digraph {
+9 [style = filled, label = "PowerMock.verifyAll()@@@26@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(CONFIG_INFOS.name(),configInfos.name())@@@20@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "PowerMock.replayAll()@@@18@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertEquals(new HashSet<>(CONFIG_INFOS.values()),new HashSet<>(configInfos.values()))@@@25@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "PowerMock.replayAll()@@@20@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(CONFIG_INFOS.name(),configInfos.name())@@@22@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "PowerMock.expectLastCall().andAnswer((IAnswer<ConfigInfos>)null)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+14 [style = filled, label = "testValidateConfigWithAlias['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testValidateConfigWithSimpleName['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(0,configInfos.errorCount())@@@23@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertEquals(CONFIG_INFOS.groups(),configInfos.groups())@@@24@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testValidateConfigWithSimpleName['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "PowerMock.expectLastCall().andAnswer(new IAnswer<ConfigInfos>(){@Override public ConfigInfos answer(){ConfigDef connectorConfigDef = ConnectorConfig.configDef()List<ConfigValue> connectorConfigValues = connectorConfigDef.validate(props)Connector connector = new ConnectorPluginsResourceTestConnector()Config config = connector.validate(props)ConfigDef configDef = connector.config()Map<String,ConfigDef.ConfigKey> configKeys = configDef.configKeys()List<ConfigValue> configValues = config.configValues()Map<String,ConfigDef.ConfigKey> resultConfigKeys = new HashMap<>(configKeys)resultConfigKeys.putAll(connectorConfigDef.configKeys())configValues.addAll(connectorConfigValues)return AbstractHerder.generateResult(.getName(),resultConfigKeys,configValues,Collections.singletonList(\"Test\"))}})@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "herder.validateConnectorConfig(EasyMock.eq(props))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "ConfigInfos configInfos = connectorPluginsResource.validateConfigs(\"ConnectorPluginsResourceTest\",props)@@@21@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3->11 [style = bold, label=""];
+14->3 [style = bold, label=""];
+1->4 [style = bold, label=""];
+5->2 [style = bold, label=""];
+12->3 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+2->9 [style = bold, label=""];
+13->6 [style = bold, label=""];
+8->5 [style = bold, label=""];
+4->13 [style = dashed, label="0"];
+10->1 [style = bold, label=""];
+4->6 [style = bold, label=""];
+11->10 [style = bold, label=""];
+0->1 [style = bold, label=""];
+1->13 [style = bold, label=""];
+7->3 [style = bold, label=""];
+3->0 [style = bold, label=""];
+6->8 [style = bold, label=""];
+}

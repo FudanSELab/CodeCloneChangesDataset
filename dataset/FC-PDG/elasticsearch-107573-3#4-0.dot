@@ -1,0 +1,37 @@
+digraph {
+10 [style = filled, label = "removeIndexTemplateV2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "listener.onResponse(new AcknowledgedResponse(true))@@@31@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "String source@@@30@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "ClusterState oldState@@@30@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "ClusterState newState@@@30@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "clusterStateProcessed['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final String name@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "ClusterState newState@@@30@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "final TimeValue masterTimeout@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "clusterStateProcessed['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "final ActionListener<AcknowledgedResponse> listener@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "clusterService.submitStateUpdateTask(\"remove-index-template-v2 (\" + name + \"(\",new ClusterStateUpdateTask(Priority.URGENT){@Override public TimeValue timeout(){return masterTimeout}@Override public void onFailure(String source,Exception e){listener.onFailure(e)}@Override public ClusterState execute(ClusterState currentState){return innerRemoveIndexTemplateV2(currentState,name)}@Override public void clusterStateProcessed(String source,ClusterState oldState,ClusterState newState){listener.onResponse(new AcknowledgedResponse(true))}})@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "String source@@@30@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "ClusterState oldState@@@30@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+2->3 [style = dotted, label="true"];
+2->0 [style = dotted, label="true"];
+0->5 [style = dashed, label="0"];
+11->12 [style = solid, label="name"];
+4->1 [style = dotted, label="true"];
+4->0 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+4->2 [style = bold, label=""];
+10->9 [style = dotted, label="true"];
+13->12 [style = solid, label="masterTimeout"];
+4->3 [style = dotted, label="true"];
+8->6 [style = dotted, label="true"];
+10->13 [style = dotted, label="true"];
+8->2 [style = bold, label=""];
+8->5 [style = dotted, label="true"];
+2->6 [style = dotted, label="true"];
+2->1 [style = dotted, label="true"];
+10->11 [style = dotted, label="true"];
+10->12 [style = bold, label=""];
+2->7 [style = dotted, label="true"];
+2->5 [style = dotted, label="true"];
+}

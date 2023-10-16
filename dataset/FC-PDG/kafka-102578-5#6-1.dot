@@ -1,0 +1,31 @@
+digraph {
+3 [style = filled, label = "testInner['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final List<List<String>> expectedResult = Arrays.asList(null,null,Collections.singletonList(\"A-null\"),Collections.singletonList(\"A-a\"),Collections.singletonList(\"B-a\"),Arrays.asList(\"A-b\",\"B-b\"),null,null,Arrays.asList(\"C-a\",\"C-b\"),Arrays.asList(\"A-c\",\"B-c\",\"C-c\"),null,null,null,Arrays.asList(\"A-d\",\"B-d\",\"C-d\"),Arrays.asList(\"D-a\",\"D-b\",\"D-c\",\"D-d\"))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final List<List<String>> expectedResult = Arrays.asList(null,null,null,Collections.singletonList(\"A-a\"),Collections.singletonList(\"B-a\"),Arrays.asList(\"A-b\",\"B-b\"),null,null,Arrays.asList(\"C-a\",\"C-b\"),Arrays.asList(\"A-c\",\"B-c\",\"C-c\"),null,null,null,Arrays.asList(\"A-d\",\"B-d\",\"C-d\"),Arrays.asList(\"D-a\",\"D-b\",\"D-c\",\"D-d\"))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "STREAMS_CONFIG.put(StreamsConfig.APPLICATION_ID_CONFIG,appID + \"-left\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "STREAMS_CONFIG.put(StreamsConfig.APPLICATION_ID_CONFIG,appID + \"-inner\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "leftStream.join(rightStream,valueJoiner,JoinWindows.of(ofSeconds(10))).to(OUTPUT_TOPIC)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "leftStream.leftJoin(rightStream,valueJoiner,JoinWindows.of(ofSeconds(10))).to(OUTPUT_TOPIC)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testLeft['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "runTest(expectedResult)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final List<List<KeyValueTimestamp<Long,String>>> expectedResult = Arrays.asList(null,null,null,Collections.singletonList(new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"A-a\",4L)),Collections.singletonList(new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"B-a\",5L)),Arrays.asList(new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"A-b\",6L),new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"B-b\",6L)),null,null,Arrays.asList(new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"C-a\",9L),new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"C-b\",9L)),Arrays.asList(new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"A-c\",10L),new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"B-c\",10L),new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"C-c\",10L)),null,null,null,Arrays.asList(new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"A-d\",14L),new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"B-d\",14L),new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"C-d\",14L)),Arrays.asList(new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"D-a\",15L),new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"D-b\",15L),new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"D-c\",15L),new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"D-d\",15L)))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testInner['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8->10 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+4->1 [style = bold, label=""];
+10->9 [style = bold, label=""];
+7->0 [style = bold, label=""];
+6->0 [style = solid, label="expectedResult"];
+4->10 [style = dashed, label="0"];
+9->7 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+4->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+9->0 [style = solid, label="expectedResult"];
+5->4 [style = bold, label=""];
+1->0 [style = solid, label="expectedResult"];
+6->2 [style = bold, label=""];
+}

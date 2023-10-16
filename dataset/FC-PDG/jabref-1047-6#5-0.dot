@@ -1,0 +1,34 @@
+digraph {
+3 [style = filled, label = "TextFlowEqualityHelper.assertEquals(expectedTexts,description)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "List<Text> expectedTexts = Arrays.asList(TooltipTextUtil.createText(\"This search contains entries in which \"),TooltipTextUtil.createText(\"not \"),TooltipTextUtil.createText(\"the field \"),TooltipTextUtil.createText(\"a\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\" contains the term \"),TooltipTextUtil.createText(\"b\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\" and \"),TooltipTextUtil.createText(\"the field \"),TooltipTextUtil.createText(\"c\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\" contains the term \"),TooltipTextUtil.createText(\"e\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\" or \"),TooltipTextUtil.createText(\"the field \"),TooltipTextUtil.createText(\"e\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\" contains the term \"),TooltipTextUtil.createText(\"x\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\". \"),TooltipTextUtil.createText(\"The search is case insensitive.\"))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "TextFlow description = createDescription(query,EnumSet.noneOf())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testComplexQuery['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "testComplexQueryCaseSensitive['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "List<Text> expectedTexts = Arrays.asList(TooltipTextUtil.createText(\"This search contains entries in which \"),TooltipTextUtil.createText(\"not \"),TooltipTextUtil.createText(\"the field \"),TooltipTextUtil.createText(\"a\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\" contains the term \"),TooltipTextUtil.createText(\"b\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\" and \"),TooltipTextUtil.createText(\"the field \"),TooltipTextUtil.createText(\"c\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\" contains the term \"),TooltipTextUtil.createText(\"e\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\" or \"),TooltipTextUtil.createText(\"the field \"),TooltipTextUtil.createText(\"e\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\" contains the term \"),TooltipTextUtil.createText(\"x\",TooltipTextUtil.TextType.BOLD),TooltipTextUtil.createText(\". \"),TooltipTextUtil.createText(\"The search is case sensitive.\"))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "TextFlow description = createDescription(query,true,false)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testComplexQuery['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "TextFlow description = createDescription(query,false,false)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "String query = \"not a=b and c=e or e=\"x\"\"@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+4->6 [style = bold, label=""];
+7->3 [style = solid, label="description"];
+2->0 [style = solid, label="query"];
+0->6 [style = dashed, label="0"];
+4->3 [style = solid, label="expectedTexts"];
+2->9 [style = bold, label=""];
+9->7 [style = bold, label=""];
+2->6 [style = solid, label="query"];
+2->4 [style = bold, label=""];
+7->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+8->2 [style = bold, label=""];
+9->3 [style = solid, label="expectedTexts"];
+6->3 [style = solid, label="description"];
+1->2 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+0->3 [style = solid, label="description"];
+2->7 [style = solid, label="query"];
+}

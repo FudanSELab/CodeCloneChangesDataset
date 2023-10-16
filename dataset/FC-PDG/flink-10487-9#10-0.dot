@@ -1,0 +1,23 @@
+digraph {
+5 [style = filled, label = "testInsert['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "testGroupByInsert['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertEquals(\"(+I(1((\",results.toString())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "assertEquals(\"(1,(65(,3,4,5.5,6.6,7.70000,8.8,true,a,B,C ,d,2016-06-22T19:10:25,2015-01-01,00:51:03,500.000000000000000000(\",results.toString())@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "List<Row> results = CollectionUtil.iteratorToList(tEnv.sqlQuery(String.format(\"select * from %s\",TABLE4)).execute().collect())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testInsert['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "List<Row> results = CollectionUtil.iteratorToList(tEnv.sqlQuery(String.format(\"select * from `%s`\",TABLE_PRIMITIVE_TYPE2)).execute().collect())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "tEnv.executeSql(String.format(\"insert into `%s` \" + \"select `int`, cast('A' as bytes), `short`, max(`long`), max(`real`), \" + \"max(`double_precision`), max(`numeric`), max(`decimal`), max(`boolean`), \" + \"max(`text`), 'B', 'C', max(`character_varying`), max(`timestamp`), \" + \"max(`date`), max(`time`), max(`default_numeric`) \" + \"from `%s` group by `int`, `short`\",TABLE_PRIMITIVE_TYPE2,TABLE_PRIMITIVE_TYPE)).await()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "tEnv.executeSql(String.format(\"insert into %s select * from `%s`\",TABLE4,TABLE1)).await()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(\"(1(\",results.toString())@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5->3 [style = bold, label=""];
+1->4 [style = dashed, label="0"];
+1->9 [style = dashed, label="0"];
+8->6 [style = bold, label=""];
+6->9 [style = bold, label=""];
+7->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

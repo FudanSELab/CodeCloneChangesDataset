@@ -1,0 +1,33 @@
+digraph {
+11 [style = filled, label = "leveledOptions.put(\"sstable_size_in_mb\",\"1\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "defineSchema['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Map<String,String> compactionOptions = new HashMap<>()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "SchemaLoader.createKeyspace(KEYSPACE1,KeyspaceParams.simple(1),SchemaLoader.standardCFMD(KEYSPACE1,CF_STANDARDLVL).compactionStrategyClass().compactionStrategyOptions(leveledOptions))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "compactionOptions.put(\"tombstone_compaction_interval\",\"1\")@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "defineSchema['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "Map<String,String> leveledOptions = new HashMap<>()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "SchemaLoader.createKeyspace(KEYSPACE1,KeyspaceParams.simple(1),SchemaLoader.standardCFMD(KEYSPACE1,CF_STANDARD).compactionStrategyOptions(compactionOptions))@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "SchemaLoader.prepareServer()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Map<String,String> compactionOptions = Collections.singletonMap(\"tombstone_compaction_interval\",\"1\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "SchemaLoader.prepareServer()@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "defineSchema['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+5->3 [style = solid, label="compactionOptions"];
+5->7 [style = bold, label=""];
+10->8 [style = solid, label="leveledOptions"];
+6->5 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+9->10 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+11->3 [style = bold, label=""];
+1->4 [style = solid, label="compactionOptions"];
+3->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->8 [style = bold, label=""];
+7->3 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+10->11 [style = bold, label=""];
+4->3 [style = dashed, label="0"];
+}

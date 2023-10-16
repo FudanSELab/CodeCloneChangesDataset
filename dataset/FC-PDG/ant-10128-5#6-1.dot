@@ -1,0 +1,27 @@
+digraph {
+9 [style = filled, label = "testExcludeHasPrecedence['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Assume.assumeTrue(\"Could not change remote directory\",changeRemoteDir(remoteTmpDir))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testExcludeHasPrecedence['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "compareFiles(ds,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@cfe279,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@cfe27c)@@@14@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "ds.setExcludes(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@cfe26d)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "FTP.FTPDirectoryScanner ds = myFTPTask.newScanner(ftp)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Assume.assumeTrue(loginFailureMessage,loginSucceeded)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "Assume.assumeTrue(loginFailureMessage,loginSuceeded)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ds.scan()@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ds.setIncludes(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@cfe264)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testAlternateIncludeExclude['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "ds.setBasedir(new File(buildRule.getProject().getBaseDir(),\"tmp\"))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->8 [style = bold, label=""];
+6->3 [style = bold, label=""];
+7->10 [style = dashed, label="0"];
+1->6 [style = bold, label=""];
+7->1 [style = bold, label=""];
+9->10 [style = bold, label=""];
+8->2 [style = bold, label=""];
+10->1 [style = bold, label=""];
+6->5 [style = solid, label="ds"];
+3->4 [style = bold, label=""];
+11->7 [style = bold, label=""];
+2->5 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

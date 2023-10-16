@@ -1,0 +1,31 @@
+digraph {
+6 [style = filled, label = "testLargeEstimatedNumSplits['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "testLargeEstimatedNumSplits['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testSmallEstimatedNumSplits['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final TaskActionClient actionClient = createActionClient(task)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final NoopTask task = NoopTask.create()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final TestPhaseRunner runner = new TestPhaseRunner(toolbox,\"supervisorTaskId\",\"groupId\",AbstractParallelIndexSupervisorTaskTest.DEFAULT_TUNING_CONFIG_FOR_PARALLEL_INDEXING,10,12)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "final TestPhaseRunner runner = new TestPhaseRunner(toolbox,\"supervisorTaskId\",\"groupId\",AbstractParallelIndexSupervisorTaskTest.DEFAULT_TUNING_CONFIG_FOR_PARALLEL_INDEXING,getIndexingServiceClient(),10,12)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "Assert.assertEquals(TaskState.SUCCESS,runner.run())@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final TaskToolbox toolbox = createTaskToolbox(task,actionClient)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final TestPhaseRunner runner = new TestPhaseRunner(toolbox,\"supervisorTaskId\",\"groupId\",AbstractParallelIndexSupervisorTaskTest.DEFAULT_TUNING_CONFIG_FOR_PARALLEL_INDEXING,getIndexingServiceClient(),10,8)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->0 [style = bold, label=""];
+0->2 [style = solid, label="task"];
+4->7 [style = bold, label=""];
+5->1 [style = bold, label=""];
+4->9 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+6->0 [style = bold, label=""];
+4->9 [style = solid, label="toolbox"];
+7->1 [style = bold, label=""];
+4->7 [style = solid, label="toolbox"];
+4->5 [style = solid, label="toolbox"];
+9->1 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->4 [style = solid, label="task"];
+2->4 [style = solid, label="actionClient"];
+3->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

@@ -1,0 +1,34 @@
+digraph {
+5 [style = filled, label = "before['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "expect(context.taskId()).andReturn(taskId).anyTimes()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "before['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "expect(context.metrics()).andReturn(new StreamsMetricsImpl(metrics,\"test-client\",builtInMetricsVersion)).anyTimes()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "before['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "tags = mkMap(mkEntry(threadIdTagKey,threadId),mkEntry(\"task-id\",taskId.toString()),mkEntry(STORE_TYPE + \"-state-id\",\"metered\"))@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "metrics.config().recordLevel(Sensor.RecordingLevel.DEBUG)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "expect(context.taskId()).andReturn(taskId)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "expect(inner.name()).andReturn(\"metered\").anyTimes()@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "metered = new MeteredSessionStore<>(inner,\"scope\",Serdes.String(),Serdes.String(),new MockTime())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "threadIdTagKey = StreamsConfig.METRICS_0100_TO_24.equals(builtInMetricsVersion)? THREAD_ID_TAG_KEY_FROM_0100_TO_24: THREAD_ID_TAG_KEY@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "storeLevelGroup = StreamsConfig.METRICS_0100_TO_24.equals(builtInMetricsVersion)? STORE_LEVEL_GROUP_FROM_0100_TO_24: STORE_LEVEL_GROUP@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "metered = new MeteredKeyValueStore<>(inner,\"scope\",new MockTime(),Serdes.String(),Serdes.String())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "expect(context.metrics()).andReturn(new MockStreamsMetrics(metrics))@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->9 [style = bold, label=""];
+4->3 [style = bold, label=""];
+9->11 [style = solid, label="threadIdTagKey"];
+1->4 [style = bold, label=""];
+12->2 [style = bold, label=""];
+13->12 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+9->11 [style = bold, label=""];
+0->12 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+3->7 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+2->6 [style = bold, label=""];
+2->1 [style = bold, label=""];
+10->0 [style = bold, label=""];
+6->8 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

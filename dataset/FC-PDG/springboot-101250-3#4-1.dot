@@ -1,0 +1,27 @@
+digraph {
+11 [style = filled, label = "this.initializer.setSpringBootLogging(LogLevel.ERROR)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "this.logger.debug(\"testatdebug\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "multicastEvent(new ApplicationStartingEvent(this.springApplication,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1cb00af))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "this.logger.debug(\"testatdebug\")@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "this.initializer.initialize(this.context.getEnvironment(),this.context.getClassLoader())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(this.outputCapture.toString()).doesNotContain(\"testatdebug\")@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "this.initializer.setParseArgs(false)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "parseArgsDisabled['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "parseArgsDoesntReplace['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertThat(this.outputCapture.toString()).doesNotContain(\"testatdebug\")@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "this.initializer.initialize(this.context.getEnvironment(),this.context.getClassLoader())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "this.initializer.setParseArgs(false)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "parseArgsDisabled['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->5 [style = bold, label=""];
+11->0 [style = bold, label=""];
+7->11 [style = bold, label=""];
+1->0 [style = bold, label=""];
+9->10 [style = bold, label=""];
+0->4 [style = bold, label=""];
+10->12 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->8 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

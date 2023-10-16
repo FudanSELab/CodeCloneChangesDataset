@@ -1,0 +1,37 @@
+digraph {
+3 [style = filled, label = "assert(newArray.size() > array.size())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "newArray.size() < array.size()@@@3@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "expandPointerArray['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "consumer.freeArray(array)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "LongArray newArray@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "MemoryBlock.copyMemory(array.memoryBlock(),newArray.memoryBlock(),pos * 8L)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "usableCapacity = getUsableCapacity()@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "expandPointerArray['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Platform.copyMemory(array.getBaseObject(),array.getBaseOffset(),newArray.getBaseObject(),newArray.getBaseOffset(),pos * 8L)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "array = newArray@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "consumer.freeArray(array)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "expandPointerArray['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "MemoryBlock.copyMemory(array.memoryBlock(),newArray.memoryBlock(),pos * 8L)@@@4@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "throw new SparkOutOfMemoryError(\"Not enough memory to grow pointer array\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13->10 [style = bold, label=""];
+6->3 [style = bold, label=""];
+7->2 [style = dotted, label="true"];
+10->12 [style = dotted, label="true"];
+2->0 [style = solid, label="newArray"];
+2->11 [style = solid, label="newArray"];
+11->9 [style = bold, label=""];
+12->0 [style = bold, label=""];
+7->3 [style = bold, label=""];
+1->11 [style = bold, label=""];
+4->0 [style = bold, label=""];
+13->2 [style = dotted, label="true"];
+3->5 [style = bold, label=""];
+6->2 [style = dotted, label="true"];
+10->12 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->8 [style = bold, label=""];
+10->0 [style = bold, label=""];
+5->4 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+8->4 [style = bold, label=""];
+}

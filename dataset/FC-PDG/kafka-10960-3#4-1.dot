@@ -1,0 +1,28 @@
+digraph {
+5 [style = filled, label = "final KeyValueIterator<Windowed<Bytes>,byte((> b = cachingStore.findSessions(keyB,0,0)@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertFalse(a.hasNext())@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final KeyValueIterator<Windowed<Bytes>,byte((> a = cachingStore.findSessions(keyA,0,0)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertFalse(b.hasNext())@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertEquals(3,cache.size())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "cachingStore.put(new Windowed<>(keyA,new SessionWindow(0,0)),\"1\".getBytes())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "shouldPutFetchFromCache['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "shouldPutFetchFromCache['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "verifyWindowedKeyValue(a.next(),new Windowed<>(keyA,new SessionWindow(0,0)),\"1\")@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "shouldPutFetchFromCache['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "cachingStore.put(new Windowed<>(keyAA,new SessionWindow(0,0)),\"1\".getBytes())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "verifyWindowedKeyValue(b.next(),new Windowed<>(keyB,new SessionWindow(0,0)),\"1\")@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "cachingStore.put(new Windowed<>(keyB,new SessionWindow(0,0)),\"1\".getBytes())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->1 [style = bold, label=""];
+5->8 [style = bold, label=""];
+7->3 [style = bold, label=""];
+3->5 [style = bold, label=""];
+10->9 [style = bold, label=""];
+12->10 [style = bold, label=""];
+1->0 [style = bold, label=""];
+2->10 [style = bold, label=""];
+7->8 [style = bold, label=""];
+0->6 [style = bold, label=""];
+11->10 [style = bold, label=""];
+4->7 [style = bold, label=""];
+9->4 [style = bold, label=""];
+}

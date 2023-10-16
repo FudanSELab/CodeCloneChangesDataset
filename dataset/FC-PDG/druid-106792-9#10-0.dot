@@ -1,0 +1,33 @@
+digraph {
+3 [style = filled, label = "List<Result<TimeseriesResultValue>> expectedResults = Collections.singletonList(new Result<>(DateTimes.of(\"2011-04-01\"),new TimeseriesResultValue(ImmutableMap.of(\"filteredAgg\",18L,\"addRowsIndexConstant\",12486.361190795898d,\"index\",12459.361190795898d,\"uniques\",9.019833517963864d,\"rows\",26L))))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "testTimeSeriesWithFilteredAgg['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "TimeseriesQuery query = Druids.newTimeseriesQueryBuilder().dataSource(QueryRunnerTestHelper.DATA_SOURCE).granularity(QueryRunnerTestHelper.ALL_GRAN).intervals(QueryRunnerTestHelper.FIRST_TO_THIRD).aggregators(Lists.newArrayList(Iterables.concat(aggregatorFactoryList,Collections.singletonList(new FilteredAggregatorFactory(new CountAggregatorFactory(\"filteredAgg\"),new SelectorDimFilter(QueryRunnerTestHelper.MARKET_DIMENSION,\"spot\",null)))))).postAggregators(QueryRunnerTestHelper.ADD_ROWS_INDEX_CONSTANT).descending(descending).context(makeContext()).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "List<Result<TimeseriesResultValue>> expectedResults = Collections.singletonList(new Result<>(DateTimes.of(\"2011-04-01\"),new TimeseriesResultValue(ImmutableMap.builder().put(\"filteredAgg\",18L).put(\"addRowsIndexConstant\",12486.361190795898d).put(\"index\",12459.361190795898d).put(\"uniques\",9.019833517963864d).put(\"rows\",26L).build())))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "List<Result<TimeseriesResultValue>> expectedResults = Collections.singletonList(new Result<>(DateTimes.of(\"2011-04-01\"),new TimeseriesResultValue(ImmutableMap.of(\"filteredAgg\",26L,\"addRowsIndexConstant\",12486.361190795898d,\"index\",12459.361190795898d,\"uniques\",9.019833517963864d,\"rows\",26L))))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Iterable<Result<TimeseriesResultValue>> actualResults = runner.run(QueryPlus.wrap(query)).toList()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testTimeSeriesWithFilteredAggValueNotPresent['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testTimeSeriesWithFilteredAgg['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "TimeseriesQuery query = Druids.newTimeseriesQueryBuilder().dataSource(QueryRunnerTestHelper.DATA_SOURCE).granularity(QueryRunnerTestHelper.ALL_GRAN).intervals(QueryRunnerTestHelper.FIRST_TO_THIRD).aggregators(Lists.newArrayList(Iterables.concat(aggregatorFactoryList,Collections.singletonList(new FilteredAggregatorFactory(new CountAggregatorFactory(\"filteredAgg\"),new NotDimFilter(new SelectorDimFilter(QueryRunnerTestHelper.MARKET_DIMENSION,\"LolLol\",null))))))).postAggregators(QueryRunnerTestHelper.ADD_ROWS_INDEX_CONSTANT).descending(descending).context(makeContext()).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "TimeseriesQuery query = Druids.newTimeseriesQueryBuilder().dataSource(QueryRunnerTestHelper.DATA_SOURCE).granularity(QueryRunnerTestHelper.ALL_GRAN).intervals(QueryRunnerTestHelper.FIRST_TO_THIRD).aggregators(Lists.newArrayList(Iterables.concat(aggregatorFactoryList,ImmutableList.of(new FilteredAggregatorFactory(new CountAggregatorFactory(\"filteredAgg\"),new SelectorDimFilter(QueryRunnerTestHelper.MARKET_DIMENSION,\"spot\",null)))))).postAggregators(QueryRunnerTestHelper.ADD_ROWS_INDEX_CONSTANT).descending(descending).context(makeContext()).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "assertExpectedResults(expectedResults,actualResults)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+0->3 [style = bold, label=""];
+9->2 [style = solid, label="expectedResults"];
+1->8 [style = dashed, label="0"];
+3->6 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+7->5 [style = bold, label=""];
+0->9 [style = bold, label=""];
+6->2 [style = solid, label="expectedResults"];
+1->0 [style = bold, label=""];
+0->2 [style = solid, label="actualResults"];
+1->5 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+10->8 [style = bold, label=""];
+3->2 [style = solid, label="expectedResults"];
+3->9 [style = dashed, label="0"];
+0->6 [style = bold, label=""];
+9->2 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

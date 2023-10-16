@@ -1,0 +1,24 @@
+digraph {
+9 [style = filled, label = "createMutation['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "CFMetaData table = Schema.instance.getCFMetaData(KEYSPACE,TABLE)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "long timestamp@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "TableMetadata table = Schema.instance.getTableMetadata(KEYSPACE,TABLE)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "createMutation['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "createMutation['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "int index@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "int index@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "long timestamp@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "return new RowUpdateBuilder(table,timestamp,bytes(index)).clustering(bytes(index)).add(\"val\",bytes(index)).build()@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->2 [style = bold, label=""];
+9->1 [style = dotted, label="true"];
+6->7 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+7->2 [style = bold, label=""];
+3->4 [style = bold, label=""];
+3->1 [style = dotted, label="true"];
+9->4 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+3->0 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+6->1 [style = dotted, label="true"];
+}

@@ -1,0 +1,17 @@
+digraph {
+2 [style = filled, label = "assertThat(s,isLinux(\"LogicalProject(field0=($0(,\" + \" field1=(COUNT($0) OVER (PARTITION BY $2 ORDER BY $1 NULLS LAST ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)(,\" + \" field2=(SUM($0) OVER (PARTITION BY $2 ORDER BY $1 NULLS LAST RANGE BETWEEN CURRENT ROW AND 1 FOLLOWING)()\" + \" LogicalTableScan(table=((hr, emps(()\"))@@@16@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "DISTINCT $1@@@17@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String s = Frameworks.withPlanner(null)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "COUNT['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testReader2['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertThat(s,isLinux(\"LogicalProject(field0=($0(,\" + \" field1=(COUNT($0) OVER (PARTITION BY $2 ORDER BY $1 NULLS LAST ROWS BETWEEN\" + \" UNBOUNDED PRECEDING AND CURRENT ROW)(,\" + \" field2=(SUM($0) OVER (PARTITION BY $2 ORDER BY $1 NULLS LAST RANGE BETWEEN\" + \" CURRENT ROW AND 1 FOLLOWING)()\" + \" LogicalTableScan(table=((hr, emps(()\"))@@@16@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "testReader2['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->3 [style = solid, label="s"];
+0->3 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+1->0 [style = bold, label=""];
+2->3 [style = dashed, label="0"];
+0->2 [style = solid, label="s"];
+4->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

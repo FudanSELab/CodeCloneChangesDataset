@@ -1,0 +1,35 @@
+digraph {
+7 [style = filled, label = "Supplier<Map<Integer,Collection<String>>> mapFactory = new Supplier<Map<Integer,Collection<String>>>(){@Override public Map<Integer,Collection<String>> get(){throw new RuntimeException(\"Forced failure\")}}@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Map<Integer,Collection<String>> expected = new HashMap<>()@@@16@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "verify(singleObserver,times(1)).onError(any())@@@20@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Map<Integer,Collection<String>> expected = new HashMap<Integer,Collection<String>>()@@@16@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "expected.put(3,Arrays.asList(\"eee\",\"fff\"))@@@18@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "toMultimapWithMapThrowingFactory['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "toMultimapWithMapThrowingFactory['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "expected.put(2,Arrays.asList(\"cc\",\"dd\"))@@@17@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Flowable<String> source = Flowable.just(\"a\",\"b\",\"cc\",\"dd\",\"eee\",\"fff\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "toMultimapWithMapThrowingFactory['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "verify(singleObserver,never()).onSuccess(expected)@@@21@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "mapped.subscribe(singleObserver)@@@19@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Single<Map<Integer,Collection<String>>> mapped = source.toMultimap(lengthFunc,new Function<String,String>(){@Override public String apply(String v){return v}},mapFactory)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "Observable<String> source = Observable.just(\"a\",\"b\",\"cc\",\"dd\",\"eee\",\"fff\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12->13 [style = bold, label=""];
+6->4 [style = bold, label=""];
+8->10 [style = bold, label=""];
+9->10 [style = dashed, label="0"];
+7->8 [style = solid, label="mapFactory"];
+5->0 [style = bold, label=""];
+3->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+11->3 [style = bold, label=""];
+10->1 [style = solid, label="expected"];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+10->6 [style = bold, label=""];
+13->7 [style = bold, label=""];
+9->1 [style = solid, label="expected"];
+3->13 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+9->6 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

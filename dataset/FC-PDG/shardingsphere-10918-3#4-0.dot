@@ -1,0 +1,32 @@
+digraph {
+1 [style = filled, label = "List<Connection> actualConnections = backendConnection.getConnections(\"ds1\",2,ConnectionMode.MEMORY_STRICTLY)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "when(backendDataSource.getConnections(anyString(),eq(2),any(),eq(TransactionType.LOCAL))).thenReturn(MockConnectionUtil.mockNewConnections(2))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "assertThat(backendConnection.getConnectionSize(),is(2))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertGetConnectionCacheIsEmpty['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "assertThat(backendConnection.getStateHandler().getStatus(),is(ConnectionStatus.TRANSACTION))@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertGetConnectionCacheIsEmpty['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThat(backendConnection.getConnectionSize(),is(12))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "assertThat(backendConnection.getStateHandler().getStatus(),is(ConnectionStatus.TRANSACTION))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "List<Connection> actualConnections = backendConnection.getConnections(\"ds1\",12,ConnectionMode.MEMORY_STRICTLY)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertOneThreadResult['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "when(backendDataSource.getConnections(anyString(),anyString(),eq(2),any())).thenReturn(MockConnectionUtil.mockNewConnections(2))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "assertThat(actualConnections.size(),is(12))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(actualConnections.size(),is(2))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "backendConnection.getStateHandler().setStatus(ConnectionStatus.TRANSACTION)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->11 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+12->3 [style = bold, label=""];
+7->1 [style = bold, label=""];
+9->10 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+10->13 [style = bold, label=""];
+3->7 [style = bold, label=""];
+11->9 [style = bold, label=""];
+2->4 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+4->0 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

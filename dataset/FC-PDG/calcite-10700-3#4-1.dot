@@ -1,0 +1,9 @@
+digraph {
+2 [style = filled, label = "testConstant['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "check(new Action(){public void check(RexBuilder rexBuilder,RexExecutorImpl executor){final List<RexNode> reducedValues = new ArrayList<RexNode>()final RexLiteral hello = rexBuilder.makeCharLiteral(new NlsString(\"Hello world!\",null,null))final RexNode plus = rexBuilder.makeCall(SqlStdOperatorTable.PLUS,rexBuilder.makeExactLiteral(BigDecimal.ONE),rexBuilder.makeExactLiteral(BigDecimal.ONE))RexLiteral four = rexBuilder.makeExactLiteral(BigDecimal.valueOf(4))final RexNode substring = rexBuilder.makeCall(SqlStdOperatorTable.SUBSTRING,hello,plus,four)executor.reduce(rexBuilder,ImmutableList.of(substring,plus),reducedValues)assertThat(reducedValues.size(),equalTo(2))assertThat(reducedValues.get(0),instanceOf())assertThat(((RexLiteral)reducedValues.get(0)).getValue2(),equalTo((Object)\"ello\"))assertThat(reducedValues.get(1),instanceOf())assertThat(((RexLiteral)reducedValues.get(1)).getValue2(),equalTo((Object)2L))}})@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testSubstring['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testConstant['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->0 [style = bold, label=""];
+3->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

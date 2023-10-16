@@ -1,0 +1,28 @@
+digraph {
+2 [style = filled, label = "this.loggingSystem.beforeInitialize()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "setLevelToNull['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "this.logger.debug(\"Hello\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(StringUtils.countOccurrencesOf(this.output.toString(),\"Hello\")).isEqualTo(1)@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "this.loggingSystem.initialize(this.initializationContext,null,null)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "this.logger.debug(\"Hello\")@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "this.loggingSystem.setLogLevel(\"org.springframework.boot\",LogLevel.DEBUG)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "this.logger.debug(\"Hello\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "setLevel['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "setLevel['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "this.loggingSystem.initialize(null,null,null)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "this.loggingSystem.setLogLevel(\"org.springframework.boot\",null)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->1 [style = bold, label=""];
+10->0 [style = bold, label=""];
+1->9 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+1->6 [style = bold, label=""];
+4->2 [style = bold, label=""];
+9->11 [style = bold, label=""];
+8->2 [style = bold, label=""];
+2->10 [style = bold, label=""];
+7->2 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+11->6 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

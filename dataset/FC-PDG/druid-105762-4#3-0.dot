@@ -1,0 +1,29 @@
+digraph {
+9 [style = filled, label = "Assert.assertEquals(44,td1.estimateBytesInMemory())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testIncrementalIndexRowSizeArr['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "IncrementalIndex index = new IncrementalIndex.Builder().setSimpleTestingIndexSchema(new CountAggregatorFactory(\"cnt\")).setMaxRowCount(10000).setMaxBytesInMemory(1000).buildOnheap()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Assert.assertEquals(182,td1.estimateBytesInMemory())@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "IncrementalIndex.IncrementalIndexRowResult tndResult = index.toIncrementalIndexRow(toMapRow(time,\"billy\",\"A\",\"joe\",\"B\"))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "IncrementalIndex.IncrementalIndexRowResult tndResult = index.toIncrementalIndexRow(toMapRow(time + 1,\"billy\",\"A\",\"joe\",Arrays.asList(\"A\",\"B\")))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "long time = System.currentTimeMillis()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testIncrementalIndexRowSizeArr['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Assert.assertEquals(50,td1.estimateBytesInMemory())@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "testIncrementalIndexRowSizeBasic['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "IncrementalIndexRow td1 = tndResult.getIncrementalIndexRow()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+4->10 [style = bold, label=""];
+3->0 [style = bold, label=""];
+4->3 [style = bold, label=""];
+10->0 [style = bold, label=""];
+7->5 [style = bold, label=""];
+0->9 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+8->5 [style = bold, label=""];
+4->3 [style = solid, label="time"];
+4->10 [style = solid, label="time"];
+2->9 [style = dashed, label="0"];
+0->6 [style = bold, label=""];
+5->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

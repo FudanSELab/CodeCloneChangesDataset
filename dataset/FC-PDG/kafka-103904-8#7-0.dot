@@ -1,0 +1,32 @@
+digraph {
+5 [style = filled, label = "Map<String,List<TopicPartition>> assignment = assignor.assign(partitionsPerTopic,Collections.singletonMap(consumerId,new Subscription(Collections.emptyList())))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertTrue(assignment.get(consumerId).isEmpty())@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertTrue(assignment.get(consumerId).isEmpty())@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(Collections.singleton(consumerId),assignment.keySet())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Map<String,List<TopicPartition>> assignment = assignor.assign(partitionsPerTopic,Collections.singletonMap(consumerId,new Subscription(topics(topic))))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testOneConsumerNonexistentTopic['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Map<String,Integer> partitionsPerTopic = new HashMap<>()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String topic = \"topic\"@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "testOneConsumerNonexistentTopic['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "testOneConsumerNoTopic['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "String consumerId = \"consumer\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->2 [style = solid, label="topic"];
+8->1 [style = bold, label=""];
+6->2 [style = solid, label="consumerId"];
+5->8 [style = bold, label=""];
+6->5 [style = bold, label=""];
+5->2 [style = bold, label=""];
+7->5 [style = bold, label=""];
+10->9 [style = bold, label=""];
+5->2 [style = solid, label="partitionsPerTopic"];
+9->5 [style = solid, label="consumerId"];
+1->0 [style = bold, label=""];
+9->8 [style = solid, label="consumerId"];
+2->5 [style = dashed, label="0"];
+6->1 [style = solid, label="consumerId"];
+4->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+9->6 [style = bold, label=""];
+6->5 [style = solid, label="partitionsPerTopic"];
+}

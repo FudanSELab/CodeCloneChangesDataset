@@ -1,0 +1,32 @@
+digraph {
+9 [style = filled, label = "TestObserver<Integer> to = new TestObserver<Integer>()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "to.assertNoErrors()@@@25@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Observable.range(0,100000).onErrorReturn(new Function<Throwable,Integer>(){@Override public Integer apply(Throwable t1){return 1}}).observeOn(Schedulers.computation()).map(new Function<Integer,Integer>(){@Override public Integer apply(Integer t1){if (c++ <= 1) {try {Thread.sleep(500)}catch (InterruptedException e) }return t1}}).subscribe(to)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "TestSubscriber<Integer> ts = new TestSubscriber<Integer>()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "ts.assertNoErrors()@@@25@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "to.awaitDone(5,TimeUnit.SECONDS)@@@24@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "TestSubscriber<Integer> ts = new TestSubscriber<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "ts.awaitDone(5,TimeUnit.SECONDS)@@@24@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Flowable.range(0,100000).onErrorResumeNext(new Function<Throwable,Flowable<Integer>>(){@Override public Flowable<Integer> apply(Throwable t1){return Flowable.just(1)}}).observeOn(Schedulers.computation()).map(new Function<Integer,Integer>(){@Override public Integer apply(Integer t1){if (c++ <= 1) {try {Thread.sleep(500)}catch (InterruptedException e) }return t1}}).subscribe(ts)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "backpressure['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "backpressure['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "backpressure['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+2->0 [style = solid, label="ts"];
+6->5 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+9->7 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+2->9 [style = dashed, label="0"];
+7->10 [style = bold, label=""];
+9->7 [style = solid, label="to"];
+0->1 [style = bold, label=""];
+5->0 [style = solid, label="ts"];
+3->11 [style = dashed, label="0"];
+8->9 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

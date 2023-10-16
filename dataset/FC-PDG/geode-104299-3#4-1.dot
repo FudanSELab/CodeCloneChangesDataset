@@ -1,0 +1,38 @@
+digraph {
+7 [style = filled, label = "startWithServerPortOverridesPortInCacheXml['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "startWithServerPortOverridesDefaultWithCacheXml['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "startWithServerPortOverridesPortInCacheXml['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "givenCacheXmlFile()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "launcher = awaitStart(new Builder().setMemberName(getUniqueName()).setRedirectOutput(true).setServerPort(defaultServerPort).setWorkingDirectory(getWorkingDirectoryPath()).set(LOG_LEVEL,\"config\").set(MCAST_PORT,\"0\"))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(Integer.valueOf(launcher.status().getPort())).isEqualTo(startPort)@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "assertThat(Integer.valueOf(launcher.status().getPort())).isEqualTo(defaultServerPort)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "int(( freePorts = getRandomAvailableTCPPorts(2)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThatServerPortIsFree(cacheXmlPort)@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "givenCacheXmlFileWithServerPort(cacheXmlPort)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "int startPort = freePorts(1(@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThatServerPortIsInUse(startPort)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThatServerPortIsInUse(defaultServerPort)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "int cacheXmlPort = freePorts(0(@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "launcher = startServer(new Builder().setServerPort(startPort))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->2 [style = solid, label="freePorts"];
+0->6 [style = bold, label=""];
+2->0 [style = solid, label="startPort"];
+2->3 [style = bold, label=""];
+12->11 [style = bold, label=""];
+3->13 [style = dashed, label="0"];
+5->1 [style = solid, label="freePorts"];
+8->0 [style = bold, label=""];
+2->4 [style = solid, label="startPort"];
+5->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+7->5 [style = bold, label=""];
+2->8 [style = solid, label="startPort"];
+10->13 [style = bold, label=""];
+11->10 [style = bold, label=""];
+1->3 [style = solid, label="cacheXmlPort"];
+3->8 [style = bold, label=""];
+14->12 [style = bold, label=""];
+9->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+1->6 [style = solid, label="cacheXmlPort"];
+}

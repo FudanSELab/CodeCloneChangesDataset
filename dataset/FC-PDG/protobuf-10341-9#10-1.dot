@@ -1,0 +1,24 @@
+digraph {
+6 [style = filled, label = "testIterationOrder['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "testIterationOrder['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "setMapValuesUsingAccessors(builder)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "TestMap message = builder.build()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertEquals(Arrays.asList(\"1\",\"2\",\"3\"),new ArrayList<String>(message.getStringToInt32FieldMap().keySet()))@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testIterationOrder['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(new ArrayList<String>(message.getStringToInt32FieldMap().keySet())).containsExactly(\"1\",\"2\",\"3\").inOrder()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "setMapValues(builder)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "TestMap.Builder builder = TestMap.newBuilder()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+8->0 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->7 [style = solid, label="builder"];
+6->0 [style = bold, label=""];
+7->1 [style = bold, label=""];
+0->4 [style = solid, label="builder"];
+0->4 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

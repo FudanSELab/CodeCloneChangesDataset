@@ -1,0 +1,28 @@
+digraph {
+8 [style = filled, label = "specificIPAddressNotReverseResolved['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "this.webServer = factory.getWebServer(mock())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "specificIPAddressNotReverseResolved['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "specificIPAddressNotReverseResolved['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(((ServerConnector)connector).getHost()).isEqualTo(localhost.getHostAddress())@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "InetAddress localhost = InetAddress.getLocalHost()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Connector connector = ((JettyWebServer)this.webServer).getServer().getConnectors()(0(@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "this.webServer = factory.getWebServer()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "JettyServletWebServerFactory factory = getFactory()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "this.webServer.start()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "JettyReactiveWebServerFactory factory = getFactory()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "factory.setAddress(InetAddress.getByAddress(localhost.getAddress()))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->3 [style = bold, label=""];
+5->7 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+6->1 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+2->9 [style = bold, label=""];
+8->5 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+11->7 [style = bold, label=""];
+0->5 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

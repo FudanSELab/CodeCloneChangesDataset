@@ -1,0 +1,19 @@
+digraph {
+5 [style = filled, label = "RexNode caseNode = case_(eq(vIntNotNull(),literal(0)),trueLiteral,gt(div(literal(3),vIntNotNull()),literal(1)),trueLiteral,falseLiteral)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "RexNode caseNode = case_(ne(vIntNotNull(),literal(0)),eq(div(literal(3),vIntNotNull()),literal(11)),falseLiteral)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "simplify = simplify.withParanoid(false)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testSimplifyCaseDiv2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "checkSimplifyUnchanged(caseNode)@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testSimplifyCaseDiv1['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testSimplifyCaseDiv1['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3->5 [style = dashed, label="0"];
+5->0 [style = solid, label="caseNode"];
+1->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+3->0 [style = solid, label="caseNode"];
+5->0 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->5 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

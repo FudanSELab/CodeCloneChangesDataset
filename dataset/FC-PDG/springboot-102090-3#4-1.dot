@@ -1,0 +1,27 @@
+digraph {
+8 [style = filled, label = "callbackInvokeAndWhenLambdaMismatchOnDifferentArgumentShouldSwallowException['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "String argument = \"foo\"@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "GenericFactory<?> callbackInstance = mock()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(result.hasResult()).isFalse()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "callbackInvokeAndWhenHasResolvableGenericNonMatchShouldReturnNoResult['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "callbackInvokeAndWhenHasResolvableGenericNonMatchShouldReturnNoResult['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "assertThat(result.hasResult()).isFalse()@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "verifyZeroInteractions(callbackInstance)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "String argument = \"foo\"@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "InvocationResult<Integer> result = LambdaSafe.callback(,callbackInstance,argument).invokeAnd(null)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "InvocationResult<Integer> result = LambdaSafe.callback(,callbackInstance,argument).invokeAnd(null)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "GenericMultiArgFactory<StringBuilder> callbackInstance = null@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+3->0 [style = bold, label=""];
+8->10 [style = bold, label=""];
+6->5 [style = bold, label=""];
+4->2 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+9->7 [style = bold, label=""];
+11->9 [style = bold, label=""];
+5->0 [style = solid, label="callbackInstance"];
+2->9 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+10->11 [style = bold, label=""];
+}

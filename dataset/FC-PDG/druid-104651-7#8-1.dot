@@ -1,0 +1,31 @@
+digraph {
+3 [style = filled, label = "FireDepartmentMetrics metrics@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return appenderatorsManager.createRealtimeAppenderatorForTask(getId(),dataSchema,tuningConfig.withBasePersistDirectory(toolbox.getPersistDir()),metrics,toolbox.getSegmentPusher(),toolbox.getJsonMapper(),toolbox.getIndexIO(),toolbox.getIndexMergerV9(),toolbox.getQueryRunnerFactoryConglomerate(),toolbox.getSegmentAnnouncer(),toolbox.getEmitter(),toolbox.getQueryExecutorService(),toolbox.getJoinableFactory(),toolbox.getCache(),toolbox.getCacheConfig(),toolbox.getCachePopulatorStats())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "final FireDepartmentMetrics metrics@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "newAppenderator['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "final DataSchema dataSchema@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "FireDepartmentMetrics metrics@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "return appenderatorsManager.createRealtimeAppenderatorForTask(getId(),dataSchema,tuningConfig.withBasePersistDirectory(toolbox.getPersistDir()),metrics,toolbox.getSegmentPusher(),toolbox.getJsonMapper(),toolbox.getIndexIO(),toolbox.getIndexMergerV9(),toolbox.getQueryRunnerFactoryConglomerate(),toolbox.getSegmentAnnouncer(),toolbox.getEmitter(),toolbox.getQueryExecutorService(),toolbox.getCache(),toolbox.getCacheConfig(),toolbox.getCachePopulatorStats())@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "newAppenderator['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "final TaskToolbox toolbox@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "TaskToolbox toolbox@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "newAppenderator['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final RealtimeAppenderatorTuningConfig tuningConfig@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2->0 [style = solid, label="metrics"];
+10->0 [style = solid, label="dataSchema"];
+1->0 [style = bold, label=""];
+9->8 [style = dotted, label="true"];
+9->7 [style = dotted, label="true"];
+1->2 [style = dotted, label="true"];
+5->3 [style = dotted, label="true"];
+5->6 [style = bold, label=""];
+9->10 [style = dotted, label="true"];
+3->6 [style = solid, label="metrics"];
+9->0 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+7->0 [style = solid, label="metrics"];
+5->4 [style = dotted, label="true"];
+9->11 [style = dotted, label="true"];
+0->6 [style = dashed, label="0"];
+1->3 [style = dotted, label="true"];
+}

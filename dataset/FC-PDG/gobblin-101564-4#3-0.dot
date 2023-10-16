@@ -1,0 +1,38 @@
+digraph {
+0 [style = filled, label = "getApplicableFilePaths['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final Path dataDir@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "final Path dataDir@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "final FileSystem fs@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "return applicablePathCache.get(dataDir,new Callable<List<Path>>(){@Override public List<Path> call(){if (!this.fs.exists(dataDir)) {return Lists.newArrayList()}List<Path> paths = Lists.newArrayList()for (FileStatus fileStatus : FileListUtils.listFilesRecursively(fs,dataDir,new PathFilter(){@Override public boolean accept(Path path){for (String validExtention : getApplicableFileExtensions()){if (path.getName().endsWith(validExtention)) {return true}}return false}})){paths.add(fileStatus.getPath())}return paths}})@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "!fs.exists(dataDir)@@@3@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "Path dataDir@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "getApplicableFilePaths['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "return Lists.newArrayList()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "return paths@@@20@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "getApplicableFilePaths['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "List<Path> paths = Lists.newArrayList()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "paths.add(fileStatus.getPath())@@@18@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "final Collection<String> extensions@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "FileSystem fs@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4->5 [style = dotted, label="true"];
+1->5 [style = dashed, label="0"];
+9->8 [style = solid, label="paths"];
+1->14 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+9->10 [style = bold, label=""];
+12->6 [style = bold, label=""];
+12->11 [style = dotted, label="true"];
+7->9 [style = bold, label=""];
+12->14 [style = dotted, label="true"];
+12->13 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+3->2 [style = solid, label="fs"];
+10->8 [style = bold, label=""];
+6->7 [style = dotted, label="true"];
+1->2 [style = solid, label="dataDir"];
+6->9 [style = bold, label=""];
+6->7 [style = bold, label=""];
+5->2 [style = solid, label="dataDir"];
+0->1 [style = dotted, label="true"];
+}

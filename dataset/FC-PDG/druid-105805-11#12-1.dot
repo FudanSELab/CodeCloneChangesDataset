@@ -1,0 +1,31 @@
+digraph {
+9 [style = filled, label = "TimeseriesQueryRunnerFactory factory = new TimeseriesQueryRunnerFactory(new TimeseriesQueryQueryToolChest(QueryRunnerTestHelper.noopIntervalChunkingQueryRunnerDecorator()),new TimeseriesQueryEngine(),QueryRunnerTestHelper.NOOP_QUERYWATCHER)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testSpatialQuery['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "List<Result<TimeseriesResultValue>> expectedResults = Collections.singletonList(new Result<>(DateTimes.of(\"2013-01-01T00:00:00.000Z\"),new TimeseriesResultValue(ImmutableMap.builder().put(\"rows\",3L).put(\"val\",59L).build())))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testSpatialQuery['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "TestHelper.assertExpectedResults(expectedResults,runner.run(QueryPlus.wrap(query)))@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "TimeseriesQueryRunnerFactory factory = new TimeseriesQueryRunnerFactory(new TimeseriesQueryQueryToolChest(),new TimeseriesQueryEngine(),QueryRunnerTestHelper.NOOP_QUERYWATCHER)@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "testSpatialQuery['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "QueryRunner runner = new FinalizeResultsQueryRunner(factory.createRunner(segment),factory.getToolchest())@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "TimeseriesQuery query = Druids.newTimeseriesQueryBuilder().dataSource(\"test\").granularity(Granularities.ALL).intervals(Collections.singletonList(Intervals.of(\"2013-01-01/2013-01-07\"))).filters(new SpatialDimFilter(\"dim.geo\",new RadiusBound(new float((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8e3678,5))).aggregators(Arrays.asList(new CountAggregatorFactory(\"rows\"),new LongSumAggregatorFactory(\"val\",\"val\"))).build()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "List<Result<TimeseriesResultValue>> expectedResults = Collections.singletonList(new Result<TimeseriesResultValue>(DateTimes.of(\"2013-01-01T00:00:00.000Z\"),new TimeseriesResultValue(ImmutableMap.builder().put(\"rows\",3L).put(\"val\",59L).build())))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "TimeseriesQueryRunnerFactory factory = new TimeseriesQueryRunnerFactory(new TimeseriesQueryQueryToolChest(QueryRunnerTestHelper.noopIntervalChunkingQueryRunnerDecorator()),new TimeseriesQueryEngine(),QueryRunnerTestHelper.NOOP_QUERYWATCHER)@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8->9 [style = bold, label=""];
+9->5 [style = bold, label=""];
+4->8 [style = bold, label=""];
+5->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+8->1 [style = solid, label="expectedResults"];
+7->5 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+0->1 [style = solid, label="expectedResults"];
+2->7 [style = dashed, label="0"];
+2->9 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+4->1 [style = solid, label="query"];
+4->0 [style = bold, label=""];
+2->5 [style = bold, label=""];
+0->7 [style = bold, label=""];
+10->4 [style = bold, label=""];
+}

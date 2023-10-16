@@ -1,0 +1,29 @@
+digraph {
+10 [style = filled, label = "builder = new KeyValueStoreBuilder<>(supplier,Serdes.String(),Serdes.String(),new MockTime())@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "builder = new SessionStoreBuilder<>(supplier,Serdes.String(),Serdes.String(),new MockTime())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "setUp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "expect(supplier.get()).andReturn(inner)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "expect(supplier.name()).andReturn(\"name\")@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "EasyMock.expect(supplier.name()).andReturn(\"name\")@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "setUp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "setUp['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "builder = new SessionStoreBuilder<>(supplier,Serdes.String(),Serdes.String(),new MockTime())@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "replay(supplier)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "EasyMock.replay(supplier)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "EasyMock.expect(supplier.get()).andReturn(inner)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->8 [style = bold, label=""];
+5->7 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+1->5 [style = dashed, label="0"];
+8->5 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+1->10 [style = bold, label=""];
+11->3 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+9->6 [style = bold, label=""];
+}

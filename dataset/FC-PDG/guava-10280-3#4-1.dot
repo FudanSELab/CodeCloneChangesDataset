@@ -1,0 +1,28 @@
+digraph {
+3 [style = filled, label = "assertEqualCharNodes(Iterables.limit(result,2),\"ab\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "forTree_depthFirstPostOrder_iterableIsLazy['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(graph.requestedNodes).containsExactly('h','h','d','a','b')@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "assertEqualCharNodes(Iterables.limit(result,2),\"ab\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "forTree_depthFirstPostOrder_iterableIsLazy['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "assertThat(graph.requestedNodes).containsExactly('h','h','h','d','d','a','a','b','b')@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "forTree_depthFirstPostOrder_iterableIsLazy['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Iterable<Character> result = Traverser.forGraph(graph).depthFirstPostOrder('h')@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(graph.requestedNodes).containsExactly('h','h','d','d','a','a','b','b')@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(graph.requestedNodes).containsExactly('h','d','a','b')@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "RequestSavingGraph graph = new RequestSavingGraph(TREE)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+3->9 [style = bold, label=""];
+6->4 [style = bold, label=""];
+5->3 [style = solid, label="result"];
+1->9 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+1->6 [style = bold, label=""];
+7->0 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+5->6 [style = solid, label="result"];
+10->0 [style = bold, label=""];
+6->8 [style = bold, label=""];
+9->6 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

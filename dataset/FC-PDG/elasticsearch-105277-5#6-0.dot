@@ -1,0 +1,27 @@
+digraph {
+5 [style = filled, label = "final MappedFieldType ft = new NumberFieldMapper.NumberFieldType(NumberType.DOUBLE)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testRandomDoubles['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "MappedFieldType ft = new NumberFieldMapper.NumberFieldType(NumberFieldMapper.NumberType.DOUBLE)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "testCase(stats(\"_name\").field(ft.name()),null,null,singleton(ft))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "testRandomLongs['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ft.setName(\"field\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testRandomDoubles['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final SimpleStatsAggregator expected = new SimpleStatsAggregator()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "MappedFieldType ft = new NumberFieldMapper.NumberFieldType(NumberFieldMapper.NumberType.LONG)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testCase(ft,null,null)@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->5 [style = dashed, label="0"];
+3->8 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+6->5 [style = bold, label=""];
+5->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+8->2 [style = bold, label=""];
+9->8 [style = bold, label=""];
+3->1 [style = solid, label="ft"];
+0->1 [style = bold, label=""];
+5->7 [style = solid, label="ft"];
+8->1 [style = solid, label="ft"];
+0->7 [style = bold, label=""];
+}

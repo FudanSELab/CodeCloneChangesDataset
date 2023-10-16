@@ -1,0 +1,32 @@
+digraph {
+3 [style = filled, label = "{sqlSession.close()}@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "user.equals(null)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "{sqlSession.close()}@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertEquals(\"Should load all lazy properties.\",3,user.setterCounter)@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "sqlSessionFactory.getConfiguration().setAggressiveLazyLoading(true)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "shouldEqualsTriggerLazyLoading['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "verifyAggressiveLazyLoadingBehavior['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertEquals(\"Should load all lazy properties.\",3,user.lazyLoadCounter)@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "assertEquals(3,user.lazyLoadCounter)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "User user = mapper.getUser(1)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "sqlSessionFactory.getConfiguration().setAggressiveLazyLoading(false)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "SqlSession sqlSession = sqlSessionFactory.openSession()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "verifyAggressiveLazyLoadingBehavior['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->7 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+5->11 [style = bold, label=""];
+6->0 [style = bold, label=""];
+8->4 [style = bold, label=""];
+13->6 [style = bold, label=""];
+4->13 [style = dashed, label="0"];
+2->7 [style = dashed, label="0"];
+4->6 [style = bold, label=""];
+11->10 [style = bold, label=""];
+10->12 [style = bold, label=""];
+7->3 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->5 [style = bold, label=""];
+9->13 [style = bold, label=""];
+}

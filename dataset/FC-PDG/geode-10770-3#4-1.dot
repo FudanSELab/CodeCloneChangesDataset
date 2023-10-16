@@ -1,0 +1,31 @@
+digraph {
+10 [style = filled, label = "this.properties.setProperty(SECURITY_SHIRO_INIT,\"shiro.ini\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "this.properties.setProperty(SECURITY_PEER_AUTHENTICATOR,\"org.abc.test\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(this.securityService.isIntegratedSecurity()).isTrue()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertThat(this.securityService.isClientSecurityRequired()).isTrue()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "this.securityService = SecurityServiceFactory.create(properties)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "assertThat(this.securityService.isClientSecurityRequired()).isFalse()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testInitWithPeerAuthenticator['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(this.securityService.isIntegratedSecurity()).isFalse()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(this.securityService.isPeerSecurityRequired()).isTrue()@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testInitWithPeerAuthenticator['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "testInitWithShiroAuthenticator['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "this.securityService = SecurityServiceFactory.create(null,this.distributionConfig)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+8->10 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+3->5 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+10->5 [style = bold, label=""];
+9->11 [style = bold, label=""];
+5->9 [style = bold, label=""];
+3->7 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+1->11 [style = dashed, label="0"];
+11->2 [style = bold, label=""];
+5->4 [style = bold, label=""];
+}

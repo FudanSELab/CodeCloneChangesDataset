@@ -1,0 +1,28 @@
+digraph {
+3 [style = filled, label = "return new RestTemplateBuilder(this.detectRequestFactory,this.rootUri,Collections.unmodifiableSet(new LinkedHashSet<HttpMessageConverter<?>>(messageConverters)),this.requestFactorySupplier,this.uriTemplateHandler,this.errorHandler,this.basicAuthentication,this.restTemplateCustomizers,this.requestFactoryCustomizer,this.interceptors)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "Collection<? extends HttpMessageConverter<?>> messageConverters@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return new RestTemplateBuilder(this.requestFactoryCustomizer,this.detectRequestFactory,this.rootUri,setOf(messageConverters),this.interceptors,this.requestFactory,this.uriTemplateHandler,this.errorHandler,this.basicAuthentication,this.defaultHeaders,this.customizers,this.requestCustomizers)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "return new RestTemplateBuilder(this.detectRequestFactory,this.rootUri,append(this.messageConverters,messageConverters),this.requestFactorySupplier,this.uriTemplateHandler,this.errorHandler,this.basicAuthentication,this.restTemplateCustomizers,this.requestFactoryCustomizer,this.interceptors)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "messageConverters['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "additionalMessageConverters['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "messageConverters['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "Collection<? extends HttpMessageConverter<?>> messageConverters@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Assert.notNull(messageConverters,\"MessageConverters must not be null\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->5 [style = dashed, label="0"];
+0->3 [style = solid, label="messageConverters"];
+8->7 [style = dotted, label="true"];
+1->2 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+1->0 [style = dotted, label="true"];
+4->2 [style = bold, label=""];
+0->2 [style = solid, label="messageConverters"];
+7->6 [style = solid, label="messageConverters"];
+8->2 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+0->5 [style = solid, label="messageConverters"];
+7->2 [style = solid, label="messageConverters"];
+2->6 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->0 [style = dotted, label="true"];
+2->5 [style = bold, label=""];
+}

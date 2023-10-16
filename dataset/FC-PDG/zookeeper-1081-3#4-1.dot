@@ -1,0 +1,38 @@
+digraph {
+7 [style = filled, label = "testSkip_HitEnd['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "i < DATA_BYTES.length@@@4@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "i++@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testSkip_HitEnd['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "in.read()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testSkip_AtEnd['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "int i = 0@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertEquals(0L,in.skip(2L))@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertEquals(1L,in.skip(2L))@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(-1,in.read())@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "i < DATA_BYTES.length - 1@@@4@@@['1', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+2->9 [style = solid, label="i"];
+3->2 [style = solid, label="i"];
+1->4 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+8->3 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+3->1 [style = solid, label="i"];
+2->9 [style = bold, label=""];
+9->10 [style = bold, label=""];
+9->6 [style = dotted, label="true"];
+7->3 [style = bold, label=""];
+9->6 [style = bold, label=""];
+4->0 [style = bold, label=""];
+6->2 [style = bold, label=""];
+3->9 [style = bold, label=""];
+3->9 [style = solid, label="i"];
+1->6 [style = bold, label=""];
+9->2 [style = dotted, label="true"];
+10->0 [style = bold, label=""];
+2->1 [style = solid, label="i"];
+1->6 [style = dotted, label="true"];
+1->2 [style = dotted, label="true"];
+4->10 [style = dashed, label="0"];
+}

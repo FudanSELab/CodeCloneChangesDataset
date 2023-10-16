@@ -1,0 +1,35 @@
+digraph {
+5 [style = filled, label = "TopNQuery query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.DATA_SOURCE).granularity(QueryRunnerTestHelper.ALL_GRAN).dimension(new ExtractionDimensionSpec(ColumnHolder.TIME_COLUMN_NAME,\"dayOfWeek\",new TimeFormatExtractionFn(\"EEEE\",null,null,null,false))).metric(\"index\").threshold(2).intervals(QueryRunnerTestHelper.FULL_ON_INTERVAL_SPEC).aggregators(QueryRunnerTestHelper.ROWS_COUNT,QueryRunnerTestHelper.INDEX_DOUBLE_SUM).postAggregators(QueryRunnerTestHelper.ADD_ROWS_INDEX_CONSTANT).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "query = query.withAggregatorSpecs(Arrays.asList(QueryRunnerTestHelper.rowsCount,new DoubleSumAggregatorFactory(\"index\",null,\"-index + 100\",ExprMacroTable.nil())))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "List<Result<TopNResultValue>> expectedResults = Collections.singletonList(new Result<>(DateTimes.of(\"2011-01-12T00:00:00.000Z\"),new TopNResultValue(Arrays.asList(ImmutableMap.of(\"dayOfWeek\",\"Wednesday\",\"rows\",182L,\"index\",76010.28100585938,\"addRowsIndexConstant\",76193.28100585938),ImmutableMap.of(\"dayOfWeek\",\"Thursday\",\"rows\",182L,\"index\",75203.26300811768,\"addRowsIndexConstant\",75386.26300811768)))))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "expectedResults = Collections.singletonList(TopNQueryRunnerTestHelper.createExpectedRows(\"2011-01-12T00:00:00.000Z\",new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a5eddc,Arrays.asList(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a5ede8,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a5edf3)))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "List<Result<TopNResultValue>> expectedResults = Collections.singletonList(new Result<>(DateTimes.of(\"2011-01-12T00:00:00.000Z\"),new TopNResultValue(Arrays.asList(ImmutableMap.of(QueryRunnerTestHelper.qualityDimension,\"e\",\"rows\",558L,\"index\",246645.1204032898,\"addRowsIndexConstant\",247204.1204032898),ImmutableMap.of(QueryRunnerTestHelper.qualityDimension,\"r\",\"rows\",372L,\"index\",222051.08961486816,\"addRowsIndexConstant\",222424.08961486816)))))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testTopNTimeExtraction['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "TopNQuery query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).dimension(new ExtractionDimensionSpec(QueryRunnerTestHelper.qualityDimension,QueryRunnerTestHelper.qualityDimension,new RegexDimExtractionFn(\".(.)\",false,null))).metric(\"index\").threshold(2).intervals(QueryRunnerTestHelper.fullOnIntervalSpec).aggregators(QueryRunnerTestHelper.rowsCount,QueryRunnerTestHelper.indexDoubleSum).postAggregators(QueryRunnerTestHelper.addRowsIndexConstant).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertExpectedResults(expectedResults,query)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "TopNQuery query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).dimension(new ExtractionDimensionSpec(ColumnHolder.TIME_COLUMN_NAME,\"dayOfWeek\",new TimeFormatExtractionFn(\"EEEE\",null,null,null,false))).metric(\"index\").threshold(2).intervals(QueryRunnerTestHelper.fullOnIntervalSpec).aggregators(QueryRunnerTestHelper.rowsCount,QueryRunnerTestHelper.indexDoubleSum).postAggregators(QueryRunnerTestHelper.addRowsIndexConstant).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "testTopNTimeExtraction['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "testTopNCollapsingDimExtraction['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertExpectedResults(expectedResults,query)@@@14@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+8->0 [style = solid, label="query"];
+1->3 [style = bold, label=""];
+5->0 [style = solid, label="query"];
+9->6 [style = solid, label="expectedResults"];
+3->0 [style = bold, label=""];
+11->0 [style = solid, label="expectedResults"];
+9->6 [style = bold, label=""];
+0->7 [style = bold, label=""];
+3->0 [style = solid, label="expectedResults"];
+7->9 [style = bold, label=""];
+11->0 [style = bold, label=""];
+10->8 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+8->11 [style = bold, label=""];
+4->5 [style = bold, label=""];
+1->0 [style = solid, label="query"];
+3->11 [style = dashed, label="0"];
+7->6 [style = solid, label="query"];
+}

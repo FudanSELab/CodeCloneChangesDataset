@@ -1,0 +1,23 @@
+digraph {
+6 [style = filled, label = "assertThat(requestFactory).hasFieldOrPropertyWithValue(\"bufferRequestBody\",true)@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ClientHttpRequestFactory requestFactory = this.builder.requestFactory().setBufferRequestBody(false).build().getRequestFactory()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "bufferRequestBodyCanBeConfiguredOnHttpComponentsRequestFactory['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "bufferRequestBodyCanBeConfiguredOnHttpComponentsRequestFactory['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "assertThat(ReflectionTestUtils.getField(ReflectionTestUtils.getField(requestFactory,\"client\"),\"connectTimeout\")).isEqualTo(1234)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "requestFactory = this.builder.requestFactory().setBufferRequestBody(true).build().getRequestFactory()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "connectTimeoutCanBeConfiguredOnOkHttp3RequestFactory['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "requestFactory = this.builder.requestFactory().build().getRequestFactory()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertThat(requestFactory).hasFieldOrPropertyWithValue(\"bufferRequestBody\",true)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "ClientHttpRequestFactory requestFactory = this.builder.requestFactory().setConnectTimeout(Duration.ofMillis(1234)).build().getRequestFactory()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(requestFactory).hasFieldOrPropertyWithValue(\"bufferRequestBody\",false)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+1->4 [style = bold, label=""];
+10->9 [style = bold, label=""];
+3->1 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+9->8 [style = bold, label=""];
+2->6 [style = bold, label=""];
+7->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

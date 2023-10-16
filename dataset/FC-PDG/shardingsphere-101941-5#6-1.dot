@@ -1,0 +1,34 @@
+digraph {
+7 [style = filled, label = "return new TransactionContexts(engines)@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "createTransactionContexts['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "engine.init(resource.getDatabaseType(),resource.getDataSources(),xaTransactionMangerType)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "createTransactionContexts['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ShardingSphereResource resource = metaDataContexts.getMetaData(each).getResource()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "engines.put(each,engine)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "String xaTransactionMangerType = metaDataContexts.getProps().getValue(ConfigurationPropertyKey.XA_TRANSACTION_MANAGER_TYPE)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final MetaDataContexts metaDataContexts@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "ShardingSphereTransactionManagerEngine engine = new ShardingSphereTransactionManagerEngine()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "String xaTransactionMangerType = getTransactionRule(metaDataContexts).getProps().getProperty(\"xa-transaction-manager-type\")@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "createTransactionContexts['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Map<String,ShardingSphereTransactionManagerEngine> engines = new HashMap<>(metaDataContexts.getAllSchemaNames().size(),1)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+0->3 [style = bold, label=""];
+5->6 [style = dotted, label="true"];
+8->9 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+5->2 [style = bold, label=""];
+10->2 [style = bold, label=""];
+10->6 [style = dotted, label="true"];
+2->9 [style = bold, label=""];
+4->0 [style = bold, label=""];
+9->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->7 [style = solid, label="engines"];
+8->1 [style = solid, label="xaTransactionMangerType"];
+11->6 [style = dotted, label="true"];
+11->2 [style = bold, label=""];
+4->7 [style = bold, label=""];
+2->8 [style = bold, label=""];
+0->4 [style = solid, label="engine"];
+9->1 [style = solid, label="xaTransactionMangerType"];
+}

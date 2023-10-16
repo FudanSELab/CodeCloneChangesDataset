@@ -1,0 +1,32 @@
+digraph {
+6 [style = filled, label = "testBloomFilterVirtualColumn['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "String base64 = StringUtils.encodeBase64String(bytes)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "BloomKFilter filter = new BloomKFilter(1500)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testBloomFilterVirtualColumnNumber['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testBloomFilterVirtualColumn['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "filter.addString(\"def-foo\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testQuery(StringUtils.format(\"SELECT COUNT(*) FROM druid.foo WHERE bloom_filter_test(2 * CAST(dim1 AS float), '%s')\",base64),ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).virtualColumns(expressionVirtualColumn(\"v0\",\"(2 * CAST(\"dim1\", 'DOUBLE'))\",ValueType.FLOAT)).filters(new BloomDimFilter(\"v0\",BloomKFilterHolder.fromBloomKFilter(filter),null)).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8ca174))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testQuery(StringUtils.format(\"SELECT COUNT(*) FROM druid.foo WHERE bloom_filter_test(concat(dim1, '-foo'), '%s')\",base64),ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).virtualColumns(expressionVirtualColumn(\"v0\",\"concat(\"dim1\",'-foo')\",ValueType.STRING)).filters(new BloomDimFilter(\"v0\",BloomKFilterHolder.fromBloomKFilter(filter),null)).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8ca0aa))@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "byte(( bytes = BloomFilterSerializersModule.bloomKFilterToBytes(filter)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testQuery(StringUtils.format(\"SELECT COUNT(*) FROM druid.foo WHERE bloom_filter_test(concat(dim1, '-foo'), '%s')\",base64),ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).virtualColumns(expressionVirtualColumn(\"v0\",\"concat(\"dim1\",'-foo')\",ValueType.STRING)).filters(new BloomDimFilter(\"v0\",BloomKFilterHolder.fromBloomKFilter(filter),null)).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(QUERY_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@8ca10f))@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "filter.addFloat(20.2f)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+5->8 [style = dashed, label="0"];
+6->1 [style = bold, label=""];
+3->0 [style = solid, label="bytes"];
+2->10 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+0->10 [style = bold, label=""];
+1->8 [style = bold, label=""];
+0->2 [style = solid, label="base64"];
+9->1 [style = bold, label=""];
+1->3 [style = solid, label="filter"];
+0->7 [style = solid, label="base64"];
+2->7 [style = dashed, label="0"];
+0->10 [style = solid, label="base64"];
+3->0 [style = bold, label=""];
+8->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

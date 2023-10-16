@@ -1,0 +1,19 @@
+digraph {
+3 [style = filled, label = "final List<Number> numbers = Arrays.asList((Number)2,null,3.14,5)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final Enumerator<Integer> enumerator = Linq4j.ofType(numbers,).enumerator()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final Enumerator<Integer> enumerator = Linq4j.asEnumerable(numbers).ofType().enumerator()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testOfType['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testOfType['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "checkIterable(enumerator)@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testIterableOfType['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+6->1 [style = solid, label="enumerator"];
+6->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+0->1 [style = solid, label="enumerator"];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

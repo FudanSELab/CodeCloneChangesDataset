@@ -1,0 +1,15 @@
+digraph {
+5 [style = filled, label = "Function<String,MetaData.Custom> supplier@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "XContentParser parser@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "fromXContent['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "fromXContent['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "XContentParser parser@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "fromXContent['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "XContentParser parser@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4->6 [style = dotted, label="true"];
+4->5 [style = dotted, label="true"];
+0->2 [style = dashed, label="0"];
+1->0 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+0->6 [style = dashed, label="0"];
+}

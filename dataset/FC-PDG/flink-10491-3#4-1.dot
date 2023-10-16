@@ -1,0 +1,28 @@
+digraph {
+2 [style = filled, label = "Class.forName(DERBY_EBOOKSHOP_DB.getDriverClass())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "jdbcInputFormat = JdbcInputFormat.buildJdbcInputFormat().setDrivername(DERBY_EBOOKSHOP_DB.getDriverClass()).setDBUrl(DERBY_EBOOKSHOP_DB.getUrl()).setQuery(SELECT_ALL_BOOKS).setRowTypeInfo(ROW_TYPE_INFO).setRowConverter(JdbcDialects.get(DERBY_EBOOKSHOP_DB.getUrl()).get().getRowConverter(ROW_TYPE)).finish()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "jdbcInputFormat.openInputFormat()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testDefaultFetchSizeIsUsedIfNotConfiguredOtherwise['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testDefaultFetchSizeIsUsedIfNotConfiguredOtherwise['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "Assert.assertEquals(defaultAutoCommit,jdbcInputFormat.getDbConn().getAutoCommit())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final int defaultFetchSize = DriverManager.getConnection(DERBY_EBOOKSHOP_DB.getUrl()).createStatement().getFetchSize()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "jdbcInputFormat = JdbcInputFormat.buildJdbcInputFormat().setDrivername(DERBY_EBOOKSHOP_DB.getDriverClass()).setDBUrl(DERBY_EBOOKSHOP_DB.getUrl()).setQuery(SELECT_ALL_BOOKS).setRowTypeInfo(ROW_TYPE_INFO).finish()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "testDefaultAutoCommitIsUsedIfNotConfiguredOtherwise['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Assert.assertEquals(defaultFetchSize,jdbcInputFormat.getStatement().getFetchSize())@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final boolean defaultAutoCommit = DriverManager.getConnection(DERBY_EBOOKSHOP_DB.getUrl()).getAutoCommit()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->8 [style = dashed, label="0"];
+5->1 [style = solid, label="defaultFetchSize"];
+5->1 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+8->9 [style = solid, label="defaultAutoCommit"];
+7->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+2->8 [style = bold, label=""];
+4->0 [style = bold, label=""];
+2->5 [style = bold, label=""];
+8->9 [style = bold, label=""];
+10->4 [style = bold, label=""];
+}

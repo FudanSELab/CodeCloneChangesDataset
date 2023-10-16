@@ -1,0 +1,15 @@
+digraph {
+2 [style = filled, label = "shouldApplyTypeHandlerWithJdbcTypeSpecified['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "addMapper()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "shouldApplyTypeHandlerWithJdbcTypeSpecified['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "shouldApplyTypeHandlerUsingConstructor['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Product product = mapper.getProductByName(\"iPad\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(Integer.valueOf(2),product.getId().getValue())@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+6->4 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->4 [style = bold, label=""];
+5->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

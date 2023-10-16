@@ -1,0 +1,25 @@
+digraph {
+6 [style = filled, label = "ktableShouldHaveNullTimestampExtractorWhenNoneSupplied['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "builder.table(\"topic\",consumed,materialized)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "builder.buildAndOptimizeTopology()@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final ProcessorTopology processorTopology = builder.internalTopologyBuilder.rewriteTopology(new StreamsConfig(StreamsTestUtils.getStreamsConfig(APP_ID))).buildTopology()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "final ProcessorTopology processorTopology = builder.internalTopologyBuilder.rewriteTopology(new StreamsConfig(StreamsTestUtils.getStreamsConfig(APP_ID))).build()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "builder.table(\"topic\",consumed,materialized)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final ConsumedInternal<String,String> consumed = new ConsumedInternal<>(Consumed.with(new MockTimestampExtractor()))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertThat(processorTopology.source(\"topic\").getTimestampExtractor(),instanceOf())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "ktableShouldHaveNullTimestampExtractorWhenNoneSupplied['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ktableShouldUseProvidedTimestampExtractor['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+6->3 [style = bold, label=""];
+4->9 [style = bold, label=""];
+8->1 [style = solid, label="consumed"];
+2->5 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+7->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+5->4 [style = bold, label=""];
+}

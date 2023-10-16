@@ -1,0 +1,16 @@
+digraph {
+2 [style = filled, label = "connectTimeoutCanBeConfiguredOnHttpComponentsRequestFactory['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(((RequestConfig)ReflectionTestUtils.getField(requestFactory,\"requestConfig\")).getConnectTimeout()).isEqualTo(1234)@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ClientHttpRequestFactory requestFactory = this.builder.requestFactory().setReadTimeout(Duration.ofMillis(1234)).build().getRequestFactory()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(((RequestConfig)ReflectionTestUtils.getField(requestFactory,\"requestConfig\")).getSocketTimeout()).isEqualTo(1234)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "ClientHttpRequestFactory requestFactory = this.builder.requestFactory().setConnectTimeout(Duration.ofMillis(1234)).build().getRequestFactory()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "readTimeoutCanBeConfiguredOnHttpComponentsRequestFactory['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "connectTimeoutCanBeConfiguredOnHttpComponentsRequestFactory['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+4->6 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

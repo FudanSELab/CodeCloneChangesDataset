@@ -1,0 +1,36 @@
+digraph {
+0 [style = filled, label = "testAllocator.addData(node1,null,randomBoolean())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testNoAllocationFound['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testNoMatchingAllocationIdFound['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final RoutingAllocation allocation = routingAllocationWithOnePrimaryNoReplicas(yesAllocationDeciders(),CLUSTER_RECOVERED,\"allocId\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testAllocator.addData(node1,\"id1\",randomBoolean())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(allocation.routingNodesChanged(),equalTo(true))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testNoAllocationFound['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "testAllocator.allocateUnassigned(allocation)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "RoutingAllocation allocation = routingAllocationWithOnePrimaryNoReplicas(yesAllocationDeciders(),CLUSTER_RECOVERED,\"id2\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertClusterHealthStatus(allocation,ClusterHealthStatus.YELLOW)@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(allocation.routingNodes().unassigned().ignored().get(0).shardId(),equalTo(shardId))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(allocation.routingNodes().unassigned().ignored().size(),equalTo(1))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "allocateAllUnassigned(allocation)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3->6 [style = solid, label="allocation"];
+6->8 [style = dashed, label="0"];
+0->6 [style = bold, label=""];
+10->5 [style = solid, label="allocation"];
+2->3 [style = bold, label=""];
+7->4 [style = bold, label=""];
+0->12 [style = dashed, label="0"];
+12->6 [style = bold, label=""];
+1->7 [style = bold, label=""];
+3->0 [style = bold, label=""];
+8->1 [style = bold, label=""];
+6->1 [style = bold, label=""];
+3->5 [style = solid, label="allocation"];
+3->8 [style = solid, label="allocation"];
+10->12 [style = bold, label=""];
+11->10 [style = bold, label=""];
+0->8 [style = bold, label=""];
+10->6 [style = solid, label="allocation"];
+9->3 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+}

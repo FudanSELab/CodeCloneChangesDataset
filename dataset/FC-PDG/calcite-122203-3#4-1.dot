@@ -1,0 +1,15 @@
+digraph {
+5 [style = filled, label = "final Iterator<IntPair> parentIter = parent.iterator()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final Iterator<IntPair> pairs@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return new Iterator<IntPair>(){@Override public boolean hasNext(){return pairs.hasNext()}@Override public IntPair next(){final IntPair pair = pairs.next()return IntPair.of(pair.target,pair.source)}@Override public void remove(){throw new UnsupportedOperationException(\"remove\")}}@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "iterator['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "return new Iterator<IntPair>(){public boolean hasNext(){return parentIter.hasNext()}public IntPair next(){IntPair parentPair = parentIter.next()return new IntPair(parentPair.target,parentPair.source)}public void remove(){parentIter.remove()}}@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "invert['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "invert['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6->5 [style = bold, label=""];
+2->0 [style = dotted, label="true"];
+3->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+}

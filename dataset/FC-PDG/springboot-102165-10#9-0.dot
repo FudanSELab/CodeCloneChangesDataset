@@ -1,0 +1,30 @@
+digraph {
+7 [style = filled, label = "return new RestTemplateBuilder(this.detectRequestFactory,this.rootUri,append(this.messageConverters,messageConverters),this.requestFactorySupplier,this.uriTemplateHandler,this.errorHandler,this.basicAuthentication,this.restTemplateCustomizers,this.requestFactoryCustomizer,this.interceptors)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "additionalMessageConverters['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Collection<ClientHttpRequestInterceptor> interceptors@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Collection<? extends HttpMessageConverter<?>> messageConverters@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "return new RestTemplateBuilder(this.detectRequestFactory,this.rootUri,this.messageConverters,this.requestFactorySupplier,this.uriTemplateHandler,this.errorHandler,this.basicAuthentication,this.restTemplateCustomizers,this.requestFactoryCustomizer,Collections.unmodifiableSet(new LinkedHashSet<>(interceptors)))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "return new RestTemplateBuilder(this.requestFactoryCustomizer,this.detectRequestFactory,this.rootUri,this.messageConverters,setOf(interceptors),this.requestFactory,this.uriTemplateHandler,this.errorHandler,this.basicAuthentication,this.defaultHeaders,this.customizers,this.requestCustomizers)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "interceptors['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "interceptors['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Assert.notNull(messageConverters,\"MessageConverters must not be null\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Assert.notNull(interceptors,\"interceptors must not be null\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->6 [style = solid, label="messageConverters"];
+0->4 [style = solid, label="interceptors"];
+0->8 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+1->4 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->2 [style = solid, label="interceptors"];
+8->7 [style = solid, label="messageConverters"];
+0->1 [style = solid, label="interceptors"];
+5->0 [style = dotted, label="true"];
+6->7 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+1->6 [style = dashed, label="0"];
+9->6 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+3->0 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+}

@@ -1,0 +1,34 @@
+digraph {
+7 [style = filled, label = "client.get(\"/a3\").run().assertCode().is(302).assertBody().is(\"Found\").assertHeader(\"Location\").is(\"/foo\")@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "client.get(\"/a1\").run().assertCode().is(202).assertBody().is(\"Accepted\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "a01_basic['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "a01_basic['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "a01_basic['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "client.get(\"/a1\").run().assertCode().is(302).assertBody().is(\"Found\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "MockRestClient client = MockRestClient.createLax().disableRedirectHandling().build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "client.get(\"/a2\").run().assertCode().is(302).assertBody().is(\"foo\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "client.get(\"/a2\").run().assertCode().is(202).assertBody().is(\"foo\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "client.get(\"/a4\").run().assertCode().is(302).assertStringHeader(\"Foo\").is(\"bar\")@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+13 [style = filled, label = "client.get(\"/a3\").run().assertCode().is(202).assertStringHeader(\"Foo\").is(\"bar\")@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "client.get(\"/a4\").run().assertCode().is(302).assertHeader(\"Foo\").is(\"bar\")@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "client.get(\"/a3\").run().assertCode().is(302).assertBody().is(\"Found\").assertStringHeader(\"Location\").is(\"/foo\")@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "MockRestClient client = MockRestClient.createLax().build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+0->13 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+5->11 [style = dashed, label="0"];
+0->7 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+11->9 [style = bold, label=""];
+10->12 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+4->7 [style = bold, label=""];
+5->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+9->13 [style = bold, label=""];
+12->11 [style = bold, label=""];
+}

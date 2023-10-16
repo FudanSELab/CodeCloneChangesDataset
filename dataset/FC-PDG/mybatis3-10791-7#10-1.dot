@@ -1,0 +1,22 @@
+digraph {
+7 [style = filled, label = "assertEquals(2,posts.size())@@@10@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "assertEquals(3,posts.size())@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "shouldFindPostsWithBlogIdUsingDynamicSql['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "shouldFindPostsWithBlogIdUsingDynamicSql['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "List<Post> posts = session.selectList(\"org.apache.ibatis.domain.blog.mappers.PostMapper.findPost\",new HashMap<String,Integer>(){})@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "shouldFindPostsWithAuthorIdUsingDynamicSql['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "{session.close()}@@@13@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(2,posts.size())@@@11@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "List<Post> posts = session.selectList(\"org.apache.ibatis.domain.blog.mappers.PostMapper.findPost\",new HashMap<String,Integer>(){})@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "SqlSession session = sqlMapper.openSession()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->1 [style = bold, label=""];
+5->7 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->9 [style = bold, label=""];
+9->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

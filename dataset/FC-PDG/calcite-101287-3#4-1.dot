@@ -1,0 +1,11 @@
+digraph {
+2 [style = filled, label = "testExtractFromInterval['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "CalciteAssert.that().with(CalciteAssert.Config.JDBC_FOODMART).query(\"select floor(timestamp '2011-9-14 19:27:23' to month) as c\" + \"from \"foodmart\".\"employee\" limit 1\").enable(CalciteAssert.DB != CalciteAssert.DatabaseInstance.MYSQL && CalciteAssert.DB != CalciteAssert.DatabaseInstance.H2).returns(\"C=2011-09-01 00:00:00\")@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testExtractFromInterval['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "CalciteAssert.that().with(CalciteAssert.Config.JDBC_FOODMART).query(\"select extract(month from interval '2-3' year to month) as c\" + \"from \"foodmart\".\"employee\" where \"employee_id\"=1\").enable(CalciteAssert.DB != CalciteAssert.DatabaseInstance.MYSQL && CalciteAssert.DB != CalciteAssert.DatabaseInstance.H2).returns(\"C=3\")@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testFloorDate['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->4 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+}

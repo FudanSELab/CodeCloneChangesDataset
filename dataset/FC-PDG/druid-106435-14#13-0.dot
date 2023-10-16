@@ -1,0 +1,38 @@
+digraph {
+1 [style = filled, label = "List<ResultRow> expectedResults = Arrays.asList(makeRow(fullQuery,\"2011-04-01\",\"alias\",\"premium\",\"rows\",3L,\"idx\",2900L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"mezzanine\",\"rows\",3L,\"idx\",2870L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"entertainment\",\"rows\",1L,\"idx\",158L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"automotive\",\"rows\",1L,\"idx\",135L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"news\",\"rows\",1L,\"idx\",121L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"health\",\"rows\",1L,\"idx\",120L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"travel\",\"rows\",1L,\"idx\",119L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"business\",\"rows\",1L,\"idx\",118L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"technology\",\"rows\",1L,\"idx\",78L),makeRow(fullQuery,\"2011-04-02\",\"alias\",\"premium\",\"rows\",3L,\"idx\",2505L),makeRow(fullQuery,\"2011-04-02\",\"alias\",\"mezzanine\",\"rows\",3L,\"idx\",2447L),makeRow(fullQuery,\"2011-04-02\",\"alias\",\"entertainment\",\"rows\",1L,\"idx\",166L),makeRow(fullQuery,\"2011-04-02\",\"alias\",\"automotive\",\"rows\",1L,\"idx\",147L),makeRow(fullQuery,\"2011-04-02\",\"alias\",\"travel\",\"rows\",1L,\"idx\",126L))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final int limit = 14@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "GroupByQuery.Builder builder = makeQueryBuilder().setDataSource(QueryRunnerTestHelper.DATA_SOURCE).setInterval(QueryRunnerTestHelper.FIRST_TO_THIRD).setVirtualColumns(new ExpressionVirtualColumn(\"expr\",\"index * 2 + indexMin / 10\",ValueType.FLOAT,TestExprMacroTable.INSTANCE)).setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\")).setAggregatorSpecs(QueryRunnerTestHelper.ROWS_COUNT,new LongSumAggregatorFactory(\"idx\",\"expr\")).setGranularity(Granularities.DAY).setLimit(limit).addOrderByColumn(\"idx\",OrderByColumnSpec.Direction.DESCENDING)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "QueryRunner<ResultRow> mergeRunner = factory.getToolchest().mergeResults(runner)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testMergeResultsAcrossMultipleDaysWithLimitAndOrderByUsingMathExpressions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testMergeResultsAcrossMultipleDaysWithLimitAndOrderBy['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "List<ResultRow> expectedResults = Arrays.asList(makeRow(fullQuery,\"2011-04-01\",\"alias\",\"premium\",\"rows\",3L,\"idx\",6090L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"mezzanine\",\"rows\",3L,\"idx\",6030L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"entertainment\",\"rows\",1L,\"idx\",333L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"automotive\",\"rows\",1L,\"idx\",285L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"news\",\"rows\",1L,\"idx\",255L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"health\",\"rows\",1L,\"idx\",252L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"travel\",\"rows\",1L,\"idx\",251L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"business\",\"rows\",1L,\"idx\",248L),makeRow(fullQuery,\"2011-04-01\",\"alias\",\"technology\",\"rows\",1L,\"idx\",165L),makeRow(fullQuery,\"2011-04-02\",\"alias\",\"premium\",\"rows\",3L,\"idx\",5262L),makeRow(fullQuery,\"2011-04-02\",\"alias\",\"mezzanine\",\"rows\",3L,\"idx\",5141L),makeRow(fullQuery,\"2011-04-02\",\"alias\",\"entertainment\",\"rows\",1L,\"idx\",348L),makeRow(fullQuery,\"2011-04-02\",\"alias\",\"automotive\",\"rows\",1L,\"idx\",309L),makeRow(fullQuery,\"2011-04-02\",\"alias\",\"travel\",\"rows\",1L,\"idx\",265L))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "GroupByQuery fullQuery = builder.build()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "GroupByQuery.Builder builder = makeQueryBuilder().setDataSource(QueryRunnerTestHelper.DATA_SOURCE).setInterval(QueryRunnerTestHelper.FIRST_TO_THIRD).setDimensions(new DefaultDimensionSpec(\"quality\",\"alias\")).setAggregatorSpecs(QueryRunnerTestHelper.ROWS_COUNT,new LongSumAggregatorFactory(\"idx\",\"index\")).setGranularity(Granularities.DAY).setLimit(limit).addOrderByColumn(\"idx\",OrderByColumnSpec.Direction.DESCENDING)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testMergeResultsAcrossMultipleDaysWithLimitAndOrderByUsingMathExpressions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "TestHelper.assertExpectedObjects(Iterables.limit(expectedResults,limit),mergeRunner.run(QueryPlus.wrap(fullQuery)),StringUtils.format(\"limit: %d\",limit))@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "cannotVectorize()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "TestHelper.assertExpectedObjects(Iterables.limit(expectedResults,limit),mergeRunner.run(QueryPlus.wrap(fullQuery)),StringUtils.format(\"limit: %d\",limit))@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+10->1 [style = solid, label="fullQuery"];
+9->11 [style = bold, label=""];
+1->7 [style = solid, label="fullQuery"];
+1->3 [style = solid, label="expectedResults"];
+1->0 [style = bold, label=""];
+2->10 [style = bold, label=""];
+2->4 [style = bold, label=""];
+11->2 [style = bold, label=""];
+6->2 [style = bold, label=""];
+1->0 [style = solid, label="fullQuery"];
+5->6 [style = bold, label=""];
+8->2 [style = bold, label=""];
+3->7 [style = bold, label=""];
+11->3 [style = solid, label="limit"];
+4->2 [style = dashed, label="0"];
+1->12 [style = bold, label=""];
+0->7 [style = solid, label="expectedResults"];
+4->1 [style = bold, label=""];
+12->3 [style = bold, label=""];
+2->7 [style = solid, label="limit"];
+10->1 [style = bold, label=""];
+10->3 [style = solid, label="fullQuery"];
+}

@@ -1,0 +1,34 @@
+digraph {
+0 [style = filled, label = "expectedOutput.add(new StreamRecord<>(\"(Operator0-2(: 1\"))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testBase(new AnyReadingStreamOperator(\"Operator0\"),true,expectedOutput,true)@@@11@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "testBase(new AnyReadingStreamOperator(\"Operator0\"),false,expectedOutput,false)@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "testAnyUnorderedReading['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "expectedOutput.add(new StreamRecord<>(\"(Operator0-2(: 2\"))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testBase(new TestAnyModeReadingStreamOperator(\"Operator0\"),true,expectedOutput,true)@@@11@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "expectedOutput.add(new StreamRecord<>(\"(Operator0-1(: Hello-1\"))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ConcurrentLinkedQueue<Object> expectedOutput = new ConcurrentLinkedQueue<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testAnyOrderedReading['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "expectedOutput.add(new StreamRecord<>(\"(Operator0-2(: 4\"))@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "expectedOutput.add(new StreamRecord<>(\"(Operator0-1(: Hello-2\"))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "expectedOutput.add(new StreamRecord<>(\"(Operator0-1(: Hello-3\"))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testAnyOrderedReading['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "expectedOutput.add(new StreamRecord<>(\"(Operator0-2(: 3\"))@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+8->7 [style = bold, label=""];
+6->1 [style = bold, label=""];
+3->6 [style = bold, label=""];
+2->0 [style = bold, label=""];
+9->12 [style = bold, label=""];
+7->12 [style = solid, label="expectedOutput"];
+9->10 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+5->9 [style = bold, label=""];
+7->10 [style = solid, label="expectedOutput"];
+7->2 [style = bold, label=""];
+13->7 [style = bold, label=""];
+11->7 [style = bold, label=""];
+7->4 [style = solid, label="expectedOutput"];
+9->4 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+}

@@ -1,0 +1,32 @@
+digraph {
+5 [style = filled, label = "config.setReadBufferSize(65536)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "udpServer.bind(new InetSocketAddress(port))@@@69@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "start['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "udpServer.setIoHandler(new IoHandler(){@Override public void sessionOpened(IoSession session){session.setAttribute(STATE_ATTRIBUTE,State.WAIT_FOR_FIRST_BYTE_LENGTH)}@Override public void messageReceived(IoSession session,Object message){if (message instanceof ByteBuffer) {ByteBuffer buffer = (ByteBuffer)messageState state = session.getAttribute(STATE_ATTRIBUTE)int length = 0if (session.getAttribute(LENGTH_ATTRIBUTE) != null) {length = session.getAttribute(LENGTH_ATTRIBUTE)}while (buffer.remaining() > 0) {switch (state) {case WAIT_FOR_FIRST_BYTE_LENGTH:length = (buffer.get() & 255) << 24state = State.WAIT_FOR_SECOND_BYTE_LENGTHbreakcase WAIT_FOR_SECOND_BYTE_LENGTH:length += (buffer.get() & 255) << 16state = State.WAIT_FOR_THIRD_BYTE_LENGTHbreakcase WAIT_FOR_THIRD_BYTE_LENGTH:length += (buffer.get() & 255) << 8state = State.WAIT_FOR_FOURTH_BYTE_LENGTHbreakcase WAIT_FOR_FOURTH_BYTE_LENGTH:length += (buffer.get() & 255)state = State.READINGif ((length == 0) && (buffer.remaining() == 0)) {session.write(ACK.slice())state = State.WAIT_FOR_FIRST_BYTE_LENGTH}breakcase READING:int remaining = buffer.remaining()if (length > remaining) {length -= remainingbuffer.position(buffer.position() + remaining)}{buffer.position(buffer.position() + length)session.write(ACK.slice())state = State.WAIT_FOR_FIRST_BYTE_LENGTHlength = 0}}session.setAttribute(LENGTH_ATTRIBUTE,length)session.setAttribute(STATE_ATTRIBUTE,state)}}@Override public void exceptionCaught(IoSession session,Exception cause){cause.printStackTrace()}@Override public void sessionClosed(IoSession session){}@Override public void sessionIdle(IoSession session,IdleStatus status){}@Override public void messageSent(IoSession session,Object message){CounterFilter.messageSent.getAndIncrement()}@Override public void serviceActivated(IoService service){}@Override public void serviceInactivated(IoService service){}})@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "start['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "int port@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "udpServer = new NioUdpServer(config)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "UdpSessionConfig config = new DefaultUdpSessionConfig()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "udpServer = new BioUdpServer(config,null)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "udpServer.setIoHandler(new AbstractIoHandler(){@Override public void sessionOpened(IoSession session){session.setAttribute(STATE_ATTRIBUTE,State.WAIT_FOR_FIRST_BYTE_LENGTH)}@Override public void messageReceived(IoSession session,Object message){if (message instanceof ByteBuffer) {ByteBuffer buffer = (ByteBuffer)messageState state = session.getAttribute(STATE_ATTRIBUTE)int length = 0if (session.getAttribute(LENGTH_ATTRIBUTE) != null) {length = session.getAttribute(LENGTH_ATTRIBUTE)}while (buffer.remaining() > 0) {switch (state) {case WAIT_FOR_FIRST_BYTE_LENGTH:length = (buffer.get() & 255) << 24state = State.WAIT_FOR_SECOND_BYTE_LENGTHbreakcase WAIT_FOR_SECOND_BYTE_LENGTH:length += (buffer.get() & 255) << 16state = State.WAIT_FOR_THIRD_BYTE_LENGTHbreakcase WAIT_FOR_THIRD_BYTE_LENGTH:length += (buffer.get() & 255) << 8state = State.WAIT_FOR_FOURTH_BYTE_LENGTHbreakcase WAIT_FOR_FOURTH_BYTE_LENGTH:length += (buffer.get() & 255)state = State.READINGif ((length == 0) && (buffer.remaining() == 0)) {session.write(ACK.slice())state = State.WAIT_FOR_FIRST_BYTE_LENGTH}breakcase READING:int remaining = buffer.remaining()if (length > remaining) {length -= remainingbuffer.position(buffer.position() + remaining)}{buffer.position(buffer.position() + length)session.write(ACK.slice())state = State.WAIT_FOR_FIRST_BYTE_LENGTHlength = 0}}session.setAttribute(LENGTH_ATTRIBUTE,length)session.setAttribute(STATE_ATTRIBUTE,state)}}@Override public void exceptionCaught(IoSession session,Exception cause){cause.printStackTrace()}@Override public void sessionClosed(IoSession session){}@Override public void sessionIdle(IoSession session,IdleStatus status){}@Override public void messageSent(IoSession session,Object message){CounterFilter.messageSent.getAndIncrement()}@Override public void serviceActivated(IoService service){}@Override public void serviceInactivated(IoService service){}})@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "start['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10->0 [style = dotted, label="true"];
+4->3 [style = bold, label=""];
+10->3 [style = bold, label=""];
+5->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+8->0 [style = dotted, label="true"];
+1->6 [style = bold, label=""];
+2->7 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+9->1 [style = bold, label=""];
+5->9 [style = bold, label=""];
+0->6 [style = solid, label="port"];
+2->9 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+7->6 [style = bold, label=""];
+4->0 [style = dotted, label="true"];
+3->9 [style = solid, label="config"];
+8->3 [style = bold, label=""];
+3->2 [style = solid, label="config"];
+}

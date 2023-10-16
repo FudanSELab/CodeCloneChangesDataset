@@ -1,0 +1,30 @@
+digraph {
+0 [style = filled, label = "Map<String,CacheManager> cacheManagers = new LinkedHashMap<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "CacheEntry entry = endpoint.cache(\"c\",\"test\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThat(entry.getCacheManager()).isEqualTo(\"test\")@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "namedCacheWithSeveralCacheManagersWithCacheManagerFilter['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertThat(entry).isNotNull()@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "cacheManagers.put(\"test\",new ConcurrentMapCacheManager(\"b\",\"a\"))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "namedCacheWithWrongCacheManager['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertThat(entry).isNull()@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "cacheManagers.put(\"another\",new ConcurrentMapCacheManager(\"c\",\"a\"))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThat(entry.getName()).isEqualTo(\"a\")@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "CacheEntry entry = endpoint.cache(\"a\",\"test\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "CachesEndpoint endpoint = new CachesEndpoint(cacheManagers)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "namedCacheWithWrongCacheManager['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+8->10 [style = bold, label=""];
+6->5 [style = bold, label=""];
+1->4 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->0 [style = bold, label=""];
+11->12 [style = bold, label=""];
+0->6 [style = solid, label="cacheManagers"];
+3->12 [style = dashed, label="0"];
+9->0 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+4->6 [style = bold, label=""];
+12->8 [style = bold, label=""];
+0->1 [style = bold, label=""];
+6->11 [style = bold, label=""];
+}

@@ -1,0 +1,25 @@
+digraph {
+5 [style = filled, label = "Map<String,Object> options@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "ObjectDeleteCommand command@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "addObjectDeleteActions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "addObjectDeleteActions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "List<DBEPersistAction> actions@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "List<DBEPersistAction> actions@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "ObjectDeleteCommand command@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "actions.add(new SQLDatabasePersistAction(ModelMessages.model_jdbc_drop_constraint,getDropConstraintPattern(command.getObject()).replace(PATTERN_ITEM_TABLE,command.getObject().getTable().getFullyQualifiedName(DBPEvaluationContext.DDL)).replace(PATTERN_ITEM_CONSTRAINT,DBUtils.getQuotedIdentifier(command.getObject()))))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "ObjectDeleteCommand command@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "addObjectDeleteActions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "actions.add(new SQLDatabasePersistAction(ModelMessages.model_jdbc_drop_index,getDropIndexPattern(command.getObject()).replace(PATTERN_ITEM_TABLE,command.getObject().getTable().getFullyQualifiedName(DBPEvaluationContext.DDL)).replace(PATTERN_ITEM_INDEX,command.getObject().getFullyQualifiedName(DBPEvaluationContext.DDL)).replace(PATTERN_ITEM_INDEX_SHORT,command.getObject().getName())))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->3 [style = dotted, label="true"];
+10->3 [style = dotted, label="true"];
+10->8 [style = dotted, label="true"];
+7->6 [style = dotted, label="true"];
+1->9 [style = dashed, label="0"];
+10->9 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+2->0 [style = dotted, label="true"];
+7->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+7->4 [style = dotted, label="true"];
+7->5 [style = dotted, label="true"];
+}

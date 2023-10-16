@@ -1,0 +1,27 @@
+digraph {
+6 [style = filled, label = "task = createStatelessTask(createConfig(false,\"100\"),StreamsConfig.METRICS_LATEST)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(task.processorContext().currentNode(),nullValue())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(punctuatedAt,equalTo(5L))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "task = createStatelessTask(createConfig(\"100\"),StreamsConfig.METRICS_LATEST)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "shouldSetProcessorNodeOnContextBackToNullAfterSuccessfulPunctuate['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "shouldCallPunctuateOnPassedInProcessorNode['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "shouldCallPunctuateOnPassedInProcessorNode['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "task.initializeIfNeeded()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "task.punctuate(processorStreamTime,5,PunctuationType.STREAM_TIME,punctuator)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "task.punctuate(processorStreamTime,10,PunctuationType.STREAM_TIME,punctuator)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(punctuatedAt,equalTo(10L))@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "task.completeRestoration()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+0->11 [style = bold, label=""];
+6->8 [style = dashed, label="0"];
+8->2 [style = bold, label=""];
+9->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+10->6 [style = bold, label=""];
+7->6 [style = bold, label=""];
+4->0 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

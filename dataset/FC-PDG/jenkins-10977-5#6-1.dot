@@ -1,0 +1,38 @@
+digraph {
+9 [style = filled, label = "List<NodePropertyDescriptor> result = new ArrayList<>()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "return result@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "getGlobalNodePropertyDescriptors['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "@CheckForNull Slave it@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Collection<NodePropertyDescriptor> list = (Collection)Jenkins.get().getDescriptorList()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "npd.isApplicable(clazz)@@@6@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "getGlobalNodePropertyDescriptors['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Collection<NodePropertyDescriptor> list = (Collection)Jenkins.getInstance().getDescriptorList()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "List<NodePropertyDescriptor> result = new ArrayList<NodePropertyDescriptor>()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "npd.isApplicableAsGlobal()@@@6@@@['1', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "nodePropertyDescriptors['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "result.add(npd)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+9->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+0->11 [style = dashed, label="0"];
+6->0 [style = bold, label=""];
+8->10 [style = dotted, label="true"];
+4->6 [style = dashed, label="0"];
+11->2 [style = bold, label=""];
+4->0 [style = bold, label=""];
+5->3 [style = solid, label="result"];
+7->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+11->2 [style = dotted, label="true"];
+5->6 [style = bold, label=""];
+11->3 [style = bold, label=""];
+5->4 [style = bold, label=""];
+8->9 [style = bold, label=""];
+0->2 [style = dotted, label="true"];
+4->11 [style = bold, label=""];
+9->3 [style = solid, label="result"];
+2->11 [style = bold, label=""];
+}

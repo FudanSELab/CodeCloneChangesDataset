@@ -1,0 +1,27 @@
+digraph {
+0 [style = filled, label = "RelNode root = builder.scan(\"EMP\").project(builder.field(\"DEPTNO\"),builder.cast(builder.field(6),SqlTypeName.SMALLINT),builder.or(builder.equals(builder.field(\"DEPTNO\"),builder.literal(20)),builder.and(builder.literal(false),builder.equals(builder.field(\"DEPTNO\"),builder.literal(10)),builder.and(builder.isNull(builder.field(6)),builder.not(builder.isNotNull(builder.field(7))))),builder.equals(builder.field(\"DEPTNO\"),builder.literal(20)),builder.equals(builder.field(\"DEPTNO\"),builder.literal(30))),builder.alias(builder.isNull(builder.field(2)),\"n2\"),builder.alias(builder.isNotNull(builder.field(3)),\"nn2\"),builder.literal(20),builder.field(6),builder.alias(builder.field(6),\"C\")).build()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "RelNode root = builder.scan(\"EMP\").project(builder.field(\"DEPTNO\"),builder.cast(builder.field(6),SqlTypeName.SMALLINT),builder.or(builder.equals(builder.field(\"DEPTNO\"),builder.literal(20)),builder.and(builder.literal(null),builder.equals(builder.field(\"DEPTNO\"),builder.literal(10)),builder.and(builder.isNull(builder.field(6)),builder.not(builder.isNotNull(builder.field(7))))),builder.equals(builder.field(\"DEPTNO\"),builder.literal(20)),builder.equals(builder.field(\"DEPTNO\"),builder.literal(30))),builder.alias(builder.isNull(builder.field(2)),\"n2\"),builder.alias(builder.isNotNull(builder.field(3)),\"nn2\"),builder.literal(20),builder.field(6),builder.alias(builder.field(6),\"C\")).build()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "testProject2['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "RelNode root = builder.scan(\"EMP\").project(builder.field(\"DEPTNO\"),builder.cast(builder.field(6),SqlTypeName.SMALLINT),builder.literal(20),builder.field(6),builder.alias(builder.field(6),\"C\")).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(str(root),is(\"LogicalProject(DEPTNO=($7(, COMM=(CAST($6):SMALLINT NOT NULL(,\" + \" $f2=(OR(=($7, 20), AND(false, =($7, 10), IS NULL($6),\" + \" NOT(IS NOT NULL($7))), =($7, 30))(, n2=(IS NULL($2)(,\" + \" nn2=(IS NOT NULL($3)(, $f5=(20(, COMM6=($6(, C=($6()\" + \" LogicalTableScan(table=((scott, EMP(()\"))@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "assertThat(str(root),is(\"LogicalProject(DEPTNO=($7(, COMM=(CAST($6):SMALLINT NOT NULL(,\" + \" $f2=(OR(=($7, 20), AND(null, =($7, 10), IS NULL($6),\" + \" IS NULL($7)), =($7, 30))(, n2=(IS NULL($2)(,\" + \" nn2=(IS NOT NULL($3)(, $f5=(20(, COMM6=($6(, C=($6()\" + \" LogicalTableScan(table=((scott, EMP(()\"))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "assertThat(str(root),is(\"LogicalProject(DEPTNO=($7(, COMM=(CAST($6):SMALLINT NOT NULL(, $f2=(20(, COMM3=($6(, C=($6()\" + \" LogicalTableScan(table=((scott, EMP(()\"))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testProject2['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testProject['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final RelBuilder builder = RelBuilder.create(config().build())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->4 [style = dashed, label="0"];
+9->7 [style = solid, label="root"];
+5->4 [style = solid, label="root"];
+2->0 [style = bold, label=""];
+2->9 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+8->2 [style = bold, label=""];
+9->7 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->5 [style = bold, label=""];
+0->1 [style = solid, label="root"];
+6->2 [style = bold, label=""];
+}

@@ -1,0 +1,32 @@
+digraph {
+2 [style = filled, label = "Collection<ShardingSphereRule> result = new LinkedList<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "result.add(entry.getValue().build(entry.getKey(),mataDataMap))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final Collection<RuleConfiguration> globalRuleConfigs@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "buildRules['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "buildRules['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "result.add(entry.getValue().build(materials,entry.getKey(),result))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return result@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final Map<String,ShardingSphereMetaData> mataDataMap@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final ShardingSphereRulesBuilderMaterials materials@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "final SchemaRulesBuilderMaterials materials@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "buildRules['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4->5 [style = dashed, label="0"];
+0->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+4->0 [style = solid, label="materials"];
+2->0 [style = solid, label="result"];
+2->7 [style = bold, label=""];
+1->4 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+4->10 [style = dashed, label="0"];
+0->7 [style = dashed, label="0"];
+9->10 [style = dotted, label="true"];
+5->0 [style = solid, label="materials"];
+2->3 [style = solid, label="result"];
+9->2 [style = bold, label=""];
+7->3 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+10->7 [style = solid, label="mataDataMap"];
+6->2 [style = bold, label=""];
+}

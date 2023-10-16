@@ -1,0 +1,31 @@
+digraph {
+6 [style = filled, label = "assertEquals(new ConstantScoreQuery(new NormsFieldExistsQuery(\"foo.bar\")),q)@@@24@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "assertEquals(new ConstantScoreQuery(new BooleanQuery.Builder().add(new NormsFieldExistsQuery(\"foo.bar\"),BooleanClause.Occur.SHOULD).build()),q)@@@24@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(new ConstantScoreQuery(new BooleanQuery.Builder().add(new NormsFieldExistsQuery(\"foo.bar\"),BooleanClause.Occur.SHOULD).add(new NormsFieldExistsQuery(\"foo.bar._3gram\"),BooleanClause.Occur.SHOULD).add(new NormsFieldExistsQuery(\"foo.bar._2gram\"),BooleanClause.Occur.SHOULD).add(new TermQuery(new Term(\"_field_names\",\"foo.bar._index_prefix\")),BooleanClause.Occur.SHOULD).build()),q)@@@23@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "QueryStringQueryParser parser = new QueryStringQueryParser(context,\"f\")@@@21@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "MapperService ms = createMapperService(mapping(null))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Query q = parser.parse(\"foo:*\")@@@22@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "SearchExecutionContext context = createSearchExecutionContext(ms)@@@20@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testNestedExistsQuery['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testObjectExistsQuery['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "testObjectExistsQuery['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+4->0 [style = dashed, label="0"];
+5->8 [style = bold, label=""];
+7->5 [style = bold, label=""];
+1->0 [style = solid, label="q"];
+1->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+5->3 [style = solid, label="ms"];
+4->6 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+0->6 [style = bold, label=""];
+0->4 [style = solid, label="q"];
+0->6 [style = solid, label="q"];
+3->1 [style = solid, label="context"];
+8->3 [style = solid, label="context"];
+8->3 [style = bold, label=""];
+2->5 [style = bold, label=""];
+5->8 [style = solid, label="ms"];
+}

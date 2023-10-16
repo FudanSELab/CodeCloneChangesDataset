@@ -1,0 +1,27 @@
+digraph {
+4 [style = filled, label = "failedConnectionIsDestroyed['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "spyConnector.connectClientToServer(mock(),false)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "when(connection.connect(any(),any(),any(),anyInt(),anyInt(),anyInt(),any(),any(),any(),any())).thenThrow(new GemFireSecurityException(\"Expected exception\"))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "{verify(spyConnector,times(0)).destroyConnection(any())}@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "failedConnectionIsDestroyed['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "doReturn(handshake).when(spyConnector).getClientSideHandshake(handshake)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "when(connection.connect(any(),any(),any(),anyInt(),anyInt(),anyInt(),any(),any(),any())).thenThrow(new GemFireSecurityException(\"Expected exception\"))@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "successfulConnectionIsNotDestroyed['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ConnectionConnector spyConnector = spy(new ConnectionConnector(endpointManager,ds,0,0,0,false,null,socketCreator,handshake))@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "doReturn(connection).when(spyConnector).getConnection(ds)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ConnectionConnector spyConnector = spy(new ConnectionConnector(endpointManager,ds,0,0,0,false,null,socketCreator,handshake,null))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+10->2 [style = bold, label=""];
+7->5 [style = bold, label=""];
+1->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+9->0 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+1->9 [style = bold, label=""];
+8->7 [style = bold, label=""];
+2->5 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+}

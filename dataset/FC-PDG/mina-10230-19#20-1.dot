@@ -1,0 +1,33 @@
+digraph {
+2 [style = filled, label = "main['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "httpServer.unbind()@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Thread.sleep(20000)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "main['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "main['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "String(( args@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "NioTcpServer httpServer = new NioTcpServer()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "httpServer.getSessionConfig().setSslContext(BogusSslContextFactory.getInstance(true))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "httpServer.getSessionConfig().setTcpNoDelay(true)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "httpServer.setFilters(new LoggingFilter(\"INCOMING\"),new ProtocolCodecFilter<HttpPdu,ByteBuffer,Void,HttpDecoderState>(new HttpServerEncoder(),new HttpServerDecoder()),new LoggingFilter(\"DECODED\"),new DummyHttpSever())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "httpServer.setReuseAddress(true)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "httpServer.bind(new InetSocketAddress(8080))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "httpServer.setFilters(new LoggingFilter(\"INCOMING\"),new ProtocolCodecFilter<HttpPdu,ByteBuffer>(,),new LoggingFilter(\"DECODED\"),new DummyHttpSever())@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->9 [style = bold, label=""];
+5->7 [style = bold, label=""];
+10->8 [style = dotted, label="true"];
+6->5 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+1->0 [style = bold, label=""];
+9->0 [style = bold, label=""];
+4->11 [style = bold, label=""];
+12->4 [style = bold, label=""];
+0->6 [style = bold, label=""];
+2->4 [style = bold, label=""];
+11->1 [style = bold, label=""];
+12->8 [style = dotted, label="true"];
+7->3 [style = bold, label=""];
+2->8 [style = dotted, label="true"];
+0->5 [style = bold, label=""];
+10->4 [style = bold, label=""];
+}

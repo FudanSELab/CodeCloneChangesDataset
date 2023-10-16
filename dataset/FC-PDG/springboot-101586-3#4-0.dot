@@ -1,0 +1,32 @@
+digraph {
+13 [style = filled, label = "ConfigurableEnvironment environment = this.context.getEnvironment()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertThat(environment.containsProperty(\"local.server.port\")).isTrue()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ConfigurableEnvironment environment = context.getEnvironment()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "runWhenCustomDefaultProfileSameAsActiveFromFileActivatesProfile['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(environment.getProperty(\"local.server.port\")).isEqualTo(\"8080\")@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "addWebServerFactoryBean()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "new ServerPortInfoApplicationContextInitializer().initialize(this.context)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "ConfigurableApplicationContext context = this.application.run(\"--spring.config.location=classpath:configdata/profiles/\",\"--spring.profiles.default=customdefault\",\"--spring.config.name=customprofile\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+14 [style = filled, label = "localPortIsAvailable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "runWhenCustomDefaultProfileSameAsActiveFromFileActivatesProfile['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "assertThat(environment.containsProperty(\"customprofile-customdefault\")).isTrue()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "ConfigurableApplicationContext context = this.application.run(\"--spring.profiles.default=customdefault\",\"--spring.config.name=customprofile\")@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "this.context.refresh()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(environment.containsProperty(\"customprofile\")).isTrue()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(environment.acceptsProfiles(Profiles.of(\"customdefault\"))).isTrue()@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->0 [style = bold, label=""];
+4->1 [style = bold, label=""];
+11->12 [style = bold, label=""];
+0->2 [style = bold, label=""];
+14->8 [style = bold, label=""];
+9->10 [style = bold, label=""];
+6->7 [style = bold, label=""];
+10->13 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+7->2 [style = bold, label=""];
+13->11 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+2->5 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

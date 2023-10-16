@@ -1,0 +1,25 @@
+digraph {
+1 [style = filled, label = "testSerializationLegacyString['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Assert.assertEquals(ImmutableList.of(Intervals.of(\"2011-09-01/2011-10-10\"),Intervals.of(\"2011-11-01/2011-11-10\")),spec.getIntervals())@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "QuerySegmentSpec spec = JSON_MAPPER.readValue(\"\"2011-10-01/2011-10-10,2011-11-01/2011-11-10\"\",)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "QuerySegmentSpec spec = jsonMapper.readValue(\"\"2011-10-01/2011-10-10,2011-11-01/2011-11-10\"\",)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "testSerializationLegacyString['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Assert.assertTrue(spec instanceof LegacySegmentSpec)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Assert.assertEquals(ImmutableList.of(Intervals.of(\"2011-10-01/2011-10-10\"),Intervals.of(\"2011-11-01/2011-11-10\")),spec.getIntervals())@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "QuerySegmentSpec spec = jsonMapper.readValue(\"(\"2011-09-01/2011-10-10\", \"2011-11-01/2011-11-10\"(\",)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testSerializationLegacyArray['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2->0 [style = solid, label="spec"];
+6->0 [style = solid, label="spec"];
+0->3 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+6->0 [style = bold, label=""];
+8->6 [style = bold, label=""];
+5->0 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+4->5 [style = bold, label=""];
+0->7 [style = bold, label=""];
+5->0 [style = solid, label="spec"];
+2->6 [style = dashed, label="0"];
+}

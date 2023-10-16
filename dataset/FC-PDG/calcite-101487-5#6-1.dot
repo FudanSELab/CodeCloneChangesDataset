@@ -1,0 +1,33 @@
+digraph {
+2 [style = filled, label = "verify(rel,expectedPhysical,expectedLogical)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testIntersect['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testIntersect['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "final RelBuilder builder = builder()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "String expectedLogical = \"\" + \"LogicalIntersect(all=(true()\" + \" LogicalProject(DEPTNO=($0()\" + \" LogicalTableScan(table=((scott, DEPT(()\" + \" LogicalProject(DEPTNO=($7()\" + \" LogicalTableScan(table=((scott, EMP(()\"@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testMinus['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String expectedPhysical = \"\" + \"EnumerableIntersect(all=(true()\" + \" EnumerableProject(DEPTNO=($0()\" + \" EnumerableTableScan(table=((scott, DEPT(()\" + \" EnumerableProject(DEPTNO=($7()\" + \" EnumerableTableScan(table=((scott, EMP(()\"@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "String expectedLogical = \"\" + \"LogicalMinus(all=(true()\" + \" LogicalProject(DEPTNO=($0()\" + \" LogicalTableScan(table=((scott, DEPT(()\" + \" LogicalProject(DEPTNO=($7()\" + \" LogicalTableScan(table=((scott, EMP(()\"@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "RelNode rel = builder.scan(\"DEPT\").project(builder.field(\"DEPTNO\")).scan(\"EMP\").project(builder.field(\"DEPTNO\")).minus(true).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "String expectedPhysical = \"\" + \"EnumerableMinus(all=(true()\" + \" EnumerableProject(DEPTNO=($0()\" + \" EnumerableTableScan(table=((scott, DEPT(()\" + \" EnumerableProject(DEPTNO=($7()\" + \" EnumerableTableScan(table=((scott, EMP(()\"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "RelNode rel = builder.scan(\"DEPT\").project(builder.field(\"DEPTNO\")).scan(\"EMP\").project(builder.field(\"DEPTNO\")).intersect(true).build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+6->3 [style = bold, label=""];
+10->3 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+9->2 [style = solid, label="expectedLogical"];
+4->2 [style = solid, label="rel"];
+0->2 [style = solid, label="expectedPhysical"];
+1->2 [style = solid, label="expectedLogical"];
+8->2 [style = solid, label="rel"];
+9->2 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->8 [style = bold, label=""];
+7->2 [style = solid, label="expectedPhysical"];
+0->7 [style = dashed, label="0"];
+8->7 [style = bold, label=""];
+4->0 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+}

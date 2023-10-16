@@ -1,0 +1,38 @@
+digraph {
+1 [style = filled, label = "assertThat(network.nodes()).containsExactly(N2,N4)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(network.edges()).doesNotContain(E41)@@@9@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(networkAsMutableNetwork.edges()).doesNotContain(E12)@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+14 [style = filled, label = "assertFalse(networkAsMutableNetwork.removeNode(N1))@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "addEdge(N1,N2,E12)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "removeNode_existingNode['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "assertThat(networkAsMutableNetwork.edges()).doesNotContain(E41)@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "assertTrue(network.removeNode(N1))@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "removeNode_existingNode['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "removeNode_existingNode['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assume().that(graphIsMutable()).isTrue()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "assertFalse(network.removeNode(N1))@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "addEdge(N4,N1,E41)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(network.edges()).doesNotContain(E12)@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThat(networkAsMutableNetwork.nodes()).containsExactly(N2,N4)@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "assertTrue(networkAsMutableNetwork.removeNode(N1))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7->13 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+14->10 [style = bold, label=""];
+15->2 [style = bold, label=""];
+1->6 [style = bold, label=""];
+5->14 [style = dashed, label="0"];
+2->7 [style = bold, label=""];
+7->4 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+4->13 [style = dashed, label="0"];
+3->9 [style = dashed, label="0"];
+12->9 [style = bold, label=""];
+8->11 [style = bold, label=""];
+10->12 [style = bold, label=""];
+4->5 [style = bold, label=""];
+13->14 [style = bold, label=""];
+11->2 [style = bold, label=""];
+0->2 [style = bold, label=""];
+6->12 [style = dashed, label="0"];
+}

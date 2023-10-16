@@ -1,0 +1,25 @@
+digraph {
+1 [style = filled, label = "String in = \"\" + \"f01=a&f01=b\" + \"&f02=c&f02=d\" + \"&f03=1&f03=2\" + \"&f04=3&f04=4\" + \"&f05=@(e,f)&f05=@(g,h)\" + \"&f06=@(i,j)&f06=@(k,l)\" + \"&f07=(a=a,b=1,c=true)&f07=(a=b,b=2,c=false)\" + \"&f08=(a=a,b=1,c=true)&f08=(a=b,b=2,c=false)\" + \"&f09=@((a=a,b=1,c=true))&f09=@((a=b,b=2,c=false))\" + \"&f10=@((a=a,b=1,c=true))&f10=@((a=b,b=2,c=false))\" + \"&f11=a&f11=b\" + \"&f12=c&f12=d\" + \"&f13=1&f13=2\" + \"&f14=3&f14=4\" + \"&f15=@(e,f)&f15=@(g,h)\" + \"&f16=@(i,j)&f16=@(k,l)\" + \"&f17=(a=a,b=1,c=true)&f17=(a=b,b=2,c=false)\" + \"&f18=(a=a,b=1,c=true)&f18=(a=b,b=2,c=false)\" + \"&f19=@((a=a,b=1,c=true))&f19=@((a=b,b=2,c=false))\" + \"&f20=@((a=a,b=1,c=true))&f20=@((a=b,b=2,c=false))\"@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "g01_multiPartParameterKeysOnCollections['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "RestClient g = MockRestClient.build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "g01_multiPartParameterKeysOnCollections['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "g.post(\"/\",in,APPLICATION_FORM_URLENCODED).run().assertBody().is(in)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "RestClient h2 = MockRestClient.build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "h02_multiPartParameterKeysOnCollections_usingExpandedParams['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "g.post(\"/\",in,\"application/x-www-form-urlencoded\").run().assertBody().is(in)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "h2.post(\"/\",in,\"application/x-www-form-urlencoded\").run().assertBody().is(in)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+1->5 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+6->1 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+1->8 [style = bold, label=""];
+1->8 [style = solid, label="in"];
+1->3 [style = solid, label="in"];
+0->1 [style = bold, label=""];
+7->6 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+1->5 [style = solid, label="in"];
+}

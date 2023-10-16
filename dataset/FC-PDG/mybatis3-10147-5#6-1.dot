@@ -1,0 +1,37 @@
+digraph {
+8 [style = filled, label = "user.setName(\"MyBatis\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "shouldUpdateUser['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "shouldInsertAUser['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "mapper.insertUser(user)@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "mapper.update(user)@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "user.setId(2)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "User user = new User()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "user.setName(\"User2\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "user.setId(999)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "user.setName(\"MyBatis3\")@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "shouldInsertAUser['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "User loadedUser = mapper.getUser(999)@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertEquals(\"MyBatis3\",loadedUser.getName())@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "mapper.insert(user)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+12->10 [style = bold, label=""];
+13->9 [style = bold, label=""];
+4->2 [style = bold, label=""];
+14->2 [style = bold, label=""];
+9->11 [style = bold, label=""];
+0->5 [style = solid, label="user"];
+10->13 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+0->12 [style = solid, label="user"];
+5->12 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+0->13 [style = solid, label="user"];
+8->12 [style = bold, label=""];
+0->7 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

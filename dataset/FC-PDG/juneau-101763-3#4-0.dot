@@ -1,0 +1,33 @@
+digraph {
+1 [style = filled, label = "HttpRequestInterceptor x1 = new HttpRequestInterceptor(){@Override public void process(HttpRequest request,HttpContext context){request.setHeader(\"A1\",\"1\")}}@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "client().addInterceptorFirst(x1).addInterceptorLast(x2).addInterceptorFirst(x3).addInterceptorLast(x4).build().get(\"/echo\").run().assertBody().contains(\"A1: 1\",\"A2: 2\").assertStringHeader(\"B1\").is(\"1\").assertStringHeader(\"B2\").is(\"2\")@@@27@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "client().interceptors().build().get(\"/echo\").run().assertBody().contains(\"A1: 1\").assertStringHeader(\"B1\").is(\"1\")@@@28@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "HttpRequestInterceptor x3 = new HttpRequestInterceptor(){@Override public void process(HttpRequest request,HttpContext context){request.setHeader(\"A2\",\"2\")}}@@@15@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "c01_httpClient_interceptors['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "c02_httpClient_httpProcessor['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "client().interceptors(new C01()).build().get(\"/echo\").run().assertBody().contains(\"A1: 1\").assertStringHeader(\"B1\").is(\"1\")@@@29@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "client().addInterceptorFirst(x1).addInterceptorLast(x2).addInterceptorFirst(x3).addInterceptorLast(x4).build().get(\"/echo\").run().assertBody().contains(\"A1: 1\",\"A2: 2\").assertHeader(\"B1\").is(\"1\").assertHeader(\"B2\").is(\"2\")@@@27@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+14 [style = filled, label = "HttpProcessor x = new HttpProcessor(){@Override public void process(HttpRequest request,HttpContext context){request.setHeader(\"A1\",\"1\")}@Override public void process(HttpResponse response,HttpContext context){response.setHeader(\"B1\",\"1\")}}@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "client().interceptors().build().get(\"/echo\").run().assertBody().contains(\"A1: 1\").assertHeader(\"B1\").is(\"1\")@@@28@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "client().httpProcessor(x).build().get(\"/echo\").run().assertBody().contains(\"A1: 1\").assertStringHeader(\"B1\").is(\"1\")@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "c01_httpClient_interceptors['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "client().interceptors(new C01()).build().get(\"/echo\").run().assertBody().contains(\"A1: 1\").assertHeader(\"B1\").is(\"1\")@@@29@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "HttpResponseInterceptor x4 = new HttpResponseInterceptor(){@Override public void process(HttpResponse response,HttpContext context){response.setHeader(\"B2\",\"2\")}}@@@21@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "HttpResponseInterceptor x2 = new HttpResponseInterceptor(){@Override public void process(HttpResponse response,HttpContext context){response.setHeader(\"B1\",\"1\")}}@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+5->8 [style = dashed, label="0"];
+7->11 [style = dashed, label="0"];
+5->7 [style = bold, label=""];
+6->4 [style = bold, label=""];
+10->8 [style = bold, label=""];
+9->1 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+8->11 [style = bold, label=""];
+0->6 [style = bold, label=""];
+4->5 [style = bold, label=""];
+13->14 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->10 [style = bold, label=""];
+14->12 [style = bold, label=""];
+3->0 [style = bold, label=""];
+}

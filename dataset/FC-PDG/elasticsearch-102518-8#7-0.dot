@@ -1,0 +1,37 @@
+digraph {
+0 [style = filled, label = "IndexModule module = new IndexModule(indexSettings,emptyAnalysisRegistry,new InternalEngineFactory(),Collections.emptyMap())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testDefaultQueryCacheImplIsSelected['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "IndexService indexService = newIndexService(module)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "Settings settings = Settings.builder().put(Environment.PATH_HOME_SETTING.getKey(),createTempDir().toString()).put(IndexMetaData.SETTING_VERSION_CREATED,Version.CURRENT).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "module.forceQueryCacheProvider(null)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "assertTrue(indexService.cache().query() instanceof DisabledQueryCache)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "indexService.close(\"simon says\",false)@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final IndexSettings indexSettings = IndexSettingsModule.newIndexSettings(\"foo\",settings)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertTrue(indexService.cache().query() instanceof IndexQueryCache)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testDisableQueryCacheHasPrecedenceOverForceQueryCache['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Settings settings = Settings.builder().put(IndexModule.INDEX_QUERY_CACHE_ENABLED_SETTING.getKey(),false).put(Environment.PATH_HOME_SETTING.getKey(),createTempDir().toString()).put(IndexMetaData.SETTING_VERSION_CREATED,Version.CURRENT).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "module.forceQueryCacheProvider(null)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "testDisableQueryCacheHasPrecedenceOverForceQueryCache['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0->3 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+11->6 [style = bold, label=""];
+0->2 [style = bold, label=""];
+4->0 [style = bold, label=""];
+7->5 [style = bold, label=""];
+1->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+8->2 [style = bold, label=""];
+12->4 [style = bold, label=""];
+10->12 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+0->2 [style = solid, label="module"];
+0->8 [style = bold, label=""];
+4->0 [style = solid, label="indexSettings"];
+12->4 [style = solid, label="settings"];
+9->5 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+5->4 [style = solid, label="settings"];
+2->11 [style = bold, label=""];
+}

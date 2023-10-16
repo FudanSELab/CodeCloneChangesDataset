@@ -1,0 +1,35 @@
+digraph {
+7 [style = filled, label = "GroupByQuery query = makeQueryBuilder().setDataSource(QueryRunnerTestHelper.DATA_SOURCE).setGranularity(QueryRunnerTestHelper.ALL_GRAN).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.MARKET_DIMENSION,\"marketalias\")).setInterval(QueryRunnerTestHelper.FULL_ON_INTERVAL_SPEC).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(\"marketalias\",OrderByColumnSpec.Direction.DESCENDING)),2)).setAggregatorSpecs(QueryRunnerTestHelper.ROWS_COUNT).overrideContext(ImmutableMap.of(GroupByQueryConfig.CTX_KEY_FORCE_LIMIT_PUSH_DOWN,true)).build()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final GroupByQuery query = makeQueryBuilder().setDataSource(QueryRunnerTestHelper.DATA_SOURCE).setGranularity(QueryRunnerTestHelper.ALL_GRAN).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.MARKET_DIMENSION,\"marketalias\")).setInterval(QueryRunnerTestHelper.FULL_ON_INTERVAL_SPEC).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(\"marketalias\",OrderByColumnSpec.Direction.DESCENDING)),2)).setAggregatorSpecs(QueryRunnerTestHelper.ROWS_COUNT).overrideContext(ImmutableMap.of(GroupByQueryConfig.CTX_KEY_FORCE_LIMIT_PUSH_DOWN,true)).setHavingSpec(new GreaterThanHavingSpec(\"rows\",10)).build()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "return@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "expectedException.expectMessage(\"Cannot force limit push down when a having spec is present.\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testRejectForceLimitPushDownWithHaving['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "Iterable<ResultRow> results = GroupByQueryRunnerTestHelper.runQuery(factory,runner,query)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "TestHelper.assertExpectedObjects(expectedResults,results,\"order-limit\")@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testGroupByLimitPushDown['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "makeQueryBuilder().setDataSource(QueryRunnerTestHelper.DATA_SOURCE).setGranularity(QueryRunnerTestHelper.ALL_GRAN).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.MARKET_DIMENSION,\"marketalias\")).setInterval(QueryRunnerTestHelper.FULL_ON_INTERVAL_SPEC).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(\"marketalias\",OrderByColumnSpec.Direction.DESCENDING)),2)).setAggregatorSpecs(QueryRunnerTestHelper.ROWS_COUNT).overrideContext(ImmutableMap.of(GroupByQueryConfig.CTX_KEY_FORCE_LIMIT_PUSH_DOWN,true)).setHavingSpec(new GreaterThanHavingSpec(\"rows\",10)).build()@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "!config.getDefaultStrategy().equals(GroupByStrategySelector.STRATEGY_V2)@@@3@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "query.isApplyLimitPushDown()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "List<ResultRow> expectedResults = Arrays.asList(makeRow(query,\"1970-01-01T00:00:00.000Z\",\"marketalias\",\"upfront\",\"rows\",186L),makeRow(query,\"1970-01-01T00:00:00.000Z\",\"marketalias\",\"total_market\",\"rows\",186L))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "expectedException.expect()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testRejectForceLimitPushDownWithHaving['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10->13 [style = solid, label="results"];
+1->4 [style = dashed, label="0"];
+6->3 [style = bold, label=""];
+11->13 [style = solid, label="expectedResults"];
+9->12 [style = dotted, label="true"];
+9->12 [style = bold, label=""];
+7->11 [style = bold, label=""];
+7->11 [style = solid, label="query"];
+10->13 [style = bold, label=""];
+9->7 [style = bold, label=""];
+0->4 [style = bold, label=""];
+11->10 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+12->7 [style = bold, label=""];
+7->10 [style = solid, label="query"];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

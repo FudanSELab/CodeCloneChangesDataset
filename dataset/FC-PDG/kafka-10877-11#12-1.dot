@@ -1,0 +1,27 @@
+digraph {
+2 [style = filled, label = "context = new InternalMockProcessorContext(TestUtils.tempDirectory(),Serdes.String(),Serdes.Long(),streamsMetrics,new StreamsConfig(StreamsTestUtils.getStreamsConfig()),null,new ThreadCache(new LogContext(\"testCache \"),0,streamsMetrics))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final StreamsMetricsImpl streamsMetrics = new StreamsMetricsImpl(metrics,\"test\",StreamsConfig.METRICS_LATEST)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "threadIdTagKey = StreamsConfig.METRICS_0100_TO_24.equals(builtInMetricsVersion)? THREAD_ID_TAG_KEY_FROM_0100_TO_24: THREAD_ID_TAG_KEY@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "setUp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final StreamsMetricsImpl streamsMetrics = new StreamsMetricsImpl(metrics,\"test\",StreamsConfig.METRICS_LATEST,new MockTime())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "setUp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "storeLevelGroup = StreamsConfig.METRICS_0100_TO_24.equals(builtInMetricsVersion)? STORE_LEVEL_GROUP_FROM_0100_TO_24: STORE_LEVEL_GROUP@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "tags = mkMap(mkEntry(threadIdTagKey,threadId),mkEntry(\"task-id\",context.taskId().toString()),mkEntry(STORE_TYPE + \"-state-id\",STORE_NAME))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final StreamsMetricsImpl streamsMetrics = new StreamsMetricsImpl(metrics,\"test\",builtInMetricsVersion)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "setUp['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->4 [style = dashed, label="0"];
+5->7 [style = bold, label=""];
+4->2 [style = solid, label="streamsMetrics"];
+1->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->2 [style = solid, label="streamsMetrics"];
+7->2 [style = solid, label="streamsMetrics"];
+1->7 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->6 [style = bold, label=""];
+6->8 [style = bold, label=""];
+8->9 [style = bold, label=""];
+8->9 [style = solid, label="threadIdTagKey"];
+}

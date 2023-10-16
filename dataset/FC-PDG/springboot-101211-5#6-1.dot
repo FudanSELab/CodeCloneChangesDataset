@@ -1,0 +1,20 @@
+digraph {
+5 [style = filled, label = "getPoolSizeNoConnection['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "jdbcTemplate.execute((ConnectionCallback<Void>)null)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(getDataSourceMetadata().getUsage()).isEqualTo(Float.valueOf(0))@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceMetadata().getDataSource())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "getPoolSizeTwoConnections['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(getDataSourceMetadata().getActive()).isEqualTo(Integer.valueOf(0))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceMetadata().getDataSource())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "jdbcTemplate.execute((ConnectionCallback<Void>)null)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "getPoolSizeNoConnection['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6->8 [style = bold, label=""];
+5->1 [style = bold, label=""];
+1->4 [style = bold, label=""];
+7->6 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+}

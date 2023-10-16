@@ -1,0 +1,37 @@
+digraph {
+6 [style = filled, label = "assertThat(this.errorAttributes.getError(this.webRequest)).isSameAs(ex)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Map<String,Object> attributes = this.errorAttributes.getErrorAttributes(this.webRequest,ErrorAttributeOptions.of(Include.MESSAGE))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "this.request.setAttribute(\"javax.servlet.error.exception\",ex)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "ModelAndView modelAndView = this.errorAttributes.resolveException(this.request,null,null,ex)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "servletErrorWithMessage['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(attributes.get(\"message\")).isEqualTo(\"Test\")@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(attributes.get(\"message\")).isEqualTo(\"Test\")@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "RuntimeException ex = new RuntimeException(\"Test\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(modelAndView).isNull()@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "Map<String,Object> attributes = this.errorAttributes.getErrorAttributes(this.webRequest,false,true,false)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "this.request.setAttribute(\"javax.servlet.error.exception\",new RuntimeException(\"Ignored\"))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(attributes.containsKey(\"exception\")).isFalse()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "mvcError['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "mvcError['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->3 [style = bold, label=""];
+8->10 [style = bold, label=""];
+4->2 [style = solid, label="ex"];
+3->1 [style = bold, label=""];
+9->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->6 [style = solid, label="ex"];
+4->7 [style = solid, label="ex"];
+8->6 [style = bold, label=""];
+11->12 [style = bold, label=""];
+7->8 [style = bold, label=""];
+12->6 [style = bold, label=""];
+4->7 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+0->4 [style = bold, label=""];
+10->2 [style = bold, label=""];
+4->11 [style = solid, label="ex"];
+4->11 [style = bold, label=""];
+2->5 [style = bold, label=""];
+13->4 [style = bold, label=""];
+}

@@ -1,0 +1,38 @@
+digraph {
+3 [style = filled, label = "internalTopologyBuilder.addSource(consumed.offsetResetPolicy(),name,consumed.timestampExtractor(),consumed.keySerde() == null? null: consumed.keySerde().deserializer(),consumed.valueSerde() == null? null: consumed.valueSerde().deserializer(),topics.toArray(new String(((())@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "internalTopologyBuilder.addSource(consumed.offsetResetPolicy(),name,consumed.timestampExtractor(),consumed.keySerde() == null? null: consumed.keySerde().deserializer(),consumed.valueSerde() == null? null: consumed.valueSerde().deserializer(),topicPattern)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "internalTopologyBuilder.addSource(consumed.offsetResetPolicy(),name,consumed.timestampExtractor(),consumed.keyDeserializer(),consumed.valueDeserializer(),topics.toArray(new String(((())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "final Collection<String> topics@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "final ConsumedInternal<K,V> consumed@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "stream['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final ConsumedInternal<K,V> consumed@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final Collection<String> topics@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "stream['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "final String name = newProcessorName(KStreamImpl.SOURCE_NAME)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "return new KStreamImpl<>(this,name,Collections.singleton(name),false)@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final Pattern topicPattern@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "stream['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+5->2 [style = solid, label="name"];
+5->12 [style = solid, label="name"];
+4->1 [style = dotted, label="true"];
+5->6 [style = solid, label="name"];
+4->0 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+10->9 [style = dotted, label="true"];
+9->12 [style = solid, label="topicPattern"];
+6->2 [style = bold, label=""];
+8->1 [style = dotted, label="true"];
+12->2 [style = bold, label=""];
+10->5 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+8->5 [style = bold, label=""];
+5->12 [style = bold, label=""];
+10->11 [style = dotted, label="true"];
+3->12 [style = dashed, label="0"];
+1->11 [style = dashed, label="0"];
+5->3 [style = solid, label="name"];
+4->5 [style = bold, label=""];
+}

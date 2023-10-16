@@ -1,0 +1,38 @@
+digraph {
+0 [style = filled, label = "env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "DataStream<Tuple2<String,Integer>> streamTwo = env.fromElements(Tuple2.of(\"key\",0),Tuple2.of(\"key\",1),Tuple2.of(\"key\",2)).assignTimestampsAndWatermarks(new AscendingTuple2TimestampExtractor())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "streamOne.intervalJoin(streamTwo).between(Time.milliseconds(0),Time.milliseconds(0)).process(new ProcessJoinFunction<Tuple2<String,Integer>,Tuple2<String,Integer>,String>(){@Override public void processElement(Tuple2<String,Integer> left,Tuple2<String,Integer> right,Context ctx,Collector<String> out){out.collect(left + \":\" + right)}}).addSink(new ResultSink())@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "KeyedStream<Tuple2<String,Integer>,String> streamOne = env.fromElements(Tuple2.of(\"key\",0),Tuple2.of(\"key\",1),Tuple2.of(\"key\",2),Tuple2.of(\"key\",3),Tuple2.of(\"key\",4),Tuple2.of(\"key\",5)).assignTimestampsAndWatermarks(new AscendingTuple2TimestampExtractor()).keyBy(new Tuple2KeyExtractor())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "env.setParallelism(1)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testBoundsCanBeInclusive['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "streamOne.keyBy(new Tuple2KeyExtractor()).intervalJoin(streamTwo.keyBy(new Tuple2KeyExtractor())).between(Time.milliseconds(0),Time.milliseconds(2)).process(new CombineToStringJoinFunction()).addSink(new ResultSink())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "DataStream<Tuple2<String,Integer>> streamOne = env.fromElements(Tuple2.of(\"key\",0),Tuple2.of(\"key\",1),Tuple2.of(\"key\",2)).assignTimestampsAndWatermarks(new AscendingTuple2TimestampExtractor())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "env.execute()@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "KeyedStream<Tuple2<String,Integer>,String> streamTwo = env.fromElements(Tuple2.of(\"key\",0),Tuple2.of(\"key\",1),Tuple2.of(\"key\",2),Tuple2.of(\"key\",3),Tuple2.of(\"key\",4),Tuple2.of(\"key\",5)).assignTimestampsAndWatermarks(new AscendingTuple2TimestampExtractor()).keyBy(new Tuple2KeyExtractor())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "expectInAnyOrder(\"(key,0):(key,0)\",\"(key,1):(key,1)\",\"(key,2):(key,2)\",\"(key,3):(key,3)\",\"(key,4):(key,4)\",\"(key,5):(key,5)\")@@@14@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testCanJoinOverSameKey['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "expectInAnyOrder(\"(key,0):(key,0)\",\"(key,0):(key,1)\",\"(key,0):(key,2)\",\"(key,1):(key,1)\",\"(key,1):(key,2)\",\"(key,2):(key,2)\")@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "env.execute()@@@13@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testCanJoinOverSameKey['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9->3 [style = bold, label=""];
+4->8 [style = bold, label=""];
+5->1 [style = bold, label=""];
+6->3 [style = bold, label=""];
+10->3 [style = bold, label=""];
+8->12 [style = dashed, label="0"];
+11->12 [style = bold, label=""];
+15->13 [style = bold, label=""];
+4->11 [style = dashed, label="0"];
+8->5 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->15 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+1->7 [style = bold, label=""];
+13->14 [style = bold, label=""];
+2->11 [style = bold, label=""];
+7->14 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+12->15 [style = bold, label=""];
+}

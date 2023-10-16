@@ -1,0 +1,29 @@
+digraph {
+1 [style = filled, label = "JdbcAccessSecurityConfig securityConfig = newSecurityConfigEnforcingAllowList(ImmutableSet.of(\"none\",\"nonenone\"))@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "new MySQLFirehoseDatabaseConnector(connectorConfig,securityConfig)@@@12@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "new MySQLFirehoseDatabaseConnector(connectorConfig,null,securityConfig)@@@12@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "MetadataStorageConnectorConfig connectorConfig = new MetadataStorageConnectorConfig(){@Override public String getConnectURI(){return \"jdbc:mysql://localhost:3306/test?user=maytas&password=secret&keyonly\"}}@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testFailOnlyInvalidProperty['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "expectedException.expectMessage(\"The property (password( is not in the allowed list\")@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testFailValidAndInvalidProperty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "expectedException.expect()@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "JdbcAccessSecurityConfig securityConfig = newSecurityConfigEnforcingAllowList(ImmutableSet.of(\"user\",\"nonenone\"))@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testFailOnlyInvalidProperty['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->0 [style = solid, label="securityConfig"];
+3->0 [style = bold, label=""];
+6->4 [style = bold, label=""];
+4->8 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+8->2 [style = bold, label=""];
+3->7 [style = bold, label=""];
+9->4 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+4->7 [style = solid, label="connectorConfig"];
+4->0 [style = solid, label="connectorConfig"];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+8->0 [style = solid, label="securityConfig"];
+1->7 [style = solid, label="securityConfig"];
+}

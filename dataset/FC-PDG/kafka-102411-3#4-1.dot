@@ -1,0 +1,27 @@
+digraph {
+6 [style = filled, label = "shouldAddCustomSensor(streamsMetrics.addRateTotalSensor(SCOPE_NAME,ENTITY_NAME,OPERATION_NAME,RecordingLevel.DEBUG),streamsMetrics,Arrays.asList(OPERATION_NAME + TOTAL_SUFFIX,OPERATION_NAME + RATE_SUFFIX))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final String builtInMetricsVersion@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "final String builtInMetricsVersion@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "shouldAddCustomSensor(streamsMetrics.addLatencyRateTotalSensor(SCOPE_NAME,ENTITY_NAME,OPERATION_NAME,RecordingLevel.DEBUG),streamsMetrics,Arrays.asList(OPERATION_NAME + LATENCY_SUFFIX + AVG_SUFFIX,OPERATION_NAME + LATENCY_SUFFIX + MAX_SUFFIX,OPERATION_NAME + TOTAL_SUFFIX,OPERATION_NAME + RATE_SUFFIX))@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "shouldAddLatencyRateTotalSensor['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "shouldAddLatencyRateTotalSensor['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final StreamsMetricsImpl streamsMetrics = new StreamsMetricsImpl(metrics,CLIENT_ID,builtInMetricsVersion,time)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "shouldAddRateTotalSensor['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final StreamsMetricsImpl streamsMetrics = new StreamsMetricsImpl(metrics,CLIENT_ID,VERSION,time)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1->0 [style = solid, label="builtInMetricsVersion"];
+1->8 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+7->0 [style = bold, label=""];
+8->0 [style = solid, label="builtInMetricsVersion"];
+0->5 [style = dashed, label="0"];
+7->8 [style = dotted, label="true"];
+0->2 [style = solid, label="streamsMetrics"];
+5->2 [style = solid, label="streamsMetrics"];
+0->6 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->1 [style = dotted, label="true"];
+3->0 [style = bold, label=""];
+0->6 [style = solid, label="streamsMetrics"];
+0->2 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

@@ -1,0 +1,34 @@
+digraph {
+7 [style = filled, label = "List<UserInfo> result = Lists.newArrayList()@@@7@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "List<UserPO> users = userRepository.findByUsernameIn(userIds)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "return Collections.emptyList()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "CollectionUtils.isEmpty(users)@@@4@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "findByUserIds['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "findByUserIds['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "findByUserIds['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "result.addAll(users.stream().map(null).collect(Collectors.toList()))@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "return users.stream().map(null).collect(Collectors.toList())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "return users.stream().map(null).collect(Collectors.toList())@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "List<String> userIds@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return result@@@9@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4->5 [style = dotted, label="true"];
+4->3 [style = bold, label=""];
+0->11 [style = bold, label=""];
+3->1 [style = solid, label="users"];
+0->9 [style = bold, label=""];
+10->3 [style = bold, label=""];
+1->0 [style = dotted, label="true"];
+1->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+8->5 [style = dotted, label="true"];
+10->5 [style = dotted, label="true"];
+5->3 [style = solid, label="userIds"];
+7->6 [style = solid, label="result"];
+1->7 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->6 [style = bold, label=""];
+1->9 [style = bold, label=""];
+8->3 [style = bold, label=""];
+1->11 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

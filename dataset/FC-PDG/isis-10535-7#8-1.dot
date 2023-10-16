@@ -1,0 +1,32 @@
+digraph {
+7 [style = filled, label = "getConfiguration().getViewer().getWicket().getApplication().getCss().ifPresent(null)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "renderHead['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1a2fc0fresponse@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "IHeaderResponse response@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "response.render(new PriorityHeaderItem(JavaScriptHeaderItem.forReference(Application.get().getJavaScriptLibrarySettings().getJQueryReference())))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "response.render(new PriorityHeaderItem(JavaScriptHeaderItem.forReference(BootstrapJavaScriptReference.instance())))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "renderHead['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "getConfiguration().getViewer().getWicket().getApplication().getJs().ifPresent(null)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "getIsisConfiguration().getViewer().getWicket().getApplication().getJs().ifPresent(null)@@@7@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "response.render(new PriorityHeaderItem(JavaScriptHeaderItem.forReference(BootstrapJavaScriptReference.instance())))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "getIsisConfiguration().getViewer().getWicket().getApplication().getCss().ifPresent(null)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "renderHead['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->3 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+11->0 [style = dotted, label="true"];
+4->1 [style = bold, label=""];
+1->6 [style = bold, label=""];
+9->0 [style = dotted, label="true"];
+2->7 [style = bold, label=""];
+10->5 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+9->1 [style = bold, label=""];
+0->1 [style = solid, label="response"];
+7->8 [style = bold, label=""];
+11->1 [style = bold, label=""];
+6->10 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+4->0 [style = dotted, label="true"];
+2->5 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

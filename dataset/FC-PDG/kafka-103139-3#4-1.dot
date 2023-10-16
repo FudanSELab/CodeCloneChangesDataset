@@ -1,0 +1,23 @@
+digraph {
+8 [style = filled, label = "shouldBeFlaggedAsIdempotentWhenIdempotentRecords['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final ProduceRequest request = ProduceRequest.Builder.forCurrentMagic((short)-1,10,Collections.singletonMap(new TopicPartition(\"topic\",1),memoryRecords)).build()@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "assertTrue(request.isIdempotent())@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final ProduceRequest request = new ProduceRequest.Builder(RecordBatch.CURRENT_MAGIC_VALUE,(short)-1,10,Collections.singletonMap(new TopicPartition(\"topic\",1),memoryRecords)).build()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertTrue(request.isTransactional())@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "shouldBeFlaggedAsTransactionalWhenTransactionalRecords['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final MemoryRecords memoryRecords = MemoryRecords.withIdempotentRecords(1,CompressionType.NONE,1L,(short)1,1,1,simpleRecord)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final MemoryRecords memoryRecords = MemoryRecords.withTransactionalRecords(0,CompressionType.NONE,1L,(short)1,1,1,simpleRecord)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "shouldBeFlaggedAsTransactionalWhenTransactionalRecords['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->3 [style = bold, label=""];
+4->1 [style = bold, label=""];
+8->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+3->6 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

@@ -1,0 +1,31 @@
+digraph {
+0 [style = filled, label = "oldSecurityShouldSucceedIfAuthorized['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "verify(authzRequest).getAuthorize(eq(REGION_NAME),eq(KEY),eq(CALLBACK_ARG))@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "givenOldSecurity()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "verify(this.responseMessage).send(this.serverConnection)@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "when(this.securityService.isClientSecurityRequired()).thenReturn(true)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "verify(this.authzRequest).getAuthorize(eq(REGION_NAME),eq(KEY),eq(CALLBACK_ARG))@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "oldSecurityShouldFailIfNotAuthorized['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "get70.cmdExecute(message,serverConnection,securityService,0)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "verify(this.errorResponseMessage).send(eq(this.serverConnection))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "oldSecurityShouldSucceedIfAuthorized['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "when(this.securityService.isIntegratedSecurity()).thenReturn(false)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "verify(responseMessage).send(serverConnection)@@@6@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "doThrow(new NotAuthorizedException(\"\")).when(this.authzRequest).getAuthorize(eq(REGION_NAME),eq(KEY),eq(CALLBACK_ARG))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "this.get70.cmdExecute(this.message,this.serverConnection,this.securityService,0)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+4->13 [style = bold, label=""];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+12->3 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+10->7 [style = bold, label=""];
+2->11 [style = bold, label=""];
+13->1 [style = bold, label=""];
+6->8 [style = bold, label=""];
+9->6 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

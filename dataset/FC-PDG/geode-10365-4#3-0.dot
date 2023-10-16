@@ -1,0 +1,27 @@
+digraph {
+9 [style = filled, label = "when(service.getCacheConfig(\"cluster\")).thenReturn(cacheConfig)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "regionConfig.setGroup(\"group1\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "regionConfig.setGroup(\"group2\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "cacheConfig.getRegions().add(regionConfig)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "validateCreate2['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThatThrownBy(null).isInstanceOf().hasMessageContaining(\"member4\").hasMessageContaining(\"member2\").hasMessageContaining(\"already has this element created\")@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "validateCreate1['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThatThrownBy(null).isInstanceOf().hasMessageContaining(\"Member(s) member4 already has this element created\")@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "when(service.getCacheConfig(\"group1\")).thenReturn(cacheConfig)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "validateCreate2['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "assertThatThrownBy(null).isInstanceOf().hasMessageContaining(\"already exists on member(s) member4.\")@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3->8 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+3->6 [style = bold, label=""];
+8->10 [style = bold, label=""];
+1->2 [style = bold, label=""];
+7->1 [style = bold, label=""];
+4->10 [style = dashed, label="0"];
+4->6 [style = dashed, label="0"];
+9->8 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+1->9 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

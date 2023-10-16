@@ -1,0 +1,35 @@
+digraph {
+12 [style = filled, label = "testExtractFieldRegexReplaceAll['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testExtractFieldRegexReplaceAllWithEntityType['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testExtractFieldRegexReplaceAllWithEntityType['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "assertEquals(d.getFieldNames().toString(),\"London\",d.getFieldValue(\"foo_location_y3_location_y7_s\"))@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "SolrInputDocument d = processAdd(\"extract-regex-replaceall-with-entity-type\",doc(f(\"id\",\"1111\"),f(\"foo_x2_s\",\"Infrequently Flashman.\",\"In the words of Flashman.\"),f(\"foo_x3_x7_s\",\"Flashman. Whoa.\")))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(d.getFieldNames().toString(),Arrays.asList(\"London\",\"London\"),d.getFieldValues(\"foo_location_y2_s\"))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "assertEquals(Arrays.asList(\"Flashman\",\"Flashman\"),d.getFieldValues(\"foo_y2_s\"))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertEquals(\"Flashman\",d.getFieldValue(\"foo_y3_y7_s\"))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "SolrInputDocument d = processAdd(\"extract-regex-replaceall-with-entity-type\",doc(f(\"id\",\"1111\"),f(\"foo_x2_s\",\"Infrequently Flashman in London.\",\"In the words of Flashman in London.\"),f(\"foo_x3_x7_s\",\"Flashman in London. Whoa.\")))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "assertEquals(d.getFieldNames().toString(),\"Flashman\",d.getFieldValue(\"foo_person_y3_person_y7_s\"))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "SolrInputDocument d = processAdd(\"extract-regex-replaceall\",doc(f(\"id\",\"1111\"),f(\"foo_x2_s\",\"Infrequently Flashman.\",\"In the words of Flashman.\"),f(\"foo_x3_x7_s\",\"Flashman. Whoa.\")))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertNotNull(d)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(d.getFieldNames().toString(),Arrays.asList(\"Flashman\",\"Flashman\"),d.getFieldValues(\"foo_person_y2_s\"))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->0 [style = solid, label="d"];
+0->3 [style = bold, label=""];
+2->11 [style = dashed, label="0"];
+1->9 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+0->10 [style = bold, label=""];
+6->0 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+9->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+8->2 [style = bold, label=""];
+12->9 [style = bold, label=""];
+1->0 [style = solid, label="d"];
+1->6 [style = dashed, label="0"];
+3->8 [style = bold, label=""];
+7->6 [style = bold, label=""];
+2->5 [style = bold, label=""];
+6->0 [style = solid, label="d"];
+10->11 [style = bold, label=""];
+}

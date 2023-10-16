@@ -1,0 +1,35 @@
+digraph {
+2 [style = filled, label = "String testName = \"schemaWithArrayIsNullable\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ArrayConverter converter = new ArrayConverter(new JsonSchema(schema),state,null)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "JsonObject schema = getSchemaData(testName).getAsJsonObject()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "schemaWithArrayIsNullable['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "StringConverter converter = new StringConverter(new JsonSchema(schema))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "String testName = \"schemaWithIsNullable\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "JsonArray expected = getExpectedSchema(testName).getAsJsonArray()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Assert.assertEquals(avroSchemaToJsonElement(converter),expected)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ArrayConverter converter = new ArrayConverter(new JsonSchema(schema),state)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "schemaWithIsNullable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "schemaWithArrayIsNullable['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+8->10 [style = bold, label=""];
+1->4 [style = bold, label=""];
+3->1 [style = bold, label=""];
+9->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+3->4 [style = solid, label="expected"];
+3->6 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+2->10 [style = dashed, label="0"];
+3->9 [style = bold, label=""];
+6->4 [style = bold, label=""];
+10->5 [style = bold, label=""];
+1->4 [style = solid, label="converter"];
+5->1 [style = solid, label="schema"];
+7->2 [style = bold, label=""];
+6->4 [style = solid, label="converter"];
+5->9 [style = solid, label="schema"];
+9->4 [style = solid, label="converter"];
+1->6 [style = dashed, label="0"];
+5->6 [style = solid, label="schema"];
+2->5 [style = bold, label=""];
+}

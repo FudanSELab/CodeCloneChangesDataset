@@ -1,0 +1,38 @@
+digraph {
+4 [style = filled, label = "tc.onSubscribe(d)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "{RxJavaPlugins.reset()}@@@13@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "TestDisposableObserver<Integer> tc = new TestDisposableObserver<Integer>()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Disposable d = Disposable.empty()@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "Disposable d = Disposables.empty()@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(1,tc.start)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "startOnce['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "startOnce['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "TestHelper.assertError(error,0,,EndConsumerHelper.composeMessage(tc.getClass().getName()))@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertTrue(d.isDisposed())@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "TestCompletable tc = new TestCompletable()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "tc.onSubscribe(Disposables.empty())@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "List<Throwable> error = TestHelper.trackPluginErrors()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "startOnce['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "tc.onSubscribe(Disposable.empty())@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+14->3 [style = bold, label=""];
+0->6 [style = bold, label=""];
+11->6 [style = bold, label=""];
+8->3 [style = bold, label=""];
+9->7 [style = bold, label=""];
+2->4 [style = bold, label=""];
+6->9 [style = solid, label="error"];
+1->9 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+6->14 [style = bold, label=""];
+5->1 [style = bold, label=""];
+12->10 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+10->4 [style = solid, label="d"];
+2->4 [style = solid, label="d"];
+6->8 [style = bold, label=""];
+10->4 [style = bold, label=""];
+13->6 [style = bold, label=""];
+4->5 [style = bold, label=""];
+8->12 [style = bold, label=""];
+}

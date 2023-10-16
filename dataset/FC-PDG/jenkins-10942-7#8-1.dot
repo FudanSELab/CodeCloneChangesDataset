@@ -1,0 +1,37 @@
+digraph {
+14 [style = filled, label = "Assert.assertEquals(5,historyPageFilter.runs.size())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Assert.assertFalse(historyPageFilter.hasUpPage)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "test_newerThan_gt_newest['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Assert.assertTrue(historyPageFilter.hasDownPage)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "Assert.assertEquals(HistoryPageEntry.getEntryId(6),historyPageFilter.oldestOnPage)@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "HistoryPageFilter<ModelObject> historyPageFilter = newPage(5,8L,null)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "historyPageFilter.add(itemList)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "test_newerThan_near_newest['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Assert.assertEquals(0,historyPageFilter.runs.size())@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "test_newerThan_gt_newest['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "HistoryPageFilter<ModelObject> historyPageFilter = newPage(5,11L,null)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Assert.assertEquals(false,historyPageFilter.hasUpPage)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Assert.assertEquals(HistoryPageEntry.getEntryId(10),historyPageFilter.newestOnPage)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Assert.assertEquals(true,historyPageFilter.hasDownPage)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "List<ModelObject> itemList = newRuns(1,10)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->14 [style = bold, label=""];
+0->14 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+5->8 [style = bold, label=""];
+5->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+1->4 [style = bold, label=""];
+6->0 [style = bold, label=""];
+11->12 [style = bold, label=""];
+3->5 [style = solid, label="itemList"];
+7->4 [style = bold, label=""];
+9->0 [style = bold, label=""];
+13->3 [style = bold, label=""];
+10->13 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+4->13 [style = dashed, label="0"];
+14->11 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+2->6 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

@@ -1,0 +1,20 @@
+digraph {
+3 [style = filled, label = "shouldTrimWHEREANDWithLFForFirstCondition['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "shouldTrimWHEREANDWithLFForFirstCondition['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "DynamicSqlSource source = createDynamicSqlSource(new TextSqlNode(\"SELECT * FROM BLOG\"),new WhereSqlNode(new Configuration(),mixedContents(new IfSqlNode(mixedContents(new TextSqlNode(\" and ID = ? \")),\"true\"))))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final String expected = \"SELECT * FROM BLOG WHERE  ID = ?\"@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "DynamicSqlSource source = createDynamicSqlSource(new TextSqlNode(\"SELECT * FROM BLOG\"),new WhereSqlNode(new Configuration(),mixedContents(new IfSqlNode(mixedContents(new TextSqlNode(\" or ID = ? \")),\"true\"))))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertEquals(expected,boundSql.getSql())@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "BoundSql boundSql = source.getBoundSql(null)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "shouldTrimWHEREORWithLFForFirstCondition['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6->1 [style = bold, label=""];
+0->2 [style = solid, label="expected"];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+7->0 [style = bold, label=""];
+5->0 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+0->6 [style = bold, label=""];
+3->0 [style = bold, label=""];
+}

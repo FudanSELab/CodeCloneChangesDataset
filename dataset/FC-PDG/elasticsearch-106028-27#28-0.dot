@@ -1,0 +1,23 @@
+digraph {
+0 [style = filled, label = "assertThat(e.getMessage(),startsWith(\"Cannot replace existing handler for (/( for method: GET\"))@@@15@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testSetupRestHandlerContainsKnownBuiltin['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testSetupRestHandlerContainsKnownBuiltin['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "SettingsModule settings = new SettingsModule(Settings.EMPTY)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ActionModule actionModule = new ActionModule(settings.getSettings(),TestIndexNameExpressionResolver.newInstance(),settings.getIndexScopedSettings(),settings.getClusterSettings(),settings.getSettingsFilter(),null,emptyList(),null,null,usageService,null)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "UsageService usageService = new UsageService()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "actionModule.initRestHandlers(null)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ActionModule actionModule = new ActionModule(settings.getSettings(),new IndexNameExpressionResolver(new ThreadContext(Settings.EMPTY)),settings.getIndexScopedSettings(),settings.getClusterSettings(),settings.getSettingsFilter(),null,emptyList(),null,null,usageService,null)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "Exception e = expectThrows(,null)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->5 [style = bold, label=""];
+4->7 [style = solid, label="usageService"];
+1->7 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+4->7 [style = bold, label=""];
+8->3 [style = bold, label=""];
+4->1 [style = solid, label="usageService"];
+}

@@ -1,0 +1,28 @@
+digraph {
+5 [style = filled, label = "Assert.assertNotNull(\"Persons must not be null\",person)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Person expectedAncestor = personMapper.selectById(1)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testAncestorAfterQueryingParents['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "SqlSession sqlSession = sqlSessionFactory.openSession()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testAncestor['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "Assert.assertNotNull(\"Parent must not be null\",person.getParent())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "sqlSession.close()@@@11@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Assert.assertNotNull(\"Grandparent must not be null\",person.getParent().getParent())@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testAncestor['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "PersonMapper personMapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Person person = personMapper.selectById(3)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Assert.assertEquals(\"Ancestor must be John Smith sr.\",expectedAncestor,person.getAncestor())@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->5 [style = solid, label="person"];
+5->10 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->0 [style = solid, label="expectedAncestor"];
+10->9 [style = bold, label=""];
+8->4 [style = bold, label=""];
+7->4 [style = bold, label=""];
+9->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+6->7 [style = bold, label=""];
+0->1 [style = bold, label=""];
+11->7 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

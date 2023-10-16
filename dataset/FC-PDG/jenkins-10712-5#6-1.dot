@@ -1,0 +1,24 @@
+digraph {
+2 [style = filled, label = "assertEquals(FormValidation.Kind.OK,v.kind)@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(FormValidation.Kind.ERROR,v.kind)@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Jenkins jenkins = Jenkins.getInstance()@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Jenkins jenkins = Jenkins.get()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "testDoCheckViewName_GoodName['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "FormValidation v = jenkins.doCheckViewName(viewName)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String(( viewNames = new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@48131c@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testDoCheckViewName_NotGoodName['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testDoCheckViewName_GoodName['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8->1 [style = bold, label=""];
+5->1 [style = bold, label=""];
+6->4 [style = bold, label=""];
+1->2 [style = bold, label=""];
+1->8 [style = bold, label=""];
+7->4 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+2->8 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+4->5 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

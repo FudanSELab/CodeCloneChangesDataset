@@ -1,0 +1,27 @@
+digraph {
+5 [style = filled, label = "testTopNWithMultiValueDimFilter4['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "TopNQuery query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).filters(QueryRunnerTestHelper.placementishDimension,\"a\",\"b\").dimension(QueryRunnerTestHelper.placementishDimension).metric(QueryRunnerTestHelper.indexMetric).threshold(4).intervals(QueryRunnerTestHelper.firstToThird).aggregators(commonAggregators).postAggregators(Collections.singletonList(QueryRunnerTestHelper.addRowsIndexConstant)).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "TopNQuery query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).filters(QueryRunnerTestHelper.placementishDimension,\"preferred\").dimension(QueryRunnerTestHelper.placementishDimension).metric(QueryRunnerTestHelper.indexMetric).threshold(4).intervals(QueryRunnerTestHelper.firstToThird).aggregators(commonAggregators).postAggregators(Collections.singletonList(QueryRunnerTestHelper.addRowsIndexConstant)).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testTopNWithMultiValueDimFilter5['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final List<Result<TopNResultValue>> expectedResults = Collections.singletonList(new Result<>(DateTimes.of(\"2011-04-01T00:00:00.000Z\"),new TopNResultValue(Arrays.asList(ImmutableMap.of(\"placementish\",\"preferred\",\"rows\",4L,\"index\",514.868408203125D,\"addRowsIndexConstant\",519.868408203125D,\"uniques\",QueryRunnerTestHelper.UNIQUES_2),ImmutableMap.of(\"placementish\",\"a\",\"rows\",2L,\"index\",283.31103515625D,\"addRowsIndexConstant\",286.31103515625D,\"uniques\",QueryRunnerTestHelper.UNIQUES_1),ImmutableMap.of(\"placementish\",\"b\",\"rows\",2L,\"index\",231.557373046875D,\"addRowsIndexConstant\",234.557373046875D,\"uniques\",QueryRunnerTestHelper.UNIQUES_1)))))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "TopNQuery query = new TopNQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.allGran).filters(QueryRunnerTestHelper.placementishDimension,\"a\",\"b\").dimension(QueryRunnerTestHelper.placementishDimension).metric(QueryRunnerTestHelper.indexMetric).threshold(4).intervals(QueryRunnerTestHelper.firstToThird).aggregators(commonAggregators).postAggregators(QueryRunnerTestHelper.addRowsIndexConstant).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "assertExpectedResults(expectedResults,query)@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testTopNWithMultiValueDimFilter4['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final List<Result<TopNResultValue>> expectedResults = Collections.singletonList(new Result<TopNResultValue>(DateTimes.of(\"2011-04-01T00:00:00.000Z\"),new TopNResultValue(Arrays.asList(ImmutableMap.of(\"placementish\",\"preferred\",\"rows\",26L,\"index\",12459.361190795898D,\"addRowsIndexConstant\",12486.361190795898D,\"uniques\",QueryRunnerTestHelper.UNIQUES_9),ImmutableMap.of(\"placementish\",\"p\",\"rows\",6L,\"index\",5407.213653564453D,\"addRowsIndexConstant\",5414.213653564453D,\"uniques\",QueryRunnerTestHelper.UNIQUES_1),ImmutableMap.of(\"placementish\",\"m\",\"rows\",6L,\"index\",5320.717338562012D,\"addRowsIndexConstant\",5327.717338562012D,\"uniques\",QueryRunnerTestHelper.UNIQUES_1),ImmutableMap.of(\"placementish\",\"t\",\"rows\",4L,\"index\",422.3440856933594D,\"addRowsIndexConstant\",427.3440856933594D,\"uniques\",QueryRunnerTestHelper.UNIQUES_2)))))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->2 [style = solid, label="query"];
+0->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+7->2 [style = solid, label="expectedResults"];
+8->6 [style = bold, label=""];
+6->2 [style = solid, label="query"];
+0->4 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+3->2 [style = solid, label="expectedResults"];
+4->2 [style = solid, label="query"];
+3->7 [style = dashed, label="0"];
+7->2 [style = bold, label=""];
+5->4 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

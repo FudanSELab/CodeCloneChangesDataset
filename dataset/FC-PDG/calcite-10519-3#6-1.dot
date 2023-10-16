@@ -1,0 +1,13 @@
+digraph {
+1 [style = filled, label = "testPsDistinct['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Assume.assumeFalse(\"Skip: the 'ps' table does not work on Windows\",isWindows())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testGitCommits['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "sql(\"select distinct `user` from ps\").returns(new Function<ResultSet,Void>(){public Void apply(ResultSet r){try {assertThat(r.next(),is(true))assertThat(r.getString(1),notNullValue())assertThat(r.wasNull(),is(false))return null}catch (SQLException e) }})@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "sql(\"select count(*) from git_commits\").returns(new Function<ResultSet,Void>(){public Void apply(ResultSet r){try {assertThat(r.next(),is(true))assertThat(r.getString(1),notNullValue())assertThat(r.wasNull(),is(false))return null}catch (SQLException e) }})@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testPsDistinct['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3->0 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

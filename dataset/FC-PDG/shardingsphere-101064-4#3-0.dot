@@ -1,0 +1,26 @@
+digraph {
+6 [style = filled, label = "throw new InvalidResourceException(invalidDataSourceNames)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "validate['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "ProxyContext.getInstance().getContextManager().getMetaDataContexts().getPersistService().ifPresent(null)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "check(sqlStatement)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return new UpdateResponseHeader(sqlStatement)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "execute['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "execute['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "ProxyContext.getInstance().getContextManager().getMetaDataContexts().getPersistService().ifPresent(null)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "Collection<String> invalidDataSourceNames = dataSourceConfigs.entrySet().stream().filter(null).map(null).collect(Collectors.toList())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "final Map<String,DataSourceConfiguration> dataSourceConfigs@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "!invalidDataSourceNames.isEmpty()@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+4->1 [style = bold, label=""];
+8->6 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+7->10 [style = dotted, label="true"];
+8->6 [style = dotted, label="true"];
+9->8 [style = bold, label=""];
+9->6 [style = solid, label="invalidDataSourceNames"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

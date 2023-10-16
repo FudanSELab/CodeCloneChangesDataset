@@ -1,0 +1,31 @@
+digraph {
+9 [style = filled, label = "doWork['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "doWork['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "throw new IOException(String.format(Locale.ROOT,\"Invalid expression %s - found type %s for value, expecting a ConvexHull2D\",toExpression(constructingFactory),value.getClass().getSimpleName()))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "ConvexHull2D convexHull2D = (ConvexHull2D)value@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "throw new IOException(String.format(Locale.ROOT,\"Invalid expression %s - found type %s for value, expecting a clustering result\",toExpression(constructingFactory),value.getClass().getSimpleName()))@@@4@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "doWork['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "!(value instanceof ConvexHull2D)@@@3@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Object value@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "return convexHull2D.createRegion().getBoundarySize()@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "return convexHull2D.createRegion().getSize()@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+5->2 [style = dotted, label="false"];
+5->3 [style = bold, label=""];
+5->7 [style = bold, label=""];
+4->8 [style = bold, label=""];
+6->5 [style = bold, label=""];
+9->5 [style = bold, label=""];
+1->0 [style = dotted, label="true"];
+6->0 [style = dotted, label="true"];
+9->0 [style = dotted, label="true"];
+4->2 [style = bold, label=""];
+5->3 [style = dotted, label="true"];
+5->8 [style = dotted, label="false"];
+5->7 [style = dotted, label="true"];
+3->7 [style = dashed, label="0"];
+2->8 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+0->4 [style = solid, label="value"];
+5->4 [style = dotted, label="false"];
+}

@@ -1,0 +1,29 @@
+digraph {
+7 [style = filled, label = "customIndexRejectsExpressionSyntax['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "createIndex(String.format(\"CREATE CUSTOM INDEX %s ON %%s(c) USING '%s'\",indexName,.getName()))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertInvalidThrowMessage(Server.CURRENT_VERSION,\"None shall pass\",,String.format(\"SELECT * FROM %%s WHERE expr(%s, 'foo bar baz')\",indexName))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "createTable(\"CREATE TABLE %s (a int, b int, c int, d int, PRIMARY KEY (a, b))\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertInvalidThrowMessage(Optional.of(ProtocolVersion.CURRENT),String.format(IndexRestrictions.CUSTOM_EXPRESSION_NOT_SUPPORTED,indexName),,String.format(\"SELECT * FROM %%s WHERE expr(%s, 'foo bar baz')\",indexName))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "String indexName = currentTable() + \"_custom_index\"@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "customIndexDoesntSupportCustomExpressions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "customIndexDoesntSupportCustomExpressions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertInvalidThrowMessage(Server.CURRENT_VERSION,String.format(IndexRestrictions.CUSTOM_EXPRESSION_NOT_SUPPORTED,indexName),,String.format(\"SELECT * FROM %%s WHERE expr(%s, 'foo bar baz')\",indexName))@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1 [style = filled, label = "createIndex(String.format(\"CREATE CUSTOM INDEX %s ON %%s(c) USING '%s'\",indexName,.getName()))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+0->9 [style = solid, label="indexName"];
+0->8 [style = solid, label="indexName"];
+1->2 [style = bold, label=""];
+0->1 [style = solid, label="indexName"];
+1->6 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+0->6 [style = solid, label="indexName"];
+0->2 [style = solid, label="indexName"];
+2->9 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+7->3 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->8 [style = bold, label=""];
+8->9 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

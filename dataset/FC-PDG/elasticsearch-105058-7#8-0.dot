@@ -1,0 +1,15 @@
+digraph {
+3 [style = filled, label = "testIntervalYear['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "testNanosIntervalSecond['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testSearchCase(LongPoint.newRangeQuery(SEARCHABLE_DATE,asLong(\"2015-01-01\"),asLong(\"2017-12-31\")),DATASET,null,null,false)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "testIntervalYear['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testBothCases(LongPoint.newRangeQuery(SEARCHABLE_DATE,asLong(\"2015-01-01\"),asLong(\"2017-12-31\")),DATASET,null,null,false)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "testBothCases(new MatchAllDocsQuery(),Arrays.asList(\"2017-02-01T00:00:05.015298384Z\",\"2017-02-01T00:00:11.299954583Z\",\"2017-02-01T00:00:11.074986434Z\",\"2017-02-01T00:00:37.688314602Z\",\"2017-02-01T00:00:37.210328172Z\",\"2017-02-01T00:00:37.380889483Z\"),null,null,true)@@@17@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testBothCases(new MatchAllDocsQuery(),Arrays.asList(\"2017-02-01T00:00:05.015298384Z\",\"2017-02-01T00:00:11.299954583Z\",\"2017-02-01T00:00:11.074986434Z\",\"2017-02-01T00:00:37.688314602Z\",\"2017-02-01T00:00:37.210328172Z\",\"2017-02-01T00:00:37.380889483Z\"),null,null,true)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->4 [style = dashed, label="0"];
+1->2 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+4->6 [style = bold, label=""];
+0->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+}

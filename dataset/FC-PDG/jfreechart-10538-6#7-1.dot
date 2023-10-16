@@ -1,0 +1,23 @@
+digraph {
+4 [style = filled, label = "createWaterfallChart['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Number(((( data = new Integer((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1baa32@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "createChart['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "return ChartFactory.createStackedAreaChart(\"Stacked Area Chart\",\"Domain\",\"Range\",dataset,PlotOrientation.HORIZONTAL,true,true,true)@@@13@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "return ChartFactory.createWaterfallChart(\"Waterfall Chart\",\"Domain\",\"Range\",dataset,PlotOrientation.HORIZONTAL,true,true,true)@@@13@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "CategoryDataset dataset = DatasetUtils.createCategoryDataset(\"S\",\"C\",data)@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return ChartFactory.createWaterfallChart(\"Waterfall Chart\",\"Domain\",\"Range\",dataset,PlotOrientation.HORIZONTAL,true,true,true)@@@13@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "createWaterfallChart['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3->5 [style = dashed, label="0"];
+1->2 [style = solid, label="data"];
+6->1 [style = bold, label=""];
+2->7 [style = solid, label="dataset"];
+1->2 [style = bold, label=""];
+2->5 [style = solid, label="dataset"];
+4->1 [style = bold, label=""];
+2->7 [style = bold, label=""];
+2->3 [style = solid, label="dataset"];
+3->7 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

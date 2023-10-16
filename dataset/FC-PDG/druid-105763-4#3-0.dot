@@ -1,0 +1,29 @@
+digraph {
+9 [style = filled, label = "Assert.assertEquals(44,td1.estimateBytesInMemory())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Assert.assertEquals(206,td1.estimateBytesInMemory())@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "IncrementalIndex.IncrementalIndexRowResult tndResult = index.toIncrementalIndexRow(toMapRow(time,\"billy\",\"A\",\"joe\",\"B\"))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testIncrementalIndexRowSizeComplex['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Assert.assertEquals(74,td1.estimateBytesInMemory())@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "long time = System.currentTimeMillis()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "IncrementalIndex index = new IncrementalIndex.Builder().setSimpleTestingIndexSchema(new CountAggregatorFactory(\"cnt\")).setMaxRowCount(10000).setMaxBytesInMemory(1000).buildOnheap()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "IncrementalIndexRow td1 = tndResult.getIncrementalIndexRow()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testIncrementalIndexRowSizeBasic['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "IncrementalIndex.IncrementalIndexRowResult tndResult = index.toIncrementalIndexRow(toMapRow(time + 1,\"billy\",\"nelson\",\"joe\",Arrays.asList(\"123\",\"abcdef\")))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testIncrementalIndexRowSizeComplex['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4->10 [style = bold, label=""];
+5->7 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+0->9 [style = dashed, label="0"];
+10->5 [style = bold, label=""];
+4->3 [style = solid, label="time"];
+5->0 [style = bold, label=""];
+5->9 [style = bold, label=""];
+8->2 [style = bold, label=""];
+4->10 [style = solid, label="time"];
+2->4 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+}

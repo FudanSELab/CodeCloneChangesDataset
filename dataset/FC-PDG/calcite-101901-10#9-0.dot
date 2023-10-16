@@ -1,0 +1,28 @@
+digraph {
+5 [style = filled, label = "RelOptCluster cluster@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "RelOptCluster cluster@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "List<RelHint> hints@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return new RelOptTable.ToRelContext(){public RelOptCluster getCluster(){return cluster}public List<RelHint> getTableHints(){return hints}public RelRoot expandView(RelDataType rowType,String queryString,List<String> schemaPath,List<String> viewPath){return viewExpander.expandView(rowType,queryString,schemaPath,viewPath)}}@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "simpleContext['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "List<RelHint> hints@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "toRelContext['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "RelOptTable.ViewExpander viewExpander@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "simpleContext['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "RelOptCluster cluster@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3->4 [style = dotted, label="true"];
+2->5 [style = dashed, label="0"];
+3->5 [style = dotted, label="true"];
+0->2 [style = dotted, label="true"];
+9->7 [style = dotted, label="true"];
+8->1 [style = solid, label="hints"];
+5->1 [style = solid, label="cluster"];
+3->1 [style = bold, label=""];
+9->6 [style = dotted, label="true"];
+9->1 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+7->1 [style = solid, label="cluster"];
+4->1 [style = solid, label="hints"];
+9->8 [style = dotted, label="true"];
+2->1 [style = solid, label="cluster"];
+}

@@ -1,0 +1,37 @@
+digraph {
+3 [style = filled, label = "_numDbs = 1@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "Thread.sleep(1000L)@@@15@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "_gSetupTool.addCluster(CLUSTER_NAME,true)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+16 [style = filled, label = "beforeClass['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Thread.sleep(1000)@@@15@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "_controller = new ClusterControllerManager(ZK_ADDR,CLUSTER_NAME,CONTROLLER_PREFIX)@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "_participants = new MockParticipantManager((((@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "createManagers()@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "_numReplicas = 1@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "setupParticipants()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "startParticipants()@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "beforeClass['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "_numNodes = 2@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "beforeClass['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "setupDBs()@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "_numPartitions = 2@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "_controller.syncStart()@@@13@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->9 [style = bold, label=""];
+12->13 [style = bold, label=""];
+6->4 [style = bold, label=""];
+10->3 [style = bold, label=""];
+4->8 [style = bold, label=""];
+5->1 [style = bold, label=""];
+11->12 [style = bold, label=""];
+9->10 [style = bold, label=""];
+3->2 [style = bold, label=""];
+16->1 [style = bold, label=""];
+0->6 [style = bold, label=""];
+1->7 [style = bold, label=""];
+12->0 [style = bold, label=""];
+2->11 [style = bold, label=""];
+14->1 [style = bold, label=""];
+8->15 [style = dashed, label="0"];
+13->0 [style = bold, label=""];
+4->15 [style = bold, label=""];
+}

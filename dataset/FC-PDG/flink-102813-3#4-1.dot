@@ -1,0 +1,23 @@
+digraph {
+6 [style = filled, label = "testAggregateWithRichFunctionFails['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "source.windowAll(SlidingEventTimeWindows.of(Time.of(1,TimeUnit.SECONDS),Time.of(100,TimeUnit.MILLISECONDS))).aggregate(new DummyRichAggregationFunction<Tuple2<String,Integer>>())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "DataStream<Tuple2<String,Integer>> source = env.fromElements(Tuple2.of(\"hello\",1),Tuple2.of(\"hello\",2))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "source.keyBy(0).window(SlidingEventTimeWindows.of(Time.of(1,TimeUnit.SECONDS),Time.of(100,TimeUnit.MILLISECONDS))).reduce(new RichReduceFunction<Tuple2<String,Integer>>(){@Override public Tuple2<String,Integer> reduce(Tuple2<String,Integer> value1,Tuple2<String,Integer> value2){return null}})@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testReduceWithRichReducerFails['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "env.setStreamTimeCharacteristic(TimeCharacteristic.ProcessingTime)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "fail(\"exception was not thrown\")@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "fail(\"exception was not thrown\")@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testAggregateWithRichFunctionFails['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9->5 [style = bold, label=""];
+5->1 [style = bold, label=""];
+6->5 [style = bold, label=""];
+1->4 [style = bold, label=""];
+3->5 [style = bold, label=""];
+1->0 [style = bold, label=""];
+4->2 [style = bold, label=""];
+7->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+0->7 [style = bold, label=""];
+}

@@ -1,0 +1,30 @@
+digraph {
+3 [style = filled, label = "entry.setField(\"issn\",\"0123-4567\")@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "BibEntry entry = new BibEntry()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "cleanupISSNReturnsCorrectISSN['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "cleanupISSNReturnsCorrectISSN['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "assertEquals(Optional.of(\"0123-4567\"),entry.getField(StandardField.ISSN))@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "assertEquals(Optional.of(\"0123-4567\"),entry.getField(\"issn\"))@@@7@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "CleanupPreset preset = new CleanupPreset(CleanupPreset.CleanupStep.CLEAN_UP_ISSN)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "worker.cleanup(preset,entry)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "entry.setField(StandardField.ISSN,\"0123-4567\")@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "cleanupISSNAddsMissingDash['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "entry.setField(\"issn\",\"01234567\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2->1 [style = solid, label="entry"];
+6->5 [style = bold, label=""];
+1->4 [style = bold, label=""];
+5->2 [style = bold, label=""];
+7->1 [style = bold, label=""];
+2->7 [style = bold, label=""];
+1->8 [style = bold, label=""];
+2->9 [style = bold, label=""];
+9->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+10->5 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+3->9 [style = dashed, label="0"];
+3->7 [style = dashed, label="0"];
+5->1 [style = solid, label="preset"];
+2->3 [style = bold, label=""];
+0->5 [style = bold, label=""];
+}

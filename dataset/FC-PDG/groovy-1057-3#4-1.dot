@@ -1,0 +1,11 @@
+digraph {
+0 [style = filled, label = "return new NodeIterator(this.parent.nodeIterator()){@Override protected Object getNextNode(final Iterator iter){while (iter.hasNext()) {final Object node = iter.next()if (closureYieldsTrueForNode(new NodeChild((Node)node,this.parent,this.namespaceTagHints))) {return node}}return null}}@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return new NodeIterator(this.parent.iterator()){protected Object getNextNode(final Iterator iter){while (iter.hasNext()) {final Object node = iter.next()if (DefaultTypeTransformation.castToBoolean(this.closure.call(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1616d89))) {return node}}return null}}@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "nodeIterator['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "nodeIterator['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "nodeIterator['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2->0 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+4->3 [style = bold, label=""];
+}

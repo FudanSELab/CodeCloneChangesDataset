@@ -1,0 +1,30 @@
+digraph {
+2 [style = filled, label = "IntSet ignoreShards@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "UnassignedInfo unassignedInfo@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "initializeAsRestore['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "SnapshotRecoverySource recoverySource@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "boolean asNew@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "IntSet ignoreShards@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "boolean asNew@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "initializeEmpty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "SnapshotRecoverySource recoverySource@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "UnassignedInfo unassignedInfo@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "initializeAsRestore['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "IndexMetaData indexMetaData@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "IndexMetaData indexMetaData@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "IndexMetadata indexMetadata@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "UnassignedInfo unassignedInfo@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8->11 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+12->14 [style = dotted, label="true"];
+12->13 [style = dotted, label="true"];
+8->9 [style = dotted, label="true"];
+5->0 [style = dotted, label="true"];
+8->6 [style = dotted, label="true"];
+4->11 [style = dashed, label="0"];
+5->3 [style = dotted, label="true"];
+8->10 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+5->1 [style = dotted, label="true"];
+5->2 [style = dotted, label="true"];
+}

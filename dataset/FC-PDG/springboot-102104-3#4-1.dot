@@ -1,0 +1,35 @@
+digraph {
+10 [style = filled, label = "StandardEnvironment convertedEnvironment = this.environmentConverter.convertEnvironmentIfNecessary(standardEnvironment,)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Set<String> names = new HashSet<>()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "servletPropertySourcesAreNotCopiedOverIfNotWebEnvironment['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "assertThat(names).contains(StandardServletEnvironment.SERVLET_CONTEXT_PROPERTY_SOURCE_NAME,StandardServletEnvironment.SERVLET_CONFIG_PROPERTY_SOURCE_NAME)@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "StandardEnvironment convertedEnvironment = this.environmentConverter.convertEnvironmentIfNecessary(standardServletEnvironment,)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(names).doesNotContain(StandardServletEnvironment.SERVLET_CONTEXT_PROPERTY_SOURCE_NAME,StandardServletEnvironment.SERVLET_CONFIG_PROPERTY_SOURCE_NAME,StandardServletEnvironment.JNDI_PROPERTY_SOURCE_NAME)@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "StandardServletEnvironment standardServletEnvironment = new StandardServletEnvironment()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "servletPropertySourcesArePresentWhenTypeToConvertIsWeb['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "servletPropertySourcesAreNotCopiedOverIfNotWebEnvironment['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "StandardEnvironment standardEnvironment = new StandardEnvironment()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(convertedEnvironment).isNotSameAs(standardServletEnvironment)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThat(convertedEnvironment).isNotSameAs(standardEnvironment)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "names.add(propertySource.getName())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->1 [style = solid, label="standardServletEnvironment"];
+4->9 [style = bold, label=""];
+3->0 [style = bold, label=""];
+11->8 [style = solid, label="standardEnvironment"];
+1->2 [style = bold, label=""];
+7->0 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+1->10 [style = dashed, label="0"];
+10->8 [style = bold, label=""];
+8->5 [style = bold, label=""];
+0->2 [style = solid, label="standardServletEnvironment"];
+4->6 [style = bold, label=""];
+11->10 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+11->10 [style = solid, label="standardEnvironment"];
+2->5 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+12->11 [style = bold, label=""];
+}

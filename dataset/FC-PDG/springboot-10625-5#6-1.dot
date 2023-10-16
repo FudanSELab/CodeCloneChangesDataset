@@ -1,0 +1,38 @@
+digraph {
+10 [style = filled, label = "dependency.put(\"classifier\",\"sources\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "Map<String,Object> dependency = createDependency(\"org.springframework\",\"spring-jdbc\",\"3.2.4.RELEASE\",false)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "URL(( urls = this.groovyClassLoader.getURLs()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(urls(0(.toExternalForm().endsWith(\"-sources.jar\")).isTrue()@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertThat(urls).hasSize(1)@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "dependency.put(\"type\",\"pom\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "createGrapeEngine().grab(args,dependency)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "pomDependencyResolutionViaType['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "assertThat(urls(0(.toExternalForm().endsWith(\".pom\")).isTrue()@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(urls.length).isEqualTo(1)@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Map<String,Object> dependency = createDependency(\"org.springframework\",\"spring-framework-bom\",\"4.0.5.RELEASE\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Map<String,Object> args = new HashMap<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "pomDependencyResolutionViaType['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "resolutionWithClassifier['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13->10 [style = bold, label=""];
+6->3 [style = bold, label=""];
+0->9 [style = bold, label=""];
+0->6 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+1->7 [style = solid, label="args"];
+7->0 [style = bold, label=""];
+13->7 [style = solid, label="dependency"];
+12->1 [style = bold, label=""];
+10->7 [style = bold, label=""];
+1->13 [style = bold, label=""];
+8->1 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+2->13 [style = dashed, label="0"];
+6->11 [style = bold, label=""];
+2->7 [style = solid, label="dependency"];
+9->3 [style = bold, label=""];
+5->7 [style = bold, label=""];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+2->5 [style = bold, label=""];
+}

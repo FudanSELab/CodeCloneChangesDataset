@@ -1,0 +1,34 @@
+digraph {
+6 [style = filled, label = "Object table@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+15 [style = filled, label = "ExasolTableUniqueKey constraint@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "DB2TableUniqueKey primaryKey@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Object container@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "configureObject['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return new UITask<DB2TableUniqueKey>(){@Override protected DB2TableUniqueKey runTask(){EditConstraintPage editPage = new EditConstraintPage(DB2Messages.edit_db2_constraint_manager_dialog_title,constraint,CONS_TYPES)if (!editPage.edit()) {return null}constraint.setConstraintType(editPage.getConstraintType())constraint.setName(editPage.getConstraintName())List<DB2TableKeyColumn> columns = new ArrayList<>(editPage.getSelectedAttributes().size())DB2TableKeyColumn columnint colIndex = 1for (DBSEntityAttribute tableColumn : editPage.getSelectedAttributes()){column = new DB2TableKeyColumn(constraint,(DB2TableColumn)tableColumn,colIndex++)columns.add(column)}constraint.setColumns(columns)return constraint}}.execute()@@@4@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "configureObject['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "configureObject['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "return new UITask<DB2TableUniqueKey>(){@Override protected DB2TableUniqueKey runTask(){EditConstraintPage editPage = new EditConstraintPage(DB2Messages.edit_db2_constraint_manager_dialog_title,constraint,CONS_TYPES)if (!editPage.edit()) {return null}constraint.setConstraintType(editPage.getConstraintType())constraint.setName(editPage.getConstraintName())List<DB2TableKeyColumn> columns = new ArrayList<>(editPage.getSelectedAttributes().size())DB2TableKeyColumn columnint colIndex = 1for (DBSEntityAttribute tableColumn : editPage.getSelectedAttributes()){column = new DB2TableKeyColumn(constraint,(DB2TableColumn)tableColumn,colIndex++)columns.add(column)}constraint.setColumns(columns)return constraint}}.execute()@@@3@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "DB2TableUniqueKey constraint = new DB2TableUniqueKey((DB2Table)table,DBSEntityConstraintType.UNIQUE_KEY)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "DB2TableUniqueKey constraint@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "return new UITask<ExasolTableUniqueKey>(){@Override protected ExasolTableUniqueKey runTask(){EditConstraintPage editPage = new EditConstraintPage(ExasolMessages.edit_exasol_constraint_manager_dialog_title,constraint,new DBSEntityConstraintType((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@df3db)if (!editPage.edit()) {return null}constraint.setConstraintType(editPage.getConstraintType())constraint.setEnabled(editPage.isEnableConstraint())constraint.setName(editPage.getConstraintName())List<ExasolTableKeyColumn> constColumns = new ArrayList<ExasolTableKeyColumn>()int ordinalPosition = 0for (DBSEntityAttribute tableColumn : editPage.getSelectedAttributes()){ExasolTableKeyColumn coltry {col = new ExasolTableKeyColumn(constraint,constraint.getTable().getAttribute(monitor,tableColumn.getName()),++ordinalPosition)}catch (DBException e) constColumns.add(col)}constraint.setColumns(constColumns)return constraint}}.execute()@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "Object table@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+3->4 [style = dotted, label="true"];
+14->11 [style = dotted, label="true"];
+14->15 [style = dotted, label="true"];
+4->9 [style = dashed, label="0"];
+10->6 [style = dotted, label="true"];
+14->13 [style = bold, label=""];
+10->8 [style = bold, label=""];
+3->1 [style = bold, label=""];
+14->12 [style = dotted, label="true"];
+10->9 [style = dotted, label="true"];
+4->15 [style = dashed, label="0"];
+10->7 [style = dotted, label="true"];
+2->1 [style = solid, label="table"];
+3->2 [style = dotted, label="true"];
+3->0 [style = dotted, label="true"];
+}

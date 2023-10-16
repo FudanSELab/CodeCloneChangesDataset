@@ -1,0 +1,19 @@
+digraph {
+7 [style = filled, label = "final KeyValueIterator<Integer,String> iterator = store.reverseRange(-1,1)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final KeyValueIterator<Integer,String> iterator = store.range(-1,1)@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "shouldNotThrowInvalidRangeExceptionWithNegativeFromKey['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertFalse(iterator.hasNext())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(messages,hasItem(\"Returning empty iterator for fetch with invalid key range: from > to.\" + \" This may be due to range arguments set in the wrong order, \" + \"or serdes that don't preserve ordering when lexicographically comparing the serialized bytes.\" + \" Note that the built-in numerical serdes do not follow this for negative numbers\"))@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "shouldNotThrowInvalidRangeExceptionWithNegativeFromKey['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "final List<String> messages = appender.getMessages()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "shouldNotThrowInvalidReverseRangeExceptionWithNegativeFromKey['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+3->1 [style = bold, label=""];
+3->1 [style = solid, label="messages"];
+0->7 [style = dashed, label="0"];
+7->2 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

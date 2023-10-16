@@ -1,0 +1,32 @@
+digraph {
+2 [style = filled, label = "Assert.assertNotNull(\"Could not find wordcount jar\",exampleJarLocation)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final long networkBuffersMB = TaskManagerServices.calculateNetworkBufferMemory((taskManagerMemoryMB - ResourceManagerOptions.CONTAINERIZED_HEAP_CUTOFF_MIN.defaultValue()) << 20,new Configuration()) >> 20@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "perJobYarnCluster['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "perJobYarnClusterOffHeap['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "final long offHeapMemory = taskManagerMemoryMB - ResourceManagerOptions.CONTAINERIZED_HEAP_CUTOFF_MIN.defaultValue() - networkBuffersMB - 100@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final long taskManagerMemoryMB = 1024@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "addTestAppender(,Level.INFO)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "runWithArgs(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1af9d46,\"Job execution complete\",new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1af9d6c,RunTypes.CLI_FRONTEND,0,true)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "perJobYarnCluster['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "LOG.info(\"Starting perJobYarnCluster()\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "File exampleJarLocation = new File(\"target/programs/BatchWordCount.jar\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "LOG.info(\"Finished perJobYarnCluster()\")@@@15@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+6->4 [style = bold, label=""];
+8->10 [style = bold, label=""];
+5->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+11->3 [style = solid, label="offHeapMemory"];
+7->4 [style = bold, label=""];
+5->2 [style = solid, label="exampleJarLocation"];
+9->4 [style = bold, label=""];
+8->10 [style = solid, label="taskManagerMemoryMB"];
+11->3 [style = bold, label=""];
+8->11 [style = solid, label="taskManagerMemoryMB"];
+10->11 [style = solid, label="networkBuffersMB"];
+3->0 [style = bold, label=""];
+2->3 [style = bold, label=""];
+2->8 [style = bold, label=""];
+10->11 [style = bold, label=""];
+8->3 [style = solid, label="taskManagerMemoryMB"];
+}

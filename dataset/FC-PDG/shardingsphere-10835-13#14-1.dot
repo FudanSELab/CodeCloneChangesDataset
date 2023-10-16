@@ -1,0 +1,26 @@
+digraph {
+3 [style = filled, label = "Field metaDataContexts = ProxyContext.getInstance().getClass().getDeclaredField(\"metaDataContexts\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "unicastDatabaseBackendHandler = new UnicastDatabaseBackendHandler(mock(),EXECUTE_SQL,backendConnection)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "setUp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "metaDataContexts.setAccessible(true)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "setUp['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "mockDatabaseCommunicationEngine(new UpdateResponseHeader(mock()))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "setUp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "metaDataContexts.set(ProxyContext.getInstance(),new StandardMetaDataContexts(getMetaDataMap(),mock(),mock(),new ConfigurationProperties(new Properties()),mock()))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "when(backendConnection.getSchemaName()).thenReturn(String.format(SCHEMA_PATTERN,0))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "setBackendHandlerFactory(unicastDatabaseBackendHandler)@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "metaDataContexts.set(ProxyContext.getInstance(),new StandardMetaDataContexts(getMetaDataMap(),mock(),mock(),new ConfigurationProperties(new Properties())))@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+7->9 [style = bold, label=""];
+6->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+2->10 [style = bold, label=""];
+7->9 [style = solid, label="unicastDatabaseBackendHandler"];
+10->7 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

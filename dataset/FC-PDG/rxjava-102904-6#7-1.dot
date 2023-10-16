@@ -1,0 +1,24 @@
+digraph {
+3 [style = filled, label = "System.out.println(\"Results: \" + results)@@@41@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(4,results.size())@@@42@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "groupsWithNestedSubscribeOn['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final ArrayList<String> results = new ArrayList<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "final ArrayList<String> results = new ArrayList<String>()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "groupsWithNestedSubscribeOn['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Observable.unsafeCreate(new ObservableSource<Integer>(){@Override public void subscribe(Observer<? super Integer> sub){sub.onSubscribe(Disposable.empty())sub.onNext(1)sub.onNext(2)sub.onNext(1)sub.onNext(2)sub.onComplete()}}).groupBy(new Function<Integer,Integer>(){@Override public Integer apply(Integer t){return t}}).flatMap(new Function<GroupedObservable<Integer,Integer>,Observable<String>>(){@Override public Observable<String> apply(final GroupedObservable<Integer,Integer> group){return group.subscribeOn(Schedulers.newThread()).map(new Function<Integer,String>(){@Override public String apply(Integer t1){System.out.println(\"Received: \" + t1 + \" on group : \" + group.getKey())return \"first groups: \" + t1}})}}).doOnEach(new Consumer<Notification<String>>(){@Override public void accept(Notification<String> t1){System.out.println(\"notification => \" + t1)}}).blockingForEach(new Consumer<String>(){@Override public void accept(String s){results.add(s)}})@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "groupsWithNestedSubscribeOn['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Flowable.unsafeCreate(new Publisher<Integer>(){@Override public void subscribe(Subscriber<? super Integer> sub){sub.onSubscribe(new BooleanSubscription())sub.onNext(1)sub.onNext(2)sub.onNext(1)sub.onNext(2)sub.onComplete()}}).groupBy(new Function<Integer,Integer>(){@Override public Integer apply(Integer t){return t}}).flatMap(new Function<GroupedFlowable<Integer,Integer>,Flowable<String>>(){@Override public Flowable<String> apply(final GroupedFlowable<Integer,Integer> group){return group.subscribeOn(Schedulers.newThread()).map(new Function<Integer,String>(){@Override public String apply(Integer t1){System.out.println(\"Received: \" + t1 + \" on group : \" + group.getKey())return \"first groups: \" + t1}})}}).doOnEach(new Consumer<Notification<String>>(){@Override public void accept(Notification<String> t1){System.out.println(\"notification => \" + t1)}}).blockingForEach(new Consumer<String>(){@Override public void accept(String s){results.add(s)}})@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+6->0 [style = bold, label=""];
+2->3 [style = solid, label="results"];
+4->2 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->1 [style = bold, label=""];
+6->3 [style = solid, label="results"];
+7->2 [style = bold, label=""];
+2->8 [style = bold, label=""];
+8->3 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

@@ -1,0 +1,29 @@
+digraph {
+2 [style = filled, label = "final List<Object> list = new ArrayList<Object>()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "boundedBlockingSubscribeConsumerConsumerError['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "assertEquals(Arrays.asList(1,2,3,4,5,ex),list)@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "boundedBlockingSubscribeConsumerConsumerError['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Flowable.range(1,5).concatWith(Flowable.error(ex)).subscribeOn(Schedulers.computation()).blockingSubscribe(cons,cons,128)@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Consumer<Object> cons = new Consumer<Object>(){@Override public void accept(Object v){list.add(v)}}@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "blockingSubscribeConsumerConsumerError['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "TestException ex = new TestException()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final List<Object> list = new ArrayList<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "Observable.range(1,5).concatWith(Observable.error(ex)).subscribeOn(Schedulers.computation()).blockingSubscribe(cons,cons)@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9->5 [style = bold, label=""];
+4->9 [style = bold, label=""];
+3->5 [style = solid, label="ex"];
+1->2 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+8->2 [style = bold, label=""];
+4->0 [style = solid, label="cons"];
+2->7 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+7->5 [style = solid, label="list"];
+4->9 [style = solid, label="cons"];
+7->3 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+2->5 [style = solid, label="list"];
+}

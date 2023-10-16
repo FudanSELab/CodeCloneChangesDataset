@@ -1,0 +1,23 @@
+digraph {
+6 [style = filled, label = "final TestSubscriber<Object> ts = new TestSubscriber<Object>()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "to.assertEmpty()@@@18@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ts.assertEmpty()@@@18@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Observable.just(1).flatMapMaybe(new Function<Integer,MaybeSource<Object>>(){@Override public MaybeSource<Object> apply(Integer v){return new Maybe<Object>(){@Override protected void subscribeActual(MaybeObserver<? super Object> observer){observer.onSubscribe(Disposable.empty())assertFalse(((Disposable)observer).isDisposed())to.dispose()assertTrue(((Disposable)observer).isDisposed())}}}}).subscribe(to)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "disposeInner['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "disposeInner['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "Flowable.just(1).flatMapMaybe(new Function<Integer,MaybeSource<Object>>(){@Override public MaybeSource<Object> apply(Integer v){return new Maybe<Object>(){@Override protected void subscribeActual(MaybeObserver<? super Object> observer){observer.onSubscribe(Disposables.empty())assertFalse(((Disposable)observer).isDisposed())ts.cancel()assertTrue(((Disposable)observer).isDisposed())}}}}).subscribe(ts)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "disposeInner['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final TestObserver<Object> to = new TestObserver<Object>()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->2 [style = solid, label="to"];
+1->3 [style = bold, label=""];
+8->7 [style = bold, label=""];
+4->3 [style = bold, label=""];
+2->0 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+2->8 [style = dashed, label="0"];
+6->8 [style = bold, label=""];
+6->8 [style = solid, label="ts"];
+}

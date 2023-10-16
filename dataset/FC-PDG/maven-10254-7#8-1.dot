@@ -1,0 +1,29 @@
+digraph {
+2 [style = filled, label = "return artifactRepositoryFactory.createArtifactRepository(\"test\",\"file://\" + f.getPath(),repoLayout,null,null)@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "String path = \"target/test-repositories/\" + component() + \"/remote-repository\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "f.createNewFile()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "badLocalRepository['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "String path = \"target/test-repositories/\" + component() + \"/bad-local-repository\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "badLocalRepository['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "File f = new File(getBasedir(),path)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "ArtifactRepositoryLayout repoLayout = (ArtifactRepositoryLayout)lookup(ArtifactRepositoryLayout.ROLE,\"default\")@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "remoteRepository['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "return artifactRepositoryFactory.createArtifactRepository(\"test\",\"file://\" + f.getPath(),repoLayout,new ArtifactRepositoryPolicy(),new ArtifactRepositoryPolicy())@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->2 [style = bold, label=""];
+7->4 [style = solid, label="path"];
+0->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+5->9 [style = bold, label=""];
+5->9 [style = solid, label="repoLayout"];
+3->7 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+5->2 [style = solid, label="repoLayout"];
+4->5 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+8->7 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+3->4 [style = solid, label="path"];
+}

@@ -1,0 +1,27 @@
+digraph {
+9 [style = filled, label = "List<String> timestamps = Arrays.asList(\"2017-02-01T00:00:05.015Z\",\"2017-02-01T00:00:11.299Z\",\"2017-02-01T00:00:11.074Z\",\"2017-02-01T00:00:13.688Z\",\"2017-02-01T00:00:21.380Z\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testMinDocCount['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testSearchCase(new MatchAllDocsQuery(),Arrays.asList(\"2017-02-01T09:02:35.000Z\",\"2017-02-01T09:02:59.000Z\",\"2017-02-01T09:15:37.000Z\",\"2017-02-01T09:16:04.000Z\",\"2017-02-01T09:16:42.000Z\"),null,null,false)@@@17@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testSearchCase(new MatchAllDocsQuery(),Arrays.asList(\"2017-02-01T09:02:35.000Z\",\"2017-02-01T09:02:59.000Z\",\"2017-02-01T09:15:37.000Z\",\"2017-02-01T09:16:04.000Z\",\"2017-02-01T09:16:42.000Z\"),null,null,false)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "testBothCases(new MatchAllDocsQuery(),Arrays.asList(\"2017-02-01T09:02:35.000Z\",\"2017-02-01T09:02:59.000Z\",\"2017-02-01T09:15:37.000Z\",\"2017-02-01T09:16:04.000Z\",\"2017-02-01T09:16:42.000Z\"),null,null,false)@@@17@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+6 [style = filled, label = "Query query = LongPoint.newRangeQuery(SEARCHABLE_DATE,asLong(\"2017-02-01T00:00:00.000Z\"),asLong(\"2017-02-01T00:00:30.000Z\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testIntervalMinute['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testSearchAndReduceCase(query,timestamps,null,null,false)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testBothCases(new MatchAllDocsQuery(),Arrays.asList(\"2017-02-01T09:02:35.000Z\",\"2017-02-01T09:02:59.000Z\",\"2017-02-01T09:15:37.000Z\",\"2017-02-01T09:16:04.000Z\",\"2017-02-01T09:16:42.000Z\"),null,null,false)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "testSearchAndReduceCase(query,timestamps,null,null,false)@@@22@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testIntervalMinute['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->4 [style = dashed, label="0"];
+2->5 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+6->9 [style = bold, label=""];
+9->7 [style = solid, label="timestamps"];
+9->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+6->8 [style = solid, label="query"];
+9->8 [style = solid, label="timestamps"];
+10->6 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+6->7 [style = solid, label="query"];
+}

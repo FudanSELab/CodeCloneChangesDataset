@@ -1,0 +1,13 @@
+digraph {
+4 [style = filled, label = "testQuery(\"SELECT COUNT(*)\" + \"FROM druid.foo\" + \"WHERE NULLIF(dim2, 'a') = null\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).filters(expressionFilter(\"case_searched((\"dim2\" == 'a'),\" + (NullHandling.replaceWithDefault()? \"1\": \"0\") + \",(\"dim2\" == null))\")).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),NullHandling.replaceWithDefault()? ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@aebff2): ImmutableList.of())@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testNullDoubleFilter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testNullDoubleFilter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "skipVectorize()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "testQuery(\"SELECT COUNT(*)\" + \"FROM druid.numfoo\" + \"WHERE d1 IS NULL\",useDefault? ImmutableList.of(): ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE3).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).filters(selector(\"d1\",null,null)).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(useDefault? new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@aebfa5: new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@aebfa9))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testNullStringEquality['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+5->4 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+}

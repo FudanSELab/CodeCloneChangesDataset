@@ -1,0 +1,19 @@
+digraph {
+8 [style = filled, label = "ConfigurationPropertyNameAliases aliases = new ConfigurationPropertyNameAliases()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "createWithNameShouldAddMapping['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "addWhenHasExistingShouldAddAdditionalMappings['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "aliases.addAliases(\"foo\",\"baz\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertThat(aliases.getAliases(ConfigurationPropertyName.of(\"foo\"))).containsExactly(ConfigurationPropertyName.of(\"bar\"),ConfigurationPropertyName.of(\"baz\"))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "aliases.addAliases(\"foo\",\"bar\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(aliases.getAliases(ConfigurationPropertyName.of(\"foo\"))).containsExactly(ConfigurationPropertyName.of(\"bar\"),ConfigurationPropertyName.of(\"baz\"))@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ConfigurationPropertyNameAliases aliases = new ConfigurationPropertyNameAliases(ConfigurationPropertyName.of(\"foo\"),ConfigurationPropertyName.of(\"bar\"),ConfigurationPropertyName.of(\"baz\"))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "createWithNameShouldAddMapping['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4->8 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+8->5 [style = bold, label=""];
+6->7 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

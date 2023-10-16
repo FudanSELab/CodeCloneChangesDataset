@@ -1,0 +1,35 @@
+digraph {
+12 [style = filled, label = "post(\"v2\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "awaitSpans()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "postIsTraced_v1['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "post(\"v1\")@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "assertThat(getTraces(QueryRequest.newBuilder().annotationQuery(singletonMap(\"http.path\",\"/api/v1/spans\")))).isNotEmpty()@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "postIsTraced_v1['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "List<List<Span>> traces = awaitSpans(3)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "assertQueryReturnsResults(QueryRequest.newBuilder().spanName(\"accept-spans\"),traces)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "assertThat(getTraces(QueryRequest.newBuilder().annotationQuery(singletonMap(\"http.path\",\"/api/v2/spans\")))).isNotEmpty()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "postIsTraced_v2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(getTraces(QueryRequest.newBuilder().spanName(\"accept-spans\"))).isNotEmpty()@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertQueryReturnsResults(QueryRequest.newBuilder().annotationQuery(singletonMap(\"http.path\",\"/api/v1/spans\")),traces)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "postSpan(\"v1\")@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4->10 [style = bold, label=""];
+1->12 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+7->5 [style = bold, label=""];
+10->2 [style = bold, label=""];
+11->12 [style = bold, label=""];
+9->6 [style = solid, label="traces"];
+9->8 [style = solid, label="traces"];
+1->5 [style = dashed, label="0"];
+3->6 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+5->9 [style = bold, label=""];
+12->4 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+2->8 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+6->8 [style = bold, label=""];
+9->6 [style = bold, label=""];
+}

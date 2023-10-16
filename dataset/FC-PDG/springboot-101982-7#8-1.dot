@@ -1,0 +1,35 @@
+digraph {
+3 [style = filled, label = "assertThat(capturedOutput).contains(\"request (/test(\")@@@11@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "errorMessageForRequestWithoutPathInfo['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "assertThat(output).contains(\"request (/test(\")@@@11@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "this.filter.doFilter(this.request,this.response,this.chain)@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "this.request.setPathInfo(\"/alpha\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "this.chain = new TestFilterChain(null)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "CapturedOutput output@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "errorMessageForRequestWithPathInfo['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "CapturedOutput capturedOutput@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "CapturedOutput capturedOutput@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "this.request.setServletPath(\"/test\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "assertThat(capturedOutput).contains(\"request (/test/alpha(\")@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "errorMessageForRequestWithoutPathInfo['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "this.filter.addErrorPages(new ErrorPage(\"/error\"))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+1->0 [style = solid, label="chain"];
+6->5 [style = bold, label=""];
+5->2 [style = bold, label=""];
+5->11 [style = bold, label=""];
+1->0 [style = bold, label=""];
+12->5 [style = bold, label=""];
+0->13 [style = bold, label=""];
+6->4 [style = dotted, label="true"];
+12->10 [style = dotted, label="true"];
+4->10 [style = dashed, label="0"];
+3->13 [style = dashed, label="0"];
+3->7 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+11->2 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+0->7 [style = bold, label=""];
+9->8 [style = dotted, label="true"];
+}

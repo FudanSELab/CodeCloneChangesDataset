@@ -1,0 +1,28 @@
+digraph {
+1 [style = filled, label = "backendConnection.getStatusHandler().switchInTransactionStatus()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertOneThreadResult['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertGetConnectionSizeGreaterThanCache['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "when(backendDataSource.getConnections(anyString(),anyString(),eq(2),any())).thenReturn(MockConnectionUtil.mockNewConnections(2))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(actualConnections.size(),is(12))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "List<Connection> actualConnections = backendConnection.getConnections(\"ds1\",12,ConnectionMode.MEMORY_STRICTLY)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertTrue(backendConnection.getStatusHandler().isInTransaction())@@@7@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertTrue(backendConnection.getStatusManager().isInTransaction())@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "backendConnection.getStatusManager().switchToInTransaction()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "MockConnectionUtil.setCachedConnections(backendConnection,\"ds1\",10)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(backendConnection.getConnectionSize(),is(12))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertGetConnectionSizeGreaterThanCache['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4->3 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+7->5 [style = bold, label=""];
+3->7 [style = bold, label=""];
+2->10 [style = bold, label=""];
+11->1 [style = bold, label=""];
+1->7 [style = bold, label=""];
+2->6 [style = bold, label=""];
+0->1 [style = bold, label=""];
+9->4 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+8->9 [style = bold, label=""];
+}

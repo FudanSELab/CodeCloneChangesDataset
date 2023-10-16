@@ -1,0 +1,37 @@
+digraph {
+16 [style = filled, label = "assertNull(emptyEnumerable.lastOrDefault(null))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "enumerable.last(null)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testLastWithPredicate['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "fail()@@@18@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testLastWithPredicate['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "assertNull(enumerable.lastOrDefault(null))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Exception ignored@@@9@@@['1', '0', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Exception ignored@@@9@@@['1', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "emptyEnumerable.last(null)@@@13@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testLastOrDefaultWithPredicate['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "fail()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "@SuppressWarnings(\"unchecked\") final Enumerable<String> emptyEnumerable = Linq4j.asEnumerable(Collections.EMPTY_LIST)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "{}@@@9@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "assertEquals(\"mitch\",enumerable.last(null))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "@SuppressWarnings(\"unchecked\") final Enumerable<String> emptyEnumerable = Linq4j.asEnumerable(Collections.EMPTY_LIST)@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final Enumerable<String> enumerable = Linq4j.asEnumerable(Arrays.asList(\"jimi\",\"mitch\",\"ming\"))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertEquals(\"mitch\",enumerable.lastOrDefault(null))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6->3 [style = bold, label=""];
+5->8 [style = bold, label=""];
+10->3 [style = bold, label=""];
+14->15 [style = bold, label=""];
+13->0 [style = bold, label=""];
+7->0 [style = bold, label=""];
+1->6 [style = bold, label=""];
+11->0 [style = bold, label=""];
+2->9 [style = bold, label=""];
+3->2 [style = bold, label=""];
+15->16 [style = bold, label=""];
+0->4 [style = bold, label=""];
+4->5 [style = bold, label=""];
+6->10 [style = bold, label=""];
+0->12 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+12->14 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

@@ -1,0 +1,36 @@
+digraph {
+2 [style = filled, label = "this.loggingSystem.beforeInitialize()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "this.logger.info(\"Hello world\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "noFile['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "this.loggingSystem.initialize(null,\"classpath:log4j2-nondefault.xml\",getLogFile(tmpDir() + \"/tmp.log\",null))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "this.loggingSystem.initialize(null,null,null)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "assertThat(output).contains(\"Hello world\").contains(tmpDir() + \"/tmp.log\")@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertThat(configuration.getWatchManager().getIntervalSeconds()).isEqualTo(30)@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Configuration configuration = this.loggingSystem.getConfiguration()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "noFile['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "assertThat(new File(tmpDir() + \"/tmp.log\").exists()).isFalse()@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "this.logger.info(\"Hidden\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(configuration.getConfigurationSource().getFile().getAbsolutePath()).contains(\"log4j2-nondefault.xml\")@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "testNonDefaultConfigLocation['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(new File(tmpDir() + \"/spring.log\").exists()).isFalse()@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "String output = this.output.toString().trim()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(output).contains(\"Hello world\").doesNotContain(\"Hidden\")@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+14->9 [style = bold, label=""];
+15->2 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+9->11 [style = bold, label=""];
+6->7 [style = bold, label=""];
+5->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+8->2 [style = bold, label=""];
+2->10 [style = bold, label=""];
+0->6 [style = bold, label=""];
+10->12 [style = bold, label=""];
+12->0 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->13 [style = bold, label=""];
+13->14 [style = bold, label=""];
+4->13 [style = dashed, label="0"];
+}

@@ -1,0 +1,30 @@
+digraph {
+9 [style = filled, label = "testDynamicRepeatedMessageNotNull['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertTrue(result.getField(result.getDescriptorForType().findFieldByName(\"repeated_foreign_message\")) instanceof List)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "testDynamicRepeatedMessageNull['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "TestRequired.getDescriptor()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "TestAllTypes repeatedNested = TestAllTypes.newBuilder().setOptionalInt32(1).setOptionalString(\"foo\").setOptionalForeignMessage(ForeignMessage.getDefaultInstance()).addRepeatedString(\"bar\").addRepeatedForeignMessage(ForeignMessage.getDefaultInstance()).addRepeatedForeignMessage(ForeignMessage.getDefaultInstance()).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testDynamicRepeatedMessageNull['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "DynamicMessage result = DynamicMessage.newBuilder(TestAllTypes.getDescriptor()).mergeFrom(DynamicMessage.newBuilder(repeatedNested).build()).build()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertTrue(result.getField(result.getDescriptorForType().findFieldByName(\"repeated_foreign_message\")) instanceof List)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(result.getRepeatedFieldCount(result.getDescriptorForType().findFieldByName(\"repeated_foreign_message\"))).isEqualTo(0)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "assertThat(result.getField(result.getDescriptorForType().findFieldByName(\"repeated_foreign_message\"))).isInstanceOf()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "TestRequired.getDescriptor()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(2,result.getRepeatedFieldCount(result.getDescriptorForType().findFieldByName(\"repeated_foreign_message\")))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3->10 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+1->8 [style = bold, label=""];
+7->4 [style = bold, label=""];
+5->6 [style = bold, label=""];
+9->11 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+10->1 [style = bold, label=""];
+11->3 [style = bold, label=""];
+2->4 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+}

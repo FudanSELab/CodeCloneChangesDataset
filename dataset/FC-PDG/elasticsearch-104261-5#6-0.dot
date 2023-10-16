@@ -1,0 +1,33 @@
+digraph {
+7 [style = filled, label = "org.elasticsearch.geometry.Point expectedPt = new org.elasticsearch.geometry.Point(100,0)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "org.elasticsearch.geo.geometry.Point expectedPt = new org.elasticsearch.geo.geometry.Point(0,100)@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "testThatParserExtractsCorrectTypeAndCoordinatesFromArbitraryJson['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testThatParserExtractsCorrectTypeAndCoordinatesFromArbitraryJson['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "XContentBuilder pointGeoJson = XContentFactory.jsonBuilder().startObject().startObject(\"crs\").field(\"type\",\"name\").startObject(\"properties\").field(\"name\",\"urn:ogc:def:crs:OGC:1.3:CRS84\").endObject().endObject().field(\"bbox\",\"foobar\").field(\"type\",\"point\").field(\"bubu\",\"foobar\").startArray(\"coordinates\").value(100.0).value(0.0).endArray().startObject(\"nested\").startArray(\"coordinates\").value(200.0).value(0.0).endArray().endObject().startObject(\"lala\").field(\"type\",\"NotAPoint\").endObject().endObject()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertGeometryEquals(new JtsPoint(expected,SPATIAL_CONTEXT),pointGeoJson,true)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Point expectedPt = new Point(0,100)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertGeometryEquals(expectedPt,pointGeoJson,false)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Point expected = GEOMETRY_FACTORY.createPoint(new Coordinate(100.0,0.0))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertGeometryEquals(expectedPt,pointGeoJson,false)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testThatParserExtractsCorrectTypeAndCoordinatesFromArbitraryJson['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4->3 [style = bold, label=""];
+8->10 [style = bold, label=""];
+0->2 [style = solid, label="pointGeoJson"];
+1->2 [style = bold, label=""];
+4->3 [style = solid, label="expected"];
+6->0 [style = bold, label=""];
+0->3 [style = solid, label="pointGeoJson"];
+7->2 [style = solid, label="expectedPt"];
+0->10 [style = solid, label="pointGeoJson"];
+9->0 [style = bold, label=""];
+8->10 [style = solid, label="expectedPt"];
+5->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+3->7 [style = bold, label=""];
+0->4 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+7->2 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+0->8 [style = bold, label=""];
+1->2 [style = solid, label="expectedPt"];
+}

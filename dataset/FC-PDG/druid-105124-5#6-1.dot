@@ -1,0 +1,19 @@
+digraph {
+5 [style = filled, label = "testIdentifierWithNonzeroPartition['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testIdentifier['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testIdentifier['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "final DataSegment segment = DataSegment.builder().dataSource(\"foo\").interval(Intervals.of(\"2012-01-01/2012-01-02\")).version(DateTimes.of(\"2012-01-01T11:22:33.444Z\").toString()).shardSpec(NoneShardSpec.instance()).size(0).build()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "Assert.assertEquals(\"foo_2012-01-01T00:00:00.000Z_2012-01-02T00:00:00.000Z_2012-01-01T11:22:33.444Z_7\",segment.getId().toString())@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final DataSegment segment = DataSegment.builder().dataSource(\"foo\").interval(Intervals.of(\"2012-01-01/2012-01-02\")).version(DateTimes.of(\"2012-01-01T11:22:33.444Z\").toString()).shardSpec(getShardSpec(7)).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Assert.assertEquals(\"foo_2012-01-01T00:00:00.000Z_2012-01-02T00:00:00.000Z_2012-01-01T11:22:33.444Z\",segment.getId().toString())@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final DataSegment segment = DataSegment.builder().dataSource(\"foo\").interval(Intervals.of(\"2012-01-01/2012-01-02\")).version(DateTimes.of(\"2012-01-01T11:22:33.444Z\").toString()).shardSpec(NoneShardSpec.instance()).build()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5->7 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+2->3 [style = dashed, label="0"];
+2->7 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+7->6 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

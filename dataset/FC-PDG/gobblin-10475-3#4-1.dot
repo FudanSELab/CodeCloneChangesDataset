@@ -1,0 +1,32 @@
+digraph {
+4 [style = filled, label = "_metrics.jobSpecEnqCount.incrementAndGet()@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "onAddJob['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "JobSpec addedJob@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@19bdb0bupdatedJob@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "onUpdateJob['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@19bdae2addedJob@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "JobSpec updatedJob@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "_metrics.specConsumerJobSpecEnq.mark()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "_jobSpecQueue.put(new ImmutablePair<SpecExecutor.Verb,Spec>(SpecExecutor.Verb.ADD,addedJob))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "_jobSpecQueue.put(new ImmutablePair<SpecExecutor.Verb,Spec>(SpecExecutor.Verb.UPDATE,updatedJob))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "onAddJob['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->5 [style = bold, label=""];
+3->1 [style = solid, label="addedJob"];
+4->5 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+0->3 [style = dotted, label="true"];
+10->8 [style = bold, label=""];
+7->8 [style = solid, label="updatedJob"];
+6->3 [style = dotted, label="true"];
+3->7 [style = dashed, label="0"];
+2->8 [style = dashed, label="0"];
+3->2 [style = solid, label="addedJob"];
+2->1 [style = bold, label=""];
+10->7 [style = dotted, label="true"];
+9->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->9 [style = bold, label=""];
+7->9 [style = solid, label="updatedJob"];
+}

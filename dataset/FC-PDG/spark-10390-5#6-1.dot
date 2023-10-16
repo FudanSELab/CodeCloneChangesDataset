@@ -1,0 +1,23 @@
+digraph {
+5 [style = filled, label = "Dataset<Tuple2<String,Double>> aggregated = grouped.agg(org.apache.spark.sql.expressions.javalang.typed.sum(null))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "KeyValueGroupedDataset<String,Tuple2<String,Integer>> grouped = generateGroupedDataset()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testTypedAggregationSumDouble['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testTypedAggregationSumDouble['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "Assert.assertEquals(Arrays.asList(new Tuple2<>(\"a\",3.0),new Tuple2<>(\"b\",3.0)),aggregated.collectAsList())@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "Dataset<Tuple2<String,Double>> agged = grouped.agg(org.apache.spark.sql.expressions.javalang.typed.sum(null))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Assert.assertEquals(Arrays.asList(new Tuple2<>(\"a\",3.0),new Tuple2<>(\"b\",3.0)),agged.collectAsList())@@@5@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testTypedAggregationSumDouble['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Dataset<Tuple2<String,Double>> agged = grouped.agg(org.apache.spark.sql.expressions.javalang.typed.sum(null))@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1->3 [style = bold, label=""];
+1->5 [style = bold, label=""];
+8->1 [style = bold, label=""];
+6->1 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+1->7 [style = bold, label=""];
+0->1 [style = bold, label=""];
+7->2 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+}

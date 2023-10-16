@@ -1,0 +1,35 @@
+digraph {
+1 [style = filled, label = "assertEquals(\"Cannot search on field (field( since it is not indexed.\",e.getMessage())@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(new TermInSetQuery(\"field\",terms),ft.termsQuery(Arrays.asList(\"foo\",\"bar\"),null))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "List<BytesRef> terms = new ArrayList<>()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "IllegalArgumentException e = expectThrows(,null)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testTermsQuery['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "MappedFieldType ft = createFieldType()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "terms.add(new BytesRef(\"foo\"))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "MappedFieldType unsearchable = new TextFieldType(\"field\",false,false,Collections.emptyMap())@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "MappedFieldType unsearchable = new KeywordFieldType(\"field\",false,true,Collections.emptyMap())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "MappedFieldType ft = new KeywordFieldType(\"field\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testTermsQuery['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "MappedFieldType unsearchable = new TextFieldType(\"field\",false,Collections.emptyMap())@@@8@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+7 [style = filled, label = "terms.add(new BytesRef(\"bar\"))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testTermsQuery['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8->0 [style = bold, label=""];
+0->3 [style = bold, label=""];
+12->13 [style = bold, label=""];
+10->0 [style = bold, label=""];
+6->5 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+2->7 [style = bold, label=""];
+6->9 [style = bold, label=""];
+3->2 [style = bold, label=""];
+9->4 [style = bold, label=""];
+13->3 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+3->6 [style = solid, label="terms"];
+6->11 [style = bold, label=""];
+0->13 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+7->6 [style = bold, label=""];
+11->4 [style = bold, label=""];
+}

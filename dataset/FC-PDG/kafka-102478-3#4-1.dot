@@ -1,0 +1,27 @@
+digraph {
+1 [style = filled, label = "final StoreChangelogReader changelogReader = new StoreChangelogReader(config,logContext,consumer,callback)@@@11@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final StoreChangelogReader changelogReader = new StoreChangelogReader(time,config,logContext,consumer,callback)@@@14@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "final MockConsumer<byte((,byte((> consumer = new MockConsumer<byte((,byte((>(OffsetResetStrategy.EARLIEST){@Override public Map<TopicPartition,Long> endOffsets(final Collection<TopicPartition> partitions){throw kaboom}}@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "changelogReader.register(tp,activeStateManager)@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "EasyMock.replay(activeStateManager,storeMetadata,store)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "shouldThrowIfEndOffsetsFail['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertEquals(kaboom,thrown.getCause())@@@14@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "EasyMock.expect(storeMetadata.offset()).andReturn(10L).anyTimes()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "shouldThrowIfPositionFail['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final StreamsException thrown = assertThrows(,null)@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "shouldThrowIfPositionFail['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->3 [style = bold, label=""];
+9->3 [style = bold, label=""];
+0->1 [style = solid, label="consumer"];
+1->9 [style = dashed, label="0"];
+10->2 [style = bold, label=""];
+0->9 [style = bold, label=""];
+7->4 [style = bold, label=""];
+5->0 [style = bold, label=""];
+3->7 [style = bold, label=""];
+8->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+0->9 [style = solid, label="consumer"];
+2->5 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

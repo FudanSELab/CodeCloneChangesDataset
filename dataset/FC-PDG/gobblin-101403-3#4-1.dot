@@ -1,0 +1,27 @@
+digraph {
+6 [style = filled, label = "long totalBytes = 0@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "bytesWritten['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "return totalRecords@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+9 [style = filled, label = "totalBytes += entry.getValue().bytesWritten()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "recordsWritten['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "recordsWritten['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "totalRecords += entry.getValue().recordsWritten()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "return totalBytes@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "long totalRecords = 0@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return totalRecords + this.totalRecordsFromEvictedWriters@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1->2 [style = solid, label="totalRecords"];
+2->4 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+1->2 [style = bold, label=""];
+8->6 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+1->4 [style = solid, label="totalRecords"];
+1->9 [style = dashed, label="0"];
+6->9 [style = bold, label=""];
+5->0 [style = bold, label=""];
+9->7 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+3->0 [style = bold, label=""];
+9->7 [style = solid, label="totalBytes"];
+}

@@ -1,0 +1,35 @@
+digraph {
+10 [style = filled, label = "getReplicaPositions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "ClusterState clusterState@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "ClusterState state@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "ZkNodeProps message@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+14 [style = filled, label = "DocCollection restoreCollection@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "ClusterState state@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "NamedList<Object> results@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "ZkNodeProps message@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+15 [style = filled, label = "List<String> nodeList@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "Assign.AssignStrategy assignStrategy = Assign.createAssignStrategy(ccc.getCoreContainer(),clusterState,restoreCollection)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "@SuppressWarnings({\"rawtypes\"}) NamedList results@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "List<String> sliceNames@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "return assignStrategy.assign(ccc.getSolrCloudManager(),assignRequest)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "call['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Assign.AssignRequest assignRequest = new Assign.AssignRequestBuilder().forCollection(restoreCollection.getName()).forShard(sliceNames).assignNrtReplicas(numNrtReplicas).assignTlogReplicas(numTlogReplicas).assignPullReplicas(numPullReplicas).onNodes(nodeList).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "call['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10->15 [style = dotted, label="true"];
+7->6 [style = dotted, label="true"];
+10->12 [style = dotted, label="true"];
+10->11 [style = bold, label=""];
+13->8 [style = bold, label=""];
+11->8 [style = solid, label="assignRequest"];
+10->9 [style = dotted, label="true"];
+3->1 [style = dotted, label="true"];
+3->0 [style = dotted, label="true"];
+14->13 [style = solid, label="restoreCollection"];
+12->13 [style = solid, label="clusterState"];
+11->13 [style = bold, label=""];
+7->4 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+7->5 [style = dotted, label="true"];
+10->14 [style = dotted, label="true"];
+2->6 [style = dashed, label="0"];
+}

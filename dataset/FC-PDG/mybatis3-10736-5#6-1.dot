@@ -1,0 +1,18 @@
+digraph {
+6 [style = filled, label = "final TypeHandlerRegistry registry = config.getTypeHandlerRegistry()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "prepareSelectTwoSetsOfAuthorsProc['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "createSelectAuthorWithIDof99MappedStatement['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "prepareSelectTwoSetsOfAuthorsProc['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "return ms@@@19@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final Configuration config@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "selectTwoSetsOfAuthors['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "MappedStatement ms = new MappedStatement.Builder(config,\"selectAuthor\",new StaticSqlSource(config,\"SELECT * FROM author WHERE id = 99\"),SqlCommandType.SELECT).statementType(StatementType.STATEMENT).parameterMap(new ParameterMap.Builder(config,\"defaultParameterMap\",,new ArrayList<>()).build()).resultMaps(new ArrayList<ResultMap>(){}).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "selectTwoSetsOfAuthors['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6->8 [style = bold, label=""];
+1->0 [style = dotted, label="true"];
+7->6 [style = bold, label=""];
+8->5 [style = bold, label=""];
+8->5 [style = solid, label="ms"];
+7->4 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+}

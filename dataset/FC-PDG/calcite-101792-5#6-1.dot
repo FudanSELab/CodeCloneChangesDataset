@@ -1,0 +1,20 @@
+digraph {
+2 [style = filled, label = "withSyntax['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "return new SqlBasicAggFunction(getName(),getSqlIdentifier(),kind,getReturnTypeInference(),getOperandTypeInference(),getOperandTypeChecker(),getFunctionType(),requiresOrder(),requiresOver(),requiresGroupOrder(),distinctOptionality,syntax,allowsNullTreatment,allowsSeparator)@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return new SqlBasicAggFunction(getName(),getSqlIdentifier(),kind,getReturnTypeInference(),getOperandTypeInference(),getOperandTypeChecker(),getFunctionType(),requiresOrder(),requiresOver(),requiresGroupOrder(),distinctOptionality,syntax,allowsNullTreatment,allowsSeparator,percentile)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "boolean allowsNullTreatment@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "withAllowsNullTreatment['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "SqlSyntax syntax@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "withSyntax['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->0 [style = solid, label="syntax"];
+5->0 [style = solid, label="allowsNullTreatment"];
+2->0 [style = bold, label=""];
+6->0 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+1->5 [style = dashed, label="0"];
+2->1 [style = dotted, label="true"];
+3->1 [style = dotted, label="true"];
+3->4 [style = bold, label=""];
+1->4 [style = solid, label="syntax"];
+6->5 [style = dotted, label="true"];
+}

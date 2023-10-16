@@ -1,0 +1,26 @@
+digraph {
+0 [style = filled, label = "assertThat(server.getConnectors()).hasSize(1)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "whenHttp2IsNotEnabledServerConnectorHasSslAndHttpConnectionFactories['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "alpnConnectionFactoryHasNullDefaultProtocolToAllowNegotiationToHttp11['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "http2.setEnabled(true)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "Http2 http2 = new Http2()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "List<ConnectionFactory> factories = new ArrayList<>(server.getConnectors()(0(.getConnectionFactories())@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Server server = createCustomizedServer()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(((ALPNServerConnectionFactory)factories.get(1)).getDefaultProtocol()).isNull()@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "whenHttp2IsNotEnabledServerConnectorHasSslAndHttpConnectionFactories['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "Server server = createCustomizedServer(http2)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(server.getConnectors()).hasSize(1)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "List<ConnectionFactory> factories = new ArrayList<>(server.getConnectors()(0(.getConnectionFactories())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->3 [style = bold, label=""];
+11->8 [style = bold, label=""];
+1->4 [style = bold, label=""];
+11->6 [style = solid, label="http2"];
+8->6 [style = bold, label=""];
+10->11 [style = bold, label=""];
+2->9 [style = bold, label=""];
+3->2 [style = bold, label=""];
+9->7 [style = bold, label=""];
+5->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

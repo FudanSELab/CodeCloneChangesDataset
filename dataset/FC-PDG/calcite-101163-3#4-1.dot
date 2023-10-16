@@ -1,0 +1,36 @@
+digraph {
+1 [style = filled, label = "sql(\"overlay('ABCdef' placing 'abc' collate latin1$sv from 1 for 3)\").collation(\"ISO-8859-1$sv\",SqlCollation.Coercibility.EXPLICIT)@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "expr(\"overlay('ABCdef' placing 'abc' from 1 for 3)\").ok()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "expr(\"substring('a' from 1 for 'b')\").columnType(\"VARCHAR(1) NOT NULL\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "expr(\"overlay('ABCdef' placing 'abc' from 1)\").ok()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "expr(\"overlay('ABCdef' placing 'abc' from 6 for 3)\").columnType(\"VARCHAR(9) NOT NULL\")@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testOverlay['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "wholeExpr(\"substring(_UTF16'10' FROM '0' FOR '\')\").fails(\"(?s).* not comparable to each other.*\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "wholeExpr(\"overlay('ABCdef' placing 'abc' from '1' for 3)\").withTypeCoercion(false).fails(\"(?s).*OVERLAY\(<STRING> PLACING <STRING> FROM <INTEGER>\).*\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "expr(\"overlay('ABCdef' placing 'abc' from 1 for 3)\").columnType(\"VARCHAR(9) NOT NULL\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "wholeExpr(\"substring('10' FROM '0' FOR _UTF16'\')\").fails(\"(?s).* not comparable to each other.*\")@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "expr(\"overlay('ABCdef' placing cast(null as char(5)) from 1)\").columnType(\"VARCHAR(11)\")@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "expr(\"overlay('ABCdef' placing 'abc' from '1' for 3)\").columnType(\"VARCHAR(9) NOT NULL\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "testSubstringFails['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "TODO@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testOverlay['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "wholeExpr(\"substring('a' from 1 for 'b')\").withTypeCoercion(false).fails(\"(?s).*Cannot apply 'SUBSTRING' to arguments of type.*\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+16 [style = filled, label = "wholeExpr(\"substring('10' FROM _UTF16'0' FOR '\')\").fails(\"(?s).* not comparable to each other.*\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6->5 [style = bold, label=""];
+0->7 [style = bold, label=""];
+11->12 [style = bold, label=""];
+16->13 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+4->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+7->8 [style = bold, label=""];
+15->16 [style = bold, label=""];
+14->11 [style = bold, label=""];
+3->4 [style = bold, label=""];
+10->6 [style = bold, label=""];
+2->1 [style = bold, label=""];
+2->1 [style = dotted, label="true"];
+9->6 [style = bold, label=""];
+8->3 [style = bold, label=""];
+12->15 [style = bold, label=""];
+}

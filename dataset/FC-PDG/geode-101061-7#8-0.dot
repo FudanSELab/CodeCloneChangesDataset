@@ -1,0 +1,24 @@
+digraph {
+4 [style = filled, label = "restClient.doGetAndAssert(\"/queries\",\"dataRead\",\"dataRead\").hasStatusCode(200).hasContentType(APPLICATION_JSON_UTF8_VALUE)@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "testQueries['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testQueries['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "restClient.doGetAndAssert(\"/queries/adhoc?q=\",\"user\",\"wrongPswd\").hasStatusCode(401)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "restClient.doGetAndAssert(\"/queries/adhoc?q=\",\"user\",\"user\").hasStatusCode(403)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "restClient.doGetAndAssert(\"/queries/adhoc?q=\",\"dataRead\",\"dataRead\").hasStatusCode(500)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "restClient.doGetAndAssert(\"/queries\",\"user\",\"wrongPswd\").hasStatusCode(401)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "restClient.doGetAndAssert(\"/queries\",\"user\",\"user\").hasStatusCode(403)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testAdhocQuery['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "restClient.doGetAndAssert(\"/queries\",\"dataRead\",\"dataRead\").hasStatusCode(200).hasContentType(MediaType.APPLICATION_JSON_VALUE)@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0->8 [style = dashed, label="0"];
+5->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+9->6 [style = bold, label=""];
+}

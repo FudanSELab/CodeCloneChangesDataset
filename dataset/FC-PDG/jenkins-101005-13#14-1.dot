@@ -1,0 +1,31 @@
+digraph {
+1 [style = filled, label = "Set<Task> unblockedTasks = Jenkins.getInstance().getQueue().getUnblockedTasks()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "getBuildingUpstream['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Set<Task> unblockedTasks = Jenkins.get().getQueue().getUnblockedTasks()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "return tup@@@5@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "return tup@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "getBuildingDownstream['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "getBuildingDownstream['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "tup != this && (tup.isBuilding() || unblockedTasks.contains(tup))@@@5@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return tup@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "return null@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+5->3 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->5 [style = bold, label=""];
+2->0 [style = dotted, label="true"];
+1->7 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+8->2 [style = bold, label=""];
+9->1 [style = bold, label=""];
+2->5 [style = dotted, label="true"];
+7->2 [style = bold, label=""];
+2->8 [style = dotted, label="true"];
+2->3 [style = bold, label=""];
+2->8 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

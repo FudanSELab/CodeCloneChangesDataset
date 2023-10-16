@@ -1,0 +1,30 @@
+digraph {
+8 [style = filled, label = "newTuningConfig['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "defaultConfig['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "int maxNumConcurrentSubTasks@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "return new ParallelIndexTuningConfig(null,null,null,null,null,null,null,null,new MaxSizeSplitHintSpec(null,1),partitionsSpec,null,null,null,forceGuaranteedRollup,null,null,null,null,maxNumConcurrentSubTasks,null,null,null,null,null,null,null,null,null,null)@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "newTuningConfig['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return new ParallelIndexTuningConfig(null,null,null,null,null,null,null,null,new MaxSizeSplitHintSpec(null,1),partitionsSpec,null,null,null,forceGuaranteedRollup,null,null,null,null,maxNumConcurrentSubTasks,null,null,null,null,null,null,null,null,null,null,null)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "boolean forceGuaranteedRollup@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "boolean forceGuaranteedRollup@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "return new ParallelIndexTuningConfig(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "PartitionsSpec partitionsSpec@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "PartitionsSpec partitionsSpec@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4->5 [style = dashed, label="0"];
+6->5 [style = solid, label="partitionsSpec"];
+8->7 [style = dotted, label="true"];
+4->9 [style = dashed, label="0"];
+0->4 [style = solid, label="forceGuaranteedRollup"];
+10->9 [style = bold, label=""];
+7->5 [style = solid, label="maxNumConcurrentSubTasks"];
+8->6 [style = dotted, label="true"];
+8->5 [style = bold, label=""];
+1->4 [style = solid, label="partitionsSpec"];
+3->1 [style = dotted, label="true"];
+3->4 [style = bold, label=""];
+2->5 [style = solid, label="forceGuaranteedRollup"];
+8->2 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+3->0 [style = dotted, label="true"];
+2->4 [style = solid, label="maxNumConcurrentSubTasks"];
+}

@@ -1,0 +1,34 @@
+digraph {
+1 [style = filled, label = "return this@@@27@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "configuration['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "configuration['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "configuration['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "doSetProperty(\"configuration\",configuration)@@@26@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "org.apache.camel.component.aws2.iam.IAM2Configuration configuration@@@45@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "org.apache.camel.component.aws2.ecs.ECS2Configuration configuration@@@25@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2->0 [style = solid, label="proxyProtocol"];
+5->0 [style = solid, label="basicPropertyBinding"];
+5->0 [style = solid, label="region"];
+2->0 [style = solid, label="lazyStartProducer"];
+2->0 [style = solid, label="secretKey"];
+6->0 [style = bold, label=""];
+2->0 [style = solid, label="proxyHost"];
+2->0 [style = solid, label="iamClient"];
+3->0 [style = bold, label=""];
+4->0 [style = bold, label=""];
+4->2 [style = dotted, label="true"];
+2->0 [style = solid, label="operation"];
+2->5 [style = dashed, label="0"];
+6->5 [style = dotted, label="true"];
+2->0 [style = solid, label="basicPropertyBinding"];
+2->0 [style = solid, label="configuration"];
+2->0 [style = solid, label="region"];
+0->1 [style = bold, label=""];
+5->0 [style = solid, label="configuration"];
+5->0 [style = solid, label="secretKey"];
+5->0 [style = solid, label="lazyStartProducer"];
+2->0 [style = solid, label="proxyPort"];
+2->0 [style = solid, label="accessKey"];
+5->0 [style = solid, label="accessKey"];
+3->2 [style = dotted, label="true"];
+}

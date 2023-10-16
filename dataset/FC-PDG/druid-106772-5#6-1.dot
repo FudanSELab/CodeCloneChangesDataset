@@ -1,0 +1,33 @@
+digraph {
+2 [style = filled, label = "testTimeseriesWithRegexFilter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "List<Result<TimeseriesResultValue>> expectedResults = Arrays.asList(new Result<>(DateTimes.of(\"2011-04-01\"),new TimeseriesResultValue(ImmutableMap.of(\"rows\",11L,\"index\",3783L,\"addRowsIndexConstant\",3795.0,\"uniques\",QueryRunnerTestHelper.UNIQUES_9))),new Result<>(DateTimes.of(\"2011-04-02\"),new TimeseriesResultValue(ImmutableMap.of(\"rows\",11L,\"index\",3313L,\"addRowsIndexConstant\",3325.0,\"uniques\",QueryRunnerTestHelper.UNIQUES_9))))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testTimeseriesWithBoundFilter1['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "List<Result<TimeseriesResultValue>> expectedResults = Arrays.asList(new Result<>(DateTimes.of(\"2011-04-01\"),new TimeseriesResultValue(ImmutableMap.of(\"rows\",9L,\"index\",1102L,\"addRowsIndexConstant\",1112.0,\"uniques\",QueryRunnerTestHelper.UNIQUES_9))),new Result<>(DateTimes.of(\"2011-04-02\"),new TimeseriesResultValue(ImmutableMap.of(\"rows\",9L,\"index\",1120L,\"addRowsIndexConstant\",1130.0,\"uniques\",QueryRunnerTestHelper.UNIQUES_9))))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Iterable<Result<TimeseriesResultValue>> results = runner.run(QueryPlus.wrap(query),CONTEXT).toList()@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "TestHelper.assertExpectedResults(expectedResults,results)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testTimeseriesWithRegexFilter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "TimeseriesQuery query = Druids.newTimeseriesQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.dayGran).filters(new AndDimFilter(Arrays.asList(new BoundDimFilter(QueryRunnerTestHelper.marketDimension,\"spa\",\"spot\",true,null,null,null,StringComparators.LEXICOGRAPHIC),new BoundDimFilter(QueryRunnerTestHelper.marketDimension,\"spot\",\"spotify\",null,true,null,null,StringComparators.LEXICOGRAPHIC),new BoundDimFilter(QueryRunnerTestHelper.marketDimension,\"SPOT\",\"spot\",null,null,null,null,StringComparators.LEXICOGRAPHIC)))).intervals(QueryRunnerTestHelper.firstToThird).aggregators(QueryRunnerTestHelper.rowsCount,QueryRunnerTestHelper.indexLongSum,QueryRunnerTestHelper.qualityUniques).postAggregators(QueryRunnerTestHelper.addRowsIndexConstant).context(makeContext()).build()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Iterable<Result<TimeseriesResultValue>> results = runner.run(QueryPlus.wrap(query)).toList()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "TimeseriesQuery query = Druids.newTimeseriesQueryBuilder().dataSource(QueryRunnerTestHelper.dataSource).granularity(QueryRunnerTestHelper.dayGran).filters(new RegexDimFilter(QueryRunnerTestHelper.marketDimension,\"^.p.*$\",null)).intervals(QueryRunnerTestHelper.firstToThird).aggregators(QueryRunnerTestHelper.rowsCount,QueryRunnerTestHelper.indexLongSum,QueryRunnerTestHelper.qualityUniques).postAggregators(QueryRunnerTestHelper.addRowsIndexConstant).descending(descending).context(makeContext()).build()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertExpectedResults(expectedResults,results)@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+4->8 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+1->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+4->8 [style = solid, label="results"];
+1->0 [style = solid, label="expectedResults"];
+1->10 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+9->7 [style = bold, label=""];
+10->8 [style = solid, label="expectedResults"];
+4->6 [style = dashed, label="0"];
+7->10 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+6->0 [style = solid, label="results"];
+4->0 [style = solid, label="results"];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+10->4 [style = bold, label=""];
+}

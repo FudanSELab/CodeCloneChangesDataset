@@ -1,0 +1,27 @@
+digraph {
+7 [style = filled, label = "makeMatcher['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "baseMatchers.length == 1@@@4@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "makeMatcher['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "return baseMatchers(0(@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "makeMatcher['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "return new ValueMatcher(){@Override public boolean matches(){for (ValueMatcher matcher : baseMatchers){if (!matcher.matches()) {return false}}return true}@Override public void inspectRuntimeShape(RuntimeShapeInspector inspector){inspector.visit(\"firstBaseMatcher\",baseMatchers(0()inspector.visit(\"secondBaseMatcher\",baseMatchers(1()}}@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Preconditions.checkState(baseMatchers.length > 0)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final ValueMatcher(( baseMatchers@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "final ValueMatcher(( baseMatchers@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8->1 [style = bold, label=""];
+7->6 [style = dotted, label="true"];
+6->5 [style = solid, label="baseMatchers"];
+1->4 [style = bold, label=""];
+6->2 [style = solid, label="baseMatchers"];
+8->0 [style = dotted, label="true"];
+0->5 [style = solid, label="baseMatchers"];
+4->2 [style = bold, label=""];
+7->1 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+0->2 [style = solid, label="baseMatchers"];
+4->5 [style = bold, label=""];
+4->2 [style = dotted, label="true"];
+2->5 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+}

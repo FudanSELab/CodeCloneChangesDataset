@@ -1,0 +1,36 @@
+digraph {
+3 [style = filled, label = "BiFunction<Long,Boolean,List<IndexableField>> luceneFieldFactory = null@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "termsAggregator(ValueType.LONG,fieldType,null,null,luceneFieldFactory)@@@13@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testLongTermsAggregator['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "MappedFieldType fieldType = new NumberFieldMapper.NumberFieldType(\"field\",NumberFieldMapper.NumberType.LONG)@@@12@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "termsAggregatorWithNestedMaxAgg(ValueType.LONG,fieldType,null,null)@@@14@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "termsAggregatorWithNestedMaxAgg(ValueType.DOUBLE,fieldType,null,null)@@@14@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "termsAggregator(ValueType.DOUBLE,fieldType,null,null,luceneFieldFactory)@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "BiFunction<Double,Boolean,List<IndexableField>> luceneFieldFactory = null@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "testDoubleTermsAggregator['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "termsAggregatorWithNestedMaxAgg(ValueType.LONG,fieldType,null,null)@@@14@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "testLongTermsAggregator['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "MappedFieldType fieldType = new NumberFieldMapper.NumberFieldType(\"field\",NumberFieldMapper.NumberType.DOUBLE)@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6->3 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+1->4 [style = solid, label="fieldType"];
+1->0 [style = solid, label="fieldType"];
+1->0 [style = bold, label=""];
+10->9 [style = solid, label="luceneFieldFactory"];
+3->0 [style = solid, label="luceneFieldFactory"];
+9->8 [style = bold, label=""];
+10->7 [style = bold, label=""];
+7->9 [style = solid, label="fieldType"];
+7->9 [style = bold, label=""];
+0->4 [style = bold, label=""];
+11->10 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+4->5 [style = dashed, label="0"];
+7->8 [style = solid, label="fieldType"];
+3->10 [style = dashed, label="0"];
+0->9 [style = dashed, label="0"];
+1->7 [style = dashed, label="0"];
+1->5 [style = solid, label="fieldType"];
+0->5 [style = bold, label=""];
+}

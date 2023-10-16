@@ -1,0 +1,35 @@
+digraph {
+11 [style = filled, label = "String remoteHost@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return new CollectionAdminRequest.List(){@Override public SolrParams getParams(){ModifiableSolrParams params = new ModifiableSolrParams(super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@102f9e7)params.set(USER_PARAM,user)params.set(KerberosPlugin.IMPERSONATOR_DO_AS_HTTP_PARAM,doAs)if (remoteHost != null) params.set(REMOTE_HOST_PARAM,remoteHost)if (remoteAddress != null) params.set(REMOTE_ADDRESS_PARAM,remoteAddress)return params}}@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "String doAs@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "String doAs@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "String user@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String user@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "String remoteAddress@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "getProxyRequest['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "getProxyRequest['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "String doAs@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+3 [style = filled, label = "getProxyRequest['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "String user@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+11->1 [style = solid, label="remoteHost"];
+3->1 [style = bold, label=""];
+5->6 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+7->1 [style = solid, label="remoteAddress"];
+8->10 [style = dotted, label="true"];
+0->1 [style = solid, label="user"];
+5->4 [style = dotted, label="true"];
+4->1 [style = solid, label="doAs"];
+8->1 [style = bold, label=""];
+5->1 [style = bold, label=""];
+9->1 [style = solid, label="user"];
+3->0 [style = dotted, label="true"];
+2->6 [style = dashed, label="0"];
+8->11 [style = dotted, label="true"];
+10->1 [style = solid, label="doAs"];
+2->11 [style = dashed, label="0"];
+8->9 [style = dotted, label="true"];
+6->1 [style = solid, label="user"];
+2->1 [style = solid, label="doAs"];
+3->2 [style = dotted, label="true"];
+}

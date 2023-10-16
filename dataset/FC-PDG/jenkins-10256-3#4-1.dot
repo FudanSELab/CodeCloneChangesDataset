@@ -1,0 +1,37 @@
+digraph {
+5 [style = filled, label = "assertThat(result,succeeded())@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "consoleShouldSuccessWithLastBuild['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final CLICommandInvoker.Result result = command.authorizedTo(Jenkins.READ,Item.READ).invokeWithArgs(\"aProject\")@@@11@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "assertThat(project.scheduleBuild2(0).get().getLog(),containsString(\"echo 1\"))@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(result.stdout(),containsString(\"echo 1\"))@@@13@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "FreeStyleProject project = j.createFreeStyleProject(\"aProject\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "project.getBuildersList().add(new Shell(\"echo 1\"))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "consoleShouldBeAccessibleForUserWithRead['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "final CLICommandInvoker.Result result = command.authorizedTo(Jenkins.READ,Job.READ,Item.BUILD).invokeWithArgs(\"aProject\")@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "consoleShouldBeAccessibleForUserWithRead['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "final CLICommandInvoker.Result result = command.authorizedTo(Jenkins.READ,Job.READ).invokeWithArgs(\"aProject\")@@@11@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "project.getBuildersList().add(new BatchFile(\"echo 1\"))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Functions.isWindows()@@@4@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+1->4 [style = bold, label=""];
+12->5 [style = bold, label=""];
+2->3 [style = bold, label=""];
+12->5 [style = solid, label="result"];
+3->0 [style = dotted, label="false"];
+11->2 [style = bold, label=""];
+1->9 [style = bold, label=""];
+3->0 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+8->1 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+4->5 [style = solid, label="result"];
+7->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->8 [style = bold, label=""];
+1->12 [style = bold, label=""];
+9->5 [style = bold, label=""];
+10->2 [style = bold, label=""];
+3->8 [style = dotted, label="true"];
+4->5 [style = bold, label=""];
+9->5 [style = solid, label="result"];
+}

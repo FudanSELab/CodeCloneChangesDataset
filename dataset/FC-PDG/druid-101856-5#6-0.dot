@@ -1,0 +1,17 @@
+digraph {
+6 [style = filled, label = "testExpression(rexBuilder.makeCall(typeFactory.createSqlType(SqlTypeName.TIMESTAMP),SqlStdOperatorTable.MINUS_DATE,ImmutableList.of(inputRef(\"t\"),rexBuilder.makeIntervalLiteral(new BigDecimal(13),new SqlIntervalQualifier(TimeUnit.YEAR,TimeUnit.MONTH,SqlParserPos.ZERO)))),DruidExpression.of(null,\"timestamp_shift(\"t\",concat('P', 13, 'M'),-1,'UTC')\"),DateTimes.of(\"2000-02-03T04:05:06\").minus(period).getMillis())@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testExpression(rexBuilder.makeCall(SqlStdOperatorTable.DATETIME_PLUS,inputRef(\"t\"),rexBuilder.makeIntervalLiteral(new BigDecimal(13),new SqlIntervalQualifier(TimeUnit.YEAR,TimeUnit.MONTH,SqlParserPos.ZERO))),DruidExpression.of(null,\"timestamp_shift(\"t\",concat('P', 13, 'M'),1,'UTC')\"),DateTimes.of(\"2000-02-03T04:05:06\").plus(period).getMillis())@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+2 [style = filled, label = "testTimePlusYearMonthInterval['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final Period period = new Period(\"P1Y1M\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testHelper.testExpression(SqlStdOperatorTable.DATETIME_PLUS,ImmutableList.of(testHelper.makeInputRef(\"t\"),testHelper.makeLiteral(new BigDecimal(13),new SqlIntervalQualifier(TimeUnit.YEAR,TimeUnit.MONTH,SqlParserPos.ZERO))),DruidExpression.of(null,\"timestamp_shift(\"t\",concat('P', 13, 'M'),1,'UTC')\"),DateTimes.of(\"2000-02-03T04:05:06\").plus(period).getMillis())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testTimeMinusYearMonthInterval['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testTimePlusYearMonthInterval['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+4->1 [style = bold, label=""];
+1->6 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

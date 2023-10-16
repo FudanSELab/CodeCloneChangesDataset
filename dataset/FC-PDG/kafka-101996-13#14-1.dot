@@ -1,0 +1,38 @@
+digraph {
+7 [style = filled, label = "final TopicPartition partition = taskId00Partitions.iterator().next()@@@15@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThat(taskManager.tryToCompleteRestoration(time.milliseconds(),null),is(true))@@@13@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "taskManager.handleAssignment(taskId00Assignment,emptyMap())@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "shouldPropagateTaskMigratedExceptionsInProcessActiveTasks['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "replay(activeTaskCreator,consumer,changeLogReader)@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "expect(activeTaskCreator.createTasks(anyObject(),eq(taskId00Assignment))).andStubReturn(singletonList(task00))@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final StateMachineTask task00 = new StateMachineTask(taskId00,taskId00Partitions,true){@Override public boolean process(final long wallClockTime){throw new RuntimeException(\"oops\")}}@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "shouldPropagateRuntimeExceptionsInProcessActiveTasks['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "expectRestoreToBeCompleted(consumer,changeLogReader)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "shouldPropagateTaskMigratedExceptionsInProcessActiveTasks['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "final RuntimeException exception = assertThrows(,null)@@@17@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertThat(task00.state(),is(Task.State.RUNNING))@@@14@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(taskManager.tryToCompleteRestoration(time.milliseconds()),is(true))@@@13@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "assertThat(exception.getMessage(),is(\"oops\"))@@@18@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "task00.addRecords(partition,singletonList(getConsumerRecord(partition,0L)))@@@16@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThrows(,null)@@@17@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+14->8 [style = bold, label=""];
+11->0 [style = bold, label=""];
+15->13 [style = bold, label=""];
+8->4 [style = bold, label=""];
+8->5 [style = solid, label="task00"];
+10->11 [style = dashed, label="0"];
+9->8 [style = bold, label=""];
+4->5 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->10 [style = bold, label=""];
+6->11 [style = bold, label=""];
+10->0 [style = bold, label=""];
+12->8 [style = bold, label=""];
+2->15 [style = bold, label=""];
+1->15 [style = dashed, label="0"];
+0->7 [style = bold, label=""];
+7->2 [style = solid, label="partition"];
+}

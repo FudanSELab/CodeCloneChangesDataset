@@ -1,0 +1,36 @@
+digraph {
+9 [style = filled, label = "testGetEstimatedDurationIfNoSuccessfulBuildTakeDurationOfFailedBuild['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "TestBuild lastBuild = new TestBuild(project,Result.FAILURE,50,null)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final SortedMap<Integer,TestBuild> runs = new TreeMap<>()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "TestBuild lastBuild = new TestBuild(project,Result.FAILURE,42,null)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testGetEstimatedDurationWithFailedRun['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "assertEquals(42,project.getEstimatedDuration())@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "final SortedMap<Integer,TestBuild> runs = new TreeMap<Integer,TestBuild>()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "runs.put(1,lastBuild)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertEquals(50,project.getEstimatedDuration())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testGetEstimatedDurationWithFailedRun['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Job project = createMockProject(runs)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(-1,project.getEstimatedDuration())@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+1->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+3->6 [style = dashed, label="0"];
+1->5 [style = solid, label="lastBuild"];
+7->0 [style = solid, label="runs"];
+9->4 [style = bold, label=""];
+7->0 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+0->1 [style = solid, label="project"];
+2->4 [style = bold, label=""];
+8->7 [style = bold, label=""];
+4->0 [style = bold, label=""];
+10->5 [style = solid, label="lastBuild"];
+0->10 [style = bold, label=""];
+10->5 [style = bold, label=""];
+5->6 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+4->0 [style = solid, label="runs"];
+5->11 [style = bold, label=""];
+0->10 [style = solid, label="project"];
+3->11 [style = dashed, label="0"];
+}

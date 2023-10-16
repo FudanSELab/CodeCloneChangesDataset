@@ -1,0 +1,26 @@
+digraph {
+3 [style = filled, label = "assertEquals(1,blog.getId())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "BoundBlogMapper mapper = session.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "List<Post> posts = blog.getPosts()@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertNotNull(blog.getAuthor(),\"author should not be null\")@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "Blog blog = mapper.selectBlogUsingConstructorWithResultMapCollection(1)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(\"Jim Business\",blog.getTitle())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Blog blog = mapper.selectBlog(1)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "shouldExecuteBoundSelectBlogUsingConstructorWithResultMapCollection['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertTrue(posts != null && !posts.isEmpty(),\"posts should not be empty\")@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "shouldExecuteBoundSelectOneBlogStatement['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "shouldExecuteBoundSelectOneBlogStatement['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+4->10 [style = bold, label=""];
+10->3 [style = bold, label=""];
+6->9 [style = solid, label="posts"];
+8->6 [style = bold, label=""];
+1->8 [style = bold, label=""];
+7->4 [style = bold, label=""];
+6->9 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->4 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+}

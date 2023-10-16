@@ -1,0 +1,33 @@
+digraph {
+10 [style = filled, label = "visitProjections['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "visitProjections['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "result.getProjections().addAll(projections)@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "projections.add((ProjectionSegment)visit(each))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Collection<ProjectionSegment> projections = new LinkedList<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final MySQLStatementParser.ProjectionsContext ctx@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+12 [style = filled, label = "final ProjectionsContext ctx@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "projections.add(new ShorthandProjectionSegment(ctx.unqualifiedShorthand().getStart().getStartIndex(),ctx.unqualifiedShorthand().getStop().getStopIndex()))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "visitProjections['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "null != ctx.unqualifiedShorthand()@@@4@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "return result@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ProjectionsSegment result = new ProjectionsSegment(ctx.getStart().getStartIndex(),ctx.getStop().getStopIndex())@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final ProjectionsContext ctx@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+6->0 [style = solid, label="result"];
+11->8 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+8->4 [style = bold, label=""];
+10->8 [style = bold, label=""];
+5->0 [style = bold, label=""];
+10->9 [style = dotted, label="true"];
+4->1 [style = dotted, label="true"];
+2->9 [style = dashed, label="0"];
+1->7 [style = bold, label=""];
+3->8 [style = bold, label=""];
+3->2 [style = dotted, label="true"];
+4->7 [style = bold, label=""];
+7->6 [style = bold, label=""];
+8->5 [style = solid, label="projections"];
+11->12 [style = dotted, label="true"];
+}

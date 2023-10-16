@@ -1,0 +1,37 @@
+digraph {
+5 [style = filled, label = "testPerformExport['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "String xmlFileName = filename.replace(\".bib\",\".xml\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Builder control = Input.from(Files.newInputStream(xmlFile))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testImportAsModsAndExportAsMods['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "List<BibEntry> entries = bibtexImporter.importDatabase(importFile,charset).getDatabase().getEntries()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Path xmlFile = Paths.get(.getResource(xmlFileName).toURI())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "String tempFilename = tempFile.getCanonicalPath()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "modsExportFormat.performExport(databaseContext,tempFile.getPath(),charset,entries)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Builder test = Input.from(Files.newInputStream(Paths.get(tempFilename)))@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testPerformExport['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "Assert.assertThat(test,CompareMatcher.isSimilarTo(control).withNodeMatcher(new DefaultNodeMatcher(ElementSelectors.byNameAndText)).throwComparisonFailure())@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "modsExportFormat.export(databaseContext,tempFile.toPath(),charset,entries)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "List<BibEntry> entries = modsImporter.importDatabase(xmlFile,charset).getDatabase().getEntries()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->9 [style = bold, label=""];
+1->8 [style = bold, label=""];
+11->6 [style = bold, label=""];
+4->1 [style = solid, label="xmlFile"];
+7->4 [style = bold, label=""];
+3->0 [style = solid, label="entries"];
+12->0 [style = bold, label=""];
+3->4 [style = bold, label=""];
+10->6 [style = bold, label=""];
+7->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+12->0 [style = solid, label="entries"];
+5->6 [style = bold, label=""];
+8->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+4->12 [style = bold, label=""];
+8->2 [style = solid, label="test"];
+0->9 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+9->1 [style = bold, label=""];
+7->8 [style = solid, label="tempFilename"];
+3->9 [style = solid, label="entries"];
+}

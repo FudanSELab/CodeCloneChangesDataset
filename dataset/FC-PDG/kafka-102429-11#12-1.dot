@@ -1,0 +1,38 @@
+digraph {
+10 [style = filled, label = "final StreamThread thread = new StreamThread(mockTime,config,null,consumer,consumer,null,taskManager,streamsMetrics,internalTopologyBuilder,clientId,new LogContext(\"\"),new AtomicInteger()).updateThreadMetadata(getSharedAdminClientId(clientId))@@@9@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "thread.run()@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "EasyMock.expectLastCall()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "shouldShutdownTaskManagerOnCloseWithoutStart['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "thread.shutdown()@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "EasyMock.verify(taskManager)@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "shouldOnlyShutdownOnce['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final TaskManager taskManager = EasyMock.createNiceMock()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "taskManager.shutdown(true)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final StreamThread thread = new StreamThread(mockTime,config,null,consumer,consumer,null,taskManager,streamsMetrics,internalTopologyBuilder,clientId,new LogContext(\"\"),new AtomicInteger())@@@9@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "shouldShutdownTaskManagerOnCloseWithoutStart['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "final StreamThread.StreamsMetricsThreadImpl streamsMetrics = new StreamThread.StreamsMetricsThreadImpl(metrics,\"\")@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "EasyMock.replay(taskManager,consumer)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final Consumer<byte((,byte((> consumer = EasyMock.createNiceMock()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = solid, label="taskManager"];
+7->1 [style = bold, label=""];
+2->7 [style = solid, label="streamsMetrics"];
+0->6 [style = bold, label=""];
+4->7 [style = solid, label="consumer"];
+9->4 [style = bold, label=""];
+11->4 [style = bold, label=""];
+1->3 [style = bold, label=""];
+2->10 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->7 [style = solid, label="taskManager"];
+0->5 [style = solid, label="taskManager"];
+5->2 [style = bold, label=""];
+8->5 [style = bold, label=""];
+6->8 [style = bold, label=""];
+4->5 [style = solid, label="consumer"];
+1->12 [style = bold, label=""];
+7->10 [style = dashed, label="0"];
+12->3 [style = bold, label=""];
+2->7 [style = bold, label=""];
+10->1 [style = bold, label=""];
+13->4 [style = bold, label=""];
+}

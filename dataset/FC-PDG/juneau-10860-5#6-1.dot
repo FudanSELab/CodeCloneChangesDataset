@@ -1,0 +1,33 @@
+digraph {
+3 [style = filled, label = "SerializedHeader x2 = serializedHeader(\"Foo\",\"\").skipIfEmpty()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "SerializedHeader x1 = serializedHeader(\"Foo\",null).skipIfEmpty()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "SerializedPart x2 = serializedPart(\"Foo\",\"\").skipIfEmpty()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertString(x1.getValue()).isNull()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThrown(null).messages().contains(\"Empty value not allowed.\")@@@8@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "SerializedPart x3 = serializedPart(\"Foo\",\"\").schema(schema(STRING)._default(\"bar\").build()).serializer(OAPI_SERIALIZER).skipIfEmpty()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThrown(null).contains(\"Empty value not allowed.\")@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "a04_skipIfEmpty['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "SerializedPart x1 = serializedPart(\"Foo\",null).skipIfEmpty()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "a04_skipIfEmpty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertString(x2.getValue()).isNull()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "a04_skipIfEmpty['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "SerializedHeader x3 = serializedHeader(\"Foo\",\"\").schema(schema(STRING)._default(\"bar\").build()).serializer(OAPI_SERIALIZER).skipIfEmpty()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->1 [style = bold, label=""];
+1->12 [style = dashed, label="0"];
+3->6 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+3->10 [style = dashed, label="0"];
+8->5 [style = bold, label=""];
+12->4 [style = bold, label=""];
+2->10 [style = bold, label=""];
+11->9 [style = bold, label=""];
+9->2 [style = bold, label=""];
+1->7 [style = bold, label=""];
+10->6 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+0->5 [style = bold, label=""];
+6->12 [style = bold, label=""];
+}

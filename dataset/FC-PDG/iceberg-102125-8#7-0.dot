@@ -1,0 +1,31 @@
+digraph {
+8 [style = filled, label = "copyManifest['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ManifestFile manifest@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "copyManifest['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "return ManifestFiles.copyManifest(ops.current().formatVersion(),reader,newFile,snapshotId(),summaryBuilder,ALLOWED_ENTRY_STATUSES)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "OutputFile newFile = newManifestOutput()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "InputFile toCopy = ops.io().newInputFile(manifest.path())@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "OutputFile newManifestPath = newManifestOutput()@@@4@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "TableMetadata current = ops.current()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "copyManifest['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "OutputFile newManifestPath = newManifestOutput()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return ManifestFiles.copyAppendManifest(current.formatVersion(),toCopy,current.specsById(),newManifestPath,snapshotId(),summaryBuilder)@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8->1 [style = dotted, label="true"];
+5->7 [style = bold, label=""];
+6->5 [style = bold, label=""];
+2->3 [style = solid, label="newManifestPath"];
+3->10 [style = dashed, label="0"];
+9->10 [style = solid, label="newFile"];
+7->4 [style = solid, label="toCopy"];
+9->10 [style = bold, label=""];
+3->4 [style = solid, label="newManifestPath"];
+3->4 [style = dashed, label="0"];
+2->9 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+7->3 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->9 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+6->1 [style = dotted, label="true"];
+}

@@ -1,0 +1,38 @@
+digraph {
+6 [style = filled, label = "Range range = axis.getRange()@@@19@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "CategoryDataset<String,String> newData = DatasetUtils.createCategoryDataset(\"S\",\"C\",data)@@@12@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "Number(((( data = new Integer((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1cdcca@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "LocalListener l = new LocalListener()@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(true,l.flag)@@@17@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "CategoryDataset newData = DatasetUtils.createCategoryDataset(\"S\",\"C\",data)@@@12@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertTrue(\"Expecting the lower bound of the range to be around -30: \" + range.getLowerBound(),range.getLowerBound() <= -30)@@@20@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "this.chart.addChangeListener(l)@@@14@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "ValueAxis axis = plot.getRangeAxis()@@@18@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testReplaceDataset['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "testReplaceDataset['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "plot.setDataset(newData)@@@16@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertTrue(\"Expecting the upper bound of the range to be around 30: \" + range.getUpperBound(),range.getUpperBound() >= 30)@@@21@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "CategoryPlot plot = (CategoryPlot)this.chart.getPlot()@@@15@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testReplaceDataset['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->3 [style = bold, label=""];
+11->5 [style = solid, label="newData"];
+2->11 [style = solid, label="data"];
+11->12 [style = dashed, label="0"];
+2->12 [style = solid, label="data"];
+12->0 [style = bold, label=""];
+2->12 [style = bold, label=""];
+0->8 [style = solid, label="l"];
+9->6 [style = bold, label=""];
+3->9 [style = bold, label=""];
+11->0 [style = bold, label=""];
+12->5 [style = solid, label="newData"];
+7->2 [style = bold, label=""];
+6->10 [style = bold, label=""];
+0->8 [style = bold, label=""];
+14->2 [style = bold, label=""];
+8->4 [style = bold, label=""];
+10->1 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->11 [style = bold, label=""];
+13->2 [style = bold, label=""];
+}

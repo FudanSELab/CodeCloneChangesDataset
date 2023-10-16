@@ -1,0 +1,38 @@
+digraph {
+15 [style = filled, label = "sql(\"insert into empdefaults (ename, empno) values (?, ?)\").ok().bindType(\"RecordType(VARCHAR(20) ?0, INTEGER ?1)\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "sql(\"insert into empnullables (ename, empno) select ?, ? from (values (1))\").ok().bindType(\"RecordType(VARCHAR(20) ?0, INTEGER ?1)\")@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testInsertBindWithCustomInitializerExpressionFactory['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+16 [style = filled, label = "sql(\"insert into empdefaults (ename, deptno) ^values (null, ?)^\").fails(\"Column 'ENAME' has no default value and does not allow NULLs\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final String sql2 = \"insert into empnullables (ename, empno)\" + \"select ?, ? from (values (1))\" + \"union all\" + \"select ?, ? from (values (time '1:2:3'))\"@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final String expected2 = \"RecordType(VARCHAR(20) ?0, INTEGER ?1,\" + \" VARCHAR(20) ?2, INTEGER ?3)\"@@@12@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+17 [style = filled, label = "sql(\"insert into empdefaults (deptno) values (?)\").ok().bindType(\"RecordType(INTEGER ?0)\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "sql(sql2).ok().bindType(expected2)@@@13@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "sql(sql0).ok().bindType(\"RecordType(INTEGER ?0, VARCHAR(20) ?1, INTEGER ?2)\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "sql(\"insert into empnullables (ename, empno) values (?, ? + 1)\").ok().bindType(\"RecordType(VARCHAR(20) ?0, INTEGER ?1)\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "sql(\"insert into ^empdefaults^ values (null, ?)\").fails(\"Number of INSERT target columns \(9\) does not equal \" + \"number of source items \(2\)\")@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "sql(sql3).ok().bindType(\"RecordType(VARCHAR(20) ?0, INTEGER ?1)\")@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testInsertBind['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final String sql1 = \"insert into empnullables (empno, ename, deptno)\" + \"values (?, 'Pat', 1), (2, ?, ?), (3, 'Tod', ?), (4, 'Arthur', null)\"@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testInsertBind['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "sql(sql1).ok().bindType(\"RecordType(INTEGER ?0, VARCHAR(20) ?1, INTEGER ?2, INTEGER ?3)\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final String sql3 = \"insert into empnullables (ename, empno)\" + \"with v as (values ('a'))\" + \"select ?, ? from (values (1))\"@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final String sql0 = \"insert into empnullables (empno, ename, deptno)\" + \"values (?, ?, ?)\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->10 [style = bold, label=""];
+16->14 [style = bold, label=""];
+6->4 [style = bold, label=""];
+0->11 [style = bold, label=""];
+13->17 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->5 [style = bold, label=""];
+1->2 [style = solid, label="expected2"];
+7->1 [style = bold, label=""];
+9->0 [style = bold, label=""];
+10->8 [style = bold, label=""];
+5->9 [style = bold, label=""];
+12->5 [style = bold, label=""];
+15->16 [style = bold, label=""];
+8->7 [style = bold, label=""];
+11->6 [style = bold, label=""];
+9->15 [style = dashed, label="0"];
+17->15 [style = bold, label=""];
+}

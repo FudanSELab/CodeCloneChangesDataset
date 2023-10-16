@@ -1,0 +1,28 @@
+digraph {
+7 [style = filled, label = "final ProcessorTopology processorTopology = builder.internalTopologyBuilder.rewriteTopology(new StreamsConfig(StreamsTestUtils.getStreamsConfig(APP_ID))).buildTopology()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "shouldUseProvidedTimestampExtractor['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "final ConsumedInternal consumed = new ConsumedInternal<>(Consumed.with(new MockTimestampExtractor()))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "builder.stream(Collections.singleton(\"topic\"),consumed)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "ktableShouldUseProvidedTimestampExtractor['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "shouldUseProvidedTimestampExtractor['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final ConsumedInternal<String,String> consumed = new ConsumedInternal<>(Consumed.with(new MockTimestampExtractor()))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final ProcessorTopology processorTopology = builder.internalTopologyBuilder.rewriteTopology(new StreamsConfig(StreamsTestUtils.getStreamsConfig(APP_ID))).build()@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "builder.buildAndOptimizeTopology()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(processorTopology.source(\"topic\").getTimestampExtractor(),instanceOf())@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "builder.table(\"topic\",consumed,materialized)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+6->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->5 [style = solid, label="consumed"];
+8->10 [style = bold, label=""];
+10->9 [style = solid, label="consumed"];
+10->9 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+9->0 [style = bold, label=""];
+5->0 [style = bold, label=""];
+0->4 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+7->3 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

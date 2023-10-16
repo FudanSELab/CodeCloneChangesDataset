@@ -1,0 +1,37 @@
+digraph {
+3 [style = filled, label = "Assert.assertEquals(0,session.prepareResponseCalls)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "InstrumentedCoordinatorSessions sessions = new InstrumentedCoordinatorSessions()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "InstrumentedCoordinatorSession session = sessions.registerSession(sessionID,PARTICIPANTS,false)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "handlePrepareResponse['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Assert.assertTrue(session.prepareSuccess)@@@10@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "Assert.assertEquals(0,session.failCalls)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "Assert.assertEquals(1,session.failCalls)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "handleFailureMessage['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "UUID sessionID = registerSession()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "handlePrepareResponse['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "sessions.handleFailSessionMessage(new FailSession(sessionID))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Assert.assertEquals(true,session.prepareSuccess)@@@10@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "sessions.handlePrepareResponse(new PrepareConsistentResponse(sessionID,PARTICIPANT1,true))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Assert.assertEquals(1,session.prepareResponseCalls)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assert.assertEquals(PARTICIPANT1,session.preparePeer)@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+8->7 [style = bold, label=""];
+5->4 [style = solid, label="sessionID"];
+0->12 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+6->13 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+10->1 [style = bold, label=""];
+4->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+5->0 [style = solid, label="sessionID"];
+2->1 [style = bold, label=""];
+7->9 [style = dashed, label="0"];
+11->13 [style = bold, label=""];
+6->8 [style = bold, label=""];
+14->1 [style = bold, label=""];
+5->11 [style = solid, label="sessionID"];
+8->9 [style = bold, label=""];
+12->11 [style = bold, label=""];
+}

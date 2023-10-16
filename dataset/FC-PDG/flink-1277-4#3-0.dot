@@ -1,0 +1,37 @@
+digraph {
+2 [style = filled, label = "final RocksDBResourceContainer optionsContainer = new RocksDBResourceContainer()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "createBackend['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "int numKeyGroups@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Collection<KeyedStateHandle> stateHandles@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "return new RocksDBKeyedStateBackendBuilder<>(\"no-op\",ClassLoader.getSystemClassLoader(),temporaryFolder.newFolder(),optionsContainer,null,new KvStateRegistry().createTaskRegistry(new JobID(),new JobVertexID()),StringSerializer.INSTANCE,numKeyGroups,keyGroupRange,new ExecutionConfig(),TestLocalRecoveryConfig.disabled(),RocksDBStateBackend.PriorityQueueStateType.ROCKSDB,TtlTimeProvider.DEFAULT,new UnregisteredMetricsGroup(),stateHandles,UncompressedStreamCompressionDecorator.INSTANCE,new CloseableRegistry()).build()@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+10 [style = filled, label = "KeyGroupRange keyGroupRange@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "TypeSerializer<K> keySerializer@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "File instanceBasePath@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "return new RocksDBKeyedStateBackendBuilder<>(\"no-op\",ClassLoader.getSystemClassLoader(),temporaryFolder.newFolder(),optionsContainer,null,new KvStateRegistry().createTaskRegistry(new JobID(),new JobVertexID()),StringSerializer.INSTANCE,numKeyGroups,keyGroupRange,new ExecutionConfig(),TestLocalRecoveryConfig.disabled(),queueStateType,TtlTimeProvider.DEFAULT,new UnregisteredMetricsGroup(),stateHandles,UncompressedStreamCompressionDecorator.INSTANCE,new CloseableRegistry()).build()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "createBackend['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "builderForTestDefaults['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "return new RocksDBKeyedStateBackendBuilder<>(\"no-op\",ClassLoader.getSystemClassLoader(),instanceBasePath,optionsContainer,null,new KvStateRegistry().createTaskRegistry(new JobID(),new JobVertexID()),keySerializer,2,new KeyGroupRange(0,1),new ExecutionConfig(),TestLocalRecoveryConfig.disabled(),RocksDBStateBackend.PriorityQueueStateType.HEAP,TtlTimeProvider.DEFAULT,new UnregisteredMetricsGroup(),Collections.emptyList(),UncompressedStreamCompressionDecorator.INSTANCE,new CloseableRegistry())@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "KeyGroupRange keyGroupRange@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Collection<KeyedStateHandle> stateHandles@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "temporaryFolder.create()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->8 [style = dashed, label="0"];
+5->8 [style = bold, label=""];
+14->2 [style = bold, label=""];
+7->10 [style = dotted, label="true"];
+7->9 [style = dotted, label="true"];
+6->4 [style = dotted, label="true"];
+5->0 [style = bold, label=""];
+6->3 [style = dotted, label="true"];
+14->12 [style = dotted, label="true"];
+13->11 [style = solid, label="instanceBasePath"];
+12->11 [style = solid, label="keySerializer"];
+7->2 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+2->11 [style = bold, label=""];
+14->13 [style = dotted, label="true"];
+7->4 [style = dotted, label="true"];
+2->5 [style = bold, label=""];
+2->11 [style = solid, label="optionsContainer"];
+6->2 [style = bold, label=""];
+6->1 [style = dotted, label="true"];
+}

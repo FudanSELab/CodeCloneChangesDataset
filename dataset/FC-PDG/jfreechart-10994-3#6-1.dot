@@ -1,0 +1,36 @@
+digraph {
+1 [style = filled, label = "XIntervalDataItem item1 = new XIntervalDataItem(1.0,2.0,3.0,4.0)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "YIntervalDataItem item2 = (YIntervalDataItem)item1.clone()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "XIntervalDataItem item2 = CloneUtils.clone(item1)@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "XIntervalDataItem item2 = (XIntervalDataItem)item1.clone()@@@4@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+0 [style = filled, label = "assertTrue(item1.getClass() == item2.getClass())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertTrue(item1.equals(item2))@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testCloning['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "YIntervalDataItem item1 = new YIntervalDataItem(1.0,2.0,1.5,2.5)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertTrue(item1 != item2)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testCloning['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "testCloning['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->5 [style = bold, label=""];
+0->3 [style = bold, label=""];
+8->4 [style = solid, label="item2"];
+7->1 [style = bold, label=""];
+5->4 [style = solid, label="item2"];
+2->1 [style = bold, label=""];
+1->6 [style = solid, label="item1"];
+6->4 [style = solid, label="item2"];
+6->3 [style = solid, label="item2"];
+1->10 [style = dashed, label="0"];
+9->10 [style = bold, label=""];
+8->3 [style = solid, label="item2"];
+10->4 [style = solid, label="item1"];
+1->4 [style = solid, label="item1"];
+4->0 [style = bold, label=""];
+6->4 [style = bold, label=""];
+1->6 [style = bold, label=""];
+5->6 [style = dashed, label="0"];
+10->8 [style = bold, label=""];
+5->3 [style = solid, label="item2"];
+5->4 [style = bold, label=""];
+5->8 [style = dashed, label="0"];
+8->4 [style = bold, label=""];
+}

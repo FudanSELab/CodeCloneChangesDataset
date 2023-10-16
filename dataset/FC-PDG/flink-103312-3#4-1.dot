@@ -1,0 +1,25 @@
+digraph {
+6 [style = filled, label = "env.registerTypeWithKryoSerializer(,)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "DataStream<File> src = env.fromElements(new File(\"/\")).assignTimestampsAndWatermarks(WatermarkStrategy.forMonotonousTimestamps().withTimestampAssigner(null))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "validateListStateDescriptorConfigured(result)@@@17@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testApplyWindowState['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "DataStream<File> src = env.fromElements(new File(\"/\"))@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "SingleOutputStreamOperator<?> result = src.keyBy(new KeySelector<File,String>(){@Override public String getKey(File value){return null}}).timeWindow(Time.milliseconds(1000)).process(new ProcessWindowFunction<File,String,String,TimeWindow>(){@Override public void process(String s,Context ctx,Iterable<File> input,Collector<String> out){}})@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testApplyWindowState['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "env.setStreamTimeCharacteristic(TimeCharacteristic.IngestionTime)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testProcessWindowState['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+5->1 [style = bold, label=""];
+3->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+1->6 [style = bold, label=""];
+4->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+6->7 [style = bold, label=""];
+9->1 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+4->2 [style = solid, label="result"];
+}

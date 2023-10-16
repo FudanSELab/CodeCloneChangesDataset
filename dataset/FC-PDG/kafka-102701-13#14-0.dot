@@ -1,0 +1,34 @@
+digraph {
+5 [style = filled, label = "assertThat(results,is(Arrays.asList(KeyValue.pair(\"A\",\"A\"),KeyValue.pair(\"A\",\"A:A\"),KeyValue.pair(\"B\",\"B\"),KeyValue.pair(\"B\",\"B:B\"),KeyValue.pair(\"C\",\"C\"),KeyValue.pair(\"C\",\"C:C\"),KeyValue.pair(\"D\",\"D\"),KeyValue.pair(\"D\",\"D:D\"),KeyValue.pair(\"E\",\"E\"),KeyValue.pair(\"E\",\"E:E\"))))@@@9@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final List<KeyValueTimestamp<String,String>> results = receiveMessages(new StringDeserializer(),new StringDeserializer(),10)@@@7@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "produceMessages(mockTime.milliseconds())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "startStreams()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "groupedStream.reduce(reducer,Materialized.as(\"reduce-by-key\")).toStream().to(outputTopic,Produced.with(Serdes.String(),Serdes.String()))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "produceMessages(mockTime.milliseconds())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "shouldReduce['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "shouldCountHelper()@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "results.sort(null)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "shouldReduce['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "groupedStream.count(Materialized.as(\"count-by-key\")).toStream().to(outputTopic,Produced.with(Serdes.String(),Serdes.Long()))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "shouldCount['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertThat(results,is(Arrays.asList(new KeyValueTimestamp(\"A\",\"A\",mockTime.milliseconds()),new KeyValueTimestamp(\"A\",\"A:A\",mockTime.milliseconds()),new KeyValueTimestamp(\"B\",\"B\",mockTime.milliseconds()),new KeyValueTimestamp(\"B\",\"B:B\",mockTime.milliseconds()),new KeyValueTimestamp(\"C\",\"C\",mockTime.milliseconds()),new KeyValueTimestamp(\"C\",\"C:C\",mockTime.milliseconds()),new KeyValueTimestamp(\"D\",\"D\",mockTime.milliseconds()),new KeyValueTimestamp(\"D\",\"D:D\",mockTime.milliseconds()),new KeyValueTimestamp(\"E\",\"E\",mockTime.milliseconds()),new KeyValueTimestamp(\"E\",\"E:E\",mockTime.milliseconds()))))@@@9@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final List<KeyValue<String,String>> results = receiveMessages(new StringDeserializer(),new StringDeserializer(),10)@@@7@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4->10 [style = bold, label=""];
+6->1 [style = bold, label=""];
+7->5 [style = solid, label="results"];
+11->12 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+8->4 [style = bold, label=""];
+9->1 [style = bold, label=""];
+8->10 [style = solid, label="results"];
+3->7 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->8 [style = bold, label=""];
+13->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+1->11 [style = bold, label=""];
+0->2 [style = bold, label=""];
+7->8 [style = dashed, label="0"];
+}

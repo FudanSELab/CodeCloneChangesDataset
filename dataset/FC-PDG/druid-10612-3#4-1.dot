@@ -1,0 +1,21 @@
+digraph {
+2 [style = filled, label = "final LookupCoordinatorResource lookupCoordinatorResource = new LookupCoordinatorResource(EasyMock.createStrictMock(),mapper,mapper)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "HostAndPort newNode = HostAndPort.fromParts(\"localhost\",4352)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testGetLookupStatusDetailedTrue['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "final LookupCoordinatorResource lookupCoordinatorResource = new LookupCoordinatorResource(EasyMock.createStrictMock(),MAPPER,MAPPER)@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "Assert.assertEquals(new LookupCoordinatorResource.LookupStatus(false,null),lookupCoordinatorResource.getLookupStatus(LOOKUP_NAME,SINGLE_LOOKUP,ImmutableList.of(LOOKUP_NODE,newNode),NODES_LOOKUP_STATE,false))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testGetLookupStatusDetailedFalse['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testGetLookupStatusDetailedTrue['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Assert.assertEquals(new LookupCoordinatorResource.LookupStatus(false,ImmutableList.of(newNode)),lookupCoordinatorResource.getLookupStatus(LOOKUP_NAME,SINGLE_LOOKUP,ImmutableList.of(LOOKUP_NODE,newNode),NODES_LOOKUP_STATE,true))@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->0 [style = bold, label=""];
+0->6 [style = solid, label="newNode"];
+3->2 [style = bold, label=""];
+0->6 [style = bold, label=""];
+7->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+0->1 [style = solid, label="newNode"];
+1->6 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+}

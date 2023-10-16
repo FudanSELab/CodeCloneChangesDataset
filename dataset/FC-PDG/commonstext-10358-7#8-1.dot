@@ -1,0 +1,34 @@
+digraph {
+6 [style = filled, label = "assertThat(count(1().isEqualTo(1)@@@19@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "sb.appendln(\"foo\")@@@16@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "sb.appendln(\"foo\",0,3)@@@16@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final TextStringBuilder sb = spy(new TextStringBuilder())@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "assertThat(sb.toString()).isEqualTo(\"foo\" + SEP)@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "assertThat(count(0().isEqualTo(2)@@@18@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "verify(sb,times(2)).append(anyString())@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "testAppendln_String_int_int['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final int(( count = new int((((@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "sb.appendln(\"foo\")@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "testAppendln_String['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testAppendln_String['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "verify(sb,times(1)).appendNewLine()@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final TextStringBuilder sb = new TextStringBuilder(){@Override public TextStringBuilder append(final String str,final int startIndex,final int length){count(0(++return super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@150d531strstartIndexlength}@Override public TextStringBuilder appendNewLine(){count(1(++return super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@150d53f}}@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(sb.toString()).isEqualTo(\"foo\" + SEP)@@@17@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->8 [style = dashed, label="0"];
+1->6 [style = bold, label=""];
+9->12 [style = bold, label=""];
+10->8 [style = bold, label=""];
+3->1 [style = bold, label=""];
+5->0 [style = bold, label=""];
+11->9 [style = bold, label=""];
+8->11 [style = bold, label=""];
+0->13 [style = bold, label=""];
+4->5 [style = bold, label=""];
+13->3 [style = bold, label=""];
+2->13 [style = dashed, label="0"];
+12->7 [style = bold, label=""];
+5->0 [style = solid, label="count"];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+14->5 [style = bold, label=""];
+}

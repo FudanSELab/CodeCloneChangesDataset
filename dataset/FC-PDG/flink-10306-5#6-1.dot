@@ -1,0 +1,21 @@
+digraph {
+5 [style = filled, label = "testStartWithDiscoverPartitionsOnce['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "assertEquals(\"A periodic partition discovery callable should have been scheduled\",1,context.getPeriodicCallables().size())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertTrue(context.getPeriodicCallables().isEmpty())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "enumerator.start()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertTrue(context.getOneTimeCallables().isEmpty())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testStartWithDiscoverPartitionsOnce['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testStartWithPeriodicPartitionDiscovery['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "MockSplitEnumeratorContext<KafkaPartitionSplit> context = new MockSplitEnumeratorContext<>(NUM_SUBTASKS)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertEquals(\"A one time partition discovery callable should have been scheduled\",1,context.getOneTimeCallables().size())@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+5->3 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+8->6 [style = bold, label=""];
+7->1 [style = bold, label=""];
+3->8 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

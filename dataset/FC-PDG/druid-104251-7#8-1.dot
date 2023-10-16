@@ -1,0 +1,26 @@
+digraph {
+2 [style = filled, label = "String disabledVersion = \"\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final EqualDistributionWorkerSelectStrategy strategy = new EqualDistributionWorkerSelectStrategy(null)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "FillCapacityWorkerSelectStrategy strategy = new FillCapacityWithAffinityWorkerSelectStrategy(new AffinityConfig(ImmutableMap.of(\"foo\",ImmutableSet.of(\"localhost\")),false))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "ImmutableWorkerInfo worker = strategy.findWorkerForTask(new RemoteTaskRunnerConfig(),ImmutableMap.of(\"lhost\",new ImmutableWorkerInfo(new Worker(\"http\",\"disableHost\",\"disableHost\",10,disabledVersion),2,new HashSet<>(),new HashSet<>(),DateTimes.nowUtc()),\"localhost\",new ImmutableWorkerInfo(new Worker(\"http\",\"enableHost\",\"enableHost\",10,\"v1\"),5,new HashSet<>(),new HashSet<>(),DateTimes.nowUtc())),new NoopTask(null,null,1,0,null,null,null){@Override public String getDataSource(){return \"foo\"}})@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "Assert.assertEquals(\"lhost\",worker.getWorker().getHost())@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testFindWorkerForTaskWithNulls['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Assert.assertEquals(\"enableHost\",worker.getWorker().getHost())@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ImmutableWorkerInfo worker = strategy.findWorkerForTask(new RemoteTaskRunnerConfig(),ImmutableMap.of(\"lhost\",new ImmutableWorkerInfo(new Worker(\"http\",\"disableHost\",\"disableHost\",10,disabledVersion),2,new HashSet<>(),new HashSet<>(),DateTimes.nowUtc()),\"localhost\",new ImmutableWorkerInfo(new Worker(\"http\",\"enableHost\",\"enableHost\",10,\"v1\"),5,new HashSet<>(),new HashSet<>(),DateTimes.nowUtc())),new NoopTask(null,null,null,1,0,null,null,null){@Override public String getDataSource(){return \"foo\"}})@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "ImmutableWorkerInfo worker = strategy.findWorkerForTask(new RemoteTaskRunnerConfig(),ImmutableMap.of(\"lhost\",new ImmutableWorkerInfo(new Worker(\"http\",\"lhost\",\"lhost\",1,\"v1\"),0,new HashSet<>(),new HashSet<>(),DateTimes.nowUtc()),\"localhost\",new ImmutableWorkerInfo(new Worker(\"http\",\"localhost\",\"localhost\",1,\"v1\"),0,new HashSet<>(),new HashSet<>(),DateTimes.nowUtc())),new NoopTask(null,null,1,0,null,null,null))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testOneDisableWorkerDifferentUsedCapacity['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testOneDisableWorkerDifferentUsedCapacity['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7->9 [style = bold, label=""];
+6->1 [style = bold, label=""];
+2->6 [style = solid, label="disabledVersion"];
+5->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+2->4 [style = solid, label="disabledVersion"];
+9->10 [style = bold, label=""];
+3->2 [style = bold, label=""];
+10->8 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+0->6 [style = bold, label=""];
+}

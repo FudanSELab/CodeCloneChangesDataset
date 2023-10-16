@@ -1,0 +1,13 @@
+digraph {
+3 [style = filled, label = "{Person person = personMapper.findOneUsingSetter(1)assertThat(person.getId()).isEqualTo(1)assertThat(person.getFirstName()).isEqualTo(\"John\")assertThat(person.getLastName()).isEqualTo(\"Smith\")assertThat(person.getPersonType()).isEqualTo(Person.PersonType.PERSON)}@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testForResult['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "{Person employee = personMapper.findOneUsingSetter(2)assertThat(employee.getId()).isEqualTo(2)assertThat(employee.getFirstName()).isEqualTo(\"Mike\")assertThat(employee.getLastName()).isEqualTo(\"Jordan\")assertThat(employee.getPersonType()).isEqualTo(Person.PersonType.EMPLOYEE)}@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testForArg['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "testForArg['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "PersonMapper personMapper = sqlSession.getMapper()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+}

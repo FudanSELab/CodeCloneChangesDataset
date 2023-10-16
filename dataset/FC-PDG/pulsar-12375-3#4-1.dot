@@ -1,0 +1,22 @@
+digraph {
+6 [style = filled, label = "runCmd['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "runCmd['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "String json = Utils.printJson(isBlank(instanceId)? admin.sink().getSinkStatus(tenant,namespace,sinkName): admin.sink().getSinkStatus(tenant,namespace,sinkName,Integer.parseInt(instanceId)))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "System.out.println(gson.toJson(new JsonParser().parse(json)))@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "String json = Utils.printJson(isBlank(instanceId)? admin.source().getSourceStatus(tenant,namespace,sourceName): admin.source().getSourceStatus(tenant,namespace,sourceName,Integer.parseInt(instanceId)))@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "runCmd['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Gson gson = new GsonBuilder().setPrettyPrinting().create()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String json = JsonFormat.printer().print(isBlank(instanceId)? admin.source().getSourceStatus(tenant,namespace,sourceName): admin.source().getSourceStatus(tenant,namespace,sourceName,Integer.parseInt(instanceId)))@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+3->0 [style = bold, label=""];
+7->1 [style = solid, label="json"];
+7->0 [style = bold, label=""];
+6->7 [style = bold, label=""];
+3->4 [style = dashed, label="0"];
+3->7 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+3->1 [style = solid, label="json"];
+4->1 [style = solid, label="json"];
+}

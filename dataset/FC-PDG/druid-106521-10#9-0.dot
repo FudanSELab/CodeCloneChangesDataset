@@ -1,0 +1,29 @@
+digraph {
+4 [style = filled, label = "query.isApplyLimitPushDown()@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "expectedException.expect()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testRejectForceLimitPushDownWithHaving['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "expectedException.expectMessage(\"Limit push down when sorting by a post aggregator is not supported.\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testRejectForceLimitPushDownWithHaving['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "expectedException.expect()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "makeQueryBuilder().setDataSource(QueryRunnerTestHelper.DATA_SOURCE).setGranularity(QueryRunnerTestHelper.ALL_GRAN).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.MARKET_DIMENSION,\"marketalias\")).setInterval(QueryRunnerTestHelper.FULL_ON_INTERVAL_SPEC).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(\"marketalias\",OrderByColumnSpec.Direction.DESCENDING)),2)).setAggregatorSpecs(QueryRunnerTestHelper.ROWS_COUNT).overrideContext(ImmutableMap.of(GroupByQueryConfig.CTX_KEY_FORCE_LIMIT_PUSH_DOWN,true)).setHavingSpec(new GreaterThanHavingSpec(\"rows\",10)).build()@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "testGroupByLimitPushDownPostAggNotSupported['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "expectedException.expectMessage(\"Cannot force limit push down when a having spec is present.\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final GroupByQuery query = makeQueryBuilder().setDataSource(QueryRunnerTestHelper.DATA_SOURCE).setGranularity(QueryRunnerTestHelper.ALL_GRAN).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.MARKET_DIMENSION,\"marketalias\")).setInterval(QueryRunnerTestHelper.FULL_ON_INTERVAL_SPEC).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(\"marketalias\",OrderByColumnSpec.Direction.DESCENDING)),2)).setAggregatorSpecs(QueryRunnerTestHelper.ROWS_COUNT).overrideContext(ImmutableMap.of(GroupByQueryConfig.CTX_KEY_FORCE_LIMIT_PUSH_DOWN,true)).setHavingSpec(new GreaterThanHavingSpec(\"rows\",10)).build()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "GroupByQueryRunnerTestHelper.runQuery(factory,runner,query)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "GroupByQuery query = makeQueryBuilder().setDataSource(QueryRunnerTestHelper.DATA_SOURCE).setGranularity(QueryRunnerTestHelper.ALL_GRAN).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.MARKET_DIMENSION,\"marketalias\")).setInterval(QueryRunnerTestHelper.FULL_ON_INTERVAL_SPEC).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(\"constant\",OrderByColumnSpec.Direction.DESCENDING)),2)).setAggregatorSpecs(QueryRunnerTestHelper.ROWS_COUNT).setPostAggregatorSpecs(Collections.singletonList(new ConstantPostAggregator(\"constant\",1))).overrideContext(ImmutableMap.of(GroupByQueryConfig.CTX_KEY_FORCE_LIMIT_PUSH_DOWN,true)).build()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6->1 [style = bold, label=""];
+11->8 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+10->7 [style = solid, label="query"];
+9->10 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+2->9 [style = dashed, label="0"];
+10->7 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+2->5 [style = bold, label=""];
+8->9 [style = bold, label=""];
+}

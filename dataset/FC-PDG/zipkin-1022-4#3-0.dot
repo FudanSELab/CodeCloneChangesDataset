@@ -1,0 +1,23 @@
+digraph {
+4 [style = filled, label = "return client.newCall(new Request.Builder().url(url(server,\"/api/v2/spans\")).header(\"Origin\",origin).post(RequestBody.create(\"((\",MediaType.parse(\"application/json\"))).build()).execute()@@@3@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "String path@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "String method@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "postSpansFromOrigin['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "optionsForOrigin['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String origin@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "postSpansFromOrigin['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "return client.newCall(new Request.Builder().url(url(server,path)).header(\"Origin\",origin).header(\"access-control-request-method\",method).header(\"access-control-request-headers\",\"content-type\").method(\"OPTIONS\",null).build()).execute()@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "return client.newCall(new Request.Builder().url(url(server,\"/api/v2/spans\")).header(\"Origin\",origin).post(RequestBody.create(MediaType.parse(\"application/json\"),\"((\")).build()).execute()@@@3@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+5 [style = filled, label = "String origin@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7->6 [style = dotted, label="true"];
+1->2 [style = bold, label=""];
+1->0 [style = dotted, label="true"];
+0->9 [style = dashed, label="0"];
+7->9 [style = dotted, label="true"];
+7->8 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+3->0 [style = dotted, label="true"];
+3->4 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+7->5 [style = dotted, label="true"];
+}

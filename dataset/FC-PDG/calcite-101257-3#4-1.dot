@@ -1,0 +1,24 @@
+digraph {
+3 [style = filled, label = "testAggregateGroupingWithDistinctFails['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "RelNode root = builder.scan(\"EMP\").aggregate(builder.groupKey(6,7),builder.aggregateCall(SqlStdOperatorTable.GROUPING,true,null,\"g\",builder.field(\"DEPTNO\"))).build()@@@5@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+4 [style = filled, label = "RelNode root = builder.scan(\"EMP\").aggregate(builder.groupKey(6,7),builder.aggregateCall(SqlStdOperatorTable.GROUPING,true,false,null,\"g\",builder.field(\"DEPTNO\"))).build()@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testAggregateGroupingWithDistinctFails['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "testAggregateGroupingWithFilterFails['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "fail(\"expected error, got \" + root)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "RelNode root = builder.scan(\"EMP\").aggregate(builder.groupKey(6,7),builder.aggregateCall(SqlStdOperatorTable.GROUPING,false,builder.literal(true),\"g\",builder.field(\"DEPTNO\"))).build()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final RelBuilder builder = RelBuilder.create(config().build())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->4 [style = dashed, label="0"];
+5->2 [style = bold, label=""];
+6->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+2->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+2->6 [style = bold, label=""];
+2->1 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+1->0 [style = solid, label="root"];
+4->0 [style = bold, label=""];
+6->0 [style = solid, label="root"];
+4->0 [style = solid, label="root"];
+}

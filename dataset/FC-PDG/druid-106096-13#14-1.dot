@@ -1,0 +1,38 @@
+digraph {
+0 [style = filled, label = "JoinTestHelper.verifyCursors(new HashJoinSegmentStorageAdapter(factSegment.asStorageAdapter(),joinableClauses,preAnalysis).makeCursors(filter,Intervals.ETERNITY,VirtualColumns.EMPTY,Granularities.ALL,false,null),ImmutableList.of(\"page\",\"countryIsoCode\",FACT_TO_COUNTRY_ON_NUMBER_PREFIX + \"countryIsoCode\",FACT_TO_COUNTRY_ON_NUMBER_PREFIX + \"countryName\",FACT_TO_COUNTRY_ON_NUMBER_PREFIX + \"countryNumber\"),NullHandling.sqlCompatible()? ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c7ed,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c7f5,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c7fd,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c805,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c80d,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c815,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c81d,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c825,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c82d,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c835,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c83d,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c845): ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c850,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c858,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c860,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c868,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c870,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c878,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c880,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c888,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c890,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c898,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c8a0,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c8a8,new Object((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c8b0))@@@6@@@['1', '0', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB1BBB"];
+11 [style = filled, label = "test_makeCursors_factToCountryLeftWithFilterOnFacts['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "test_makeCursors_factToCountryInnerUsingCountryNumber['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "JoinTestHelper.verifyCursors(new HashJoinSegmentStorageAdapter(factSegment.asStorageAdapter(),joinableClauses,preAnalysis).makeCursors(filter,Intervals.ETERNITY,VirtualColumns.EMPTY,Granularities.ALL,false,null),ImmutableList.of(\"page\",\"countryIsoCode\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"countryIsoCode\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"countryName\",FACT_TO_COUNTRY_ON_ISO_CODE_PREFIX + \"countryNumber\"),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90ca3d))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "test_makeCursors_factToCountryInnerUsingCountryNumber['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Filter filter = new SelectorDimFilter(\"channel\",\"#de.wikipedia\",null).toFilter()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "List<JoinableClause> joinableClauses = ImmutableList.of(factToCountryOnNumber(JoinType.INNER))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "List<JoinableClause> joinableClauses = ImmutableList.of(factToCountryOnIsoCode(JoinType.LEFT))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "JoinFilterPreAnalysis preAnalysis = JoinFilterAnalyzer.computeJoinFilterPreAnalysis(JoinableClauses.fromList(joinableClauses),VirtualColumns.EMPTY,filter,true,true,true,QueryContexts.DEFAULT_ENABLE_JOIN_FILTER_REWRITE_MAX_SIZE)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "JoinTestHelper.verifyCursors(new HashJoinSegmentStorageAdapter(factSegment.asStorageAdapter(),joinableClauses,joinFilterPreAnalysisGroup).makeCursors(filter,Intervals.ETERNITY,VirtualColumns.EMPTY,Granularities.ALL,false,null),ImmutableList.of(\"page\",\"countryIsoCode\",FACT_TO_COUNTRY_ON_NUMBER_PREFIX + \"countryIsoCode\",FACT_TO_COUNTRY_ON_NUMBER_PREFIX + \"countryName\",FACT_TO_COUNTRY_ON_NUMBER_PREFIX + \"countryNumber\"),NullHandling.sqlCompatible()? ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c912,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c91a,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c922,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c92a,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c932,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c93a,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c942,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c94a,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c952,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c95a,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c962,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c96a): ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c975,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c97d,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c985,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c98d,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c995,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c99d,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c9a5,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c9ad,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c9b5,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c9bd,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c9c5,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c9cd,new Object((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@90c9d5))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "Filter filter = new SelectorDimFilter(\"channel\",\"#en.wikipedia\",null).toFilter()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "JoinFilterPreAnalysisGroup joinFilterPreAnalysisGroup = makeDefaultConfigPreAnalysisGroup(filter,joinableClauses,VirtualColumns.EMPTY)@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+9->2 [style = solid, label="filter"];
+1->5 [style = solid, label="filter"];
+4->3 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+9->2 [style = bold, label=""];
+1->2 [style = solid, label="filter"];
+1->9 [style = dashed, label="0"];
+7->3 [style = bold, label=""];
+3->2 [style = solid, label="joinableClauses"];
+9->8 [style = solid, label="filter"];
+6->5 [style = bold, label=""];
+1->0 [style = solid, label="filter"];
+2->0 [style = bold, label=""];
+1->6 [style = bold, label=""];
+3->6 [style = solid, label="joinableClauses"];
+1->6 [style = solid, label="filter"];
+11->10 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+10->9 [style = bold, label=""];
+10->2 [style = solid, label="joinableClauses"];
+3->10 [style = dashed, label="0"];
+2->8 [style = bold, label=""];
+}

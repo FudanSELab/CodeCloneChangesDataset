@@ -1,0 +1,37 @@
+digraph {
+0 [style = filled, label = "final ExasolTableForeignKey constraint = command.getObject()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "addObjectModifyActions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "List<DBEPersistAction> actionList@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "final ExasolTableUniqueKey constraint = command.getObject()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "ObjectChangeCommand command@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "SQLObjectEditor<ExasolTableUniqueKey,ExasolTable>.ObjectChangeCommand command@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "actionList.add(new SQLDatabasePersistAction(\"Alter PK\",\"ALTER TABLE \" + constraint.getTable().getFullyQualifiedName(DBPEvaluationContext.DDL) + \" MODIFY CONSTRAINT \" + constraint.getName() + \" \" + (constraint.getEnabled()? \"ENABLE\": \"DISABLE\")))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "actionList.add(new SQLDatabasePersistAction(\"Alter FK\",\"ALTER TABLE \" + constraint.getTable().getFullyQualifiedName(DBPEvaluationContext.DDL) + \" MODIFY CONSTRAINT \" + constraint.getName() + \" \" + (constraint.getEnabled()? \"ENABLE\": \"DISABLE\")))@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "List<DBEPersistAction> actionList@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "Map<String,Object> options@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "SQLObjectEditor<ExasolTableForeignKey,ExasolTable>.ObjectChangeCommand command@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB1BBB"];
+8 [style = filled, label = "addObjectModifyActions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "List<DBEPersistAction> actionList@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "addObjectModifyActions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "command.getProperties().containsKey(\"enabled\")@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8->0 [style = bold, label=""];
+5->3 [style = bold, label=""];
+5->10 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+14->11 [style = dotted, label="true"];
+2->12 [style = dashed, label="0"];
+3->10 [style = dashed, label="0"];
+8->9 [style = dotted, label="true"];
+14->13 [style = bold, label=""];
+8->6 [style = dotted, label="true"];
+5->10 [style = dotted, label="true"];
+5->3 [style = dotted, label="true"];
+14->12 [style = dotted, label="true"];
+4->1 [style = dotted, label="true"];
+2->9 [style = dashed, label="0"];
+4->2 [style = dotted, label="true"];
+0->13 [style = dashed, label="0"];
+4->0 [style = bold, label=""];
+0->5 [style = bold, label=""];
+13->5 [style = bold, label=""];
+}

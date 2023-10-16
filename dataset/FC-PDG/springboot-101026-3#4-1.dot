@@ -1,0 +1,26 @@
+digraph {
+0 [style = filled, label = "TestEntity entity = new TestEntity()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertThat(result).isEqualTo(123)@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "bindEntityManager()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Object result = this.testEntityManager.persistAndGetId(entity)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "persistAndGetIdShouldPersistAndGetId['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "Integer result = this.testEntityManager.persistAndGetId(entity,)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "verify(this.entityManager).persist(entity)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "persistAndGetIdShouldPersistAndGetId['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "persistAndGetIdForTypeShouldPersistAndGetId['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "given(this.persistenceUnitUtil.getIdentifier(entity)).willReturn(123)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+3->9 [style = bold, label=""];
+0->4 [style = solid, label="entity"];
+4->9 [style = dashed, label="0"];
+0->9 [style = solid, label="entity"];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+6->0 [style = bold, label=""];
+8->6 [style = bold, label=""];
+5->6 [style = bold, label=""];
+9->1 [style = bold, label=""];
+0->1 [style = solid, label="entity"];
+3->4 [style = bold, label=""];
+7->6 [style = bold, label=""];
+}

@@ -1,0 +1,28 @@
+digraph {
+8 [style = filled, label = "replicas.add(new Replica(\"node3\",map(ZkStateReader.BASE_URL_PROP,\"http://host2_2:8983/solr\",ZkStateReader.NODE_NAME_PROP,\"node3\",ZkStateReader.CORE_NAME_PROP,\"collection1\",ZkStateReader.REPLICA_TYPE,\"PULL\"),\"c1\",\"s1\"))@@@6@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "List<Replica> replicas = new ArrayList<Replica>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "replicas.add(new Replica(\"node2\",map(ZkStateReader.BASE_URL_PROP,\"http://host2:8983/solr\",ZkStateReader.NODE_NAME_PROP,\"node2\",ZkStateReader.CORE_NAME_PROP,\"collection1\",ZkStateReader.REPLICA_TYPE,\"TLOG\")))@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return replicas@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "replicas.add(new Replica(\"node1\",map(ZkStateReader.BASE_URL_PROP,\"http://host1:8983/solr\",ZkStateReader.NODE_NAME_PROP,\"node1\",ZkStateReader.CORE_NAME_PROP,\"collection1\",ZkStateReader.REPLICA_TYPE,\"NRT\")))@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "replicas.add(new Replica(\"node3\",map(ZkStateReader.BASE_URL_PROP,\"http://host2_2:8983/solr\",ZkStateReader.NODE_NAME_PROP,\"node3\",ZkStateReader.CORE_NAME_PROP,\"collection1\",ZkStateReader.REPLICA_TYPE,\"PULL\")))@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "replicas.add(new Replica(\"node1\",map(ZkStateReader.BASE_URL_PROP,\"http://host1:8983/solr\",ZkStateReader.NODE_NAME_PROP,\"node1\",ZkStateReader.CORE_NAME_PROP,\"collection1\",ZkStateReader.REPLICA_TYPE,\"NRT\"),\"c1\",\"s1\"))@@@4@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "getBasicReplicaList['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "getBasicReplicaList['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "getBasicReplicaList['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "replicas.add(new Replica(\"node2\",map(ZkStateReader.BASE_URL_PROP,\"http://host2:8983/solr\",ZkStateReader.NODE_NAME_PROP,\"node2\",ZkStateReader.CORE_NAME_PROP,\"collection1\",ZkStateReader.REPLICA_TYPE,\"TLOG\"),\"c1\",\"s1\"))@@@5@@@['0', '1', '0']", fillcolor = red, shape = ellipse image = "AAA1AAABBB2BBB"];
+5->3 [style = bold, label=""];
+7->9 [style = bold, label=""];
+6->1 [style = bold, label=""];
+1->4 [style = solid, label="replicas"];
+5->9 [style = dashed, label="0"];
+3->8 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+8->4 [style = bold, label=""];
+10->1 [style = bold, label=""];
+9->8 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+1->7 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

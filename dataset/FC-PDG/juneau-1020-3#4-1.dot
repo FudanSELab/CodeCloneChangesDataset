@@ -1,0 +1,29 @@
+digraph {
+14 [style = filled, label = "@Header(\"c\") Map<ImplicitSwappedPojo,ImplicitSwappedPojo> c@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "swappedPojoHeaders['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertClass['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "swappedPojoHeaders['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "@Header(\"c\") Map<SwappedPojo,SwappedPojo> c@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "@Header(n=\"c\",cf=\"uon\") Map<SwappedPojo,SwappedPojo> c@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "@Header(n=\"b\",cf=\"uon\") SwappedPojo(((((( b@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "assertClass['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "@Header(\"d\") Map<ImplicitSwappedPojo,ImplicitSwappedPojo((((((> d@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "@Header(n=\"d\",cf=\"uon\") Map<SwappedPojo,SwappedPojo((((((> d@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "implicitSwappedPojoHeaders['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertClass['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "@Header(\"d\") Map<SwappedPojo,SwappedPojo((((((> d@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "@Header(\"b\") SwappedPojo(((((( b@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "@Header(\"b\") ImplicitSwappedPojo(((((( b@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12->14 [style = dotted, label="true"];
+12->13 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+9->7 [style = dotted, label="true"];
+12->10 [style = dotted, label="true"];
+9->6 [style = dotted, label="true"];
+4->1 [style = dotted, label="true"];
+4->2 [style = dotted, label="true"];
+4->0 [style = dotted, label="true"];
+12->11 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+9->5 [style = dotted, label="true"];
+}

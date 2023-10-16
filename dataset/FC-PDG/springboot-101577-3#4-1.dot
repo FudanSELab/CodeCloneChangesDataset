@@ -1,0 +1,28 @@
+digraph {
+0 [style = filled, label = "assertThat(context.getEnvironment()).has(matchingPropertySource(\"foo\"))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "propertySourceAnnotationWithName['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "propertySourceAnnotationWithName['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "SpringApplication application = new SpringApplication()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "propertySourceAnnotationMultipleLocationsAndName['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "application.setWebApplicationType(WebApplicationType.NONE)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "context.close()@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(property).isEqualTo(\"frommorepropertiesfile\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "String property = context.getEnvironment().getProperty(\"the.property\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ConfigurableApplicationContext context = application.run()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(property).isEqualTo(\"fromspecificlocation\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "SpringApplication application = new SpringApplication()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->9 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+9->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+10->1 [style = bold, label=""];
+5->9 [style = bold, label=""];
+0->6 [style = bold, label=""];
+11->10 [style = bold, label=""];
+7->3 [style = bold, label=""];
+5->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+2->5 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}
