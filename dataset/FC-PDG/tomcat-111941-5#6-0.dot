@@ -1,0 +1,37 @@
+digraph {
+0 [style = filled, label = "doGet['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "doGet['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "result.append('2')@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "result = new StringBuilder()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final HttpServletRequest req@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "result.append('1')@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "req.getAsyncContext().start(new Runnable(){@Override public void run(){Thread t = new Thread(new Runnable(){@Override public void run(){try {result.append('3')result.append(req.isAsyncStarted())Thread.sleep(1000)result.append('4')result.append(req.isAsyncStarted())resp.setContentType(\"text/plain\")resp.getWriter().print(\"OK\")req.getAsyncContext().complete()result.append('5')result.append(req.isAsyncStarted())done = true}catch (InterruptedException e) catch (IOException e) }})t.start()}})@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "req.startAsync().setTimeout(10000)@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+14 [style = filled, label = "final HttpServletRequest req@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final HttpServletRequest req@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "req.startAsync()@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "result.append(req.isAsyncStarted())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "result.append(req.isAsyncStarted())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "req.getMethod()@@@39@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final HttpServletResponse resp@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "doGet['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1->8 [style = bold, label=""];
+9->13 [style = bold, label=""];
+12->5 [style = bold, label=""];
+8->2 [style = bold, label=""];
+13->8 [style = bold, label=""];
+0->4 [style = dotted, label="true"];
+0->5 [style = bold, label=""];
+0->6 [style = dotted, label="true"];
+2->10 [style = bold, label=""];
+12->6 [style = dotted, label="true"];
+15->14 [style = dotted, label="true"];
+9->1 [style = bold, label=""];
+5->7 [style = bold, label=""];
+15->6 [style = dotted, label="true"];
+15->5 [style = bold, label=""];
+10->3 [style = bold, label=""];
+1->13 [style = dashed, label="0"];
+7->9 [style = bold, label=""];
+12->11 [style = dotted, label="true"];
+}

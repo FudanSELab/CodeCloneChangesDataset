@@ -1,0 +1,26 @@
+digraph {
+0 [style = filled, label = "Map<String,Object> parser = jsonMapper.convertValue(new StringInputRowParser(new JSONParseSpec(new TimestampSpec(\"time\",\"auto\",null),new DimensionsSpec(DimensionsSpec.getDefaultSchemas(ImmutableList.of(\"time\",\"dimA\",\"dimB\",\"metric1\")),ImmutableList.of(\"dimC\"),null),null,null,null),null),JacksonUtils.TYPE_REFERENCE_MAP_STRING_OBJECT)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testExplicitInclude['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Map<String,Object> parser = jsonMapper.convertValue(new StringInputRowParser(new JSONParseSpec(new TimestampSpec(\"time\",\"auto\",null),new DimensionsSpec(DimensionsSpec.getDefaultSchemas(ImmutableList.of(\"time\",\"dimA\",\"dimB\",\"col2\")),ImmutableList.of(\"dimC\"),null),null,null,null),null),JacksonUtils.TYPE_REFERENCE_MAP_STRING_OBJECT)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "schema.getParser()@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Assert.assertEquals(ImmutableSet.of(\"__time\",\"dimC\",\"col1\",\"metric1\",\"metric2\"),schema.getParser().getParseSpec().getDimensionsSpec().getDimensionExclusions())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testOverlapMetricNameAndDim['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "expectedException.expect()@@@7@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "DataSchema schema = new DataSchema(IdUtilsTest.VALID_ID_CHARS,parser,new AggregatorFactory((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@aa2596,new ArbitraryGranularitySpec(Granularities.DAY,ImmutableList.of(Intervals.of(\"2014/2015\"))),null,jsonMapper)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "expectedException.expectMessage(\"Cannot specify a column more than once: (metric1( seen in dimensions list, metricsSpec list\")@@@8@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "testOverlapMetricNameAndDim['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2->0 [style = bold, label=""];
+5->0 [style = bold, label=""];
+4->1 [style = bold, label=""];
+7->8 [style = bold, label=""];
+0->3 [style = bold, label=""];
+6->4 [style = bold, label=""];
+3->9 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+0->3 [style = solid, label="parser"];
+8->3 [style = bold, label=""];
+3->1 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+3->6 [style = bold, label=""];
+8->3 [style = solid, label="parser"];
+}

@@ -1,0 +1,36 @@
+digraph {
+11 [style = filled, label = "super(,job,VmJobCheckInterval.value(),new Predicate(){@Override public boolean checkCondition(){AsyncJobVO jobVo = _entityMgr.findById(,job.getId())assert(jobVo != null)if (jobVo == null || jobVo.getStatus() != JobInfo.Status.IN_PROGRESS) return truereturn false}},AsyncJob.Topics.JOB_STATE)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "VmJobSnapshotOutcome['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "final AsyncJob job@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "super(,job,VmJobCheckInterval.value(),new Predicate(){@Override public boolean checkCondition(){AsyncJobVO jobVo = _entityMgr.findById(,job.getId())assert(jobVo != null)if (jobVo == null || jobVo.getStatus() != JobInfo.Status.IN_PROGRESS) {return true}return false}},AsyncJob.Topics.JOB_STATE)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "VmJobVMSnapshotOutcome['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "_snapshotId = snapshotId@@@12@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "_snapshotId = snapshotId@@@14@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final long snapshotId@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "_vmSnapshotId = vmSnapshotId@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final AsyncJob job@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final AsyncJob job@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "VmJobSnapshotOutcome['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "final long vmSnapshotId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8->10 [style = dotted, label="true"];
+10->9 [style = solid, label="vmSnapshotId"];
+12->11 [style = solid, label="job"];
+7->5 [style = solid, label="snapshotId"];
+2->4 [style = dotted, label="true"];
+4->12 [style = dashed, label="0"];
+6->7 [style = dotted, label="true"];
+1->9 [style = dashed, label="0"];
+11->9 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+8->11 [style = bold, label=""];
+6->4 [style = dotted, label="true"];
+6->3 [style = bold, label=""];
+4->1 [style = solid, label="snapshotId"];
+2->0 [style = dotted, label="true"];
+0->3 [style = solid, label="job"];
+4->3 [style = solid, label="job"];
+8->12 [style = dotted, label="true"];
+}

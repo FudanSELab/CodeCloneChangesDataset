@@ -1,0 +1,30 @@
+digraph {
+7 [style = filled, label = "CategoryPlot<?,?> plot = (CategoryPlot)this.chart.getPlot()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "testSetSeriesURLGenerator['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "assertTrue(url2 == url1)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "CategoryPlot<String,String> plot = (CategoryPlot)this.chart.getPlot()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "renderer.setSeriesItemURLGenerator(0,url1)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "CategoryURLGenerator url2 = renderer.getItemURLGenerator(0,0)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testSetSeriesURLGenerator['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "CategoryItemRenderer renderer = plot.getRenderer()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testSetSeriesURLGenerator['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "StandardCategoryURLGenerator url1 = new StandardCategoryURLGenerator()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertSame(url2,url1)@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->5 [style = bold, label=""];
+8->7 [style = bold, label=""];
+4->6 [style = solid, label="url1"];
+4->6 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+0->5 [style = bold, label=""];
+2->10 [style = bold, label=""];
+9->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+4->3 [style = solid, label="url1"];
+2->3 [style = solid, label="url2"];
+4->10 [style = solid, label="url1"];
+2->10 [style = solid, label="url2"];
+5->4 [style = bold, label=""];
+6->2 [style = bold, label=""];
+2->3 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+}

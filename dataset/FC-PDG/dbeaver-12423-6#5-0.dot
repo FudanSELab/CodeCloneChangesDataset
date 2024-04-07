@@ -1,0 +1,32 @@
+digraph {
+2 [style = filled, label = "IResultSetPresentation presentation@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "dropTarget.addDropListener(new DropTargetAdapter(){@Override public void dragEnter(DropTargetEvent event){handleDragEvent(event)}@Override public void dragLeave(DropTargetEvent event){handleDragEvent(event)}@Override public void dragOperationChanged(DropTargetEvent event){handleDragEvent(event)}@Override public void dragOver(DropTargetEvent event){handleDragEvent(event)}@Override public void drop(DropTargetEvent event){handleDragEvent(event)if (event.detail == DND.DROP_MOVE || event.detail == DND.DROP_COPY) {dropColumns(event)}}@Override public void dropAccept(DropTargetEvent event){handleDragEvent(event)}private void handleDragEvent(DropTargetEvent event){if (!isDropSupported(event)) {event.detail = DND.DROP_NONE}{if (event.detail == DND.DROP_NONE) {event.detail = DND.DROP_MOVE}}event.feedback = DND.FEEDBACK_SELECT}private boolean isDropSupported(DropTargetEvent event){return true}@SuppressWarnings(\"unchecked\") private void dropColumns(DropTargetEvent event){if (!(event.data instanceof List)) {return}List<Object> dropElements = (List<Object>)event.dataList<String> attributeBindings = new ArrayList<>()for (Object element : dropElements){if (element instanceof DBDAttributeBinding) {DBDAttributeBinding binding = (DBDAttributeBinding)elementif (binding instanceof DBDAttributeBindingMeta && binding.getMetaAttribute() != null) {attributeBindings.add(DBUtils.getQuotedIdentifier(binding.getDataSource(),binding.getMetaAttribute().getLabel()))}{attributeBindings.add(binding.getFullyQualifiedName(DBPEvaluationContext.DML))}}}if (!attributeBindings.isEmpty()) {container.addGroupingAttributes(attributeBindings)}if (event.detail == DND.DROP_COPY) {GroupingConfigDialog dialog = new GroupingConfigDialog(container.getResultSetController().getControl().getShell(),container)if (dialog.open() != IDialogConstants.OK_ID) {container.clearGrouping()return}}try {container.rebuildGrouping()}catch (DBException e) }})@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "registerDragAndDrop['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "run['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Object oldDropTarget = presentation.getControl().getData(DND.DROP_TARGET_KEY)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "((DropTarget)oldDropTarget).dispose()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "dialog.open() == IDialogConstants.OK_ID@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "GroupingConfigDialog dialog = new GroupingConfigDialog(resultsContainer.getResultSetController().getControl().getShell(),resultsContainer)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "resultsContainer.rebuildGrouping()@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "oldDropTarget instanceof DropTarget@@@4@@@['1', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "registerDragAndDrop['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "dropTarget.setTransfer(LightGrid.GridColumnTransfer.INSTANCE,TextTransfer.getInstance())@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "DropTarget dropTarget = new DropTarget(presentation.getControl(),DND.DROP_MOVE | DND.DROP_COPY)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->2 [style = dotted, label="true"];
+12->10 [style = dotted, label="true"];
+12->10 [style = bold, label=""];
+4->6 [style = bold, label=""];
+1->7 [style = bold, label=""];
+0->5 [style = bold, label=""];
+5->4 [style = solid, label="oldDropTarget"];
+11->9 [style = bold, label=""];
+8->2 [style = dotted, label="true"];
+4->6 [style = dotted, label="true"];
+8->5 [style = bold, label=""];
+4->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+3->1 [style = bold, label=""];
+9->12 [style = bold, label=""];
+}

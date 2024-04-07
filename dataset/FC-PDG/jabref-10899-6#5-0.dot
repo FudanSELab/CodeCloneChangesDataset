@@ -1,0 +1,30 @@
+digraph {
+10 [style = filled, label = "ControlHelper.setAction(copyLogButton,getDialogPane(),null)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "JabRefFrame frame@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "ControlHelper.setAction(clearLogButton,getDialogPane(),null)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "PreferencesDialogView['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "ControlHelper.setAction(createIssueButton,getDialogPane(),null)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "this.frame = frame@@@3@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ErrorConsoleView['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "this.setTitle(Localization.lang(\"JabRef preferences\"))@@@4@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ControlHelper.setAction(saveButton,getDialogPane(),null)@@@6@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "PreferencesDialogView['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "this.setTitle(Localization.lang(\"Event log\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "this.initModality(Modality.NONE)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "ViewLoader.view(this).load().setAsDialogPane(this)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->5 [style = bold, label=""];
+2->1 [style = dotted, label="true"];
+1->0 [style = solid, label="frame"];
+2->0 [style = bold, label=""];
+12->5 [style = bold, label=""];
+5->3 [style = bold, label=""];
+6->1 [style = dotted, label="true"];
+0->4 [style = bold, label=""];
+10->11 [style = bold, label=""];
+11->8 [style = bold, label=""];
+5->10 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+9->12 [style = bold, label=""];
+7->9 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+}

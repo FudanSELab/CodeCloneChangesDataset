@@ -1,0 +1,33 @@
+digraph {
+2 [style = filled, label = "kryo.setInstantiatorStrategy(instantiatorStrategy)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "this.kryo == null@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "checkKryoInitialized['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "checkKryoInitialized['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Kryo.DefaultInstantiatorStrategy instantiatorStrategy = new Kryo.DefaultInstantiatorStrategy()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "this.kryo = new Kryo()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "instantiatorStrategy.setFallbackInstantiatorStrategy(new StdInstantiatorStrategy())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "KryoUtils.applyRegistrations(this.kryo,kryoRegistrations.values())@@@9@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "this.kryo.setAsmEnabled(true)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "this.kryo.register(type)@@@9@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "checkKryoInitialized['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0->6 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+6->4 [style = dotted, label="true"];
+6->8 [style = dotted, label="true"];
+5->3 [style = bold, label=""];
+6->1 [style = dotted, label="true"];
+6->2 [style = dotted, label="true"];
+1->7 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+5->8 [style = bold, label=""];
+1->2 [style = solid, label="instantiatorStrategy"];
+6->4 [style = bold, label=""];
+10->6 [style = bold, label=""];
+6->7 [style = dotted, label="true"];
+4->1 [style = bold, label=""];
+6->3 [style = dotted, label="true"];
+2->5 [style = bold, label=""];
+9->6 [style = bold, label=""];
+4->8 [style = solid, label="kryo"];
+7->2 [style = bold, label=""];
+}

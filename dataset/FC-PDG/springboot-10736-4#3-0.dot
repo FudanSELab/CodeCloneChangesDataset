@@ -1,0 +1,31 @@
+digraph {
+10 [style = filled, label = "sslValidationNotSkippedByDefault['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "this.contextRunner.withConfiguration(AutoConfigurations.of()).withPropertyValues(\"VCAP_APPLICATION:---\",\"vcap.application.application_id:my-app-id\",\"vcap.application.cf_api:http://my-cloud-controller.com\").run(null)@@@3@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "CloudFoundryWebFluxEndpointHandlerMapping handlerMapping = getHandlerMapping()@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "skipSslValidation['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "this.thrown.expectCause(instanceOf())@@@9@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "TestPropertyValues.of(\"management.cloudfoundry.skip-ssl-validation:true\").applyTo(this.context)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "this.context.refresh()@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "webClient.get().uri(\"https://self-signed.badssl.com/\").exchange().block()@@@10@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Object interceptor = ReflectionTestUtils.getField(handlerMapping,\"securityInterceptor\")@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "setupContextWithCloudEnabled()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "WebClient webClient = (WebClient)ReflectionTestUtils.getField(interceptorSecurityService,\"webClient\")@@@9@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Object interceptorSecurityService = ReflectionTestUtils.getField(interceptor,\"cloudFoundrySecurityService\")@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "sslValidationNotSkippedByDefault['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4->8 [style = solid, label="interceptor"];
+11->3 [style = bold, label=""];
+12->1 [style = bold, label=""];
+2->4 [style = solid, label="handlerMapping"];
+6->7 [style = bold, label=""];
+4->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+0->3 [style = bold, label=""];
+8->5 [style = bold, label=""];
+3->12 [style = bold, label=""];
+8->5 [style = solid, label="interceptorSecurityService"];
+1->2 [style = bold, label=""];
+5->7 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->1 [style = bold, label=""];
+10->9 [style = bold, label=""];
+}

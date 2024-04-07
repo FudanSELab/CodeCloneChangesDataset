@@ -1,0 +1,26 @@
+digraph {
+6 [style = filled, label = "CallContext ctx = CallContext.current()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "_rulesMgr.disableStaticNat(ip.getId(),ctx.getCallingAccount(),ctx.getCallingUserId(),true)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "VirtualMachineProfile profile@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "finalizeStop['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "ip != null && ip.getSystem()@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "finalizeStop['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Answer answer@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "IPAddressVO ip = _ipAddressDao.findByAssociatedVmId(profile.getId())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Answer answer@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "finalizeStop['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "VirtualMachineProfile profile@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0->2 [style = dotted, label="true"];
+5->8 [style = dotted, label="true"];
+10->7 [style = bold, label=""];
+10->7 [style = solid, label="ip"];
+7->6 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+5->10 [style = bold, label=""];
+7->9 [style = dotted, label="true"];
+5->2 [style = dotted, label="true"];
+4->2 [style = dotted, label="true"];
+6->9 [style = bold, label=""];
+7->6 [style = dotted, label="true"];
+}

@@ -1,0 +1,36 @@
+digraph {
+13 [style = filled, label = "connectIsIdempotent['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "conn.connect()@@@18@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final AtomicInteger calls = new AtomicInteger()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Observable<Integer> source = Observable.unsafeCreate(new ObservableSource<Integer>(){@Override public void subscribe(Observer<? super Integer> t){t.onSubscribe(Disposable.empty())calls.getAndIncrement()}})@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "conn.connect().dispose()@@@16@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "connectIsIdempotent['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "connectIsIdempotent['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "assertEquals(0,calls.get())@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "conn.connect()@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertEquals(1,calls.get())@@@15@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertEquals(2,calls.get())@@@19@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ConnectableObservable<Integer> conn = source.publish()@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "conn.connect()@@@17@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "conn.connect()@@@14@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "Flowable<Integer> source = Flowable.unsafeCreate(new Publisher<Integer>(){@Override public void subscribe(Subscriber<? super Integer> t){t.onSubscribe(new BooleanSubscription())calls.getAndIncrement()}})@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "ConnectableFlowable<Integer> conn = source.publish()@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13->3 [style = bold, label=""];
+4->5 [style = bold, label=""];
+1->8 [style = bold, label=""];
+11->15 [style = dashed, label="0"];
+8->2 [style = bold, label=""];
+7->14 [style = dashed, label="0"];
+3->11 [style = bold, label=""];
+14->0 [style = bold, label=""];
+2->4 [style = bold, label=""];
+15->14 [style = bold, label=""];
+12->3 [style = bold, label=""];
+7->0 [style = bold, label=""];
+0->1 [style = bold, label=""];
+5->6 [style = bold, label=""];
+10->3 [style = bold, label=""];
+3->15 [style = bold, label=""];
+11->7 [style = bold, label=""];
+6->9 [style = bold, label=""];
+}

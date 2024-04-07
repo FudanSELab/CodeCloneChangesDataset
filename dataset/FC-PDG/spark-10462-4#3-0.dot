@@ -1,0 +1,38 @@
+digraph {
+15 [style = filled, label = "long freq = freqSeq.freq()@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "JavaSparkContext sc = new JavaSparkContext(sparkConf)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "System.out.println(freqSeq.javaSequence() + \", \" + freqSeq.freq())@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "main['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "JavaRDD<FreqSequence<Integer>> freqSeqs = model.freqSequences().toJavaRDD()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "String(( args@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "List<List<Integer>> seq = freqSeq.javaSequence()@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "PrefixSpanModel<Integer> model = prefixSpan.run(sequences)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Assert.assertEquals(5,localFreqSeqs.size())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "SparkConf sparkConf = new SparkConf().setAppName(\"JavaPrefixSpanExample\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "List<FreqSequence<Integer>> localFreqSeqs = freqSeqs.collect()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "JavaRDD<List<List<Integer>>> sequences = sc.parallelize(Arrays.asList(Arrays.asList(Arrays.asList(1,2),Arrays.asList(3)),Arrays.asList(Arrays.asList(1),Arrays.asList(3,2),Arrays.asList(1,2)),Arrays.asList(Arrays.asList(1,2),Arrays.asList(5)),Arrays.asList(Arrays.asList(6))),2)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "main['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "runPrefixSpan['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "PrefixSpan prefixSpan = new PrefixSpan().setMinSupport(0.5).setMaxPatternLength(5)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "sc.stop()@@@11@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+15->13 [style = bold, label=""];
+7->0 [style = dotted, label="true"];
+12->5 [style = bold, label=""];
+1->11 [style = bold, label=""];
+5->3 [style = bold, label=""];
+2->5 [style = bold, label=""];
+13->15 [style = bold, label=""];
+14->10 [style = bold, label=""];
+7->4 [style = bold, label=""];
+4->2 [style = solid, label="sparkConf"];
+9->4 [style = bold, label=""];
+5->1 [style = solid, label="sequences"];
+1->6 [style = bold, label=""];
+6->8 [style = bold, label=""];
+9->0 [style = dotted, label="true"];
+11->13 [style = bold, label=""];
+3->1 [style = bold, label=""];
+4->2 [style = bold, label=""];
+10->5 [style = solid, label="sequences"];
+10->12 [style = bold, label=""];
+}

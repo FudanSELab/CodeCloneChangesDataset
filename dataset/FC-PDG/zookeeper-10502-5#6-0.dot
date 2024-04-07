@@ -1,0 +1,34 @@
+digraph {
+6 [style = filled, label = "new AtomicFileWritingIdiom(target,new OutputStreamStatement(){@Override public void write(OutputStream os){os.write(\"after\".getBytes(StandardCharsets.US_ASCII))assertTrue(tmp.exists(),\"implementation of AtomicFileOutputStream has changed, update the test\")}})@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertFalse(\"tmp file should have been deleted\",tmp.exists())@@@14@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testOutputStreamSuccessNE['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertFalse(\"file should not exist\",target.exists())@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testOutputStreamSuccessNE['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "final File tmp = new File(tmpdir,\"target.txt.tmp\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(\"after\",getContent(target))@@@15@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertFalse(target.exists(),\"file should not exist\")@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "testWriterSuccessNE['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "target.delete()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "new AtomicFileWritingIdiom(target,new WriterStatement(){@Override public void write(Writer os){os.write(\"after\")assertTrue(\"implementation of AtomicFileOutputStream has changed, update the test\",tmp.exists())}})@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "target.delete()@@@16@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "File target = new File(tmpdir,\"target.txt\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->5 [style = bold, label=""];
+12->4 [style = bold, label=""];
+7->6 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->3 [style = bold, label=""];
+0->4 [style = solid, label="target"];
+0->11 [style = solid, label="target"];
+6->11 [style = dashed, label="0"];
+9->0 [style = bold, label=""];
+8->6 [style = bold, label=""];
+6->4 [style = bold, label=""];
+11->12 [style = bold, label=""];
+7->11 [style = bold, label=""];
+0->6 [style = solid, label="target"];
+3->7 [style = bold, label=""];
+7->8 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+10->0 [style = bold, label=""];
+3->8 [style = bold, label=""];
+}

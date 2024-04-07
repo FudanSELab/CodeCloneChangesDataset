@@ -1,0 +1,11 @@
+digraph {
+0 [style = filled, label = "parameters['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "parameters['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "return Stream.of(Arguments.of(new LevenshteinDistance(),\"elephant\",\"hippo\",7),Arguments.of(new LevenshteinDistance(),\"hippo\",\"elephant\",7),Arguments.of(new LevenshteinDistance(),\"hippo\",\"zzzzzzzz\",8),Arguments.of(new SimilarityScore<Boolean>(){@Override public Boolean apply(final CharSequence left,final CharSequence right){return left == right || (left != null && left.equals(right))}},\"Bob's your uncle.\",\"Every good boy does fine.\",false))@@@3@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "parameters['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "return Arrays.asList(new Object((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1513699)@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->2 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+3->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

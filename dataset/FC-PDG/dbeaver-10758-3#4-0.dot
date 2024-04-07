@@ -1,0 +1,24 @@
+digraph {
+7 [style = filled, label = "DBCExecutionContext executionContext@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "createSessionViewer['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Composite parent@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "DBCExecutionContext executionContext@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "return new SessionManagerViewer<MySQLSession>(this,parent,new MySQLSessionManager((MySQLDataSource)executionContext.getDataSource())){@Override protected void contributeToToolbar(DBAServerSessionManager sessionManager,IContributionManager contributionManager){contributionManager.add(killSessionAction)contributionManager.add(terminateQueryAction)contributionManager.add(new Separator())contributionManager.add(ActionUtils.makeActionContribution(new Action(\"Hide sleeping\",Action.AS_CHECK_BOX){@Override public void run(){hideSleeping = isChecked()refreshPart(this,true)}},true))contributionManager.add(new Separator())}@Override protected void onSessionSelect(DBAServerSession session){super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9d8edsessionkillSessionAction.setEnabled(session != null)terminateQueryAction.setEnabled(session != null && !CommonUtils.isEmpty(session.getActiveQuery()))}@Override public Map<String,Object> getSessionOptions(){if (hideSleeping) {return Collections.singletonMap(MySQLSessionManager.OPTION_HIDE_SLEEPING,true)}return super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9d918}@Override protected void loadSettings(IDialogSettings settings){hideSleeping = CommonUtils.toBoolean(settings.get(\"hideSleeping\"))super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9d92asettings}@Override protected void saveSettings(IDialogSettings settings){super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9d932settingssettings.put(\"hideSleeping\",hideSleeping)}}@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return new SessionManagerViewer<SQLServerSession>(this,parent,new SQLServerSessionManager((SQLServerDataSource)executionContext.getDataSource())){@Override protected void contributeToToolbar(DBAServerSessionManager sessionManager,IContributionManager contributionManager){contributionManager.add(ActionUtils.makeActionContribution(new Action(\"Only connections\",Action.AS_CHECK_BOX){@Override public void run(){showOnlyConnections = isChecked()refreshPart(this,true)}},true))contributionManager.add(new Separator())contributionManager.add(terminateQueryAction)contributionManager.add(new Separator())}@Override protected void onSessionSelect(DBAServerSession session){super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9d988sessionterminateQueryAction.setEnabled(session != null)}@Override protected void loadSettings(IDialogSettings settings){showOnlyConnections = CommonUtils.getBoolean(settings.get(\"showOnlyConnections\"),true)super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9d9a4settings}@Override protected void saveSettings(IDialogSettings settings){super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9d9acsettingssettings.put(\"showOnlyConnections\",showOnlyConnections)}@Override public Map<String,Object> getSessionOptions(){Map<String,Object> options = new HashMap<>()if (showOnlyConnections) {options.put(SQLServerSessionManager.OPTION_SHOW_ONLY_CONNECTIONS,true)}return options}}@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Composite parent@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "createSessionViewer['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "createSessionViewer['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2->1 [style = dotted, label="true"];
+2->0 [style = bold, label=""];
+8->3 [style = dotted, label="true"];
+5->0 [style = bold, label=""];
+5->4 [style = dotted, label="true"];
+2->3 [style = dotted, label="true"];
+3->6 [style = solid, label="parent"];
+8->6 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+3->0 [style = solid, label="parent"];
+4->0 [style = solid, label="parent"];
+5->3 [style = dotted, label="true"];
+0->6 [style = dashed, label="0"];
+}

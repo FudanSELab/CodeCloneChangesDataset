@@ -1,0 +1,37 @@
+digraph {
+7 [style = filled, label = "Collections.reverse(result)@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "order == DatasetRenderingOrder.REVERSE@@@10@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "List<Integer> result = new ArrayList<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "result.add(entry.getKey())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "DatasetRenderingOrder order@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "getDatasetIndices['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "entry.getValue() != null@@@5@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Collections.sort(result)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return result@@@13@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "getRendererIndices['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "DatasetRenderingOrder order@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "getDatasetIndices['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->8 [style = bold, label=""];
+0->8 [style = solid, label="result"];
+6->7 [style = dotted, label="true"];
+0->7 [style = solid, label="result"];
+4->5 [style = bold, label=""];
+5->4 [style = dotted, label="true"];
+4->8 [style = bold, label=""];
+9->0 [style = bold, label=""];
+8->6 [style = bold, label=""];
+9->2 [style = dotted, label="true"];
+5->4 [style = bold, label=""];
+7->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+0->3 [style = solid, label="result"];
+2->6 [style = solid, label="order"];
+1->2 [style = dotted, label="true"];
+2->11 [style = dashed, label="0"];
+11->6 [style = solid, label="order"];
+0->5 [style = bold, label=""];
+6->7 [style = bold, label=""];
+10->11 [style = dotted, label="true"];
+10->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

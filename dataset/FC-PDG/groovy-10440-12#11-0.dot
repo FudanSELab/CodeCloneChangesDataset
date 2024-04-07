@@ -1,0 +1,32 @@
+digraph {
+3 [style = filled, label = "final ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "loadFromRes['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "define(cw.toByteArray(),name)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "int parsingOptions@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "String name@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "reader.accept(cw,ClassReader.SKIP_DEBUG)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "define(cw.toByteArray(),\"org.codehaus.groovy.runtime.callsite.AbstractCallSite\")@@@13@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ClassReader reader = new ClassReader(asStream)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final ClassVisitor cv = new ClassVisitor(CompilerConfiguration.ASM_API_VERSION,cw){@Override public void visit(int version,int access,String name,String signature,String superName,String(( interfaces){super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@161c5faversionaccessnamesignature\"sun/reflect/GroovyMagic\"interfaces}}@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "reader.accept(cv,parsingOptions)@@@12@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "loadAbstract['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "loadAbstract['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6->0 [style = bold, label=""];
+2->1 [style = dotted, label="true"];
+1->0 [style = solid, label="parsingOptions"];
+8->11 [style = dotted, label="true"];
+3->9 [style = solid, label="cw"];
+3->6 [style = solid, label="cw"];
+6->0 [style = solid, label="cv"];
+0->5 [style = bold, label=""];
+7->1 [style = dotted, label="true"];
+2->4 [style = bold, label=""];
+7->4 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+11->10 [style = solid, label="name"];
+4->3 [style = bold, label=""];
+3->9 [style = bold, label=""];
+8->4 [style = bold, label=""];
+9->10 [style = bold, label=""];
+3->6 [style = bold, label=""];
+}

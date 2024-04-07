@@ -1,0 +1,25 @@
+digraph {
+6 [style = filled, label = "MappedStatement ms = new MappedStatement.Builder(config,\"insertAuthor\",new StaticSqlSource(config,\"INSERT INTO author (id,username,password,email,bio,favourite_section) values(?,?,?,?,?,?)\"),SqlCommandType.INSERT).parameterMap(new ParameterMap.Builder(config,\"defaultParameterMap\",,new ArrayList<ParameterMapping>(){}).build()).cache(authorCache).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "prepareInsertAuthorMappedStatementWithAutoKey['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "final TypeHandlerRegistry registry = config.getTypeHandlerRegistry()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final Configuration config@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "prepareInsertAuthorMappedStatement['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "MappedStatement ms = new MappedStatement.Builder(config,\"insertAuthor\",new StaticSqlSource(config,\"INSERT INTO author (username,password,email,bio,favourite_section) values(?,?,?,?,?)\"),SqlCommandType.INSERT).parameterMap(new ParameterMap.Builder(config,\"defaultParameterMap\",,new ArrayList<ParameterMapping>(){}).build()).cache(authorCache).keyGenerator(Jdbc3KeyGenerator.INSTANCE).keyProperty(\"id\").build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "prepareInsertAuthorMappedStatementWithAutoKey['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return ms@@@15@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final Configuration config@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+2->6 [style = bold, label=""];
+3->4 [style = solid, label="ms"];
+6->4 [style = solid, label="ms"];
+5->1 [style = dotted, label="true"];
+3->6 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+1->8 [style = dashed, label="0"];
+6->4 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+7->8 [style = dotted, label="true"];
+7->2 [style = bold, label=""];
+}

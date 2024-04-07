@@ -1,0 +1,26 @@
+digraph {
+3 [style = filled, label = "final JsonConfigurator configurator = injector.getInstance()@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Assert.assertEquals(ForkJoinPool.commonPool(),config.createExecutor())@@@18@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Assert.assertEquals(-1L,config.getSizeInBytes())@@@17@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testDefaultFromProperties['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final Injector injector = Initialization.makeInjectorWithModules(GuiceInjectors.makeStartupInjector(),ImmutableList.of(null))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final JsonConfigProvider<CaffeineCacheConfig> caffeineCacheConfigJsonConfigProvider = JsonConfigProvider.of(keyPrefix,)@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Assert.assertEquals(-1,config.getExpireAfter())@@@16@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final String keyPrefix = \"cache.config.prefix\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final Properties properties = new Properties()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final CaffeineCacheConfig config = caffeineCacheConfigJsonConfigProvider.get().get()@@@15@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "caffeineCacheConfigJsonConfigProvider.inject(properties,configurator)@@@14@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3->0 [style = solid, label="configurator"];
+6->7 [style = bold, label=""];
+4->8 [style = bold, label=""];
+9->0 [style = bold, label=""];
+2->4 [style = bold, label=""];
+3->9 [style = bold, label=""];
+5->9 [style = solid, label="keyPrefix"];
+1->2 [style = bold, label=""];
+10->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+5->6 [style = bold, label=""];
+6->0 [style = solid, label="properties"];
+7->3 [style = bold, label=""];
+}

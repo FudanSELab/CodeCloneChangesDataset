@@ -1,0 +1,35 @@
+digraph {
+1 [style = filled, label = "testFindSourceNatIPNonPublicNw['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "deployment.isPublicNetwork = false@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final PublicIp sourceNatIp = mock()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testFindSourceNatIPNonPublicNw['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "lenient().when(mockIpAddrMgr.assignSourceNatIpAddressToGuestNetwork(mockOwner,mockNw)).thenReturn(sourceNatIp)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "assertNull(deployment.sourceNatIp)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertEquals(\"SourceNatIP should remain null given a non public network\",null,deployment.sourceNatIp)@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "when(mockIpAddrMgr.assignSourceNatIpAddressToGuestNetwork(mockOwner,mockNw)).thenReturn(sourceNatIp)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testFindSourceNatIPPublicNw['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "deployment.isPublicNetwork = true@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertEquals(\"SourceNatIP was not correctly found and set\",sourceNatIp,deployment.sourceNatIp)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "deployment.findSourceNatIP()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->6 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+2->3 [style = solid, label="sourceNatIp"];
+2->7 [style = bold, label=""];
+2->5 [style = solid, label="sourceNatIp"];
+4->5 [style = bold, label=""];
+7->6 [style = bold, label=""];
+2->0 [style = solid, label="sourceNatIp"];
+2->7 [style = solid, label="sourceNatIp"];
+11->2 [style = bold, label=""];
+10->3 [style = bold, label=""];
+0->10 [style = bold, label=""];
+8->2 [style = bold, label=""];
+4->9 [style = bold, label=""];
+6->3 [style = bold, label=""];
+2->0 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+3->4 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+2->9 [style = solid, label="sourceNatIp"];
+}

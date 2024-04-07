@@ -1,0 +1,18 @@
+digraph {
+3 [style = filled, label = "String hyperLogLogCollectorClassName = .getName()@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "testSelectStarWithoutLimitTimeAscending['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testQuery(\"SELECT * FROM druid.foo ORDER BY __time\",ImmutableList.of(Druids.newSelectQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(QSS(Filtration.eternity())).granularity(Granularities.ALL).dimensions(ImmutableList.of(\"dummy\")).metrics(ImmutableList.of(\"__time\",\"cnt\",\"dim1\",\"dim2\",\"m1\",\"m2\",\"unique_dim1\")).descending(false).pagingSpec(FIRST_PAGING_SPEC).context(QUERY_CONTEXT_DEFAULT).build(),Druids.newSelectQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(QSS(Filtration.eternity())).granularity(Granularities.ALL).dimensions(ImmutableList.of(\"dummy\")).metrics(ImmutableList.of(\"__time\",\"cnt\",\"dim1\",\"dim2\",\"m1\",\"m2\",\"unique_dim1\")).descending(false).pagingSpec(new PagingSpec(ImmutableMap.of(\"foo_1970-01-01T00:00:00.000Z_2001-01-03T00:00:00.001Z_1\",5),1000,true)).context(QUERY_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@977c1b,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@977c29,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@977c37,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@977c45,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@977c53,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@977c61))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String nullValue = NullHandling.replaceWithDefault()? \"\": null@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testSelectStar['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testSelectStar['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "testQuery(\"SELECT * FROM druid.foo\",ImmutableList.of(newScanQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(QSS(Filtration.eternity())).columns(\"__time\",\"cnt\",\"dim1\",\"dim2\",\"m1\",\"m2\",\"unique_dim1\").resultFormat(ScanQuery.RESULT_FORMAT_COMPACTED_LIST).context(QUERY_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@977b51,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@977b5d,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@977b69,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@977b75,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@977b81,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@977b8d))@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->0 [style = bold, label=""];
+3->2 [style = solid, label="hyperLogLogCollectorClassName"];
+0->2 [style = bold, label=""];
+0->5 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+0->3 [style = bold, label=""];
+3->2 [style = bold, label=""];
+4->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

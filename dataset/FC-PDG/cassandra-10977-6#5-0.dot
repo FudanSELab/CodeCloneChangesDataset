@@ -1,0 +1,27 @@
+digraph {
+6 [style = filled, label = "validateIndexedValue['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "value != null && value.remaining() >= FBUtilities.MAX_UNSIGNED_SHORT@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "value != null && value.remaining() >= FBUtilities.MAX_UNSIGNED_SHORT@@@3@@@['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "validateIndexedValue['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "throw new InvalidRequestException(String.format(\"Cannot index value of size %d for index %s on %s.%s(%s) (maximum allowed size=%d)\",value.remaining(),metadata.name,baseCfs.metadata.ksName,baseCfs.metadata.cfName,indexedColumn.name.toString(),FBUtilities.MAX_UNSIGNED_SHORT))@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "throw new InvalidRequestException(String.format(\"Cannot index value of size %d for index %s on %s(%s) (maximum allowed size=%d)\",value.remaining(),metadata.name,baseCfs.metadata,indexedColumn.name.toString(),FBUtilities.MAX_UNSIGNED_SHORT))@@@3@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "throw new InvalidRequestException(String.format(\"Cannot index value of size %d for index %s on %s.%s(%s) (maximum allowed size=%d)\",value.remaining(),metadata.name,baseCfs.metadata.ksName,baseCfs.metadata.cfName,indexedColumn.name.toString(),FBUtilities.MAX_UNSIGNED_SHORT))@@@3@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ByteBuffer value@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "validateIndexedValue['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->0 [style = bold, label=""];
+5->4 [style = bold, label=""];
+1->5 [style = solid, label="value"];
+2->0 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+1->8 [style = solid, label="value"];
+6->1 [style = dotted, label="true"];
+8->2 [style = dotted, label="true"];
+7->1 [style = dotted, label="true"];
+8->2 [style = bold, label=""];
+7->8 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+3->1 [style = dotted, label="true"];
+1->2 [style = solid, label="value"];
+6->5 [style = bold, label=""];
+3->2 [style = bold, label=""];
+}

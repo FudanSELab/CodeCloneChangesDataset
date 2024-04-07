@@ -1,0 +1,33 @@
+digraph {
+5 [style = filled, label = "ViewerColumnController columnController = new ViewerColumnController(\"sqlTaskScriptViewer\",viewer)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "columnController.addColumn(ModelMessages.model_navigator_Connection,\"Script datasource\",SWT.LEFT,true,true,new ColumnLabelProvider(){@Override public String getText(Object element){if (element instanceof DBNResource) {Collection<DBPDataSourceContainer> containers = ((DBNResource)element).getAssociatedDataSources()if (!CommonUtils.isEmpty(containers)) {StringBuilder text = new StringBuilder()for (DBPDataSourceContainer container : containers){if (text.length() > 0) {text.append(\", \")}text.append(container.getName())}return text.toString()}}return \"\"}@Override public Image getImage(Object element){return null}})@@@21@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "columnController.createColumns(true)@@@43@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "columnController.addColumn(ModelMessages.model_navigator_Name,DTUIMessages.sql_script_task_selector_dialog_column_description_script,SWT.LEFT,true,true,new ColumnLabelProvider(){@Override public String getText(Object element){return mainLabelProvider.getText(element)}@Override public Image getImage(Object element){return mainLabelProvider.getImage(element)}@Override public String getToolTipText(Object element){if (mainLabelProvider instanceof IToolTipProvider) {return ((IToolTipProvider)mainLabelProvider).getToolTipText(element)}return null}})@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "createScriptColumns['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "createScriptColumns['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ColumnViewer viewer@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "columnController.setForceAutoSize(true)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "createScriptColumns['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "columnController.addColumn(ModelMessages.model_navigator_Connection,DTUIMessages.sql_script_task_selector_dialog_column_description_script_data_source,SWT.LEFT,true,true,new ColumnLabelProvider(){@Override public String getText(Object element){if (element instanceof DBNResource) {Collection<DBPDataSourceContainer> containers = ((DBNResource)element).getAssociatedDataSources()if (!CommonUtils.isEmpty(containers)) {StringBuilder text = new StringBuilder()for (DBPDataSourceContainer container : containers){if (text.length() > 0) {text.append(\", \")}text.append(container.getName())}return text.toString()}}return \"\"}@Override public Image getImage(Object element){return null}})@@@21@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "columnController.addColumn(ModelMessages.model_navigator_Name,\"Script\",SWT.LEFT,true,true,new ColumnLabelProvider(){@Override public String getText(Object element){return mainLabelProvider.getText(element)}@Override public Image getImage(Object element){return mainLabelProvider.getImage(element)}@Override public String getToolTipText(Object element){if (mainLabelProvider instanceof IToolTipProvider) {return ((IToolTipProvider)mainLabelProvider).getToolTipText(element)}return null}})@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final ILabelProvider mainLabelProvider = (ILabelProvider)viewer.getLabelProvider()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->2 [style = solid, label="mainLabelProvider"];
+2->8 [style = dashed, label="0"];
+11->3 [style = bold, label=""];
+5->0 [style = bold, label=""];
+7->5 [style = solid, label="viewer"];
+0->2 [style = bold, label=""];
+6->7 [style = dotted, label="true"];
+8->9 [style = bold, label=""];
+0->8 [style = bold, label=""];
+11->7 [style = dotted, label="true"];
+10->7 [style = dotted, label="true"];
+9->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->3 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+10->3 [style = bold, label=""];
+1->4 [style = bold, label=""];
+3->8 [style = solid, label="mainLabelProvider"];
+}

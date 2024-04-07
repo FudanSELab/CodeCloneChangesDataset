@@ -1,0 +1,25 @@
+digraph {
+4 [style = filled, label = "Request si@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "si.type != OpCode.sync@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "si.logLatency(ServerMetrics.getMetrics().PROPOSAL_ACK_CREATION_LATENCY)@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "learner.writePacket(null,true)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "learner.writePacket(qp,false)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "flush['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "QuorumPacket qp = new QuorumPacket(Leader.ACK,si.getHdr().getZxid(),null,null)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "processRequest['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "processRequest['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8->7 [style = bold, label=""];
+1->0 [style = solid, label="qp"];
+6->4 [style = dotted, label="true"];
+5->0 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+1->5 [style = bold, label=""];
+2->4 [style = dotted, label="true"];
+2->3 [style = bold, label=""];
+3->5 [style = dotted, label="true"];
+6->3 [style = bold, label=""];
+3->1 [style = dotted, label="true"];
+3->1 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+}

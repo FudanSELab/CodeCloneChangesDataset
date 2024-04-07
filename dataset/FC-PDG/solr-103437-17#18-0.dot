@@ -1,0 +1,37 @@
+digraph {
+12 [style = filled, label = "assertU(adoc(\"id\",\"1\",f,\"10\",\"active_s\",\"true\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "doTestFacetStatisticsResult['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertU(commit())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "assertQ(\"test value for active_s=false\",req(baseParams,\"q\",\"*:*\",\"stats.facet\",\"active_s\",\"stats.calcdistinct\",\"true\"),\"//lst(@name='false'(/double(@name='min'((.='40.0'(\",\"//lst(@name='false'(/double(@name='max'((.='40.0'(\",\"//lst(@name='false'(/double(@name='sum'((.='40.0'(\",\"//lst(@name='false'(/long(@name='count'((.='1'(\",\"//lst(@name='false'(/long(@name='missing'((.='1'(\",\"//lst(@name='false'(/long(@name='countDistinct'((.='1'(\",\"count(//lst(@name='false'(/arr(@name='distinctValues'(/*)=1\",\"//lst(@name='false'(/double(@name='sumOfSquares'((.='1600.0'(\",\"//lst(@name='false'(/double(@name='mean'((.='40.0'(\",\"//lst(@name='false'(/double(@name='stddev'((.='0.0'(\")@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "field['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "assertU(adoc(\"id\",\"4\",f,\"40\",\"active_s\",\"false\"))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertQ(\"test value for active_s=true\",req(baseParams,\"q\",\"*:*\",\"stats.calcdistinct\",\"true\",\"stats.facet\",\"active_s\"),\"//lst(@name='true'(/double(@name='min'((.='10.0'(\",\"//lst(@name='true'(/double(@name='max'((.='20.0'(\",\"//lst(@name='true'(/double(@name='sum'((.='30.0'(\",\"//lst(@name='true'(/long(@name='count'((.='2'(\",\"//lst(@name='true'(/long(@name='missing'((.='0'(\",\"//lst(@name='true'(/long(@name='countDistinct'((.='2'(\",\"count(//lst(@name='true'(/arr(@name='distinctValues'(/*)=2\",\"//lst(@name='true'(/double(@name='sumOfSquares'((.='500.0'(\",\"//lst(@name='true'(/double(@name='mean'((.='15.0'(\",\"//lst(@name='true'(/double(@name='stddev'((.='7.0710678118654755'(\")@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "SolrParams(( baseParamsSet@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "SolrParams(( baseParamsSet@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "doTestFacetStatisticsMissingResult['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+16 [style = filled, label = "assertU(commit())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "field['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertU(adoc(\"id\",\"3\",\"active_s\",\"false\"))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertU(adoc(\"id\",\"2\",f,\"20\",\"active_s\",\"true\"))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "doTestFacetStatisticsResult['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "SolrParams(( baseParamsSet@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "String f@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1->2 [style = dotted, label="true"];
+12->11 [style = bold, label=""];
+9->13 [style = bold, label=""];
+10->12 [style = solid, label="f"];
+8->14 [style = bold, label=""];
+13->9 [style = bold, label=""];
+5->4 [style = dotted, label="true"];
+6->10 [style = dotted, label="true"];
+10->11 [style = solid, label="f"];
+7->8 [style = bold, label=""];
+11->7 [style = bold, label=""];
+10->14 [style = solid, label="f"];
+14->16 [style = bold, label=""];
+1->0 [style = dotted, label="true"];
+6->12 [style = bold, label=""];
+6->15 [style = dotted, label="true"];
+5->3 [style = dotted, label="true"];
+16->9 [style = bold, label=""];
+}

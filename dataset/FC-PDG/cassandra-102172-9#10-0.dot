@@ -1,0 +1,17 @@
+digraph {
+8 [style = filled, label = "handleFinalizePromise['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "getState['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "handlePrepareResponse['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "boolean success@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "fail['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "boolean success@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "getState['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "handlePrepareResponse['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "boolean success@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4->5 [style = dotted, label="true"];
+1->2 [style = dotted, label="true"];
+8->6 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+1->0 [style = dotted, label="true"];
+}

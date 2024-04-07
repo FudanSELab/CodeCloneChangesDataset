@@ -1,0 +1,29 @@
+digraph {
+3 [style = filled, label = "final FieldCache.Ints arr = cache.getInts(readerContext.reader(),field,parser,true)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "getValues['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "getValues['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Map context@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "AtomicReaderContext readerContext@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final Bits valid = cache.getDocsWithField(readerContext.reader(),field)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final NumericDocValues arr = DocValues.getNumeric(readerContext.reader(),field)@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "final Bits valid = DocValues.getDocsWithField(readerContext.reader(),field)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "getValues['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "Map context@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "AtomicReaderContext readerContext@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "return new IntDocValues(this){@Override public float floatVal(int doc){return (float)arr.get(doc)}@Override public int intVal(int doc){return arr.get(doc)}@Override public long longVal(int doc){return (long)arr.get(doc)}@Override public double doubleVal(int doc){return (double)arr.get(doc)}@Override public String strVal(int doc){Integer intValue = arr.get(doc)return intValueToStringValue(intValue)}@Override public Object objectVal(int doc){return valid.get(doc)? arr.get(doc): null}@Override public boolean exists(int doc){return valid.get(doc)}@Override public String toString(int doc){return description() + '=' + strVal(doc)}@Override public ValueSourceScorer getRangeScorer(IndexReader reader,String lowerVal,String upperVal,boolean includeLower,boolean includeUpper){Integer lower = stringValueToIntValue(lowerVal)Integer upper = stringValueToIntValue(upperVal)if (lower == null) {lower = Integer.MIN_VALUE}{if (!includeLower && lower < Integer.MAX_VALUE) lower++}if (upper == null) {upper = Integer.MAX_VALUE}{if (!includeUpper && upper > Integer.MIN_VALUE) upper--}final int ll = lowerfinal int uu = upperreturn new ValueSourceScorer(reader,this){@Override public boolean matchesValue(int doc){int val = arr.get(doc)return val >= ll && val <= uu}}}@Override public ValueFiller getValueFiller(){return new ValueFiller(){@Override public MutableValue getValue(){return mval}@Override public void fillValue(int doc){mval.value = arr.get(doc)mval.exists = valid.get(doc)}}}}@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10->3 [style = bold, label=""];
+8->2 [style = bold, label=""];
+0->4 [style = dotted, label="true"];
+7->8 [style = bold, label=""];
+10->11 [style = dotted, label="true"];
+0->3 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+9->5 [style = dotted, label="true"];
+1->2 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+9->6 [style = dotted, label="true"];
+3->1 [style = bold, label=""];
+10->5 [style = dotted, label="true"];
+0->5 [style = dotted, label="true"];
+9->7 [style = bold, label=""];
+}

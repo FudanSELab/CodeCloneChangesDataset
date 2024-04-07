@@ -1,0 +1,32 @@
+digraph {
+10 [style = filled, label = "setup['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "setup['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "windowedCogroupedStream = cogroupedStream.windowedBy(TimeWindows.of(ofMillis(WINDOW_SIZE)))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final CogroupedKStream<String,String> cogroupedStream = groupedStream.cogroup(MockAggregator.TOSTRING_ADDER).cogroup(groupedStream2,MockAggregator.TOSTRING_REMOVER)@@@7@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "cogroupedStream = groupedStream.cogroup(MockAggregator.TOSTRING_ADDER).cogroup(groupedStream2,MockAggregator.TOSTRING_REMOVER)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "groupedStream2 = stream2.groupByKey(Grouped.with(Serdes.String(),Serdes.String()))@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final KGroupedStream<String,String> groupedStream2 = stream2.groupByKey(Grouped.with(Serdes.String(),Serdes.String()))@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "final KStream<String,String> stream2 = builder.stream(TOPIC2,Consumed.with(Serdes.String(),Serdes.String()))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "windowedCogroupedStream = cogroupedStream.windowedBy(SlidingWindows.withTimeDifferenceAndGrace(ofMillis(WINDOW_SIZE_MS),ofMillis(2000L)))@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final KStream<String,String> stream = builder.stream(TOPIC,Consumed.with(Serdes.String(),Serdes.String()))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "groupedStream = stream.groupByKey(Grouped.with(Serdes.String(),Serdes.String()))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "setup['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->4 [style = solid, label="groupedStream2"];
+4->11 [style = bold, label=""];
+10->1 [style = bold, label=""];
+7->1 [style = bold, label=""];
+9->8 [style = bold, label=""];
+9->8 [style = solid, label="groupedStream2"];
+0->4 [style = bold, label=""];
+8->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+1->2 [style = solid, label="stream"];
+5->11 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+6->9 [style = bold, label=""];
+}

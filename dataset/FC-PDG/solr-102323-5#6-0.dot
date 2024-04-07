@@ -1,0 +1,28 @@
+digraph {
+3 [style = filled, label = "getLexSorted['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return arr@@@6@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "countSorted = arr@@@12@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ShardFacetCount(( arr = counts.values().toArray(new ShardFacetCount(((()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Arrays.sort(arr,new Comparator<ShardFacetCount>(){@Override public int compare(ShardFacetCount o1,ShardFacetCount o2){if (o2.count < o1.count) return -1if (o1.count < o2.count) return 1return o1.indexed.compareTo(o2.indexed)}})@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return arr@@@13@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "getLexSorted['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "countSorted = arr@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "Arrays.sort(arr,null)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "getCountSorted['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4->1 [style = solid, label="arr"];
+4->0 [style = solid, label="arr"];
+4->5 [style = solid, label="arr"];
+4->6 [style = bold, label=""];
+4->8 [style = solid, label="arr"];
+4->6 [style = solid, label="arr"];
+0->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+8->5 [style = bold, label=""];
+4->2 [style = solid, label="arr"];
+9->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->8 [style = bold, label=""];
+3->4 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

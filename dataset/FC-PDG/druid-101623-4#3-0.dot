@@ -1,0 +1,30 @@
+digraph {
+4 [style = filled, label = "skipVectorize()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testQuery(\"SELECT ANY_VALUE(dim1, 32), ANY_VALUE(l2), ANY_VALUE(d2), ANY_VALUE(f2) \" + \"FROM druid.numfoo \" + \"WHERE dim1 IS NOT NULL AND l2 IS NOT NULL AND d2 IS NOT NULL AND f2 is NOT NULL\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE3).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).filters(filter).aggregators(aggregators(new StringAnyAggregatorFactory(\"a0\",\"dim1\",32),new LongAnyAggregatorFactory(\"a1\",\"l2\"),new DoubleAnyAggregatorFactory(\"a2\",\"d2\"),new FloatAnyAggregatorFactory(\"a3\",\"f2\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a2183d))@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testFirstLatestAggregatorsSkipNulls['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "filter = not(selector(\"dim1\",null,null))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "filter = and(not(selector(\"dim1\",null,null)),not(selector(\"l2\",null,null)),not(selector(\"d2\",null,null)),not(selector(\"f2\",null,null)))@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testAnyAggregatorsSkipNullsWithFilter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "useDefault@@@5@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "filter = and(not(selector(\"dim1\",null,null)),not(selector(\"l1\",null,null)),not(selector(\"d1\",null,null)),not(selector(\"f1\",null,null)))@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testQuery(\"SELECT EARLIEST(dim1, 32), LATEST(l1), LATEST(d1), LATEST(f1) \" + \"FROM druid.numfoo \" + \"WHERE dim1 IS NOT NULL AND l1 IS NOT NULL AND d1 IS NOT NULL AND f1 is NOT NULL\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE3).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).filters(filter).aggregators(aggregators(new StringFirstAggregatorFactory(\"a0\",\"dim1\",32),new LongLastAggregatorFactory(\"a1\",\"l1\"),new DoubleLastAggregatorFactory(\"a2\",\"d1\"),new FloatLastAggregatorFactory(\"a3\",\"f1\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a218bf))@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testAnyAggregatorsSkipNullsWithFilter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "final DimFilter filter@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->4 [style = bold, label=""];
+3->2 [style = dotted, label="false"];
+4->6 [style = bold, label=""];
+7->6 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+5->8 [style = dashed, label="0"];
+9->8 [style = bold, label=""];
+0->5 [style = bold, label=""];
+0->8 [style = bold, label=""];
+10->4 [style = bold, label=""];
+3->0 [style = bold, label=""];
+3->9 [style = bold, label=""];
+3->9 [style = dotted, label="false"];
+6->3 [style = bold, label=""];
+3->2 [style = bold, label=""];
+2->5 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+}

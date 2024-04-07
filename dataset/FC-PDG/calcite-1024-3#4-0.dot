@@ -1,0 +1,30 @@
+digraph {
+11 [style = filled, label = "final Map<String,String> map = Linq4j.asEnumerable(Arrays.asList(\"foo\",\"bar\",\"far\")).toMap(Functions.identitySelector(),new Function1<String,String>(){public String apply(String x){return x == null? null: x.toUpperCase()}},new EqualityComparer<String>(){public boolean equal(String v1,String v2){return String.CASE_INSENSITIVE_ORDER.compare(v1,v2) == 0}public int hashCode(String s){return s == null? Objects.hashCode(null): s.toLowerCase().hashCode()}})@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertEquals(3,map.size())@@@12@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertEquals(3,map.size())@@@17@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assertTrue(map.get(\"FOO\").equals(\"foo\"))@@@15@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testToMapWithComparer['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertTrue(map.get(\"foo\").equals(\"foo\"))@@@13@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testToMap2WithComparer['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final Map<String,String> map = Linq4j.asEnumerable(Arrays.asList(\"foo\",\"bar\",\"far\")).toMap(Functions.identitySelector(),new EqualityComparer<String>(){public boolean equal(String v1,String v2){return String.CASE_INSENSITIVE_ORDER.compare(v1,v2) == 0}public int hashCode(String s){return s == null? Objects.hashCode(null): s.toLowerCase(Locale.ROOT).hashCode()}})@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertTrue(map.get(\"Foo\").equals(\"FOO\"))@@@19@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testToMapWithComparer['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "assertTrue(map.get(\"foo\").equals(\"FOO\"))@@@18@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertTrue(map.get(\"Foo\").equals(\"foo\"))@@@14@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertTrue(map.get(\"FOO\").equals(\"FOO\"))@@@20@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6->0 [style = bold, label=""];
+12->10 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+0->5 [style = bold, label=""];
+7->8 [style = bold, label=""];
+9->11 [style = bold, label=""];
+1->0 [style = bold, label=""];
+11->7 [style = bold, label=""];
+8->12 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+2->12 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+4->2 [style = bold, label=""];
+2->3 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+}

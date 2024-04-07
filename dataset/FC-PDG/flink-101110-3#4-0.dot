@@ -1,0 +1,26 @@
+digraph {
+8 [style = filled, label = "listTables['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "boolean ignoreIfNotExists@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "return client.getAllTables(databaseName)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "String databaseName@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "dropDatabase['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "checkArgument(!StringUtils.isNullOrWhitespaceOnly(databaseName),\"databaseName cannot be null or empty\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "String name@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "client.dropDatabase(name,true,ignoreIfNotExists)@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "boolean ignoreIfNotExists@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "dropDatabase['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->3 [style = solid, label="ignoreIfNotExists"];
+5->3 [style = solid, label="ignoreIfNotExists"];
+0->2 [style = dotted, label="true"];
+4->5 [style = dotted, label="true"];
+2->9 [style = dashed, label="0"];
+0->1 [style = dotted, label="true"];
+6->7 [style = bold, label=""];
+0->3 [style = bold, label=""];
+8->6 [style = bold, label=""];
+9->7 [style = solid, label="databaseName"];
+2->3 [style = solid, label="name"];
+4->3 [style = bold, label=""];
+4->2 [style = dotted, label="true"];
+8->9 [style = dotted, label="true"];
+}

@@ -1,0 +1,30 @@
+digraph {
+5 [style = filled, label = "testConfig.setProperty(ConsumerConfigConstants.STREAM_INITIAL_TIMESTAMP,\"-1.0\")@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testIllegalValueForInitialTimestampInConfig['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "KinesisConfigUtil.validateConsumerConfiguration(testConfig)@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "testConfig.setProperty(ConsumerConfigConstants.STREAM_TIMESTAMP_DATE_FORMAT,\"yyyy-MM-dd\")@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "testUnparsableDateForUserDefinedDateFormatForInitialTimestampInConfig['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testConfig.setProperty(ConsumerConfigConstants.STREAM_INITIAL_POSITION,\"AT_TIMESTAMP\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testConfig.setProperty(ConsumerConfigConstants.AWS_CREDENTIALS_PROVIDER,\"BASIC\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testConfig.setProperty(ConsumerConfigConstants.STREAM_INITIAL_TIMESTAMP,\"stillUnparsable\")@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testIllegalValuEforInitialTimestampInConfig['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Properties testConfig = TestUtils.getStandardProperties()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "exception.expect()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "exception.expectMessage(\"Invalid value given for initial timestamp for AT_TIMESTAMP initial position in stream.\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "KinesisConfigUtil.validateConsumerConfiguration(testConfig)@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->0 [style = bold, label=""];
+12->4 [style = bold, label=""];
+5->10 [style = dashed, label="0"];
+4->6 [style = bold, label=""];
+5->3 [style = bold, label=""];
+11->9 [style = bold, label=""];
+0->9 [style = solid, label="testConfig"];
+2->10 [style = bold, label=""];
+10->11 [style = bold, label=""];
+7->4 [style = bold, label=""];
+8->4 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+0->3 [style = solid, label="testConfig"];
+2->5 [style = bold, label=""];
+}

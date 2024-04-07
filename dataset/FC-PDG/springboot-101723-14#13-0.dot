@@ -1,0 +1,22 @@
+digraph {
+7 [style = filled, label = "ConfigDataLoaders loaders = new ConfigDataLoaders(this.logFactory,this.bootstrapContext,Arrays.asList(.getName()))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "loadWhenSingleLoaderSupportsLocationReturnsLoadedConfigData['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "ConfigData loaded = loaders.load(this.context,location)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(getLoader(loaded)).isInstanceOf()@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "loadWhenMultipleLoadersSupportLocationThrowsException['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "ConfigDataLoaders loaders = new ConfigDataLoaders(this.logFactory,this.bootstrapContext,Arrays.asList(.getName(),.getName()))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "TestConfigDataResource location = new TestConfigDataResource(\"test\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThatIllegalStateException().isThrownBy(null).withMessageContaining(\"Multiple loaders found for resource 'test'\")@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "loadWhenMultipleLoadersSupportLocationThrowsException['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7->5 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+0->3 [style = bold, label=""];
+5->6 [style = bold, label=""];
+0->5 [style = solid, label="location"];
+3->7 [style = dashed, label="0"];
+8->0 [style = bold, label=""];
+4->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+0->7 [style = bold, label=""];
+}

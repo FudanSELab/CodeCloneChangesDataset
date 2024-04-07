@@ -1,0 +1,25 @@
+digraph {
+7 [style = filled, label = "HistogramAggregationBuilder histogram = new HistogramAggregationBuilder(\"histo\").field(\"number\").interval(1).minDocCount(0).subAggregation(new MinAggregationBuilder(\"min\").field(\"number\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testGetProperty['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "testEmptyBucket['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "GlobalAggregationBuilder globalBuilder = new GlobalAggregationBuilder(\"global\").subAggregation(new MinAggregationBuilder(\"min\").field(\"number\"))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testGetProperty['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "fieldType.setName(\"number\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testCase(globalBuilder,new MatchAllDocsQuery(),null,(Consumer<InternalGlobal>)null,fieldType)@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testCase(histogram,new MatchAllDocsQuery(),null,(Consumer<InternalHistogram>)null,fieldType)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "MappedFieldType fieldType = new NumberFieldMapper.NumberFieldType(NumberFieldMapper.NumberType.INTEGER)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->0 [style = solid, label="fieldType"];
+4->0 [style = solid, label="globalBuilder"];
+2->8 [style = solid, label="fieldType"];
+6->7 [style = bold, label=""];
+7->8 [style = solid, label="histogram"];
+4->7 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+3->8 [style = bold, label=""];
+5->4 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+7->2 [style = bold, label=""];
+}

@@ -1,0 +1,5 @@
+digraph {
+0 [style = filled, label = "collection['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "replicas per@@@5@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0->1 [style = dotted, label="true"];
+}

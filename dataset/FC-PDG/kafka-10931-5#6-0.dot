@@ -1,0 +1,24 @@
+digraph {
+0 [style = filled, label = "final JmxReporter reporter = new JmxReporter(\"kafka.streams\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertTrue(reporter.containsMbean(String.format(\"kafka.streams:type=stream-%s-state-metrics,client-id=%s,task-id=%s,%s-state-id=%s\",\"scope\",\"test\",taskId.toString(),\"scope\",\"all\")))@@@7@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertTrue(reporter.containsMbean(String.format(\"kafka.streams:type=stream-%s-state-metrics,client-id=%s,task-id=%s,%s-state-id=%s\",\"scope\",\"test\",taskId.toString(),\"scope\",\"metered\")))@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "metrics.addReporter(reporter)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testMetrics['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testMetrics['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testMetrics['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "init()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertTrue(reporter.containsMbean(String.format(\"kafka.streams:type=stream-%s-state-metrics,client-id=%s,task-id=%s,%s-state-id=%s\",\"scope\",threadId,taskId.toString(),\"scope\",\"all\")))@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "assertTrue(reporter.containsMbean(String.format(\"kafka.streams:type=stream-%s-state-metrics,client-id=%s,task-id=%s,%s-state-id=%s\",\"scope\",threadId,taskId.toString(),\"scope\",\"metered\")))@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+2->0 [style = bold, label=""];
+9->2 [style = bold, label=""];
+5->3 [style = bold, label=""];
+0->5 [style = solid, label="reporter"];
+3->6 [style = dashed, label="0"];
+0->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->4 [style = bold, label=""];
+6->8 [style = bold, label=""];
+5->6 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+7->2 [style = bold, label=""];
+}

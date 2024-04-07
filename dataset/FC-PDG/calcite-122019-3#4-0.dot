@@ -1,0 +1,24 @@
+digraph {
+8 [style = filled, label = "call.transformTo(calc)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "onMatch['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final LogicalProject project = call.rel(0)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final RelNode input = project.getInput()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "RelOptRuleCall call@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "onMatch['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "RelOptRuleCall call@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "onMatch['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final RexProgram program = RexProgram.create(input.getRowType(),project.getProjects(),null,project.getRowType(),project.getCluster().getRexBuilder())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final LogicalCalc calc = LogicalCalc.create(input,program)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2->1 [style = dotted, label="true"];
+1->5 [style = dashed, label="0"];
+0->1 [style = dotted, label="true"];
+4->8 [style = bold, label=""];
+7->4 [style = bold, label=""];
+9->5 [style = dotted, label="true"];
+6->3 [style = bold, label=""];
+3->7 [style = bold, label=""];
+3->4 [style = solid, label="input"];
+7->4 [style = solid, label="program"];
+4->8 [style = solid, label="calc"];
+9->6 [style = bold, label=""];
+}

@@ -1,0 +1,34 @@
+digraph {
+5 [style = filled, label = "assertViolations(result,2,0)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "assertEquals(\"'repositories.repository.url' is missing.\",result.getErrors().get(1))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "assertEquals(\"'repositories.repository.id' is missing.\",result.getErrors().get(0))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testMissingResourceDirectory['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(\"'build.testResources.testResource.directory' is missing.\",result.getErrors().get(1))@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(2,result.getErrors().size())@@@4@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "ModelValidationResult result = validate(\"missing-repository-id-pom.xml\",true,false)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testMissingRepositoryId['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "ModelValidationResult result = validate(\"missing-resource-directory-pom.xml\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertEquals(\"'build.resources.resource.directory' is missing.\",result.getErrors().get(0))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertEquals(\"'pluginRepositories.pluginRepository.id' is missing.\",result.getErrors().get(2))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertEquals(4,result.getErrors().size())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testMissingResourceDirectory['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "assertEquals(\"'pluginRepositories.pluginRepository.url' is missing.\",result.getErrors().get(3))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->2 [style = bold, label=""];
+4->5 [style = bold, label=""];
+8->11 [style = bold, label=""];
+9->13 [style = bold, label=""];
+2->0 [style = bold, label=""];
+10->7 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+4->11 [style = dashed, label="0"];
+7->12 [style = bold, label=""];
+11->9 [style = bold, label=""];
+13->10 [style = bold, label=""];
+6->4 [style = bold, label=""];
+4->5 [style = solid, label="result"];
+1->2 [style = bold, label=""];
+3->4 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->13 [style = dashed, label="0"];
+1->9 [style = dashed, label="0"];
+}

@@ -1,0 +1,33 @@
+digraph {
+4 [style = filled, label = "String user@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "HttpClient cl@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "executeCommand['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "executeCommand['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "String pwd@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "String url@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "String url@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "String payload@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String payload@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "String user@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "String payload@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "JsonWebSignature jws@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "executeCommand['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "String url@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "HttpClient cl@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "HttpClient cl@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8->10 [style = dotted, label="true"];
+8->6 [style = dotted, label="true"];
+5->0 [style = dotted, label="true"];
+5->1 [style = dotted, label="true"];
+4->15 [style = dashed, label="0"];
+5->4 [style = dotted, label="true"];
+14->13 [style = dotted, label="true"];
+14->15 [style = dotted, label="true"];
+14->11 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+8->4 [style = dotted, label="true"];
+14->12 [style = dotted, label="true"];
+5->2 [style = dotted, label="true"];
+5->3 [style = dotted, label="true"];
+8->9 [style = dotted, label="true"];
+}

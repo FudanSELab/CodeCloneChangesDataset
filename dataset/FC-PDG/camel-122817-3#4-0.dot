@@ -1,0 +1,26 @@
+digraph {
+2 [style = filled, label = "return new ExpressionAdapter(){public Object evaluate(Exchange exchange){String text = ExpressionBuilder.simpleExpression(name).evaluate(exchange,)Class<?> typetry {type = exchange.getContext().getClassResolver().resolveMandatoryClass(text)}catch (ClassNotFoundException e) Object body = exchange.getIn().getBody(type)if (body != null) {return ExpressionBuilder.beanExpression(body,ognl).evaluate(exchange,)}{return null}}@Override public String toString(){return \"bodyOgnlAs(\" + name + \"((\" + ognl + \")\"}}@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final String ognl@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final String ognl@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final String name@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final String name@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final String name@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "mandatoryBodyOgnlExpression['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "mandatoryBodyOgnlExpression['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "bodyOgnlExpression['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->2 [style = bold, label=""];
+8->6 [style = dotted, label="true"];
+0->3 [style = dotted, label="true"];
+8->2 [style = bold, label=""];
+7->2 [style = solid, label="ognl"];
+5->4 [style = dotted, label="true"];
+3->2 [style = solid, label="ognl"];
+0->1 [style = dotted, label="true"];
+0->2 [style = bold, label=""];
+4->2 [style = solid, label="name"];
+6->2 [style = solid, label="name"];
+1->2 [style = solid, label="name"];
+8->7 [style = dotted, label="true"];
+3->7 [style = dashed, label="0"];
+5->3 [style = dotted, label="true"];
+}

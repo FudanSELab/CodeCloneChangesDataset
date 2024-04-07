@@ -1,0 +1,17 @@
+digraph {
+2 [style = filled, label = "RegionConfig region = new RegionConfig()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "client.invoke(null)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "region.setName(\"customer\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "createRegion_NoPassword['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "region.setType(RegionType.PARTITION)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "int httpPort = locator.getHttpPort()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "createRegion_NoUser['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "createRegion_NoUser['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+0->3 [style = bold, label=""];
+2->4 [style = bold, label=""];
+6->2 [style = bold, label=""];
+4->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+7->2 [style = bold, label=""];
+}

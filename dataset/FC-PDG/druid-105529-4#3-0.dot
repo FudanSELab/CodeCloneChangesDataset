@@ -1,0 +1,22 @@
+digraph {
+5 [style = filled, label = "final YieldingAccumulator<OutType,T> accumulator@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "next['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "next['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "return wrapper.wrap(new Supplier<Yielder<OutType>>(){@Override public Yielder<OutType> get(){return new WrappingYielder<>(baseSequence.toYielder(initValue,accumulator),wrapper)}})@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final OutType initValue@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final OutType initValue@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "wrapper.before()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "toYielder['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4->5 [style = dotted, label="true"];
+3->2 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+5->2 [style = solid, label="accumulator"];
+4->7 [style = bold, label=""];
+4->6 [style = dotted, label="true"];
+6->2 [style = solid, label="initValue"];
+1->2 [style = bold, label=""];
+1->0 [style = dotted, label="true"];
+0->2 [style = solid, label="initValue"];
+3->0 [style = dotted, label="true"];
+7->2 [style = bold, label=""];
+}

@@ -1,0 +1,16 @@
+digraph {
+1 [style = filled, label = "Exception e = expectThrows(,null)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "SettingsModule settings = new SettingsModule(Settings.EMPTY)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testSetupRestHandlerContainsKnownBuiltin['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ActionModule actionModule = new ActionModule(settings.getSettings(),new IndexNameExpressionResolver(),settings.getIndexScopedSettings(),settings.getClusterSettings(),settings.getSettingsFilter(),null,emptyList(),null,null,usageService,null)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "actionModule.initRestHandlers(null)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "UsageService usageService = new UsageService()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(e.getMessage(),startsWith(\"Cannot replace existing handler for (/( for method: GET\"))@@@15@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3->2 [style = solid, label="usageService"];
+5->3 [style = bold, label=""];
+0->5 [style = bold, label=""];
+2->4 [style = bold, label=""];
+1->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+}

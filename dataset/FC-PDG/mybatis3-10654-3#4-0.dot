@@ -1,0 +1,27 @@
+digraph {
+6 [style = filled, label = "shouldAutoRegisterAndRetrieveComplexTypeHandler['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "typeHandlerRegistry.register(fakeHandler)@@@17@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "TypeHandler<List<URI>> fakeHandler = new TypeHandler<List<URI>>(){@Override public void setParameter(PreparedStatement ps,int i,List<URI> parameter,JdbcType jdbcType){}@Override public List<URI> getResult(CallableStatement cs,int columnIndex){return null}@Override public List<URI> getResult(ResultSet rs,int columnIndex){return null}@Override public List<URI> getResult(ResultSet rs,String columnName){return null}}@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "shouldRegisterAndRetrieveComplexTypeHandler['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "shouldRegisterAndRetrieveComplexTypeHandler['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "TypeHandler<List<URI>> fakeHandler = new BaseTypeHandler<List<URI>>(){@Override public void setNonNullParameter(PreparedStatement ps,int i,List<URI> parameter,JdbcType jdbcType){}@Override public List<URI> getNullableResult(ResultSet rs,String columnName){return null}@Override public List<URI> getNullableResult(ResultSet rs,int columnIndex){return null}@Override public List<URI> getNullableResult(CallableStatement cs,int columnIndex){return null}}@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertSame(fakeHandler,typeHandlerRegistry.getTypeHandler(new TypeReference<List<URI>>(){}))@@@18@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "typeHandlerRegistry.register(type,fakeHandler)@@@20@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertSame(fakeHandler,typeHandlerRegistry.getTypeHandler(type))@@@21@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "TypeReference<List<URI>> type = new TypeReference<List<URI>>(){}@@@17@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->1 [style = solid, label="type"];
+0->3 [style = solid, label="fakeHandler"];
+5->0 [style = bold, label=""];
+1->3 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+7->9 [style = solid, label="fakeHandler"];
+0->2 [style = bold, label=""];
+9->8 [style = bold, label=""];
+6->7 [style = bold, label=""];
+2->3 [style = solid, label="type"];
+7->8 [style = solid, label="fakeHandler"];
+2->1 [style = bold, label=""];
+0->1 [style = solid, label="fakeHandler"];
+4->0 [style = bold, label=""];
+7->9 [style = bold, label=""];
+}

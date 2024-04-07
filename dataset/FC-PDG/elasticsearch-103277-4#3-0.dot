@@ -1,0 +1,25 @@
+digraph {
+11 [style = filled, label = "testIllegalValues['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "{final MatchBoolPrefixQueryBuilder builder = new MatchBoolPrefixQueryBuilder(\"name\",\"value\")builder.analyzer(\"bogusAnalyzer\")QueryShardException e = expectThrows(,null)assertThat(e.getMessage(),containsString(\"analyzer (bogusAnalyzer( not found\"))}@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "e = expectThrows(,null)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "{IllegalArgumentException e = expectThrows(,null)assertEquals(\"(match_bool_prefix( requires query value\",e.getMessage())}@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testIllegalValues['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "{IllegalArgumentException e = expectThrows(,null)assertEquals(\"(match_bool_prefix( requires fieldName\",e.getMessage())}@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "MatchPhrasePrefixQueryBuilder matchQuery = new MatchPhrasePrefixQueryBuilder(\"fieldName\",\"text\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "e = expectThrows(,null)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertEquals(\"(match_phrase_prefix( requires fieldName\",e.getMessage())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "IllegalArgumentException e = expectThrows(,null)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertEquals(\"(match_phrase_prefix( requires query value\",e.getMessage())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testIllegalValues['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10->7 [style = bold, label=""];
+11->10 [style = bold, label=""];
+7->8 [style = bold, label=""];
+0->3 [style = bold, label=""];
+8->6 [style = bold, label=""];
+9->5 [style = bold, label=""];
+4->3 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+6->9 [style = bold, label=""];
+}

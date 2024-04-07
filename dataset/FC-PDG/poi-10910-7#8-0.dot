@@ -1,0 +1,28 @@
+digraph {
+3 [style = filled, label = "testExportToXMLSingleAttributeNamespace['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "UnsynchronizedByteArrayOutputStream os = new UnsynchronizedByteArrayOutputStream()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Pattern p = Pattern.compile(\"Failed to read (external )?schema document .*Schema11., because .file. access is not allowed\")@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "SAXParseException ex = assertThrows(,null)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testXXEInSchema['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testExportToXMLSingleAttributeNamespace['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "assertThrows(,null)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertTrue(p.matcher(ex.getMessage()).find())@@@9@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "XSSFExportToXml exporter = new XSSFExportToXml(map)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(\"schema_reference: Failed to read schema document 'Schema11', because 'file' access is not allowed due to restriction set by the accessExternalSchema property.\",ex.getMessage().trim())@@@8@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "UnsynchronizedByteArrayOutputStream bos = new UnsynchronizedByteArrayOutputStream()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->2 [style = bold, label=""];
+4->5 [style = bold, label=""];
+7->6 [style = bold, label=""];
+10->8 [style = bold, label=""];
+8->2 [style = bold, label=""];
+9->2 [style = bold, label=""];
+0->2 [style = bold, label=""];
+2->10 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+3->2 [style = bold, label=""];
+4->0 [style = bold, label=""];
+6->2 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+}

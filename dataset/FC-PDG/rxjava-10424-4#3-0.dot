@@ -1,0 +1,38 @@
+digraph {
+11 [style = filled, label = "SingleSubject<Integer> ss = SingleSubject.create()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "CompletableSubject cs = CompletableSubject.create()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "NullPointerException ex@@@8@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "fail(\"No NullPointerException thrown\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(ExceptionHelper.nullWarning(\"onError called with a null Throwable.\"),ex.getMessage())@@@9@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "nullThrowable['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertEquals(\"onSuccess called with null. Null values are generally not allowed in 2.x operators and sources.\",ex.getMessage())@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "nullValue['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "ss.onSuccess(null)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "ss.test().assertEmpty().dispose()@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "cs.test().assertEmpty().dispose()@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "nullThrowable['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "assertEquals(\"onError called with null. Null values are generally not allowed in 2.x operators and sources.\",ex.getMessage())@@@9@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "cs.onError(null)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12->0 [style = bold, label=""];
+1->8 [style = dotted, label="true"];
+0->4 [style = bold, label=""];
+11->12 [style = bold, label=""];
+1->9 [style = bold, label=""];
+6->4 [style = bold, label=""];
+8->4 [style = bold, label=""];
+1->9 [style = dotted, label="true"];
+2->5 [style = bold, label=""];
+1->8 [style = bold, label=""];
+9->13 [style = bold, label=""];
+10->11 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+1->6 [style = dotted, label="true"];
+0->13 [style = bold, label=""];
+1->6 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+7->5 [style = bold, label=""];
+4->13 [style = dashed, label="0"];
+5->3 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+}

@@ -1,0 +1,31 @@
+digraph {
+9 [style = filled, label = "configureConsumer(consumer)@@@7@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "throw new AtmosException(\"operation specified is not valid for consumer!\")@@@11@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "createConsumer['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Processor processor@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "createConsumer['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "consumer = new AtmosScheduledPollGetConsumer(this,processor,configuration)@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "createConsumer['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "return consumer@@@8@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "AtmosScheduledPollConsumer consumer@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "consumer.setDelay(POLL_CONSUMER_DELAY)@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "this.configuration.getOperation() == AtmosOperation.get@@@4@@@['0', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB2BBB"];
+1->3 [style = solid, label="processor"];
+8->7 [style = bold, label=""];
+6->1 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+7->4 [style = dotted, label="true"];
+10->1 [style = dotted, label="true"];
+5->9 [style = bold, label=""];
+7->2 [style = bold, label=""];
+9->4 [style = bold, label=""];
+7->9 [style = dotted, label="true"];
+7->3 [style = bold, label=""];
+3->5 [style = bold, label=""];
+3->9 [style = solid, label="consumer"];
+3->4 [style = solid, label="consumer"];
+7->3 [style = dotted, label="true"];
+6->8 [style = bold, label=""];
+7->5 [style = dotted, label="true"];
+7->2 [style = dotted, label="false"];
+}

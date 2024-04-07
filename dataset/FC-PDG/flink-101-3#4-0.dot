@@ -1,0 +1,38 @@
+digraph {
+10 [style = filled, label = "createHDFS['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "baseDir = new File(\"./target/hdfs/hdfsTesting\").getAbsoluteFile()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "org.apache.hadoop.conf.Configuration hdConf = new org.apache.hadoop.conf.Configuration()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "FileUtil.fullyDelete(baseDir)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "hdConf.set(\"dfs.block.size\",String.valueOf(1048576))@@@7@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "org.apache.hadoop.conf.Configuration hdConf = new org.apache.hadoop.conf.Configuration()@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "hdConf.set(MiniDFSCluster.HDFS_MINIDFS_BASEDIR,baseDir.getAbsolutePath())@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "createHDFS['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "MiniDFSCluster.Builder builder = new MiniDFSCluster.Builder(hdConf)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "hdConf.set(\"dfs.block.size\",String.valueOf(1048576))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "createHDFS['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "hdfs = new org.apache.hadoop.fs.Path(hdfsURI).getFileSystem(hdConf)@@@12@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "File hdfsDir = tempFolder.newFolder()@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "hdfsCluster = builder.build()@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "hdfsURI = \"hdfs://\" + hdfsCluster.getURI().getHost() + \":\" + hdfsCluster.getNameNodePort() + \"/\"@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14->5 [style = bold, label=""];
+4->6 [style = bold, label=""];
+13->7 [style = bold, label=""];
+11->12 [style = bold, label=""];
+9->6 [style = solid, label="hdConf"];
+8->4 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+2->5 [style = bold, label=""];
+9->13 [style = bold, label=""];
+10->11 [style = bold, label=""];
+0->8 [style = bold, label=""];
+9->0 [style = solid, label="hdConf"];
+12->9 [style = bold, label=""];
+12->7 [style = solid, label="hdConf"];
+3->9 [style = bold, label=""];
+7->0 [style = bold, label=""];
+5->3 [style = bold, label=""];
+1->7 [style = bold, label=""];
+5->3 [style = solid, label="baseDir"];
+9->1 [style = bold, label=""];
+12->4 [style = solid, label="hdConf"];
+}

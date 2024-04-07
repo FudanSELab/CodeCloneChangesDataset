@@ -1,0 +1,11 @@
+digraph {
+2 [style = filled, label = "synchronousInterval['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "synchronousInterval['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "synchronousInterval['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return Observable.unsafeCreate(new ObservableSource<Long>(){@Override public void subscribe(Observer<? super Long> observer){final AtomicBoolean cancel = new AtomicBoolean()observer.onSubscribe(Disposable.fromRunnable(new Runnable(){@Override public void run(){cancel.set(true)}}))for (  ){if (cancel.get()) {break}try {Thread.sleep(100)}catch (InterruptedException e) observer.onNext(1L)}}})@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return Flowable.unsafeCreate(new Publisher<Long>(){@Override public void subscribe(Subscriber<? super Long> subscriber){final AtomicBoolean cancel = new AtomicBoolean()subscriber.onSubscribe(new Subscription(){@Override public void request(long n){}@Override public void cancel(){cancel.set(true)}})for (  ){if (cancel.get()) {break}try {Thread.sleep(100)}catch (InterruptedException e) subscriber.onNext(1L)}}})@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2->0 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

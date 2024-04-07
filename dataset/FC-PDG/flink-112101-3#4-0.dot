@@ -1,0 +1,36 @@
+digraph {
+3 [style = filled, label = "testDeserializationWithMetadata['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "assertEquals(9,collector.list.size())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "final SimpleCollector collector = new SimpleCollector()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testDeserializationWithMetadata(\"canal-data.txt\",null,null,null)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "final CanalJsonDeserializationSchema deserializationSchema = createCanalJsonDeserializationSchema(database,table,requestedMetadata)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testDeserializationWithMetadata['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final List<ReadableMetadata> requestedMetadata = Arrays.asList(ReadableMetadata.values())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "String resourceFile@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "String table@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "Consumer<RowData> testConsumer@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "deserializationSchema.deserialize(firstLine.getBytes(StandardCharsets.UTF_8),collector)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "testDeserializationWithMetadata['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "testConsumer.accept(collector.list.get(0))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final String firstLine = readLines(resourceFile).get(0)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "String database@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testDeserializationWithMetadata(\"canal-data-filter-table.txt\",\"mydb\",\"product\",null)@@@16@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12->9 [style = bold, label=""];
+12->10 [style = dotted, label="true"];
+12->7 [style = dotted, label="true"];
+8->14 [style = bold, label=""];
+7->14 [style = solid, label="database"];
+9->8 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->14 [style = solid, label="requestedMetadata"];
+15->11 [style = bold, label=""];
+6->14 [style = solid, label="table"];
+12->4 [style = dotted, label="true"];
+12->6 [style = dotted, label="true"];
+14->15 [style = bold, label=""];
+2->1 [style = bold, label=""];
+5->13 [style = bold, label=""];
+3->2 [style = bold, label=""];
+11->5 [style = bold, label=""];
+15->11 [style = solid, label="collector"];
+}

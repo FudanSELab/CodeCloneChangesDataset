@@ -1,0 +1,11 @@
+digraph {
+0 [style = filled, label = "Flowable.just(1,2,3,101,102,23,890,120,32).concatMapDelayError(new Function<Integer,Flowable<Integer>>(){@Override public Flowable<Integer> apply(final Integer integer){return Flowable.fromCallable(new Callable<Integer>(){@Override public Integer call(){if (integer >= 100) {throw new NullPointerException(\"test null exp\")}return integer}})}},false,2).test().assertFailure(,1,2,3)@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "delayErrorCallableEager['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "Observable.just(1,2,3,101,102,23,890,120,32).concatMapDelayError(new Function<Integer,Observable<Integer>>(){@Override public Observable<Integer> apply(final Integer integer){return Observable.fromCallable(new Callable<Integer>(){@Override public Integer call(){if (integer >= 100) {throw new NullPointerException(\"test null exp\")}return integer}})}},2,true,ImmediateThinScheduler.INSTANCE).test().assertFailure(,1,2,3,23,32)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "delayErrorCallableTillTheEnd['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "delayErrorCallableEager['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->0 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+3->4 [style = bold, label=""];
+}

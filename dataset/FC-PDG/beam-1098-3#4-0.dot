@@ -1,0 +1,9 @@
+digraph {
+0 [style = filled, label = "testUnion_threeDataSets['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testUnion_threeDataSets['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "execute(new TestCase<Integer>(){@Override public Dataset<Integer> getOutput(Pipeline pipeline){final Dataset<Integer> first = createDataset(pipeline,1,2,3)final Dataset<Integer> second = createDataset(pipeline,4,5,6)final Dataset<Integer> third = createDataset(pipeline,7,8,9)final Dataset<Integer> fourth = createDataset(pipeline,10,11,12)final Dataset<Integer> fifth = createDataset(pipeline,13,14,15)return Union.of(first,second,third,fourth,fifth).output()}@Override public List<Integer> getUnorderedOutput(){return Arrays.asList(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15)}})@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testUnion_fiveDataSets['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

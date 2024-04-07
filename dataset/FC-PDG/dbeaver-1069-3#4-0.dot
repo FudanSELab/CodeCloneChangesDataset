@@ -1,0 +1,38 @@
+digraph {
+8 [style = filled, label = "{final List<SQLCompletionProposalBase> proposals = request.request(\"SELECT t.| FROM Table1 t\")Assert.assertEquals(3,proposals.size())Assert.assertEquals(\"Col1\",proposals.get(0).getReplacementString())Assert.assertEquals(\"Col2\",proposals.get(1).getReplacementString())Assert.assertEquals(\"Col3\",proposals.get(2).getReplacementString())}@@@59@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "testSchemaTableNamesCompletion['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "{final List<SQLCompletionProposalBase> proposals = request.request(\"SELECT * FROM Table1 t WHERE t.|\")Assert.assertEquals(3,proposals.size())Assert.assertEquals(\"Col1\",proposals.get(0).getReplacementString())Assert.assertEquals(\"Col2\",proposals.get(1).getReplacementString())Assert.assertEquals(\"Col3\",proposals.get(2).getReplacementString())}@@@45@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testColumnNamesCompletion['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "{final List<SQLCompletionProposalBase> proposals = request.request(\"SELECT t2.| FROM Table1 t, Table2 t2\")Assert.assertEquals(3,proposals.size())Assert.assertEquals(\"Col4\",proposals.get(0).getReplacementString())Assert.assertEquals(\"Col5\",proposals.get(1).getReplacementString())Assert.assertEquals(\"Col6\",proposals.get(2).getReplacementString())}@@@66@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testColumnNamesCompletion['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "{final List<SQLCompletionProposalBase> proposals = request.request(\"SELECT * FROM \"Table 3\" t WHERE t.|\")Assert.assertEquals(3,proposals.size())Assert.assertEquals(\"Col7\",proposals.get(0).getReplacementString())Assert.assertEquals(\"Col8\",proposals.get(1).getReplacementString())Assert.assertEquals(\"Col9\",proposals.get(2).getReplacementString())}@@@52@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "{final List<SQLCompletionProposalBase> proposals = request.request(\"SELECT * FROM Table1 WHERE Table1.|\")Assert.assertEquals(3,proposals.size())Assert.assertEquals(\"Col1\",proposals.get(0).getReplacementString())Assert.assertEquals(\"Col2\",proposals.get(1).getReplacementString())Assert.assertEquals(\"Col3\",proposals.get(2).getReplacementString())}@@@38@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final RequestResult request = RequestBuilder.tables(null).prepare()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "{final List<SQLCompletionProposalBase> proposals = request.request(\"SELECT * FROM Table1 WHERE |\")Assert.assertEquals(3,proposals.size())Assert.assertEquals(\"Col1\",proposals.get(0).getReplacementString())Assert.assertEquals(\"Col2\",proposals.get(1).getReplacementString())Assert.assertEquals(\"Col3\",proposals.get(2).getReplacementString())}@@@31@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "{final List<SQLCompletionProposalBase> proposals = request.request(\"SELECT * FROM Schema1.|\")Assert.assertEquals(3,proposals.size())Assert.assertEquals(\"Table1\",proposals.get(0).getReplacementString())Assert.assertEquals(\"Table2\",proposals.get(1).getReplacementString())Assert.assertEquals(\"Table3\",proposals.get(2).getReplacementString())}@@@24@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "{final List<SQLCompletionProposalBase> proposals = request.request(\"SELECT * FROM Sch|\")Assert.assertEquals(2,proposals.size())Assert.assertEquals(\"Schema1\",proposals.get(0).getReplacementString())Assert.assertEquals(\"Schema2\",proposals.get(1).getReplacementString())}@@@18@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final RequestResult request = RequestBuilder.schemas(null).prepare()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11->3 [style = bold, label=""];
+4->6 [style = bold, label=""];
+0->8 [style = solid, label="request"];
+2->7 [style = bold, label=""];
+0->2 [style = solid, label="request"];
+10->11 [style = bold, label=""];
+0->3 [style = bold, label=""];
+11->3 [style = solid, label="request"];
+9->0 [style = bold, label=""];
+0->6 [style = solid, label="request"];
+2->8 [style = bold, label=""];
+11->12 [style = solid, label="request"];
+5->0 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+3->12 [style = bold, label=""];
+0->3 [style = solid, label="request"];
+0->1 [style = solid, label="request"];
+8->7 [style = bold, label=""];
+0->4 [style = solid, label="request"];
+6->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->7 [style = solid, label="request"];
+}

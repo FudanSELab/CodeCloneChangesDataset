@@ -1,0 +1,13 @@
+digraph {
+3 [style = filled, label = "new WebApplicationContextRunner(null).withConfiguration(AutoConfigurations.of(,)).withUserConfiguration(,).withPropertyValues(\"server.tomcat.mbeanregistry.enabled=true\").run(null)@@@4@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "this.contextRunner.withUserConfiguration().withPropertyValues(\"management.auditevents.enabled=false\").run(null)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "backsOffWhenDisabled['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "resetTomcatState()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "new WebApplicationContextRunner(null).withConfiguration(AutoConfigurations.of(,)).withUserConfiguration(,).run(null)@@@3@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "autoConfiguresTomcatMetricsWithEmbeddedServletTomcat['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "autoConfiguresTomcatMetricsWithEmbeddedServletTomcat['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6->5 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->0 [style = bold, label=""];
+2->4 [style = bold, label=""];
+}

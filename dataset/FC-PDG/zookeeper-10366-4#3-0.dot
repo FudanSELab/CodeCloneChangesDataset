@@ -1,0 +1,29 @@
+digraph {
+10 [style = filled, label = "this.pathTrie.addPath(\"node1/node3\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "Assert.assertTrue(this.pathTrie.existsNode(\"/node1/node3\"))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "this.pathTrie.deletePath(\"node1/node3\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "addPathToRootLeaves['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "this.pathTrie.addPath(\"node1\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Assert.assertTrue(this.pathTrie.existsNode(\"/node1\"))@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "deletePathDoesNotExist['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Assert.assertTrue(this.pathTrie.existsNode(\"/node1/node2\"))@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertTrue(this.pathTrie.existsNode(\"/node1\"))@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "deletePathDoesNotExist['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "this.pathTrie.addPath(\"node1/node2\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertTrue(this.pathTrie.existsNode(\"/node1/node2\"))@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+0->6 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+3->10 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+0->5 [style = bold, label=""];
+6->7 [style = bold, label=""];
+2->4 [style = bold, label=""];
+5->6 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+4->3 [style = bold, label=""];
+8->4 [style = bold, label=""];
+9->4 [style = bold, label=""];
+10->5 [style = bold, label=""];
+1->11 [style = bold, label=""];
+5->1 [style = bold, label=""];
+}

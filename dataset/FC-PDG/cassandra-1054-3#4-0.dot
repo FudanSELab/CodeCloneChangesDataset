@@ -1,0 +1,29 @@
+digraph {
+0 [style = filled, label = "connect['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "return new SSLOptions(sslContext,clientEncryptionOptions.cipher_suites)@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "SSLContext sslContext@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "!clientEncryptionOptions.enabled@@@3@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "return null@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "IOException e@@@8@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ProtocolOptions.Compression compression@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "connect['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "throw new RuntimeException(\"Could not create SSL Context.\",e)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "buildSSLOptions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "EncryptionOptions.ClientEncryptionOptions clientEncryptionOptions@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "sslContext = SSLFactory.createSSLContext(clientEncryptionOptions,true)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->5 [style = dotted, label="true"];
+4->5 [style = bold, label=""];
+2->1 [style = dotted, label="true"];
+4->11 [style = bold, label=""];
+3->10 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+5->11 [style = bold, label=""];
+11->6 [style = bold, label=""];
+8->4 [style = bold, label=""];
+6->10 [style = solid, label="sslContext"];
+7->3 [style = bold, label=""];
+7->3 [style = dotted, label="true"];
+9->6 [style = solid, label="clientEncryptionOptions"];
+6->10 [style = bold, label=""];
+8->9 [style = dotted, label="true"];
+}

@@ -1,0 +1,29 @@
+digraph {
+1 [style = filled, label = "final LogicalProject project = (LogicalProject)rel@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "convert['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "RelNode rel@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final EnumerableProject project = (EnumerableProject)rel@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "return EnumerableProject.create(convert(project.getInput(),project.getInput().getTraitSet().replace(EnumerableConvention.INSTANCE)),project.getProjects(),project.getRowType())@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "return new JdbcRules.JdbcProject(rel.getCluster(),rel.getTraitSet().replace(getOutConvention()),convert(project.getInput(),project.getInput().getTraitSet().replace(getOutConvention())),project.getProjects(),project.getRowType())@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return new EnumerableProject(rel.getCluster(),rel.getTraitSet().replace(EnumerableConvention.INSTANCE),convert(project.getInput(),project.getInput().getTraitSet().replace(EnumerableConvention.INSTANCE)),project.getProjects(),project.getRowType())@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "rel.getTraitSet().getTrait(RelCollationTraitDef.INSTANCE) != RelCollations.PRESERVE@@@4@@@['0', '1', '0']", fillcolor = white, shape = diamond image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "convert['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "convert['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6->0 [style = bold, label=""];
+7->9 [style = bold, label=""];
+8->7 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+1->7 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+4->1 [style = bold, label=""];
+8->2 [style = dotted, label="true"];
+4->2 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+1->6 [style = bold, label=""];
+6->5 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+2->7 [style = solid, label="rel"];
+3->1 [style = bold, label=""];
+2->1 [style = solid, label="rel"];
+1->0 [style = bold, label=""];
+}

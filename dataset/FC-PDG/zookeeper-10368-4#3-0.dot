@@ -1,0 +1,38 @@
+digraph {
+10 [style = filled, label = "this.pathTrie.addPath(\"node1/node3\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "this.pathTrie.deletePath(\"node1\")@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "deletePathDoesNotExist['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "Assert.assertFalse(this.pathTrie.existsNode(\"/node1\"))@@@14@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "this.pathTrie.deletePath(\"node1/node3\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "Assert.assertFalse(this.pathTrie.existsNode(\"/node1/node3\"))@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "this.pathTrie.addPath(\"node1/node2\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Assert.assertTrue(this.pathTrie.existsNode(\"/node1\"))@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertTrue(this.pathTrie.existsNode(\"/node1\"))@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "assertTrue(this.pathTrie.existsNode(\"/node1/node2\"))@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+16 [style = filled, label = "Assert.assertTrue(this.pathTrie.existsNode(\"/node1\"))@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "deletePathDoesNotExist['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "this.pathTrie.addPath(\"node1\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "this.pathTrie.deletePath(\"node1/node2\")@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Assert.assertTrue(this.pathTrie.existsNode(\"/node1/node2\"))@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "Assert.assertFalse(this.pathTrie.existsNode(\"/node1/node2\"))@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "deletePathFromRootLeaves['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10->1 [style = bold, label=""];
+9->3 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+14->13 [style = bold, label=""];
+5->0 [style = bold, label=""];
+13->11 [style = bold, label=""];
+0->15 [style = bold, label=""];
+1->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+2->10 [style = bold, label=""];
+4->3 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->3 [style = bold, label=""];
+16->14 [style = bold, label=""];
+3->2 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+15->12 [style = bold, label=""];
+12->16 [style = bold, label=""];
+1->5 [style = bold, label=""];
+}

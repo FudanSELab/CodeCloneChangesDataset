@@ -1,0 +1,21 @@
+digraph {
+0 [style = filled, label = "fetchUserAndRoleMapFromCoordinator['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return RetryUtils.retry(null,null,commonCacheConfig.getMaxSyncRetries())@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "String prefix@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "boolean isInit@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "String prefix@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String prefix@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "fetchUserAndRoleMapFromCoordinator['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "boolean isInit@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "fetchUserMapFromCoordinator['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0->2 [style = dotted, label="true"];
+8->6 [style = dotted, label="true"];
+2->7 [style = dashed, label="0"];
+5->3 [style = bold, label=""];
+5->4 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+0->3 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+5->2 [style = dotted, label="true"];
+8->3 [style = bold, label=""];
+}

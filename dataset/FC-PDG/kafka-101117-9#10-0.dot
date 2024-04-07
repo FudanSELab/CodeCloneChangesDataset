@@ -1,0 +1,20 @@
+digraph {
+4 [style = filled, label = "final Bytes lower = sessionKeySchema.lowerRange(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@c881f1),Long.MAX_VALUE)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testLowerBoundMatchesTrailingZeros['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertThat(\"appending zeros to key should still be in range\",lower.compareTo(Bytes.wrap(SessionKeySchema.toBinary(new Windowed<>(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@c8820d),new SessionWindow(Long.MAX_VALUE,Long.MAX_VALUE))))) < 0)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final Bytes upper = sessionKeySchema.upperRange(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@c881c1),0)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testUpperBoundWithZeroTimestamp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "testUpperBoundWithZeroTimestamp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(lower,equalTo(Bytes.wrap(SessionKeySchema.toBinary(new Windowed<>(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@c8823e),new SessionWindow(0,0))))))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(upper,equalTo(Bytes.wrap(SessionKeySchema.toBinary(new Windowed<>(Bytes.wrap(new byte((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@c881d9),new SessionWindow(0,Long.MAX_VALUE))))))@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->6 [style = bold, label=""];
+0->2 [style = solid, label="upper"];
+0->2 [style = bold, label=""];
+7->4 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+4->5 [style = solid, label="lower"];
+6->5 [style = bold, label=""];
+1->0 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

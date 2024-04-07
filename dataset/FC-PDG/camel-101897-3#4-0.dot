@@ -1,0 +1,33 @@
+digraph {
+5 [style = filled, label = "serviceSelector['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "configuration['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "doSetProperty(\"serviceSelector\",serviceSelector)@@@18@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return this@@@19@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "doSetProperty(\"configuration\",configuration)@@@42@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "org.apache.camel.cluster.CamelClusterService.Selector serviceSelector@@@17@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "org.apache.camel.component.avro.AvroConfiguration configuration@@@41@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "configuration['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->1 [style = solid, label="protocol"];
+2->1 [style = solid, label="singleParameter"];
+6->7 [style = solid, label="bridgeErrorHandler"];
+2->1 [style = solid, label="protocolLocation"];
+4->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->1 [style = solid, label="protocolClassName"];
+5->6 [style = dotted, label="true"];
+1->7 [style = dashed, label="0"];
+2->1 [style = solid, label="uriAuthority"];
+2->1 [style = solid, label="configuration"];
+3->2 [style = dotted, label="true"];
+7->0 [style = bold, label=""];
+6->7 [style = solid, label="service"];
+2->1 [style = solid, label="bridgeErrorHandler"];
+6->7 [style = solid, label="basicPropertyBinding"];
+4->2 [style = dotted, label="true"];
+2->1 [style = solid, label="basicPropertyBinding"];
+2->1 [style = solid, label="lazyStartProducer"];
+5->7 [style = bold, label=""];
+6->7 [style = solid, label="serviceSelector"];
+1->0 [style = bold, label=""];
+2->1 [style = solid, label="reflectionProtocol"];
+}

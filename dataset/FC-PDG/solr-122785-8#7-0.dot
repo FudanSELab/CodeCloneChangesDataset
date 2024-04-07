@@ -1,0 +1,35 @@
+digraph {
+10 [style = filled, label = "String tests@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertNotNull(CURSOR_MARK_NEXT + \" is null\",next)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "SolrParams params@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertFullWalkNoDups['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "assertFullWalkNoDups['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "SolrQueryRequest req@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertCursor['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "String next = (String)rsp.get(CURSOR_MARK_NEXT)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "String json = assertJQ(req,tests)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "Map rsp = (Map)ObjectBuilder.fromJSON(json)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "int maxSize@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "int maxSize@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "return next@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertTrue(\"response doesn't contain \" + CURSOR_MARK_NEXT + \": \" + json,rsp.containsKey(CURSOR_MARK_NEXT))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->2 [style = dotted, label="true"];
+8->10 [style = dotted, label="true"];
+10->12 [style = solid, label="tests"];
+11->9 [style = solid, label="next"];
+2->10 [style = dashed, label="0"];
+0->1 [style = dotted, label="true"];
+11->9 [style = bold, label=""];
+13->7 [style = bold, label=""];
+9->6 [style = bold, label=""];
+12->7 [style = solid, label="json"];
+8->12 [style = bold, label=""];
+4->3 [style = dotted, label="true"];
+12->13 [style = solid, label="json"];
+7->11 [style = bold, label=""];
+11->6 [style = solid, label="next"];
+5->12 [style = solid, label="req"];
+12->13 [style = bold, label=""];
+4->2 [style = dotted, label="true"];
+8->5 [style = dotted, label="true"];
+}

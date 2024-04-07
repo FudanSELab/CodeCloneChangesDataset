@@ -1,0 +1,29 @@
+digraph {
+2 [style = filled, label = "write['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "fileWriter.writeAvro(key,oldRecord)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "recordsWritten++@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "throw new HoodieUpsertException(errMsg,e)@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "String key = oldRecord.get(HoodieRecord.RECORD_KEY_METADATA_FIELD).toString()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "String errMsg = String.format(\"Failed to write old record into new file for key %s from old file %s to new file %s with writerSchema %s\",key,getOldFilePath(),newFilePath,writerSchemaWithMetafields.toString(true))@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "GenericRecord oldRecord@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "IOException|RuntimeException e@@@7@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "LOG.debug(\"Old record is \" + oldRecord)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "write['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "write['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4->10 [style = bold, label=""];
+2->1 [style = dotted, label="true"];
+6->9 [style = bold, label=""];
+10->7 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+7->8 [style = bold, label=""];
+5->8 [style = bold, label=""];
+10->7 [style = solid, label="key"];
+3->9 [style = dotted, label="true"];
+3->5 [style = dotted, label="true"];
+4->1 [style = dotted, label="true"];
+6->5 [style = solid, label="errMsg"];
+9->5 [style = bold, label=""];
+3->6 [style = dotted, label="true"];
+3->6 [style = bold, label=""];
+1->7 [style = solid, label="oldRecord"];
+}

@@ -1,0 +1,36 @@
+digraph {
+0 [style = filled, label = "String planningId@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "long timeoutInSeconds = Long.parseLong(this.jobProperties.getProperty(ConfigurationKeys.HELIX_JOB_TIMEOUT_SECONDS,ConfigurationKeys.DEFAULT_HELIX_JOB_TIMEOUT_SECONDS))@@@4@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "String planningId@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "waitForJobCompletion['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "HelixUtils.waitJobCompletion(this.helixManager,this.helixQueueName,this.jobContext.getJobId(),timeoutEnabled? Optional.of(timeoutInSeconds): Optional.empty())@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "waitForJobCompletion['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "boolean timeoutEnabled = Boolean.parseBoolean(this.jobProps.getProperty(ConfigurationKeys.HELIX_JOB_TIMEOUT_ENABLED_KEY,ConfigurationKeys.DEFAULT_HELIX_JOB_TIMEOUT_ENABLED))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "String planningName@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "long timeoutInSeconds = Long.parseLong(this.jobProps.getProperty(ConfigurationKeys.HELIX_JOB_TIMEOUT_SECONDS,ConfigurationKeys.DEFAULT_HELIX_JOB_TIMEOUT_SECONDS))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "HelixUtils.waitJobCompletion(this.helixManager,planningName,planningId,timeoutEnabled? Optional.of(timeoutInSeconds): Optional.empty())@@@6@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "LOGGER.info(\"Waiting for job to complete...\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "waitForJobCompletion['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "boolean timeoutEnabled = Boolean.parseBoolean(this.jobProperties.getProperty(ConfigurationKeys.HELIX_JOB_TIMEOUT_ENABLED_KEY,ConfigurationKeys.DEFAULT_HELIX_JOB_TIMEOUT_ENABLED))@@@3@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return getResultFromUserContent()@@@7@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13->10 [style = solid, label="timeoutEnabled"];
+12->13 [style = bold, label=""];
+4->13 [style = dashed, label="0"];
+9->10 [style = bold, label=""];
+4->6 [style = bold, label=""];
+13->9 [style = bold, label=""];
+2->0 [style = dotted, label="true"];
+2->3 [style = dotted, label="true"];
+7->8 [style = dotted, label="true"];
+6->10 [style = dashed, label="0"];
+3->6 [style = solid, label="planningName"];
+11->12 [style = bold, label=""];
+7->3 [style = dotted, label="true"];
+2->1 [style = bold, label=""];
+6->5 [style = bold, label=""];
+4->6 [style = solid, label="timeoutInSeconds"];
+1->6 [style = solid, label="timeoutEnabled"];
+1->4 [style = bold, label=""];
+9->10 [style = solid, label="timeoutInSeconds"];
+0->6 [style = solid, label="planningId"];
+}

@@ -1,0 +1,27 @@
+digraph {
+10 [style = filled, label = "metaStateService.writeGlobalState(\"test_write\",metaDataWithIndex)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "MetaData metaData = MetaData.builder().persistentSettings(Settings.builder().put(\"test1\",\"value1\").build()).build()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(metaStateService.loadGlobalState().hasIndex(\"test1\"),equalTo(false))@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testWriteLoadGlobal['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "testWriteGlobalStateWithIndexAndNoIndexIsLoaded['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "metaStateService.writeGlobalState(\"test_write\",metaData)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "MetaData metaDataWithIndex = MetaData.builder(metaData).put(index,true).build()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testWriteLoadGlobal['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThat(metaStateService.loadGlobalState().persistentSettings(),equalTo(metaData.persistentSettings()))@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "IndexMetaData index = IndexMetaData.builder(\"test1\").settings(indexSettings).build()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertThat(metaStateService.loadGlobalState().persistentSettings(),equalTo(metaData.persistentSettings()))@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "MetaStateService metaStateService = new MetaStateService(env,xContentRegistry())@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->11 [style = bold, label=""];
+7->10 [style = solid, label="metaDataWithIndex"];
+2->0 [style = bold, label=""];
+10->8 [style = bold, label=""];
+8->6 [style = bold, label=""];
+9->1 [style = bold, label=""];
+7->10 [style = bold, label=""];
+5->4 [style = bold, label=""];
+3->1 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+11->7 [style = bold, label=""];
+4->2 [style = solid, label="metaData"];
+}

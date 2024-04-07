@@ -1,0 +1,38 @@
+digraph {
+10 [style = filled, label = "List<Tuple> tuples = new ArrayList()@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "!t.EOF@@@6@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "getTuples['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "t = tupleStream.read()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "tupleStream.close()@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "TupleStream tupleStream@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Tuple t = tupleStream.read()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "getTuples['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "getTuples['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "tupleStream.open()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "List<Tuple> tuples = new ArrayList<Tuple>()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "tuples.add(t)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "return tuples@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->9 [style = solid, label="tuples"];
+2->3 [style = dotted, label="true"];
+1->9 [style = bold, label=""];
+10->6 [style = bold, label=""];
+3->2 [style = bold, label=""];
+10->9 [style = solid, label="tuples"];
+3->0 [style = solid, label="t"];
+7->6 [style = bold, label=""];
+4->8 [style = bold, label=""];
+0->3 [style = bold, label=""];
+6->0 [style = solid, label="t"];
+6->2 [style = bold, label=""];
+12->5 [style = dotted, label="true"];
+11->8 [style = bold, label=""];
+2->1 [style = bold, label=""];
+4->5 [style = dotted, label="true"];
+8->7 [style = bold, label=""];
+2->0 [style = bold, label=""];
+2->0 [style = dotted, label="true"];
+12->8 [style = bold, label=""];
+8->10 [style = bold, label=""];
+7->10 [style = dashed, label="0"];
+11->5 [style = dotted, label="true"];
+}

@@ -1,0 +1,38 @@
+digraph {
+1 [style = filled, label = "client.start()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "CountDownLatch backgroundLatch = new CountDownLatch(1)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+16 [style = filled, label = "testPersistentWatchInBackground['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testPersistentWatchesNotAvailableAsync['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "CountDownLatch latch = new CountDownLatch(3)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testPersistentWatchesNotAvailableAsync['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "AsyncCuratorFramework async = AsyncCuratorFramework.wrap(client)@@@5@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "client.delete().forPath(\"/test/foo\")@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "client.blockUntilConnected()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+17 [style = filled, label = "client.create().creatingParentsIfNeeded().forPath(\"/test/foo\")@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "client.watchers().add().withMode(AddWatchMode.PERSISTENT).inBackground(backgroundCallback).usingWatcher(watcher).forPath(\"/test/foo\")@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThrows(,null)@@@3@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "async.addWatch().forPath(\"/foo\")@@@6@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Assert.assertTrue(timing.awaitLatch(backgroundLatch))@@@14@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "Watcher watcher = null@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Assert.assertTrue(timing.awaitLatch(latch))@@@15@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "client.setData().forPath(\"/test/foo\",\"hey\".getBytes())@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "BackgroundCallback backgroundCallback = null@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14->13 [style = bold, label=""];
+9->8 [style = bold, label=""];
+17->12 [style = bold, label=""];
+13->7 [style = bold, label=""];
+10->11 [style = bold, label=""];
+11->15 [style = bold, label=""];
+16->1 [style = bold, label=""];
+10->8 [style = solid, label="latch"];
+1->14 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+7->10 [style = bold, label=""];
+5->4 [style = bold, label=""];
+12->6 [style = bold, label=""];
+13->9 [style = solid, label="backgroundLatch"];
+2->3 [style = bold, label=""];
+6->9 [style = bold, label=""];
+15->17 [style = bold, label=""];
+}

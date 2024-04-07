@@ -1,0 +1,30 @@
+digraph {
+6 [style = filled, label = "scheduleCompaction(metaClient,\"001\",plan1)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testGetAllPendingCompactionOperationsWithDupFileId['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "scheduleCompaction(metaClient,\"005\",plan1)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "HoodieCompactionPlan plan2 = createCompactionPlan(metaClient,\"002\",\"003\",0,false,false)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "metaClient = new HoodieTableMetaClient(metaClient.getHadoopConf(),basePath,true)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testGetAllPendingCompactionOperationsWithDupFileId['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "plan1.getOperations().get(0).setDataFilePath(\"bla\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testGetAllPendingCompactionOperationsWithFullDupFileId['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "scheduleCompaction(metaClient,\"003\",plan2)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Map<HoodieFileGroupId,Pair<String,HoodieCompactionOperation>> res = CompactionUtils.getAllPendingCompactionOperations(metaClient)@@@9@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThrows(,null)@@@10@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "HoodieCompactionPlan plan1 = createCompactionPlan(metaClient,\"000\",\"001\",10,true,true)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->6 [style = bold, label=""];
+4->8 [style = solid, label="plan1"];
+8->1 [style = bold, label=""];
+1->3 [style = bold, label=""];
+5->4 [style = bold, label=""];
+11->4 [style = bold, label=""];
+0->7 [style = solid, label="plan2"];
+6->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+1->10 [style = bold, label=""];
+9->4 [style = bold, label=""];
+1->3 [style = solid, label="metaClient"];
+4->0 [style = bold, label=""];
+2->8 [style = bold, label=""];
+4->6 [style = solid, label="plan1"];
+7->2 [style = bold, label=""];
+}

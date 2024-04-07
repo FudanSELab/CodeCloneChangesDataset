@@ -1,0 +1,29 @@
+digraph {
+13 [style = filled, label = "Function<SortedSetDocValues,ScriptDocValues<?>> scriptFunction@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final IndexReader indexReader@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "build['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final IndexReader indexReader@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "Logger logger@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "buildEmpty['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "IndexSettings indexSettings@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "IndexOrdinalsFieldData indexFieldData@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "IndexOrdinalsFieldData indexFieldData@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "IndexSettings indexSettings@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "CircuitBreakerService breakerService@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "buildEmpty['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "IndexSettings indexSettings@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final IndexReader indexReader@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+7->12 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+6->4 [style = dotted, label="true"];
+7->13 [style = dotted, label="true"];
+6->2 [style = dotted, label="true"];
+7->8 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+7->9 [style = dotted, label="true"];
+3->1 [style = dotted, label="true"];
+7->11 [style = dotted, label="true"];
+2->13 [style = dashed, label="0"];
+3->0 [style = dotted, label="true"];
+7->10 [style = dotted, label="true"];
+}

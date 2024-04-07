@@ -1,0 +1,26 @@
+digraph {
+4 [style = filled, label = "final Map<String,GitBranch> branches@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final Map<String,GitBranch> branches@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "fillRemoteBranches['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "new GitProgressSupport.NoOutputLogging(){@Override protected void perform(){final Map<String,GitBranch> localBranches = new HashMap<String,GitBranch>()final Map<String,GitTag> localTags = new HashMap<String,GitTag>()RepositoryInfo info = RepositoryInfo.getInstance(repository)info.refresh()localBranches.putAll(info.getBranches())localTags.putAll(info.getTags())final List<PushMapping> l = new ArrayList<PushMapping>(branches.size())GitClient clienttry {client = getClient()}catch (GitException ex) for (GitBranch branch : localBranches.values()){if (branch.getName() == GitBranch.NO_BRANCH) {continue}if (!branch.isRemote()) {GitBranch remoteBranch = branches.get(branch.getName())boolean conflicted = falseboolean updateNeeded = remoteBranch != null && !remoteBranch.getId().equals(branch.getId())if (client != null && remoteBranch != null) {String idLocal = branch.getId()String idRemote = remoteBranch.getId()if (!idLocal.equals(idRemote)) {try {GitRevisionInfo rev = client.getCommonAncestor(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1d35f2e,getProgressMonitor())conflicted = rev == null || (!idRemote.equals(rev.getRevision()) && !idLocal.equals(rev.getRevision()))if (!conflicted && idLocal.equals(rev.getRevision())) {updateNeeded = false}}catch (GitException.MissingObjectException ex) catch (GitException ex) }}boolean preselected = !conflicted && updateNeededl.add(new PushMapping.PushBranchMapping(remoteBranch == null? null: remoteBranch.getName(),remoteBranch == null? null: remoteBranch.getId(),branch,conflicted,preselected,updateNeeded))}}if (cfg != null) {for (GitBranch branch : branches.values()){String branchName = cfg.getRemoteName() + \"/\" + branch.getName()GitBranch local = localBranches.get(branchName)if (local == null || !local.isRemote()) {l.add(new PushMapping.PushBranchMapping(branch.getName(),branch.getId(),false))}}}for (GitTag tag : localTags.values()){String repoTagId = tags.get(tag.getTagName())if (!tag.getTagId().equals(repoTagId)) {l.add(new PushMapping.PushTagMapping(tag,repoTagId == null? null: tag.getTagName()))}}for (String tag : tags.keySet()){GitTag localTag = localTags.get(tag)if (localTag == null) {l.add(new PushMapping.PushTagMapping(tag))}}EventQueue.invokeLater(new Runnable(){@Override public void run(){fillLocalObjects(l)}})}}.start(Git.getInstance().getRequestProcessor(repository),repository,NbBundle.getMessage(,\"MSG_PushBranchesPanel.loadingLocalBranches\"))@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "fillRemoteBranches['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "new GitProgressSupport.NoOutputLogging(){@Override protected void perform(){final Map<String,GitBranch> localBranches = new HashMap<String,GitBranch>()RepositoryInfo info = RepositoryInfo.getInstance(repository)info.refresh()localBranches.putAll(info.getBranches())EventQueue.invokeLater(new Runnable(){@Override public void run(){fillRemoteBranches(branches,localBranches)}})}}.start(Git.getInstance().getRequestProcessor(repository),repository,NbBundle.getMessage(,\"MSG_PushBranchesPanel.loadingLocalBranches\"))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "fillRemoteBranches['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "final Map<String,String> branches@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final Map<String,String> tags@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final GitRemoteConfig cfg@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "fillLocalObjects(Collections.emptyList())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final GitRemoteConfig cfg@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0->2 [style = dotted, label="true"];
+9->11 [style = dotted, label="true"];
+1->3 [style = bold, label=""];
+7->1 [style = bold, label=""];
+0->4 [style = dotted, label="true"];
+7->5 [style = dotted, label="true"];
+0->1 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+9->10 [style = bold, label=""];
+0->5 [style = dotted, label="true"];
+7->8 [style = dotted, label="true"];
+7->6 [style = dotted, label="true"];
+}

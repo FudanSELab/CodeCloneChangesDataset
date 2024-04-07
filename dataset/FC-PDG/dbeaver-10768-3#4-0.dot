@@ -1,0 +1,29 @@
+digraph {
+11 [style = filled, label = "Object container@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "configureObject['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "ExasolSchema schema@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "configureObject['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "Object container@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return new UITask<ExasolSchema>(){@Override protected ExasolSchema runTask(){ExasolCreateSchemaDialog dialog = new ExasolCreateSchemaDialog(UIUtils.getActiveWorkbenchShell(),(ExasolDataSource)container)if (dialog.open() != IDialogConstants.OK_ID) {return null}schema.setName(dialog.getName())schema.setOwner(dialog.getOwner() == null? null: dialog.getOwner().getName())return schema}}.execute()@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "configureObject['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "ExasolSchema schema@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "return new UITask<OracleSchema>(){@Override protected OracleSchema runTask(){NewUserDialog dialog = new NewUserDialog(UIUtils.getActiveWorkbenchShell(),(OracleDataSource)container)if (dialog.open() != IDialogConstants.OK_ID) {return null}newSchema.setName(dialog.getUser().getName())newSchema.setUser(dialog.getUser())return newSchema}}.execute()@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "OracleSchema newSchema@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12->10 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+12->11 [style = dotted, label="true"];
+3->11 [style = dashed, label="0"];
+1->8 [style = dashed, label="0"];
+12->9 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+4->0 [style = dotted, label="true"];
+6->1 [style = bold, label=""];
+12->8 [style = bold, label=""];
+6->7 [style = dotted, label="true"];
+4->1 [style = bold, label=""];
+6->3 [style = dotted, label="true"];
+4->2 [style = dotted, label="true"];
+}

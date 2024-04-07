@@ -1,0 +1,35 @@
+digraph {
+0 [style = filled, label = "return@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "event.getTarget().getName().equals(\"\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertEquals(expectedValues(calls++(,event.getProject().getProperty(key))@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "targetStarted['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "calls >= expectedValues.length@@@6@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "error == null@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "error = new AssertionFailedError(\"Unexpected invocation of\" + \" target \" + event.getTarget().getName())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "BuildEvent event@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(expectedBasedirs(calls++(,event.getProject().getBaseDir().getAbsolutePath())@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "targetStarted['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "targetStarted['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10->2 [style = bold, label=""];
+3->2 [style = bold, label=""];
+2->7 [style = bold, label=""];
+0->9 [style = bold, label=""];
+9->2 [style = bold, label=""];
+5->4 [style = dotted, label="true"];
+10->2 [style = solid, label="error"];
+8->3 [style = bold, label=""];
+9->10 [style = dotted, label="true"];
+3->0 [style = dotted, label="true"];
+2->1 [style = dotted, label="true"];
+1->7 [style = dashed, label="0"];
+6->4 [style = dotted, label="true"];
+3->0 [style = bold, label=""];
+3->9 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->3 [style = bold, label=""];
+5->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+8->4 [style = dotted, label="true"];
+2->7 [style = dotted, label="true"];
+9->10 [style = bold, label=""];
+}

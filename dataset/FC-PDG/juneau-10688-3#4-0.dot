@@ -1,0 +1,23 @@
+digraph {
+6 [style = filled, label = "assertOptional(t.name()).isNull()@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "ParameterInfo t = new ParameterInfo()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertString(t.name()).isNull()@@@7@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Contact t = new Contact()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertString(t.name()).is(\"foo\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "a01_name['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "a01_name['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "a01_name['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "t.name(\"foo\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "t.name(null)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->6 [style = bold, label=""];
+5->3 [style = bold, label=""];
+9->8 [style = bold, label=""];
+3->8 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+8->0 [style = bold, label=""];
+0->1 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+7->3 [style = bold, label=""];
+}

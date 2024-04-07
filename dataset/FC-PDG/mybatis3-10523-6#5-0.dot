@@ -1,0 +1,20 @@
+digraph {
+3 [style = filled, label = "shouldGetAllCarsNonUnique['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assert.assertNotNull(cars.get(0).getEngine())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Assert.assertNotNull(cars.get(0).getBrakes())@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "List<Car> cars = mapper.getCars2()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "shouldGetOneCarWithOneEngineAndBrakes['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Assertions.assertEquals(1,cars.size())@@@6@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "shouldGetAllCarsNonUnique['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "Mapper mapper = sqlSession.getMapper()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Assert.assertEquals(1,cars.size())@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->7 [style = bold, label=""];
+0->8 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->2 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->5 [style = bold, label=""];
+}

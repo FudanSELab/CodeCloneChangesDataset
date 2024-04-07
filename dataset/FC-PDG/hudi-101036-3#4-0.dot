@@ -1,0 +1,15 @@
+digraph {
+3 [style = filled, label = "resetPendingCompactionOperations['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Stream<Pair<String,CompactionOperation>> operations@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "rocksDB.writeBatch(null)@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Stream<Pair<String,CompactionOperation>> operations@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "addPendingCompactionOperations['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "resetPendingCompactionOperations['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->0 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+0->4 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+5->1 [style = bold, label=""];
+}

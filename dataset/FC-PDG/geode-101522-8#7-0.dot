@@ -1,0 +1,27 @@
+digraph {
+9 [style = filled, label = "Properties serverProps = new Properties()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "locator = cluster.startLocatorVM(0,null)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "server.invoke(null)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "serverHasNoSslPropertyAndDoUseCorrectDefaultSSL['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "server.getVM().bounce()@@@21@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Properties serverProps = new Properties(sslProps)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "server.getVM().bounce()@@@14@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "server = cluster.startServerVM(1,null)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "useDefaultSSLPropertyTakesPrecedence['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "serverProps.setProperty(SSL_USE_DEFAULT_CONTEXT,\"true\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "useDefaultSSLPropertyTakesPrecedence['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "int locatorPort = locator.getPort()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->5 [style = bold, label=""];
+6->11 [style = bold, label=""];
+10->1 [style = bold, label=""];
+0->9 [style = bold, label=""];
+4->1 [style = bold, label=""];
+0->3 [style = bold, label=""];
+3->7 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+6->2 [style = bold, label=""];
+9->7 [style = bold, label=""];
+1->0 [style = bold, label=""];
+8->1 [style = bold, label=""];
+}

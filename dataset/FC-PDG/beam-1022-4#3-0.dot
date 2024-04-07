@@ -1,0 +1,37 @@
+digraph {
+0 [style = filled, label = "return hashCode != null? hashCode.equals(accum.hashCode): accum.hashCode == null@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return true@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "@Nullable Object o@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "return false@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "equals['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Object o@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "equals['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "this == o@@@3@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "o == null || getClass() != o.getClass()@@@6@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Accum accum = (Accum)o@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "return sum == accum.sum && count == accum.count@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "equals['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10->2 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+5->1 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+9->3 [style = bold, label=""];
+5->7 [style = dotted, label="true"];
+8->1 [style = solid, label="o"];
+3->5 [style = bold, label=""];
+10->3 [style = bold, label=""];
+2->1 [style = solid, label="o"];
+1->11 [style = bold, label=""];
+3->6 [style = bold, label=""];
+3->6 [style = dotted, label="true"];
+6->5 [style = bold, label=""];
+7->1 [style = bold, label=""];
+4->2 [style = dotted, label="true"];
+4->3 [style = bold, label=""];
+8->5 [style = solid, label="o"];
+2->3 [style = solid, label="o"];
+5->7 [style = bold, label=""];
+8->3 [style = solid, label="o"];
+2->5 [style = solid, label="o"];
+1->0 [style = bold, label=""];
+}

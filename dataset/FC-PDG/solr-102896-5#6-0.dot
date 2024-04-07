@@ -1,0 +1,15 @@
+digraph {
+6 [style = filled, label = "afterClass['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "deleteCore()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "IOUtils.closeQuietly(fs)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "afterClass['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "{try {HdfsTestUtil.teardownClass(dfsCluster)}{dfsCluster = nullhdfsDataDir = nullSystem.clearProperty(\"solr.ulog.dir\")System.clearProperty(\"test.build.data\")System.clearProperty(\"test.cache.data\")}}@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "afterClass['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "fs = null@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+0->2 [style = bold, label=""];
+6->2 [style = bold, label=""];
+3->1 [style = bold, label=""];
+1->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

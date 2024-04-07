@@ -1,0 +1,33 @@
+digraph {
+5 [style = filled, label = "buildProfiledSpanList['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "return spans@@@99@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "String traceId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "segmentObject.getSpansList().forEach(null)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "List<SpanObject> spanObjects@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "buildSpanList['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "return spans@@@56@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "List<Span> spans = new ArrayList<>()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "spanObjects.forEach(null)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "String segmentId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "int serviceId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "SegmentObject segmentObject@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "List<ProfiledSpan> spans = new ArrayList<>()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "buildProfiledSpanList['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8->10 [style = dotted, label="true"];
+1->2 [style = dotted, label="true"];
+0->12 [style = dashed, label="0"];
+13->6 [style = bold, label=""];
+8->11 [style = dotted, label="true"];
+5->0 [style = bold, label=""];
+0->3 [style = bold, label=""];
+0->4 [style = solid, label="spans"];
+8->12 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+3->13 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+12->6 [style = solid, label="spans"];
+5->2 [style = dotted, label="true"];
+12->13 [style = bold, label=""];
+1->0 [style = bold, label=""];
+8->9 [style = dotted, label="true"];
+}

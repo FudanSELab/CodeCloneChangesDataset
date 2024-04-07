@@ -1,0 +1,31 @@
+digraph {
+3 [style = filled, label = "emptyIteratorAlwaysReturnsFalse['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "windowStoreIterator.next()@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "EasyMock.replay(storeProvider)@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "final CompositeReadOnlyWindowStore<Object,Object> store = new CompositeReadOnlyWindowStore<>(new StateStoreProviderStub(false),QueryableStoreTypes.windowStore(),\"foo\")@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Assert.assertFalse(windowStoreIterator.hasNext())@@@5@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final StateStoreProvider storeProvider = EasyMock.createNiceMock()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "final CompositeReadOnlyWindowStore<Object,Object> store = new CompositeReadOnlyWindowStore<>(storeProvider,QueryableStoreTypes.windowStore(),\"foo\")@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "windowStoreIteratorException.expect()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "emptyIteratorNextShouldThrowNoSuchElementException['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "EasyMock.expect(storeProvider.stores(anyString(),anyObject())).andReturn(emptyList())@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "final WindowStoreIterator<Object> windowStoreIterator = store.fetch(\"key\",ofEpochMilli(1),ofEpochMilli(10))@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "emptyIteratorAlwaysReturnsFalse['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "Assert.assertFalse(windowStoreIterator.hasNext())@@@8@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "final WindowStoreIterator<Object> windowStoreIterator = store.fetch(\"key\",ofEpochMilli(1),ofEpochMilli(10))@@@7@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+12->0 [style = bold, label=""];
+9->10 [style = bold, label=""];
+2->11 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+10->4 [style = bold, label=""];
+8->5 [style = bold, label=""];
+5->7 [style = solid, label="storeProvider"];
+3->0 [style = bold, label=""];
+11->13 [style = bold, label=""];
+1->2 [style = bold, label=""];
+5->9 [style = solid, label="storeProvider"];
+0->1 [style = bold, label=""];
+5->6 [style = bold, label=""];
+7->9 [style = bold, label=""];
+1->11 [style = bold, label=""];
+}

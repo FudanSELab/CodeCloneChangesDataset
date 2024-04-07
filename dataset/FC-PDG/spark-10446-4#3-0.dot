@@ -1,0 +1,38 @@
+digraph {
+2 [style = filled, label = "ChildProcAppHandle handle = (ChildProcAppHandle)new TestSparkLauncher().redirectError(err.toFile()).redirectOutput(out.toFile()).startApplication()@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertTrue(MESSAGES.contains(\"error\"))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(Arrays.asList(\"error\"),Files.lines(err).collect(Collectors.toList()))@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testNoRedirectToLog['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "err.toFile().deleteOnExit()@@@7@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "Path out = Files.createTempFile(\"stdout\",\"txt\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "SparkAppHandle handle = (ChildProcAppHandle)new TestSparkLauncher().redirectOutput(out.toFile()).startApplication()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Path err = Files.createTempFile(\"stderr\",\"txt\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertTrue(MESSAGES.isEmpty())@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertEquals(Arrays.asList(\"output\"),Files.lines(out).collect(Collectors.toList()))@@@12@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "waitFor(handle)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testNoRedirectToLog['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testRedirectOutputToLog['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "assumeFalse(isWindows())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "out.toFile().deleteOnExit()@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+15 [style = filled, label = "assertEquals(Arrays.asList(\"output\"),Files.lines(out).collect(Collectors.toList()))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13->3 [style = bold, label=""];
+4->5 [style = bold, label=""];
+8->7 [style = bold, label=""];
+9->3 [style = bold, label=""];
+12->4 [style = bold, label=""];
+14->12 [style = solid, label="handle"];
+14->12 [style = bold, label=""];
+5->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+1->10 [style = bold, label=""];
+10->11 [style = bold, label=""];
+0->14 [style = bold, label=""];
+3->0 [style = bold, label=""];
+4->15 [style = bold, label=""];
+2->4 [style = solid, label="handle"];
+1->2 [style = bold, label=""];
+6->3 [style = bold, label=""];
+0->1 [style = bold, label=""];
+11->2 [style = bold, label=""];
+5->4 [style = dashed, label="0"];
+}

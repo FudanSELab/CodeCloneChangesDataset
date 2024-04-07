@@ -1,0 +1,35 @@
+digraph {
+6 [style = filled, label = "sender.run(time.milliseconds())@@@16@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "sender.run(time.milliseconds())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "sender.run(time.milliseconds())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertTrue(transactionManager.lastError() instanceof UnsupportedVersionException)@@@18@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "assertEquals(brokerNode,transactionManager.coordinator(CoordinatorType.TRANSACTION))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertTrue(transactionManager.hasFatalError())@@@17@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "client.prepareUnsupportedVersionResponse(null)@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "transactionManager.initializeTransactions()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testUnsupportedInitTransactions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "sender.run(time.milliseconds())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertFalse(transactionManager.hasError())@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testUnsupportedInitTransactions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "testDisconnectAndRetry['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertNotNull(transactionManager.coordinator(CoordinatorType.TRANSACTION))@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "prepareFindCoordinatorResponse(Errors.NONE,true,CoordinatorType.TRANSACTION,transactionalId)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "prepareFindCoordinatorResponse(Errors.NONE,false,CoordinatorType.TRANSACTION,transactionalId)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->9 [style = bold, label=""];
+2->14 [style = bold, label=""];
+5->0 [style = bold, label=""];
+12->1 [style = bold, label=""];
+4->1 [style = bold, label=""];
+1->7 [style = bold, label=""];
+11->1 [style = bold, label=""];
+13->7 [style = bold, label=""];
+10->2 [style = bold, label=""];
+5->14 [style = dashed, label="0"];
+6->8 [style = bold, label=""];
+7->10 [style = bold, label=""];
+15->13 [style = bold, label=""];
+8->3 [style = bold, label=""];
+1->15 [style = bold, label=""];
+2->5 [style = bold, label=""];
+9->6 [style = bold, label=""];
+}

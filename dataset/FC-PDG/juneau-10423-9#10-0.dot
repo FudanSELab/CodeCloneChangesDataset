@@ -1,0 +1,17 @@
+digraph {
+0 [style = filled, label = "Object value@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Object value@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "put['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "String property@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Object value@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "put['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "add['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "String property@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2->1 [style = dotted, label="true"];
+1->6 [style = dashed, label="0"];
+2->0 [style = dotted, label="true"];
+3->4 [style = dotted, label="true"];
+3->1 [style = dotted, label="true"];
+7->5 [style = dotted, label="true"];
+7->6 [style = dotted, label="true"];
+}

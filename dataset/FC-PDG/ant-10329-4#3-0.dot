@@ -1,0 +1,34 @@
+digraph {
+5 [style = filled, label = "DOMElementWriter w = new DOMElementWriter()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Element root = d.createElement(\"root\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testNoAdditionalWhiteSpaceForText['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertEquals(String.format(\"<root>%n <emptyElement />%n</root>%n\"),sw.toString())@@@9@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "DOMUtils.createChildElement(root,\"emptyElement\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "w.write(root,sw,0,\" \")@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Document d = DOMUtils.newDocument()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "DOMUtils.appendTextElement(root,\"textElement\",\"content\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testNoAdditionalWhiteSpaceForEmptyElement['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "assertEquals(\"<root>\" + StringUtils.LINE_SEP + \" <emptyElement />\" + StringUtils.LINE_SEP + \"</root>\" + StringUtils.LINE_SEP,sw.toString())@@@9@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testNoAdditionalWhiteSpaceForEmptyElement['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "StringWriter sw = new StringWriter()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertEquals(\"<root>\" + StringUtils.LINE_SEP + \" <textElement>content</textElement>\" + StringUtils.LINE_SEP + \"</root>\" + StringUtils.LINE_SEP,sw.toString())@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->6 [style = bold, label=""];
+3->4 [style = solid, label="root"];
+8->2 [style = bold, label=""];
+4->11 [style = dashed, label="0"];
+0->10 [style = dashed, label="0"];
+3->11 [style = bold, label=""];
+11->6 [style = bold, label=""];
+3->7 [style = solid, label="root"];
+7->0 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->4 [style = bold, label=""];
+5->7 [style = bold, label=""];
+7->10 [style = bold, label=""];
+3->11 [style = solid, label="root"];
+6->5 [style = bold, label=""];
+7->9 [style = bold, label=""];
+2->3 [style = bold, label=""];
+6->7 [style = solid, label="sw"];
+12->2 [style = bold, label=""];
+}

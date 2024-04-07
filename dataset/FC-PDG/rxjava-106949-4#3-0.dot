@@ -1,0 +1,16 @@
+digraph {
+3 [style = filled, label = "flatMapSingleError['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Maybe.error(exception).flatMapSingle(new Function<Object,SingleSource<Object>>(){@Override public SingleSource<Object> apply(final Object integer){return Single.just(new Object())}}).toSingle().test().assertError(exception)@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Single.error(exception).concatMap(new Function<Object,SingleSource<Object>>(){@Override public SingleSource<Object> apply(final Object integer){return Single.just(new Object())}}).test().assertError(exception)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "flatMapSingleError['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "concatMapError['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "RuntimeException exception = new RuntimeException(\"test\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->0 [style = bold, label=""];
+5->0 [style = bold, label=""];
+1->4 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+0->4 [style = solid, label="exception"];
+3->0 [style = bold, label=""];
+0->1 [style = solid, label="exception"];
+0->1 [style = bold, label=""];
+}

@@ -1,0 +1,26 @@
+digraph {
+6 [style = filled, label = "geoIpDownloader.processDatabase(Map.of(\"name\",\"test.tgz\",\"url\",\"a.b/t1\",\"md5_hash\",\"1\"))@@@25@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "geoIpDownloader = new GeoIpDownloader(client,httpClient,clusterService,threadPool,Settings.EMPTY,1,\"\",\"\",\"\",EMPTY_TASK_ID,Collections.emptyMap()){@Override void updateTaskState(){assertEquals(9,state.get(\"test\").getFirstChunk())assertEquals(10,state.get(\"test\").getLastChunk())}@Override int indexChunks(String name,InputStream is,int chunk,String expectedMd5){assertSame(bais,is)assertEquals(9,chunk)return 11}@Override protected void updateTimestamp(String name,GeoIpTaskState.Metadata metadata){fail()}@Override void deleteOldChunks(String name,int firstChunk){assertEquals(\"test\",name)assertEquals(9,firstChunk)}}@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testProcessDatabaseNew['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "when(httpClient.get(\"a.b/t1\")).thenReturn(bais)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "geoIpDownloader.processDatabase(Map.of(\"name\",\"test.gz\",\"url\",\"a.b/t1\",\"md5_hash\",\"1\"))@@@25@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testProcessDatabaseNew['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "geoIpDownloader.setState(GeoIpTaskState.EMPTY)@@@24@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testProcessDatabaseUpdate['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "geoIpDownloader.setState(GeoIpTaskState.EMPTY.put(\"test\",new GeoIpTaskState.Metadata(0,5,8,\"0\")))@@@24@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "ByteArrayInputStream bais = new ByteArrayInputStream(new byte(((()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->5 [style = bold, label=""];
+5->0 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+2->5 [style = bold, label=""];
+5->0 [style = solid, label="bais"];
+0->3 [style = bold, label=""];
+8->5 [style = bold, label=""];
+3->9 [style = bold, label=""];
+1->6 [style = bold, label=""];
+9->4 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+5->3 [style = solid, label="bais"];
+3->1 [style = bold, label=""];
+1->4 [style = bold, label=""];
+}

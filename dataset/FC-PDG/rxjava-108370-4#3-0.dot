@@ -1,0 +1,11 @@
+digraph {
+0 [style = filled, label = "error['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "initialCrash['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Flowable.range(1,5).parallel().reduce(new Supplier<List<Integer>>(){@Override public List<Integer> get(){throw new TestException()}},new BiFunction<List<Integer>,Integer,List<Integer>>(){@Override public List<Integer> apply(List<Integer> a,Integer b){a.add(b)return a}}).sequential().test().assertFailure()@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Flowable.error(new TestException()).parallel().reduce(new Supplier<List<Integer>>(){@Override public List<Integer> get(){return new ArrayList<>()}},new BiFunction<List<Integer>,Integer,List<Integer>>(){@Override public List<Integer> apply(List<Integer> a,Integer b){a.add(b)return a}}).sequential().test().assertFailure()@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "error['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->4 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

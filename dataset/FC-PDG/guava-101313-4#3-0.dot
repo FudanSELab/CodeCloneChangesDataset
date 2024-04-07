@@ -1,0 +1,13 @@
+digraph {
+2 [style = filled, label = "testPropagateIfInstanceOf_UndeclaredThrown['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "fail()@@@17@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testPropagateIfInstanceOf_DeclaredThrown['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "sample.oneDeclared()@@@16@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testPropagateIfInstanceOf_UndeclaredThrown['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "Sample sample = new Sample(){@Override public void oneDeclared(){try {methodThatThrowsChecked()}catch (Throwable t) }}@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->3 [style = bold, label=""];
+3->0 [style = bold, label=""];
+4->3 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

@@ -1,0 +1,38 @@
+digraph {
+6 [style = filled, label = "String qstr@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "createParser['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "SolrParams localParams@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "String qstr@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "SolrQueryRequest req@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "createParser['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "SolrParams params@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "SolrQueryRequest req@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "SolrParams localParams@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "SolrParams params@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "String qstr@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "createParser['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "SolrQueryRequest req@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return new QParser(qstr,localParams,params,req){@Override public Query parse(){b = localParams.get(BOOSTFUNC)baseParser = subQuery(localParams.get(QueryParsing.V),null)Query q = baseParser.getQuery()if (b == null) return qQuery bq = subQuery(b,FunctionQParserPlugin.NAME).getQuery()if (bq instanceof FunctionQuery) {vs = ((FunctionQuery)bq).getValueSource()}{vs = new QueryValueSource(bq,0.0f)}return boostQuery(q,vs)}@Override public String(( getDefaultHighlightFields(){return baseParser.getDefaultHighlightFields()}@Override public Query getHighlightQuery(){return baseParser.getHighlightQuery()}@Override public void addDebugInfo(NamedList<Object> debugInfo){baseParser.addDebugInfo(debugInfo)debugInfo.add(\"boost_str\",b)debugInfo.add(\"boost_parsed\",vs)}}@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->2 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+0->4 [style = bold, label=""];
+5->4 [style = solid, label="params"];
+9->4 [style = bold, label=""];
+9->5 [style = dotted, label="true"];
+9->7 [style = dotted, label="true"];
+8->4 [style = solid, label="localParams"];
+13->11 [style = dotted, label="true"];
+0->3 [style = dotted, label="true"];
+13->10 [style = dotted, label="true"];
+9->6 [style = dotted, label="true"];
+3->4 [style = solid, label="req"];
+0->5 [style = dotted, label="true"];
+1->4 [style = solid, label="qstr"];
+7->4 [style = solid, label="req"];
+5->4 [style = solid, label="localParams"];
+6->4 [style = solid, label="qstr"];
+13->5 [style = dotted, label="true"];
+2->4 [style = solid, label="params"];
+13->12 [style = dotted, label="true"];
+}

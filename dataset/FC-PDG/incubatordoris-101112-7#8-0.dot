@@ -1,0 +1,17 @@
+digraph {
+3 [style = filled, label = "StopRoutineLoadStmt stopRoutineLoadStmt@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "RoutineLoadJob routineLoadJob = checkPrivAndGetJob(stopRoutineLoadStmt.getDbFullName(),stopRoutineLoadStmt.getName())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "pauseRoutineLoadJob['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "LOG.info(new LogBuilder(LogKey.ROUTINE_LOAD_JOB,routineLoadJob.getId()).add(\"current_state\",routineLoadJob.getState()).add(\"user\",ConnectContext.get().getQualifiedUser()).add(\"msg\",\"routine load job has been stopped by user\").build())@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "stopRoutineLoadJob['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "pauseRoutineLoadJob['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "routineLoadJob.updateState(RoutineLoadJob.JobState.STOPPED,new ErrorReason(InternalErrorCode.MANUAL_STOP_ERR,\"User \" + ConnectContext.get().getQualifiedUser() + \" stop routine load job\"),false)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "PauseRoutineLoadStmt pauseRoutineLoadStmt@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2->1 [style = dotted, label="true"];
+1->3 [style = dashed, label="0"];
+7->6 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+4->7 [style = bold, label=""];
+5->4 [style = bold, label=""];
+5->3 [style = dotted, label="true"];
+}

@@ -1,0 +1,24 @@
+digraph {
+4 [style = filled, label = "produceTopicValues['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "produceTopicValues['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "produceTopicValues['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final String topic@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "IntegrationTestUtils.produceKeyValuesSynchronously(topic,Arrays.asList(new KeyValue<>(\"a\",1L),new KeyValue<>(\"b\",2L),new KeyValue<>(\"c\",3L),new KeyValue<>(\"d\",4L),new KeyValue<>(\"e\",5L)),TestUtils.producerConfig(CLUSTER.bootstrapServers(),,,config),mockTime)@@@5@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "config.setProperty(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG,\"true\")@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "final String topic@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final Properties config = new Properties()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "IntegrationTestUtils.produceKeyValuesSynchronously(topic,Arrays.asList(new KeyValue<>(\"a\",1L),new KeyValue<>(\"b\",2L),new KeyValue<>(\"c\",3L),new KeyValue<>(\"d\",4L),new KeyValue<>(\"e\",5L)),TestUtils.producerConfig(CLUSTER.bootstrapServers(),,,new Properties()),mockTime)@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->2 [style = dotted, label="true"];
+4->5 [style = bold, label=""];
+7->1 [style = solid, label="topic"];
+2->7 [style = dashed, label="0"];
+5->3 [style = solid, label="config"];
+2->1 [style = solid, label="topic"];
+8->7 [style = dotted, label="true"];
+6->3 [style = bold, label=""];
+0->1 [style = bold, label=""];
+5->6 [style = bold, label=""];
+2->3 [style = solid, label="topic"];
+4->2 [style = dotted, label="true"];
+8->1 [style = bold, label=""];
+}

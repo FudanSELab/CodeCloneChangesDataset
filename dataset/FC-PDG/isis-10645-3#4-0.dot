@@ -1,0 +1,29 @@
+digraph {
+8 [style = filled, label = "final Precedence precedence@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "Precedence precedence@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "mockFacetIgnoring['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final Class<T> typeToMock@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "final T facet = context.mock(typeToMock)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final Class<T> typeToMock@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return facet@@@14@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final Class<T> typeToMock@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "context.checking(new Expectations(){})@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "mockFacetIgnoring['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "mockFacetIgnoring['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3->2 [style = solid, label="typeToMock"];
+4->2 [style = solid, label="typeToMock"];
+9->2 [style = bold, label=""];
+0->3 [style = dotted, label="true"];
+6->8 [style = dotted, label="true"];
+7->2 [style = solid, label="typeToMock"];
+5->1 [style = bold, label=""];
+0->2 [style = bold, label=""];
+0->4 [style = dotted, label="true"];
+9->10 [style = dotted, label="true"];
+9->4 [style = dotted, label="true"];
+6->7 [style = dotted, label="true"];
+6->2 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+2->5 [style = bold, label=""];
+2->1 [style = solid, label="facet"];
+}

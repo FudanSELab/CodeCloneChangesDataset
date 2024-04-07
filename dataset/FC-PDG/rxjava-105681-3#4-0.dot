@@ -1,0 +1,20 @@
+digraph {
+0 [style = filled, label = "TestHelper.assertUndeliverable(errors,0,,\"Second\")@@@18@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "{RxJavaPlugins.reset()}@@@20@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "new Flowable<Integer>(){@Override protected void subscribeActual(Subscriber<? super Integer> subscriber){subscriber.onSubscribe(new BooleanSubscription())subscriber.onError(new TestException(\"First\"))subscriber.onError(new TestException(\"Second\"))}}.join(Flowable.just(2),Functions.justFunction(Flowable.never()),Functions.justFunction(Flowable.never()),new BiFunction<Integer,Integer,Integer>(){@Override public Integer apply(Integer a,Integer b){return a + b}}).to(TestHelper.testConsumer()).assertFailureAndMessage(,\"First\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "new Observable<Integer>(){@Override protected void subscribeActual(Observer<? super Integer> observer){observer.onSubscribe(Disposable.empty())observer.onError(new TestException(\"First\"))observer.onError(new TestException(\"Second\"))}}.join(Observable.just(2),Functions.justFunction(Observable.never()),Functions.justFunction(Observable.never()),new BiFunction<Integer,Integer,Integer>(){@Override public Integer apply(Integer a,Integer b){return a + b}}).to(TestHelper.testConsumer()).assertFailureAndMessage(,\"First\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "badOuterSource['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "List<Throwable> errors = TestHelper.trackPluginErrors()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "badOuterSource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "badOuterSource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2->7 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+1->0 [style = solid, label="errors"];
+1->7 [style = bold, label=""];
+0->3 [style = bold, label=""];
+6->1 [style = bold, label=""];
+7->0 [style = bold, label=""];
+1->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+5->1 [style = bold, label=""];
+}

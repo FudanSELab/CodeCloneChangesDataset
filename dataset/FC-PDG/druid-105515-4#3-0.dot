@@ -1,0 +1,17 @@
+digraph {
+0 [style = filled, label = "Function<T,CloseableIterator<R>> function@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final CloseableIterator<T> delegate = this@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Function<T,R> mapFunction@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "flatMap['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "return new CloseableIterator<R>(){@Override public boolean hasNext(){return delegate.hasNext()}@Override public R next(){if (!hasNext()) {throw new NoSuchElementException()}return mapFunction.apply(delegate.next())}@Override public void close(){delegate.close()}}@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "map['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "flatMap['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6->5 [style = dotted, label="true"];
+1->3 [style = bold, label=""];
+2->0 [style = dotted, label="true"];
+6->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+4->0 [style = dotted, label="true"];
+0->5 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+}

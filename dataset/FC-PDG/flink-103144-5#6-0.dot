@@ -1,0 +1,37 @@
+digraph {
+11 [style = filled, label = "List<MockSourceSplit> splitsInState = CollectionUtil.iterableToList(operator.getReaderState().get())@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertEquals(Arrays.asList(MOCK_SPLIT,newSplit),mockSourceReader.getAssignedSplits())@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "operator.open()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "operator.initializeState(getStateContext())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testHandleAddSplitsEvent['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "operator.handleOperatorEvent(new AddSplitEvent<>(Collections.singletonList(newSplit)))@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testSnapshotState['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertEquals(Arrays.asList(MOCK_SPLIT,newSplit),splitsInState)@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "operator.initializeState(stateContext)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "operator.open()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "MockSourceSplit newSplit = new MockSourceSplit((2))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testHandleAddSplitsEvent['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "operator.snapshotState(new StateSnapshotContextSynchronousImpl(100L,100L))@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "StateInitializationContext stateContext = getStateContext()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13->4 [style = bold, label=""];
+4->1 [style = solid, label="newSplit"];
+12->13 [style = solid, label="stateContext"];
+11->9 [style = bold, label=""];
+0->3 [style = bold, label=""];
+1->6 [style = bold, label=""];
+3->5 [style = bold, label=""];
+11->9 [style = solid, label="splitsInState"];
+5->4 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->8 [style = bold, label=""];
+12->13 [style = bold, label=""];
+10->12 [style = bold, label=""];
+7->3 [style = bold, label=""];
+8->11 [style = bold, label=""];
+1->2 [style = solid, label="newSplit"];
+2->6 [style = bold, label=""];
+4->6 [style = solid, label="newSplit"];
+3->12 [style = dashed, label="0"];
+1->9 [style = solid, label="newSplit"];
+1->2 [style = bold, label=""];
+}

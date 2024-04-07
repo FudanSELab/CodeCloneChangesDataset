@@ -1,0 +1,27 @@
+digraph {
+10 [style = filled, label = "assertThat(assertBooleanSubQuery(booleanQuery,,0).getTerm(),equalTo(new Term(TEXT_FIELD_NAME,\"foo\")))@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final MultiMatchQueryBuilder builder = new MultiMatchQueryBuilder(\"foo bar\",TEXT_FIELD_NAME)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final BooleanQuery booleanQuery = (BooleanQuery)query@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testToQueryBooleanPrefixMultipleFields['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(booleanQuery.clauses(),hasSize(2))@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(query,instanceOf())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "builder.type(Type.BOOL_PREFIX)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertThat(assertBooleanSubQuery(booleanQuery,,1).getPrefix(),equalTo(new Term(TEXT_FIELD_NAME,\"bar\")))@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testToQueryBooleanPrefixSingleField['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final Query query = builder.toQuery(createSearchExecutionContext())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testToQueryBooleanPrefixMultipleFields['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "{final MultiMatchQueryBuilder queryBuilder = new MultiMatchQueryBuilder(\"foo bar\",TEXT_FIELD_NAME,KEYWORD_FIELD_NAME)queryBuilder.type(Type.BOOL_PREFIX)final Query query = queryBuilder.toQuery(createSearchExecutionContext())assertThat(query,instanceOf())final DisjunctionMaxQuery disMaxQuery = (DisjunctionMaxQuery)queryassertThat(disMaxQuery.getDisjuncts(),hasSize(2))for (Query disjunct : disMaxQuery.getDisjuncts()){if (disjunct instanceof BooleanQuery) {final BooleanQuery firstDisjunct = (BooleanQuery)disjunctassertThat(firstDisjunct.clauses(),hasSize(2))assertThat(assertBooleanSubQuery(firstDisjunct,,0).getTerm(),equalTo(new Term(TEXT_FIELD_NAME,\"foo\")))}if (disjunct instanceof PrefixQuery) {final PrefixQuery secondDisjunct = (PrefixQuery)disjunctassertThat(secondDisjunct.getPrefix(),equalTo(new Term(KEYWORD_FIELD_NAME,\"foo bar\")))}{throw new AssertionError()}assertThat(disjunct,either(instanceOf()).or(instanceOf()))}}@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->3 [style = bold, label=""];
+3->10 [style = bold, label=""];
+6->7 [style = bold, label=""];
+7->9 [style = solid, label="query"];
+10->11 [style = bold, label=""];
+5->8 [style = bold, label=""];
+7->4 [style = bold, label=""];
+8->6 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+4->9 [style = bold, label=""];
+2->1 [style = bold, label=""];
+7->4 [style = solid, label="query"];
+0->1 [style = bold, label=""];
+}

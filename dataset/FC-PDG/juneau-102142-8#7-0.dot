@@ -1,0 +1,14 @@
+digraph {
+1 [style = filled, label = "createFileFinder['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "createFileFinder['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "builder['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Supplier<?> resource@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Supplier<?> resource@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "BeanStore beanStore@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "return RestLogger.create().normalRules(RestLoggerRule.create().statusFilter(null).level(SEVERE).requestDetail(HEADER).responseDetail(HEADER).enabled(CONDITIONAL).enabledTest(null).logStackTrace().build(),RestLoggerRule.create().statusFilter(null).level(WARNING).requestDetail(STATUS_LINE).responseDetail(STATUS_LINE).enabled(CONDITIONAL).enabledTest(null).logStackTrace().build()).debugRules(RestLoggerRule.create().level(SEVERE).requestDetail(ENTITY).responseDetail(ENTITY).logStackTrace().build())@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->2 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+1->0 [style = dotted, label="true"];
+6->5 [style = bold, label=""];
+4->2 [style = dotted, label="true"];
+}

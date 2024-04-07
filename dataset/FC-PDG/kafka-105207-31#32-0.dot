@@ -1,0 +1,35 @@
+digraph {
+6 [style = filled, label = "log.info(\"Usage: ConnectDistributed worker.properties\")@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "Exit.exit(1)@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "initInfo.logAll()@@@9@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "Map<String,String> workerProps = !workerPropsFile.isEmpty()? Utils.propsToStringMap(Utils.loadProps(workerPropsFile)): Collections.emptyMap()@@@11@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "main['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "ConnectDistributed connectDistributed = new ConnectDistributed()@@@12@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "connect.awaitStop()@@@14@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "main['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "args.length < 1 || Arrays.asList(args).contains(\"--help\")@@@3@@@['0', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "Connect connect = connectDistributed.startConnect(workerProps)@@@13@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "String workerPropsFile = args(0(@@@10@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "main['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "String(( args@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "WorkerInfo initInfo = new WorkerInfo()@@@8@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+5->8 [style = dotted, label="true"];
+5->6 [style = dotted, label="true"];
+11->2 [style = bold, label=""];
+7->2 [style = solid, label="workerProps"];
+3->10 [style = bold, label=""];
+5->3 [style = bold, label=""];
+0->4 [style = solid, label="args"];
+4->7 [style = solid, label="workerPropsFile"];
+10->4 [style = bold, label=""];
+4->7 [style = bold, label=""];
+2->12 [style = bold, label=""];
+7->11 [style = bold, label=""];
+9->5 [style = bold, label=""];
+13->0 [style = dotted, label="true"];
+9->0 [style = dotted, label="true"];
+1->0 [style = dotted, label="true"];
+6->8 [style = bold, label=""];
+5->6 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

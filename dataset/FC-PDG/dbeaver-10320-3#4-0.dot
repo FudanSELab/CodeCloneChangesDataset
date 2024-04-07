@@ -1,0 +1,29 @@
+digraph {
+6 [style = filled, label = "Object table@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "MySQLTableForeignKey foreignKey@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "SQLServerTableForeignKey foreignKey@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "configureObject['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "configureObject['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "return UITask.run(null)@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "Object container@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "return new UITask<SQLServerTableForeignKey>(){@Override protected SQLServerTableForeignKey runTask(){EditForeignKeyPage editPage = new EditForeignKeyPage(\"Create foreign key\",foreignKey,new DBSForeignKeyModifyRule((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a44b9)if (!editPage.edit()) {return null}foreignKey.setReferencedKey(editPage.getUniqueConstraint())foreignKey.setDeleteRule(editPage.getOnDeleteRule())foreignKey.setUpdateRule(editPage.getOnUpdateRule())int colIndex = 1for (EditForeignKeyPage.FKColumnInfo tableColumn : editPage.getColumns()){foreignKey.addColumn(new SQLServerTableForeignKeyColumn(foreignKey,(SQLServerTableColumn)tableColumn.getOwnColumn(),colIndex++,(SQLServerTableColumn)tableColumn.getRefColumn()))}return foreignKey}}.execute()@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "MySQLTableForeignKey foreignKey@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "configureObject['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8->10 [style = dotted, label="true"];
+2->1 [style = dotted, label="true"];
+5->6 [style = dotted, label="true"];
+8->11 [style = dotted, label="true"];
+2->0 [style = dotted, label="true"];
+2->3 [style = dotted, label="true"];
+3->11 [style = dashed, label="0"];
+5->7 [style = dotted, label="true"];
+2->4 [style = bold, label=""];
+4->12 [style = dashed, label="0"];
+8->12 [style = bold, label=""];
+5->4 [style = bold, label=""];
+5->3 [style = dotted, label="true"];
+8->9 [style = dotted, label="true"];
+}

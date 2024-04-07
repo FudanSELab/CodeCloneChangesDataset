@@ -1,0 +1,37 @@
+digraph {
+15 [style = filled, label = "elapsed.set(10000)@@@19@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "containerManager.checkContainers()@@@16@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "assertTrue(completedContainerDeletions.tryAcquire(1,TimeUnit.SECONDS))@@@21@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "zk.create(\"/foo\",new byte((((,ZooDefs.Ids.OPEN_ACL_UNSAFE,CreateMode.CONTAINER)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "testMaxNeverUsedInterval['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(deletesQty.get(),0)@@@17@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testZeroMaxNeverUsedInterval['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "assertNull(\"Container should have been deleted\",zk.exists(\"/foo\",false))@@@22@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertNotNull(zk.exists(\"/foo\",false),\"Container should not have been deleted\")@@@17@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "containerManager.checkContainers()@@@20@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "ContainerManager containerManager = new ContainerManager(serverFactory.getZooKeeperServer().getZKDatabase(),serverFactory.getZooKeeperServer().firstProcessor,1,100,1000){@Override protected void postDeleteRequest(Request request){deletesQty.incrementAndGet()super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@3dd94drequest}@Override protected long getElapsed(DataNode node){return elapsed.get()}}@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertNotNull(\"Container should not have been deleted\",zk.exists(\"/foo\",false))@@@18@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ContainerManager containerManager = new ContainerManager(serverFactory.getZooKeeperServer().getZKDatabase(),serverFactory.getZooKeeperServer().firstProcessor,1,100,0){@Override protected void postDeleteRequest(Request request){deletesQty.incrementAndGet()super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@3dd8f2request}@Override protected long getElapsed(DataNode node){return 10000}}@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "AtomicLong elapsed = new AtomicLong(0)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testZeroMaxNeverUsedInterval['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "AtomicInteger deletesQty = new AtomicInteger(0)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->6 [style = bold, label=""];
+5->2 [style = bold, label=""];
+0->10 [style = bold, label=""];
+1->8 [style = bold, label=""];
+2->9 [style = bold, label=""];
+2->0 [style = bold, label=""];
+10->3 [style = bold, label=""];
+15->12 [style = bold, label=""];
+12->13 [style = bold, label=""];
+13->11 [style = bold, label=""];
+14->2 [style = bold, label=""];
+4->15 [style = bold, label=""];
+9->0 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+6->3 [style = bold, label=""];
+3->1 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+}

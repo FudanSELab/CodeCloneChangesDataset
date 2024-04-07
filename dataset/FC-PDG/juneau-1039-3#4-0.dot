@@ -1,0 +1,16 @@
+digraph {
+2 [style = filled, label = "String r = proxy.primitiveCollectionHeaders(new int((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15bd6b1,new Integer((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15bd6ba,new String((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15bd6c3,AList.of(1,null),new AList<List<List<Integer>>>().append(new AList<List<Integer>>().append(new AList<Integer>().append(1).append(null)).append(null)).append(null),new AList<Integer((((((>().append(new Integer((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15bd6ec).append(null),new AList<int((((((>().append(new int((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15bd6fc).append(null),Arrays.asList(\"foo\",\"bar\",null))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "String r = proxy.primitiveCollectionQueries(new int((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15bd71d,new Integer((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15bd726,new String((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15bd72f,new AList<Integer>().append(1).append(null),new AList<List<List<Integer>>>().append(new AList<List<Integer>>().append(new AList<Integer>().append(1).append(null)).append(null)).append(null),new AList<Integer((((((>().append(new Integer((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15bd75b).append(null),new AList<int((((((>().append(new int((((((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15bd76b).append(null),Arrays.asList(\"foo\",\"bar\",null))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "a02_primitiveCollectionHeaders['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "b02_primitiveCollectionQueries['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(\"OK\",r)@@@34@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "a02_primitiveCollectionHeaders['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4->5 [style = bold, label=""];
+0->2 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+2->1 [style = solid, label="r"];
+2->1 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->1 [style = bold, label=""];
+5->1 [style = solid, label="r"];
+}

@@ -1,0 +1,29 @@
+digraph {
+6 [style = filled, label = "fromFile['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Path file@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "FileDialogConfiguration fileDialogConfiguration = new FileDialogConfiguration.Builder().withInitialDirectory(workingDirectory).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "List<Path> fileDirectories = databaseContext.getFileDirectoriesAsPaths(preferences.getFilePreferences())@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "List<Path> fileDirectories = databaseContext.getFileDirectoriesAsPaths(preferences.getFilePreferences())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "dialogService.showFileOpenDialog(fileDialogConfiguration).ifPresent(null)@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Path workingDirectory = databaseContext.getFirstExistingFileDir(preferences.getFilePreferences()).orElse(Paths.get(preferences.get(JabRefPreferences.WORKING_DIRECTORY)))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "return new LinkedFileViewModel(linkedFile,entry,databaseContext,taskExecutor,dialogService,preferences.getXMPPreferences(),preferences.getFilePreferences(),externalFileTypes)@@@5@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "addNewFile['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "LinkedFile linkedFile = fromFile(file,fileDirectories,externalFileTypes)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "fromFile['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10->8 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+2->5 [style = bold, label=""];
+0->2 [style = solid, label="file"];
+1->7 [style = bold, label=""];
+8->9 [style = bold, label=""];
+2->1 [style = solid, label="linkedFile"];
+6->0 [style = dotted, label="true"];
+6->4 [style = bold, label=""];
+9->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->4 [style = bold, label=""];
+4->2 [style = bold, label=""];
+2->5 [style = solid, label="linkedFile"];
+4->2 [style = solid, label="fileDirectories"];
+3->0 [style = dotted, label="true"];
+}

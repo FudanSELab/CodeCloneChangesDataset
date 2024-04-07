@@ -1,0 +1,33 @@
+digraph {
+3 [style = filled, label = "simpleContext['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "viewExpander instanceof RelOptTable.ToRelContextFactory@@@3@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "return ((RelOptTable.ToRelContextFactory)viewExpander).createToRelContext(viewExpander,cluster,hints)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "toRelContext['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "RelOptCluster cluster@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return new RelOptTable.ToRelContext(){public RelOptCluster getCluster(){return cluster}public RelRoot expandView(RelDataType rowType,String queryString,List<String> schemaPath,List<String> viewPath){throw new UnsupportedOperationException()}public List<RelHint> getTableHints(){return ImmutableList.of()}}@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "RelOptCluster cluster@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "return new RelOptTable.ToRelContext(){public RelOptCluster getCluster(){return cluster}public List<RelHint> getTableHints(){return hints}public RelRoot expandView(RelDataType rowType,String queryString,List<String> schemaPath,List<String> viewPath){return viewExpander.expandView(rowType,queryString,schemaPath,viewPath)}}@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "simpleContext['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "List<RelHint> hints@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "RelOptTable.ViewExpander viewExpander@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0->2 [style = dotted, label="true"];
+0->1 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+4->7 [style = solid, label="cluster"];
+10->7 [style = bold, label=""];
+7->6 [style = bold, label=""];
+2->1 [style = solid, label="cluster"];
+9->8 [style = dotted, label="true"];
+5->10 [style = solid, label="viewExpander"];
+10->7 [style = dotted, label="true"];
+10->6 [style = bold, label=""];
+3->2 [style = dotted, label="true"];
+9->5 [style = dotted, label="true"];
+4->6 [style = solid, label="cluster"];
+5->7 [style = solid, label="viewExpander"];
+8->6 [style = solid, label="hints"];
+9->4 [style = dotted, label="true"];
+8->7 [style = solid, label="hints"];
+3->1 [style = bold, label=""];
+9->10 [style = bold, label=""];
+}

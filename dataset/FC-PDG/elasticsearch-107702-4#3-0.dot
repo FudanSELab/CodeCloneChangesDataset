@@ -1,0 +1,20 @@
+digraph {
+1 [style = filled, label = "Engine.Index indexOperation@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Engine.IndexResult result@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "Engine.Index indexOperation@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "SearchContext context@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ShardId shardId@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "long tookInNanos@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "onFetchPhase['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "ShardId shardId@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "postIndex['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "postIndex['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0->2 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+6->4 [style = dotted, label="true"];
+0->3 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+6->3 [style = dotted, label="true"];
+8->9 [style = dotted, label="true"];
+}

@@ -1,0 +1,29 @@
+digraph {
+0 [style = filled, label = "List<NamedWriteableRegistry.Entry> entries = new ArrayList<>()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "namedWriteableRegistry = new NamedWriteableRegistry(entries)@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "setUp['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "setUp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "SearchModule searchModule = new SearchModule(Settings.EMPTY,false,emptyList())@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "SearchModule searchModule = new SearchModule(Settings.EMPTY,false,Collections.emptyList())@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "setUp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "entries.addAll(indicesModule.getNamedWriteables())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "entries.addAll(searchModule.getNamedWriteables())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@14f4260@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "IndicesModule indicesModule = new IndicesModule(Collections.emptyList())@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "IndicesModule indicesModule = new IndicesModule(emptyList())@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+2->0 [style = bold, label=""];
+4->6 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+7->1 [style = bold, label=""];
+11->4 [style = bold, label=""];
+0->1 [style = solid, label="entries"];
+4->8 [style = bold, label=""];
+0->3 [style = bold, label=""];
+8->9 [style = bold, label=""];
+9->0 [style = bold, label=""];
+10->4 [style = bold, label=""];
+6->8 [style = dashed, label="0"];
+3->7 [style = bold, label=""];
+5->4 [style = bold, label=""];
+6->2 [style = bold, label=""];
+}

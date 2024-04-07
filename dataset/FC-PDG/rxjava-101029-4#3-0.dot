@@ -1,0 +1,11 @@
+digraph {
+3 [style = filled, label = "flatMapValueNull['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "flatMapSingleValueNull['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "flatMapSingleValueNull['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Maybe.just(1).flatMapSingle(new Function<Integer,SingleSource<Integer>>(){@Override public SingleSource<Integer> apply(final Integer integer){return null}}).toSingle().to(TestHelper.testConsumer()).assertNoValues().assertError().assertErrorMessage(\"The mapper returned a null SingleSource\")@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Single.just(1).flatMap(new Function<Integer,SingleSource<Integer>>(){@Override public SingleSource<Integer> apply(final Integer integer){return null}}).to(TestHelper.testConsumer()).assertNoValues().assertError().assertErrorMessage(\"The single returned by the mapper is null\")@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->4 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

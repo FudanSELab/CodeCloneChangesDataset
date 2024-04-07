@@ -1,0 +1,32 @@
+digraph {
+6 [style = filled, label = "healthChecker.unHealth(throwable)@@@25@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "onError['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "onError['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Address address = instance.getAddress()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "RemoteInstance instance@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "return endpoint@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "healthChecker.unHealth(throwable)@@@25@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "onCompleted['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "log.error(\"Failed to keep alive in Etcd coordinator\",throwable)@@@24@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "EtcdEndpoint endpoint = new EtcdEndpoint.Builder().host(address.getHost()).port(address.getPort()).serviceName(SERVICE_NAME).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "log.error(\"Failed to keep alive in Etcd coordinator\",throwable)@@@24@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "buildEndpoint['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "onCompleted['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7->5 [style = bold, label=""];
+11->12 [style = solid, label="endpoint"];
+1->2 [style = solid, label="throwable"];
+5->4 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+7->4 [style = dotted, label="true"];
+4->5 [style = solid, label="throwable"];
+0->2 [style = bold, label=""];
+9->11 [style = bold, label=""];
+10->8 [style = dotted, label="true"];
+11->12 [style = bold, label=""];
+3->0 [style = bold, label=""];
+4->6 [style = solid, label="throwable"];
+1->0 [style = solid, label="throwable"];
+3->1 [style = dotted, label="true"];
+5->6 [style = bold, label=""];
+10->9 [style = bold, label=""];
+}

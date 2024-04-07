@@ -1,0 +1,38 @@
+digraph {
+2 [style = filled, label = "boolean exception = false@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertFalse(\"file should not exist\",target.exists())@@@24@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "new AtomicFileWritingIdiom(target,new WriterStatement(){@Override public void write(Writer os){os.write(\"after\")os.flush()assertTrue(\"implementation of AtomicFileOutputStream has changed, update the test\",tmp.exists())throw new RuntimeException()}})@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final File tmp = new File(tmpdir,\"target.txt.tmp\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "RuntimeException ex@@@19@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertFalse(\"file should not exist\",target.exists())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "testWriterFailureNE['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "new AtomicFileWritingIdiom(target,new OutputStreamStatement(){@Override public void write(OutputStream os){os.write(\"after\".getBytes(StandardCharsets.US_ASCII))os.flush()assertTrue(\"implementation of AtomicFileOutputStream has changed, update the test\",tmp.exists())throw new RuntimeException()}})@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "target.delete()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertFalse(\"tmp file should have been deleted\",tmp.exists())@@@22@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertTrue(\"should have raised an exception\",exception)@@@23@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "exception = true@@@20@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "File target = new File(tmpdir,\"target.txt\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testOutputStreamFailureNE['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "testOutputStreamFailureNE['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->9 [style = bold, label=""];
+3->2 [style = bold, label=""];
+2->11 [style = solid, label="exception"];
+2->13 [style = bold, label=""];
+4->5 [style = bold, label=""];
+14->9 [style = bold, label=""];
+10->11 [style = bold, label=""];
+5->10 [style = bold, label=""];
+5->11 [style = solid, label="exception"];
+0->13 [style = dashed, label="0"];
+9->6 [style = bold, label=""];
+7->3 [style = bold, label=""];
+0->10 [style = bold, label=""];
+12->9 [style = bold, label=""];
+9->13 [style = solid, label="target"];
+11->8 [style = bold, label=""];
+4->5 [style = dotted, label="true"];
+2->0 [style = bold, label=""];
+6->7 [style = bold, label=""];
+13->10 [style = bold, label=""];
+9->0 [style = solid, label="target"];
+}

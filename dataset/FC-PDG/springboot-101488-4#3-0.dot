@@ -1,0 +1,37 @@
+digraph {
+6 [style = filled, label = "ApplicationPidFileWriter listener = new ApplicationPidFileWriter()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertThat(FileCopyUtils.copyToString(new FileReader(file))).isEmpty()@@@7@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "SpringApplicationEvent event = createEnvironmentPreparedEvent(\"spring.pid.file\",file.getAbsolutePath())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "listener.onApplicationEvent(event)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "listener.onApplicationEvent(event)@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(contentOf(file)).isEmpty()@@@7@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "assertThat(contentOf(file)).isNotEmpty()@@@10@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "SpringApplicationEvent event = createPreparedEvent(\"spring.pid.file\",file.getAbsolutePath())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "listener.setTriggerEventType()@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "tryEnvironmentPreparedEvent['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "tryEnvironmentPreparedEvent['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(FileCopyUtils.copyToString(new FileReader(file))).isNotEmpty()@@@7@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "overridePidFileWithSpring['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "File file = this.temporaryFolder.newFile()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->4 [style = bold, label=""];
+8->5 [style = bold, label=""];
+1->12 [style = bold, label=""];
+12->8 [style = solid, label="event"];
+11->0 [style = bold, label=""];
+4->5 [style = bold, label=""];
+3->8 [style = solid, label="event"];
+6->8 [style = bold, label=""];
+3->6 [style = bold, label=""];
+10->1 [style = bold, label=""];
+8->11 [style = bold, label=""];
+1->3 [style = bold, label=""];
+4->9 [style = bold, label=""];
+7->0 [style = bold, label=""];
+2->1 [style = bold, label=""];
+13->1 [style = bold, label=""];
+8->7 [style = bold, label=""];
+3->12 [style = dashed, label="0"];
+5->9 [style = dashed, label="0"];
+12->6 [style = bold, label=""];
+3->4 [style = solid, label="event"];
+}

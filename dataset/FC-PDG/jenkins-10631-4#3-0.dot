@@ -1,0 +1,21 @@
+digraph {
+1 [style = filled, label = "HtmlPage root = j.createWebClient().goTo(url)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "canViewRoot['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "canViewRoot['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEquals(\"Fragment\",root.getElementById(\"frag\").asText())@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(\"Explicit Fragment\",root.getElementById(\"explicit-frag\").asText())@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertEquals(\"Fragment\",root.getElementById(\"frag\").getChildNodes().get(0).getNodeValue())@@@8@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "canViewStaplerViews['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "String(( urls = {\"annotated/explicitRoot\",\"extended/explicitRoot\",\"extended/whitelistedRoot\"}@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->6 [style = bold, label=""];
+0->1 [style = bold, label=""];
+6->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+7->2 [style = bold, label=""];
+3->2 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+4->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+1->5 [style = bold, label=""];
+5->1 [style = bold, label=""];
+}

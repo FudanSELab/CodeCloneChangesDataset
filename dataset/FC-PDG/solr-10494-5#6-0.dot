@@ -1,0 +1,33 @@
+digraph {
+1 [style = filled, label = "String collectionName = \"singleShardPreferenceTestColl\"@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "cluster.waitForActiveCollection(collectionName,1,liveNodes)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "singleShardedPreferenceRules['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "CollectionAdminRequest.createCollection(collectionName,\"conf\",1,liveNodes / 3,liveNodes / 3,liveNodes / 3).processAndWait(cluster.getSolrClient(),TIMEOUT)@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "CollectionAdminRequest.createCollection(collectionName,\"conf\",1,liveNodes / 3,liveNodes / 3,liveNodes / 3).setPerReplicaState(USE_PER_REPLICA_STATE).processAndWait(cluster.getSolrClient(),TIMEOUT)@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "singleShardedPreferenceRules['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "int liveNodes = cluster.getJettySolrRunners().size()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "singleShardedPreferenceRules['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "queryReplicaType(getRandomClient(),Replica.Type.PULL,collectionName)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "queryReplicaType(getRandomClient(),Replica.Type.NRT,collectionName)@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "new UpdateRequest().add(id,\"0\",\"a_t\",\"hello1\").add(id,\"2\",\"a_t\",\"hello2\").add(id,\"3\",\"a_t\",\"hello2\").commit(getRandomClient(),collectionName)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "queryReplicaType(getRandomClient(),Replica.Type.TLOG,collectionName)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->5 [style = bold, label=""];
+5->2 [style = bold, label=""];
+1->3 [style = solid, label="collectionName"];
+5->10 [style = dashed, label="0"];
+4->6 [style = bold, label=""];
+1->4 [style = solid, label="collectionName"];
+1->6 [style = solid, label="collectionName"];
+1->7 [style = bold, label=""];
+11->1 [style = bold, label=""];
+0->4 [style = bold, label=""];
+10->2 [style = bold, label=""];
+1->2 [style = solid, label="collectionName"];
+1->0 [style = solid, label="collectionName"];
+3->0 [style = bold, label=""];
+9->1 [style = bold, label=""];
+7->2 [style = solid, label="liveNodes"];
+7->10 [style = bold, label=""];
+2->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+}

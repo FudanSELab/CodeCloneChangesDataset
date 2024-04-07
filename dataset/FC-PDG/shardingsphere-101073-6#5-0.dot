@@ -1,0 +1,36 @@
+digraph {
+2 [style = filled, label = "Map<String,DataSource> dataSourceMap = conn.getDataSourceMap()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "initTable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "RunScript.execute(database0,new InputStreamReader(Objects.requireNonNull(.getClassLoader().getResourceAsStream(\"sql/federate_data_0.sql\"))))@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "RunScript.execute(database1,new InputStreamReader(Objects.requireNonNull(.getClassLoader().getResourceAsStream(\"sql/federate_data_1.sql\"))))@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "conn.close()@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "initTable['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "RunScript.execute(conn,new InputStreamReader(Objects.requireNonNull(.getClassLoader().getResourceAsStream(\"sql/jdbc_data.sql\"))))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Connection database2 = dataSourceMap.get(\"federate_jdbc_2\").getConnection()@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ShardingSphereConnection conn = dataSource.getConnection()@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Connection database1 = dataSourceMap.get(\"federate_jdbc_1\").getConnection()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "ShardingSphereConnection conn = (ShardingSphereConnection)dataSource.getConnection()@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "Connection database0 = dataSourceMap.get(\"federate_jdbc_0\").getConnection()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "RunScript.execute(database2,new InputStreamReader(Objects.requireNonNull(.getClassLoader().getResourceAsStream(\"sql/federate_data_2.sql\"))))@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "initTable['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "conn.close()@@@12@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->6 [style = bold, label=""];
+0->9 [style = bold, label=""];
+12->1 [style = bold, label=""];
+11->10 [style = bold, label=""];
+1->13 [style = solid, label="conn"];
+6->7 [style = bold, label=""];
+7->4 [style = solid, label="database1"];
+13->14 [style = bold, label=""];
+10->2 [style = bold, label=""];
+3->0 [style = solid, label="database2"];
+1->10 [style = dashed, label="0"];
+8->4 [style = bold, label=""];
+1->2 [style = bold, label=""];
+6->8 [style = solid, label="database0"];
+3->8 [style = bold, label=""];
+4->0 [style = bold, label=""];
+5->1 [style = bold, label=""];
+1->13 [style = bold, label=""];
+7->3 [style = bold, label=""];
+}

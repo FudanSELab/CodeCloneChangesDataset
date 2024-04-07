@@ -1,0 +1,33 @@
+digraph {
+5 [style = filled, label = "controller.registerHandler(action)@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "stubTermEnumAction['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "actions.put(ValidateQueryAction.INSTANCE,transportAction)@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "stubValidateQueryAction['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "final Map<ActionType,TransportAction> actions = new HashMap<>()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final TransportAction transportAction = new TransportAction(TermsEnumAction.NAME,new ActionFilters(Collections.emptySet()),taskManager){@Override protected void doExecute(Task task,ActionRequest request,ActionListener listener){}}@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final TransportAction transportAction = new TransportAction(ValidateQueryAction.NAME,new ActionFilters(Collections.emptySet()),taskManager){@Override protected void doExecute(Task task,ActionRequest request,ActionListener listener){}}@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "client.initialize(actions,taskManager,null,mock(),null,new NamedWriteableRegistry(List.of()))@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "stubValidateQueryAction['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final TaskManager taskManager = new TaskManager(Settings.EMPTY,threadPool,Collections.emptySet())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "actions.put(TermsEnumAction.INSTANCE,transportAction)@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->6 [style = bold, label=""];
+9->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+0->10 [style = dashed, label="0"];
+7->1 [style = bold, label=""];
+1->10 [style = bold, label=""];
+6->3 [style = solid, label="actions"];
+6->4 [style = bold, label=""];
+10->9 [style = solid, label="transportAction"];
+4->3 [style = bold, label=""];
+3->5 [style = bold, label=""];
+1->0 [style = solid, label="taskManager"];
+2->1 [style = bold, label=""];
+1->3 [style = solid, label="taskManager"];
+10->6 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+1->10 [style = solid, label="taskManager"];
+1->0 [style = bold, label=""];
+6->9 [style = bold, label=""];
+0->4 [style = solid, label="transportAction"];
+}

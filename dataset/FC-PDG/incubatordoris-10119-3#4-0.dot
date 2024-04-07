@@ -1,0 +1,34 @@
+digraph {
+12 [style = filled, label = "return analyzer@@@28@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "OlapTable olapTable = mockTable(\"testTable\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "new Expectations(analyzer){}@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "Analyzer analyzer = new Analyzer(fetchAdminCatalog(),new ConnectContext(null))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "new Expectations(db){}@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "mockDb['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "final String prefix = \"testCluster:\"@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "fetchAdminAnalyzer['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "return db@@@29@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "String name@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "mockDb['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "boolean withCluster@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Database db = new Database()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+6->0 [style = bold, label=""];
+9->7 [style = solid, label="analyzer"];
+5->7 [style = dashed, label="0"];
+0->2 [style = solid, label="db"];
+0->5 [style = solid, label="db"];
+7->12 [style = bold, label=""];
+11->9 [style = bold, label=""];
+6->1 [style = dotted, label="true"];
+1->8 [style = dashed, label="0"];
+10->11 [style = bold, label=""];
+0->3 [style = bold, label=""];
+10->8 [style = dotted, label="true"];
+4->1 [style = dotted, label="true"];
+9->12 [style = solid, label="analyzer"];
+3->5 [style = bold, label=""];
+4->0 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+9->7 [style = bold, label=""];
+}

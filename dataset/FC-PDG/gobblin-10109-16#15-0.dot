@@ -1,0 +1,38 @@
+digraph {
+3 [style = filled, label = "long timeoutInSeconds = Long.parseLong(this.jobPlanningProps.getProperty(GobblinClusterConfigurationKeys.HELIX_JOB_TIMEOUT_SECONDS,GobblinClusterConfigurationKeys.DEFAULT_HELIX_JOB_TIMEOUT_SECONDS))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "HelixUtils.waitJobCompletion(this.helixManager,workFlowName,jobName,timeoutEnabled? Optional.of(timeoutInSeconds): Optional.empty())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "String jobName@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "String workFlowName@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "long timeoutInSeconds = Long.parseLong(this.jobProps.getProperty(GobblinClusterConfigurationKeys.HELIX_JOB_TIMEOUT_SECONDS,GobblinClusterConfigurationKeys.DEFAULT_HELIX_JOB_TIMEOUT_SECONDS))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "waitForJobCompletion['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "waitForJobCompletion['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "String jobName@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "waitForJobCompletion['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "boolean timeoutEnabled = Boolean.parseBoolean(this.jobProps.getProperty(GobblinClusterConfigurationKeys.HELIX_JOB_TIMEOUT_ENABLED_KEY,GobblinClusterConfigurationKeys.DEFAULT_HELIX_JOB_TIMEOUT_ENABLED))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "return getResultFromUserContent()@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "HelixUtils.waitJobCompletion(this.helixManager,this.helixWorkFlowName,this.jobContext.getJobId(),timeoutEnabled? Optional.of(timeoutInSeconds): Optional.empty())@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "boolean timeoutEnabled = Boolean.parseBoolean(this.jobPlanningProps.getProperty(GobblinClusterConfigurationKeys.HELIX_JOB_TIMEOUT_ENABLED_KEY,GobblinClusterConfigurationKeys.DEFAULT_HELIX_JOB_TIMEOUT_ENABLED))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->1 [style = solid, label="jobName"];
+0->1 [style = solid, label="jobName"];
+9->10 [style = solid, label="timeoutInSeconds"];
+5->1 [style = solid, label="workFlowName"];
+11->9 [style = bold, label=""];
+2->1 [style = solid, label="timeoutEnabled"];
+8->7 [style = dotted, label="true"];
+6->2 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->3 [style = bold, label=""];
+6->0 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+8->2 [style = bold, label=""];
+7->1 [style = solid, label="workFlowName"];
+1->10 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+8->5 [style = dotted, label="true"];
+12->11 [style = bold, label=""];
+11->10 [style = solid, label="timeoutEnabled"];
+2->11 [style = dashed, label="0"];
+3->1 [style = solid, label="timeoutInSeconds"];
+3->9 [style = dashed, label="0"];
+9->10 [style = bold, label=""];
+}

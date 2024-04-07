@@ -1,0 +1,23 @@
+digraph {
+5 [style = filled, label = "notifyCheckpointAborted['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "Supplier<Boolean> isRunning@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Supplier<Boolean> isRunning@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "long checkpointId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "OperatorChain<?,?> operatorChain@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "long checkpointId@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "notifyCheckpointComplete['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "long checkpointId@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Supplier<Boolean> isRunning@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "notifyCheckpointAborted['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "OperatorChain<?,?> operatorChain@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8->10 [style = dotted, label="true"];
+2->1 [style = dotted, label="true"];
+5->6 [style = dotted, label="true"];
+2->0 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+2->3 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+5->3 [style = dotted, label="true"];
+3->10 [style = dashed, label="0"];
+8->9 [style = dotted, label="true"];
+}

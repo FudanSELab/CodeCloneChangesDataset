@@ -1,0 +1,32 @@
+digraph {
+6 [style = filled, label = "final String regionName@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "final String regionName@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final String regionName@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "SerializableRunnable PrRegion = new CacheSerializableRunnable(\"PRQuery\"){public void run2(){Cache cache = getCache()String(( queries = new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@148cb2Object r = new Object((((((Region local = cache.getRegion(localRegion)Region region = cache.getRegion(regionName)assertNotNull(region)final String(( expectedExceptions = new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@148cebfor (final String expectedException : expectedExceptions){getCache().getLogger().info(\"<ExpectedException action=add>\" + expectedException + \"</ExpectedException>\")}String distinct = \"<TRACE>SELECT DISTINCT \"QueryService qs = getCache().getQueryService()Object(( paramstry {for (int l = 1 l <= 3 l++){String(( rq = new String((((for (int j = 0 j < queries.length j++){String qStr = nullsynchronized (region) {qStr = (distinct + queries(j(.replace(\"REGION_NAME\",localRegion))qStr += (\" LIMIT \" + (l * l))rq(j( = qStrSelectResults sr = (SelectResults)qs.newQuery(qStr).execute()r(j((0( = srif (sr.asList().size() > l * l) {fail(\"The resultset size exceeds limit size. Limit size=\" + l * l + \", result size =\" + sr.asList().size())}qStr = (distinct + queries(j(.replace(\"REGION_NAME\",regionName))qStr += (\" LIMIT \" + (l * l))rq(j( = qStrSelectResults srr = (SelectResults)qs.newQuery(qStr).execute()r(j((1( = srrif (srr.size() > l * l) {fail(\"The resultset size exceeds limit size. Limit size=\" + l * l + \", result size =\" + srr.asList().size())}}}StructSetOrResultsSet ssORrs = new StructSetOrResultsSet()ssORrs.CompareQueryResultsWithoutAndWithIndexes(r,queries.length,true,rq)}org.apache.geode.test.dunit.LogWriterUtils.getLogWriter().info(\"PRQueryDUnitHelper#getCacheSerializableRunnableForPRQueryAndCompareResults: Queries Executed successfully on Local region & PR Region\")}catch (QueryInvocationTargetException e) catch (QueryException e) catch (RegionDestroyedException rde) catch (CancelException cce) {for (final String expectedException : expectedExceptions){getCache().getLogger().info(\"<ExpectedException action=remove>\" + expectedException + \"</ExpectedException>\")}}}}@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final String localRegion@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "return (CacheSerializableRunnable)PrRegion@@@76@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "return (CacheSerializableRunnable)PrRegion@@@58@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "getCacheSerializableRunnableForPROrderByQueryAndCompareResults['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "getCacheSerializableRunnableForPROrderByQueryAndCompareResults['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final String localRegion@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "getCacheSerializableRunnableForPROrderByQueryWithLimit['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3->2 [style = solid, label="localRegion"];
+5->2 [style = bold, label=""];
+5->6 [style = dotted, label="true"];
+8->10 [style = dotted, label="true"];
+10->2 [style = solid, label="regionName"];
+2->9 [style = bold, label=""];
+0->3 [style = dotted, label="true"];
+8->2 [style = bold, label=""];
+7->2 [style = solid, label="localRegion"];
+0->2 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+2->4 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+3->10 [style = dashed, label="0"];
+2->9 [style = solid, label="PrRegion"];
+1->2 [style = solid, label="regionName"];
+6->2 [style = solid, label="regionName"];
+5->3 [style = dotted, label="true"];
+2->4 [style = solid, label="PrRegion"];
+}

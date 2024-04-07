@@ -1,0 +1,30 @@
+digraph {
+2 [style = filled, label = "Object table@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "return UITask.run(null)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "configureObject['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "SQLServerTableUniqueKey primaryKey@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "configureObject['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "return new UITask<GenericUniqueKey>(){@Override protected GenericUniqueKey runTask(){EditConstraintPage editPage = new EditConstraintPage(\"Create unique constraint\",primaryKey,isSupportCheckConstraint? new DBSEntityConstraintType((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9d68b: new DBSEntityConstraintType((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9d697)if (!editPage.edit()) {return null}primaryKey.setConstraintType(editPage.getConstraintType())primaryKey.setName(editPage.getConstraintName())if (primaryKey instanceof GenericCheckConstraint) {((GenericCheckConstraint)primaryKey).setCheckConstraintExpression(editPage.getConstraintExpression())}int colIndex = 1for (DBSEntityAttribute tableColumn : editPage.getSelectedAttributes()){primaryKey.addColumn(new GenericTableConstraintColumn(primaryKey,(GenericTableColumn)tableColumn,colIndex++))}return primaryKey}}.execute()@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "configureObject['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "Object container@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "GenericUniqueKey primaryKey@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "boolean isSupportCheckConstraint = primaryKey.getDataSource().getMetaModel().supportsCheckConstraints()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "GenericUniqueKey primaryKey@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6->8 [style = dotted, label="true"];
+6->2 [style = dotted, label="true"];
+10->13 [style = dotted, label="true"];
+6->7 [style = dotted, label="true"];
+10->11 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+10->12 [style = dotted, label="true"];
+3->4 [style = bold, label=""];
+3->1 [style = dotted, label="true"];
+5->4 [style = bold, label=""];
+6->5 [style = bold, label=""];
+2->13 [style = dashed, label="0"];
+10->9 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+}

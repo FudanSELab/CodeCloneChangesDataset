@@ -1,0 +1,11 @@
+digraph {
+2 [style = filled, label = "return new RouteBuilder(){public void configure(){from(\"jetty:http://localhost:\" + port + \"/test\").process(new Processor(){@Override public void process(Exchange exchange){String name = exchange.getIn().getHeader(\"name\",)ObjectHelper.notNull(name,\"name\")name = \"org/apache/camel/itest/jetty/\" + nameInputStream is = ResourceHelper.resolveMandatoryResourceAsInputStream(exchange.getContext().getClassResolver(),name)String xml = exchange.getContext().getTypeConverter().convertTo(,is)exchange.getOut().setBody(xml)exchange.getOut().setHeader(Exchange.CONTENT_TYPE,\"text/xml\")}})}}@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "port = AvailablePortFinder.getNextAvailable(8000)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "createRouteBuilder['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "createRouteBuilder['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "createRouteBuilder['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

@@ -1,0 +1,15 @@
+digraph {
+6 [style = filled, label = "testPlainDefaultPort['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "withService(null,false,1)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testSSLOnly['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testSSLOnly['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "DatabaseDescriptor.getClientEncryptionOptions().optional = false@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "DatabaseDescriptor.getClientEncryptionOptions().enabled = true@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "withService(null)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->5 [style = bold, label=""];
+3->1 [style = bold, label=""];
+4->2 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

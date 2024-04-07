@@ -1,0 +1,35 @@
+digraph {
+12 [style = filled, label = "visitLocalRef['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "visitInputRef['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "(index < 0) || (index >= inputTypeList.size())@@@4@@@['0', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "return litmus.succeed()@@@12@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "RexLocalRef localRef@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "++failCount@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "!ref.getType().isStruct() && !RelOptUtil.eq(\"ref\",ref.getType(),\"input\",inputTypeList.get(index),litmus)@@@8@@@['0', '1', '0']", fillcolor = white, shape = diamond image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "visitInputRef['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "++failCount@@@9@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "final int index = ref.getIndex()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "RexInputRef ref@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return litmus.fail(\"RexInputRef index \" + index + \" out of range 0..\" + (inputTypeList.size() - 1))@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "return litmus.fail(null)@@@10@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+4->10 [style = bold, label=""];
+9->2 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+8->9 [style = bold, label=""];
+3->5 [style = dotted, label="true"];
+3->5 [style = bold, label=""];
+4->0 [style = dotted, label="true"];
+3->7 [style = bold, label=""];
+7->9 [style = dotted, label="true"];
+3->6 [style = dotted, label="true"];
+1->0 [style = dotted, label="true"];
+10->3 [style = solid, label="index"];
+10->6 [style = solid, label="index"];
+10->3 [style = bold, label=""];
+5->6 [style = bold, label=""];
+12->11 [style = dotted, label="true"];
+7->8 [style = dotted, label="true"];
+7->2 [style = bold, label=""];
+}

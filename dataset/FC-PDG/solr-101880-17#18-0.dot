@@ -1,0 +1,21 @@
+digraph {
+2 [style = filled, label = "waitForServerUp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "int clientPort@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "this.clientPortAddress = new InetSocketAddress(clientPort)@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "setClientPort['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "this.clientPortAddress = new InetSocketAddress(InetAddress.getByName(clientPortAddress.getHostName()),clientPort)@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "waitForServerUp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "run['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "clientPortAddress != null@@@3@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "run['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->6 [style = dotted, label="true"];
+5->4 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+7->4 [style = solid, label="clientPort"];
+7->6 [style = solid, label="clientPort"];
+8->5 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+5->4 [style = dotted, label="false"];
+5->6 [style = bold, label=""];
+}

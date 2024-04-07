@@ -1,0 +1,22 @@
+digraph {
+0 [style = filled, label = "{ParsedDocument parsedDocument = defaultMapper.parse(source(null))LuceneDocument indexableFields = parsedDocument.rootDoc()assertThat(indexableFields.getFields(\"field\"),arrayContainingInAnyOrder(contextSuggestField(\"timmy\"),contextSuggestField(\"starbucks\")))assertThat(indexableFields.getFields(\"field.subsuggest\"),arrayContainingInAnyOrder(contextSuggestField(\"timmy\"),contextSuggestField(\"starbucks\")))try {ts.reset()while (ts.incrementToken()) {}ts.end()}}@@@34@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(indexableFields.getFields(\"field\"),arrayContainingInAnyOrder(keywordField(\"key1\"),sortedSetDocValuesField(\"key1\"),keywordField(\"key2\"),sortedSetDocValuesField(\"key2\"),keywordField(\"key3\"),sortedSetDocValuesField(\"key3\")))@@@27@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "DocumentMapper defaultMapper = createDocumentMapper(fieldMapping(null))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "ParsedDocument parsedDocument = defaultMapper.parse(source(null))@@@25@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertThat(indexableFields.getFields(\"field.subsuggest\"),arrayContainingInAnyOrder(contextSuggestField(\"key1\"),contextSuggestField(\"key2\"),contextSuggestField(\"key3\")))@@@28@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testCompletionWithContextAndSubCompletion['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "testKeywordWithSubCompletionAndContext['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testCompletionWithContextAndSubCompletion['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "{ParsedDocument parsedDocument = defaultMapper.parse(source(null))LuceneDocument indexableFields = parsedDocument.rootDoc()assertThat(indexableFields.getFields(\"field\"),arrayContainingInAnyOrder(contextSuggestField(\"timmy\"),contextSuggestField(\"starbucks\")))assertThat(indexableFields.getFields(\"field.subsuggest\"),arrayContainingInAnyOrder(contextSuggestField(\"timmy\"),contextSuggestField(\"starbucks\")))}@@@55@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ParseContext.Document indexableFields = parsedDocument.rootDoc()@@@26@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+5->8 [style = bold, label=""];
+3->0 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->9 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+6->5 [style = bold, label=""];
+9->6 [style = bold, label=""];
+7->3 [style = bold, label=""];
+}

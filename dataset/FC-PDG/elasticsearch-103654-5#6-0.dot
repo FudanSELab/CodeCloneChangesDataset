@@ -1,0 +1,32 @@
+digraph {
+12 [style = filled, label = "testCloseOnOutstandingTask['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final CountDownLatch threadRunning = new CountDownLatch(1)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Node node = new MockNode(baseSettings().build(),basePlugins())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "node.start()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "shouldRun.set(false)@@@16@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "AtomicBoolean shouldRun = new AtomicBoolean(true)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "node.close()@@@14@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "assertFalse(node.awaitClose(0,TimeUnit.MILLISECONDS))@@@15@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "threadpool.executor(ThreadPool.Names.SEARCH).execute(null)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testCloseOnOutstandingTask['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertTrue(node.awaitClose(1,TimeUnit.DAYS))@@@17@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assumeFalse(\"https://github.com/elastic/elasticsearch/issues/44256\",Constants.WINDOWS)@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "threadRunning.await()@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "ThreadPool threadpool = node.injector().getInstance()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testAwaitCloseTimeoutsOnNonInterruptibleTask['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+14->2 [style = bold, label=""];
+2->9 [style = bold, label=""];
+12->11 [style = bold, label=""];
+11->10 [style = bold, label=""];
+3->14 [style = bold, label=""];
+13->10 [style = bold, label=""];
+7->4 [style = bold, label=""];
+10->6 [style = bold, label=""];
+4->3 [style = bold, label=""];
+8->10 [style = bold, label=""];
+3->2 [style = bold, label=""];
+6->5 [style = bold, label=""];
+0->7 [style = bold, label=""];
+1->0 [style = bold, label=""];
+5->1 [style = bold, label=""];
+}

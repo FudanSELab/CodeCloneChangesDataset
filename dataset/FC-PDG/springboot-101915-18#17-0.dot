@@ -1,0 +1,32 @@
+digraph {
+6 [style = filled, label = "assertResponseIsNotCompressed(response)@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "compression.setEnabled(true)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "assertResponseIsNotCompressed(response)@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ResponseEntity<Void> response = client.get().header(\"User-Agent\",\"testUserAgent\").retrieve().toBodilessEntity().block(Duration.ofSeconds(30))@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "noCompressionForUserAgent['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "compression.setExcludedUserAgents(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1d137bb)@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "compression.setMinResponseSize(DataSize.ofBytes(3001))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "noCompressionForUserAgent['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "ResponseEntity<Void> response = client.get().retrieve().toBodilessEntity().block(Duration.ofSeconds(30))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "WebClient client = prepareCompressionTest(compression)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Compression compression = new Compression()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "noCompressionForSmallResponse['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->2 [style = bold, label=""];
+4->5 [style = bold, label=""];
+5->8 [style = dashed, label="0"];
+3->9 [style = solid, label="compression"];
+1->6 [style = solid, label="response"];
+4->8 [style = bold, label=""];
+0->3 [style = bold, label=""];
+8->9 [style = bold, label=""];
+9->11 [style = bold, label=""];
+11->2 [style = solid, label="response"];
+1->11 [style = dashed, label="0"];
+1->6 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->4 [style = bold, label=""];
+3->2 [style = solid, label="compression"];
+11->2 [style = bold, label=""];
+10->3 [style = bold, label=""];
+7->3 [style = bold, label=""];
+}

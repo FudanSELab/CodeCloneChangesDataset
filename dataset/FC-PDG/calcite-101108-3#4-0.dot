@@ -1,0 +1,33 @@
+digraph {
+0 [style = filled, label = "assertThat(mq.areColumnsUnique(rel,ImmutableBitSet.of(0)),is(true))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final RelMetadataQuery mq = rel.getCluster().getMetadataQuery()@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "checkColumnUniquenessForFilterWithConstantColumns['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "assertThat(mq.areColumnsUnique(rel,ImmutableBitSet.of(1)),is(false))@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(mq.areColumnsUnique(rel,ImmutableBitSet.of(0,1)),is(true))@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "checkColumnUniquenessForFilterWithConstantColumns['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "String sql@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final String sql = \"\" + \"select deptno, sal\" + \"from (select distinct deptno, sal from emp)\" + \"where sal=1000\" + \"intersect all\" + \"select deptno, sal from emp\"@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertThat(rel.getRowType().getFieldNames().toString(),is(\"(DEPTNO, SAL(\"))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final RelMetadataQuery mq = RelMetadataQuery.instance()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final RelNode rel = convertSql(sql)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testColumnUniquenessForIntersectWithConstantColumns['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8->7 [style = bold, label=""];
+11->2 [style = bold, label=""];
+10->3 [style = bold, label=""];
+9->2 [style = bold, label=""];
+9->1 [style = dotted, label="true"];
+6->1 [style = dotted, label="true"];
+0->5 [style = bold, label=""];
+2->0 [style = solid, label="rel"];
+3->11 [style = bold, label=""];
+2->5 [style = solid, label="rel"];
+11->2 [style = solid, label="sql"];
+7->4 [style = bold, label=""];
+1->2 [style = solid, label="sql"];
+6->3 [style = bold, label=""];
+3->2 [style = bold, label=""];
+2->7 [style = bold, label=""];
+4->0 [style = bold, label=""];
+2->4 [style = solid, label="rel"];
+2->8 [style = bold, label=""];
+}

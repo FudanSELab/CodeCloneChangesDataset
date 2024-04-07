@@ -1,0 +1,34 @@
+digraph {
+5 [style = filled, label = "taskConfigs['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "!configState.contains(connName)@@@3@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "return@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "result.add(new TaskInfo(taskId,configState.rawTaskConfig(taskId)))@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "addRequest['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "callback.onCompletion(null,result)@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "callback.onCompletion(new NotFoundException(\"Connector \" + connName + \" not found\",null),null)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "taskConfigs['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Callback<List<TaskInfo>> callback@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final Callback<List<TaskInfo>> callback@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "addRequest['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "final Callback<List<TaskInfo>> callback@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "taskConfigs['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "String connName@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "List<TaskInfo> result = new ArrayList<>()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->2 [style = dotted, label="true"];
+10->9 [style = solid, label="result"];
+6->8 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+7->13 [style = dotted, label="true"];
+6->12 [style = dotted, label="true"];
+13->14 [style = bold, label=""];
+14->10 [style = bold, label=""];
+10->11 [style = bold, label=""];
+7->14 [style = dotted, label="true"];
+11->9 [style = bold, label=""];
+6->7 [style = bold, label=""];
+7->10 [style = bold, label=""];
+12->13 [style = solid, label="connName"];
+5->3 [style = dotted, label="true"];
+7->13 [style = bold, label=""];
+}

@@ -1,0 +1,17 @@
+digraph {
+5 [style = filled, label = "RelMetadataQuery mq@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "getRowCount['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "getPredicates['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "RelMetadataQuery mq@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "distribution['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "getPredicates['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "splitCount['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "getAllPredicates['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "RelMetadataQuery mq@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0->2 [style = dotted, label="true"];
+8->6 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+3->4 [style = dotted, label="true"];
+3->5 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+}

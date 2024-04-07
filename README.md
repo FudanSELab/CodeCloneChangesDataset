@@ -27,7 +27,7 @@ The dataset is evolving! Please direct your comments and suggestions to Yijian (
 
 ## 2. Basic Information
 
-​		The resource in this dataset contains 22,009 **clone genealogies**, 24,672 pairs of matched changes and 26,233 non-matched changes.
+​		The resource in this dataset contains 22,009 **clone genealogies**, 24,672 pairs of matched changes and 38,041 non-matched changes.
 
 ​		`cloneGenealogy` folder contains a web-based tool which can be used to show the source code changes in a clone pair genealogy.
 

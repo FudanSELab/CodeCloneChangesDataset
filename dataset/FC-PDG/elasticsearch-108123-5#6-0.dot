@@ -1,0 +1,24 @@
+digraph {
+8 [style = filled, label = "{}@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "cleanLuceneIndex['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Directory directory@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "directory.deleteFile(file)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "pruneUnreferencedFiles['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "String segmentsFileName@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "file.startsWith(IndexFileNames.SEGMENTS) || file.equals(IndexFileNames.OLD_SEGMENTS_GEN)@@@5@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Directory directory@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Directory directory@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "pruneUnreferencedFiles['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->2 [style = dotted, label="true"];
+6->9 [style = dotted, label="true"];
+2->7 [style = dashed, label="0"];
+9->8 [style = bold, label=""];
+9->6 [style = bold, label=""];
+5->7 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+6->8 [style = bold, label=""];
+1->0 [style = dotted, label="true"];
+5->6 [style = bold, label=""];
+4->2 [style = dotted, label="true"];
+6->9 [style = bold, label=""];
+}

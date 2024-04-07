@@ -1,0 +1,32 @@
+digraph {
+11 [style = filled, label = "long nowInMillis@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "boolean registerType@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ServiceHolder['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ServiceHolder['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "Settings indexSettings@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "MapperService mapperService@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "boolean registerType@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Collection<Class<? extends Plugin>> plugins@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Settings nodeSettings@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "initializeAdditionalMappings['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "AbstractBuilderTestCase testCase@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "mapperService.merge(\"_doc\",new CompressedXContent(Strings.toString(PutMappingRequest.buildFromSimplifiedDef(\"_doc\",STRING_FIELD_NAME,\"type=text\",INT_FIELD_NAME,\"type=integer\",DOUBLE_FIELD_NAME,\"type=double\",BOOLEAN_FIELD_NAME,\"type=boolean\",DATE_FIELD_NAME,\"type=date\",OBJECT_FIELD_NAME,\"type=object\",GEO_POINT_FIELD_NAME,\"type=geo_point\",\"nested1\",\"type=nested\"))),MapperService.MergeReason.MAPPING_UPDATE)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "AbstractBuilderTestCase testCase@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "Settings nodeSettings@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Settings indexSettings@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "Collection<Class<? extends Plugin>> plugins@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+7->12 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+6->4 [style = dotted, label="true"];
+6->1 [style = dotted, label="true"];
+6->2 [style = dotted, label="true"];
+7->8 [style = dotted, label="true"];
+15->14 [style = bold, label=""];
+15->13 [style = dotted, label="true"];
+7->9 [style = dotted, label="true"];
+7->11 [style = dotted, label="true"];
+6->3 [style = dotted, label="true"];
+7->5 [style = dotted, label="true"];
+6->0 [style = dotted, label="true"];
+7->10 [style = dotted, label="true"];
+}

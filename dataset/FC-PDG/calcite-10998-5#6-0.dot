@@ -1,0 +1,38 @@
+digraph {
+5 [style = filled, label = "HepProgram program = new HepProgramBuilder().addMatchLimit(1).addMatchOrder(HepMatchOrder.TOP_DOWN).addRuleInstance(ruleConfig.toRule()).build()@@@14@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "relFn(relFn).with(hepPlanner).check()@@@17@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "relFn(relFn).with(hepPlanner).checkUnchanged()@@@20@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "boolean allowAlwaysTrue@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "HepPlanner hepPlanner = new HepPlanner(program)@@@15@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "boolean allowAlwaysTrue@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "JoinAssociateRule.Config ruleConfig = JoinAssociateRule.Config.DEFAULT@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "allowAlwaysTrue@@@16@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ruleConfig = ruleConfig.withAllowAlwaysTrueCondition(false)@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "!allowAlwaysTrue@@@11@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "checkJoinAssociateRuleWithBottomAlwaysTrueCondition['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "checkJoinAssociateRuleWithBottomAlwaysTrueCondition['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "checkJoinAssociateRuleWithTopAlwaysTrueCondition['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final Function<RelBuilder,RelNode> relFn = null@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->2 [style = dotted, label="true"];
+11->3 [style = bold, label=""];
+1->7 [style = solid, label="allowAlwaysTrue"];
+7->8 [style = bold, label=""];
+0->4 [style = bold, label=""];
+6->0 [style = bold, label=""];
+4->5 [style = bold, label=""];
+9->3 [style = bold, label=""];
+9->1 [style = dotted, label="true"];
+12->7 [style = solid, label="allowAlwaysTrue"];
+5->10 [style = bold, label=""];
+3->6 [style = bold, label=""];
+5->10 [style = solid, label="program"];
+10->7 [style = bold, label=""];
+11->1 [style = dotted, label="true"];
+1->12 [style = dashed, label="0"];
+13->3 [style = bold, label=""];
+7->8 [style = dotted, label="false"];
+0->4 [style = dotted, label="true"];
+0->5 [style = bold, label=""];
+13->12 [style = dotted, label="true"];
+7->2 [style = bold, label=""];
+}

@@ -1,0 +1,34 @@
+digraph {
+5 [style = filled, label = "Assert.assertEquals(0,task.getRunner().getRowIngestionMeters().getUnparseable())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Assert.assertEquals(0,task.getRunner().getRowIngestionMeters().getThrownAway())@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Assert.assertEquals(3,task.getRunner().getRowIngestionMeters().getProcessed())@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Assert.assertEquals(new KafkaDataSourceMetadata(new SeekableStreamEndSequenceNumbers<>(topic,ImmutableMap.of(0,5L))),newDataSchemaMetadata())@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testRunAfterDataInserted['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "final KafkaIndexTask task = createTask(null,OLD_DATA_SCHEMA,new KafkaIndexTaskIOConfig(0,\"sequence0\",new SeekableStreamStartSequenceNumbers<>(topic,ImmutableMap.of(0,2L),ImmutableSet.of()),new SeekableStreamEndSequenceNumbers<>(topic,ImmutableMap.of(0,5L)),kafkaServer.consumerProperties(),KafkaSupervisorIOConfig.DEFAULT_POLL_TIMEOUT_MILLIS,true,null,null,null))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "insertData()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertEqualsExceptVersion(ImmutableList.of(sdd(\"2010/P1D\",0,ImmutableList.of(\"c\")),sdd(\"2011/P1D\",0,ImmutableList.of(\"d\",\"e\"))),publishedDescriptors())@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final KafkaIndexTask task = createTask(null,new KafkaIndexTaskIOConfig(0,\"sequence0\",new SeekableStreamStartSequenceNumbers<>(topic,ImmutableMap.of(0,2L),ImmutableSet.of()),new SeekableStreamEndSequenceNumbers<>(topic,ImmutableMap.of(0,5L)),kafkaServer.consumerProperties(),KafkaSupervisorIOConfig.DEFAULT_POLL_TIMEOUT_MILLIS,true,null,null,INPUT_FORMAT))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Assert.assertEquals(TaskState.SUCCESS,future.get().getStatusCode())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testRunAfterDataInsertedWithLegacyParser['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "Assert.assertTrue(task.supportsQueries())@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "testRunAfterDataInserted['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "final ListenableFuture<TaskStatus> future = runTask(task)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->5 [style = bold, label=""];
+0->6 [style = bold, label=""];
+8->11 [style = bold, label=""];
+8->13 [style = dashed, label="0"];
+5->3 [style = bold, label=""];
+13->9 [style = bold, label=""];
+11->9 [style = bold, label=""];
+4->7 [style = bold, label=""];
+8->9 [style = bold, label=""];
+10->2 [style = bold, label=""];
+3->0 [style = bold, label=""];
+9->4 [style = bold, label=""];
+1->2 [style = bold, label=""];
+13->9 [style = solid, label="task"];
+2->8 [style = bold, label=""];
+2->13 [style = bold, label=""];
+8->9 [style = solid, label="task"];
+12->2 [style = bold, label=""];
+}

@@ -1,0 +1,28 @@
+digraph {
+8 [style = filled, label = "Map context@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "getValues['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "return new IntDocValues(this){private int getValueForDoc(int doc){if (doc < lastDocID) {throw new IllegalArgumentException(\"docs were sent out-of-order: lastDocID=\" + lastDocID + \" vs docID=\" + doc)}lastDocID = docint curDocID = arr.docID()if (doc > curDocID) {curDocID = arr.advance(doc)}if (doc == curDocID) {return (int)arr.longValue()}{return 0}}@Override public int intVal(int doc){return getValueForDoc(doc)}@Override public String strVal(int doc){return Integer.toString(intVal(doc))}@Override public boolean exists(int doc){getValueForDoc(doc)return arr.docID() == doc}@Override public ValueFiller getValueFiller(){return new ValueFiller(){@Override public MutableValue getValue(){return mval}@Override public void fillValue(int doc){mval.value = getValueForDoc(doc)mval.exists = arr.docID() == doc}}}}@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final NumericDocValues arr = getNumericDocValues(context,readerContext)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final NumericDocValues arr = DocValues.getNumeric(readerContext.reader(),field)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Map context@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "getValues['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "LeafReaderContext readerContext@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "LeafReaderContext readerContext@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "getValues['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->1 [style = solid, label="readerContext"];
+7->9 [style = bold, label=""];
+7->2 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+2->9 [style = solid, label="readerContext"];
+6->2 [style = dotted, label="true"];
+2->1 [style = solid, label="readerContext"];
+9->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+4->0 [style = dotted, label="true"];
+6->3 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+8->9 [style = solid, label="context"];
+4->2 [style = dotted, label="true"];
+7->8 [style = dotted, label="true"];
+}

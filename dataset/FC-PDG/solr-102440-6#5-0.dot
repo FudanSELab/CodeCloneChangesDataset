@@ -1,0 +1,37 @@
+digraph {
+15 [style = filled, label = "migrateKey['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String collectionName@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "@SuppressWarnings({\"rawtypes\"}) NamedList results@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String collectionName@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "DocCollection targetCollection@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "@SuppressWarnings({\"rawtypes\"}) NamedList results@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "Slice sourceSlice@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "ClusterState clusterState@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "String splitKey@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "int timeout@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "cleanupCollection['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "String asyncId@@@4@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+16 [style = filled, label = "Slice targetSlice@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "DocCollection sourceCollection@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "ZkNodeProps message@@@4@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "CollectionCommandContext ccc@@@4@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "cleanupCollection['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2->1 [style = dotted, label="true"];
+15->8 [style = dotted, label="true"];
+15->16 [style = dotted, label="true"];
+15->9 [style = dotted, label="true"];
+5->1 [style = dotted, label="true"];
+15->7 [style = dotted, label="true"];
+2->0 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+2->3 [style = dotted, label="true"];
+15->11 [style = dotted, label="true"];
+15->14 [style = dotted, label="true"];
+15->13 [style = dotted, label="true"];
+3->13 [style = dashed, label="0"];
+15->12 [style = dotted, label="true"];
+15->6 [style = dotted, label="true"];
+15->10 [style = dotted, label="true"];
+5->3 [style = dotted, label="true"];
+1->16 [style = dashed, label="0"];
+}

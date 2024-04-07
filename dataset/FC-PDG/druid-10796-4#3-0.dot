@@ -1,0 +1,23 @@
+digraph {
+5 [style = filled, label = "Collection<CountDownLatch> beforeScheduler@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Collection<CountDownLatch> inScheduler@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "createScheduledQueryResource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "QuerySegmentWalker texasRanger = new QuerySegmentWalker(){@Override public QueryRunner<T> getQueryRunnerForIntervals(Query<T> query,Iterable<Interval> intervals){return null}@Override public QueryRunner<T> getQueryRunnerForSegments(Query<T> query,Iterable<SegmentDescriptor> specs){return getQueryRunnerForIntervals(null,null)}}@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "QueryScheduler scheduler@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "QueryScheduler scheduler@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Collection<CountDownLatch> beforeScheduler@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "queryResource = new QueryResource(new QueryLifecycleFactory(WAREHOUSE,texasRanger,new DefaultGenericQueryMetricsFactory(),new NoopServiceEmitter(),testRequestLogger,new AuthConfig(),AuthTestUtils.TEST_AUTHORIZER_MAPPER),JSON_MAPPER,JSON_MAPPER,scheduler,new AuthConfig(),null,new DefaultGenericQueryMetricsFactory())@@@25@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "createScheduledQueryResource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4->5 [style = dotted, label="true"];
+6->0 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+6->8 [style = dotted, label="true"];
+7->2 [style = solid, label="scheduler"];
+3->2 [style = solid, label="scheduler"];
+0->2 [style = bold, label=""];
+4->1 [style = dotted, label="true"];
+0->2 [style = solid, label="texasRanger"];
+4->3 [style = dotted, label="true"];
+6->7 [style = dotted, label="true"];
+4->0 [style = bold, label=""];
+}

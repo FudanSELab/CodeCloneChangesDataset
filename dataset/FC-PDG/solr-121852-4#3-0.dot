@@ -1,0 +1,20 @@
+digraph {
+9 [style = filled, label = "writeCoreProperties['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String solrHome@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "String solrHome@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "String corename@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Path coreDirectory@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "createAndStartJetty['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "JettyConfig jettyConfig@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "createAndStartJetty['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Properties nodeProperties@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "JettyConfig jettyConfig@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2->1 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+6->4 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+2->0 [style = dotted, label="true"];
+2->3 [style = dotted, label="true"];
+6->3 [style = dotted, label="true"];
+9->7 [style = dotted, label="true"];
+}

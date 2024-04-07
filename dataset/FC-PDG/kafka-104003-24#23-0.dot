@@ -1,0 +1,33 @@
+digraph {
+5 [style = filled, label = "metadata.setTopics(singletonList(topic1))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final String consumerId = \"leader\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "subscriptions.subscribe(singleton(topic1),rebalanceListener)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "testJoinGroupInvalidGroupId['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "client.prepareResponse(groupCoordinatorResponse(node,Errors.NONE))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "client.prepareResponse(joinGroupLeaderResponse(0,consumerId,Collections.emptyMap(),Errors.INVALID_GROUP_ID))@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "coordinator.poll(time.timer(Long.MAX_VALUE))@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "coordinator.ensureCoordinatorReady(time.timer(Long.MAX_VALUE))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "metadata.update(cluster,Collections.emptySet(),time.milliseconds())@@@6@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "client.updateMetadata(metadataResponse)@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "testGroupReadUnauthorized['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "coordinator.poll(time.timer(Long.MAX_VALUE))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "client.prepareResponse(joinGroupLeaderResponse(0,\"memberId\",Collections.emptyMap(),Errors.GROUP_AUTHORIZATION_FAILED))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testJoinGroupInvalidGroupId['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7->5 [style = bold, label=""];
+12->13 [style = bold, label=""];
+1->8 [style = bold, label=""];
+9->2 [style = bold, label=""];
+5->3 [style = bold, label=""];
+8->1 [style = dashed, label="0"];
+13->7 [style = bold, label=""];
+4->7 [style = bold, label=""];
+10->4 [style = bold, label=""];
+6->4 [style = bold, label=""];
+5->9 [style = bold, label=""];
+2->1 [style = bold, label=""];
+4->8 [style = solid, label="consumerId"];
+8->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+1->11 [style = bold, label=""];
+7->2 [style = bold, label=""];
+}

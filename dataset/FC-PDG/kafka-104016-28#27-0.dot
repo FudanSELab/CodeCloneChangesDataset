@@ -1,0 +1,36 @@
+digraph {
+2 [style = filled, label = "client.prepareResponse(groupCoordinatorResponse(node,Errors.NONE))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "client.prepareResponse(joinGroupFollowerResponse(1,consumerId,\"leader\",Errors.NONE))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertFalse(coordinator.rejoinNeededOrPending())@@@18@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testUnknownMemberIdOnSyncGroup['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "client.prepareResponse(new MockClient.RequestMatcher(){@Override public boolean matches(AbstractRequest body){JoinGroupRequest joinRequest = (JoinGroupRequest)bodyreturn joinRequest.data().memberId().equals(JoinGroupRequest.UNKNOWN_MEMBER_ID)}},joinGroupFollowerResponse(2,consumerId,\"leader\",Errors.NONE))@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "coordinator.ensureCoordinatorReady(time.timer(Long.MAX_VALUE))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "subscriptions.subscribe(singleton(topic1),rebalanceListener)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "client.prepareResponse(syncGroupResponse(Collections.emptyList(),Errors.UNKNOWN_SERVER_ERROR))@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "testUnexpectedErrorOnSyncGroup['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "coordinator.joinGroupIfNeeded(time.timer(Long.MAX_VALUE))@@@17@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "client.prepareResponse(syncGroupResponse(singletonList(t1p),Errors.NONE))@@@16@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "client.prepareResponse(syncGroupResponse(Collections.emptyList(),Errors.UNKNOWN_MEMBER_ID))@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "coordinator.joinGroupIfNeeded(time.timer(Long.MAX_VALUE))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "testUnknownMemberIdOnSyncGroup['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "assertEquals(singleton(t1p),subscriptions.assignedPartitions())@@@19@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final String consumerId = \"consumer\"@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->11 [style = bold, label=""];
+4->13 [style = bold, label=""];
+7->4 [style = solid, label="consumerId"];
+11->3 [style = bold, label=""];
+3->10 [style = bold, label=""];
+12->7 [style = bold, label=""];
+14->7 [style = bold, label=""];
+13->15 [style = bold, label=""];
+0->2 [style = bold, label=""];
+4->9 [style = bold, label=""];
+8->4 [style = bold, label=""];
+7->0 [style = bold, label=""];
+9->1 [style = bold, label=""];
+1->6 [style = bold, label=""];
+5->7 [style = bold, label=""];
+2->8 [style = bold, label=""];
+7->1 [style = solid, label="consumerId"];
+9->13 [style = dashed, label="0"];
+}

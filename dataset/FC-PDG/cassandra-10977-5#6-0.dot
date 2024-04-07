@@ -1,0 +1,27 @@
+digraph {
+0 [style = filled, label = "ByteBuffer value@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "validateIndexedValue['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "throw new InvalidRequestException(String.format(\"Cannot index value of size %d for index %s on %s.%s(%s) (maximum allowed size=%d)\",value.remaining(),metadata.name,baseCfs.metadata.ksName,baseCfs.metadata.cfName,indexedColumn.name.toString(),FBUtilities.MAX_UNSIGNED_SHORT))@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "throw new InvalidRequestException(String.format(\"Cannot index value of size %d for index %s on %s.%s(%s) (maximum allowed size=%d)\",value.remaining(),metadata.name,baseCfs.metadata.keyspace,baseCfs.metadata.name,indexedColumn.name.toString(),FBUtilities.MAX_UNSIGNED_SHORT))@@@3@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "value != null && value.remaining() >= FBUtilities.MAX_UNSIGNED_SHORT@@@3@@@['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "value != null && value.remaining() >= FBUtilities.MAX_UNSIGNED_SHORT@@@3@@@['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "value != null && value.remaining() >= FBUtilities.MAX_UNSIGNED_SHORT@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "validateIndexedValue['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "validateIndexedValue['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7->2 [style = dotted, label="true"];
+1->2 [style = dotted, label="true"];
+8->7 [style = bold, label=""];
+5->0 [style = dotted, label="true"];
+6->4 [style = dotted, label="true"];
+2->6 [style = dashed, label="0"];
+0->6 [style = solid, label="value"];
+6->4 [style = bold, label=""];
+0->1 [style = solid, label="value"];
+1->2 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->1 [style = bold, label=""];
+8->0 [style = dotted, label="true"];
+0->7 [style = solid, label="value"];
+3->0 [style = dotted, label="true"];
+7->2 [style = bold, label=""];
+}

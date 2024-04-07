@@ -1,0 +1,24 @@
+digraph {
+6 [style = filled, label = "testSearchAndReduceCase(DEFAULT_QUERY,datesForMinuteInterval,null,null)@@@16@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testIntervalMinute['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testIntervalMonth['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "final List<DateTime> datesForMinuteInterval = Arrays.asList(new DateTime(2017,2,1,9,2,35,DateTimeZone.UTC),new DateTime(2017,2,1,9,2,59,DateTimeZone.UTC),new DateTime(2017,2,1,9,15,37,DateTimeZone.UTC),new DateTime(2017,2,1,9,16,4,DateTimeZone.UTC),new DateTime(2017,2,1,9,16,42,DateTimeZone.UTC))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testSearchAndReduceCase(DEFAULT_QUERY,datesForMonthInterval,null,null)@@@16@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testSearchCase(DEFAULT_QUERY,datesForMonthInterval,null,null)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testSearchCase(DEFAULT_QUERY,datesForMinuteInterval,null,null)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testIntervalMonth['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final List<DateTime> datesForMonthInterval = Arrays.asList(new DateTime(2017,1,1,0,0,0,DateTimeZone.UTC),new DateTime(2017,2,2,0,0,0,DateTimeZone.UTC),new DateTime(2017,2,3,0,0,0,DateTimeZone.UTC),new DateTime(2017,3,4,0,0,0,DateTimeZone.UTC),new DateTime(2017,3,5,0,0,0,DateTimeZone.UTC),new DateTime(2017,3,6,0,0,0,DateTimeZone.UTC))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->5 [style = bold, label=""];
+2->0 [style = solid, label="datesForMonthInterval"];
+2->3 [style = solid, label="datesForMonthInterval"];
+3->8 [style = dashed, label="0"];
+5->8 [style = bold, label=""];
+8->6 [style = bold, label=""];
+5->6 [style = solid, label="datesForMinuteInterval"];
+3->0 [style = bold, label=""];
+1->2 [style = bold, label=""];
+5->8 [style = solid, label="datesForMinuteInterval"];
+4->2 [style = bold, label=""];
+2->3 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

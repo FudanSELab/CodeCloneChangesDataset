@@ -1,0 +1,22 @@
+digraph {
+3 [style = filled, label = "CollectionUtils.isNotEmpty(moduleConfig)@@@5@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ApplicationConfiguration configuration@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Reader applicationReader = ResourceUtils.read(\"application.yml\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Map<String,Map<String,Map<String,?>>> moduleConfig = yaml.loadAs(applicationReader,)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "moduleConfig.forEach(null)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "placeholderHelper = PropertyPlaceholderHelper.INSTANCE@@@18@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "loadConfig['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "loadConfig['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "init['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2->1 [style = dotted, label="true"];
+7->3 [style = solid, label="moduleConfig"];
+3->8 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+4->7 [style = bold, label=""];
+8->5 [style = bold, label=""];
+3->5 [style = bold, label=""];
+6->4 [style = bold, label=""];
+4->7 [style = solid, label="applicationReader"];
+3->8 [style = bold, label=""];
+7->3 [style = bold, label=""];
+}

@@ -1,0 +1,26 @@
+digraph {
+2 [style = filled, label = "final Settings initialSettings = createSettings()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testBindUnavailableAddress['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "Settings initialSettings = createSettings()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(\"Failed to bind to \" + NetworkAddress.format(remoteAddress.address()),bindHttpException.getMessage())@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testBindUnavailableAddress['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "BindHttpException bindHttpException = expectThrows(,null)@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testBindUnavailableAddress['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "TransportAddress remoteAddress = randomFrom(transport.boundAddress().boundAddresses())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "BindHttpException bindHttpException = expectThrows(,null)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Settings settings = Settings.builder().put(\"http.port\",remoteAddress.getPort()).put(\"network.host\",remoteAddress.getAddress()).build()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "transport.start()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+4->5 [style = bold, label=""];
+4->10 [style = bold, label=""];
+10->1 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+5->10 [style = dashed, label="0"];
+0->4 [style = bold, label=""];
+8->9 [style = bold, label=""];
+7->2 [style = bold, label=""];
+3->2 [style = bold, label=""];
+9->6 [style = bold, label=""];
+5->1 [style = bold, label=""];
+}

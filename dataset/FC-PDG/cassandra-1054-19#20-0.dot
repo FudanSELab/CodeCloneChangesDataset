@@ -1,0 +1,28 @@
+digraph {
+0 [style = filled, label = "connect['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return JdkSSLOptions.builder().withSSLContext(sslContext).withCipherSuites(clientEncryptionOptions.cipher_suites).build()@@@13@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "SSLContext sslContext@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "sslContext = SSLFactory.createSSLContext(clientEncryptionOptions,true)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "IOException e@@@10@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "!clientEncryptionOptions.enabled@@@3@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "return null@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ProtocolOptions.Compression compression@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "connect['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "buildSSLOptions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "EncryptionOptions.ClientEncryptionOptions clientEncryptionOptions@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "throw new RuntimeException(\"Could not create SSL Context.\",e)@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7->5 [style = bold, label=""];
+2->1 [style = dotted, label="true"];
+9->3 [style = bold, label=""];
+4->6 [style = bold, label=""];
+10->8 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+11->4 [style = solid, label="clientEncryptionOptions"];
+10->11 [style = dotted, label="true"];
+8->9 [style = bold, label=""];
+3->4 [style = bold, label=""];
+5->6 [style = bold, label=""];
+8->3 [style = bold, label=""];
+7->5 [style = dotted, label="true"];
+8->9 [style = dotted, label="true"];
+}

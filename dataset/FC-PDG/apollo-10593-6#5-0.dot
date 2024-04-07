@@ -1,0 +1,29 @@
+digraph {
+7 [style = filled, label = "Throwable ex@@@8@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "databaseScanInterval = bizConfig.releaseMessageScanIntervalInMilli()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "maxIdScanned = loadLargestMessageId()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "logger.error(\"Rebuild cache failed\",ex)@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "afterPropertiesSet['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "afterPropertiesSet['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "transaction.setStatus(Transaction.SUCCESS)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Transaction transaction = Tracer.newTransaction(\"Apollo.AccessKeyServiceWithCache\",\"rebuildCache\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "{transaction.complete()}@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "transaction.setStatus(ex)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "executorService.scheduleWithFixedDelay(null,databaseScanInterval,databaseScanInterval,TimeUnit.MILLISECONDS)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "rebuildAccessKeyCache['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "deleteAccessKeyCache()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7->12 [style = dotted, label="true"];
+12->11 [style = bold, label=""];
+11->10 [style = bold, label=""];
+7->12 [style = bold, label=""];
+7->11 [style = dotted, label="true"];
+5->8 [style = bold, label=""];
+0->3 [style = bold, label=""];
+8->9 [style = bold, label=""];
+0->2 [style = solid, label="databaseScanInterval"];
+3->2 [style = bold, label=""];
+4->0 [style = bold, label=""];
+6->5 [style = bold, label=""];
+9->10 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

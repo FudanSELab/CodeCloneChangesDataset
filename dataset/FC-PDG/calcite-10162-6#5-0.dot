@@ -1,0 +1,17 @@
+digraph {
+0 [style = filled, label = "return new Function1<ElasticsearchJson.SearchHit,Object((>(){public Object(( apply(ElasticsearchJson.SearchHit hit){Object(( objects = new Object((((for (int i = 0 i < fields.size() i++){final Map.Entry<String,Class> field = fields.get(i)final String name = field.getKey()final Class type = field.getValue()objects(i( = convert(hit.valueOrNull(name),type)}return objects}}@@@3@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "listGetter['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "return null@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final List<Map.Entry<String,Class>> fields@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "listGetter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "listGetter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final List<Map.Entry<String,Class>> fields@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "return null@@@3@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+2->1 [style = dotted, label="true"];
+1->7 [style = dashed, label="0"];
+2->0 [style = bold, label=""];
+5->7 [style = dotted, label="true"];
+4->1 [style = dotted, label="true"];
+4->3 [style = bold, label=""];
+5->6 [style = bold, label=""];
+}

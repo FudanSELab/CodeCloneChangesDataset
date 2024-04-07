@@ -1,0 +1,37 @@
+digraph {
+7 [style = filled, label = "CapturedOutput output@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "this.loggingSystem.initialize(loggingInitializationContext,null,null)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testLevelPatternProperty['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testLevelPatternProperty['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "MockEnvironment environment = new MockEnvironment()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertThat(getLineWithText(output,\"Hello world\")).doesNotContain(\"INFO\")@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertThat(getLineWithText(output,\"Hello world\")).contains(\"XINFOX\")@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testConsolePatternProperty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "LoggingInitializationContext loggingInitializationContext = new LoggingInitializationContext(environment)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "CapturedOutput output@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "environment.setProperty(\"logging.pattern.console\",\"%logger %msg\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "environment.setProperty(\"logging.pattern.level\",\"X%clr(%p)X\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "this.logger.info(\"Hello world\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "new LoggingSystemProperties(environment).apply()@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+5->2 [style = bold, label=""];
+4->6 [style = bold, label=""];
+3->10 [style = bold, label=""];
+1->9 [style = bold, label=""];
+12->11 [style = dotted, label="true"];
+4->7 [style = dotted, label="true"];
+0->10 [style = dashed, label="0"];
+7->11 [style = dashed, label="0"];
+6->13 [style = bold, label=""];
+8->6 [style = bold, label=""];
+8->7 [style = dotted, label="true"];
+1->13 [style = dashed, label="0"];
+2->3 [style = bold, label=""];
+6->5 [style = solid, label="environment"];
+3->0 [style = bold, label=""];
+5->2 [style = solid, label="loggingInitializationContext"];
+9->5 [style = bold, label=""];
+6->1 [style = bold, label=""];
+13->5 [style = bold, label=""];
+12->6 [style = bold, label=""];
+1->5 [style = bold, label=""];
+}

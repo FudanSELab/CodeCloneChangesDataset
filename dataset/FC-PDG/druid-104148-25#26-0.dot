@@ -1,0 +1,34 @@
+digraph {
+9 [style = filled, label = "testBadInterval['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "Assert.assertEquals(\"segments nuked\",0,mdc.getNuked().size())@@@21@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testIndexTaskFailure['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Assert.assertEquals(\"statusCode\",TaskState.FAILED,status.getStatusCode())@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "Assert.assertEquals(taskLocation,status.getLocation())@@@19@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "Assert.assertEquals(\"statusCode\",TaskState.FAILED,status.getStatusCode())@@@18@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "final TaskStatus status = runTask(task)@@@17@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final TaskStatus status = runTask(indexTask)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "final Task task = new AbstractFixedIntervalTask(\"id1\",\"id1\",\"ds\",Intervals.of(\"2012-01-01/P1D\"),null){@Override public String getType(){return \"test\"}@Override public void stopGracefully(TaskConfig taskConfig){}@Override public TaskStatus run(TaskToolbox toolbox){final TaskLock myLock = Iterables.getOnlyElement(toolbox.getTaskActionClient().submit(new LockListAction()))final DataSegment segment = DataSegment.builder().dataSource(\"ds\").interval(Intervals.of(\"2012-01-01/P2D\")).version(myLock.getVersion()).size(0).build()toolbox.getTaskActionClient().submit(new SegmentInsertAction(ImmutableSet.of(segment)))return TaskStatus.success(getId())}}@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Assert.assertEquals(\"num segments nuked\",0,mdc.getNuked().size())@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Assert.assertEquals(\"num segments published\",0,mdc.getPublished().size())@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Assert.assertEquals(taskLocation,status.getLocation())@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final Task indexTask = new IndexTask(null,null,new IndexIngestionSpec(new DataSchema(\"foo\",null,new AggregatorFactory((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a4aac9,new UniformGranularitySpec(Granularities.DAY,null,ImmutableList.of(Intervals.of(\"2010-01-01/P1D\"))),null,mapper),new IndexIOConfig(null,new MockExceptionInputSource(),new NoopInputFormat(),false),new IndexTuningConfig(null,10000,null,10,null,null,null,null,null,null,indexSpec,null,3,false,null,null,null,null,null,null,null)),null)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assert.assertEquals(\"segments published\",0,mdc.getPublished().size())@@@20@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testIndexTaskFailure['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0->6 [style = bold, label=""];
+5->2 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+0->6 [style = solid, label="indexTask"];
+10->12 [style = bold, label=""];
+4->13 [style = dashed, label="0"];
+11->10 [style = bold, label=""];
+2->4 [style = bold, label=""];
+3->0 [style = bold, label=""];
+6->1 [style = bold, label=""];
+14->11 [style = solid, label="task"];
+7->0 [style = bold, label=""];
+14->11 [style = bold, label=""];
+12->8 [style = bold, label=""];
+8->13 [style = bold, label=""];
+9->14 [style = bold, label=""];
+1->5 [style = bold, label=""];
+}

@@ -1,0 +1,15 @@
+digraph {
+6 [style = filled, label = "produceGlobalTableValues['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final Properties config = new Properties()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "produceGlobalTableValues['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "IntegrationTestUtils.produceKeyValuesSynchronously(globalTableTopic,Arrays.asList(new KeyValue<>(1L,\"F\"),new KeyValue<>(2L,\"G\"),new KeyValue<>(3L,\"H\"),new KeyValue<>(4L,\"I\"),new KeyValue<>(5L,\"J\")),TestUtils.producerConfig(CLUSTER.bootstrapServers(),,,config),mockTime)@@@5@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "config.setProperty(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG,\"true\")@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "IntegrationTestUtils.produceKeyValuesSynchronously(globalTableTopic,Arrays.asList(new KeyValue<>(1L,\"F\"),new KeyValue<>(2L,\"G\"),new KeyValue<>(3L,\"H\"),new KeyValue<>(4L,\"I\"),new KeyValue<>(5L,\"J\")),TestUtils.producerConfig(CLUSTER.bootstrapServers(),,,new Properties()),mockTime)@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "produceGlobalTableValues['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6->0 [style = bold, label=""];
+5->3 [style = bold, label=""];
+2->3 [style = solid, label="config"];
+4->2 [style = bold, label=""];
+2->5 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

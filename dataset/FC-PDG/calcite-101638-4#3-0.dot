@@ -1,0 +1,7 @@
+digraph {
+2 [style = filled, label = "primitiveRowBuilderFactory['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "primitiveRowBuilderFactory['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final Primitive(( primitives@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2->1 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+}

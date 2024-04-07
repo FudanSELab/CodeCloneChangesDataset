@@ -1,0 +1,15 @@
+digraph {
+2 [style = filled, label = "Command command@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "process['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Channel channel@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "process['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Channel channel@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "Channel channel@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "process['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0->2 [style = dotted, label="true"];
+5->6 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+5->2 [style = dotted, label="true"];
+4->2 [style = dotted, label="true"];
+}

@@ -1,0 +1,38 @@
+digraph {
+2 [style = filled, label = "Assert.assertFalse(plan.getFlushBeforeTransfer())@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "UUID sessionID = registerSession(cfs,true,true)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "StreamingRepairTask task = new StreamingRepairTask(desc,request.initiator,request.src,request.dst,request.ranges,desc.sessionId,PreviewKind.NONE,false)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "RepairJobDesc desc = new RepairJobDesc(sessionID,UUIDGen.getTimeUUID(),ks,tbl,prs.getRanges())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "incrementalStreamPlan['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "StreamPlan plan = task.createStreamPlan(request.dst)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "UUID sessionID = registerSession(cfs,false,true)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "StreamingRepairTask task = new StreamingRepairTask(desc,request.initiator,request.src,request.dst,request.ranges,null,PreviewKind.NONE,false)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "incrementalStreamPlan['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "ActiveRepairService.ParentRepairSession prs = ActiveRepairService.instance.getParentRepairSession(sessionID)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Assert.assertTrue(plan.getFlushBeforeTransfer())@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "fullStreamPlan['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "SyncRequest request = new SyncRequest(desc,PARTICIPANT1,PARTICIPANT2,PARTICIPANT3,prs.getRanges(),PreviewKind.NONE,false)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12->7 [style = bold, label=""];
+4->6 [style = bold, label=""];
+6->3 [style = solid, label="sessionID"];
+3->5 [style = solid, label="desc"];
+6->0 [style = solid, label="sessionID"];
+7->10 [style = bold, label=""];
+5->1 [style = bold, label=""];
+3->1 [style = solid, label="desc"];
+6->0 [style = bold, label=""];
+3->12 [style = solid, label="desc"];
+11->9 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+0->3 [style = bold, label=""];
+8->6 [style = bold, label=""];
+9->0 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+1->12 [style = dashed, label="0"];
+9->0 [style = solid, label="sessionID"];
+5->12 [style = bold, label=""];
+9->3 [style = solid, label="sessionID"];
+1->7 [style = bold, label=""];
+7->2 [style = bold, label=""];
+}

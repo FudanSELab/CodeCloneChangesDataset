@@ -1,0 +1,37 @@
+digraph {
+3 [style = filled, label = "assertTrue(Files.exists(fileAfter))@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(Optional.of(FileFieldWriter.getStringRepresentation(new LinkedFile(\"\",\"test.pdf\",\"\"))),entry.getField(StandardField.FILE))@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "movesFile['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "cleanup.cleanup(entry)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertEquals(Optional.of(FileFieldWriter.getStringRepresentation(Arrays.asList(new LinkedFile(\"\",\"\",\"\"),new LinkedFile(\"\",\"test.pdf\",\"\"),new LinkedFile(\"\",\"\",\"\")))),entry.getField(\"file\"))@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "assertTrue(Files.exists(fileAfter))@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "assertFalse(Files.exists(fileBefore))@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Path fileAfter = defaultFileFolder.resolve(\"test.pdf\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "cleanup.cleanup(entry)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "LinkedFile fileField = new LinkedFile(\"\",fileBefore.toAbsolutePath().toString(),\"\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "movesFile['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "entry.setField(\"file\",FileFieldWriter.getStringRepresentation(Arrays.asList(new LinkedFile(\"\",\"\",\"\"),fileField,new LinkedFile(\"\",\"\",\"\"))))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "movesFileWithMulitpleLinked['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "when(filePreferences.getFileDirPattern()).thenReturn(\"\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "when(filePreferences.getFileDirPattern()).thenReturn(\"\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->5 [style = bold, label=""];
+6->0 [style = bold, label=""];
+1->8 [style = bold, label=""];
+10->1 [style = bold, label=""];
+14->13 [style = bold, label=""];
+6->12 [style = dashed, label="0"];
+11->9 [style = bold, label=""];
+0->12 [style = bold, label=""];
+0->3 [style = bold, label=""];
+2->4 [style = bold, label=""];
+7->4 [style = bold, label=""];
+12->14 [style = bold, label=""];
+1->3 [style = solid, label="fileAfter"];
+6->8 [style = dashed, label="0"];
+1->6 [style = bold, label=""];
+8->0 [style = bold, label=""];
+9->10 [style = solid, label="fileField"];
+0->13 [style = solid, label="fileAfter"];
+9->10 [style = bold, label=""];
+5->1 [style = bold, label=""];
+}

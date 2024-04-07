@@ -1,0 +1,37 @@
+digraph {
+1 [style = filled, label = "String value@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "String value@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "setEnv['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Map<String,String> env = System.getenv()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Map<String,String> writableEnv = (Map<String,String>)field.get(env)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Field field = cl.getDeclaredField(\"m\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "writableEnv.put(key,value)@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "String key@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "field.setAccessible(true)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "setEnv['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "String key@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "setEnv['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "String value@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Class<?> cl = env.getClass()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->11 [style = dashed, label="0"];
+9->4 [style = bold, label=""];
+11->6 [style = solid, label="value"];
+3->1 [style = dotted, label="true"];
+0->7 [style = bold, label=""];
+2->5 [style = bold, label=""];
+12->4 [style = bold, label=""];
+13->6 [style = solid, label="value"];
+9->11 [style = dotted, label="true"];
+12->13 [style = dotted, label="true"];
+8->6 [style = solid, label="key"];
+3->8 [style = dotted, label="true"];
+9->10 [style = dotted, label="true"];
+12->8 [style = dotted, label="true"];
+4->5 [style = solid, label="env"];
+1->6 [style = solid, label="value"];
+4->0 [style = bold, label=""];
+3->4 [style = bold, label=""];
+5->6 [style = bold, label=""];
+10->6 [style = solid, label="key"];
+7->2 [style = bold, label=""];
+}

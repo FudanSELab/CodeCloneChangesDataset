@@ -1,0 +1,32 @@
+digraph {
+8 [style = filled, label = "final Object params@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "invokeOrDie['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "invokeOrDie['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Method method@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "invokeOrDie['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Object params@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Object params@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "Object object@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return method.invoke(object,params)@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Method method@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final Object object@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final Method method@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7->2 [style = dotted, label="true"];
+2->11 [style = dashed, label="0"];
+10->11 [style = dotted, label="true"];
+0->4 [style = solid, label="params"];
+5->4 [style = solid, label="params"];
+10->8 [style = dotted, label="true"];
+7->4 [style = bold, label=""];
+10->4 [style = bold, label=""];
+3->2 [style = dotted, label="true"];
+2->4 [style = solid, label="object"];
+10->9 [style = dotted, label="true"];
+3->1 [style = dotted, label="true"];
+11->4 [style = solid, label="object"];
+3->4 [style = bold, label=""];
+7->6 [style = dotted, label="true"];
+7->5 [style = dotted, label="true"];
+3->0 [style = dotted, label="true"];
+8->4 [style = solid, label="params"];
+}

@@ -1,0 +1,37 @@
+digraph {
+4 [style = filled, label = "createEncodingFormat['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "createEncodingFormat['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "FactoryUtil.validateFactoryOptions(this,formatOptions)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ReadableConfig formatOptions@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "ReadableConfig formatOptions@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "createEncodingFormat['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "DynamicTableFactory.Context context@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "formatOptions.get(SCHEMA_INCLUDE)@@@5@@@['0', '1', '0']", fillcolor = white, shape = diamond image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "DynamicTableFactory.Context context@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "TimestampFormat timestampFormat = JsonOptions.getTimestampFormat(formatOptions)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "throw new ValidationException(String.format(\"Debezium JSON serialization doesn't support '%s.%s' option been set to true.\",IDENTIFIER,SCHEMA_INCLUDE.key()))@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "return new EncodingFormat<SerializationSchema<RowData>>(){@Override public ChangelogMode getChangelogMode(){return ChangelogMode.newBuilder().addContainedKind(RowKind.INSERT).addContainedKind(RowKind.UPDATE_BEFORE).addContainedKind(RowKind.UPDATE_AFTER).addContainedKind(RowKind.DELETE).build()}@Override public SerializationSchema<RowData> createRuntimeEncoder(DynamicTableSink.Context context,DataType consumedDataType){final RowType rowType = (RowType)consumedDataType.getLogicalType()return new MaxwellJsonSerializationSchema(rowType,timestampFormat)}}@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->9 [style = bold, label=""];
+11->10 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+6->7 [style = dotted, label="true"];
+8->9 [style = dotted, label="true"];
+0->8 [style = bold, label=""];
+0->1 [style = bold, label=""];
+11->2 [style = bold, label=""];
+6->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+3->2 [style = solid, label="formatOptions"];
+8->1 [style = bold, label=""];
+5->2 [style = solid, label="formatOptions"];
+5->0 [style = solid, label="formatOptions"];
+10->2 [style = solid, label="formatOptions"];
+6->5 [style = dotted, label="true"];
+0->1 [style = solid, label="timestampFormat"];
+4->5 [style = dotted, label="true"];
+2->0 [style = bold, label=""];
+9->1 [style = bold, label=""];
+3->0 [style = solid, label="formatOptions"];
+11->5 [style = dotted, label="true"];
+10->0 [style = solid, label="formatOptions"];
+}

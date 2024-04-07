@@ -1,0 +1,30 @@
+digraph {
+7 [style = filled, label = "addPropertySynonyms(dataSourceConfig)@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "DataSource result = buildDataSource(dataSourceConfig.getDataSourceClassName())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final DataSourceConfiguration dataSourceConfig@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Method(( methods = result.getClass().getMethods()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "createDataSource['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "setField(result,methods,entry.getKey(),entry.getValue())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "createDataSource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return result@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "isInvalidProperty(entry.getKey(),entry.getValue())@@@7@@@['1', '1', '0']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "createDataSource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2->6 [style = bold, label=""];
+6->0 [style = bold, label=""];
+5->2 [style = bold, label=""];
+8->7 [style = bold, label=""];
+6->3 [style = solid, label="methods"];
+9->2 [style = bold, label=""];
+5->1 [style = dotted, label="true"];
+9->1 [style = dotted, label="true"];
+2->3 [style = solid, label="result"];
+0->4 [style = bold, label=""];
+0->3 [style = bold, label=""];
+3->0 [style = bold, label=""];
+8->1 [style = dotted, label="true"];
+6->3 [style = bold, label=""];
+3->4 [style = bold, label=""];
+2->4 [style = solid, label="result"];
+1->7 [style = solid, label="dataSourceConfig"];
+7->2 [style = bold, label=""];
+}

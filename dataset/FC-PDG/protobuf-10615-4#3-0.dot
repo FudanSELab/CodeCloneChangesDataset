@@ -1,0 +1,13 @@
+digraph {
+0 [style = filled, label = "iterator['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return new Iterator<String>(){@Override public boolean hasNext(){return iter.hasNext()}@Override public String next(){return iter.next()}@Override public void remove(){throw new UnsupportedOperationException()}}@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "iterator['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "final int index@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "listIterator['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "return new ListIterator<String>(){public boolean hasNext(){return iter.hasNext()}public String next(){return iter.next()}public boolean hasPrevious(){return iter.hasPrevious()}public String previous(){return iter.previous()}public int nextIndex(){return iter.nextIndex()}public int previousIndex(){return iter.previousIndex()}public void remove(){throw new UnsupportedOperationException()}public void set(String o){throw new UnsupportedOperationException()}public void add(String o){throw new UnsupportedOperationException()}}@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->1 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+3->4 [style = dotted, label="true"];
+2->1 [style = bold, label=""];
+3->5 [style = bold, label=""];
+}

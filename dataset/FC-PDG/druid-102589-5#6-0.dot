@@ -1,0 +1,20 @@
+digraph {
+1 [style = filled, label = "return new SeekableStreamSupervisorTuningConfig(){@Override public Integer getWorkerThreads(){return 1}@Override public Integer getChatThreads(){return 1}@Override public Long getChatRetries(){return 1L}@Override public Duration getHttpTimeout(){return new Period(\"PT1M\").toStandardDuration()}@Override public Duration getShutdownTimeout(){return new Period(\"PT1S\").toStandardDuration()}@Override public Duration getRepartitionTransitionDuration(){return new Period(\"PT2M\").toStandardDuration()}@Override public Duration getOffsetFetchPeriod(){return new Period(\"PT5M\").toStandardDuration()}@Override public SeekableStreamIndexTaskTuningConfig convertToTaskTuningConfig(){return new SeekableStreamIndexTaskTuningConfig(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null){@Override public SeekableStreamIndexTaskTuningConfig withBasePersistDirectory(File dir){return null}@Override public String toString(){return null}}}}@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "newTuningConfig['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "boolean forceGuaranteedRollup@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "return new ParallelIndexTuningConfig(null,null,null,null,null,null,null,null,new MaxSizeSplitHintSpec(null,1),partitionsSpec,null,null,null,forceGuaranteedRollup,null,null,null,null,maxNumConcurrentSubTasks,null,null,null,null,null,null,null,null,null,null,null)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "PartitionsSpec partitionsSpec@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "getTuningConfig['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "getTuningConfig['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "int maxNumConcurrentSubTasks@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4->5 [style = dotted, label="true"];
+0->1 [style = bold, label=""];
+4->6 [style = bold, label=""];
+5->6 [style = solid, label="forceGuaranteedRollup"];
+1->6 [style = dashed, label="0"];
+3->6 [style = solid, label="maxNumConcurrentSubTasks"];
+4->3 [style = dotted, label="true"];
+2->1 [style = bold, label=""];
+7->6 [style = solid, label="partitionsSpec"];
+4->7 [style = dotted, label="true"];
+}

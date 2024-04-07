@@ -1,0 +1,29 @@
+digraph {
+10 [style = filled, label = "assertThat(mq.areColumnsUnique(rel,ImmutableBitSet.of(1)),is(false))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "checkColumnUniquenessForFilterWithConstantColumns['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(mq.areColumnsUnique(rel,ImmutableBitSet.of(0)),is(true))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "String sql@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final RelNode rel = convertSql(sql)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testColumnUniquenessForIntersectWithConstantColumns['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(rel.getRowType().getFieldNames().toString(),is(\"(DEPTNO, SAL(\"))@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final String sql = \"\" + \"select deptno, sal\" + \"from (select distinct deptno, sal from emp)\" + \"where sal=1000\" + \"intersect all\" + \"select deptno, sal from emp\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(mq.areColumnsUnique(rel,ImmutableBitSet.of(0,1)),is(true))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final RelMetadataQuery mq = rel.getCluster().getMetadataQuery()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testColumnUniquenessForIntersectWithConstantColumns['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4->10 [style = bold, label=""];
+1->4 [style = bold, label=""];
+9->8 [style = dotted, label="true"];
+2->5 [style = bold, label=""];
+7->1 [style = solid, label="rel"];
+0->3 [style = bold, label=""];
+7->2 [style = bold, label=""];
+8->7 [style = solid, label="sql"];
+3->2 [style = solid, label="sql"];
+7->10 [style = solid, label="rel"];
+6->3 [style = bold, label=""];
+2->4 [style = solid, label="rel"];
+9->7 [style = bold, label=""];
+3->2 [style = bold, label=""];
+7->4 [style = solid, label="rel"];
+5->1 [style = bold, label=""];
+}

@@ -1,0 +1,37 @@
+digraph {
+13 [style = filled, label = "groupedEventStream['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "assertEquals(groupCount,groupCounter.get())@@@64@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final CountDownLatch latch = new CountDownLatch(1)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertEquals(1,subscribeCounter.get())@@@63@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Observable<Event> es = Observable.unsafeCreate(new ObservableSource<Event>(){@Override public void subscribe(final Observer<? super Event> observer){observer.onSubscribe(Disposable.empty())System.out.println(\"*** Subscribing to EventStream ***\")subscribeCounter.incrementAndGet()new Thread(new Runnable(){@Override public void run(){for (int i = 0 i < count i++){Event e = new Event()e.source = i % groupCounte.message = \"Event-\" + iobserver.onNext(e)}observer.onComplete()}}).start()}})@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "groupedEventStream['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "latch.await(5000,TimeUnit.MILLISECONDS)@@@62@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(count,eventCounter.get())@@@65@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final int count = 100@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "groupedEventStream['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "final AtomicInteger subscribeCounter = new AtomicInteger()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final AtomicInteger eventCounter = new AtomicInteger()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final AtomicInteger groupCounter = new AtomicInteger()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "Flowable<Event> es = Flowable.unsafeCreate(new Publisher<Event>(){@Override public void subscribe(final Subscriber<? super Event> subscriber){subscriber.onSubscribe(new BooleanSubscription())System.out.println(\"*** Subscribing to EventStream ***\")subscribeCounter.incrementAndGet()new Thread(new Runnable(){@Override public void run(){for (int i = 0 i < count i++){Event e = new Event()e.source = i % groupCounte.message = \"Event-\" + isubscriber.onNext(e)}subscriber.onComplete()}}).start()}})@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final int groupCount = 2@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "es.groupBy(new Function<Event,Integer>(){@Override public Integer apply(Event e){return e.source}}).flatMap(new Function<GroupedFlowable<Integer,Event>,Flowable<String>>(){@Override public Flowable<String> apply(GroupedFlowable<Integer,Event> eventGroupedFlowable){System.out.println(\"GroupedFlowable Key: \" + eventGroupedFlowable.getKey())groupCounter.incrementAndGet()return eventGroupedFlowable.map(new Function<Event,String>(){@Override public String apply(Event event){return \"Source: \" + event.source + \" Message: \" + event.message}})}}).subscribe(new DefaultSubscriber<String>(){@Override public void onComplete(){latch.countDown()}@Override public void onError(Throwable e){e.printStackTrace()latch.countDown()}@Override public void onNext(String outputMessage){System.out.println(outputMessage)eventCounter.incrementAndGet()}})@@@31@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12->9 [style = bold, label=""];
+8->7 [style = bold, label=""];
+0->4 [style = solid, label="count"];
+13->5 [style = bold, label=""];
+11->12 [style = bold, label=""];
+10->4 [style = bold, label=""];
+2->14 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+14->11 [style = bold, label=""];
+7->0 [style = bold, label=""];
+6->8 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+1->14 [style = bold, label=""];
+5->6 [style = bold, label=""];
+15->5 [style = bold, label=""];
+2->11 [style = bold, label=""];
+9->10 [style = bold, label=""];
+1->10 [style = solid, label="groupCount"];
+}

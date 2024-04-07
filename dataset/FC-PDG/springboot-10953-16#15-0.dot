@@ -1,0 +1,14 @@
+digraph {
+0 [style = filled, label = "CapturedOutput output@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "shouldNotDenyNorLogIfMaxUrisIsNotReached['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "shouldNotDenyNorLogIfMaxUrisIsNotReached['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "this.contextRunner.withPropertyValues(\"management.metrics.web.client.max-uri-tags=5\").run(null)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "shouldNotDenyNorLogIfMaxUrisIsNotReached['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "this.contextRunner.withUserConfiguration().withConfiguration(AutoConfigurations.of(,)).withPropertyValues(\"management.metrics.web.server.max-uri-tags=5\").run(null)@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->0 [style = dotted, label="true"];
+1->0 [style = dotted, label="true"];
+1->2 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->4 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+}

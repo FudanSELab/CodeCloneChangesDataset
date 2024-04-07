@@ -1,0 +1,38 @@
+digraph {
+3 [style = filled, label = "return new WorkerTaskMonitor(jsonMapper,new SingleTaskBackgroundRunner(new TaskToolboxFactory(taskConfig,taskActionClientFactory,null,null,null,null,null,null,null,notifierFactory,null,null,null,new SegmentLoaderFactory(new SegmentLoaderLocalCacheManager(null,new SegmentLoaderConfig(){@Override public List<StorageLocationConfig> getLocations(){return new ArrayList<>()}},jsonMapper)),jsonMapper,indexIO,null,null,null,indexMergerV9,null,null,null,null,new NoopTestTaskFileWriter()),taskConfig,new NoopServiceEmitter(),DUMMY_NODE,new ServerConfig()),taskConfig,cf,workerCuratorCoordinator,EasyMock.createNiceMock())@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "TaskConfig taskConfig = new TaskConfig(Files.createTempDir().toString(),null,null,0,null,false,null,null)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "EasyMock.expect(taskActionClientFactory.create(EasyMock.anyObject())).andReturn(taskActionClient).anyTimes()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "return new WorkerTaskManager(jsonMapper,new TestTaskRunner(new TaskToolboxFactory(taskConfig,taskActionClientFactory,null,null,null,null,null,null,null,notifierFactory,null,null,null,new SegmentLoaderFactory(new SegmentLoaderLocalCacheManager(null,loaderConfig,jsonMapper)),jsonMapper,indexIO,null,null,null,indexMergerV9,null,null,null,null,new NoopTestTaskFileWriter()),taskConfig,location),taskConfig,EasyMock.createNiceMock()){@Override protected void taskStarted(String taskId){}@Override protected void taskAnnouncementChanged(TaskAnnouncement announcement){}}@@@15@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "createWorkerTaskManager['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "EasyMock.replay(taskActionClientFactory,taskActionClient,notifierFactory)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "TaskActionClientFactory taskActionClientFactory = EasyMock.createNiceMock()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "TaskActionClient taskActionClient = EasyMock.createNiceMock()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "SegmentHandoffNotifierFactory notifierFactory = EasyMock.createNiceMock()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "final SegmentLoaderConfig loaderConfig = new SegmentLoaderConfig(){@Override public List<StorageLocationConfig> getLocations(){return Collections.emptyList()}}@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "createTaskMonitor['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "final TaskConfig taskConfig = new TaskConfig(Files.createTempDir().toString(),null,null,0,null,false,null,null)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "createTaskMonitor['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11->4 [style = bold, label=""];
+2->4 [style = bold, label=""];
+5->3 [style = solid, label="notifierFactory"];
+10->11 [style = bold, label=""];
+0->3 [style = bold, label=""];
+6->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+12->9 [style = bold, label=""];
+5->0 [style = bold, label=""];
+8->2 [style = bold, label=""];
+4->0 [style = solid, label="taskActionClientFactory"];
+0->12 [style = bold, label=""];
+11->9 [style = solid, label="taskConfig"];
+4->3 [style = solid, label="taskActionClientFactory"];
+5->0 [style = solid, label="notifierFactory"];
+12->9 [style = solid, label="loaderConfig"];
+7->5 [style = bold, label=""];
+2->11 [style = dashed, label="0"];
+1->7 [style = bold, label=""];
+1->0 [style = solid, label="taskActionClient"];
+5->9 [style = solid, label="notifierFactory"];
+4->9 [style = solid, label="taskActionClientFactory"];
+2->3 [style = solid, label="taskConfig"];
+}

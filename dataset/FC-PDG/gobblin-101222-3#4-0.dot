@@ -1,0 +1,29 @@
+digraph {
+3 [style = filled, label = "addPartitionIfNotExists['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "client.get().getPartition(table.getDbName(),table.getTableName(),partition.getValues())@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "addPartitionIfNotExists['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "client.get().alter_partition(table.getDbName(),table.getTableName(),getPartitionWithCreateTimeNow(HiveMetaStoreUtils.getPartition(partition)))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "HiveMetaStoreEventHelper.submitSuccessfulPartitionAlter(eventSubmitter,table,partition)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "HivePartition partition@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "alterPartition['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "HivePartition partition@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "return false@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "HivePartition partition@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "HiveTable table@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "HiveTable table@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8->10 [style = dotted, label="true"];
+8->7 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+6->4 [style = dotted, label="true"];
+2->0 [style = bold, label=""];
+8->11 [style = dotted, label="true"];
+11->7 [style = solid, label="partition"];
+11->9 [style = solid, label="partition"];
+4->11 [style = dashed, label="0"];
+3->4 [style = dotted, label="true"];
+10->9 [style = solid, label="table"];
+3->1 [style = dotted, label="true"];
+3->2 [style = bold, label=""];
+6->2 [style = bold, label=""];
+7->9 [style = bold, label=""];
+}

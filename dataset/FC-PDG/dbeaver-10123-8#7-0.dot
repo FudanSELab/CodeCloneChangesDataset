@@ -1,0 +1,34 @@
+digraph {
+4 [style = filled, label = "Composite composite = UIUtils.createPlaceholder(parent,2,5)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "{Composite assistGroup = UIUtils.createControlGroup(rightPanel,SQLEditorMessages.pref_page_sql_format_group_search,1,GridData.FILL_HORIZONTAL | GridData.VERTICAL_ALIGN_BEGINNING,0)csMatchContains = UIUtils.createCheckbox(assistGroup,SQLEditorMessages.pref_page_sql_completion_label_match_contains,SQLEditorMessages.pref_page_sql_completion_label_match_contains_tip,false,2)csUseGlobalSearch = UIUtils.createCheckbox(assistGroup,SQLEditorMessages.pref_page_sql_completion_label_use_global_search,SQLEditorMessages.pref_page_sql_completion_label_use_global_search_tip,false,2)csShowColumnProcedures = UIUtils.createCheckbox(assistGroup,SQLEditorMessages.pref_page_sql_completion_label_show_column_procedures,SQLEditorMessages.pref_page_sql_completion_label_show_column_procedures_tip,false,2)}@@@37@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "rightPanel.setLayout(new GridLayout(1,false))@@@36@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "{Composite commonGroup = UIUtils.createControlGroup(composite,UIDashboardMessages.pref_page_dashboards_group_common,2,GridData.FILL_HORIZONTAL | GridData.VERTICAL_ALIGN_BEGINNING,0){openSeparateConnectionCheck = UIUtils.createCheckbox(commonGroup,UIDashboardMessages.pref_page_dashboards_open_separate_connection_label,null,false,2)}}@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "createPreferenceContent['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "createPreferenceContent['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Composite rightPanel = new Composite(composite,SWT.NONE)@@@34@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "return composite@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Composite parent@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "return composite@@@43@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "rightPanel.setLayoutData(new GridData(GridData.VERTICAL_ALIGN_BEGINNING))@@@35@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "createPreferenceContent['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6->0 [style = bold, label=""];
+4->10 [style = solid, label="composite"];
+8->4 [style = solid, label="parent"];
+4->6 [style = bold, label=""];
+11->8 [style = dotted, label="true"];
+5->3 [style = bold, label=""];
+9->8 [style = dotted, label="true"];
+4->6 [style = solid, label="composite"];
+4->7 [style = solid, label="composite"];
+11->4 [style = bold, label=""];
+2->4 [style = bold, label=""];
+4->0 [style = solid, label="composite"];
+6->3 [style = solid, label="assistGroup"];
+9->4 [style = bold, label=""];
+3->7 [style = bold, label=""];
+6->10 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->8 [style = dotted, label="true"];
+0->3 [style = solid, label="rightPanel"];
+1->5 [style = bold, label=""];
+}

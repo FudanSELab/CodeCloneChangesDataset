@@ -1,0 +1,33 @@
+digraph {
+7 [style = filled, label = "final VM vm@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final int serverPort@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "addClientNotifListener['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final VM vm@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "SerializableRunnable addClientNotifListener = new SerializableRunnable(\"Add Client Notif Listener\"){@Override public void run(){GemFireCacheImpl cache = getInstance()ManagementService service = getManagementService(cache)final CacheServerMXBean bean = service.getLocalCacheServerMXBean(serverPort)assertNotNull(bean)WaitCriterion ev = new WaitCriterion(){@Override public boolean done(){if (bean.isRunning()) return truereturn false}@Override public String description(){return null}}GeodeAwaitility.await().untilAsserted(ev)assertTrue(bean.isRunning())TestCacheServerNotif nt = new TestCacheServerNotif()try {mbeanServer.addNotificationListener(getClientServiceMBeanName(serverPort,cache.getDistributedSystem().getMemberId()),nt,null,null)}catch (InstanceNotFoundException e) }}@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final int serverPort@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "SerializableRunnable verifyCacheServer = new SerializableRunnable(\"Verify Cache Server\"){@Override public void run(){GemFireCacheImpl cache = getInstance()ManagementService service = getManagementService(cache)final CacheServerMXBean bean = service.getLocalCacheServerMXBean(serverPort)assertNotNull(bean)WaitCriterion ev = new WaitCriterion(){@Override public boolean done(){if (bean.isRunning()) return truereturn false}@Override public String description(){return null}}GeodeAwaitility.await().untilAsserted(ev)assertTrue(bean.isRunning())assertCacheServerConfig(bean)}}@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "vm.invoke(verifyCacheServer)@@@25@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final int serverPort@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "verifyCacheServer['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "vm.invoke(addClientNotifListener)@@@31@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "addClientNotifListener['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2->8 [style = dashed, label="0"];
+6->5 [style = dotted, label="true"];
+11->8 [style = dotted, label="true"];
+4->1 [style = bold, label=""];
+11->9 [style = bold, label=""];
+6->2 [style = dotted, label="true"];
+11->7 [style = dotted, label="true"];
+6->4 [style = bold, label=""];
+2->4 [style = solid, label="serverPort"];
+8->9 [style = solid, label="serverPort"];
+9->10 [style = solid, label="verifyCacheServer"];
+3->2 [style = dotted, label="true"];
+3->4 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+4->9 [style = dashed, label="0"];
+4->1 [style = solid, label="addClientNotifListener"];
+9->10 [style = bold, label=""];
+0->4 [style = solid, label="serverPort"];
+3->0 [style = dotted, label="true"];
+}

@@ -1,0 +1,34 @@
+digraph {
+0 [style = filled, label = "listener.onApplicationEvent(event)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "overridePidFileWithSpring['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "File file = new File(this.tempDir,\"pid\")@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "listener.setTriggerEventType()@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "tryEnvironmentPreparedEvent['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "overridePidFileWithSpring['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "listener.onApplicationEvent(event)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertThat(contentOf(file)).isEmpty()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "SpringApplicationEvent event = createEnvironmentPreparedEvent(\"spring.pid.file\",file.getAbsolutePath())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "SpringApplicationEvent event = createPreparedEvent(\"spring.pid.file\",file.getAbsolutePath())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "File file = this.temporaryFolder.newFile()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "ApplicationPidFileWriter listener = new ApplicationPidFileWriter()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(contentOf(file)).isNotEmpty()@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->10 [style = bold, label=""];
+12->4 [style = bold, label=""];
+2->0 [style = solid, label="event"];
+0->9 [style = bold, label=""];
+7->6 [style = bold, label=""];
+5->0 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+2->5 [style = bold, label=""];
+2->10 [style = dashed, label="0"];
+0->3 [style = bold, label=""];
+9->11 [style = bold, label=""];
+11->8 [style = bold, label=""];
+10->8 [style = solid, label="event"];
+10->5 [style = bold, label=""];
+8->3 [style = bold, label=""];
+6->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+10->0 [style = solid, label="event"];
+}

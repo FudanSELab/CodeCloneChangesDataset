@@ -1,0 +1,14 @@
+digraph {
+3 [style = filled, label = "testSumOfString['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "cannotVectorize()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testQuery(\"SELECT SUM(CAST(dim1 AS INTEGER)) FROM druid.foo\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).aggregators(aggregators(new LongSumAggregatorFactory(\"a0\",null,\"CAST(\"dim1\", 'LONG')\",CalciteTests.createExprMacroTable()))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@aa286d))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testSumOfString['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testQuery(\"SELECT SUM(CAST(SUBSTRING(dim1, 1, 10) AS INTEGER)) FROM druid.foo\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).aggregators(aggregators(new LongSumAggregatorFactory(\"a0\",null,\"CAST(substring(\"dim1\", 0, 10), 'LONG')\",CalciteTests.createExprMacroTable()))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@aa28a7))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testSumOfExtractionFn['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0->1 [style = bold, label=""];
+2->4 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+3->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+5->1 [style = bold, label=""];
+}

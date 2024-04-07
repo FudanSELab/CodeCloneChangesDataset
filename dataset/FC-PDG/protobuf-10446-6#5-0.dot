@@ -1,0 +1,29 @@
+digraph {
+3 [style = filled, label = "parserWithOverwriteForbidden.merge(input,TestUtil.getFullExtensionRegistry(),builder)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testOneofOverwriteForbidden['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "fail(\"Expected parse exception.\")@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "String input = \"foo_string: \"stringvalue\" foo_int: 123\"@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "TestOneof2.Builder builder = TestOneof2.newBuilder()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testOneofOverwriteForbidden['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "parserWithOverwriteForbidden.merge(text,TestUtil.getFullExtensionRegistry(),builder)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertParseErrorWithOverwriteForbidden['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "TestAllTypes.Builder builder = TestAllTypes.newBuilder()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "fail(\"Expected parse exception.\")@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "String text@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "String error@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7->8 [style = solid, label="text"];
+9->10 [style = dotted, label="true"];
+1->3 [style = solid, label="input"];
+0->3 [style = solid, label="builder"];
+3->8 [style = dashed, label="0"];
+0->3 [style = bold, label=""];
+11->8 [style = bold, label=""];
+8->6 [style = bold, label=""];
+9->11 [style = bold, label=""];
+3->2 [style = bold, label=""];
+11->8 [style = solid, label="builder"];
+4->1 [style = bold, label=""];
+1->0 [style = bold, label=""];
+9->7 [style = dotted, label="true"];
+5->1 [style = bold, label=""];
+}

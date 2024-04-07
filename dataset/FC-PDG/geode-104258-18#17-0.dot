@@ -1,0 +1,35 @@
+digraph {
+9 [style = filled, label = "int timeoutMillis@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final ServerSocket serverSocket@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Thread serverThread = new Thread(new MyThreadGroup(testName.getMethodName()),null,testName.getMethodName() + \"-server\")@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "int timeoutMillis@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "Thread serverThread = new Thread(new MyThreadGroup(this.testName.getMethodName()),null,this.testName.getMethodName() + \"-server\")@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "serverThread.start()@@@38@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "serverThread.start()@@@28@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "startServerNIO['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "return serverThread@@@29@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "return serverThread@@@39@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "startServerNIO['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "startServerNIO['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "final ServerSocket serverSocket@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final ServerSocket serverSocket@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+5->8 [style = dashed, label="0"];
+11->9 [style = dotted, label="true"];
+8->2 [style = bold, label=""];
+7->8 [style = bold, label=""];
+10->13 [style = bold, label=""];
+2->4 [style = bold, label=""];
+5->13 [style = solid, label="serverThread"];
+7->1 [style = dotted, label="true"];
+5->10 [style = bold, label=""];
+3->1 [style = dotted, label="true"];
+8->4 [style = solid, label="serverThread"];
+3->5 [style = bold, label=""];
+11->12 [style = dotted, label="true"];
+1->12 [style = dashed, label="0"];
+11->5 [style = bold, label=""];
+5->4 [style = solid, label="serverThread"];
+3->0 [style = dotted, label="true"];
+7->6 [style = dotted, label="true"];
+}

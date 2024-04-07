@@ -1,0 +1,35 @@
+digraph {
+0 [style = filled, label = "Map<InstancePartitionsType,InstancePartitions> instancePartitionsMap@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "checkReplication['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "Map<InstancePartitionsType,InstancePartitions> instancePartitionsMap@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+16 [style = filled, label = "Map<InstancePartitionsType,InstancePartitions> instancePartitionsMap@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "checkReplication['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "checkReplication['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "@Nullable List<Tier> sortedTiers@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+15 [style = filled, label = "rebalanceTable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "rebalanceTable['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "@Nullable Map<String,InstancePartitions> tierInstancePartitionsMap@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Configuration config@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+17 [style = filled, label = "Configuration config@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "@Nullable Map<String,InstancePartitions> tierInstancePartitionsMap@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "@Nullable List<Tier> sortedTiers@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "@Nullable List<Tier> sortedTiers@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "@Nullable Map<String,InstancePartitions> tierInstancePartitionsMap@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Configuration config@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "rebalanceTable['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9->11 [style = dotted, label="true"];
+2->1 [style = dotted, label="true"];
+15->16 [style = dotted, label="true"];
+2->5 [style = dotted, label="true"];
+15->17 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+2->0 [style = dotted, label="true"];
+2->3 [style = dotted, label="true"];
+15->14 [style = dotted, label="true"];
+2->4 [style = dotted, label="true"];
+15->13 [style = dotted, label="true"];
+9->6 [style = dotted, label="true"];
+9->10 [style = dotted, label="true"];
+15->12 [style = dotted, label="true"];
+9->7 [style = dotted, label="true"];
+}

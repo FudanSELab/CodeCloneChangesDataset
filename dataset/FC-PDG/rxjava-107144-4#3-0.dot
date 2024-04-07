@@ -1,0 +1,37 @@
+digraph {
+9 [style = filled, label = "TestHelper.race(run,run)@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "addAllDisposeRace['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "TestHelper.race(run,run2)@@@19@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "addAllDisposeRace['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "final CompositeDisposable cd = new CompositeDisposable()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Runnable run = new Runnable(){@Override public void run(){cd.dispose()}}@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "i++@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "disposeRace['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "int i = 0@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Runnable run2 = new Runnable(){@Override public void run(){cd.addAll(Disposable.empty())}}@@@13@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "i < TestHelper.RACE_DEFAULT_LOOPS@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->2 [style = dotted, label="true"];
+0->6 [style = dotted, label="true"];
+9->2 [style = bold, label=""];
+2->0 [style = solid, label="i"];
+0->3 [style = dotted, label="true"];
+6->9 [style = solid, label="run"];
+1->2 [style = solid, label="i"];
+4->2 [style = bold, label=""];
+0->5 [style = dotted, label="true"];
+6->9 [style = bold, label=""];
+8->1 [style = bold, label=""];
+10->1 [style = bold, label=""];
+6->4 [style = solid, label="run"];
+0->9 [style = dotted, label="true"];
+6->3 [style = bold, label=""];
+3->4 [style = solid, label="run2"];
+2->0 [style = bold, label=""];
+7->1 [style = bold, label=""];
+0->4 [style = dotted, label="true"];
+1->0 [style = solid, label="i"];
+0->5 [style = bold, label=""];
+3->4 [style = bold, label=""];
+5->6 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

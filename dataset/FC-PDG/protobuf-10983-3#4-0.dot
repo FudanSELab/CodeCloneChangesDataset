@@ -1,0 +1,31 @@
+digraph {
+2 [style = filled, label = "totalBytesWritten += FIXED_32_SIZE@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "buffer(position++( = (byte)((value >> 8) & 0xFF)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "buffer(position++( = (byte)((value >> 24) & 0xFF)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "writeFixed32NoTag['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "bufferFixed32NoTag['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "writeFixed32NoTag['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "int value@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "buffer(position++( = (byte)((value >> 16) & 0xFF)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "int value@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "buffer(position++( = (byte)(value & 0xFF)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8->5 [style = solid, label="value"];
+6->0 [style = bold, label=""];
+8->0 [style = solid, label="value"];
+8->9 [style = solid, label="value"];
+1->4 [style = solid, label="value"];
+1->5 [style = solid, label="value"];
+1->0 [style = solid, label="value"];
+6->1 [style = dotted, label="true"];
+0->5 [style = bold, label=""];
+8->4 [style = solid, label="value"];
+1->8 [style = dashed, label="0"];
+9->0 [style = bold, label=""];
+3->0 [style = bold, label=""];
+3->1 [style = dotted, label="true"];
+1->2 [style = solid, label="value"];
+5->4 [style = bold, label=""];
+4->2 [style = bold, label=""];
+7->9 [style = bold, label=""];
+7->8 [style = dotted, label="true"];
+}

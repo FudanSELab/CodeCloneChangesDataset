@@ -1,0 +1,23 @@
+digraph {
+5 [style = filled, label = "GenericFile<File> file@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "releaseExclusiveReadLockOnRollback['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "GenericFileOperations<File> operations@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "releaseExclusiveReadLockOnCommit['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "GenericFileOperations<File> operations@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "releaseExclusiveReadLockOnRollback['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "Exchange exchange@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "GenericFileOperations<File> operations@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Exchange exchange@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Exchange exchange@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "GenericFile<File> file@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4->5 [style = dotted, label="true"];
+8->10 [style = dotted, label="true"];
+2->1 [style = dotted, label="true"];
+2->0 [style = dotted, label="true"];
+2->3 [style = dotted, label="true"];
+4->6 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+3->10 [style = dashed, label="0"];
+8->9 [style = dotted, label="true"];
+}

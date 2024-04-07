@@ -1,0 +1,36 @@
+digraph {
+8 [style = filled, label = "assertThat(result.stderr(),containsString(\"user is missing the Overall/Administer permission\"))@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "final CLICommandInvoker.Result result = command.authorizedTo(View.CREATE,Jenkins.READ).withStdin(this.getClass().getResourceAsStream(\"/hudson/cli/view.xml\")).invoke()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertThat(result,failedWith(4))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertThat(result,hasNoStandardOutput())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final CLICommandInvoker.Result result = command.authorizedTo(Jenkins.READ).invoke()@@@3@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "j.jenkins.setAuthorizationStrategy(new MockAuthorizationStrategy().grant(Jenkins.READ).everywhere().toAuthenticated())@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "j.jenkins.addView(new ListView(\"ViewFromXML\"))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(result,failedWith(6))@@@4@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThat(result.stderr(),containsString(\"ERROR: View 'ViewFromXML' already exists\"))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertThat(result,failedWith(6))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final CLICommandInvoker.Result result = command.invoke()@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "reloadConfigurationShouldFailWithoutAdministerPermission['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "reloadConfigurationShouldFailWithoutAdministerPermission['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "createViewShouldFailIfViewAlreadyExists['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->1 [style = solid, label="result"];
+3->1 [style = solid, label="result"];
+5->2 [style = solid, label="result"];
+13->10 [style = solid, label="result"];
+13->2 [style = solid, label="result"];
+7->5 [style = bold, label=""];
+6->7 [style = bold, label=""];
+13->10 [style = bold, label=""];
+2->12 [style = bold, label=""];
+0->3 [style = bold, label=""];
+10->2 [style = bold, label=""];
+9->11 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+3->4 [style = solid, label="result"];
+3->4 [style = bold, label=""];
+1->2 [style = bold, label=""];
+11->13 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->8 [style = bold, label=""];
+5->1 [style = bold, label=""];
+}

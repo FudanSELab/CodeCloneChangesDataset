@@ -1,0 +1,36 @@
+digraph {
+13 [style = filled, label = "props.setProperty(ConsumerConfig.METRIC_REPORTER_CLASSES_CONFIG,.getName())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "props.setProperty(ProducerConfig.METRIC_REPORTER_CLASSES_CONFIG,.getName())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final int oldCloseCount = MockMetricsReporter.CLOSE_COUNT.get()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "new KafkaConsumer<>(props,new ByteArrayDeserializer(),new ByteArrayDeserializer())@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "props.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,\"some.invalid.hostname.foo.bar.local:9999\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final int oldInitCount = MockMetricsReporter.INIT_COUNT.get()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Assert.fail(\"should have caught an exception and returned\")@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testConstructorFailureCloseResource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "props.setProperty(ProducerConfig.CLIENT_ID_CONFIG,\"testConstructorClose\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Properties props = new Properties()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "fail(\"should have caught an exception and returned\")@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testConstructorFailureCloseResource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "props.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,\"invalid-23-8409-adsfsdj\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "testConstructorClose['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "props.setProperty(ConsumerConfig.CLIENT_ID_CONFIG,\"testConstructorClose\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0->6 [style = bold, label=""];
+5->2 [style = bold, label=""];
+14->2 [style = bold, label=""];
+7->12 [style = dashed, label="0"];
+10->9 [style = bold, label=""];
+8->2 [style = bold, label=""];
+1->7 [style = bold, label=""];
+11->12 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+6->4 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->10 [style = solid, label="props"];
+2->1 [style = bold, label=""];
+3->13 [style = dashed, label="0"];
+13->0 [style = bold, label=""];
+2->11 [style = bold, label=""];
+12->13 [style = bold, label=""];
+6->10 [style = bold, label=""];
+7->3 [style = bold, label=""];
+}

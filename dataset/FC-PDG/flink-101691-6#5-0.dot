@@ -1,0 +1,28 @@
+digraph {
+8 [style = filled, label = "final ClusterClient clusterClient = createClusterClient()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "{JobID jid = new JobID()String(( parameters = {\"-s\",\"targetDirectory\",jid.toString()}final ClusterClient clusterClient = createClusterClient()MockedCliFrontend testFrontend = new MockedCliFrontend(clusterClient)testFrontend.cancel(parameters)Mockito.verify(clusterClient,times(1)).cancelWithSavepoint(any(),notNull())}@@@13@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Mockito.verify(clusterClient,times(1)).cancel(any())@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "JobID jid = new JobID()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testCancelWithSavepoint['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "int retCode = testFrontend.cancel(parameters)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "MockedCliFrontend testFrontend = new MockedCliFrontend(clusterClient)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertEquals(0,retCode)@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testCancel['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "String(( parameters = {jid.toString()}@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testCancelWithSavepoint['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "{JobID jid = new JobID()String(( parameters = {\"-s\",jid.toString()}final ClusterClient clusterClient = createClusterClient()MockedCliFrontend testFrontend = new MockedCliFrontend(clusterClient)testFrontend.cancel(parameters)Mockito.verify(clusterClient,times(1)).cancelWithSavepoint(any(),isNull())}@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->5 [style = solid, label="clusterClient"];
+2->0 [style = bold, label=""];
+4->7 [style = bold, label=""];
+10->4 [style = solid, label="retCode"];
+2->0 [style = solid, label="clusterClient"];
+9->11 [style = bold, label=""];
+11->8 [style = bold, label=""];
+8->5 [style = bold, label=""];
+10->4 [style = bold, label=""];
+5->10 [style = bold, label=""];
+1->2 [style = bold, label=""];
+11->10 [style = solid, label="parameters"];
+3->2 [style = bold, label=""];
+6->9 [style = bold, label=""];
+}

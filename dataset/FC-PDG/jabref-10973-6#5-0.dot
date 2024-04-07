@@ -1,0 +1,31 @@
+digraph {
+4 [style = filled, label = "return Collections.emptySortedSet()@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "entryType.isPresent()@@@4@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "return Collections.emptySet()@@@8@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "determineFieldsToShow['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return entryType.get().getSecondaryOptionalNotDeprecatedFields()@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "BibEntry entry@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "BibEntry entry@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "determineFieldsToShow['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "determineFieldsToShow['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "Optional<BibEntryType> entryType = entryTypesManager.enrich(entry.getType(),databaseContext.getMode())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "return entryType.get().getPrimaryOptionalFields().stream().map(null).collect(Collectors.toCollection(null))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->6 [style = dashed, label="0"];
+5->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+5->8 [style = bold, label=""];
+10->2 [style = bold, label=""];
+10->1 [style = dotted, label="true"];
+5->9 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+5->8 [style = dotted, label="false"];
+5->4 [style = dotted, label="false"];
+5->9 [style = dotted, label="true"];
+3->9 [style = dashed, label="0"];
+5->4 [style = bold, label=""];
+7->6 [style = dotted, label="true"];
+2->5 [style = bold, label=""];
+5->3 [style = dotted, label="true"];
+7->2 [style = bold, label=""];
+}

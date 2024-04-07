@@ -1,0 +1,29 @@
+digraph {
+0 [style = filled, label = "TableEnvironment tEnv = TableEnvironment.create(bsSettings)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "tEnv.executeSql(\"CREATE TABLE USER_RESULT(\" + \"NAME VARCHAR,\" + \"SCORE BIGINT\" + \") WITH ( \" + \"'connector' = 'jdbc',\" + \"'url'='\" + DB_URL + \"',\" + \"'table-name' = '\" + OUTPUT_TABLE3 + \"',\" + \"'sink.buffer-flush.max-rows' = '2',\" + \"'sink.buffer-flush.interval' = '300ms',\" + \"'sink.max-retries' = '4'\" + \")\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "tableResult.getJobClient().get().getJobExecutionResult(Thread.currentThread().getContextClassLoader()).get()@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "tEnv.executeSql(\"INSERT INTO USER_RESULT\" + \"SELECT user_name, score \" + \"FROM (VALUES (1, 'Bob'), (22, 'Tom'), (42, 'Kim'), \" + \"(42, 'Kim'), (1, 'Bob')) \" + \"AS UserCountTable(score, user_name)\").await()@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "check(new Row((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1bc10fc,DB_URL,OUTPUT_TABLE3,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1bc111a)@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "TableResult tableResult = tEnv.executeSql(\"INSERT INTO USER_RESULT\" + \"SELECT user_name, score \" + \"FROM (VALUES (1, 'Bob'), (22, 'Tom'), (42, 'Kim'), \" + \"(42, 'Kim'), (1, 'Bob')) \" + \"AS UserCountTable(score, user_name)\")@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "EnvironmentSettings bsSettings = EnvironmentSettings.newInstance().useBlinkPlanner().inBatchMode().build()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testBatchSink['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testBatchSink['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "testBatchSink['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "check(new Row((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1bc1089,DB_URL,OUTPUT_TABLE3,new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1bc10a7)@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "tEnv.executeSql(\"CREATE TABLE USER_RESULT(\" + \"NAME VARCHAR,\" + \"SCORE BIGINT\" + \") WITH ( \" + \"'connector.type' = 'jdbc',\" + \"'connector.url'='\" + DB_URL + \"',\" + \"'connector.table' = '\" + OUTPUT_TABLE3 + \"'\" + \")\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->6 [style = bold, label=""];
+0->10 [style = bold, label=""];
+9->3 [style = bold, label=""];
+11->3 [style = bold, label=""];
+5->3 [style = bold, label=""];
+6->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+6->10 [style = dashed, label="0"];
+4->7 [style = dashed, label="0"];
+10->4 [style = bold, label=""];
+6->4 [style = bold, label=""];
+3->0 [style = bold, label=""];
+1->2 [style = bold, label=""];
+3->0 [style = solid, label="bsSettings"];
+4->1 [style = bold, label=""];
+}

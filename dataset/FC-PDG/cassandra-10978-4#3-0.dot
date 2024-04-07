@@ -1,0 +1,27 @@
+digraph {
+7 [style = filled, label = "indexCfs.readOrdering.awaitNewBarrier()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "CompactionManager.instance.waitForCessation(cfss)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "indexCfs.invalidate()@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Collection<ColumnFamilyStore> cfss = Collections.singleton(indexCfs)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "invalidate['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "invalidate['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "CompactionManager.instance.interruptCompactionForCFs(cfss,true)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "invalidate['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "indexCfs.keyspace.writeOrder.awaitNewBarrier()@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Keyspace.writeOrder.awaitNewBarrier()@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "indexCfs.forceBlockingFlush()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->6 [style = bold, label=""];
+3->1 [style = solid, label="cfss"];
+9->3 [style = bold, label=""];
+10->3 [style = bold, label=""];
+5->3 [style = bold, label=""];
+8->2 [style = bold, label=""];
+0->8 [style = bold, label=""];
+7->4 [style = bold, label=""];
+6->8 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+2->7 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+3->0 [style = solid, label="cfss"];
+}

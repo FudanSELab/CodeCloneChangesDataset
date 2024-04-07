@@ -1,0 +1,31 @@
+digraph {
+2 [style = filled, label = "Schema array@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "array['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "Schema element@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "!AvroSchemaUtil.hasFieldId(keyValue.getField(\"key\")) || !AvroSchemaUtil.hasFieldId(keyValue.getField(\"value\"))@@@4@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "array['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "complexMapWithIds['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Schema array@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Schema map@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "return AvroSchemaUtil.createMap(keyId,keyValue.getField(\"key\").schema(),valueId,keyValue.getField(\"value\").schema())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "return map@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Schema keyValue = map.getElementType()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Integer keyId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Integer valueId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1->2 [style = dotted, label="true"];
+10->6 [style = dotted, label="true"];
+8->11 [style = bold, label=""];
+11->9 [style = dotted, label="true"];
+10->8 [style = bold, label=""];
+11->9 [style = bold, label=""];
+9->12 [style = bold, label=""];
+3->4 [style = dotted, label="true"];
+7->12 [style = solid, label="map"];
+11->12 [style = bold, label=""];
+10->7 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+6->9 [style = solid, label="keyId"];
+5->9 [style = solid, label="valueId"];
+1->0 [style = dotted, label="true"];
+10->5 [style = dotted, label="true"];
+}

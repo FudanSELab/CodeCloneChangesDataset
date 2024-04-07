@@ -1,0 +1,35 @@
+digraph {
+8 [style = filled, label = "Planet planet2 = new Planet()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Planet planet1 = new Planet()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "CountryMapper mapper = sqlSession.getMapper()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "mapper.insertPlanets(planets)@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "mapper.insertPlanets_MultiParams(planets,Integer.valueOf(1))@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "shouldAssignMultipleGeneratedKeysToBeans['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "assertEquals(\"pluto-\" + planet1.getId(),planet1.getCode())@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(\"neptune-\" + planet2.getId(),planet2.getCode())@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "shouldAssignMultipleGeneratedKeysToBeans['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "List<Planet> planets = Arrays.asList(planet1,planet2)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "planet2.setName(\"neptune\")@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "planet1.setName(\"pluto\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "shouldAssignMultipleGeneratedKeysToBeans_MultiParams['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "{sqlSession.rollback()}@@@15@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->0 [style = bold, label=""];
+12->4 [style = bold, label=""];
+11->0 [style = bold, label=""];
+10->8 [style = bold, label=""];
+8->9 [style = solid, label="planet2"];
+4->1 [style = bold, label=""];
+9->7 [style = solid, label="planets"];
+0->5 [style = bold, label=""];
+5->9 [style = solid, label="planet1"];
+9->12 [style = solid, label="planets"];
+7->4 [style = bold, label=""];
+3->9 [style = bold, label=""];
+5->10 [style = bold, label=""];
+1->2 [style = bold, label=""];
+13->0 [style = bold, label=""];
+8->3 [style = bold, label=""];
+9->12 [style = bold, label=""];
+7->12 [style = dashed, label="0"];
+9->7 [style = bold, label=""];
+}

@@ -1,0 +1,38 @@
+digraph {
+5 [style = filled, label = "expr(\"interval '1' hour < interval '1' second\").ok(\"(INTERVAL '1' HOUR < INTERVAL '1' SECOND)\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testIntervalCompare['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testIntervalCompare['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "expr(\"case col1 when 1.2 then 'one' when 2 then 'two' else 'three' end\").ok(\"(CASE WHEN (`COL1` = 1.2) THEN 'one' WHEN (`COL1` = 2) THEN 'two' ELSE 'three' END)\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "expr(\"case 1 when (select * from emp) then 2 end\").ok(\"(CASE WHEN (1 = (SELECT *\" + \"FROM `EMP`)) THEN 2 ELSE NULL END)\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+16 [style = filled, label = "sql(\"case x when 2, 4 then 3 when ^then^ 5 else 4 end\").fails(\"(?s)Encountered \"then\" at .*\")@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+17 [style = filled, label = "expr(\"case  col1 when 1 then 'one' end\").ok(\"(CASE WHEN (`COL1` = 1) THEN 'one' ELSE NULL END)\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+18 [style = filled, label = "expr(\"case x when 2, 4 then 3 else 4 end\").ok(\"(CASE WHEN (`X` IN (2, 4)) THEN 3 ELSE 4 END)\")@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "expr(\"case (select * from emp) when 1 then 2 end\").ok(\"(CASE WHEN ((SELECT *\" + \"FROM `EMP`) = 1) THEN 2 ELSE NULL END)\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "expr(\"interval '1' hour <= interval '1' second\").ok(\"(INTERVAL '1' HOUR <= INTERVAL '1' SECOND)\")@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "expr(\"case when nbr is false then 'one' end\").ok(\"(CASE WHEN (`NBR` IS FALSE) THEN 'one' ELSE NULL END)\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "sql(\"case when b1, b2 ^when^ 2, 4 then 3 else 4 end\").fails(\"(?s)Encountered \"when\" at .*\")@@@12@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "expr(\"interval '1' hour >= interval '1' second\").ok(\"(INTERVAL '1' HOUR >= INTERVAL '1' SECOND)\")@@@8@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "expr(\"interval '1' hour <> interval '1' second\").ok(\"(INTERVAL '1' HOUR <> INTERVAL '1' SECOND)\")@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "expr(\"case 1 when 2 then 3 else (select * from emp) end\").ok(\"(CASE WHEN (1 = 2) THEN 3 ELSE (SELECT *\" + \"FROM `EMP`) END)\")@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testCaseExpression['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "expr(\"interval '1' hour > interval '1' second\").ok(\"(INTERVAL '1' HOUR > INTERVAL '1' SECOND)\")@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "expr(\"case 1 when 2 then (select * from emp) end\").ok(\"(CASE WHEN (1 = 2) THEN (SELECT *\" + \"FROM `EMP`) ELSE NULL END)\")@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "expr(\"interval '1' hour = interval '1' second\").ok(\"(INTERVAL '1' HOUR = INTERVAL '1' SECOND)\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+2->6 [style = bold, label=""];
+12->11 [style = bold, label=""];
+0->5 [style = bold, label=""];
+13->10 [style = bold, label=""];
+11->18 [style = bold, label=""];
+17->15 [style = bold, label=""];
+3->0 [style = bold, label=""];
+6->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+16->14 [style = bold, label=""];
+8->17 [style = bold, label=""];
+18->16 [style = bold, label=""];
+15->13 [style = bold, label=""];
+9->12 [style = bold, label=""];
+10->9 [style = bold, label=""];
+7->3 [style = bold, label=""];
+}

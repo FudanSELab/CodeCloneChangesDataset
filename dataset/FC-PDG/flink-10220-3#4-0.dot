@@ -1,0 +1,33 @@
+digraph {
+8 [style = filled, label = "return (KafkaSource<?>)sourceTransformation.getSource()@@@9@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "assertThat(provider,instanceOf())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final DataStreamScanProvider dataStreamScanProvider = (DataStreamScanProvider)provider@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "ScanTableSource.ScanRuntimeProvider provider@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "final Transformation<RowData> transformation = dataStreamScanProvider.produceDataStream(StreamExecutionEnvironment.createLocalEnvironment()).getTransformation()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertKafkaSource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "assertKafkaSource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ScanTableSource.ScanRuntimeProvider provider@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThat(transformation,instanceOf())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "SourceTransformation<RowData,KafkaPartitionSplit,KafkaSourceEnumState> sourceTransformation = (SourceTransformation<RowData,KafkaPartitionSplit,KafkaSourceEnumState>)transformation@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertKafkaSource['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertThat(sourceTransformation.getSource(),instanceOf())@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->10 [style = dotted, label="true"];
+5->3 [style = bold, label=""];
+3->6 [style = solid, label="transformation"];
+2->10 [style = dashed, label="0"];
+11->2 [style = dotted, label="true"];
+0->5 [style = bold, label=""];
+6->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+9->0 [style = bold, label=""];
+10->0 [style = solid, label="provider"];
+2->5 [style = solid, label="provider"];
+10->5 [style = solid, label="provider"];
+3->1 [style = solid, label="transformation"];
+2->0 [style = solid, label="provider"];
+1->6 [style = bold, label=""];
+4->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+4->2 [style = dotted, label="true"];
+11->0 [style = bold, label=""];
+}

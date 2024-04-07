@@ -1,0 +1,27 @@
+digraph {
+0 [style = filled, label = "ResponseBeanMeta rbm@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "as['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "final BeanMeta<T> bm = getBeanSession().getBeanMeta(c)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Class<T> c = (Class<T>)rbm.getClassMeta().getInnerClass()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return (T)Proxy.newProxyInstance(c.getClassLoader(),new Class((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15bac02,new InvocationHandler(){@Override public Object invoke(Object proxy,Method method,Object(( args){ResponseBeanPropertyMeta pm = rbm.getProperty(method.getName())HttpPartParserSession pp = getPartParserSession(pm.getParser().orElse(rc.getPartParser()))HttpPartSchema schema = pm.getSchema()HttpPartType pt = pm.getPartType()String name = pm.getPartName().orElse(null)ClassMeta<?> type = rc.getClassMeta(method.getGenericReturnType())if (pt == RESPONSE_HEADER) return getHeader(name).parser(pp).schema(schema).asType(type).orElse(null)if (pt == RESPONSE_STATUS) return getStatusCode()return getBody().schema(schema).asType(type)}})@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Class<T> c = (Class<T>)rbm.getClassMeta().getInnerClass()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "return (T)Proxy.newProxyInstance(c.getClassLoader(),new Class((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@15bac96,new InvocationHandler(){@Override public Object invoke(Object proxy,Method method,Object(( args){RequestBeanPropertyMeta pm = rbm.getProperty(method.getName())if (pm != null) {HttpPartParserSession pp = pm.getParser(getPartParserSession())HttpPartSchema schema = pm.getSchema()String name = pm.getPartName()ClassMeta<?> type = getContext().getClassMeta(method.getGenericReturnType())HttpPartType pt = pm.getPartType()if (pt == HttpPartType.BODY) return getBody().schema(schema).asType(type)if (pt == QUERY) return getQueryParam(name).parser(pp).schema(schema).asType(type).orElse(null)if (pt == FORMDATA) return getFormParam(name).parser(pp).schema(schema).asType(type).orElse(null)if (pt == HEADER) return getHeader(name).parser(pp).schema(schema).asType(type).orElse(null)if (pt == PATH) return getPathParam(name).parser(pp).schema(schema).asType(type).orElse(null)}return null}})@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "getRequest['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "as['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final RequestBeanMeta rbm@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8->7 [style = bold, label=""];
+5->0 [style = dotted, label="true"];
+2->8 [style = dashed, label="0"];
+9->2 [style = bold, label=""];
+2->8 [style = solid, label="c"];
+5->3 [style = bold, label=""];
+3->1 [style = solid, label="c"];
+4->3 [style = bold, label=""];
+2->1 [style = bold, label=""];
+2->7 [style = solid, label="c"];
+4->0 [style = dotted, label="true"];
+3->2 [style = bold, label=""];
+9->6 [style = dotted, label="true"];
+2->8 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

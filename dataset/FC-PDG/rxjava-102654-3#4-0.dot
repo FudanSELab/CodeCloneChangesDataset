@@ -1,0 +1,23 @@
+digraph {
+0 [style = filled, label = "{RxJavaPlugins.reset()}@@@18@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "TestHelper.assertUndeliverable(errors,0,,\"First\")@@@15@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "eventsAfterDematerializedTerminal['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "eventsAfterDematerializedTerminal['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "TestHelper.assertUndeliverable(errors,1,,\"Second\")@@@16@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "eventsAfterDematerializedTerminal['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "new Flowable<Notification<Object>>(){@Override protected void subscribeActual(Subscriber<? super Notification<Object>> subscriber){subscriber.onSubscribe(new BooleanSubscription())subscriber.onNext(Notification.createOnComplete())subscriber.onNext(Notification.createOnNext(1))subscriber.onNext(Notification.createOnError(new TestException(\"First\")))subscriber.onError(new TestException(\"Second\"))}}.dematerialize(Functions.identity()).test().assertResult()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "new Observable<Notification<Object>>(){@Override protected void subscribeActual(Observer<? super Notification<Object>> observer){observer.onSubscribe(Disposable.empty())observer.onNext(Notification.createOnComplete())observer.onNext(Notification.createOnNext(1))observer.onNext(Notification.createOnError(new TestException(\"First\")))observer.onError(new TestException(\"Second\"))}}.dematerialize(Functions.identity()).test().assertResult()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "List<Throwable> errors = TestHelper.trackPluginErrors()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->7 [style = dashed, label="0"];
+1->3 [style = bold, label=""];
+5->4 [style = solid, label="errors"];
+8->5 [style = bold, label=""];
+7->3 [style = bold, label=""];
+3->4 [style = bold, label=""];
+5->7 [style = bold, label=""];
+5->3 [style = solid, label="errors"];
+4->0 [style = bold, label=""];
+6->5 [style = bold, label=""];
+2->5 [style = bold, label=""];
+5->1 [style = bold, label=""];
+}

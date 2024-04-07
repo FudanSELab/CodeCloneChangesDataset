@@ -1,0 +1,36 @@
+digraph {
+0 [style = filled, label = "TableMetadata base = readMetadata()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "AppendFiles append = table.newAppend()@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ManifestFile manifest = writeManifest(FILE_A,FILE_B)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "append.appendManifest(manifest)@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Assert.assertTrue(\"Append manifest should not be deleted\",new File(manifest.path()).exists())@@@13@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "Assert.assertEquals(\"Table should start empty\",0,listManifestFiles().size())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "table.updateProperties().set(TableProperties.SNAPSHOT_ID_INHERITANCE_ENABLED,\"true\").commit()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "table.ops().failCommits(5)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "AssertHelpers.assertThrows(\"Should reject commit\",,\"Injected failure\",null)@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "Assert.assertEquals(\"Last sequence number should be 0\",0,readMetadata().lastSequenceNumber())@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+15 [style = filled, label = "testAppendManifestFailureWithSnapshotIdInheritance['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Assert.assertNull(\"Should not have a current snapshot\",base.currentSnapshot())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testAppendManifestFailureWithSnapshotIdInheritance['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "Assert.assertEquals(\"Last sequence number should be 0\",0,readMetadata().lastSequenceNumber())@@@14@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "table.updateProperties().set(TableProperties.COMMIT_NUM_RETRIES,\"1\").commit()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testAppendManifestFailureWithSnapshotIdInheritance['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+14->5 [style = bold, label=""];
+12->10 [style = bold, label=""];
+10->8 [style = bold, label=""];
+6->14 [style = bold, label=""];
+13->8 [style = bold, label=""];
+11->1 [style = bold, label=""];
+4->7 [style = bold, label=""];
+0->4 [style = bold, label=""];
+10->13 [style = bold, label=""];
+2->1 [style = solid, label="manifest"];
+1->6 [style = bold, label=""];
+15->10 [style = bold, label=""];
+8->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+6->5 [style = bold, label=""];
+2->11 [style = bold, label=""];
+9->10 [style = bold, label=""];
+7->3 [style = bold, label=""];
+}

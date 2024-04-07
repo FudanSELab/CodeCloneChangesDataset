@@ -1,0 +1,25 @@
+digraph {
+5 [style = filled, label = "configure['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "http.authorizeRequests(null)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "http.cors(Customizer.withDefaults())@@@12@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "http.httpBasic()@@@9@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "HttpSecurity http@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return http.build()@@@14@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "HttpSecurity http@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "configure['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "http.formLogin(Customizer.withDefaults())@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "configure['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->6 [style = bold, label=""];
+9->2 [style = bold, label=""];
+0->3 [style = dotted, label="true"];
+8->3 [style = dotted, label="true"];
+0->4 [style = bold, label=""];
+5->7 [style = dotted, label="true"];
+4->9 [style = bold, label=""];
+8->4 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+5->4 [style = bold, label=""];
+4->1 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+}

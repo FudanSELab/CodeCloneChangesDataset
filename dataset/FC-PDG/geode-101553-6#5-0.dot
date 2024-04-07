@@ -1,0 +1,28 @@
+digraph {
+10 [style = filled, label = "checkLogs()@@@11@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "manager.removeContainer(0)@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "manager.stopContainer(0)@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "failureShouldStillAllowOtherContainersDataAccess['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "client.setPort(Integer.parseInt(manager.getContainerPort(0)))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Client.Response resp = client.set(key,value)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "await().untilAsserted(null)@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "String value = \"Foo\"@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String key = \"value_testSessionPersists\"@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "manager.startAllInactiveContainers()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "failureShouldStillAllowOtherContainersDataAccess['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "containersShouldHavePersistentSessionData['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2->6 [style = bold, label=""];
+2->0 [style = bold, label=""];
+8->2 [style = bold, label=""];
+7->1 [style = bold, label=""];
+4->2 [style = solid, label="key"];
+0->5 [style = bold, label=""];
+11->1 [style = bold, label=""];
+3->2 [style = solid, label="value"];
+9->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->8 [style = bold, label=""];
+5->6 [style = bold, label=""];
+1->4 [style = bold, label=""];
+6->10 [style = bold, label=""];
+}

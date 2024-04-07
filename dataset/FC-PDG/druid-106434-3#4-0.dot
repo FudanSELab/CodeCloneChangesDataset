@@ -1,0 +1,15 @@
+digraph {
+1 [style = filled, label = "return \"mezzanine\".equals(dimValue)? \"\": super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a79e6bdimValue@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "String dimValue@@@10@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "apply['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "apply['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "apply['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->1 [style = solid, label="dimValue"];
+3->1 [style = bold, label=""];
+2->0 [style = dotted, label="true"];
+4->0 [style = dotted, label="true"];
+2->1 [style = bold, label=""];
+4->1 [style = bold, label=""];
+1->0 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+}

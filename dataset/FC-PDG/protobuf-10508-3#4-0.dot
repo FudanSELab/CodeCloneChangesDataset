@@ -1,0 +1,31 @@
+digraph {
+14 [style = filled, label = "NestedTestAllTypes message = parentBuilder.build()@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "builder.getOneofNestedMessageBuilder()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertTrue(message.getPayload().hasOneofNestedMessage())@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "NestedTestAllTypes.Builder parentBuilder = NestedTestAllTypes.newBuilder()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertTrue(message.hasPayload())@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testOneofMerge['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "{TestOneof2.Builder builder = TestOneof2.newBuilder()TestOneof2 message = builder.setFooString(\"foo\").build()TestOneof2 message2 = TestOneof2.newBuilder().mergeFrom(message).build()assertTrue(message2.hasFooString())assertEquals(\"foo\",message2.getFooString())}@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "TestAllTypes.Builder builder = parentBuilder.getPayloadBuilder()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertTrue(builder.hasOneofNestedMessage())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertTrue(parentBuilder.hasPayload())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "{TestOneof2.Builder builder = TestOneof2.newBuilder()TestOneof2 message = builder.setFooInt(123).build()TestOneof2 message2 = TestOneof2.newBuilder().mergeFrom(message).build()assertTrue(message2.hasFooInt())assertEquals(123,message2.getFooInt())}@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testOneofNestedBuilderOnChangePropagation['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testOneofMerge['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "{TestOneof2.Builder builder = TestOneof2.newBuilder()TestOneof2 message = builder.setFooEnum(TestOneof2.NestedEnum.BAR).build()TestOneof2 message2 = TestOneof2.newBuilder().mergeFrom(message).build()assertTrue(message2.hasFooEnum())assertEquals(TestOneof2.NestedEnum.BAR,message2.getFooEnum())}@@@17@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "{TestOneof2.Builder builder = TestOneof2.newBuilder()TestOneof2 message = builder.setFooMessage(TestOneof2.NestedMessage.newBuilder().setQuxInt(234).build()).build()TestOneof2 message2 = TestOneof2.newBuilder().mergeFrom(message).build()assertTrue(message2.hasFooMessage())assertEquals(234,message2.getFooMessage().getQuxInt())}@@@24@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->9 [style = bold, label=""];
+9->10 [style = bold, label=""];
+2->0 [style = bold, label=""];
+5->0 [style = bold, label=""];
+0->13 [style = dashed, label="0"];
+13->7 [style = bold, label=""];
+0->3 [style = bold, label=""];
+8->6 [style = bold, label=""];
+12->14 [style = bold, label=""];
+14->8 [style = bold, label=""];
+11->13 [style = bold, label=""];
+3->1 [style = bold, label=""];
+1->4 [style = bold, label=""];
+10->12 [style = bold, label=""];
+}

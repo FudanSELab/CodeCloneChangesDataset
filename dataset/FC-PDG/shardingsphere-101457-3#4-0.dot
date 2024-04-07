@@ -1,0 +1,34 @@
+digraph {
+6 [style = filled, label = "ColumnNameContext each@@@8@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "columns.add((ColumnSegment)visit(each))@@@9@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "columns.add((ColumnSegment)visit(each))@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "return new DropColumnDefinitionSegment(ctx.getStart().getStartIndex(),ctx.getStop().getStopIndex(),columns)@@@12@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "visitDropColumnSpecification['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "null != ctx.columnOrColumnList().columnName()@@@4@@@['0', '1', '0']", fillcolor = white, shape = diamond image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "visitDropColumnSpecification['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "columns.add((ColumnSegment)visit(ctx.columnOrColumnList().columnName()))@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "final DropColumnSpecificationContext ctx@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Collection<ColumnSegment> columns = new LinkedList<>()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "ctx.columnOrColumnList().columnNames().columnName()@@@8@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "visitDropColumnSpecification['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "return new DropColumnDefinitionSegment(ctx.getStart().getStartIndex(),ctx.getStop().getStopIndex(),columns)@@@7@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->7 [style = bold, label=""];
+8->11 [style = bold, label=""];
+3->9 [style = solid, label="columns"];
+8->11 [style = dotted, label="true"];
+11->9 [style = bold, label=""];
+3->2 [style = solid, label="columns"];
+0->1 [style = dotted, label="true"];
+8->5 [style = dotted, label="false"];
+0->3 [style = bold, label=""];
+10->1 [style = dotted, label="true"];
+12->3 [style = bold, label=""];
+12->1 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+3->4 [style = bold, label=""];
+3->8 [style = bold, label=""];
+8->6 [style = dotted, label="false"];
+10->3 [style = bold, label=""];
+4->2 [style = bold, label=""];
+7->9 [style = bold, label=""];
+}

@@ -1,0 +1,37 @@
+digraph {
+8 [style = filled, label = "MappedStatement mappedStatement = configuration.getMappedStatement(\"selectWithOptions\")@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertThat(mappedStatement.getFetchSize(),is(200))@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "shouldSuccessfullyLoadXMLMapperFile['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "InputStream inputStream = Resources.getResourceAsStream(resource)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "mappedStatementWithOptions['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "builder.parse()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Configuration configuration = new Configuration()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(mappedStatement.isFlushCacheRequired(),is(false))@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "assertThat(mappedStatement.getTimeout(),is(10))@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertThat(mappedStatement.getResultSetType(),is(ResultSetType.SCROLL_SENSITIVE))@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "XMLMapperBuilder builder = new XMLMapperBuilder(inputStream,configuration,resource,configuration.getSqlFragments())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "String resource = \"org/apache/ibatis/builder/AuthorMapper.xml\"@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "inputStream.close()@@@8@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "shouldSuccessfullyLoadXMLMapperFile['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "assertThat(mappedStatement.getStatementType(),is(StatementType.PREPARED))@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "assertThat(mappedStatement.isUseCache(),is(false))@@@14@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->5 [style = bold, label=""];
+2->4 [style = solid, label="inputStream"];
+10->15 [style = bold, label=""];
+13->11 [style = bold, label=""];
+1->3 [style = bold, label=""];
+12->1 [style = bold, label=""];
+11->9 [style = bold, label=""];
+5->7 [style = bold, label=""];
+5->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+9->14 [style = bold, label=""];
+1->4 [style = solid, label="configuration"];
+6->1 [style = bold, label=""];
+8->10 [style = bold, label=""];
+0->1 [style = bold, label=""];
+15->13 [style = bold, label=""];
+3->2 [style = solid, label="resource"];
+3->2 [style = bold, label=""];
+3->4 [style = solid, label="resource"];
+}

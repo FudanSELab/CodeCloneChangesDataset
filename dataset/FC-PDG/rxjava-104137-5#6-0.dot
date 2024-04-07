@@ -1,0 +1,31 @@
+digraph {
+0 [style = filled, label = "TestObserverEx<Integer> to = Observable.just(1).hide().concatMap(Functions.justFunction(new Observable<Integer>(){@Override protected void subscribeActual(Observer<? super Integer> o){ts0(0( = oo.onSubscribe(Disposable.empty())o.onError(new TestException(\"First\"))}}),2,ImmediateThinScheduler.INSTANCE).to(TestHelper.testConsumer())@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "TestHelper.assertUndeliverable(errors,0,)@@@18@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "@SuppressWarnings(\"rawtypes\") final Observer(( ts0 = {null}@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "badInnerSource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "badInnerSourceDelayError['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "TestSubscriberEx<Integer> ts = Flowable.just(1).hide().concatMapDelayError(Functions.justFunction(new Flowable<Integer>(){@Override protected void subscribeActual(Subscriber<? super Integer> s){ts0(0( = ss.onSubscribe(new BooleanSubscription())s.onError(new TestException(\"First\"))}}),true,2,ImmediateThinScheduler.INSTANCE).to(TestHelper.testConsumer())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "@SuppressWarnings(\"rawtypes\") final Subscriber(( ts0 = {null}@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "List<Throwable> errors = TestHelper.trackPluginErrors()@@@15@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "{RxJavaPlugins.reset()}@@@20@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ts0(0(.onError(new TestException(\"Second\"))@@@17@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "to.assertFailureAndMessage(,\"First\")@@@14@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "badInnerSource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "ts.assertFailureAndMessage(,\"First\")@@@14@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->10 [style = dashed, label="0"];
+12->10 [style = bold, label=""];
+11->3 [style = bold, label=""];
+3->1 [style = solid, label="errors"];
+5->0 [style = bold, label=""];
+7->11 [style = dashed, label="0"];
+9->11 [style = bold, label=""];
+8->5 [style = bold, label=""];
+1->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+10->9 [style = bold, label=""];
+4->1 [style = bold, label=""];
+0->7 [style = bold, label=""];
+2->5 [style = bold, label=""];
+7->3 [style = bold, label=""];
+}

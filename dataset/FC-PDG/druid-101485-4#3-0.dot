@@ -1,0 +1,27 @@
+digraph {
+10 [style = filled, label = "nestedParseSpec = new JSONParseSpec(new TimestampSpec(\"timestamp\",\"iso\",null),new DimensionsSpec(Lists.newArrayList(new StringDimensionSchema(\"event\"),new StringDimensionSchema(\"id\"),new StringDimensionSchema(\"someOtherId\"),new StringDimensionSchema(\"isValid\")),null,null),new JSONPathSpec(true,Lists.newArrayList(new JSONPathFieldSpec(JSONPathFieldType.ROOT,\"eventType\",\"eventType\"),new JSONPathFieldSpec(JSONPathFieldType.PATH,\"foobar\",\"$.foo.bar\"),new JSONPathFieldSpec(JSONPathFieldType.PATH,\"bar0\",\"$.bar(0(.bar\"))),null,null)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "nestedParser = new ProtobufInputRowParser(nestedParseSpec,\"prototest.desc\",\"ProtoTestEvent\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "protoFilePath = \"ProtoFile\"@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "setUp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "parseSpec = new JSONParseSpec(new TimestampSpec(\"timestamp\",\"iso\",null),new DimensionsSpec(Lists.newArrayList(new StringDimensionSchema(\"event\"),new StringDimensionSchema(\"id\"),new StringDimensionSchema(\"someOtherId\"),new StringDimensionSchema(\"isValid\")),null,null),new JSONPathSpec(true,Lists.newArrayList(new JSONPathFieldSpec(JSONPathFieldType.ROOT,\"eventType\",\"eventType\"),new JSONPathFieldSpec(JSONPathFieldType.PATH,\"foobar\",\"$.foo.bar\"),new JSONPathFieldSpec(JSONPathFieldType.PATH,\"bar0\",\"$.bar(0(.bar\"))),null,null)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "setUp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "flatParseSpec = new JSONParseSpec(new TimestampSpec(\"timestamp\",\"iso\",null),new DimensionsSpec(Lists.newArrayList(new StringDimensionSchema(\"event\"),new StringDimensionSchema(\"id\"),new StringDimensionSchema(\"someOtherId\"),new StringDimensionSchema(\"isValid\")),null,null),null,null,null)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "flatParser = new ProtobufInputRowParser(flatParseSpec,\"prototest.desc\",\"ProtoTestEvent\")@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "setup['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "protoInputs = getProtoInputs(protoFilePath)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "decoder = new FileBasedProtobufBytesDecoder(\"prototest.desc\",\"ProtoTestEvent\")@@@5@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+9->10 [style = bold, label=""];
+5->6 [style = solid, label="protoFilePath"];
+0->10 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+10->2 [style = bold, label=""];
+10->7 [style = solid, label="nestedParseSpec"];
+5->6 [style = bold, label=""];
+2->8 [style = solid, label="flatParseSpec"];
+2->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+2->5 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

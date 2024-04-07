@@ -1,0 +1,13 @@
+digraph {
+3 [style = filled, label = "testMinExactWithPostFilters['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "h.getCore().withSearcher(null)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "h.getCore().withSearcher(null)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testMinExactWithPostFilterThatChangesScoreMode['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "h.getCore().withSearcher(null)@@@18@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testMinExactWithPostFilterThatChangesScoreMode['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2->1 [style = bold, label=""];
+0->1 [style = bold, label=""];
+5->4 [style = bold, label=""];
+3->1 [style = bold, label=""];
+1->5 [style = bold, label=""];
+}

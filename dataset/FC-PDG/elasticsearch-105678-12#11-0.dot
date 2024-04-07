@@ -1,0 +1,38 @@
+digraph {
+3 [style = filled, label = "when(indexShard.isRelocatedPrimary()).thenAnswer(null)@@@33@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "when(indexShard.routingEntry()).thenAnswer(null)@@@23@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ShardId shardId@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "when(indexShard.shardId()).thenReturn(shardId)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "when(indexShard.getPendingPrimaryTerm()).thenAnswer(null)@@@35@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "doAnswer(null).when(indexShard).acquireReplicaOperationPermit(anyLong(),anyLong(),anyLong(),any(),anyString(),anyObject())@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "mockIndexShard['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "ClusterService clusterService@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "mockIndexShard['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "return indexShard@@@36@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final IndexShard indexShard = mock()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "mockIndexShard['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "ClusterService clusterService@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "doAnswer(null).when(indexShard).acquirePrimaryOperationPermit(any(),anyString(),anyObject())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "doThrow(new AssertionError(\"failed shard is not supported\")).when(indexShard).failShard(anyString(),any())@@@34@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "ShardId shardId@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4->5 [style = dotted, label="true"];
+0->9 [style = bold, label=""];
+15->7 [style = dotted, label="true"];
+4->2 [style = bold, label=""];
+15->14 [style = dotted, label="true"];
+13->12 [style = solid, label="shardId"];
+2->10 [style = solid, label="indexShard"];
+11->13 [style = dotted, label="true"];
+11->7 [style = dotted, label="true"];
+3->0 [style = bold, label=""];
+12->8 [style = bold, label=""];
+1->6 [style = bold, label=""];
+6->3 [style = bold, label=""];
+4->7 [style = dotted, label="true"];
+11->2 [style = bold, label=""];
+2->12 [style = bold, label=""];
+2->8 [style = bold, label=""];
+9->10 [style = bold, label=""];
+15->2 [style = bold, label=""];
+8->1 [style = bold, label=""];
+}

@@ -1,0 +1,32 @@
+digraph {
+7 [style = filled, label = "final StateBackend backend = StateBackendLoader.fromApplicationOrConfigOrDefault(appBackend,TernaryBoolean.UNDEFINED,config(\"rocksdb\",true),cl,null)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "final StateBackend appBackend = new ChangelogStateBackend(new MockStateBackend())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final StateBackend appBackend = new MockStateBackend()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final StateBackend backend = StateBackendLoader.fromApplicationOrConfigOrDefault(appBackend,config(\"rocksdb\"),cl,null)@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "testApplicationDefinedHasPrecedence['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "testApplicationDefinedChangelogStateBackend['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertTrue(((MockStateBackend)(((ChangelogStateBackend)backend).getDelegatedStateBackend())).isConfigUpdated())@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testApplicationDefinedHasPrecedence['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final CheckpointStorage storage = CheckpointStorageLoader.load(null,null,backend,config(),cl,null)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertDelegateStateBackend(backend,,storage,)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+9->3 [style = bold, label=""];
+3->5 [style = solid, label="backend"];
+7->1 [style = bold, label=""];
+1->5 [style = solid, label="storage"];
+4->3 [style = solid, label="appBackend"];
+3->1 [style = solid, label="backend"];
+0->4 [style = bold, label=""];
+4->7 [style = bold, label=""];
+8->9 [style = bold, label=""];
+9->3 [style = solid, label="appBackend"];
+7->5 [style = solid, label="backend"];
+6->4 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+4->7 [style = solid, label="appBackend"];
+7->1 [style = solid, label="backend"];
+4->9 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+1->5 [style = bold, label=""];
+}

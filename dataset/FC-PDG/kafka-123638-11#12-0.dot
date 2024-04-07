@@ -1,0 +1,37 @@
+digraph {
+11 [style = filled, label = "client.prepareResponse(null,new TxnOffsetCommitResponse(0,txnOffsetCommitResponse))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "final Errors error@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "final short producerEpoch@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final short producerEpoch@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "prepareAddOffsetsToTxnResponse['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final short producerEpoch@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "final long producerId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "Map<TopicPartition,Errors> txnOffsetCommitResponse@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "client.prepareResponse(null,new AddOffsetsToTxnResponse(new AddOffsetsToTxnResponseData().setErrorCode(error.code())))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "prepareAddOffsetsToTxnResponse['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "final long producerId@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "final String consumerGroupId@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final String consumerGroupId@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "final String consumerGroupId@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final Errors error@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "prepareTxnOffsetCommitResponse['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9->2 [style = bold, label=""];
+9->8 [style = dotted, label="true"];
+14->13 [style = dotted, label="true"];
+14->15 [style = dotted, label="true"];
+2->11 [style = dashed, label="0"];
+3->4 [style = dotted, label="true"];
+13->11 [style = solid, label="txnOffsetCommitResponse"];
+3->5 [style = dotted, label="true"];
+0->2 [style = solid, label="error"];
+9->5 [style = dotted, label="true"];
+14->12 [style = dotted, label="true"];
+14->11 [style = bold, label=""];
+3->1 [style = dotted, label="true"];
+9->6 [style = dotted, label="true"];
+5->15 [style = dashed, label="0"];
+14->10 [style = dotted, label="true"];
+3->2 [style = bold, label=""];
+9->7 [style = dotted, label="true"];
+3->0 [style = dotted, label="true"];
+}

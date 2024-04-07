@@ -1,0 +1,32 @@
+digraph {
+1 [style = filled, label = "translateMatch['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return translateOr(condition)@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "translateMatch['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "return null@@@13@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "condition.isA(SqlKind.OR)@@@9@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "condition.getKind().belongsTo(SqlKind.COMPARISON)@@@3@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "return translateComparison(condition)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "translateMatch['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "RexNode condition@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "condition.isA(SqlKind.AND)@@@6@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "return translateAnd(condition)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+10->6 [style = dotted, label="true"];
+7->0 [style = dotted, label="true"];
+3->10 [style = bold, label=""];
+9->8 [style = dotted, label="false"];
+2->0 [style = dotted, label="true"];
+0->6 [style = solid, label="condition"];
+9->8 [style = bold, label=""];
+3->10 [style = dotted, label="false"];
+3->5 [style = dotted, label="true"];
+3->5 [style = bold, label=""];
+10->6 [style = bold, label=""];
+9->4 [style = dotted, label="true"];
+9->4 [style = bold, label=""];
+0->5 [style = solid, label="condition"];
+1->0 [style = dotted, label="true"];
+10->9 [style = bold, label=""];
+10->9 [style = dotted, label="false"];
+0->4 [style = solid, label="condition"];
+7->3 [style = bold, label=""];
+}

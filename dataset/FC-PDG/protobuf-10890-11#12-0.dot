@@ -1,0 +1,26 @@
+digraph {
+1 [style = filled, label = "List<UnknownField> unknownFields@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "mergeField['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final Tokenizer tokenizer@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "TextFormatParseInfoTree.Builder parseTreeBuilder@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final ExtensionRegistry extensionRegistry@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "List<UnknownField> unknownFields@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "mergeField['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "TextFormatParseInfoTree.Builder parseTreeBuilder@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "final MessageReflection.MergeTarget target@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "Tokenizer tokenizer@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "skipField['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final ExtensionRegistry extensionRegistry@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final MessageReflection.MergeTarget target@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0->2 [style = dotted, label="true"];
+8->10 [style = dotted, label="true"];
+8->6 [style = dotted, label="true"];
+0->3 [style = dotted, label="true"];
+0->4 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+11->12 [style = dotted, label="true"];
+0->5 [style = dotted, label="true"];
+8->5 [style = dotted, label="true"];
+8->9 [style = dotted, label="true"];
+}

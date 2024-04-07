@@ -1,0 +1,20 @@
+digraph {
+4 [style = filled, label = "new Observable<Integer>(){@Override protected void subscribeActual(Observer<? super Integer> observer){observer.onSubscribe(Disposable.empty())observer.onNext(1)observer.onNext(2)observer.onError(new TestException())observer.onComplete()}}.all(new Predicate<Integer>(){@Override public boolean test(Integer v){throw new TestException()}}).test().assertFailure()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "{RxJavaPlugins.reset()}@@@22@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "List<Throwable> errors = TestHelper.trackPluginErrors()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "TestHelper.assertUndeliverable(errors,0,)@@@20@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "predicateThrows['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "new Flowable<Integer>(){@Override protected void subscribeActual(Subscriber<? super Integer> subscriber){subscriber.onSubscribe(new BooleanSubscription())subscriber.onNext(1)subscriber.onNext(2)subscriber.onError(new TestException())subscriber.onComplete()}}.all(new Predicate<Integer>(){@Override public boolean test(Integer v){throw new TestException()}}).toFlowable().test().assertFailure()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "predicateThrowsObservable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "predicateThrows['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2->0 [style = bold, label=""];
+4->6 [style = dashed, label="0"];
+5->3 [style = bold, label=""];
+1->3 [style = bold, label=""];
+3->2 [style = solid, label="errors"];
+3->4 [style = bold, label=""];
+6->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+3->6 [style = bold, label=""];
+7->3 [style = bold, label=""];
+}

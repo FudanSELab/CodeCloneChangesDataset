@@ -1,0 +1,35 @@
+digraph {
+10 [style = filled, label = "LOG.info(\"Finished perJobYarnCluster()\")@@@14@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "LOG.info(\"Starting perJobYarnCluster()\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "LOG.info(\"Starting perJobYarnClusterWithParallelism()\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final long taskManagerMemoryMB = 1024@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "runWithArgs(new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1b82d36,\"Program execution finished\",new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1b82d5d,RunTypes.CLI_FRONTEND,0,true)@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final long offHeapMemory = taskManagerMemoryMB - ResourceManagerOptions.CONTAINERIZED_HEAP_CUTOFF_MIN.defaultValue() - networkBuffersMB - 100@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "perJobYarnClusterWithParallelism['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "LOG.info(\"Finished perJobYarnClusterWithParallelism()\")@@@11@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "perJobYarnClusterWithParallelism['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "perJobYarnClusterOffHeap['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final long networkBuffersMB = TaskManagerServices.calculateNetworkBufferMemory((taskManagerMemoryMB - ResourceManagerOptions.CONTAINERIZED_HEAP_CUTOFF_MIN.defaultValue()) << 20,new Configuration()) >> 20@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "File exampleJarLocation = getTestJarPath(\"BatchWordCount.jar\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "addTestAppender(,Level.INFO)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->9 [style = bold, label=""];
+9->5 [style = solid, label="offHeapMemory"];
+5->3 [style = bold, label=""];
+2->5 [style = bold, label=""];
+0->2 [style = bold, label=""];
+11->5 [style = solid, label="taskManagerMemoryMB"];
+6->4 [style = bold, label=""];
+7->9 [style = solid, label="networkBuffersMB"];
+9->5 [style = bold, label=""];
+12->8 [style = bold, label=""];
+5->10 [style = bold, label=""];
+11->7 [style = solid, label="taskManagerMemoryMB"];
+8->0 [style = bold, label=""];
+11->9 [style = solid, label="taskManagerMemoryMB"];
+4->8 [style = dashed, label="0"];
+4->0 [style = bold, label=""];
+2->11 [style = bold, label=""];
+1->4 [style = bold, label=""];
+11->7 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+}

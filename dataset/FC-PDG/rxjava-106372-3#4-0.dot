@@ -1,0 +1,18 @@
+digraph {
+0 [style = filled, label = "ts.assertError()@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "innerThrows['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ts.assertNoValues()@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Flowable.just(1).hide().concatMapDelayError(new Function<Integer,Flowable<Integer>>(){@Override public Flowable<Integer> apply(Integer v){throw new TestException()}}).subscribe(ts)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ts.assertNotComplete()@@@12@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "innerThrows['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "innerThrows['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "TestSubscriber<Integer> ts = TestSubscriber.create()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+3->5 [style = bold, label=""];
+4->3 [style = bold, label=""];
+6->3 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->5 [style = solid, label="ts"];
+7->3 [style = bold, label=""];
+}

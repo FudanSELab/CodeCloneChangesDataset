@@ -1,0 +1,35 @@
+digraph {
+12 [style = filled, label = "this.isDefault = CommonUtils.toBoolean(config.getAttribute(\"default\"))@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "IConfigurationElement config@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "AggregateFunctionDescriptor['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "SQLDialectDescriptor['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "this.implClass = new ObjectType(config.getAttribute(\"class\"))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "this.isAbstract = CommonUtils.getBoolean(config.getAttribute(\"abstract\"))@@@9@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "IConfigurationElement config@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "this.type = config.getAttribute(\"type\")@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "this.isHidden = CommonUtils.getBoolean(config.getAttribute(\"hidden\"))@@@10@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "this.description = config.getAttribute(\"description\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "super(config)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "this.icon = iconToImage(config.getAttribute(\"icon\"))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "this.id = config.getAttribute(\"id\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "SQLDialectDescriptor['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "this.label = config.getAttribute(\"label\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14->6 [style = solid, label="config"];
+4->6 [style = solid, label="config"];
+13->12 [style = bold, label=""];
+10->8 [style = bold, label=""];
+0->2 [style = bold, label=""];
+9->6 [style = bold, label=""];
+4->14 [style = dashed, label="0"];
+2->10 [style = bold, label=""];
+3->4 [style = dotted, label="true"];
+11->14 [style = dotted, label="true"];
+11->6 [style = bold, label=""];
+6->1 [style = bold, label=""];
+7->0 [style = bold, label=""];
+9->4 [style = dotted, label="true"];
+5->7 [style = bold, label=""];
+2->13 [style = bold, label=""];
+3->6 [style = bold, label=""];
+1->5 [style = bold, label=""];
+}

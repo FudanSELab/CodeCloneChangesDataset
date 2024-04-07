@@ -1,0 +1,28 @@
+digraph {
+9 [style = filled, label = "testMatchAllDocs['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testBothCases(numDocs,\"field\",Queries.newMatchAllQuery(),null,null)@@@4@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final int numDocs = randomIntBetween(10,200)@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "fieldType.setName(\"field\")@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "testMatchNoDocs['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "final MissingAggregationBuilder builder = new MissingAggregationBuilder(\"_name\",null).field(fieldType.name())@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "int numDocs = randomIntBetween(10,200)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final MappedFieldType fieldType = new NumberFieldMapper.Builder(\"_name\",NumberType.LONG).fieldType()@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "testMatchNoDocs['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testBothCases(numDocs,\"field\",Queries.newMatchAllQuery(),null,null)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testCase(newMatchAllQuery(),builder,null,null,singleton(fieldType))@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+0->10 [style = bold, label=""];
+6->4 [style = solid, label="fieldType"];
+2->10 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+8->4 [style = solid, label="builder"];
+5->8 [style = bold, label=""];
+9->0 [style = bold, label=""];
+0->2 [style = solid, label="numDocs"];
+3->6 [style = bold, label=""];
+8->4 [style = bold, label=""];
+0->10 [style = solid, label="numDocs"];
+6->5 [style = bold, label=""];
+1->0 [style = bold, label=""];
+7->3 [style = bold, label=""];
+}

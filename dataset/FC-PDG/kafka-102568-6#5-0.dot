@@ -1,0 +1,35 @@
+digraph {
+3 [style = filled, label = "final List<List<KeyValueTimestamp<Long,String>>> expectedResult = Arrays.asList(null,null,Collections.singletonList(new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"A-null\",3L)),null,Collections.singletonList(new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"B-a\",5L)),null,null,null,Collections.singletonList(new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"C-null\",9L)),null,null,null,null,null,Collections.singletonList(new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"D-d\",15L)))@@@4@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testLeft['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "testLeft['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "runTest(expectedResult)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "STREAMS_CONFIG.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG,\"topology_driver:0000\")@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "final List<List<TestRecord<Long,String>>> expectedResult = Arrays.asList(null,null,Collections.singletonList(new TestRecord<>(ANY_UNIQUE_KEY,\"A-null\",null,3L)),null,Collections.singletonList(new TestRecord<>(ANY_UNIQUE_KEY,\"B-a\",null,5L)),null,null,null,Collections.singletonList(new TestRecord<>(ANY_UNIQUE_KEY,\"C-null\",null,9L)),null,null,null,null,null,Collections.singletonList(new TestRecord<>(ANY_UNIQUE_KEY,\"D-d\",null,15L)))@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "testInner['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "leftStream.join(rightTable,valueJoiner).to(OUTPUT_TOPIC)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "leftStream.leftJoin(rightTable,valueJoiner).to(OUTPUT_TOPIC)@@@5@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "runTestWithDriver(expectedResult)@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "STREAMS_CONFIG.put(StreamsConfig.APPLICATION_ID_CONFIG,appID + \"-left\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final List<List<KeyValueTimestamp<Long,String>>> expectedResult = Arrays.asList(null,null,null,null,Collections.singletonList(new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"B-a\",5L)),null,null,null,null,null,null,null,null,null,Collections.singletonList(new KeyValueTimestamp<>(ANY_UNIQUE_KEY,\"D-d\",15L)))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "STREAMS_CONFIG.put(StreamsConfig.APPLICATION_ID_CONFIG,appID + \"-inner\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12->4 [style = bold, label=""];
+9->10 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+2->5 [style = bold, label=""];
+0->2 [style = bold, label=""];
+11->9 [style = bold, label=""];
+10->4 [style = solid, label="expectedResult"];
+4->8 [style = bold, label=""];
+6->4 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+3->4 [style = solid, label="expectedResult"];
+3->10 [style = dashed, label="0"];
+1->12 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+3->1 [style = bold, label=""];
+6->8 [style = solid, label="expectedResult"];
+1->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+10->12 [style = bold, label=""];
+7->2 [style = bold, label=""];
+}

@@ -1,0 +1,32 @@
+digraph {
+8 [style = filled, label = "configureObject['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "Object parent@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "PostgreSequence sequence@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "configureObject['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Object container@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Object container@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "DB2Sequence sequence@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "DB2Sequence sequence@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "DB2Schema schema = (DB2Schema)container@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "return new UITask<DB2Sequence>(){@Override protected DB2Sequence runTask(){EntityEditPage page = new EntityEditPage(schema.getDataSource(),DBSEntityType.SEQUENCE)if (!page.edit()) {return null}sequence.setName(page.getEntityName())return sequence}}.execute()@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "return new UITask<PostgreSequence>(){@Override protected PostgreSequence runTask(){CreateSequencePage editPage = new CreateSequencePage(sequence)if (!editPage.edit()) {return null}sequence.setName(editPage.getSequenceName())return sequence}}.execute()@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "configureObject['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8->6 [style = dotted, label="true"];
+1->0 [style = dotted, label="true"];
+13->11 [style = dotted, label="true"];
+1->3 [style = dotted, label="true"];
+13->9 [style = bold, label=""];
+13->10 [style = dotted, label="true"];
+1->5 [style = dotted, label="true"];
+13->12 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+8->4 [style = bold, label=""];
+3->4 [style = solid, label="container"];
+6->4 [style = solid, label="container"];
+5->12 [style = dashed, label="0"];
+4->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+8->5 [style = dotted, label="true"];
+}

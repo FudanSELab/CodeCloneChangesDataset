@@ -1,0 +1,11 @@
+digraph {
+1 [style = filled, label = "testQuery(\"SELECT SUM(cnt), gran FROM (\" + \" SELECT TIME_FLOOR(__time, 'P1M', CAST(NULL AS TIMESTAMP), 'America/Los_Angeles') AS gran,\" + \" cnt FROM druid.foo\" + \") AS x\" + \"GROUP BY gran\" + \"ORDER BY gran\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(new PeriodGranularity(Period.months(1),null,DateTimes.inferTzFromString(LOS_ANGELES))).aggregators(aggregators(new LongSumAggregatorFactory(\"a0\",\"cnt\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@965866,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@96586d,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@965874,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@96587b))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testTimeseriesUsingTimeFloor['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testTimeseriesLosAngelesUsingTimeFloorConnectionUtc['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testTimeseriesLosAngelesUsingTimeFloorConnectionUtc['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "testQuery(\"SELECT SUM(cnt), gran FROM (\" + \" SELECT TIME_FLOOR(__time, 'P1M') AS gran,\" + \" cnt FROM druid.foo\" + \") AS x\" + \"GROUP BY gran\" + \"ORDER BY gran\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.MONTH).aggregators(aggregators(new LongSumAggregatorFactory(\"a0\",\"cnt\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9658b8,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9658bf))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->4 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

@@ -1,0 +1,27 @@
+digraph {
+8 [style = filled, label = "LeafReaderContext readerContext@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "getValues['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "LeafReaderContext readerContext@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return new IntDocValues(this){private int getValueForDoc(int doc){if (doc < lastDocID) {throw new AssertionError(\"docs were sent out-of-order: lastDocID=\" + lastDocID + \" vs doc=\" + doc)}lastDocID = docint curDocID = arr.docID()if (doc > curDocID) {curDocID = arr.advance(doc)}if (doc == curDocID) {return (int)arr.longValue()}{return 0}}@Override public int intVal(int doc){return getValueForDoc(doc)}@Override public String strVal(int doc){Integer intValue = intVal(doc)return intValueToStringValue(intValue)}@Override public boolean exists(int doc){getValueForDoc(doc)return arr.docID() == doc}@Override public ValueSourceScorer getRangeScorer(LeafReaderContext readerContext,String lowerVal,String upperVal,boolean includeLower,boolean includeUpper){Integer lower = stringValueToIntValue(lowerVal)Integer upper = stringValueToIntValue(upperVal)if (lower == null) {lower = Integer.MIN_VALUE}{if (!includeLower && lower < Integer.MAX_VALUE) lower++}if (upper == null) {upper = Integer.MAX_VALUE}{if (!includeUpper && upper > Integer.MIN_VALUE) upper--}final int ll = lowerfinal int uu = upperreturn new ValueSourceScorer(readerContext,this){@Override public boolean matches(int doc){if (!exists(doc)) return falseint val = intVal(doc)return val >= ll && val <= uu}}}@Override public ValueFiller getValueFiller(){return new ValueFiller(){@Override public MutableValue getValue(){return mval}@Override public void fillValue(int doc){mval.value = intVal(doc)mval.exists = arr.docID() == doc}}}}@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Map context@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "Map context@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final NumericDocValues arr = getNumericDocValues(context,readerContext)@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+9 [style = filled, label = "getValues['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "final NumericDocValues arr = DocValues.getNumeric(readerContext.reader(),field)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "getValues['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9->3 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+7->1 [style = bold, label=""];
+9->8 [style = dotted, label="true"];
+6->2 [style = dotted, label="true"];
+6->7 [style = bold, label=""];
+5->7 [style = solid, label="context"];
+4->3 [style = bold, label=""];
+4->0 [style = dotted, label="true"];
+9->2 [style = dotted, label="true"];
+8->1 [style = solid, label="readerContext"];
+3->7 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+2->7 [style = solid, label="readerContext"];
+4->2 [style = dotted, label="true"];
+}

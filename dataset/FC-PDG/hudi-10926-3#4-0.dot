@@ -1,0 +1,15 @@
+digraph {
+5 [style = filled, label = "props.setProperty(HoodiePayloadProps.PAYLOAD_EVENT_TIME_FIELD_PROP,\"ts\")@@@6@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "props = new Properties()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "setUp['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "schema = Schema.createRecord(Arrays.asList(new Schema.Field(\"id\",Schema.create(Schema.Type.STRING),\"\",null),new Schema.Field(\"partition\",Schema.create(Schema.Type.STRING),\"\",null),new Schema.Field(\"ts\",Schema.create(Schema.Type.LONG),\"\",null),new Schema.Field(\"_hoodie_is_deleted\",Schema.create(Type.BOOLEAN),\"\",false)))@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "setUp['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "setUp['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "props.setProperty(HoodiePayloadProps.PAYLOAD_ORDERING_FIELD_PROP,\"ts\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+2->1 [style = bold, label=""];
+6->3 [style = bold, label=""];
+3->2 [style = bold, label=""];
+1->5 [style = bold, label=""];
+}

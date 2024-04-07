@@ -1,0 +1,31 @@
+digraph {
+3 [style = filled, label = "WatcherEvent e = event.getWrapper()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "process['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "sendResponse(h,e,\"notification\",null,null)@@@8@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "process['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "WatchedEvent event@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ZooTrace.logTraceMessage(LOG,ZooTrace.EVENT_DELIVERY_TRACE_MASK,\"Deliver event \" + event + \" to 0x\" + Long.toHexString(this.sessionId) + \" through \" + this)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "LOG.isTraceEnabled()@@@4@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "sendResponse(h,e,\"notification\")@@@9@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "ReplyHeader h = new ReplyHeader(-1,-1L,0)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "process['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0->6 [style = bold, label=""];
+2->7 [style = dashed, label="0"];
+6->4 [style = dotted, label="true"];
+0->7 [style = solid, label="h"];
+9->0 [style = bold, label=""];
+1->5 [style = dotted, label="true"];
+3->7 [style = solid, label="e"];
+6->4 [style = bold, label=""];
+4->3 [style = bold, label=""];
+3->7 [style = bold, label=""];
+6->3 [style = bold, label=""];
+8->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+9->5 [style = dotted, label="true"];
+5->4 [style = solid, label="event"];
+0->2 [style = solid, label="h"];
+1->0 [style = bold, label=""];
+8->5 [style = dotted, label="true"];
+3->2 [style = solid, label="e"];
+}

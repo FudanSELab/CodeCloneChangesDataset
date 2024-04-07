@@ -1,0 +1,36 @@
+digraph {
+8 [style = filled, label = "TestSubscriber<Integer> ts = TestSubscriber.create()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "mainErrors['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "ts.assertNotComplete()@@@16@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "ts.assertError()@@@15@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "source.onError(new TestException())@@@13@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "source.onComplete()@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "source.onNext(1)@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "ts.assertNoErrors()@@@15@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "ts.assertComplete()@@@16@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "mainErrors['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "source.concatMapDelayError(new Function<Integer,Flowable<Integer>>(){@Override public Flowable<Integer> apply(Integer v){return Flowable.range(v,2)}}).subscribe(ts)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "PublishProcessor<Integer> source = PublishProcessor.create()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "mainCompletes['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "source.onNext(2)@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "ts.assertValues(1,2,2,3)@@@14@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10->1 [style = bold, label=""];
+1->8 [style = bold, label=""];
+9->13 [style = bold, label=""];
+13->12 [style = bold, label=""];
+0->13 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+3->11 [style = bold, label=""];
+11->9 [style = bold, label=""];
+4->7 [style = bold, label=""];
+9->0 [style = bold, label=""];
+5->9 [style = bold, label=""];
+8->4 [style = solid, label="ts"];
+8->4 [style = bold, label=""];
+6->1 [style = bold, label=""];
+3->5 [style = bold, label=""];
+5->11 [style = dashed, label="0"];
+2->12 [style = dashed, label="0"];
+14->1 [style = bold, label=""];
+7->3 [style = bold, label=""];
+}

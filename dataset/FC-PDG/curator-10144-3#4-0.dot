@@ -1,0 +1,26 @@
+digraph {
+6 [style = filled, label = "List<String> servers@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "return new JoinAddStatConfigEnsembleable(){@Override public byte(( forEnsemble(){return this.forEnsemble()}@Override public Ensembleable<byte((> storingStatIn(Stat stat){return this.storingStatIn(stat)}@Override public StatEnsembleable<byte((> fromConfig(long config){return this.fromConfig(config)}@Override public JoinStatConfigurable adding(String server){return adding((server != null)? Arrays.asList(server): null)}@Override public JoinStatConfigurable adding(List<String> servers){return new JoinStatConfigurable(){@Override public Configurable joining(List<String> servers){return this.joining(servers)}@Override public Configurable joining(String server){return this.joining(server)}}}@Override public AddStatConfigEnsembleable joining(String server){return joining((server != null)? Arrays.asList(server): null)}@Override public AddStatConfigEnsembleable joining(List<String> servers){return new AddStatConfigEnsembleable(){@Override public byte(( forEnsemble(){return this.forEnsemble()}@Override public Ensembleable<byte((> storingStatIn(Stat stat){return this.storingStatIn(stat)}@Override public StatEnsembleable<byte((> fromConfig(long config){return this.fromConfig(config)}@Override public StatConfigEnsembleable adding(List<String> servers){return this.adding(servers)}@Override public StatConfigEnsembleable adding(String server){return this.adding(server)}}}}@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "leaving['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "return new LeaveAddStatConfigEnsembleable(){@Override public byte(( forEnsemble(){return this.forEnsemble()}@Override public ConfigureEnsembleable storingStatIn(Stat stat){return new InternalConfigureEnsembleable()}@Override public Ensembleable<byte((> fromConfig(long config){return this.fromConfig(config)}@Override public LeaveStatConfigEnsembleable adding(String server){return adding((server != null)? Arrays.asList(server): null)}@Override public LeaveStatConfigEnsembleable adding(List<String> servers){return new LeaveStatConfigEnsembleable(){@Override public byte(( forEnsemble(){return this.forEnsemble()}@Override public ConfigureEnsembleable storingStatIn(Stat stat){return new InternalConfigureEnsembleable()}@Override public Ensembleable<byte((> fromConfig(long config){return this.fromConfig(config)}@Override public Statable<ConfigureEnsembleable> leaving(List<String> servers){return this.leaving(servers)}@Override public Statable<ConfigureEnsembleable> leaving(String server){return this.leaving(server)}}}@Override public AddStatConfigEnsembleable leaving(String server){return leaving((server != null)? Arrays.asList(server): null)}@Override public AddStatConfigEnsembleable leaving(List<String> servers){return new AddStatConfigEnsembleable(){@Override public byte(( forEnsemble(){return this.forEnsemble()}@Override public ConfigureEnsembleable storingStatIn(Stat stat){return new InternalConfigureEnsembleable()}@Override public ConfigureEnsembleable fromConfig(long config){return new InternalConfigureEnsembleable()}@Override public Statable<ConfigureEnsembleable> adding(List<String> servers){return this.adding(servers)}@Override public Statable<ConfigureEnsembleable> adding(String server){return this.adding(server)}}}}@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "List<String> servers@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "joining['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "joining = (servers != null)? ImmutableList.copyOf(servers): ImmutableList.of()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "leaving = (servers != null)? ImmutableList.copyOf(servers): ImmutableList.of()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "joining['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8->6 [style = dotted, label="true"];
+2->7 [style = dashed, label="0"];
+3->6 [style = dashed, label="0"];
+3->2 [style = solid, label="servers"];
+1->3 [style = dotted, label="true"];
+0->2 [style = bold, label=""];
+3->0 [style = solid, label="servers"];
+8->5 [style = bold, label=""];
+6->5 [style = solid, label="servers"];
+6->7 [style = solid, label="servers"];
+4->3 [style = dotted, label="true"];
+5->7 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+4->0 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

@@ -1,0 +1,30 @@
+digraph {
+6 [style = filled, label = "Assert.assertFalse(\"6 == 7 => false\",evaluator.eval(TestHelpers.Row.of(6,8,null)))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Assert.assertFalse(\"string(abc) == utf8(abcd) => false\",evaluator.eval(TestHelpers.Row.of(new Utf8(\"abcd\"))))@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Assert.assertEquals(1,equal(\"x\",5).literals().size())@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+12 [style = filled, label = "StructType struct = StructType.of(required(34,\"s\",Types.StringType.get()))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "testEqual['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "Assert.assertTrue(\"7 == 7 => true\",structEvaluator.eval(TestHelpers.Row.of(7,8,null,TestHelpers.Row.of(TestHelpers.Row.of(TestHelpers.Row.of(TestHelpers.Row.of(7)))))))@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Evaluator evaluator = new Evaluator(struct,equal(\"s\",\"abc\"))@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "Assert.assertTrue(\"string(abc) == utf8(abc) => true\",evaluator.eval(TestHelpers.Row.of(new Utf8(\"abc\"))))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testEqual['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Evaluator structEvaluator = new Evaluator(STRUCT,equal(\"s1.s2.s3.s4.i\",7))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Evaluator evaluator = new Evaluator(STRUCT,equal(\"x\",7))@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Assert.assertFalse(\"6 == 7 => false\",structEvaluator.eval(TestHelpers.Row.of(6,8,null,TestHelpers.Row.of(TestHelpers.Row.of(TestHelpers.Row.of(TestHelpers.Row.of(6)))))))@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Assert.assertTrue(\"7 == 7 => true\",evaluator.eval(TestHelpers.Row.of(7,8,null)))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testCharSeqValue['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12->10 [style = bold, label=""];
+4->6 [style = bold, label=""];
+8->1 [style = bold, label=""];
+13->11 [style = bold, label=""];
+6->13 [style = dashed, label="0"];
+7->8 [style = bold, label=""];
+10->13 [style = bold, label=""];
+3->0 [style = bold, label=""];
+12->10 [style = solid, label="struct"];
+6->2 [style = bold, label=""];
+9->12 [style = bold, label=""];
+1->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+}

@@ -1,0 +1,31 @@
+digraph {
+5 [style = filled, label = "to.dispose()@@@14@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "TestObserver<Integer> to = Observable.just(1).subscribeOn(Schedulers.io()).flatMapSingle(new Function<Integer,Single<Integer>>(){@Override public Single<Integer> apply(Integer v){sleep()return Single.error(new TestException())}}).test()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "TestObserver<Integer> to = Maybe.just(1).subscribeOn(Schedulers.io()).flatMapSingle(new Function<Integer,Single<Integer>>(){@Override public Single<Integer> apply(Integer v){sleep()return Single.error(new TestException())}}).toSingle().test()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "beforeCancelSleep(to)@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "cb.await()@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "maybeSingle['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "observerSingle['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "to.assertEmpty()@@@16@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "{RxJavaPlugins.reset()}@@@19@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Thread.sleep(SLEEP_AFTER_CANCEL)@@@15@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "List<Throwable> errors = TestHelper.trackPluginErrors()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertTrue(errors.toString(),errors.isEmpty())@@@17@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "maybeSingle['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5->2 [style = bold, label=""];
+8->7 [style = bold, label=""];
+11->3 [style = bold, label=""];
+10->7 [style = bold, label=""];
+12->7 [style = bold, label=""];
+0->11 [style = dashed, label="0"];
+0->3 [style = bold, label=""];
+4->9 [style = bold, label=""];
+7->11 [style = bold, label=""];
+7->0 [style = bold, label=""];
+2->1 [style = bold, label=""];
+11->6 [style = solid, label="to"];
+6->5 [style = bold, label=""];
+1->4 [style = bold, label=""];
+3->6 [style = bold, label=""];
+0->6 [style = solid, label="to"];
+}

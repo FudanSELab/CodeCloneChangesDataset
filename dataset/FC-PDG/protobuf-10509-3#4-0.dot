@@ -1,0 +1,34 @@
+digraph {
+5 [style = filled, label = "testOneofSerialization['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "testOneofNestedBuilderOnChangePropagation['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "assertTrue(message.getPayload().hasOneofNestedMessage())@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "builder.getOneofNestedMessageBuilder()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "{TestOneof2.Builder builder = TestOneof2.newBuilder()TestOneof2 message = builder.setFooEnum(TestOneof2.NestedEnum.BAR).build()ByteString serialized = message.toByteString()TestOneof2 message2 = TestOneof2.parseFrom(serialized)assertTrue(message2.hasFooEnum())assertEquals(TestOneof2.NestedEnum.BAR,message2.getFooEnum())}@@@19@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "{TestOneof2.Builder builder = TestOneof2.newBuilder()TestOneof2 message = builder.setFooString(\"foo\").build()ByteString serialized = message.toByteString()TestOneof2 message2 = TestOneof2.parseFrom(serialized)assertTrue(message2.hasFooString())assertEquals(\"foo\",message2.getFooString())}@@@11@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "assertTrue(message.hasPayload())@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertTrue(builder.hasOneofNestedMessage())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "TestAllTypes.Builder builder = parentBuilder.getPayloadBuilder()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "{TestOneof2.Builder builder = TestOneof2.newBuilder()TestOneof2 message = builder.setFooMessage(TestOneof2.NestedMessage.newBuilder().setQuxInt(234).build()).build()ByteString serialized = message.toByteString()TestOneof2 message2 = TestOneof2.parseFrom(serialized)assertTrue(message2.hasFooMessage())assertEquals(234,message2.getFooMessage().getQuxInt())}@@@27@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "{TestOneof2.Builder builder = TestOneof2.newBuilder()TestOneof2 message = builder.setFooInt(123).build()ByteString serialized = message.toByteString()TestOneof2 message2 = TestOneof2.parseFrom(serialized)assertTrue(message2.hasFooInt())assertEquals(123,message2.getFooInt())}@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "NestedTestAllTypes message = parentBuilder.build()@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertTrue(parentBuilder.hasPayload())@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "NestedTestAllTypes.Builder parentBuilder = NestedTestAllTypes.newBuilder()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testOneofSerialization['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12->13 [style = bold, label=""];
+5->0 [style = bold, label=""];
+10->8 [style = bold, label=""];
+6->14 [style = bold, label=""];
+7->12 [style = bold, label=""];
+0->7 [style = dashed, label="0"];
+4->1 [style = solid, label="serialized"];
+13->10 [style = bold, label=""];
+0->4 [style = bold, label=""];
+8->6 [style = bold, label=""];
+3->0 [style = bold, label=""];
+14->11 [style = bold, label=""];
+1->2 [style = bold, label=""];
+1->2 [style = solid, label="serialized"];
+4->1 [style = bold, label=""];
+0->4 [style = solid, label="serialized"];
+9->7 [style = bold, label=""];
+}

@@ -1,0 +1,19 @@
+digraph {
+4 [style = filled, label = "listTables_pagination['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Assert.assertEquals(10,glueCatalog.listNamespaces().size())@@@15@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Mockito.doAnswer(new Answer(){@Override public Object answer(InvocationOnMock invocation){if (counter.decrementAndGet() > 0) {return GetDatabasesResponse.builder().databaseList(Database.builder().name(UUID.randomUUID().toString().replace(\"-\",\"\")).build()).nextToken(\"token\").build()}{return GetDatabasesResponse.builder().databaseList(Database.builder().name(\"db\").build()).build()}}}).when(glue).getDatabases(Mockito.any())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "AtomicInteger counter = new AtomicInteger(10)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Mockito.doReturn(GetDatabaseResponse.builder().database(Database.builder().name(\"db1\").build()).build()).when(glue).getDatabase(Mockito.any())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "listTables_pagination['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "Assert.assertEquals(10,glueCatalog.listTables(Namespace.of(\"db1\")).size())@@@16@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "listNamespaces_pagination['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5->2 [style = bold, label=""];
+0->6 [style = bold, label=""];
+2->0 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+0->1 [style = bold, label=""];
+4->2 [style = bold, label=""];
+2->3 [style = bold, label=""];
+7->2 [style = bold, label=""];
+}

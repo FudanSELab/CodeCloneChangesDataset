@@ -1,0 +1,18 @@
+digraph {
+2 [style = filled, label = "execute['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "@NotNull final DBCExecutionContext context@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "TasksJob.runTask(\"Rollback transaction\",new DBRRunnableWithProgress(){@Override public void run(DBRProgressMonitor monitor){DBCTransactionManager txnManager = DBUtils.getTransactionManager(context)if (txnManager != null) {try {txnManager.rollback(session,null)}catch (DBCException e) }}})@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "execute['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "TasksJob.runTask(\"Commit transaction\",null)@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final DBCExecutionContext context@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "execute['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4->5 [style = bold, label=""];
+2->1 [style = dotted, label="true"];
+2->0 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+6->5 [style = solid, label="context"];
+4->6 [style = dotted, label="true"];
+3->0 [style = bold, label=""];
+3->1 [style = dotted, label="true"];
+0->5 [style = dashed, label="0"];
+}

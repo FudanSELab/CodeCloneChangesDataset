@@ -1,0 +1,25 @@
+digraph {
+9 [style = filled, label = "CoreContainer cores = jetty.getCoreContainer()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "expireZkSession['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "expireZkSession['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "cores != null@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "monkeyLog(\"Will cause connection loss on \" + jetty.getLocalPort())@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "zkClient.getSolrZooKeeper().closeCnxn()@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "JettySolrRunner jetty@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "SolrZkClient zkClient = cores.getZkController().getZkClient()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "JettySolrRunner jetty@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "causeConnectionLoss['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7->9 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+6->4 [style = dotted, label="true"];
+2->0 [style = dotted, label="true"];
+3->5 [style = bold, label=""];
+6->3 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+1->0 [style = dotted, label="true"];
+5->4 [style = bold, label=""];
+6->3 [style = dotted, label="true"];
+9->6 [style = solid, label="cores"];
+9->6 [style = bold, label=""];
+7->8 [style = dotted, label="true"];
+}

@@ -1,0 +1,36 @@
+digraph {
+9 [style = filled, label = "testOnCreateFromScratch['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "testOnCreateFromScratch['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertNotNull(\"Project should have last build.\",p.getLastBuild())@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "createAction = true@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "createAction = false@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "assertTrue(\"Project should have a scm.\",p.getScm() != null)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "p.onCreatedFromScratch()@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "p.onLoad(j.jenkins,\"project\")@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "p.removeRun(p.getLastBuild())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "FreeStyleProject p = j.createFreeStyleProject(\"project\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "j.buildAndAssertSuccess(p)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertTrue(\"Project should have a build.\",p.getLastBuild() != null)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "assertTrue(\"Project should have Transient Action TransientAction.\",p.getAction() != null)@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+14 [style = filled, label = "createAction = false@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertNotNull(\"Project should have transient action TransientAction.\",p.getAction())@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testOnLoad['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2->6 [style = bold, label=""];
+1->8 [style = bold, label=""];
+13->6 [style = bold, label=""];
+3->10 [style = bold, label=""];
+6->7 [style = bold, label=""];
+10->11 [style = bold, label=""];
+0->3 [style = bold, label=""];
+11->15 [style = bold, label=""];
+8->5 [style = bold, label=""];
+12->14 [style = bold, label=""];
+1->11 [style = dashed, label="0"];
+8->15 [style = dashed, label="0"];
+7->0 [style = bold, label=""];
+3->4 [style = bold, label=""];
+4->1 [style = bold, label=""];
+15->12 [style = bold, label=""];
+9->6 [style = bold, label=""];
+6->7 [style = solid, label="p"];
+}

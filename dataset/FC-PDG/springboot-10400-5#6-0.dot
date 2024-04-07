@@ -1,0 +1,23 @@
+digraph {
+2 [style = filled, label = "getEndpointsWhenHasSubclassedEndpointShouldReturnEndpoint['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "hasTestEndpoint['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertThat(operations).containsKeys()@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "TestEndpointDiscoverer discoverer = new TestEndpointDiscoverer(context)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "getEndpointsWhenHasSubclassedEndpointShouldReturnEndpoint['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Map<EndpointId,TestExposableEndpoint> endpoints = mapEndpoints(discoverer.getEndpoints())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertThat(operations).hasSize(4)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(endpoints).containsOnlyKeys(EndpointId.of(\"test\"))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "AnnotationConfigApplicationContext context@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Map<Method,TestOperation> operations = mapOperations(endpoints.get(EndpointId.of(\"test\")))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "load(,null)@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->3 [style = bold, label=""];
+10->3 [style = solid, label="context"];
+7->8 [style = bold, label=""];
+4->7 [style = bold, label=""];
+6->4 [style = bold, label=""];
+8->5 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->1 [style = bold, label=""];
+9->10 [style = dotted, label="true"];
+3->6 [style = bold, label=""];
+}

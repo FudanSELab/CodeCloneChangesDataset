@@ -1,0 +1,24 @@
+digraph {
+7 [style = filled, label = "{FreeStyleProject p = r.createFreeStyleProject()p.addProperty(new KeywordProperty(new AcceptOnlySpecificKeyword(AcceptOnlySpecificKeyword.ACCEPT_KEYWORD),new AcceptOnlySpecificKeyword(AcceptOnlySpecificKeyword.ACCEPT_KEYWORD)))p.save()r.jenkins.setSecurityRealm(r.createDummySecurityRealm())WebClient wc = r.createWebClient().withThrowExceptionOnFailingStatusCode(false)wc.withBasicApiToken(test)WebRequest req = new WebRequest(new URL(wc.getContextPath() + String.format(\"%s/config.xml\",p.getUrl())),HttpMethod.POST)req.setEncodingType(null)req.setRequestBody(String.format(CONFIGURATION_TEMPLATE,AcceptOnlySpecificKeyword.ACCEPT_KEYWORD,\"badvalue\"))Page page = wc.getPage(req)assertEquals(\"Submitting unacceptable configuration via REST should fail.\",HttpURLConnection.HTTP_INTERNAL_ERROR,page.getWebResponse().getStatusCode())assertNotEquals(\"badvalue\",p.getProperty().getCriticalField().getKeyword())r.jenkins.reload()p = r.jenkins.getItemByFullName(p.getFullName(),)assertNotEquals(\"badvalue\",p.getProperty().getCriticalField().getKeyword())}@@@24@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "{FreeStyleProject p = r.createFreeStyleProject()p.addProperty(new KeywordProperty(new AcceptOnlySpecificKeyword(AcceptOnlySpecificKeyword.ACCEPT_KEYWORD),new AcceptOnlySpecificKeyword(AcceptOnlySpecificKeyword.ACCEPT_KEYWORD)))p.save()r.jenkins.setSecurityRealm(r.createDummySecurityRealm())WebClient wc = r.createWebClient()wc.withBasicApiToken(test)WebRequest req = new WebRequest(new URL(wc.getContextPath() + String.format(\"%s/config.xml\",p.getUrl())),HttpMethod.POST)req.setEncodingType(null)req.setRequestBody(String.format(CONFIGURATION_TEMPLATE,\"badvalue\",AcceptOnlySpecificKeyword.ACCEPT_KEYWORD))wc.getPage(req)assertNull(p.getProperty().getNonCriticalField())assertEquals(AcceptOnlySpecificKeyword.ACCEPT_KEYWORD,p.getProperty().getCriticalField().getKeyword())r.jenkins.reload()p = r.jenkins.getItemByFullName(p.getFullName(),)assertEquals(\"badvalue\",p.getProperty().getNonCriticalField().getKeyword())assertEquals(AcceptOnlySpecificKeyword.ACCEPT_KEYWORD,p.getProperty().getCriticalField().getKeyword())}@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Items.XSTREAM2.addCriticalField(,\"criticalField\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "ApiTokenTestHelper.enableLegacyBehavior()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testRestInterfaceFailure['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "{FreeStyleProject p = r.createFreeStyleProject()p.addProperty(new KeywordProperty(new AcceptOnlySpecificKeyword(AcceptOnlySpecificKeyword.ACCEPT_KEYWORD),new AcceptOnlySpecificKeyword(AcceptOnlySpecificKeyword.ACCEPT_KEYWORD)))p.save()r.jenkins.setSecurityRealm(r.createDummySecurityRealm())CLICommandInvoker.Result ret = new CLICommandInvoker(r,\"update-job\").asUser(\"test\").withStdin(new ByteArrayInputStream(String.format(CONFIGURATION_TEMPLATE,AcceptOnlySpecificKeyword.ACCEPT_KEYWORD,\"badvalue\").getBytes())).withArgs(p.getFullName()).invoke()assertNotEquals(0,ret.returnCode())assertNotEquals(\"badvalue\",p.getProperty().getCriticalField().getKeyword())r.jenkins.reload()p = r.jenkins.getItemByFullName(p.getFullName(),)assertNotEquals(\"badvalue\",p.getProperty().getCriticalField().getKeyword())}@@@17@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "User test = User.getById(\"test\",true)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Items.XSTREAM2.addCriticalField(,\"criticalField\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testCliFailure['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "testCliFailure['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+2->6 [style = bold, label=""];
+8->7 [style = bold, label=""];
+3->1 [style = bold, label=""];
+2->0 [style = bold, label=""];
+8->7 [style = solid, label="req"];
+6->8 [style = solid, label="test"];
+9->5 [style = bold, label=""];
+1->2 [style = bold, label=""];
+6->8 [style = bold, label=""];
+4->1 [style = bold, label=""];
+6->7 [style = solid, label="test"];
+}

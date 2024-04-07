@@ -1,0 +1,16 @@
+digraph {
+0 [style = filled, label = "ConsistencyGuard passing = new FailSafeConsistencyGuard(fs,getConsistencyGuardConfig())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "FileCreateUtils.createBaseFile(basePath,\"partition/path\",\"000\",\"f1\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testCheckFailingDisappearFailSafe['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "testCheckFailingDisappearsFailSafe['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "FileCreateUtils.createBaseFile(basePath,\"partition/path\",\"000\",\"f1\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertThrows(,null)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testCheckFailingDisappearFailSafe['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2->6 [style = bold, label=""];
+0->1 [style = bold, label=""];
+6->0 [style = bold, label=""];
+5->2 [style = bold, label=""];
+2->0 [style = bold, label=""];
+3->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+}

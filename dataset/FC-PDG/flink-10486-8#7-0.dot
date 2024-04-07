@@ -1,0 +1,18 @@
+digraph {
+0 [style = filled, label = "testGroupByInsert['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testGroupByInsert['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "assertEquals(\"(1(\",results.toString())@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertEquals(\"(+I(1, (65(, 3, 4, 5.5, 6.6, 7.70000, 8.8, true, a, B, C , d, 2016-06-22T19:10:25, 2015-01-01, 00:51:03, 500.000000000000000000((\",results.toString())@@@5@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "testFullPath['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "List<Row> results = CollectionUtil.iteratorToList(tEnv.sqlQuery(String.format(\"select * from %s.%s.`%s`\",TEST_CATALOG_NAME,DEFAULT_DATABASE,PostgresTablePath.fromFlinkTableName(TABLE1))).execute().collect())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "tEnv.executeSql(String.format(\"insert into `%s` \" + \"select `int`, cast('A' as bytes), `short`, max(`long`), max(`real`), \" + \"max(`double_precision`), max(`numeric`), max(`decimal`), max(`boolean`), \" + \"max(`text`), 'B', 'C', max(`character_varying`), max(`timestamp`), \" + \"max(`date`), max(`time`), max(`default_numeric`) \" + \"from `%s` group by `int`, `short`\",TABLE_PRIMITIVE_TYPE2,TABLE_PRIMITIVE_TYPE)).await()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertEquals(\"(1,(65(,3,4,5.5,6.6,7.70000,8.8,true,a,B,C ,d,2016-06-22T19:10:25,2015-01-01,00:51:03,500.000000000000000000(\",results.toString())@@@5@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "List<Row> results = CollectionUtil.iteratorToList(tEnv.sqlQuery(String.format(\"select * from `%s`\",TABLE_PRIMITIVE_TYPE2)).execute().collect())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->3 [style = bold, label=""];
+0->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+8->6 [style = bold, label=""];
+2->1 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->5 [style = bold, label=""];
+}

@@ -1,0 +1,37 @@
+digraph {
+3 [style = filled, label = "testCommitOffsetAsyncNotCoordinator['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "MockCommitCallback cb = new MockCommitCallback()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "coordinator.invokeCompletedOffsetCommitCallbacks()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "client.prepareResponse(offsetCommitResponse(Collections.singletonMap(t1p,Errors.COORDINATOR_NOT_AVAILABLE)))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "client.prepareResponse(groupCoordinatorResponse(node,Errors.NONE))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "coordinator.commitOffsetsAsync(Collections.singletonMap(t1p,new OffsetAndMetadata(100L)),cb)@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "client.prepareResponse(offsetCommitResponse(Collections.singletonMap(t1p,Errors.NOT_COORDINATOR)))@@@6@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "coordinator.ensureCoordinatorReady()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertTrue(cb.exception instanceof RetriableCommitFailedException)@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "prepareOffsetCommitRequest(singletonMap(t1p,100L),Errors.COORDINATOR_NOT_AVAILABLE)@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "assertTrue(coordinator.coordinatorUnknown())@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "testCommitOffsetAsyncCoordinatorNotAvailable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "coordinator.commitOffsetsAsync(singletonMap(t1p,new OffsetAndMetadata(100L)),cb)@@@7@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+11 [style = filled, label = "testCommitOffsetAsyncNotCoordinator['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "assertEquals(1,cb.invoked)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->10 [style = bold, label=""];
+14->5 [style = bold, label=""];
+0->12 [style = solid, label="cb"];
+1->8 [style = bold, label=""];
+12->7 [style = bold, label=""];
+7->6 [style = bold, label=""];
+4->13 [style = dashed, label="0"];
+0->2 [style = solid, label="cb"];
+0->4 [style = bold, label=""];
+9->0 [style = bold, label=""];
+13->2 [style = bold, label=""];
+5->9 [style = bold, label=""];
+6->1 [style = bold, label=""];
+0->13 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+3->5 [style = bold, label=""];
+2->7 [style = bold, label=""];
+11->5 [style = bold, label=""];
+4->2 [style = bold, label=""];
+10->12 [style = bold, label=""];
+}

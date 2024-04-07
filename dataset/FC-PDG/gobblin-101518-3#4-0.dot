@@ -1,0 +1,30 @@
+digraph {
+0 [style = filled, label = "response.getResponse()@@@7@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "UpdateRequest<FlowConfig> updateRequest = _flowconfigsV2RequestBuilders.update().id(new ComplexResourceKey<>(flowId,new FlowStatusId())).input(flowConfig).build()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "LOG.debug(\"updateFlowConfig with groupName \" + flowConfig.getId().getFlowGroup() + \" flowName \" + flowConfig.getId().getFlowName())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "updateFlowConfig['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "updateFlowConfig['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "FlowId flowId = new FlowId().setFlowGroup(flowConfig.getId().getFlowGroup()).setFlowName(flowConfig.getId().getFlowName())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "FlowConfig flowConfig@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ResponseFuture<EmptyRecord> response = _restClient.get().sendRequest(updateRequest)@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "updateFlowConfig['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "UpdateRequest<FlowConfig> updateRequest = _flowconfigsRequestBuilders.update().id(new ComplexResourceKey<>(flowId,new EmptyRecord())).input(flowConfig).build()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "FlowClientUtils.sendRequestWithRetry(_restClient.get(),updateRequest,FlowconfigsV2RequestBuilders.getPrimaryResource())@@@6@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+6->0 [style = bold, label=""];
+1->8 [style = bold, label=""];
+2->9 [style = bold, label=""];
+9->6 [style = solid, label="updateRequest"];
+10->5 [style = dotted, label="true"];
+1->8 [style = solid, label="updateRequest"];
+7->4 [style = bold, label=""];
+10->4 [style = bold, label=""];
+3->5 [style = dotted, label="true"];
+1->6 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->4 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+9->6 [style = bold, label=""];
+7->5 [style = dotted, label="true"];
+1->6 [style = solid, label="updateRequest"];
+}

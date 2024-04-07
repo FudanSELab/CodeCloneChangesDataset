@@ -1,0 +1,35 @@
+digraph {
+1 [style = filled, label = "executionResult.setTopologicallySortedProjects(asList(projectA,projectB))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "executionResult.setTopologicallySortedProjects(asList(projectA,projectB,projectC))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Optional<BuildResumptionData> result = analyzer.determineBuildResumptionData(executionResult)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(result.isPresent(),is(true))@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertThat(result.get().getProjectsToSkip(),contains(\"test:C\"))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "MavenProject projectA = createSucceededMavenProject(\"A\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Optional<BuildResumptionData> result = analyzer.determineBuildResumptionData(executionResult)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertThat(result.get().getRemainingProjects(),is(asList(\"test:B\")))@@@8@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "MavenProject projectB = createFailedMavenProject(\"B\")@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "resumeFromGetsDetermined['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "MavenProject projectC = createSucceededMavenProject(\"C\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "projectsSucceedingAfterFailedProjectsAreExcluded['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "resumeFromGetsDetermined['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6->11 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->10 [style = solid, label="projectA"];
+3->2 [style = bold, label=""];
+0->9 [style = bold, label=""];
+2->0 [style = bold, label=""];
+9->10 [style = bold, label=""];
+6->11 [style = dashed, label="0"];
+0->10 [style = solid, label="projectB"];
+5->8 [style = bold, label=""];
+9->10 [style = solid, label="projectC"];
+6->8 [style = dashed, label="0"];
+12->2 [style = bold, label=""];
+10->5 [style = bold, label=""];
+0->1 [style = bold, label=""];
+2->1 [style = solid, label="projectA"];
+5->6 [style = bold, label=""];
+0->1 [style = solid, label="projectB"];
+1->4 [style = bold, label=""];
+7->2 [style = bold, label=""];
+}

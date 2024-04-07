@@ -1,0 +1,28 @@
+digraph {
+0 [style = filled, label = "fieldType.setHasDocValues(true)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testValueScriptString['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testValueScriptNumber['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "ValueCountAggregationBuilder aggregationBuilder = new ValueCountAggregationBuilder(\"name\").field(FIELD_NAME).script(new Script(ScriptType.INLINE,MockScriptEngine.NAME,NUMBER_VALUE_SCRIPT,Collections.emptyMap()))@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "testValueScriptNumber['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "MappedFieldType fieldType = createMappedFieldType(ValueType.NUMERIC)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "fieldType.setName(FIELD_NAME)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testCase(aggregationBuilder,new MatchAllDocsQuery(),null,null,fieldType)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "ValueCountAggregationBuilder aggregationBuilder = new ValueCountAggregationBuilder(\"name\").field(FIELD_NAME).script(new Script(ScriptType.INLINE,MockScriptEngine.NAME,VALUE_SCRIPT,Collections.emptyMap()))@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "MappedFieldType fieldType = createMappedFieldType(ValueType.STRING)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2->7 [style = dashed, label="0"];
+2->9 [style = bold, label=""];
+8->2 [style = bold, label=""];
+2->5 [style = solid, label="aggregationBuilder"];
+7->5 [style = solid, label="aggregationBuilder"];
+0->5 [style = bold, label=""];
+6->7 [style = bold, label=""];
+9->1 [style = bold, label=""];
+3->5 [style = solid, label="fieldType"];
+9->5 [style = solid, label="fieldType"];
+2->3 [style = bold, label=""];
+3->9 [style = dashed, label="0"];
+3->1 [style = bold, label=""];
+4->2 [style = bold, label=""];
+1->0 [style = bold, label=""];
+7->3 [style = bold, label=""];
+}

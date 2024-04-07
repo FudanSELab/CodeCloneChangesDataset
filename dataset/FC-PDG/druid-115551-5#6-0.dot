@@ -1,0 +1,26 @@
+digraph {
+6 [style = filled, label = "final T defaultVal@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "create['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final TypeReference<? extends T> clazz@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "create['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final Class<? extends T> clazz@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "create['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "return new ConfigSerde<T>(){@Override public byte(( serialize(T obj){try {return jsonMapper.writeValueAsBytes(obj)}catch (JsonProcessingException e) }@Override public String serializeToString(T obj){try {return jsonMapper.writeValueAsString(obj)}catch (JsonProcessingException e) }@Override public T deserialize(byte(( bytes){if (bytes == null) {return defaultVal}try {return jsonMapper.readValue(bytes,clazz)}catch (IOException e) }}@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final Class<? extends T> clazz@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final T defaultVal@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0->2 [style = dotted, label="true"];
+4->5 [style = dotted, label="true"];
+2->3 [style = solid, label="defaultVal"];
+2->8 [style = dashed, label="0"];
+1->3 [style = solid, label="clazz"];
+0->1 [style = dotted, label="true"];
+5->3 [style = solid, label="clazz"];
+0->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+6->3 [style = solid, label="defaultVal"];
+7->3 [style = bold, label=""];
+8->3 [style = solid, label="clazz"];
+4->2 [style = dotted, label="true"];
+7->8 [style = dotted, label="true"];
+7->6 [style = dotted, label="true"];
+}

@@ -1,0 +1,28 @@
+digraph {
+9 [style = filled, label = "TestObserver<String> to = new TestObserver<String>()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "Observable.range(1,4000).groupBy(IS_EVEN2).flatMap(new Function<GroupedObservable<Boolean,Integer>,Observable<String>>(){@Override public Observable<String> apply(final GroupedObservable<Boolean,Integer> g){return g.take(2).observeOn(Schedulers.computation()).map(new Function<Integer,String>(){@Override public String apply(Integer l){if (g.getKey()) {try {Thread.sleep(1)}catch (InterruptedException e) return l + \" is even.\"}{return l + \" is odd.\"}}})}}).subscribe(to)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "groupByBackpressure2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ts.assertNoErrors()@@@31@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "to.awaitDone(5,TimeUnit.SECONDS)@@@25@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "to.assertNoErrors()@@@26@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "groupByBackpressure2['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "Flowable.range(1,4000).doOnNext(new Consumer<Integer>(){@Override public void accept(Integer v){System.out.println(\"testgroupByBackpressure2 >> \" + v)}}).groupBy(IS_EVEN2).flatMap(new Function<GroupedFlowable<Boolean,Integer>,Flowable<String>>(){@Override public Flowable<String> apply(final GroupedFlowable<Boolean,Integer> g){return g.take(2).observeOn(Schedulers.computation()).map(new Function<Integer,String>(){@Override public String apply(Integer l){if (g.getKey()) {try {Thread.sleep(1)}catch (InterruptedException e) return l + \" is even.\"}{return l + \" is odd.\"}}})}},4000).subscribe(ts)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "ts.awaitDone(5,TimeUnit.SECONDS)@@@30@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "groupByBackpressure2['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "TestSubscriber<String> ts = new TestSubscriber<String>()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->7 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+2->4 [style = bold, label=""];
+0->2 [style = solid, label="ts"];
+9->6 [style = solid, label="to"];
+3->0 [style = bold, label=""];
+6->8 [style = bold, label=""];
+0->9 [style = dashed, label="0"];
+4->1 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+10->9 [style = bold, label=""];
+9->6 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

@@ -1,0 +1,28 @@
+digraph {
+6 [style = filled, label = "expectedException.expect()@@@19@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testFailedTranslationOnNonKeyed['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "testFailedTranslationOnNonKeyed['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "BroadcastStream<String> broadcast = srcTwo.broadcast(descriptor)@@@17@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final DataStream<String> srcTwo = env.fromElements(\"Test:0\",\"Test:1\",\"Test:2\",\"Test:3\",\"Test:4\",\"Test:5\").assignTimestampsAndWatermarks(new CustomWmEmitter<String>(){@Override public long extractTimestamp(String element,long previousElementTimestamp){return Long.parseLong(element.split(\":\")(1()}})@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final DataStream<Long> srcOne = env.generateSequence(0L,5L).assignTimestampsAndWatermarks(new CustomWmEmitter<Long>(){@Override public long extractTimestamp(Long element,long previousElementTimestamp){return element}}).keyBy((KeySelector<Long,Long>)null)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "BroadcastConnectedStream<Long,String> bcStream = srcOne.connect(broadcast)@@@18@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "bcStream.process(new BroadcastProcessFunction<Long,String,String>(){@Override public void processBroadcastElement(String value,Context ctx,Collector<String> out){}@Override public void processElement(Long value,ReadOnlyContext ctx,Collector<String> out){}})@@@20@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testFailedTranslationOnKeyed['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final MapStateDescriptor<Long,String> descriptor = new MapStateDescriptor<>(\"broadcast\",BasicTypeInfo.LONG_TYPE_INFO,BasicTypeInfo.STRING_TYPE_INFO)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "bcStream.process(new KeyedBroadcastProcessFunction<String,Long,String,String>(){@Override public void processBroadcastElement(String value,Context ctx,Collector<String> out){}@Override public void processElement(Long value,ReadOnlyContext ctx,Collector<String> out){}})@@@20@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->11 [style = bold, label=""];
+4->5 [style = solid, label="descriptor"];
+4->2 [style = bold, label=""];
+5->1 [style = solid, label="broadcast"];
+0->5 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+10->4 [style = bold, label=""];
+9->4 [style = bold, label=""];
+1->6 [style = bold, label=""];
+6->3 [style = bold, label=""];
+8->0 [style = bold, label=""];
+2->8 [style = bold, label=""];
+5->1 [style = bold, label=""];
+}

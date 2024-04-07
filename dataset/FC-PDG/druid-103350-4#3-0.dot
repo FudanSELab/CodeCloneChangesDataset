@@ -1,0 +1,36 @@
+digraph {
+6 [style = filled, label = "FixedBucketsHistogramAggregatorFactory aggFactory = new FixedBucketsHistogramAggregatorFactory(\"histo\",\"index\",10,0,2000,FixedBucketsHistogram.OutlierHandlingMode.OVERFLOW,false)@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "Iterable<Row> results = GroupByQueryRunnerTestHelper.runQuery(factory,runner,query)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "FixedBucketsHistogramAggregatorFactory aggFactory = new FixedBucketsHistogramAggregatorFactory(\"histo\",\"index\",10,0,2000,FixedBucketsHistogram.OutlierHandlingMode.OVERFLOW)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "List<Row> expectedResults = Collections.singletonList(GroupByQueryRunnerTestHelper.createExpectedRow(\"1970-01-01T00:00:00.000Z\",\"marketalias\",\"upfront\",\"rows\",186L,\"quantile\",969.6969604492188f,\"histo\",new FixedBucketsHistogram(0,2000,10,FixedBucketsHistogram.OutlierHandlingMode.OVERFLOW,new long((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a53065,186,1870.061029,545.990623,0,0,0)))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testGroupByWithSameNameComplexPostAgg['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "TestHelper.assertExpectedObjects(expectedResults,results,\"fixed-histo\")@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "List<Row> expectedResults = Collections.singletonList(GroupByQueryRunnerTestHelper.createExpectedRow(\"1970-01-01T00:00:00.000Z\",\"marketalias\",\"upfront\",\"rows\",186L,\"quantile\",969.6969604492188f))@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "GroupByQuery query = new GroupByQuery.Builder().setDataSource(QueryRunnerTestHelper.dataSource).setGranularity(QueryRunnerTestHelper.allGran).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.marketDimension,\"marketalias\")).setInterval(QueryRunnerTestHelper.fullOnInterval).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(\"marketalias\",OrderByColumnSpec.Direction.DESCENDING)),1)).setAggregatorSpecs(QueryRunnerTestHelper.rowsCount,aggFactory).setPostAggregatorSpecs(Collections.singletonList(new QuantilePostAggregator(\"quantile\",\"histo\",0.5f))).build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "TestHelper.assertExpectedObjects(expectedResults,results,\"fixed-histo\")@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "testGroupByWithFixedHistogramAgg['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "GroupByQuery query = new GroupByQuery.Builder().setDataSource(QueryRunnerTestHelper.dataSource).setGranularity(QueryRunnerTestHelper.allGran).setDimensions(new DefaultDimensionSpec(QueryRunnerTestHelper.marketDimension,\"marketalias\")).setInterval(QueryRunnerTestHelper.fullOnInterval).setLimitSpec(new DefaultLimitSpec(Collections.singletonList(new OrderByColumnSpec(\"marketalias\",OrderByColumnSpec.Direction.DESCENDING)),1)).setAggregatorSpecs(QueryRunnerTestHelper.rowsCount,aggFactory).setPostAggregatorSpecs(Collections.singletonList(new QuantilePostAggregator(\"quantile\",\"quantile\",0.5f))).build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testGroupByWithSameNameComplexPostAgg['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "Iterable<Row> results = GroupByQueryRunnerTestHelper.runQuery(factory,runner,query)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->9 [style = bold, label=""];
+9->11 [style = bold, label=""];
+2->5 [style = bold, label=""];
+0->3 [style = solid, label="results"];
+7->6 [style = bold, label=""];
+10->8 [style = bold, label=""];
+12->1 [style = bold, label=""];
+2->9 [style = dashed, label="0"];
+0->3 [style = bold, label=""];
+10->8 [style = solid, label="results"];
+5->3 [style = solid, label="expectedResults"];
+5->11 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+11->8 [style = solid, label="expectedResults"];
+5->0 [style = bold, label=""];
+11->10 [style = bold, label=""];
+9->10 [style = solid, label="query"];
+2->0 [style = solid, label="query"];
+1->6 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+}

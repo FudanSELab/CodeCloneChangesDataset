@@ -1,0 +1,21 @@
+digraph {
+6 [style = filled, label = "return null@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "listGetter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "final List<Map.Entry<String,Class>> fields@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "return null@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "listGetter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final List<Map.Entry<String,Class>> fields@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Map<String,String> mapping@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "listGetter['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "Map<String,String> mapping@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7->6 [style = bold, label=""];
+1->6 [style = dashed, label="0"];
+2->0 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+2->3 [style = dotted, label="true"];
+3->8 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+5->3 [style = dotted, label="true"];
+7->8 [style = dotted, label="true"];
+5->1 [style = bold, label=""];
+}

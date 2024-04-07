@@ -1,0 +1,16 @@
+digraph {
+0 [style = filled, label = "testFailsNodeThatRejectsCheck['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testFailsNodeThatRejectsCheck['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "testFailsNodeThatDoesNotRespond['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testBehaviourOfFailingNode(settings,null,\"followers check retry count exceeded (timeouts=0, failures=\" + FOLLOWER_CHECK_RETRY_COUNT_SETTING.get(settings) + \"(\",(FOLLOWER_CHECK_RETRY_COUNT_SETTING.get(settings) - 1) * FOLLOWER_CHECK_INTERVAL_SETTING.get(settings).millis(),null)@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final Settings settings = randomSettings()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testBehaviourOfFailingNode(settings,null,\"followers check retry count exceeded\",(FOLLOWER_CHECK_RETRY_COUNT_SETTING.get(settings) - 1) * FOLLOWER_CHECK_INTERVAL_SETTING.get(settings).millis() + FOLLOWER_CHECK_RETRY_COUNT_SETTING.get(settings) * FOLLOWER_CHECK_TIMEOUT_SETTING.get(settings).millis(),null)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2->5 [style = solid, label="settings"];
+1->5 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+2->1 [style = solid, label="settings"];
+2->1 [style = bold, label=""];
+3->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

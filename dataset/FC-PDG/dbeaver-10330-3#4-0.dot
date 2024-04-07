@@ -1,0 +1,29 @@
+digraph {
+10 [style = filled, label = "PostgreTableConstraint constraint@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "configureObject['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Object parent@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return UITask.run(null)@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Object parent@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "MySQLDataSource dataSource = constraint.getDataSource()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+6 [style = filled, label = "configureObject['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "MySQLTableConstraint constraint@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "configureObject['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Object parent@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+12->10 [style = dotted, label="true"];
+12->4 [style = bold, label=""];
+2->1 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+6->8 [style = dotted, label="true"];
+2->0 [style = dotted, label="true"];
+2->3 [style = dotted, label="true"];
+6->7 [style = bold, label=""];
+12->9 [style = dotted, label="true"];
+2->4 [style = bold, label=""];
+7->4 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+6->3 [style = dotted, label="true"];
+12->11 [style = dotted, label="true"];
+}

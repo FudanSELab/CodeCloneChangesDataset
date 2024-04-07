@@ -1,0 +1,36 @@
+digraph {
+14 [style = filled, label = "return builder.build()@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+17 [style = filled, label = "final List<RelDataTypeField> fieldList = table.getRowType().getFieldList()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Compiler compiler@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Enumerable<Row> enumerable@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Compiler compiler@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "createEnumerable['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "final ImmutableIntList rejectedProjects@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "TableScan rel@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "final RelDataTypeFactory.Builder builder = getCluster().getTypeFactory().builder()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "deriveRowType['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final ImmutableIntList acceptedProjects@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "List<RexNode> rejectedFilters@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+16 [style = filled, label = "builder.add(fieldList.get(project))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Enumerable<Row> enumerable@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "createEnumerable['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final ImmutableIntList acceptedProjects@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "List<RexNode> rejectedFilters@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "TableScan rel@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0->2 [style = dotted, label="true"];
+10->6 [style = dotted, label="true"];
+0->3 [style = dotted, label="true"];
+0->4 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+0->6 [style = dotted, label="true"];
+10->11 [style = dotted, label="true"];
+10->8 [style = dotted, label="true"];
+10->7 [style = dotted, label="true"];
+17->16 [style = bold, label=""];
+16->14 [style = bold, label=""];
+10->12 [style = dotted, label="true"];
+10->9 [style = dotted, label="true"];
+15->13 [style = bold, label=""];
+13->17 [style = bold, label=""];
+0->5 [style = dotted, label="true"];
+}

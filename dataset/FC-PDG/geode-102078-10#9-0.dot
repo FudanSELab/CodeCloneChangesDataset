@@ -1,0 +1,35 @@
+digraph {
+1 [style = filled, label = "TestableAbstractRegionMap arm = new TestableAbstractRegionMap()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "verify(arm._getOwner(),never()).basicInvalidatePart2(any(),any(),anyBoolean(),anyBoolean())@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "invalidateOfNonExistentRegionThrowsEntryNotFoundWithForce['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "EntryEventImpl event = createEventForInvalidate(arm._getOwner())@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "when(arm._getOwner().isInitialized()).thenReturn(true)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "invalidateOfAlreadyInvalidEntryReturnsFalse['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "when(arm._getOwner().isInitialized()).thenReturn(true)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "assertThatThrownBy(null).isInstanceOf()@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "AbstractRegionMap.FORCE_INVALIDATE_EVENT = true@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThatThrownBy(null).isInstanceOf()@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "TestableAbstractRegionMap arm = new TestableAbstractRegionMap()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "verify(arm._getOwner(),times(1)).invokeInvalidateCallbacks(any(),any(),anyBoolean())@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "verify(arm._getOwner(),never()).basicInvalidatePart2(any(),any(),anyBoolean(),anyBoolean())@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "invalidateOfAlreadyInvalidEntryReturnsFalse['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10->1 [style = bold, label=""];
+8->11 [style = bold, label=""];
+1->7 [style = bold, label=""];
+0->2 [style = bold, label=""];
+13->10 [style = bold, label=""];
+2->12 [style = bold, label=""];
+8->11 [style = dashed, label="0"];
+7->4 [style = bold, label=""];
+9->5 [style = bold, label=""];
+7->2 [style = bold, label=""];
+12->8 [style = bold, label=""];
+3->8 [style = bold, label=""];
+4->0 [style = bold, label=""];
+6->5 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+1->4 [style = bold, label=""];
+2->3 [style = bold, label=""];
+1->2 [style = solid, label="event"];
+5->1 [style = bold, label=""];
+}

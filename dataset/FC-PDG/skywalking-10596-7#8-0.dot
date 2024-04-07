@@ -1,0 +1,20 @@
+digraph {
+1 [style = filled, label = "Set<String> keys@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "configTable.add(new ConfigTable.ConfigItem(name,value))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "readConfig['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "final String value = configReader.getProperty(name,null)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final ConfigTable configTable = new ConfigTable()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "return Optional.of(configTable)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "readConfig['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "readConfig['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7->5 [style = bold, label=""];
+2->1 [style = dotted, label="true"];
+4->6 [style = bold, label=""];
+5->3 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+3->4 [style = solid, label="value"];
+7->1 [style = dotted, label="true"];
+4->3 [style = bold, label=""];
+3->4 [style = bold, label=""];
+5->6 [style = solid, label="configTable"];
+}

@@ -1,0 +1,38 @@
+digraph {
+1 [style = filled, label = "BasicFuseableConditionalSubscriber<Integer,Integer> fcs = new BasicFuseableConditionalSubscriber<Integer,Integer>(cs){@Override public boolean tryOnNext(Integer t){return false}@Override public void onNext(Integer t){}@Override public int requestFusion(int mode){return 0}@Nullable @Override public Integer poll(){return null}}@@@17@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertTrue(fcs.isEmpty())@@@35@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ConditionalSubscriber<Integer> cs = new ConditionalSubscriber<Integer>(){@Override public void onSubscribe(Subscription s){}@Override public void onNext(Integer t){}@Override public void onError(Throwable t){}@Override public void onComplete(){}@Override public boolean tryOnNext(Integer t){return false}}@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "assertFalse(fcs.isEmpty())@@@16@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "offerThrows['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "offerThrows['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "fcs.onSubscribe(new ScalarSubscription<Integer>(fcs,1))@@@14@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "assertTrue(fcs.isEmpty())@@@18@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "fcs.clear()@@@17@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "fcs.onSubscribe(new ScalarSubscription<>(fcs,1))@@@31@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "fcs.clear()@@@34@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "BasicFuseableSubscriber<Integer,Integer> fcs = new BasicFuseableSubscriber<Integer,Integer>(new TestSubscriber<Integer>(0L)){@Override public void onNext(Integer t){}@Override public int requestFusion(int mode){return 0}@Nullable @Override public Integer poll(){return null}}@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "offerThrows['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "TestHelper.assertNoOffer(fcs)@@@15@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->2 [style = bold, label=""];
+4->6 [style = bold, label=""];
+1->8 [style = solid, label="fcs"];
+2->4 [style = bold, label=""];
+8->5 [style = bold, label=""];
+11->12 [style = bold, label=""];
+7->8 [style = dashed, label="0"];
+1->8 [style = bold, label=""];
+9->3 [style = bold, label=""];
+3->11 [style = dashed, label="0"];
+0->3 [style = bold, label=""];
+3->1 [style = bold, label=""];
+11->12 [style = solid, label="fcs"];
+12->10 [style = bold, label=""];
+10->7 [style = bold, label=""];
+13->11 [style = bold, label=""];
+1->7 [style = solid, label="fcs"];
+3->1 [style = solid, label="cs"];
+1->5 [style = solid, label="fcs"];
+11->10 [style = solid, label="fcs"];
+7->5 [style = bold, label=""];
+1->7 [style = bold, label=""];
+}

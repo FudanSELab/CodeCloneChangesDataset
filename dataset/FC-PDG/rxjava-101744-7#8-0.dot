@@ -1,0 +1,33 @@
+digraph {
+9 [style = filled, label = "@NonNull T t@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "onNext['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "terminalEvent.get() != null@@@4@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "onNext['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "return@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "T t@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Object o = NotificationLite.next(t)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ExceptionHelper.nullCheck(t,\"onNext called with a null value.\")@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "setCurrent(o)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "onNext['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "bs.emitNext(o,index)@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->6 [style = bold, label=""];
+1->4 [style = bold, label=""];
+9->6 [style = solid, label="t"];
+2->0 [style = dotted, label="true"];
+0->9 [style = dashed, label="0"];
+1->5 [style = dotted, label="true"];
+0->6 [style = solid, label="t"];
+8->6 [style = bold, label=""];
+10->6 [style = bold, label=""];
+6->1 [style = bold, label=""];
+0->4 [style = solid, label="t"];
+4->3 [style = bold, label=""];
+4->7 [style = solid, label="o"];
+9->4 [style = solid, label="t"];
+3->7 [style = bold, label=""];
+5->4 [style = bold, label=""];
+10->9 [style = dotted, label="true"];
+8->0 [style = dotted, label="true"];
+4->3 [style = solid, label="o"];
+1->5 [style = bold, label=""];
+}

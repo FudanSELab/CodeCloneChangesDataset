@@ -1,0 +1,17 @@
+digraph {
+7 [style = filled, label = "Method m@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "findRestOperationArgs['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Method m@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "BeanStore beanStore@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "Method m@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "findHookMethodArgs['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "BeanStore beanStore@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "findRestOperationArgs['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2->1 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+1->7 [style = dashed, label="0"];
+2->0 [style = dotted, label="true"];
+4->1 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+6->7 [style = dotted, label="true"];
+}

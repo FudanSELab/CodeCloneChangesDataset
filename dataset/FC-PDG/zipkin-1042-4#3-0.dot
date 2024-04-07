@@ -1,0 +1,22 @@
+digraph {
+4 [style = filled, label = "assertThat(storage.check().ok()).isTrue()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "server.enqueue(YELLOW_RESPONSE.toHttpResponse())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "healthcheck_usesAuthAndTls['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "assertThat(next.headers().get(\"Authorization\")).isEqualTo(\"Basic Zm9vOmJhcg==\")@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "assertThat(next.headers().get(\"Authorization\")).isEqualTo(\"Basic QWxhZGRpbjpPcGVuU2VzYW1l\")@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "healthcheck_usesDynamicCredentialsAndTls['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "pretendIndexTemplatesExist(storage)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "AggregatedHttpRequest next = server.takeRequest().request()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "healthcheck_usesAuthAndTls['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "server.enqueue(VERSION_RESPONSE.toHttpResponse())@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+4->5 [style = bold, label=""];
+9->2 [style = bold, label=""];
+5->0 [style = bold, label=""];
+7->1 [style = bold, label=""];
+6->7 [style = bold, label=""];
+5->8 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+3->2 [style = bold, label=""];
+1->4 [style = bold, label=""];
+}

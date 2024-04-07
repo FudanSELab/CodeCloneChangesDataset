@@ -1,0 +1,37 @@
+digraph {
+7 [style = filled, label = "testBadTableSinkForNonExistingPartitionerClass['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "FactoryUtil.createTableSink(null,ObjectIdentifier.of(\"default\",\"default\",TABLE_NAME),createSinkTable(sinkSchema,sinkOptions,Arrays.asList(\"name\",\"curr_id\")),new Configuration(),Thread.currentThread().getContextClassLoader(),false)@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "thrown.expect(containsCause(new ValidationException(\"Could not find and instantiate partitioner class 'abc'\")))@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "createTableSink(sinkSchema,sinkOptions)@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "Map<String,String> sinkOptions = defaultTableOptions().withTableOption(KinesisOptions.SINK_PARTITIONER,\"random\").build()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "thrown.expect(containsCause(new ValidationException(String.format(\"Cannot set %s option for a table defined with a PARTITIONED BY clause\",KinesisOptions.SINK_PARTITIONER.key()))))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "thrown.expect()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testBadTableSinkForCustomPartitionerForPartitionedTable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testBadTableSinkForNonExistingPartitionerClass['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Map<String,String> sinkOptions = defaultTableOptions().withTableOption(KinesisOptions.SINK_PARTITIONER,\"abc\").build()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "FactoryUtil.createTableSink(null,ObjectIdentifier.of(\"default\",\"default\",TABLE_NAME),createSinkTable(sinkSchema,sinkOptions,Collections.emptyList()),new Configuration(),Thread.currentThread().getContextClassLoader(),false)@@@7@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "ResolvedSchema sinkSchema = defaultSinkSchema()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "TableSchema sinkSchema = defaultSinkSchema().build()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7->8 [style = bold, label=""];
+9->4 [style = bold, label=""];
+10->11 [style = solid, label="sinkOptions"];
+4->11 [style = solid, label="sinkSchema"];
+5->4 [style = bold, label=""];
+4->1 [style = bold, label=""];
+1->6 [style = solid, label="sinkOptions"];
+2->3 [style = bold, label=""];
+8->1 [style = bold, label=""];
+0->12 [style = bold, label=""];
+1->10 [style = dashed, label="0"];
+8->6 [style = solid, label="sinkSchema"];
+4->8 [style = dashed, label="0"];
+2->6 [style = bold, label=""];
+4->10 [style = bold, label=""];
+1->3 [style = solid, label="sinkOptions"];
+12->11 [style = bold, label=""];
+0->2 [style = bold, label=""];
+4->3 [style = solid, label="sinkSchema"];
+10->0 [style = bold, label=""];
+2->12 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+}

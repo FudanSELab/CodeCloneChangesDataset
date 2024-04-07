@@ -1,0 +1,38 @@
+digraph {
+16 [style = filled, label = "super(offering.getId(),offering.getName(),offering.getDisplayText(),offering.getProvisioningType(),false,offering.getTags(),offering.isRecreatable(),offering.isUseLocalStorage(),offering.isSystemUse(),true,offering.isCustomizedIops() == null? false: offering.isCustomizedIops(),offering.getMinIops(),offering.getMaxIops())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "hostTag = offering.getHostTag()@@@12@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "multicastRateMbps = offering.getMulticastRateMbps()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "volatileVm = offering.isVolatileVm()@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "limitCpuUse = offering.getLimitCpuUse()@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ramSize = offering.getRamSize()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "cpu = offering.getCpu()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "offerHA = offering.isOfferHA()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ServiceOfferingVO['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "vmType = offering.getSystemVmType()@@@13@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "ServiceOfferingVO['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "dynamicScalingEnabled = offering.isDynamicScalingEnabled()@@@14@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "rateMbps = offering.getRateMbps()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "super(offering.getId(),offering.getName(),offering.getDisplayText(),offering.getProvisioningType(),false,offering.getTags(),offering.isRecreatable(),offering.isUseLocalStorage(),offering.isSystemUse(),true,offering.isCustomizedIops() == null? false: offering.isCustomizedIops(),offering.getMinIops(),offering.getMaxIops())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "speed = offering.getSpeed()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ServiceOfferingVO offering@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "ServiceOfferingVO['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4->10 [style = bold, label=""];
+5->2 [style = bold, label=""];
+14->6 [style = dotted, label="true"];
+0->16 [style = dashed, label="0"];
+12->11 [style = bold, label=""];
+16->8 [style = bold, label=""];
+7->12 [style = bold, label=""];
+14->0 [style = bold, label=""];
+0->8 [style = bold, label=""];
+9->5 [style = bold, label=""];
+1->6 [style = dotted, label="true"];
+3->4 [style = bold, label=""];
+2->7 [style = bold, label=""];
+11->13 [style = bold, label=""];
+8->3 [style = bold, label=""];
+15->16 [style = bold, label=""];
+10->9 [style = bold, label=""];
+1->0 [style = bold, label=""];
+15->6 [style = dotted, label="true"];
+}

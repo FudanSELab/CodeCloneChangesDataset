@@ -1,0 +1,28 @@
+digraph {
+3 [style = filled, label = "doSetProperty(\"basicPropertyBinding\",basicPropertyBinding)@@@22@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "boolean basicPropertyBinding@@@21@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "basicPropertyBinding['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "doSetProperty(\"basicPropertyBinding\",basicPropertyBinding)@@@14@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "basicPropertyBinding['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "boolean basicPropertyBinding@@@13@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "basicPropertyBinding['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "return this@@@15@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return this@@@23@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6->7 [style = solid, label="lazyStartProducer"];
+7->5 [style = bold, label=""];
+8->7 [style = bold, label=""];
+0->2 [style = dotted, label="true"];
+6->7 [style = solid, label="dataSource"];
+2->3 [style = solid, label="basicPropertyBinding"];
+2->3 [style = solid, label="bridgeErrorHandler"];
+2->3 [style = solid, label="eventBus"];
+8->6 [style = dotted, label="true"];
+6->7 [style = solid, label="basicPropertyBinding"];
+0->3 [style = bold, label=""];
+4->3 [style = bold, label=""];
+2->3 [style = solid, label="listenerInterface"];
+3->1 [style = bold, label=""];
+2->3 [style = solid, label="lazyStartProducer"];
+4->2 [style = dotted, label="true"];
+2->6 [style = dashed, label="0"];
+}

@@ -1,0 +1,11 @@
+digraph {
+0 [style = filled, label = "return ldapTemplate.searchForObject(query().where(loginIdAttrName).is(userId),null)@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "searchUserById['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "searchUserById['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "String userId@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1->2 [style = dotted, label="true"];
+3->0 [style = bold, label=""];
+3->2 [style = dotted, label="true"];
+2->0 [style = solid, label="userId"];
+1->0 [style = bold, label=""];
+}

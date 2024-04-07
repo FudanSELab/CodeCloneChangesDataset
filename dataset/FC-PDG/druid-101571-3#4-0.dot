@@ -1,0 +1,13 @@
+digraph {
+5 [style = filled, label = "testQuery(PLANNER_CONFIG_DEFAULT,\"SELECT COLUMN_NAME, DATA_TYPE, IS_NULLABLE\" + \"FROM INFORMATION_SCHEMA.COLUMNS\" + \"WHERE TABLE_SCHEMA = 'druid' AND TABLE_NAME = 'forbiddenDatasource'\",CalciteTests.SUPER_USER_AUTH_RESULT,ImmutableList.of(),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a0132d,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a01333,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a01339,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a0133f,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a01345,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a0134b,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a01351))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testInformationSchemaColumnsOnTable['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "testInformationSchemaColumnsOnForbiddenTable['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testQuery(\"SELECT COLUMN_NAME, DATA_TYPE, IS_NULLABLE\" + \"FROM INFORMATION_SCHEMA.COLUMNS\" + \"WHERE TABLE_SCHEMA = 'druid' AND TABLE_NAME = 'forbiddenDatasource'\",ImmutableList.of(),ImmutableList.of())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testQuery(\"SELECT COLUMN_NAME, DATA_TYPE, IS_NULLABLE\" + \"FROM INFORMATION_SCHEMA.COLUMNS\" + \"WHERE TABLE_SCHEMA = 'druid' AND TABLE_NAME = 'foo'\",ImmutableList.of(),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a012d9,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a012df,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a012e5,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a012eb,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a012f1,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a012f7,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a012fd,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a01303))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testInformationSchemaColumnsOnTable['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0->1 [style = bold, label=""];
+1->3 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->5 [style = bold, label=""];
+}

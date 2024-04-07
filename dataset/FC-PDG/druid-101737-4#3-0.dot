@@ -1,0 +1,14 @@
+digraph {
+1 [style = filled, label = "testRegexpLikeFilter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "cannotVectorize()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testRegexpExtractFilterViaNotNullCheck['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testRegexpLikeFilter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "testQuery(\"SELECT COUNT(*)\" + \"FROM foo\" + \"WHERE REGEXP_LIKE(dim1, '^1') OR REGEXP_LIKE('Z' || dim1, '^Z2')\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).virtualColumns(expressionVirtualColumn(\"v0\",\"concat('Z',\"dim1\")\",ValueType.STRING)).filters(or(new RegexDimFilter(\"dim1\",\"^1\",null),new RegexDimFilter(\"v0\",\"^Z2\",null))).aggregators(new CountAggregatorFactory(\"a0\")).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a47c5c))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testQuery(\"SELECT COUNT(*)\" + \"FROM foo\" + \"WHERE REGEXP_EXTRACT(dim1, '^1') IS NOT NULL OR REGEXP_EXTRACT('Z' || dim1, '^Z2') IS NOT NULL\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).virtualColumns(expressionVirtualColumn(\"v0\",\"regexp_extract(concat('Z',\"dim1\"),'^Z2')\",ValueType.STRING)).filters(or(not(selector(\"dim1\",null,new RegexDimExtractionFn(\"^1\",0,true,null))),not(selector(\"v0\",null,null)))).aggregators(new CountAggregatorFactory(\"a0\")).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a47cb3))@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2->0 [style = bold, label=""];
+3->0 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->5 [style = dashed, label="0"];
+4->2 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

@@ -1,0 +1,27 @@
+digraph {
+1 [style = filled, label = "final long(( oldArray = pointerArray@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "Platform.copyMemory(array.getBaseObject(),array.getBaseOffset(),newArray.getBaseObject(),newArray.getBaseOffset(),array.size() * 8L)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "assert(newArray.size() > array.size())@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "expandPointerArray['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "LongArray newArray@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "pointerArray = new long((((@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final int newLength = oldArray.length * 2 > 0? (oldArray.length * 2): Integer.MAX_VALUE@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "expandPointerArray['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "System.arraycopy(oldArray,0,pointerArray,0,oldArray.length)@@@6@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "array = newArray@@@6@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "consumer.freeArray(array)@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "expandPointerArray['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4->0 [style = solid, label="pointerArray"];
+10->8 [style = bold, label=""];
+11->1 [style = bold, label=""];
+2->4 [style = bold, label=""];
+8->6 [style = bold, label=""];
+1->0 [style = solid, label="oldArray"];
+5->9 [style = bold, label=""];
+5->7 [style = dotted, label="true"];
+1->2 [style = bold, label=""];
+7->6 [style = solid, label="newArray"];
+4->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+9->10 [style = bold, label=""];
+}

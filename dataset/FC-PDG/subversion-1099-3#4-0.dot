@@ -1,0 +1,27 @@
+digraph {
+4 [style = filled, label = "final int prime = 31@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "hashCode['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "hashCode['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "return result@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "hashCode['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "result = prime * result + ((from == null)? 0: from.hashCode())@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "int result = 1@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "result = prime * result + ((to == null)? 0: to.hashCode())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "int result = (inheritable? 1: 2)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+5->2 [style = bold, label=""];
+5->2 [style = solid, label="result"];
+4->6 [style = bold, label=""];
+4->5 [style = solid, label="prime"];
+7->4 [style = bold, label=""];
+6->1 [style = bold, label=""];
+8->4 [style = bold, label=""];
+0->1 [style = solid, label="result"];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+4->1 [style = solid, label="prime"];
+4->0 [style = bold, label=""];
+6->1 [style = solid, label="result"];
+1->5 [style = solid, label="result"];
+1->5 [style = bold, label=""];
+0->6 [style = dashed, label="0"];
+}

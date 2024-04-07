@@ -1,0 +1,38 @@
+digraph {
+4 [style = filled, label = "final ContainerBuilder mainContainerBuilder = new ContainerBuilder(container)@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "decorateMainContainer['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "mainContainerBuilder.addAllToPorts(getContainerPorts()).addAllToEnv(getCustomizedEnvs()).addNewEnv().withName(ENV_FLINK_POD_IP_ADDRESS).withValueFrom(new EnvVarSourceBuilder().withNewFieldRef(API_VERSION,POD_IP_FIELD_PATH).build()).endEnv()@@@9@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "final ResourceRequirements requirementsInPodTemplate = container.getResources() == null? new ResourceRequirements(): container.getResources()@@@6@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "mainContainerBuilder.withName(Constants.MAIN_CONTAINER_NAME).withImage(image).withImagePullPolicy(imagePullPolicy).withResources(requirements)@@@8@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "Container container@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "final String image = KubernetesUtils.resolveUserDefinedValue(flinkConfig,KubernetesConfigOptions.CONTAINER_IMAGE,kubernetesJobManagerParameters.getImage(),container.getImage(),\"main container image\")@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "final String imagePullPolicy = KubernetesUtils.resolveUserDefinedValue(flinkConfig,KubernetesConfigOptions.CONTAINER_IMAGE_PULL_POLICY,kubernetesJobManagerParameters.getImagePullPolicy().name(),container.getImagePullPolicy(),\"main container image pull policy\")@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "return new ContainerBuilder(container).withName(Constants.MAIN_CONTAINER_NAME).withImage(kubernetesTaskManagerParameters.getImage()).withImagePullPolicy(kubernetesTaskManagerParameters.getImagePullPolicy().name()).withResources(resourceRequirements).withPorts(new ContainerPortBuilder().withName(Constants.TASK_MANAGER_RPC_PORT_NAME).withContainerPort(kubernetesTaskManagerParameters.getRPCPort()).build()).withEnv(getCustomizedEnvs()).build()@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+15 [style = filled, label = "decorateMainContainer['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "decorateMainContainer['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "return new ContainerBuilder(container).withName(Constants.MAIN_CONTAINER_NAME).withImage(kubernetesJobManagerParameters.getImage()).withImagePullPolicy(kubernetesJobManagerParameters.getImagePullPolicy().name()).withResources(requirements).withPorts(getContainerPorts()).withEnv(getCustomizedEnvs()).addNewEnv().withName(ENV_FLINK_POD_IP_ADDRESS).withValueFrom(new EnvVarSourceBuilder().withNewFieldRef(API_VERSION,POD_IP_FIELD_PATH).build()).endEnv().build()@@@4@@@['1', '0', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final ResourceRequirements requirements = KubernetesUtils.getResourceRequirements(kubernetesJobManagerParameters.getJobManagerMemoryMB(),kubernetesJobManagerParameters.getJobManagerCPU(),Collections.emptyMap())@@@3@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "return mainContainerBuilder.build()@@@10@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+14 [style = filled, label = "final ResourceRequirements resourceRequirements = KubernetesUtils.getResourceRequirements(kubernetesTaskManagerParameters.getTaskManagerMemoryMB(),kubernetesTaskManagerParameters.getTaskManagerCPU(),kubernetesTaskManagerParameters.getTaskManagerExternalResources())@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "final ResourceRequirements requirements = KubernetesUtils.getResourceRequirements(requirementsInPodTemplate,kubernetesJobManagerParameters.getJobManagerMemoryMB(),kubernetesJobManagerParameters.getJobManagerCPU(),Collections.emptyMap())@@@7@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+4->10 [style = bold, label=""];
+5->12 [style = bold, label=""];
+12->7 [style = bold, label=""];
+14->13 [style = bold, label=""];
+1->3 [style = dotted, label="true"];
+11->3 [style = dotted, label="true"];
+11->4 [style = bold, label=""];
+0->2 [style = bold, label=""];
+5->12 [style = solid, label="requirementsInPodTemplate"];
+7->8 [style = bold, label=""];
+8->9 [style = bold, label=""];
+15->14 [style = bold, label=""];
+0->14 [style = dashed, label="0"];
+10->6 [style = bold, label=""];
+12->7 [style = solid, label="requirements"];
+3->4 [style = solid, label="container"];
+6->5 [style = bold, label=""];
+2->13 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+15->3 [style = dotted, label="true"];
+}

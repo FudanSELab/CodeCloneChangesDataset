@@ -1,0 +1,32 @@
+digraph {
+11 [style = filled, label = "getAsMap['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "String uri@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "getAsMap['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "String uri@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "HttpEntity entity = null@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "getAsMap['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "HttpGet get = new HttpGet(uri)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return (Map)ObjectBuilder.getVal(new JSONParser(new StringReader(response)))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "entity = cloudClient.getLbServer().getHttpClient().execute(get).getEntity()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "String response = EntityUtils.toString(entity,StandardCharsets.UTF_8)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "CloudSolrServer cloudClient@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "{EntityUtils.consumeQuietly(entity)}@@@10@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+7->5 [style = bold, label=""];
+3->6 [style = solid, label="response"];
+2->0 [style = bold, label=""];
+9->10 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+7->1 [style = dotted, label="true"];
+0->4 [style = solid, label="entity"];
+0->3 [style = bold, label=""];
+6->4 [style = bold, label=""];
+0->3 [style = solid, label="entity"];
+10->5 [style = solid, label="uri"];
+9->5 [style = bold, label=""];
+11->1 [style = dotted, label="true"];
+1->10 [style = dashed, label="0"];
+11->5 [style = bold, label=""];
+1->5 [style = solid, label="uri"];
+3->6 [style = bold, label=""];
+}

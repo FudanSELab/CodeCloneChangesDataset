@@ -1,0 +1,32 @@
+digraph {
+1 [style = filled, label = "DynamicTableFactory.Context context@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "return new DecodingFormat<DeserializationSchema<RowData>>(){@Override public DeserializationSchema<RowData> createRuntimeDecoder(DynamicTableSource.Context context,DataType producedDataType){final RowType rowType = (RowType)producedDataType.getLogicalType()final TypeInformation<RowData> rowDataTypeInfo = context.createTypeInformation(producedDataType)return new AvroRowDataDeserializationSchema(rowType,rowDataTypeInfo)}@Override public ChangelogMode getChangelogMode(){return ChangelogMode.insertOnly()}}@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "createDecodingFormat['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "String schemaRegistryURL = formatOptions.get(URL)@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "FactoryUtil.validateFactoryOptions(this,formatOptions)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "DynamicTableFactory.Context context@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "createDecodingFormat['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "ReadableConfig formatOptions@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "createDecodingFormat['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "Map<String,?> optionalPropertiesMap = buildOptionalPropertiesMap(formatOptions)@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "DynamicTableFactory.Context context@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9->5 [style = solid, label="formatOptions"];
+5->2 [style = bold, label=""];
+7->5 [style = bold, label=""];
+0->3 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+0->5 [style = bold, label=""];
+2->4 [style = bold, label=""];
+10->3 [style = dotted, label="true"];
+7->6 [style = dotted, label="true"];
+8->4 [style = bold, label=""];
+2->4 [style = solid, label="schemaRegistryURL"];
+10->5 [style = bold, label=""];
+3->8 [style = solid, label="formatOptions"];
+3->5 [style = solid, label="formatOptions"];
+5->4 [style = bold, label=""];
+7->3 [style = dotted, label="true"];
+2->8 [style = bold, label=""];
+10->9 [style = dotted, label="true"];
+8->4 [style = solid, label="optionalPropertiesMap"];
+}

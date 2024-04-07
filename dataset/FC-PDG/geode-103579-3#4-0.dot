@@ -1,0 +1,26 @@
+digraph {
+0 [style = filled, label = "watchdog.start()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ControlFileWatchdog watchdog = new ControlFileWatchdog(directory,requestFileName,requestHandler,stopAfterRequest)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "await().atMost(10,MINUTES).untilAsserted(null)@@@8@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "deletesFile_afterInvokingRequestHandler['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "verify(requestHandler,timeout(TEN_MINUTES_MILLIS)).handleRequest()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "await().atMost(10,MINUTES).until(null)@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "deletesFile_afterInvokingRequestHandler['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "requestHandler = mock()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "await().atMost(10,MINUTES).until(null)@@@9@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "File file = new EmptyFileWriter(requestFile).createNewFile()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "doesNotStop_afterInvokingRequestHandler_whenNotStopAfterRequest['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3->6 [style = solid, label="requestHandler"];
+6->0 [style = bold, label=""];
+9->3 [style = bold, label=""];
+5->7 [style = dashed, label="0"];
+1->3 [style = bold, label=""];
+0->4 [style = bold, label=""];
+2->10 [style = bold, label=""];
+10->5 [style = bold, label=""];
+2->7 [style = bold, label=""];
+8->3 [style = bold, label=""];
+4->2 [style = bold, label=""];
+2->5 [style = bold, label=""];
+3->6 [style = bold, label=""];
+}

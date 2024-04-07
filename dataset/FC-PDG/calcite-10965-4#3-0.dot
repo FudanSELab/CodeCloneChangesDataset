@@ -1,0 +1,31 @@
+digraph {
+3 [style = filled, label = "builder.addRuleClass()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "HepProgramBuilder builder = new HepProgramBuilder()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testWindowInParenthesis['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "HepPlanner hepPlanner = new HepPlanner(builder.build())@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final String sql = \"select count(*) over (w), count(*) over w\" + \"from emp\" + \"window w as (partition by empno order by empno)\"@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testProjectToWindowRuleForMultipleWindows['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "hepPlanner.addRule(ProjectToWindowRule.PROJECT)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "final String sql = \"select\" + \" count(*) over(partition by empno order by sal) as count1,\" + \" count(*) over(partition by deptno order by sal) as count2,\" + \" sum(deptno) over(partition by empno order by sal) as sum1,\" + \" sum(deptno) over(partition by deptno order by sal) as sum2\" + \"from emp\"@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "sql(sql).with(hepPlanner).check()@@@8@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "testWindowInParenthesis['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "HepProgram preProgram = new HepProgramBuilder().build()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "checkPlanning(tester,preProgram,hepPlanner,sql)@@@9@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+6->11 [style = bold, label=""];
+4->6 [style = bold, label=""];
+2->0 [style = bold, label=""];
+7->1 [style = bold, label=""];
+2->1 [style = solid, label="preProgram"];
+7->11 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+11->1 [style = bold, label=""];
+0->3 [style = bold, label=""];
+10->2 [style = bold, label=""];
+4->1 [style = solid, label="hepPlanner"];
+3->4 [style = bold, label=""];
+8->0 [style = bold, label=""];
+11->1 [style = solid, label="sql"];
+7->9 [style = bold, label=""];
+7->1 [style = solid, label="sql"];
+}

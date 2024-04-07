@@ -1,0 +1,26 @@
+digraph {
+0 [style = filled, label = "testWithMultipleEntries['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "worker.cleanup(entry)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "BibEntryAssert.assertEquals(,\"MedlinePlainImporterStringOutOfBounds.bib\",entries)@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "cleanupWithYearAlreadyPresentDoesNothing['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "BibEntry entry = new BibEntry()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "assertEquals(Optional.of(\"2012\"),entry.getField(FieldName.DATE))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "entry.setField(\"date\",\"2012\")@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "entry.setField(\"year\",\"2011\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "assertEquals(Optional.of(\"2011\"),entry.getField(FieldName.YEAR))@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Path file = Paths.get(.getResource(\"MedlinePlainImporterStringOutOfBounds.txt\").toURI())@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testWithMultipleEntries['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "List<BibEntry> entries = importer.importDatabase(file,Charsets.UTF_8).getDatabase().getEntries()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->11 [style = bold, label=""];
+0->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+5->8 [style = bold, label=""];
+3->1 [style = solid, label="entries"];
+11->6 [style = bold, label=""];
+9->5 [style = bold, label=""];
+5->6 [style = solid, label="entry"];
+7->10 [style = bold, label=""];
+3->1 [style = bold, label=""];
+4->2 [style = bold, label=""];
+2->3 [style = bold, label=""];
+}

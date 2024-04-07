@@ -1,0 +1,22 @@
+digraph {
+2 [style = filled, label = "repeatTakeWithSubscribeOn['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "repeatTakeWithSubscribeOn['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "assertEquals(2,counter.get())@@@26@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Flowable<Integer> oi = Flowable.unsafeCreate(new Publisher<Integer>(){@Override public void subscribe(Subscriber<? super Integer> sub){sub.onSubscribe(new BooleanSubscription())counter.incrementAndGet()sub.onNext(1)sub.onNext(2)sub.onComplete()}}).subscribeOn(Schedulers.newThread())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "repeatTakeWithSubscribeOn['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertArrayEquals(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@176f674,ys)@@@27@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final AtomicInteger counter = new AtomicInteger()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Observable<Integer> oi = Observable.unsafeCreate(new ObservableSource<Integer>(){@Override public void subscribe(Observer<? super Integer> sub){sub.onSubscribe(Disposable.empty())counter.incrementAndGet()sub.onNext(1)sub.onNext(2)sub.onComplete()}}).subscribeOn(Schedulers.newThread())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "Object(( ys = oi.repeat().subscribeOn(Schedulers.newThread()).map(new Function<Integer,Integer>(){@Override public Integer apply(Integer t1){try {Thread.sleep(50)}catch (InterruptedException e) return t1}}).take(4).toList().blockingGet().toArray()@@@14@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->1 [style = solid, label="ys"];
+0->5 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+3->7 [style = bold, label=""];
+6->3 [style = bold, label=""];
+3->4 [style = bold, label=""];
+7->0 [style = bold, label=""];
+4->0 [style = bold, label=""];
+8->3 [style = bold, label=""];
+2->3 [style = bold, label=""];
+5->1 [style = bold, label=""];
+}

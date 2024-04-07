@@ -1,0 +1,38 @@
+digraph {
+10 [style = filled, label = "trace.commit()@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "pathInForegroundStandard['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "Stat returnStat = RetryLoop.callWithRetry(client.getZookeeperClient(),new Callable<Stat>(){@Override public Stat call(){Stat returnStatif (watching.isWatched()) {returnStat = client.getZooKeeper().exists(path,true)}{returnStat = client.getZooKeeper().exists(path,watching.getWatcher(client,path))}return returnStat}})@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "pathInForeground['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final String path@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "TimeTrace trace = client.getZookeeperClient().startTracer(\"ExistsBuilderImpl-Foreground\")@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "TimeTrace trace = client.getZookeeperClient().startTracer(\"SetDataBuilderImpl-Foreground\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "pathInForegroundStandard['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "Stat resultStat = RetryLoop.callWithRetry(client.getZookeeperClient(),new Callable<Stat>(){@Override public Stat call(){return client.getZooKeeper().setData(path,data,version)}})@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final String path@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return returnStat@@@18@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "return resultStat@@@11@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "trace.commit()@@@17@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "final byte(( data@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+11->7 [style = solid, label="resultStat"];
+4->11 [style = dashed, label="0"];
+2->4 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+13->9 [style = dotted, label="true"];
+9->11 [style = solid, label="path"];
+6->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+4->3 [style = solid, label="returnStat"];
+0->5 [style = dotted, label="true"];
+3->7 [style = dashed, label="0"];
+8->11 [style = bold, label=""];
+6->5 [style = dotted, label="true"];
+10->7 [style = bold, label=""];
+1->3 [style = bold, label=""];
+11->10 [style = bold, label=""];
+5->4 [style = solid, label="path"];
+5->12 [style = dashed, label="0"];
+12->11 [style = solid, label="data"];
+13->8 [style = bold, label=""];
+0->2 [style = bold, label=""];
+13->12 [style = dotted, label="true"];
+}

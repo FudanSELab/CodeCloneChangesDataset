@@ -1,0 +1,16 @@
+digraph {
+1 [style = filled, label = "withAggregationContext(mapperService,List.of(source(null)),null)@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testEmptyKeyword['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testKeyword['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "withAggregationContext(mapperService,List.of(source(null)),null)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "MapperService mapperService = createMapperService(fieldMapping(null))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testEmptyKeyword['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2->0 [style = bold, label=""];
+1->5 [style = dashed, label="0"];
+0->1 [style = solid, label="mapperService"];
+0->5 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->1 [style = bold, label=""];
+4->0 [style = bold, label=""];
+0->5 [style = solid, label="mapperService"];
+}

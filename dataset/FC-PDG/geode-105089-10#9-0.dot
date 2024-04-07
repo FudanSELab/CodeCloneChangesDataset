@@ -1,0 +1,32 @@
+digraph {
+8 [style = filled, label = "final String regionName@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final String localRegion@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "return (CacheSerializableRunnable)PrRegion@@@75@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "getCacheSerializableRunnableForPROrderByQueryWithLimit['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "final String regionName@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "getCacheSerializableRunnableForPROrderByQueryAndCompareResults['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "final String localRegion@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "SerializableRunnable PrRegion = new CacheSerializableRunnable(\"PRQuery\"){@Override public void run2(){Cache cache = getCache()String(( queries = new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@149765Object r = new Object((((((Region region = cache.getRegion(regionName)assertNotNull(region)final String(( expectedExceptions = new String((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1497a4for (final String expectedException : expectedExceptions){getCache().getLogger().info(\"<ExpectedException action=add>\" + expectedException + \"</ExpectedException>\")}QueryService qs = getCache().getQueryService()Object(( paramstry {String distinct = \"SELECT DISTINCT \"for (int j = 0 j < queries.length j++){synchronized (region) {String qStr = (distinct + queries(j(.replace(\"REGION_NAME\",localRegion))r(j((0( = qs.newQuery(qStr).execute()qStr = (distinct + queries(j(.replace(\"REGION_NAME\",regionName))r(j((1( = qs.newQuery(qStr).execute()}}LogWriterUtils.getLogWriter().info(\"PRQueryDUnitHelper#getCacheSerializableRunnableForPRQueryAndCompareResults: Queries Executed successfully on Local region & PR Region\")StructSetOrResultsSet ssORrs = new StructSetOrResultsSet()ssORrs.CompareQueryResultsWithoutAndWithIndexes(r,queries.length,queries)}catch (QueryInvocationTargetException e) catch (QueryException e) catch (RegionDestroyedException rde) catch (CancelException cce) {for (final String expectedException : expectedExceptions){getCache().getLogger().info(\"<ExpectedException action=remove>\" + expectedException + \"</ExpectedException>\")}}}}@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "getCacheSerializableRunnableForPROrderByQueryWithLimit['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "return (CacheSerializableRunnable)PrRegion@@@57@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "final String localRegion@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1->2 [style = solid, label="localRegion"];
+5->2 [style = solid, label="localRegion"];
+8->2 [style = solid, label="regionName"];
+0->3 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+0->2 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+7->8 [style = dotted, label="true"];
+2->10 [style = bold, label=""];
+2->4 [style = bold, label=""];
+3->2 [style = solid, label="regionName"];
+7->9 [style = dotted, label="true"];
+9->2 [style = solid, label="localRegion"];
+3->9 [style = dashed, label="0"];
+6->2 [style = bold, label=""];
+6->3 [style = dotted, label="true"];
+2->10 [style = solid, label="PrRegion"];
+2->4 [style = solid, label="PrRegion"];
+7->2 [style = bold, label=""];
+}

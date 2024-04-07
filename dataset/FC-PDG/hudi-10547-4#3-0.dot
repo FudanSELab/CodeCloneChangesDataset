@@ -1,0 +1,21 @@
+digraph {
+5 [style = filled, label = "testCleaningWithZeroPartitionPaths['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "HoodieTestTable.of(metaClient).addCommit(\"000\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "List<HoodieCleanStat> hoodieCleanStatsOne = runCleaner(config)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "metaClient = HoodieTableMetaClient.reload(metaClient)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testPendingCompactions(config,48,18,false)@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testKeepLatestCommitsWithPendingCompactions['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "HoodieWriteConfig config = HoodieWriteConfig.newBuilder().withPath(basePath).withAssumeDatePartitioning(true).withCompactionConfig(HoodieCompactionConfig.newBuilder().withCleanerPolicy(HoodieCleaningPolicy.KEEP_LATEST_COMMITS).retainCommits(2).build()).build()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testKeepLatestCommitsWithPendingCompactions['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertTrue(hoodieCleanStatsOne.isEmpty(),\"HoodieCleanStats should be empty for a table with empty partitionPaths\")@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->2 [style = solid, label="config"];
+1->4 [style = solid, label="config"];
+6->7 [style = bold, label=""];
+4->8 [style = bold, label=""];
+7->4 [style = bold, label=""];
+1->6 [style = bold, label=""];
+1->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->1 [style = bold, label=""];
+5->1 [style = bold, label=""];
+}

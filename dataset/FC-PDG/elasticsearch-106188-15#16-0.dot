@@ -1,0 +1,38 @@
+digraph {
+5 [style = filled, label = "FakeRestRequest fakeRestRequest = requestWithContent(mediaType)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "testDispatchCompatibleRequestToNewlyAddedHandler['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "AssertingChannel channel = new AssertingChannel(fakeRestRequest,true,RestStatus.OK)@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "restController.registerHandler(RestRequest.Method.GET,\"/foo\",new RestHandler(){@Override public void handleRequest(RestRequest request,RestChannel channel,NodeClient client){XContentBuilder xContentBuilder = channel.newBuilder()assertThat(xContentBuilder.getRestApiVersion(),equalTo(RestApiVersion.minimumSupported()))assertThat(request.contentParser().getRestApiVersion(),equalTo(RestApiVersion.minimumSupported()))channel.sendResponse(new BytesRestResponse(RestStatus.OK,BytesRestResponse.TEXT_CONTENT_TYPE,BytesArray.EMPTY))}@Override public RestApiVersion compatibleWithVersion(){return RestApiVersion.current()}})@@@8@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "restController.registerHandler(GET,\"/foo\",RestApiVersion.minimumSupported(),null)@@@8@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "assertFalse(channel.getSendResponseCalled())@@@20@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final byte version = RestApiVersion.minimumSupported().major@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "restController.dispatchRequest(fakeRestRequest,channel,new ThreadContext(Settings.EMPTY))@@@21@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertFalse(channel.getSendResponseCalled())@@@15@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "assertTrue(channel.getSendResponseCalled())@@@22@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testDispatchCompatibleHandler['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "testDispatchCompatibleHandler['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "RestController restController = new RestController(Collections.emptySet(),null,client,circuitBreakerService,usageService)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final String mediaType = randomCompatibleMediaType(version)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9->11 [style = dashed, label="0"];
+8->9 [style = bold, label=""];
+5->8 [style = bold, label=""];
+2->5 [style = bold, label=""];
+8->7 [style = solid, label="channel"];
+5->7 [style = solid, label="fakeRestRequest"];
+2->5 [style = solid, label="mediaType"];
+0->3 [style = bold, label=""];
+6->2 [style = solid, label="version"];
+6->2 [style = bold, label=""];
+3->6 [style = bold, label=""];
+10->1 [style = bold, label=""];
+8->11 [style = bold, label=""];
+11->10 [style = bold, label=""];
+5->8 [style = solid, label="fakeRestRequest"];
+7->4 [style = bold, label=""];
+12->3 [style = bold, label=""];
+8->1 [style = solid, label="channel"];
+13->3 [style = bold, label=""];
+1->7 [style = bold, label=""];
+9->1 [style = bold, label=""];
+5->1 [style = solid, label="fakeRestRequest"];
+}

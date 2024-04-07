@@ -1,0 +1,11 @@
+digraph {
+0 [style = filled, label = "callableCrashDelayError['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Flowable.just(1).hide().concatMap(Functions.justFunction(Flowable.fromCallable(new Callable<Object>(){@Override public Object call(){throw new TestException()}})),2,ImmediateThinScheduler.INSTANCE).test().assertFailure()@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Flowable.just(1).hide().concatMapDelayError(Functions.justFunction(Flowable.fromCallable(new Callable<Object>(){@Override public Object call(){throw new TestException()}})),true,2,ImmediateThinScheduler.INSTANCE).test().assertFailure()@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "callableCrash['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "callableCrashDelayError['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->4 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

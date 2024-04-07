@@ -1,0 +1,32 @@
+digraph {
+5 [style = filled, label = "final int mergeLimit@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "makeClient['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "final int mergeLimit@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final CachePopulator cachePopulator@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "final CachePopulator cachePopulator@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final CachePopulator cachePopulator@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final int mergeLimit@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "makeClient['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "makeClient['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final Cache cache@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "return new CachingClusteredClient(WAREHOUSE,new TimelineServerView(){@Override public void registerSegmentCallback(Executor exec,SegmentCallback callback){}@Override public Optional<VersionedIntervalTimeline<String,ServerSelector>> getTimeline(DataSourceAnalysis analysis){return Optional.of(timeline)}@Override public List<ImmutableDruidServer> getDruidServers(){throw new UnsupportedOperationException()}@Override public QueryRunner<T> getQueryRunner(DruidServer server){return serverView.getQueryRunner(server)}@Override public void registerTimelineCallback(final Executor exec,final TimelineCallback callback){throw new UnsupportedOperationException()}@Override public void registerServerRemovedCallback(Executor exec,ServerRemovedCallback callback){}},cache,JSON_MAPPER,cachePopulator,new CacheConfig(){@Override public boolean isPopulateCache(){return true}@Override public boolean isUseCache(){return true}@Override public boolean isQueryCacheable(Query query){return true}@Override public int getCacheBulkMergeLimit(){return mergeLimit}},new DruidHttpClientConfig(){@Override public long getMaxQueuedBytes(){return 0L}},new DruidProcessingConfig(){@Override public String getFormatString(){return null}@Override public int getMergePoolParallelism(){return 4}},ForkJoinPool.commonPool(),new QueryScheduler(0,ManualQueryPrioritizationStrategy.INSTANCE,NoQueryLaningStrategy.INSTANCE,new ServerConfig()))@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8->10 [style = dotted, label="true"];
+1->2 [style = dotted, label="true"];
+6->5 [style = dotted, label="true"];
+9->3 [style = solid, label="cachePopulator"];
+6->4 [style = dotted, label="true"];
+1->3 [style = bold, label=""];
+10->3 [style = solid, label="mergeLimit"];
+5->3 [style = solid, label="mergeLimit"];
+6->7 [style = dotted, label="true"];
+0->3 [style = solid, label="mergeLimit"];
+7->3 [style = solid, label="cachePopulator"];
+4->3 [style = solid, label="cache"];
+1->4 [style = dotted, label="true"];
+8->4 [style = dotted, label="true"];
+1->0 [style = dotted, label="true"];
+6->3 [style = bold, label=""];
+2->3 [style = solid, label="cachePopulator"];
+8->3 [style = bold, label=""];
+8->9 [style = dotted, label="true"];
+}

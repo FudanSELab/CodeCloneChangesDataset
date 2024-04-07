@@ -1,0 +1,36 @@
+digraph {
+11 [style = filled, label = "V1Assert.assertEquals(\"Table should end with last-sequence-number 0\",0,readMetadata().lastSequenceNumber())@@@12@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+13 [style = filled, label = "AppendFiles append = table.newFastAppend().appendManifest(manifest)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Assert.assertFalse(\"Should clean up new manifest\",new File(newManifest.path()).exists())@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "TestTables.TestTableOperations ops = table.ops()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "Assert.assertTrue(\"Should create new manifest\",new File(newManifest.path()).exists())@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "ManifestFile manifest = writeManifest(FILE_A,FILE_B)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Snapshot pending = append.apply()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testAppendManifestCleanup['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "V2Assert.assertEquals(\"Last sequence number should be 0\",0,readMetadata().lastSequenceNumber())@@@11@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "testAppendManifestCleanup['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "ManifestFile newManifest = pending.allManifests().get(0)@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "AppendFiles append = table.newAppend().appendManifest(manifest)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ops.failCommits(5)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "testAppendManifestCleanup['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "AssertHelpers.assertThrows(\"Should retry 4 times and throw last failure\",,\"Injected failure\",null)@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->8 [style = bold, label=""];
+9->3 [style = bold, label=""];
+12->11 [style = bold, label=""];
+10->7 [style = bold, label=""];
+14->7 [style = bold, label=""];
+7->1 [style = bold, label=""];
+0->5 [style = bold, label=""];
+0->12 [style = bold, label=""];
+6->13 [style = dashed, label="0"];
+8->6 [style = bold, label=""];
+6->4 [style = bold, label=""];
+13->4 [style = bold, label=""];
+4->9 [style = bold, label=""];
+3->0 [style = bold, label=""];
+8->13 [style = solid, label="manifest"];
+2->7 [style = bold, label=""];
+8->13 [style = bold, label=""];
+11->5 [style = bold, label=""];
+8->6 [style = solid, label="manifest"];
+}

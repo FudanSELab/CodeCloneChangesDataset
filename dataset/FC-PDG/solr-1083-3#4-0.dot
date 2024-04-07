@@ -1,0 +1,32 @@
+digraph {
+6 [style = filled, label = "basicAuthUser == null || basicAuthPass == null@@@5@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "getBuilder['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "getClass['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "throw new IllegalArgumentException(\"username & password must be specified with \" + getClass().getName())@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "HttpClientUtil.addRequestInterceptor(requestInterceptor)@@@16@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "getClass['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "final String basicAuthUser = defaultParams.get(HttpClientUtil.PROP_BASIC_AUTH_USER)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "SolrHttpClientBuilder builder@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "getBuilder['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "builder.setDefaultCredentialsProvider(new CredentialsProviderProvider(){@Override public CredentialsProvider getCredentialsProvider(){CredentialsProvider credsProvider = new BasicCredentialsProvider()credsProvider.setCredentials(AuthScope.ANY,new UsernamePasswordCredentials(basicAuthUser,basicAuthPass))return credsProvider}})@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "initHttpClientBuilder['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "return builder@@@17@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final String basicAuthPass = defaultParams.get(HttpClientUtil.PROP_BASIC_AUTH_PASS)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6->9 [style = dotted, label="true"];
+7->4 [style = solid, label="builder"];
+8->10 [style = solid, label="basicAuthPass"];
+6->9 [style = bold, label=""];
+5->12 [style = bold, label=""];
+11->4 [style = bold, label=""];
+10->11 [style = bold, label=""];
+5->7 [style = dotted, label="true"];
+8->6 [style = bold, label=""];
+12->8 [style = bold, label=""];
+3->2 [style = dotted, label="true"];
+6->10 [style = bold, label=""];
+12->10 [style = solid, label="basicAuthUser"];
+1->0 [style = dotted, label="true"];
+8->6 [style = solid, label="basicAuthPass"];
+9->10 [style = bold, label=""];
+12->6 [style = solid, label="basicAuthUser"];
+}

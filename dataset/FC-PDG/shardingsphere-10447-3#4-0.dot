@@ -1,0 +1,29 @@
+digraph {
+4 [style = filled, label = "tableMetaDataMap.put(\"logicName1\",new PhysicalTableMetaData(Arrays.asList(new PhysicalColumnMetaData(\"order_id\",Types.INTEGER,\"int\",true,false,false),new PhysicalColumnMetaData(\"user_id\",Types.INTEGER,\"int\",false,false,false),new PhysicalColumnMetaData(\"status\",Types.INTEGER,\"int\",false,false,false)),Collections.emptySet()))@@@4@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "buildSchema['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "buildSchemaWithoutPrimaryKey['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "return new ShardingSphereSchema(tableMetaDataMap)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "tableMetaDataMap.put(\"t_other\",new PhysicalTableMetaData(Collections.singletonList(new PhysicalColumnMetaData(\"order_id\",Types.INTEGER,\"int\",true,false,false)),Collections.emptySet()))@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Map<String,TableMetaData> tableMetaDataMap = new HashMap<>(3,1)@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "buildSchemaWithoutPrimaryKey['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "tableMetaDataMap.put(\"logicName1\",new TableMetaData(Arrays.asList(new ColumnMetaData(\"order_id\",Types.INTEGER,\"int\",true,false,false),new ColumnMetaData(\"user_id\",Types.INTEGER,\"int\",false,false,false),new ColumnMetaData(\"status\",Types.INTEGER,\"int\",false,false,false)),Collections.emptySet()))@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "tableMetaDataMap.put(\"t_other\",new TableMetaData(Collections.singletonList(new ColumnMetaData(\"order_id\",Types.INTEGER,\"int\",true,false,false)),Collections.emptySet()))@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "Map<String,PhysicalTableMetaData> tableMetaDataMap = new HashMap<>(3,1)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "tableMetaDataMap.put(\"logicName2\",new PhysicalTableMetaData(Arrays.asList(new PhysicalColumnMetaData(\"item_id\",Types.INTEGER,\"int\",true,false,false),new PhysicalColumnMetaData(\"order_id\",Types.INTEGER,\"int\",false,false,false),new PhysicalColumnMetaData(\"user_id\",Types.INTEGER,\"int\",false,false,false),new PhysicalColumnMetaData(\"status\",Types.VARCHAR,\"varchar\",false,false,false),new PhysicalColumnMetaData(\"c_date\",Types.TIMESTAMP,\"timestamp\",false,false,false)),Collections.emptySet()))@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->10 [style = bold, label=""];
+9->3 [style = bold, label=""];
+3->2 [style = solid, label="tableMetaDataMap"];
+3->6 [style = dashed, label="0"];
+1->3 [style = bold, label=""];
+8->2 [style = bold, label=""];
+0->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+7->8 [style = bold, label=""];
+4->7 [style = dashed, label="0"];
+5->6 [style = bold, label=""];
+0->8 [style = dashed, label="0"];
+3->4 [style = bold, label=""];
+10->0 [style = bold, label=""];
+4->0 [style = bold, label=""];
+6->2 [style = solid, label="tableMetaDataMap"];
+}

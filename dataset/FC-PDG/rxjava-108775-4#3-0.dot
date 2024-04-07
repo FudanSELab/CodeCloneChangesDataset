@@ -1,0 +1,36 @@
+digraph {
+2 [style = filled, label = "ns.onSubscribe(new Subscription(){@Override public void request(long n){r.set(n)}@Override public void cancel(){}})@@@33@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final AtomicLong r = new AtomicLong()@@@32@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertEquals(99,r.get())@@@41@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "assertEquals(10,r.get())@@@14@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Subscriber<? super String> ns = o.apply(s)@@@31@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "FlowableOperator<String,String> o = new FlowableOperator<String,String>(){@Override public Subscriber<? super String> apply(Subscriber<? super String> child){child.onSubscribe(new Subscription(){@Override public void request(long n){innerR.set(n)}@Override public void cancel(){}})ResourceSubscriber<String> as = new ResourceSubscriber<String>(){@Override protected void onStart(){request(99)}@Override public void onComplete(){}@Override public void onError(Throwable e){}@Override public void onNext(String t){}}return as}}@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "final AtomicLong r = new AtomicLong()@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "s.request(10)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "requestFromFinalSubscribeWithRequestValue['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "TestSubscriber<String> s = new TestSubscriber<String>(10L)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "requestFromDecoupledOperatorThatRequestsN['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "TestSubscriber<String> s = new TestSubscriber<String>(0L)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "assertEquals(10,innerR.get())@@@42@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "requestFromDecoupledOperatorThatRequestsN['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "final AtomicLong innerR = new AtomicLong()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "s.onSubscribe(new Subscription(){@Override public void request(long n){r.set(n)}@Override public void cancel(){}})@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5->2 [style = bold, label=""];
+4->5 [style = bold, label=""];
+2->6 [style = bold, label=""];
+12->10 [style = bold, label=""];
+0->4 [style = solid, label="s"];
+0->10 [style = dashed, label="0"];
+6->11 [style = dashed, label="0"];
+1->7 [style = bold, label=""];
+10->13 [style = bold, label=""];
+13->14 [style = bold, label=""];
+9->0 [style = bold, label=""];
+7->4 [style = bold, label=""];
+15->11 [style = bold, label=""];
+14->15 [style = bold, label=""];
+3->0 [style = bold, label=""];
+2->15 [style = dashed, label="0"];
+6->8 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

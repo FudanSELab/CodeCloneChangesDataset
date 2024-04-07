@@ -1,0 +1,35 @@
+digraph {
+3 [style = filled, label = "BucketHelpers.GapPolicy gapPolicy = randomFrom(GapPolicy.values())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testSingleValueAggDerivativeWithGaps_random['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testDocCountDerivativeWithGaps_random['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "executeTestCase(query,aggBuilder,null,null)@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "setupValueCounts()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "aggBuilder.subAggregation(new SumAggregationBuilder(\"sum\").field(SINGLE_VALUED_FIELD_NAME))@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "executeTestCase(query,aggBuilder,null,null)@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "aggBuilder.subAggregation(new DerivativePipelineAggregationBuilder(\"deriv\",\"_count\").gapPolicy(randomFrom(BucketHelpers.GapPolicy.values())))@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "testSingleValueAggDerivativeWithGaps_random['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "HistogramAggregationBuilder aggBuilder = new HistogramAggregationBuilder(\"histo\").field(SINGLE_VALUED_FIELD_NAME).interval(1).extendedBounds(0L,(long)numBuckets_empty_rnd - 1)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "aggBuilder.subAggregation(new DerivativePipelineAggregationBuilder(\"deriv\",\"sum\").gapPolicy(gapPolicy))@@@8@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "HistogramAggregationBuilder aggBuilder = new HistogramAggregationBuilder(\"histo\").field(SINGLE_VALUED_FIELD_NAME).interval(1).extendedBounds(0L,numBuckets_empty_rnd - 1)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Query query = new MatchAllDocsQuery()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12->9 [style = bold, label=""];
+0->12 [style = dashed, label="0"];
+12->11 [style = solid, label="aggBuilder"];
+2->9 [style = dashed, label="0"];
+7->12 [style = bold, label=""];
+0->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+2->4 [style = bold, label=""];
+8->6 [style = bold, label=""];
+9->11 [style = bold, label=""];
+10->6 [style = bold, label=""];
+3->4 [style = solid, label="gapPolicy"];
+7->1 [style = solid, label="query"];
+3->7 [style = bold, label=""];
+6->3 [style = bold, label=""];
+7->0 [style = bold, label=""];
+0->1 [style = solid, label="aggBuilder"];
+5->6 [style = bold, label=""];
+4->1 [style = bold, label=""];
+7->11 [style = solid, label="query"];
+}

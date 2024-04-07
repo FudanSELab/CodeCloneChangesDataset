@@ -1,0 +1,36 @@
+digraph {
+12 [style = filled, label = "assertEquals(\"http://baseUrl1:8983/slice1_replica1/\",cloudReplicaSource.getReplicasBySlice(0).get(0))@@@12@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "params.set(\"shards\",\"slice1,slice2\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ReplicaListTransformer replicaListTransformer = Mockito.mock()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testShardsParam_DeadNode['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "testSimple_ShardsParam['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "assertEquals(2,cloudReplicaSource.getSliceCount())@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testShardsParam_DeadNode['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "assertEquals(\"http://baseUrl2/slice2_replica2/\",cloudReplicaSource.getReplicasBySlice(1).get(0))@@@14@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "CloudReplicaSource cloudReplicaSource = new CloudReplicaSource.Builder().collection(\"collection1\").onlyNrt(false).zkStateReader(zkStateReader).replicaListTransformer(replicaListTransformer).whitelistHostChecker(whitelistHostChecker).params(params).build()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "assertEquals(1,cloudReplicaSource.getReplicasBySlice(1).size())@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertEquals(\"http://baseUrl1/slice1_replica1/\",cloudReplicaSource.getReplicasBySlice(0).get(0))@@@12@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "HttpShardHandlerFactory.WhitelistHostChecker whitelistHostChecker = Mockito.mock()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "assertEquals(0,cloudReplicaSource.getReplicasBySlice(1).size())@@@13@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "ModifiableSolrParams params = new ModifiableSolrParams()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertEquals(2,cloudReplicaSource.getSliceNames().size())@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertEquals(1,cloudReplicaSource.getReplicasBySlice(0).size())@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4->5 [style = bold, label=""];
+5->12 [style = dashed, label="0"];
+12->10 [style = bold, label=""];
+11->3 [style = bold, label=""];
+5->14 [style = bold, label=""];
+14->13 [style = bold, label=""];
+7->1 [style = bold, label=""];
+0->3 [style = bold, label=""];
+8->6 [style = bold, label=""];
+9->4 [style = bold, label=""];
+3->7 [style = bold, label=""];
+1->2 [style = bold, label=""];
+5->10 [style = bold, label=""];
+10->14 [style = dashed, label="0"];
+4->12 [style = bold, label=""];
+2->8 [style = bold, label=""];
+15->3 [style = bold, label=""];
+6->9 [style = bold, label=""];
+}

@@ -1,0 +1,29 @@
+digraph {
+9 [style = filled, label = "shouldCountWindowed['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "shouldCountWindowedWithInternalStoreName['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "doCountWindowed(results)@@@5@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "doCountWindowed(supplier)@@@6@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+4 [style = filled, label = "final MockProcessorSupplier<Windowed<String>,Long> supplier = new MockProcessorSupplier<>()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "shouldCountWindowedWithInternalStoreName['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "final List<KeyValue<Windowed<String>,KeyValue<Long,Long>>> results = new ArrayList<>()@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final List<KeyValue<Windowed<String>,Long>> results = new ArrayList<>()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "groupedStream.windowedBy(TimeWindows.of(ofMillis(500L))).count().toStream().foreach(null)@@@4@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "groupedStream.windowedBy(TimeWindows.of(ofMillis(500L))).count().toStream().process(supplier)@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "groupedStream.windowedBy(TimeWindows.of(ofMillis(500L))).count(Materialized.as(\"aggregate-by-key-windowed\")).toStream().foreach(null)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7->5 [style = bold, label=""];
+0->10 [style = bold, label=""];
+4->6 [style = solid, label="supplier"];
+0->2 [style = solid, label="results"];
+4->5 [style = solid, label="supplier"];
+4->7 [style = bold, label=""];
+10->2 [style = bold, label=""];
+9->0 [style = bold, label=""];
+2->5 [style = dashed, label="0"];
+1->10 [style = dashed, label="0"];
+3->0 [style = bold, label=""];
+8->4 [style = bold, label=""];
+0->4 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+0->1 [style = bold, label=""];
+5->6 [style = bold, label=""];
+}

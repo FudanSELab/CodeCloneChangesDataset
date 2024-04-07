@@ -1,0 +1,27 @@
+digraph {
+2 [style = filled, label = "final Enumerable<TSource> source@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final Function2<TSource,TCollection,TResult> resultSelector@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "final Function2<TSource,TCollection,TResult> resultSelector@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "selectMany['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final Function1<TSource,Enumerable<TCollection>> collectionSelector@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "final Function1<TSource,Enumerable<TCollection>> collectionSelector@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "final Enumerable<TSource> source@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final Enumerable<TSource> source@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "final Function2<TSource,Integer,Enumerable<TCollection>> collectionSelector@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "selectMany['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "selectMany['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "return new AbstractEnumerable<TResult>(){@Override public Enumerator<TResult> enumerator(){return new Enumerator<TResult>(){@Override public TResult current(){return resultEnumerator.current()}@Override public boolean moveNext(){for (  ){if (resultEnumerator.moveNext()) {return true}if (!sourceEnumerator.moveNext()) {return false}index += 1final TSource sourceElement = sourceEnumerator.current()collectionEnumerator = collectionSelector.apply(sourceElement,index).enumerator()resultEnumerator = new TransformedEnumerator<TCollection,TResult>(collectionEnumerator){@Override protected TResult transform(TCollection collectionElement){return resultSelector.apply(sourceElement,collectionElement)}}}}@Override public void reset(){sourceEnumerator.reset()resultEnumerator = Linq4j.emptyEnumerator()}@Override public void close(){sourceEnumerator.close()resultEnumerator.close()}}}}@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->2 [style = dotted, label="true"];
+5->6 [style = dotted, label="true"];
+4->10 [style = dashed, label="0"];
+11->9 [style = dotted, label="true"];
+11->8 [style = dotted, label="true"];
+11->3 [style = bold, label=""];
+1->3 [style = bold, label=""];
+5->3 [style = bold, label=""];
+5->4 [style = dotted, label="true"];
+5->7 [style = dotted, label="true"];
+11->10 [style = dotted, label="true"];
+1->4 [style = dotted, label="true"];
+1->0 [style = dotted, label="true"];
+}

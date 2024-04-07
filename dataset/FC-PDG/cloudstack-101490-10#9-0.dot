@@ -1,0 +1,17 @@
+digraph {
+3 [style = filled, label = "HostJoinVO host@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "EnumSet<HostDetails> details@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "HostJoinVO host@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "newHostForMigrationResponse['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "newHostForMigrationResponse['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "EnumSet<HostDetails> details@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "newHostResponse['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "EnumSet<HostDetails> details@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2->1 [style = dotted, label="true"];
+5->6 [style = dotted, label="true"];
+1->7 [style = dashed, label="0"];
+2->0 [style = dotted, label="true"];
+5->7 [style = dotted, label="true"];
+4->1 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+}

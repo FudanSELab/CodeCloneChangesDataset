@@ -1,0 +1,37 @@
+digraph {
+6 [style = filled, label = "table1Mapped.filter(new Predicate<String,Integer>(){@Override public boolean test(final String key,final Integer value){return (value % 2) == 0}})@@@14@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final StreamsBuilder builder = new StreamsBuilder()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final String topic2 = \"topic2\"@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testStateStoreLazyEval['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "final String topic1 = \"topic1\"@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(2,driver.getAllStateStores().size())@@@27@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testStateStore['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "final KTableImpl<String,String,String> table2 = (KTableImpl<String,String,String>)builder.table(topic2,consumed)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "table2.join(table1MappedFiltered,new ValueJoiner<String,Integer,String>(){@Override public String apply(String v1,Integer v2){return v1 + v2}})@@@20@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "final KTableImpl<String,String,Integer> table1Mapped = (KTableImpl<String,String,Integer>)table1.mapValues(new ValueMapper<String,Integer>(){@Override public Integer apply(String value){return new Integer(value)}})@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "builder.table(topic2,consumed)@@@7@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final KTableImpl<String,String,String> table1 = (KTableImpl<String,String,String>)builder.table(topic1,consumed)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "testStateStoreLazyEval['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+11 [style = filled, label = "final KTableImpl<String,Integer,Integer> table1MappedFiltered = (KTableImpl<String,Integer,Integer>)table1Mapped.filter(new Predicate<String,Integer>(){@Override public boolean test(String key,Integer value){return (value % 2) == 0}})@@@14@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11->12 [style = solid, label="table1MappedFiltered"];
+11->12 [style = bold, label=""];
+3->4 [style = solid, label="topic1"];
+0->7 [style = bold, label=""];
+9->3 [style = bold, label=""];
+12->1 [style = bold, label=""];
+8->6 [style = bold, label=""];
+10->3 [style = bold, label=""];
+2->8 [style = bold, label=""];
+4->2 [style = bold, label=""];
+8->11 [style = bold, label=""];
+7->4 [style = bold, label=""];
+3->0 [style = bold, label=""];
+0->2 [style = solid, label="topic2"];
+4->13 [style = bold, label=""];
+5->3 [style = bold, label=""];
+13->8 [style = bold, label=""];
+6->11 [style = dashed, label="0"];
+0->13 [style = solid, label="topic2"];
+6->1 [style = bold, label=""];
+2->13 [style = dashed, label="0"];
+}

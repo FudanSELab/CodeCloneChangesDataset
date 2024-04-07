@@ -1,0 +1,13 @@
+digraph {
+0 [style = filled, label = "parse['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "final float nvl = fp.parseFloat()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ValueSource source = fp.parseValueSource()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return new SimpleFloatFunction(source){@Override protected String name(){return \"nvl\"}@Override protected float func(int doc,FunctionValues vals){float v = vals.floatVal(doc)if (v == nvlFloatValue) {return nvl}{return v}}}@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "FunctionQParser fp@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0->3 [style = dotted, label="true"];
+0->2 [style = bold, label=""];
+2->1 [style = solid, label="source"];
+4->1 [style = solid, label="nvl"];
+2->4 [style = bold, label=""];
+4->1 [style = bold, label=""];
+}

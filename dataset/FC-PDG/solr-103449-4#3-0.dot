@@ -1,0 +1,29 @@
+digraph {
+2 [style = filled, label = "masterClient.close()@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "master = slave = null@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "slaveJetty.stop()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "tearDown['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "IndexFetcher.usableDiskSpaceProvider = originalDiskSpaceprovider@@@12@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "masterClient = slaveClient = null@@@10@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "tearDown['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "slaveClient.close()@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "masterJetty = slaveJetty = null@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13 [style = filled, label = "tearDown['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "masterJetty.stop()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "System.clearProperty(\"solr.indexfetcher.sotimeout\")@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "IndexFetcher.testWait = originalTestWait@@@13@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+1 [style = filled, label = "super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@e1fb29@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+13->1 [style = bold, label=""];
+9->2 [style = bold, label=""];
+3->10 [style = bold, label=""];
+12->1 [style = bold, label=""];
+1->7 [style = bold, label=""];
+0->4 [style = bold, label=""];
+5->8 [style = bold, label=""];
+10->11 [style = bold, label=""];
+4->9 [style = bold, label=""];
+6->1 [style = bold, label=""];
+7->0 [style = bold, label=""];
+8->3 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

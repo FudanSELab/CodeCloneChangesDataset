@@ -1,0 +1,14 @@
+digraph {
+0 [style = filled, label = "testRegisterPipelineAggregation['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testRegisterRescorer['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "SearchModule module = new SearchModule(Settings.EMPTY,singletonList(new SearchPlugin(){@Override public List<RescorerSpec<?>> getRescorers(){return singletonList(new RescorerSpec<>(\"test\",null,null))}}))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testRegisterPipelineAggregation['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "assertThat(module.getNamedXContents().stream().filter(null).collect(toList()),hasSize(1))@@@9@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(module.getNamedXContents().stream().filter(null).collect(toList()),hasSize(1))@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

@@ -1,0 +1,18 @@
+digraph {
+0 [style = filled, label = "execute['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "execute['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "execute['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "@NotNull final DBCExecutionContext context@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "TasksJob.runTask(\"Rollback transaction\",new DBRRunnableWithProgress(){@Override public void run(DBRProgressMonitor monitor){DBCTransactionManager txnManager = DBUtils.getTransactionManager(context)if (txnManager != null) {QMTransactionState txnInfo = QMUtils.getTransactionState(context)try {txnManager.rollback(session,null)}catch (DBCException e) DBeaverNotifications.showNotification(context.getDataSource(),\"rollback\",\"Transaction has been rolled back\" + \"Query count: \" + txnInfo.getUpdateCount() + \"\" + \"Duration: \" + RuntimeUtils.formatExecutionTime(System.currentTimeMillis() - txnInfo.getTransactionStartTime()) + \"\",DBPMessageType.ERROR)}}})@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "TasksJob.runTask(\"Commit transaction\",null)@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final DBCExecutionContext context@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0->2 [style = dotted, label="true"];
+2->4 [style = dashed, label="0"];
+1->6 [style = dashed, label="0"];
+5->4 [style = dotted, label="true"];
+4->6 [style = solid, label="context"];
+3->2 [style = dotted, label="true"];
+0->1 [style = bold, label=""];
+5->6 [style = bold, label=""];
+3->1 [style = bold, label=""];
+}

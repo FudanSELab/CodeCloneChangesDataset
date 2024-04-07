@@ -1,0 +1,11 @@
+digraph {
+0 [style = filled, label = "testQuery(\"SELECT SUM(cnt), gran FROM (\" + \" SELECT floor(__time TO month) AS gran,\" + \" cnt FROM druid.foo\" + \") AS x\" + \"GROUP BY gran\" + \"ORDER BY gran\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.MONTH).aggregators(aggregators(new LongSumAggregatorFactory(\"a0\",\"cnt\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@947578,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@94757f))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "testTimeseries['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "testTimeseries['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testTimeseriesLosAngelesUsingTimeFloorConnectionUtc['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testQuery(\"SELECT SUM(cnt), gran FROM (\" + \" SELECT TIME_FLOOR(__time, 'P1M', CAST(NULL AS TIMESTAMP), 'America/Los_Angeles') AS gran,\" + \" cnt FROM druid.foo\" + \") AS x\" + \"GROUP BY gran\" + \"ORDER BY gran\",ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE1).intervals(querySegmentSpec(Filtration.eternity())).granularity(new PeriodGranularity(Period.months(1),null,DateTimes.inferTzFromString(LOS_ANGELES))).aggregators(aggregators(new LongSumAggregatorFactory(\"a0\",\"cnt\"))).context(TIMESERIES_CONTEXT_DEFAULT).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9475c4,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9475cb,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9475d2,new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9475d9))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2->0 [style = bold, label=""];
+0->3 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+1->0 [style = bold, label=""];
+}

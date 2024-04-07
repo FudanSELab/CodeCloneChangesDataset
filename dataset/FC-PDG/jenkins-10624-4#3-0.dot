@@ -1,0 +1,19 @@
+digraph {
+1 [style = filled, label = "JenkinsRule.WebClient webClient = j.createWebClient()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "String resourceResponseUrl@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "{String modifiedUrl = resourceResponseUrl.replaceAll(\"static(-(files(/(....\",\"static-files/aaaa\")Page page = webClient.getPage(modifiedUrl)Assert.assertEquals(\"resource not found\",404,page.getWebResponse().getStatusCode())Assert.assertThat(\"resource not found\",page.getWebResponse().getContentAsString(),containsString(ResourceDomainFilter.ERROR_RESPONSE))}@@@15@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "secondDomainCannotBeFaked['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "{webClient.setRedirectEnabled(true)Page page = webClient.goTo(\"userContent/readme.txt\",\"text/plain\")resourceResponseUrl = page.getUrl().toString()Assert.assertEquals(\"resource response success\",200,page.getWebResponse().getStatusCode())Assert.assertNotNull(\"CSP headers set\",page.getWebResponse().getResponseHeaderValue(\"Content-Security-Policy\"))Assert.assertFalse(\"Not served from resource domain\",resourceResponseUrl.contains(RESOURCE_DOMAIN))Assert.assertFalse(\"Not served from resource action\",resourceResponseUrl.contains(\"static-files\"))Assert.assertTrue(\"Original URL\",resourceResponseUrl.contains(\"userContent/readme.txt\"))}@@@6@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "secondDomainCannotBeFaked['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "clearRootUrl['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "JenkinsRule.WebClient webClient = j.createWebClient()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "JenkinsLocationConfiguration.get().setUrl(null)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2->6 [style = bold, label=""];
+1->3 [style = bold, label=""];
+7->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+8->3 [style = bold, label=""];
+3->2 [style = bold, label=""];
+5->1 [style = bold, label=""];
+}

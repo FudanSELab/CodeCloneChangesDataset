@@ -1,0 +1,27 @@
+digraph {
+4 [style = filled, label = "assertNotNull(country.getId())@@@11@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "shouldAssignKeysToNamedCollection_MultiParams['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "CountryMapper mapper = sqlSession.getMapper()@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "mapper.insertSet(countries)@@@9@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "countries.add(new Country(\"United Kiongdom\",\"GB\"))@@@8@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "Set<Country> countries = new HashSet<>()@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "{sqlSession.rollback()}@@@14@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "mapper.insertSet_MultiParams(countries,Integer.valueOf(1))@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "countries.add(new Country(\"China\",\"CN\"))@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "shouldAssingKeysToCollection['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "shouldAssingKeysToCollection['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2->10 [style = solid, label="countries"];
+5->0 [style = bold, label=""];
+0->2 [style = bold, label=""];
+4->7 [style = bold, label=""];
+9->0 [style = bold, label=""];
+10->4 [style = bold, label=""];
+3->10 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+6->3 [style = bold, label=""];
+1->6 [style = bold, label=""];
+3->4 [style = bold, label=""];
+8->0 [style = bold, label=""];
+2->3 [style = solid, label="countries"];
+6->10 [style = bold, label=""];
+}

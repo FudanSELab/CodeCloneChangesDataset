@@ -1,0 +1,38 @@
+digraph {
+11 [style = filled, label = "beforeMethod['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "beforeMethod['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "target.setAttachment(scope)@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Scope scope = GlobalTracer.get().buildSpan(OPERATION_NAME).withTag(Tags.COMPONENT.getKey(),ShardingSphereTags.COMPONENT_NAME).withTag(Tags.SPAN_KIND.getKey(),Tags.SPAN_KIND_CLIENT).withTag(Tags.DB_STATEMENT.getKey(),String.valueOf(args(0()).startActive(true)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+14 [style = filled, label = "final MethodInvocationResult result@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "final AdviceTargetObject target@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "beforeMethod['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "Scope scope = GlobalTracer.get().buildSpan(OPERATION_NAME).withTag(Tags.COMPONENT.getKey(),JaegerConstants.COMPONENT_NAME).withTag(Tags.SPAN_KIND.getKey(),Tags.SPAN_KIND_CLIENT).withTag(Tags.DB_STATEMENT.getKey(),String.valueOf(args(0()).startActive(true)@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "final MethodInvocationResult result@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+15 [style = filled, label = "final Object(( args@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "final MethodInvocationResult result@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "final AdviceTargetObject target@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "final Method method@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "final Object(( args@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "final Method method@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final Object(( args@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+12->3 [style = dotted, label="true"];
+5->7 [style = dashed, label="0"];
+11->9 [style = dotted, label="true"];
+12->5 [style = bold, label=""];
+11->8 [style = dotted, label="true"];
+11->3 [style = dotted, label="true"];
+6->1 [style = dotted, label="true"];
+12->13 [style = dotted, label="true"];
+6->2 [style = dotted, label="true"];
+12->15 [style = dotted, label="true"];
+7->4 [style = bold, label=""];
+5->4 [style = solid, label="scope"];
+11->10 [style = dotted, label="true"];
+12->14 [style = dotted, label="true"];
+7->4 [style = solid, label="scope"];
+5->4 [style = bold, label=""];
+6->5 [style = bold, label=""];
+6->3 [style = dotted, label="true"];
+11->7 [style = bold, label=""];
+6->0 [style = dotted, label="true"];
+}

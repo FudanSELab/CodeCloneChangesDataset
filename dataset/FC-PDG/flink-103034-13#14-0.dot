@@ -1,0 +1,27 @@
+digraph {
+7 [style = filled, label = "assertThat(streamingGraph,hasProperties(GlobalDataExchangeMode.ALL_EDGES_PIPELINED,ScheduleMode.EAGER,false))@@@8@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final StreamGraph streamingGraph = generateStreamGraph(RuntimeExecutionMode.STREAMING,bounded)@@@7@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testBoundedDetection['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final SourceTransformation<Integer,?,?> bounded = getSourceTransformation(\"Bounded Source\",Boundedness.BOUNDED)@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(graph,hasProperties(GlobalDataExchangeMode.FORWARD_EDGES_PIPELINED,ScheduleMode.LAZY_FROM_SOURCES_WITH_BATCH_SLOT_REQUEST,false))@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "final StreamGraph graph = generateStreamGraph(RuntimeExecutionMode.AUTOMATIC,bounded)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "assertEquals(Boundedness.BOUNDED,bounded.getBoundedness())@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertThat(graph,hasProperties(GlobalDataExchangeMode.FORWARD_EDGES_PIPELINED,JobType.BATCH,false))@@@6@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "testExplicitOverridesDetectedMode['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testBoundedDetection['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6->0 [style = bold, label=""];
+0->2 [style = solid, label="bounded"];
+2->5 [style = solid, label="graph"];
+0->9 [style = solid, label="bounded"];
+2->3 [style = solid, label="graph"];
+3->9 [style = bold, label=""];
+3->5 [style = dashed, label="0"];
+1->2 [style = bold, label=""];
+8->0 [style = bold, label=""];
+0->1 [style = bold, label=""];
+9->7 [style = solid, label="streamingGraph"];
+4->0 [style = bold, label=""];
+2->5 [style = bold, label=""];
+2->3 [style = bold, label=""];
+9->7 [style = bold, label=""];
+}

@@ -1,0 +1,22 @@
+digraph {
+2 [style = filled, label = "SolrHttpClientBuilder builder@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "HttpClientUtil.addRequestInterceptor(requestInterceptor)@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "String basicAuthPass@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "getBuilder['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "SolrHttpClientBuilder builder@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "getClass['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "String basicAuthUser@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "getBuilder['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "return builder@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "builder.setDefaultCredentialsProvider(null)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "initHttpClientBuilder['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9->6 [style = solid, label="builder"];
+0->1 [style = dotted, label="true"];
+4->8 [style = bold, label=""];
+8->6 [style = bold, label=""];
+7->4 [style = bold, label=""];
+3->2 [style = dotted, label="true"];
+7->9 [style = dotted, label="true"];
+7->5 [style = dotted, label="true"];
+7->10 [style = dotted, label="true"];
+}

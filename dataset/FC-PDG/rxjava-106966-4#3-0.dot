@@ -1,0 +1,11 @@
+digraph {
+0 [style = filled, label = "singleErrors['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Maybe.just(1).flatMapSingle(new Function<Integer,SingleSource<Integer>>(){@Override public SingleSource<Integer> apply(final Integer integer){return Single.error(new TestException())}}).toSingle().test().assertFailure()@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "singleErrors['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "Maybe.just(1).flatMapSingleElement(new Function<Integer,SingleSource<Integer>>(){@Override public SingleSource<Integer> apply(final Integer integer){return Single.error(new TestException())}}).test().assertFailure()@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "singleErrors['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->4 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

@@ -1,0 +1,14 @@
+digraph {
+1 [style = filled, label = "assertEquals(3,posts.size())@@@10@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "List<Post> posts = session.selectList(\"org.apache.ibatis.domain.blog.mappers.PostMapper.findPost\",new HashMap<String,Integer>(){})@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "shouldFindPostsWithAuthorIdUsingDynamicSql['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "shouldFindPostsWithAuthorIdUsingDynamicSql['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "shouldFindPostsWithBlogIdUsingDynamicSql['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertEquals(2,posts.size())@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1->5 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

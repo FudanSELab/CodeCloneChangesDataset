@@ -1,0 +1,27 @@
+digraph {
+6 [style = filled, label = "return new WriteResponseFuture<>(this.producer.send(new ProducerRecord<>(topic,keyValuePair.getKey(),keyValuePair.getValue()),new Callback(){@Override public void onCompletion(final RecordMetadata metadata,Exception exception){if (exception != null) {callback.onFailure(exception)}{callback.onSuccess(WRITE_RESPONSE_WRAPPER.wrap(metadata))}}}),WRITE_RESPONSE_WRAPPER)@@@5@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+7 [style = filled, label = "final V record@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+8 [style = filled, label = "Pair<K,V> keyValuePair = KafkaWriterHelper.getKeyValuePair(record,this.commonConfig)@@@4@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "final D record@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final D record@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return new WriteResponseFuture<>(this.producer.send(new ProducerRecord<String,D>(topic,record),new Callback(){@Override public void onCompletion(final RecordMetadata metadata,Exception exception){if (exception != null) {callback.onFailure(exception)}{callback.onSuccess(WRITE_RESPONSE_WRAPPER.wrap(metadata))}}}),WRITE_RESPONSE_WRAPPER)@@@3@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "write['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final WriteCallback callback@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "write['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "write['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final WriteCallback callback@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+10->1 [style = bold, label=""];
+3->1 [style = solid, label="record"];
+2->0 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+2->3 [style = dotted, label="true"];
+5->8 [style = bold, label=""];
+5->7 [style = dotted, label="true"];
+10->3 [style = dotted, label="true"];
+8->6 [style = bold, label=""];
+0->1 [style = solid, label="record"];
+2->1 [style = bold, label=""];
+10->9 [style = dotted, label="true"];
+3->7 [style = dashed, label="0"];
+7->8 [style = solid, label="record"];
+}

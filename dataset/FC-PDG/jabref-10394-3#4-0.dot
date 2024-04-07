@@ -1,0 +1,16 @@
+digraph {
+3 [style = filled, label = "testAllDisabledNoWords['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "testAddNewTermListNewListInList['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "ProtectedTermsLoader localLoader = new ProtectedTermsLoader(new ProtectedTermsPreferences(Collections.emptyList(),Collections.emptyList(),ProtectedTermsLoader.getInternalLists(),Collections.emptyList()))@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertTrue(localLoader.getProtectedTermsLists().contains(newList))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(Collections.emptyList(),localLoader.getProtectedTerms())@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testAllDisabledNoWords['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ProtectedTermsList newList = localLoader.addNewProtectedTermsList(\"My new list\",temporaryFolder.newFile().getAbsolutePath())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2->6 [style = bold, label=""];
+5->2 [style = bold, label=""];
+6->4 [style = solid, label="newList"];
+0->2 [style = bold, label=""];
+6->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+3->2 [style = bold, label=""];
+}

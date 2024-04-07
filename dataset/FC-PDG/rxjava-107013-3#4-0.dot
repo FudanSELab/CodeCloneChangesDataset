@@ -1,0 +1,9 @@
+digraph {
+3 [style = filled, label = "onErrorThrows2['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Maybe.create(new MaybeOnSubscribe<Object>(){@Override public void subscribe(MaybeEmitter<Object> e){try {e.onError(new IOException())fail(\"Should have thrown\")}catch (TestException ex) assertTrue(e.isDisposed())}}).subscribe(new MaybeObserver<Object>(){@Override public void onSubscribe(Disposable d){}@Override public void onSuccess(Object value){}@Override public void onError(Throwable e){throw new TestException()}@Override public void onComplete(){}})@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "onErrorThrows['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "onErrorThrows['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

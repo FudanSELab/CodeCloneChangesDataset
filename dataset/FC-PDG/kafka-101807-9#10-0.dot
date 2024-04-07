@@ -1,0 +1,31 @@
+digraph {
+9 [style = filled, label = "stream = builder.stream(topicName,Consumed.with(Serdes.Integer(),Serdes.Integer()))@@@25@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "assertArrayEquals(expected,supplier.theCapturedProcessor().processed.toArray())@@@35@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "String(( expected = {\"1:11\",\"10:121\",\"100:1221\",\"1000:12221\"}@@@32@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "testTransformWithKey['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "driver.pipeInput(recordFactory.create(topicName,expectedKey,expectedKey * 10,0L))@@@29@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "KStream<Integer,Integer> stream@@@24@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "ValueTransformerSupplier<Number,Integer> valueTransformerSupplier = new ValueTransformerSupplier<Number,Integer>(){public ValueTransformer<Number,Integer> get(){return new ValueTransformer<Number,Integer>(){@Override public void init(ProcessorContext context){}@Override public Integer transform(Number value){total += value.intValue()return total}@Override public void close(){}}}}@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final int(( expectedKeys = {1,10,100,1000}@@@21@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "testTransform['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "testTransform['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+12 [style = filled, label = "ValueTransformerWithKeySupplier<Integer,Number,Integer> valueTransformerSupplier = new ValueTransformerWithKeySupplier<Integer,Number,Integer>(){public ValueTransformerWithKey<Integer,Number,Integer> get(){return new ValueTransformerWithKey<Integer,Number,Integer>(){@Override public void init(final ProcessorContext context){}@Override public Integer transform(final Integer readOnlyKey,final Number value){total += value.intValue() + readOnlyKeyreturn total}@Override public void close(){}}}}@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "stream.transformValues(valueTransformerSupplier).process(supplier)@@@26@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "StreamsBuilder builder = new StreamsBuilder()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+8->7 [style = bold, label=""];
+12->7 [style = bold, label=""];
+4->6 [style = bold, label=""];
+7->1 [style = bold, label=""];
+8->12 [style = dashed, label="0"];
+1->9 [style = bold, label=""];
+10->6 [style = bold, label=""];
+9->5 [style = bold, label=""];
+3->0 [style = bold, label=""];
+11->6 [style = bold, label=""];
+6->8 [style = bold, label=""];
+3->0 [style = solid, label="expected"];
+6->12 [style = bold, label=""];
+1->9 [style = solid, label="stream"];
+2->3 [style = bold, label=""];
+}

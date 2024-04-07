@@ -1,0 +1,31 @@
+digraph {
+9 [style = filled, label = "loadConfig['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "loadConfig['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "moduleConfig.forEach(null)@@@6@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final Yaml yaml = new Yaml()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+0 [style = filled, label = "Reader applicationReader = ResourceUtils.read(\"application.yml\")@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "moduleConfig.forEach(null)@@@7@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "loadConfig['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "ApplicationConfiguration configuration@@@2@@@['1', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Map<String,Map<String,Map<String,?>>> moduleConfig = yaml.loadAs(applicationReader,)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "CollectionUtils.isNotEmpty(moduleConfig)@@@5@@@['1', '1', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "ApplicationConfiguration configuration@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA1AAABBB2BBB"];
+5->8 [style = dotted, label="true"];
+1->3 [style = solid, label="moduleConfig"];
+2->0 [style = bold, label=""];
+0->1 [style = solid, label="applicationReader"];
+1->3 [style = bold, label=""];
+1->3 [style = solid, label="applicationReader"];
+7->1 [style = bold, label=""];
+9->6 [style = dotted, label="true"];
+4->6 [style = dashed, label="0"];
+5->8 [style = bold, label=""];
+2->4 [style = dotted, label="true"];
+10->4 [style = dotted, label="true"];
+3->5 [style = bold, label=""];
+3->5 [style = dotted, label="true"];
+3->5 [style = solid, label="moduleConfig"];
+0->1 [style = bold, label=""];
+10->0 [style = bold, label=""];
+9->7 [style = bold, label=""];
+}

@@ -1,0 +1,9 @@
+digraph {
+1 [style = filled, label = "Single.create(new SingleOnSubscribe<Object>(){@Override public void subscribe(SingleEmitter<Object> s){try {s.onSuccess(1)fail(\"Should have thrown\")}catch (TestException ex) }}).subscribe(new SingleObserver<Object>(){@Override public void onSubscribe(Disposable d){}@Override public void onSuccess(Object value){throw new TestException()}@Override public void onError(Throwable e){}})@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "createConsumerThrowsResourceOnError['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "createConsumerThrowsResourceOnError['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "createConsumerThrows['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

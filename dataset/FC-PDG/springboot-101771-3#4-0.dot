@@ -1,0 +1,22 @@
+digraph {
+1 [style = filled, label = "assertThat(loaded.size()).isEqualTo(2)@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "List<PropertySource<?>> loaded = this.loader.load(\"test.properties\",new ClassPathResource(\"multi-document-properties-2.properties\",getClass()))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "loadMultiDocumentPropertiesWithSeparatorAtTheBeginningofFile['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "assertThat(source1.getProperty(\"blah\")).isEqualTo(\"hello world\")@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "assertThat(source2.getProperty(\"foo\")).isEqualTo(\"bar\")@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "loadMultiDocumentPropertiesWithEmptyDocument['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "List<PropertySource<?>> loaded = this.loader.load(\"test.properties\",new ClassPathResource(\"multi-document-properties-empty.properties\",getClass()))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "loadMultiDocumentPropertiesWithSeparatorAtTheBeginningOfFile['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "PropertySource<?> source2 = loaded.get(1)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "PropertySource<?> source1 = loaded.get(0)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->6 [style = bold, label=""];
+7->6 [style = bold, label=""];
+8->9 [style = bold, label=""];
+6->9 [style = dashed, label="0"];
+9->1 [style = bold, label=""];
+4->3 [style = bold, label=""];
+6->1 [style = bold, label=""];
+1->2 [style = bold, label=""];
+5->4 [style = bold, label=""];
+2->5 [style = bold, label=""];
+}

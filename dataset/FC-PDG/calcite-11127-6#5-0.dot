@@ -1,0 +1,25 @@
+digraph {
+1 [style = filled, label = "return new AbstractEnumerable<TResult>(){@Override public Enumerator<TResult> enumerator(){return new Enumerator<TResult>(){@Override public TResult current(){return resultEnumerator.current()}@Override public boolean moveNext(){for (  ){if (resultEnumerator.moveNext()) {return true}if (!sourceEnumerator.moveNext()) {return false}resultEnumerator = selector.apply(sourceEnumerator.current()).enumerator()}}@Override public void reset(){sourceEnumerator.reset()resultEnumerator = Linq4j.emptyEnumerator()}@Override public void close(){sourceEnumerator.close()resultEnumerator.close()}}}}@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "selectMany['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "final Enumerable<TSource> source@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "final Function2<TSource,TCollection,TResult> resultSelector@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "final Function1<TSource,Enumerable<TCollection>> collectionSelector@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final Function1<TSource,Enumerable<TCollection>> collectionSelector@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "selectMany['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+10 [style = filled, label = "final Function1<TSource,Enumerable<TResult>> selector@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "final Enumerable<TSource> source@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "selectMany['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "final Function2<TSource,TCollection,TResult> resultSelector@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8->10 [style = dotted, label="true"];
+4->10 [style = dashed, label="0"];
+6->5 [style = dotted, label="true"];
+6->4 [style = dotted, label="true"];
+8->1 [style = bold, label=""];
+3->4 [style = dotted, label="true"];
+3->2 [style = dotted, label="true"];
+6->1 [style = bold, label=""];
+6->7 [style = dotted, label="true"];
+3->1 [style = bold, label=""];
+3->0 [style = dotted, label="true"];
+8->9 [style = dotted, label="true"];
+}

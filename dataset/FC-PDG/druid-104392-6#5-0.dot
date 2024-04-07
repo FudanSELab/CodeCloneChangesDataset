@@ -1,0 +1,33 @@
+digraph {
+6 [style = filled, label = "testCannotAddToExistingNumberedShardSpecsWithCoarserQueryGranularity['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "testCannotAddToExistingNumberedShardSpecsWithCoarserQueryGranularity['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "Assert.assertNull(id1)@@@7@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "final SegmentIdWithShardSpec id1 = allocate(task,PARTY_TIME,Granularities.NONE,Granularities.MINUTE,\"s1\",null)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "taskActionTestKit.getMetadataStorageCoordinator().announceHistoricalSegments(ImmutableSet.of(DataSegment.builder().dataSource(DATA_SOURCE).interval(Granularities.HOUR.bucket(PARTY_TIME)).version(PARTY_TIME.toString()).shardSpec(new NumberedShardSpec(0,2)).build(),DataSegment.builder().dataSource(DATA_SOURCE).interval(Granularities.HOUR.bucket(PARTY_TIME)).version(PARTY_TIME.toString()).shardSpec(new NumberedShardSpec(1,2)).build()))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "final Task task = NoopTask.create()@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "testAddToExistingNumberedShardSpecsFinerPreferredGranularity['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "assertSameIdentifier(id1,new SegmentIdWithShardSpec(DATA_SOURCE,Granularities.HOUR.bucket(PARTY_TIME),PARTY_TIME.toString(),new NumberedShardSpec(2,2)))@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "final Task task = new NoopTask(null,null,0,0,null,null,null)@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "final SegmentIdWithShardSpec id1 = allocate(task,PARTY_TIME,Granularities.DAY,Granularities.DAY,\"s1\",null)@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "taskActionTestKit.getTaskLockbox().add(task)@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2->8 [style = solid, label="task"];
+7->0 [style = solid, label="task"];
+2->7 [style = dashed, label="0"];
+6->7 [style = bold, label=""];
+1->8 [style = dashed, label="0"];
+8->9 [style = bold, label=""];
+0->8 [style = bold, label=""];
+10->2 [style = bold, label=""];
+2->0 [style = solid, label="task"];
+2->1 [style = solid, label="task"];
+3->0 [style = bold, label=""];
+1->5 [style = solid, label="id1"];
+7->1 [style = solid, label="task"];
+8->9 [style = solid, label="id1"];
+0->1 [style = bold, label=""];
+5->9 [style = dashed, label="0"];
+4->2 [style = bold, label=""];
+2->3 [style = bold, label=""];
+1->5 [style = bold, label=""];
+7->3 [style = bold, label=""];
+}

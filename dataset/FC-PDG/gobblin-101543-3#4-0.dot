@@ -1,0 +1,20 @@
+digraph {
+7 [style = filled, label = "createRandomRecord['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+4 [style = filled, label = "GenericRecordBuilder keyRecordBuilder = new GenericRecordBuilder(getSchema())@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "createRandomRecord['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "keyRecordBuilder.set(\"partitionKey\",new Long(1))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "createRandomRecord['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "keyRecordBuilder.set(\"subKey\",\"2\")@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "keyRecordBuilder.set(\"environment\",\"test\")@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return record@@@8@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "GenericRecord record = keyRecordBuilder.build()@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3->1 [style = solid, label="record"];
+0->5 [style = bold, label=""];
+2->4 [style = bold, label=""];
+7->4 [style = bold, label=""];
+5->6 [style = bold, label=""];
+8->4 [style = bold, label=""];
+6->3 [style = bold, label=""];
+4->0 [style = bold, label=""];
+3->1 [style = bold, label=""];
+}

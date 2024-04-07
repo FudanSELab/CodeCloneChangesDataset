@@ -1,0 +1,22 @@
+digraph {
+0 [style = filled, label = "testDateformatPatternProperty['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "CapturedOutput output@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testConsolePatternProperty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testDateformatPatternProperty['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "assertThat(getLineWithText(output,\"Hello world\")).doesNotContain(\"INFO\")@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "this.logger.info(\"Hello world\")@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "LoggingInitializationContext loggingInitializationContext = new LoggingInitializationContext(this.environment)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "CapturedOutput output@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "initialize(loggingInitializationContext,null,null)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "this.environment.setProperty(\"logging.pattern.console\",\"%logger %msg\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4->5 [style = bold, label=""];
+2->1 [style = dotted, label="true"];
+9->3 [style = bold, label=""];
+1->7 [style = dashed, label="0"];
+0->1 [style = dotted, label="true"];
+5->8 [style = bold, label=""];
+3->4 [style = solid, label="loggingInitializationContext"];
+3->4 [style = bold, label=""];
+6->7 [style = dotted, label="true"];
+6->9 [style = bold, label=""];
+}

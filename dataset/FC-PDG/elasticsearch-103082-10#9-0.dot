@@ -1,0 +1,23 @@
+digraph {
+1 [style = filled, label = "assertThat(doc.rootDoc().get(\"field2\"),nullValue())@@@10@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "assertNull(doc.dynamicMappingsUpdate())@@@11@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+2 [style = filled, label = "ParsedDocument doc = defaultMapper.parse(source(null))@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "assertThat(doc.rootDoc().get(\"field2\"),equalTo(\"value2\"))@@@10@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "DocumentMapper defaultMapper = createDocumentMapper(dynamicMapping(\"true\",null))@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "testDynamicFalse['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "DocumentMapper defaultMapper = createDocumentMapper(dynamicMapping(\"false\",null))@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testDynamicTrue['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "assertThat(doc.rootDoc().get(\"field1\"),equalTo(\"value1\"))@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testDynamicFalse['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8->7 [style = bold, label=""];
+0->3 [style = bold, label=""];
+2->4 [style = bold, label=""];
+4->9 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+6->3 [style = bold, label=""];
+3->2 [style = bold, label=""];
+4->1 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+1->5 [style = bold, label=""];
+7->2 [style = bold, label=""];
+}

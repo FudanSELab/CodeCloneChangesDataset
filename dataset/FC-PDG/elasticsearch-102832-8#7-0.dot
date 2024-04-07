@@ -1,0 +1,31 @@
+digraph {
+12 [style = filled, label = "testDynamicGeoPointArrayWithTemplate['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "assertEquals(2,doc.rootDoc().getFields(\"foo\").length)@@@8@@@['1', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "DocumentMapperParser mapperParser = createIndex(\"test\").mapperService().documentMapperParser()@@@3@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "testMappedGeoPointArray['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "assertEquals(2,doc.rootDoc().getFields(\"field\").length)@@@17@@@['0', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "DocumentMapper mapper = createDocumentMapper(fieldMapping(null))@@@3@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "testMappedGeoPointArray['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "ParsedDocument doc = mapper.parse(new SourceToParse(\"test\",\"1\",bytes,XContentType.JSON))@@@7@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "String mapping = Strings.toString(XContentFactory.jsonBuilder().startObject().startObject(\"type\").startArray(\"dynamic_templates\").startObject().startObject(\"georule\").field(\"match\",\"foo*\").startObject(\"mapping\").field(\"type\",\"geo_point\").field(\"doc_values\",false).endObject().endObject().endObject().endArray().endObject().endObject())@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "BytesReference bytes = BytesReference.bytes(XContentFactory.jsonBuilder().startObject().startArray(\"foo\").startArray().value(0).value(0).endArray().startArray().value(1).value(1).endArray().endArray().endObject())@@@6@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "String mapping = Strings.toString(XContentFactory.jsonBuilder().startObject().startObject(\"type\").startObject(\"properties\").startObject(\"foo\").field(\"type\",\"geo_point\").field(\"doc_values\",false).endObject().endObject().endObject().endObject())@@@4@@@['1', '0', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "ParsedDocument doc = mapper.parse(source(null))@@@8@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+5 [style = filled, label = "DocumentMapper mapper = mapperParser.parse(\"type\",new CompressedXContent(mapping))@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0->6 [style = bold, label=""];
+4->5 [style = bold, label=""];
+0->6 [style = solid, label="bytes"];
+10->7 [style = bold, label=""];
+5->0 [style = bold, label=""];
+11->5 [style = solid, label="mapping"];
+4->11 [style = dashed, label="0"];
+4->5 [style = solid, label="mapping"];
+7->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+6->1 [style = bold, label=""];
+3->2 [style = bold, label=""];
+11->5 [style = bold, label=""];
+2->11 [style = bold, label=""];
+9->10 [style = bold, label=""];
+12->2 [style = bold, label=""];
+}

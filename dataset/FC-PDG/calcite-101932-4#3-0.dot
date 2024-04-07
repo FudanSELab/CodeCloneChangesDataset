@@ -1,0 +1,22 @@
+digraph {
+2 [style = filled, label = "ImmutableBitSet groupKey@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "getPopulationSize['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "averageColumnSizes['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "getPopulationSize['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+6 [style = filled, label = "averageColumnSizes['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "ImmutableBitSet groupKey@@@7@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "getPopulationSize['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "RelMetadataQuery mq@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "ImmutableBitSet groupKey@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "getPercentageOriginalRows['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "RelMetadataQuery mq@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0->2 [style = dotted, label="true"];
+4->5 [style = dotted, label="true"];
+0->3 [style = dotted, label="true"];
+9->8 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+4->6 [style = dotted, label="true"];
+10->8 [style = dotted, label="true"];
+9->10 [style = dotted, label="true"];
+4->7 [style = dotted, label="true"];
+}

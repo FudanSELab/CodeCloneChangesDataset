@@ -1,0 +1,26 @@
+digraph {
+8 [style = filled, label = "TestAllTypes message = TestUtil.getAllSet()@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "testSerialization['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "assertEquals(rawBytes.size(),message.getSerializedSize())@@@5@@@['1', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "TestAllExtensionsLite message = TestUtilLite.getAllLiteExtensionsSet()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "TestUtil.assertAllFieldsSet(message2)@@@7@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "testSerializeExtensionsLite['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "testSerializeExtensionsLite['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ByteString rawBytes = message.toByteString()@@@4@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "TestAllTypes message2 = TestAllTypes.parseFrom(rawBytes)@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "assertThat(message.getSerializedSize()).isEqualTo(rawBytes.size())@@@5@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+9->8 [style = bold, label=""];
+2->4 [style = bold, label=""];
+7->4 [style = bold, label=""];
+1->0 [style = solid, label="message2"];
+3->1 [style = solid, label="rawBytes"];
+5->6 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+3->6 [style = bold, label=""];
+6->1 [style = bold, label=""];
+3->5 [style = bold, label=""];
+8->3 [style = bold, label=""];
+4->8 [style = dashed, label="0"];
+1->0 [style = bold, label=""];
+5->1 [style = bold, label=""];
+}

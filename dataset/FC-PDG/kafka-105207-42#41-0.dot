@@ -1,0 +1,35 @@
+digraph {
+8 [style = filled, label = "connect.awaitStop()@@@14@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "ConnectDistributed connectDistributed = new ConnectDistributed()@@@12@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "String workerPropsFile = args(0(@@@10@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13 [style = filled, label = "args.length < 1 || Arrays.asList(args).contains(\"--help\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "Connect connect = connectDistributed.startConnect(workerProps)@@@13@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "Map<String,String> workerProps = !workerPropsFile.isEmpty()? Utils.propsToStringMap(Utils.loadProps(workerPropsFile)): Collections.emptyMap()@@@11@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "WorkerInfo initInfo = new WorkerInfo()@@@8@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "main['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "main['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "main['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "initInfo.logAll()@@@9@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+11 [style = filled, label = "Exit.exit(1)@@@5@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "String(( args@@@2@@@['1', '1', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "log.info(\"Usage: ConnectDistributed worker.properties\")@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+13->3 [style = bold, label=""];
+5->0 [style = dotted, label="true"];
+13->11 [style = dotted, label="true"];
+11->3 [style = bold, label=""];
+7->6 [style = bold, label=""];
+2->0 [style = dotted, label="true"];
+13->10 [style = dotted, label="true"];
+7->12 [style = solid, label="workerProps"];
+13->10 [style = bold, label=""];
+0->4 [style = solid, label="args"];
+4->7 [style = solid, label="workerPropsFile"];
+10->11 [style = bold, label=""];
+4->7 [style = bold, label=""];
+12->8 [style = bold, label=""];
+3->9 [style = bold, label=""];
+9->4 [style = bold, label=""];
+1->0 [style = dotted, label="true"];
+5->13 [style = bold, label=""];
+6->12 [style = bold, label=""];
+}

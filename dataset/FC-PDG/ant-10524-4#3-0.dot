@@ -1,0 +1,37 @@
+digraph {
+8 [style = filled, label = "atMost != null@@@11@@@['0', '1', '0']", fillcolor = white, shape = diamond image = "AAA1AAABBB2BBB"];
+3 [style = filled, label = "return actual.isGreaterThanOrEqual(new DeweyDecimal(atLeast))@@@6@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "return actual.isLessThanOrEqual(new DeweyDecimal(atMost))@@@12@@@['0', '1', '0']", fillcolor = white, shape = ellipse image = "AAA1AAABBB2BBB"];
+10 [style = filled, label = "eval['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "null != atLeast@@@5@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "null != exactly@@@8@@@['1', '1', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "DeweyDecimal actual = getVersion()@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "return actual.isEqual(new DeweyDecimal(exactly))@@@9@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "eval['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "DeweyDecimal actual = JavaEnvUtils.getParsedJavaVersion()@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "eval['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "return false@@@11@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "validate()@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->0 [style = dotted, label="true"];
+12->7 [style = bold, label=""];
+5->8 [style = bold, label=""];
+8->9 [style = bold, label=""];
+10->2 [style = bold, label=""];
+5->1 [style = bold, label=""];
+0->8 [style = bold, label=""];
+0->1 [style = bold, label=""];
+3->5 [style = bold, label=""];
+11->2 [style = bold, label=""];
+4->2 [style = bold, label=""];
+8->1 [style = bold, label=""];
+7->3 [style = bold, label=""];
+6->12 [style = dashed, label="0"];
+5->0 [style = bold, label=""];
+2->6 [style = bold, label=""];
+7->5 [style = bold, label=""];
+6->7 [style = bold, label=""];
+9->1 [style = bold, label=""];
+2->12 [style = bold, label=""];
+7->3 [style = dotted, label="true"];
+8->9 [style = dotted, label="true"];
+}

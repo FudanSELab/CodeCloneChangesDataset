@@ -1,0 +1,30 @@
+digraph {
+8 [style = filled, label = "configureObject['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+0 [style = filled, label = "configureObject['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "boolean isSupportCheckConstraint = primaryKey.getDataSource().getMetaModel().supportsCheckConstraints()@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "SQLServerTableUniqueKey primaryKey@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "return new UITask<GenericUniqueKey>(){@Override protected GenericUniqueKey runTask(){EditConstraintPage editPage = new EditConstraintPage(\"Create unique constraint\",primaryKey,isSupportCheckConstraint? new DBSEntityConstraintType((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9d794: new DBSEntityConstraintType((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@9d7a0)if (!editPage.edit()) {return null}primaryKey.setConstraintType(editPage.getConstraintType())primaryKey.setName(editPage.getConstraintName())if (primaryKey instanceof DBSTableCheckConstraint) {((DBSTableCheckConstraint)primaryKey).setCheckConstraintDefinition(editPage.getConstraintExpression())}int colIndex = 1for (DBSEntityAttribute tableColumn : editPage.getSelectedAttributes()){primaryKey.addColumn(new GenericTableConstraintColumn(primaryKey,(GenericTableColumn)tableColumn,colIndex++))}return primaryKey}}.execute()@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Object table@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+10 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "Object container@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "return UITask.run(null)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "GenericUniqueKey primaryKey@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+12 [style = filled, label = "configureObject['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+7 [style = filled, label = "GenericUniqueKey primaryKey@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+12->9 [style = bold, label=""];
+12->10 [style = dotted, label="true"];
+8->6 [style = dotted, label="true"];
+4->13 [style = dashed, label="0"];
+0->3 [style = dotted, label="true"];
+12->13 [style = dotted, label="true"];
+8->2 [style = bold, label=""];
+0->4 [style = dotted, label="true"];
+0->2 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+8->7 [style = dotted, label="true"];
+8->4 [style = dotted, label="true"];
+2->5 [style = bold, label=""];
+12->11 [style = dotted, label="true"];
+}

@@ -1,0 +1,9 @@
+digraph {
+0 [style = filled, label = "breadthFirst['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "return new Iterator(){public boolean hasNext(){return this.next != null}public Object next(){try {return this.next}{this.next = getNextByDepth()}}public void remove(){throw new UnsupportedOperationException()}private GPathResult getNextByDepth(){while (this.iter.hasNext()) {final GPathResult node = (GPathResult)this.iter.next()this.list.add(node)this.stack.push(this.iter)this.iter = node.children().iterator()}if (this.list.isEmpty()) {return null}{GPathResult result = (GPathResult)this.list.get(0)this.list.remove(0)this.iter = (Iterator)this.stack.pop()return result}}}@@@3@@@['1', '1', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "breadthFirst['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "depthFirst['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3->1 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

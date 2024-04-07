@@ -1,0 +1,23 @@
+digraph {
+4 [style = filled, label = "expectedException.expect(CoreMatchers.instanceOf())@@@4@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "Map<String,Object> parser = jsonMapper.convertValue(new StringInputRowParser(new JSONParseSpec(new TimestampSpec(\"time\",\"auto\",null),new DimensionsSpec(DimensionsSpec.getDefaultSchemas(ImmutableList.of(\"time\",\"dimA\",\"dimB\",\"metric1\")),ImmutableList.of(\"dimC\"),null),null,null),null),JacksonUtils.TYPE_REFERENCE_MAP_STRING_OBJECT)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "DataSchema schema = new DataSchema(\"\",parser,new AggregatorFactory((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a4ed0f,new ArbitraryGranularitySpec(Granularities.DAY,ImmutableList.of(Intervals.of(\"2014/2015\"))),null,jsonMapper)@@@6@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "testOverlapMetricNameAndDim['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "Map<String,Object> parser = jsonMapper.convertValue(new StringInputRowParser(new JSONParseSpec(new TimestampSpec(\"time\",\"auto\",null),new DimensionsSpec(DimensionsSpec.getDefaultSchemas(ImmutableList.of(\"time\",\"dimA\",\"dimB\",\"col2\")),ImmutableList.of(\"dimC\"),null),null,null),null),JacksonUtils.TYPE_REFERENCE_MAP_STRING_OBJECT)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "schema.getParser()@@@7@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "DataSchema schema = new DataSchema(\"test\",parser,new AggregatorFactory((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@a4ed5b,new ArbitraryGranularitySpec(Granularities.DAY,ImmutableList.of(Intervals.of(\"2014/2015\"))),null,jsonMapper)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "testEmptyDatasource['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "expectedException.expectMessage(\"dataSource cannot be null or empty. Please provide a dataSource.\")@@@5@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testEmptyDatasource['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->2 [style = solid, label="parser"];
+3->2 [style = bold, label=""];
+6->7 [style = bold, label=""];
+8->9 [style = bold, label=""];
+4->3 [style = bold, label=""];
+1->9 [style = dashed, label="0"];
+0->1 [style = bold, label=""];
+9->6 [style = solid, label="parser"];
+1->4 [style = bold, label=""];
+9->6 [style = bold, label=""];
+5->1 [style = bold, label=""];
+}

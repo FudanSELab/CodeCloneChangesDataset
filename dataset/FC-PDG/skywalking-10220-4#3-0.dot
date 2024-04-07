@@ -1,0 +1,22 @@
+digraph {
+3 [style = filled, label = "Reader applicationReader = ResourceUtils.read(\"application.yml\")@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ApplicationConfiguration configuration@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "init['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "loadConfig['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "CollectionUtils.isNotEmpty(moduleConfig)@@@5@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "moduleConfig.forEach(null)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "loadConfig['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "placeholderHelper = new PropertyPlaceholderHelper(PlaceholderConfigurerSupport.DEFAULT_PLACEHOLDER_PREFIX,PlaceholderConfigurerSupport.DEFAULT_PLACEHOLDER_SUFFIX,PlaceholderConfigurerSupport.DEFAULT_VALUE_SEPARATOR,true)@@@18@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "Map<String,Map<String,Map<String,?>>> moduleConfig = yaml.loadAs(applicationReader,)@@@4@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2->1 [style = dotted, label="true"];
+3->5 [style = solid, label="applicationReader"];
+7->6 [style = bold, label=""];
+4->6 [style = bold, label=""];
+0->1 [style = dotted, label="true"];
+7->4 [style = dotted, label="true"];
+5->7 [style = solid, label="moduleConfig"];
+5->7 [style = bold, label=""];
+7->4 [style = bold, label=""];
+3->5 [style = bold, label=""];
+8->3 [style = bold, label=""];
+}

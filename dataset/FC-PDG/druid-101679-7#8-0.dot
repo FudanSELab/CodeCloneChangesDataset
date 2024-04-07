@@ -1,0 +1,11 @@
+digraph {
+4 [style = filled, label = "testQuery(\"SELECT COUNT(*)\" + \"FROM druid.foo\" + \"WHERE NULLIF(dim2, 'a') = null\",ImmutableList.of(Druids.newScanQueryBuilder().dataSource(InlineDataSource.fromIterable(ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ad8549),RowSignature.builder().add(\"EXPR$0\",ValueType.LONG).build())).intervals(querySegmentSpec(Filtration.eternity())).columns(\"EXPR$0\").resultFormat(ResultFormat.RESULT_FORMAT_COMPACTED_LIST).legacy(false).build()),ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ad856a))@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "testNullFloatFilter['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "testNullStringEquality['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+0 [style = filled, label = "testNullFloatFilter['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "testQuery(\"SELECT COUNT(*)\" + \"FROM druid.numfoo\" + \"WHERE f1 IS NULL\",useDefault? ImmutableList.of(Druids.newScanQueryBuilder().dataSource(InlineDataSource.fromIterable(ImmutableList.of(new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ad84d5),RowSignature.builder().add(\"EXPR$0\",ValueType.LONG).build())).intervals(querySegmentSpec(Filtration.eternity())).columns(\"EXPR$0\").resultFormat(ResultFormat.RESULT_FORMAT_COMPACTED_LIST).legacy(false).build()): ImmutableList.of(Druids.newTimeseriesQueryBuilder().dataSource(CalciteTests.DATASOURCE3).intervals(querySegmentSpec(Filtration.eternity())).granularity(Granularities.ALL).filters(selector(\"f1\",null,null)).aggregators(aggregators(new CountAggregatorFactory(\"a0\"))).context(QUERY_CONTEXT_DEFAULT).build()),ImmutableList.of(useDefault? new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ad8522: new Object((((edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@ad8526))@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1->4 [style = dashed, label="0"];
+2->1 [style = bold, label=""];
+3->4 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

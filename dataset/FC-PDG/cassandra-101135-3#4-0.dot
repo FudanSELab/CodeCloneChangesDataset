@@ -1,0 +1,11 @@
+digraph {
+0 [style = filled, label = "getOnlyRowUnfiltered['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "ReadCommand cmd@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "getOnlyPartition['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "ReadCommand cmd@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "getOnlyRowUnfiltered['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2->1 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+4->3 [style = dotted, label="true"];
+1->3 [style = dashed, label="0"];
+}

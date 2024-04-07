@@ -1,0 +1,32 @@
+digraph {
+10 [style = filled, label = "ServiceHolder['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+15 [style = filled, label = "MapperService mapperService@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "Collection<Class<? extends Plugin>> plugins@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+3 [style = filled, label = "boolean registerType@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "Collection<Class<? extends Plugin>> plugins@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Settings nodeSettings@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "AbstractBuilderTestCase testCase@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+11 [style = filled, label = "AbstractBuilderTestCase testCase@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+5 [style = filled, label = "ServiceHolder['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "Settings indexSettings@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "long nowInMillis@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+13 [style = filled, label = "initializeAdditionalMappings['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+9 [style = filled, label = "boolean registerType@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+14 [style = filled, label = "mapperService.merge(\"_doc\",new CompressedXContent(Strings.toString(PutMappingRequest.simpleMapping(STRING_FIELD_NAME,\"type=text\",INT_FIELD_NAME,\"type=integer\",DOUBLE_FIELD_NAME,\"type=double\",BOOLEAN_FIELD_NAME,\"type=boolean\",DATE_FIELD_NAME,\"type=date\",OBJECT_FIELD_NAME,\"type=object\",GEO_POINT_FIELD_NAME,\"type=geo_point\",\"nested1\",\"type=nested\"))),MapperService.MergeReason.MAPPING_UPDATE)@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+12 [style = filled, label = "Settings indexSettings@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+8 [style = filled, label = "Settings nodeSettings@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+10->6 [style = dotted, label="true"];
+5->6 [style = dotted, label="true"];
+5->0 [style = dotted, label="true"];
+13->15 [style = dotted, label="true"];
+5->1 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+10->11 [style = dotted, label="true"];
+13->14 [style = bold, label=""];
+10->8 [style = dotted, label="true"];
+10->7 [style = dotted, label="true"];
+10->12 [style = dotted, label="true"];
+10->9 [style = dotted, label="true"];
+5->2 [style = dotted, label="true"];
+5->3 [style = dotted, label="true"];
+}

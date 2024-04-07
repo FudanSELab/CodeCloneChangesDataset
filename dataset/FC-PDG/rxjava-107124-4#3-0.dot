@@ -1,0 +1,33 @@
+digraph {
+0 [style = filled, label = "i++@@@5@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "int i = 0@@@3@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "TestHelper.race(run,run)@@@13@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+8 [style = filled, label = "disposeRace['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "addAllRace['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "final CompositeDisposable cd = new CompositeDisposable()@@@6@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "addAllRace['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "final ListCompositeDisposable cd = new ListCompositeDisposable()@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "i < TestHelper.RACE_DEFAULT_LOOPS@@@4@@@['1', '1', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "Runnable run = new Runnable(){@Override public void run(){cd.dispose()}}@@@7@@@['1', '1', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+1->6 [style = solid, label="run"];
+2->4 [style = dotted, label="true"];
+2->4 [style = bold, label=""];
+8->5 [style = bold, label=""];
+4->9 [style = dashed, label="0"];
+2->9 [style = dotted, label="true"];
+6->0 [style = bold, label=""];
+2->6 [style = dotted, label="true"];
+1->6 [style = bold, label=""];
+3->5 [style = bold, label=""];
+4->1 [style = bold, label=""];
+2->1 [style = dotted, label="true"];
+2->9 [style = bold, label=""];
+5->0 [style = solid, label="i"];
+7->5 [style = bold, label=""];
+2->0 [style = dotted, label="true"];
+0->2 [style = bold, label=""];
+9->1 [style = bold, label=""];
+0->2 [style = solid, label="i"];
+5->2 [style = solid, label="i"];
+}

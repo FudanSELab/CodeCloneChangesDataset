@@ -1,0 +1,11 @@
+digraph {
+3 [style = filled, label = "Maybe.empty().concatMapSingle(new Function<Integer,SingleSource<Integer>>(){@Override public SingleSource<Integer> apply(final Integer integer){return Single.just(2)}}).test().assertNoValues().assertResult()@@@3@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "flatMapSingleElementEmpty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+2 [style = filled, label = "doubleOnSubscribe['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1 [style = filled, label = "TestHelper.checkDoubleOnSubscribeMaybeToSingle(new Function<Maybe<Integer>,SingleSource<Integer>>(){@Override public SingleSource<Integer> apply(Maybe<Integer> m){return m.flatMapSingle(new Function<Integer,SingleSource<Integer>>(){@Override public SingleSource<Integer> apply(final Integer integer){return Single.just(2)}}).toSingle()}})@@@3@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "doubleOnSubscribe['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->3 [style = dashed, label="0"];
+4->3 [style = bold, label=""];
+2->1 [style = bold, label=""];
+0->1 [style = bold, label=""];
+}

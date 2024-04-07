@@ -1,0 +1,23 @@
+digraph {
+0 [style = filled, label = "timeout['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+2 [style = filled, label = "int pauseBeforeStart@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+4 [style = filled, label = "timeout['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+9 [style = filled, label = "core.getCoreDescriptor().getCloudDescriptor().setLeader(false)@@@6@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "String coreName = leaderProps.getStr(ZkStateReader.CORE_NAME_PROP)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+10 [style = filled, label = "super.edu.fdu.CPPDG.tinypdg.pe.ExpressionInfo@1013a64@@@9@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "cancelElection['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "int pauseBeforeStart@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "runLeaderProcess['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+7 [style = filled, label = "core != null@@@5@@@['0', '0', '1']", fillcolor = white, shape = diamond image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "runLeaderProcess['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+1->2 [style = dotted, label="true"];
+9->10 [style = bold, label=""];
+6->7 [style = bold, label=""];
+3->4 [style = dotted, label="true"];
+8->6 [style = bold, label=""];
+3->5 [style = dotted, label="true"];
+7->9 [style = dotted, label="true"];
+1->0 [style = dotted, label="true"];
+7->10 [style = bold, label=""];
+7->9 [style = bold, label=""];
+}

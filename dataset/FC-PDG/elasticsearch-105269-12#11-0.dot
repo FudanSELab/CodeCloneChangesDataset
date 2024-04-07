@@ -1,0 +1,18 @@
+digraph {
+2 [style = filled, label = "final MappedFieldType ft = new NumberFieldMapper.NumberFieldType(\"field\",NumberType.LONG)@@@3@@@['1', '1', '0']", fillcolor = white, shape = ellipse image = "AAA0AAABBB1BBB"];
+0 [style = filled, label = "testEmpty['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+6 [style = filled, label = "MappedFieldType ft = new NumberFieldMapper.NumberFieldType(\"field\",NumberFieldMapper.NumberType.LONG)@@@3@@@['0', '0', '1']", fillcolor = white, shape = ellipse image = "AAA0AAABBB3BBB"];
+1 [style = filled, label = "testCase(stats(\"_name\").field(ft.name()),null,null,ft)@@@4@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+5 [style = filled, label = "testEmpty['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "testCase(ft,null,null)@@@4@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+3 [style = filled, label = "testEmpty['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+1->4 [style = dashed, label="0"];
+0->2 [style = bold, label=""];
+6->4 [style = solid, label="ft"];
+6->4 [style = bold, label=""];
+2->1 [style = bold, label=""];
+2->1 [style = solid, label="ft"];
+3->2 [style = bold, label=""];
+5->6 [style = bold, label=""];
+2->6 [style = dashed, label="0"];
+}

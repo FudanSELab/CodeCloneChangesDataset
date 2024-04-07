@@ -1,0 +1,25 @@
+digraph {
+0 [style = filled, label = "setActiveSchema['1', '0', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB1BBB"];
+7 [style = filled, label = "@NotNull String databaseName@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+6 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '0', '1']", fillcolor = tomato, shape = box image = "AAA0AAABBB3BBB"];
+5 [style = filled, label = "setActiveSchema['0', '1', '0']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB2BBB"];
+2 [style = filled, label = "dbStat.executeUpdate(\"USE SCHEMA \" + DBUtils.getQuotedIdentifier(getDataSource(),schemaName))@@@5@@@['1', '1', '0']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB1BBB"];
+1 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['1', '0', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+9 [style = filled, label = "setActiveDatabase['0', '0', '1']", fillcolor = lightgray, shape = diamond image = "AAA0AAABBB3BBB"];
+8 [style = filled, label = "dbStat.executeUpdate(\"USE DATABASE \" + DBUtils.getQuotedIdentifier(getDataSource(),databaseName))@@@5@@@['0', '0', '1']", fillcolor = lightgray, shape = ellipse image = "AAA0AAABBB3BBB"];
+4 [style = filled, label = "DBRProgressMonitor monitor@@@2@@@['0', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB2BBB"];
+3 [style = filled, label = "@NotNull String schemaName@@@2@@@['1', '1', '0']", fillcolor = tomato, shape = box image = "AAA0AAABBB1BBB"];
+5->2 [style = bold, label=""];
+2->8 [style = dashed, label="0"];
+0->3 [style = dotted, label="true"];
+5->4 [style = dotted, label="true"];
+0->1 [style = dotted, label="true"];
+0->2 [style = bold, label=""];
+9->8 [style = bold, label=""];
+3->7 [style = dashed, label="0"];
+3->2 [style = solid, label="schemaName"];
+9->6 [style = dotted, label="true"];
+9->7 [style = dotted, label="true"];
+5->3 [style = dotted, label="true"];
+7->8 [style = solid, label="databaseName"];
+}
